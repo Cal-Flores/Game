@@ -2,8 +2,11 @@ body {
     margin: 0;
 }
 
-header {
-    background-color: rgb(4 30 66);
+.profile_image {
+    height: 200px;
+    width: 200px;
 }
 
-.hello {}
+#penn_state_header {
+    background-color: rgb(4 30 66);
+}

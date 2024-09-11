@@ -7,19 +7,38 @@
         <title>Penn State</title>
         <link rel="stylesheet" href="teams.css">
         <script src="../database.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
     </head>
 
     <body>
-        <header>
+        <header id="penn_state_header">
             <img src="https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg">
             <h1>Penn State Nittany Lions</h1>
         </header>
+        <main>
+            <div>
+                <p>Record 0 - 0</p>
+                <p> 0th place</p>
+            </div>
+            <div id="penn_state_players">
+
+            </div>
+        </main>
 
         <script>
             let team = penn_state;
-            console.log(team)
+            html = ''
+            team.forEach((player, index) => {
+                html += `
+                    <div>
+                        <h2>${player.name}</h2>
+                        <img class='profile_image' src=${player.image}>
+                    </div>
+                `
+            });
+            $('#penn_state_players').append(html)
         </script>
 
     </body>

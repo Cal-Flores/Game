@@ -1,5 +1,5 @@
-const penn_state = {
-    QB: {
+const penn_state = [
+    {
         name: 'Chrollo',
         nen_type: 'Specialist',
         element: 'water',
@@ -11,7 +11,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
-    WR1: {
+    {
         name: 'Hisoka',
         nen_type: 'Transmutter',
         element: 'Fire',
@@ -23,7 +23,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
-    WR2: {
+    {
         name: 'Feitan',
         nen_type: 'Conjuror',
         element: 'Lightning',
@@ -35,7 +35,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
-    WR3: {
+    {
         name: 'Phinks',
         nen_type: 'Enhancer',
         element: 'Earth',
@@ -47,7 +47,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/88/HxH2011_EP41_Phinks_Portrait.png/revision/latest?cb=20221008055432'
     },
-    RB: {
+    {
         name: 'Machi',
         nen_type: 'Manipulator',
         element: 'Fire',
@@ -59,7 +59,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/4c/Machi_Komacine_HA_Portrait.png/revision/latest?cb=20131116122706'
     },
-    TE: {
+    {
         name: 'Shizuku',
         nen_type: 'Conjuror',
         element: 'Wind',
@@ -71,7 +71,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/9/9e/HxH2011_EP53_Shizuku_Portrait.png/revision/latest?cb=20230122061315'
     },
-    TE2: {
+    {
         name: 'Shalnark',
         nen_type: 'Manipulator',
         element: 'Water',
@@ -83,7 +83,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
     },
-    LT: {
+    {
         name: 'Nobunaga',
         nen_type: 'Enhancer',
         element: 'Wind',
@@ -95,7 +95,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/46/HxH2011_EP50_Nobunaga_Portrait.png/revision/latest?cb=20230122183803'
     },
-    RT: {
+    {
         name: 'Uvogin',
         nen_type: 'Enhancer',
         element: 'Earth',
@@ -107,7 +107,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
-    LG: {
+    {
         name: 'Pakunoda',
         nen_type: 'Specialist',
         element: 'Water',
@@ -119,7 +119,7 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/d/da/Pakunoda_YC_Portrait.png/revision/latest?cb=20190124184929'
     },
-    RG: {
+    {
         name: 'Franklin',
         nen_type: 'Manipulator',
         element: 'Earth',
@@ -129,9 +129,9 @@ const penn_state = {
         elm_defense: 255,
         elm_efficiency: 100,
         critical: 100,
-        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/d/da/Pakunoda_YC_Portrait.png/revision/latest?cb=20190124184929'
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251'
     },
-    C: {
+    {
         name: 'Bonolenov',
         nen_type: 'Transmutter',
         element: 'Wind',
@@ -143,4 +143,4 @@ const penn_state = {
         critical: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     }
-};
+];
