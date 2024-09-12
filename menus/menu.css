@@ -1,0 +1,24 @@
+#menu_color {
+    background-color: rgb(174, 174, 174);
+}
+
+.menu_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    text-align: center;
+}
+
+.menu_card {
+    width: 33%;
+    border: 1px double black;
+    border-radius: 10px;
+    margin: 2%;
+}
+
+#team_versus {
+    visibility: hidden;
+}

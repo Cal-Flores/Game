@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FIGHT</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <form id="fight_form">
+            <label for="team_1">Team 1</label>
+            <select type="select" id="team_1" name="team_1">
+                <option>Cornell</option>
+                <option>Iowa</option>
+                <option>Iowa State</option>
+                <option>Michigan</option>
+                <option>Nebraska</option>
+                <option>Ohio State</option>
+                <option>Oklahoma State</option>
+                <option>Penn State</option>
+                <option>Stanford</option>
+                <option>Virginia Tech</option>
+            </select>
+
+            <label for="team_1">Team 2</label>
+            <select type="select" id="team_2" name="team_2">
+                <option>Cornell</option>
+                <option>Iowa</option>
+                <option>Iowa State</option>
+                <option>Michigan</option>
+                <option>Nebraska</option>
+                <option>Ohio State</option>
+                <option>Oklahoma State</option>
+                <option>Penn State</option>
+                <option>Stanford</option>
+                <option>Virginia Tech</option>
+            </select>
+
+            <input type="submit">
+        </form>
+        <main id="team_versus">
+            <div id="team_1_view">
+                <h2>Team 1</h2>
+            </div>
+            <div id="team_2_view">
+                <h2>Team 2</h2>
+            </div>
+        </main>
+
+
+        <script>
+            function fightTime(e) {
+                e.preventDefault()
+                let team_1 = $('#team_1').val()
+                let team_2 = $('#team_2').val()
+                console.log(team_1)
+                console.log(team_2)
+                let css = {
+                    visability: 'visable'
+                }
+                $('#team_versus').css(css)
+            }
+
+            $('#fight_form').submit(fightTime)
+        </script>
+    </body>
+
+</html>
