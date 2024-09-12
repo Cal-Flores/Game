@@ -32,9 +32,31 @@
             html = ''
             team.forEach((player, index) => {
                 html += `
-                    <div>
-                        <h2>${player.name}</h2>
-                        <img class='profile_image' src=${player.image}>
+                    <div class='profile_border'>
+
+                            <img class='profile_image' src=${player.image}>
+
+                        <div class='profile'>
+                            <div class='profile_header'>
+                                <h2>${player.name}</h2>
+                                <div>
+                                    <p>${player.nen_type}</p>
+                                    <img class='nen_img' src = https://files.idyllic.app/files/static/2009128>
+                                </div>
+                                <div>
+                                    <p>${player.element}</p>
+                                    <img class='elem_img' src ='https://www.clipartmax.com/png/middle/83-830894_fire-type-pokemon-symbol-pokemon-fire-type-logo.png'>
+                                </div>
+                            </div>
+                            <div class='profile_stats'>
+                                <p>⚔️: ${player.attack}</p>
+                                <p>🛡: ${player.defense}</p>
+                                <p>💥: ${player.critical}%</p>
+                                <p>🔥: ${player.elm_attack}</p>
+                                <p>♠︎: ${player.elm_defense}</p>
+                                <p>🧪: ${player.elm_efficiency}% </p>
+                            </div>
+                        </div>
                     </div>
                 `
             });
