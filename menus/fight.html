@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FIGHT</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../database/players.js"></script>
+        <link rel="stylesheet" href="menu.css">
     </head>
 
     <body>
@@ -43,8 +45,11 @@
         <main id="team_versus">
             <div id="team_1_view">
                 <h2>Team 1</h2>
+                <div class="team_1_fighters">
+
+                </div>
             </div>
-            <div id="team_2_view">
+            <div id="team_2_view" class="team_2_fighters">
                 <h2>Team 2</h2>
             </div>
         </main>
@@ -55,12 +60,10 @@
                 e.preventDefault()
                 let team_1 = $('#team_1').val()
                 let team_2 = $('#team_2').val()
-                console.log(team_1)
-                console.log(team_2)
-                let css = {
-                    visability: 'visable'
-                }
-                $('#team_versus').css(css)
+                $('#team_versus').css("visibility", "visible")
+
+
+
             }
 
             $('#fight_form').submit(fightTime)
