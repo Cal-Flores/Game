@@ -1,4 +1,4 @@
-const penn_state = [
+const ok_state = [
     {
         name: 'Chrollo',
         nen_type: 'Specialist',

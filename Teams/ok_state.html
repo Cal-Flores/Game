@@ -4,19 +4,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Penn State</title>
+        <title>Oklahoma State</title>
         <link rel="stylesheet" href="teams.css">
-        <script src="../database/penn_state.js"></script>
+        <script src="../database/ok_state.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
     </head>
 
     <body>
-        <header id="penn_state_header">
-            <img class="header_logo" src="https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg">
-            <h1 id="penn_state_text">Penn State Nittany Lions</h1>
-            <img id="harley" src="../assets/C9BA73D5-7688-413B-868B-2AFFF256AFE9_1_105_c.jpeg">
+        <header id="ok_state_header">
+            <img class="header_logo"
+                src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/okstate.com/images/sng_2023/logo_main_wordmark.svg">
+            <h1 id="penn_state_text">Oklahoma State Cowboys</h1>
+            <img id="harley" src="../assets/66E38003-5360-436A-9741-79612E8E15F8_1_105_c.jpeg">
         </header>
         <main>
             <div class="team_stats">
@@ -24,13 +25,13 @@
                 <p>Losses: 0</p>
                 <p>0th Place</p>
             </div>
-            <div id="penn_state_players">
+            <div id="ok_state_players">
 
             </div>
         </main>
 
         <script>
-            let team = penn_state;
+            let team = ok_state;
             html = ''
             team.forEach((player, index) => {
                 html += `
@@ -62,7 +63,7 @@
                     </div>
                 `
             });
-            $('#penn_state_players').append(html)
+            $('#ok_state_players').append(html)
         </script>
 
     </body>
