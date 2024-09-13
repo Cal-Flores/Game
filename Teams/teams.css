@@ -66,6 +66,20 @@ header {
     #harley {
         visibility: hidden;
     }
+
+    .profile_stats>p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile_image {
+        display: none;
+    }
+
+    .profile_header {
+        width: 100%;
+    }
 }
 
 .profile {

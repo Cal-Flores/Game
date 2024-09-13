@@ -44,7 +44,7 @@ const penn_state = [
         hp: 1200,
         wins: 0,
         loss: 0,
-        elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dfgddau-db28e6e7-1305-45bd-b361-a80249a95e6c.png/v1/fill/w_894,h_894/lightning_type_symbol_tcg_by_jormxdos_dfgddau-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZnZGRhdS1kYjI4ZTZlNy0xMzA1LTQ1YmQtYjM2MS1hODAyNDlhOTVlNmMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.If8icCJc-MGpXVBsgljwsFh-uQ6Ap06jcGL8TJ8lOlU',
+        elm: 'https://cdn.pixabay.com/photo/2018/05/18/15/43/pokemon-3411389_960_720.png',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
     {
