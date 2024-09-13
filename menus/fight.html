@@ -56,13 +56,35 @@
 
 
         <script>
+            let penn_state_team = penn_state
+            let ok_state_team = ok_state
+            let teamObj = {
+                'Penn State': penn_state_team,
+                'Oklahoma State': ok_state_team
+            }
             function fightTime(e) {
                 e.preventDefault()
+
+
                 let team_1 = $('#team_1').val()
                 let team_2 = $('#team_2').val()
                 $('#team_versus').css("visibility", "visible")
 
 
+                for (let team in teamObj) {
+                    if (team == team_1) {
+                        html = ''
+                        for (player in teamObj[team]) {
+                            console.log(teamObj[team_1][player])
+                            html += `
+                            <div>
+                                <h2>${teamObj[team_1][player].name}</h2>
+                            </div>
+                            `
+                        }
+                        $(".team_1_fighters").append(html)
+                    }
+                }
 
             }
 
