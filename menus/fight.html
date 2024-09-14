@@ -137,13 +137,13 @@
                             </div>
                             `
                         }
-                        $(".team_1_fighters").append(html)
+                        // $(".team_1_fighters").append(html)
                     }
                     if (team == team_2) {
                         html2 = ''
                         for (player in teamObj[team]) {
                             console.log(teamObj[team_2][player])
-                            html += `
+                            html2 += `
                             <div class='fight_card_border'>
                                 <div class='fight_card_head'>
                                     <img class='fight_card_img' src='${teamObj[team_2][player].image}'>
