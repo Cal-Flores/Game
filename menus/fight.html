@@ -87,13 +87,9 @@
             <input type="submit">
         </form>
         <main id="team_versus">
-            <div id="team_1_view">
-                <h2>Team 1</h2>
-                <div class="team_1_fighters">
-
-                </div>
+            <div class="team_1_fighters">
             </div>
-            <div id="team_2_view" class="team_2_fighters">
+            <div class="team_2_fighters">
                 <h2>Team 2</h2>
             </div>
         </main>
@@ -113,7 +109,7 @@
                 let team_1 = $('#team_1').val()
                 let team_2 = $('#team_2').val()
                 $('#team_versus').css("visibility", "visible")
-                $('#fight_from').css("visibility", "hidden")
+                $('#fight_form').css("display", "none")
 
 
                 for (let team in teamObj) {
@@ -142,6 +138,33 @@
                             `
                         }
                         $(".team_1_fighters").append(html)
+                    }
+                    if (team == team_2) {
+                        html2 = ''
+                        for (player in teamObj[team]) {
+                            console.log(teamObj[team_2][player])
+                            html += `
+                            <div class='fight_card_border'>
+                                <div class='fight_card_head'>
+                                    <img class='fight_card_img' src='${teamObj[team_2][player].image}'>
+                                    <h2>${teamObj[team_2][player].name}</h2>
+                                    <p>🖤: ${teamObj[team_2][player].hp}</p>
+                                    <p>${teamObj[team_2][player].wins} - ${teamObj[team_2][player].loss}</p>
+                                    <img class='fight_card_elm' src='${teamObj[team_2][player].elm}'>
+                                </div>
+                                <div class='fight_card_stats'>
+                                    <p>⚔️: ${teamObj[team_2][player].attack}</p>
+                                    <p>🛡: ${teamObj[team_2][player].defense}</p>
+                                    <p>🔥:${teamObj[team_2][player].elm_attack}</p>
+                                    <p>㊏: ${teamObj[team_2][player].elm_defense}</p>
+                                    <p>💥: ${teamObj[team_2][player].critical}</p>
+                                    <p>🧪: ${teamObj[team_2][player].elm_efficiency}</p>
+                                </div>
+                            </div>
+                            `
+                        }
+                        $(".team_1_fighters").append(html)
+                        $(".team_2_fighters").append(html2)
                     }
                 }
 
