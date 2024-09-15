@@ -90,21 +90,23 @@ header {
 
 @media (max-width: 1150px) {
     .profile_border {
-        width: 80%;
+        width: 70%;
+        max-height: 250px;
     }
 
     #harley {
         visibility: hidden;
     }
 
-    .profile_stats>p {
+    /* .profile_stats>p {
         font-size: 20px;
-    }
+    } */
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .profile_image {
         display: none;
+
     }
 
     .profile_header {
