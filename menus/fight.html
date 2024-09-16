@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FIGHT</title>
         <script src="../database/players.js"></script>
+        <script src="../database/database.js"></script>
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="../Teams/teams.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -24,18 +25,54 @@
             <input type="submit">
         </form>
 
+        <div>
+            <div id="red_corner">
+
+            </div>
+            <div id="blue_corner">
+
+            </div>
+        </div>
     </body>
 
     <script>
+        let databaseArr = database;
         let penn_state_team = penn_state;
         let ok_state_team = ok_state;
         let players_arr = [penn_state_team, ok_state_team];
 
-        function action() {
+        function action(e) {
+            e.preventDefault()
             val_1 = $('#red_corner_search').val()
             val_2 = $('#blue_corner_search').val()
 
-            
+            for (player of databaseArr) {
+                if (val_1 == player.name) {
+                    console.log(player)
+                    redHtml = `
+                    <div class='fight_time_card'>
+                        <div class='fight_corner_header'>
+                            <p>${player.name}</p>
+                            <img class='elem_img_corner' src='${player.elm}'>
+                        </div>
+                        <img id='fight_corner_img' src='${player.image}'>
+                        <h4 contenteditable="true">🖤 ${player.hp}</h4>
+                        <p>${player.nen_type}</p>
+                        <div class='fight_corner_stats'>
+                             <p contenteditable="true">⚔️: ${player.attack}</p>
+                             <p contenteditable="true">🛡: ${player.defense}</p>
+                             <p contenteditable="true">💥: ${player.critical}</p>
+                             <p contenteditable="true">🔥:${player.elm_attack}</p>
+                             <p contenteditable="true">㊏: ${player.elm_defense}</p>
+                             <p contenteditable="true">🧪: ${player.elm_efficiency}</p>
+                        </div>
+                        <p>Increase ⚔️ by 35% 🎯: 85%</p>
+                    </div>
+                    `
+
+                }
+            }
+            $('#red_corner').append(redHtml)
         }
 
         function filterSuggestions(inputId, suggestionsId, team) {
@@ -61,8 +98,8 @@
         }
 
         // Apply filtering for red and blue corners
-        filterSuggestions('#red_corner_search', '#red_corner_suggestions', penn_state_team);
-        filterSuggestions('#blue_corner_search', '#blue_corner_suggestions', ok_state_team);
+        filterSuggestions('#red_corner_search', '#red_corner_suggestions', databaseArr);
+        filterSuggestions('#blue_corner_search', '#blue_corner_suggestions', databaseArr);
 
 
         $('#fight_form_fight').submit(action)
