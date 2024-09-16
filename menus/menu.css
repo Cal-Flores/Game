@@ -146,16 +146,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 90%;
     background-color: rgb(177, 172, 172);
+    margin: 5%;
 }
 
 #red_corner {
-    width: 33%;
+    width: 25%;
 }
 
 #blue_corner {
-    width: 33%;
+    width: 25%;
 }
 
 .fight_time_card {
@@ -188,7 +189,7 @@
 
 .fight_corner_stats>p {
     width: 33%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .fight_corner_header {
