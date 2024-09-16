@@ -9,51 +9,63 @@
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="../Teams/teams.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     </head>
 
     <body>
-        <form>
-            <label for="red_corner_search">Red Corner Search</label>
-            <input type="text" id="red_corner_search" placeholder="Search Red Corner">
-            <select id="red_corner_select"></select>
+        <form id="fight_form_fight">
+            <label for="red_corner_search">Red Corner</label>
+            <input type="text" id="red_corner_search" placeholder="Type player's name">
+            <div id="red_corner_suggestions" class="suggestions"></div>
 
-            <label for="blue_corner_search">Blue Corner Search</label>
-            <input type="text" id="blue_corner_search" placeholder="Search Blue Corner">
-            <select id="blue_corner_select"></select>
+            <label for="blue_corner_search">Blue Corner</label>
+            <input type="text" id="blue_corner_search" placeholder="Type player's name">
+            <div id="blue_corner_suggestions" class="suggestions"></div>
+            <input type="submit">
         </form>
 
     </body>
+
     <script>
         let penn_state_team = penn_state;
         let ok_state_team = ok_state;
-        let players_arr = [penn_state, ok_state];
+        let players_arr = [penn_state_team, ok_state_team];
 
-        function populateSelect(selectId, team) {
-            for (let player of team) {
-                $(selectId).append(`<option value="${player.name}">${player.name}</option>`);
-            }
+        function action() {
+            val_1 = $('#red_corner_search').val()
+            val_2 = $('#blue_corner_search').val()
+
+            
         }
 
-        // Populate both selects with players from both teams
-        populateSelect('#red_corner_select', penn_state_team);
-        populateSelect('#blue_corner_select', ok_state_team);
-
-        // Filter options based on search input
-        function filterOptions(searchId, selectId, team) {
-            $(searchId).on('input', function () {
+        function filterSuggestions(inputId, suggestionsId, team) {
+            $(inputId).on('input', function () {
                 let filter = $(this).val().toLowerCase();
-                $(selectId).empty();  // Clear the select box
-                for (let player of team) {
-                    if (player.name.toLowerCase().includes(filter)) {
-                        $(selectId).append(`<option value="${player.name}">${player.name}</option>`);
+                let suggestions = $(suggestionsId);
+                suggestions.empty(); // Clear previous suggestions
+
+                if (filter) {
+                    for (let player of team) {
+                        if (player.name.toLowerCase().includes(filter)) {
+                            suggestions.append(`<div>${player.name}</div>`);
+                        }
                     }
                 }
+
+                // Handle clicking on a suggestion
+                $(suggestionsId).on('click', 'div', function () {
+                    $(inputId).val($(this).text()); // Set input to selected suggestion
+                    suggestions.empty(); // Clear suggestions
+                });
             });
         }
 
-        // Apply filter for red and blue corners
-        filterOptions('#red_corner_search', '#red_corner_select', penn_state_team);
-        filterOptions('#blue_corner_search', '#blue_corner_select', ok_state_team);
+        // Apply filtering for red and blue corners
+        filterSuggestions('#red_corner_search', '#red_corner_suggestions', penn_state_team);
+        filterSuggestions('#blue_corner_search', '#blue_corner_suggestions', ok_state_team);
+
+
+        $('#fight_form_fight').submit(action)
     </script>
 
 </html>
