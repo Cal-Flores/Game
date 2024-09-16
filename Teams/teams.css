@@ -80,12 +80,19 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: baseline;
     width: 100%;
+    align-items: flex-start;
+    line-height: 10px;
 }
 
 .profile_stats>p {
     width: 33%;
+}
+
+#buff {
+    width: 90%;
+
 }
 
 @media (max-width: 1150px) {

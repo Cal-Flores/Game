@@ -2,6 +2,28 @@
     background-color: rgb(174, 174, 174);
 }
 
+
+
+#menu_sch {
+    background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/08/Hunter-x-Hunter-Gon-Killua-.jpg');
+}
+
+#menu_fight {
+    background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/03/Hunter-X-Hunter-5-Characters-Who-Can-Defeat-Chrollo.png');
+}
+
+#menu_draft {
+    background-image: url('https://gonkilluasite.wordpress.com/wp-content/uploads/2016/04/4392155-3934808-6846480632-126_.png?w=1250');
+}
+
+#menu_tstandings {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BYjk3NzdhOTktMTQxYi00NTM3LTlhNjktZWYyMzM4MjY4YmExXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg');
+}
+
+#menu_fighters {
+    background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/10/hunter-x-hunter-hunter-exam-2.jpeg');
+}
+
 .menu_cards {
     display: flex;
     flex-direction: row;
@@ -12,11 +34,29 @@
     text-align: center;
 }
 
+.menu_card>h2 {
+    color: whitesmoke;
+    margin-bottom: 15%;
+}
+
 .menu_card {
     width: 33%;
     border: 1px double black;
     border-radius: 10px;
     margin: 2%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu_btn {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 3%;
+    border-radius: 20px;
+    width: 100%;
 }
 
 

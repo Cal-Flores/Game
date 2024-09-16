@@ -389,3 +389,29 @@ const ok_state = [
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     }
 ];
+
+
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const ohio_state = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const iowa_state = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const stanford = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const ohio_st = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const michigan = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const virginia_tech = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const iowa = []
+// !!!!!!!!!!!!!!!!  Ohio state !!!!!!!!!!!!!!
+
+const nebraska = []
