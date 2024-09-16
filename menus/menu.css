@@ -140,8 +140,26 @@
     }
 }
 
+/* !!!!!!!!!! FIGHT CORNER !!!!!!!!!! */
+.corner_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: rgb(177, 172, 172);
+}
+
+#red_corner {
+    width: 33%;
+}
+
+#blue_corner {
+    width: 33%;
+}
+
 .fight_time_card {
-    width: 25%;
+    width: 100%;
     border: 4px double black;
     background-color: rgb(217, 190, 33);
     display: flex;
@@ -154,7 +172,7 @@
 }
 
 #fight_corner_img {
-    width: 70%;
+    width: 60%;
 }
 
 .fight_corner_stats {

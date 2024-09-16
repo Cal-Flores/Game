@@ -25,13 +25,23 @@
             <input type="submit">
         </form>
 
-        <div>
-            <div id="red_corner">
-
-            </div>
-            <div id="blue_corner">
-
-            </div>
+        <div class="corner_container">
+            <div id="red_corner"></div>
+            <form>
+                <label>Turn</label>
+                <select>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+                <lable>Action</lable>
+                <select>
+                    <option>Attack</option>
+                    <option>Elemental Attack</option>
+                    <option>Special Abbility</option>
+                </select>
+                <input type="submit">
+            </form>
+            <div id="blue_corner"></div>
         </div>
     </body>
 
@@ -70,9 +80,32 @@
                     </div>
                     `
 
+                } else if (val_2 == player.name) {
+                    console.log(player)
+                    blueHtml = `
+                    <div class='fight_time_card'>
+                        <div class='fight_corner_header'>
+                            <p>${player.name}</p>
+                            <img class='elem_img_corner' src='${player.elm}'>
+                        </div>
+                        <img id='fight_corner_img' src='${player.image}'>
+                        <h4 contenteditable="true">🖤 ${player.hp}</h4>
+                        <p>${player.nen_type}</p>
+                        <div class='fight_corner_stats'>
+                             <p contenteditable="true">⚔️: ${player.attack}</p>
+                             <p contenteditable="true">🛡: ${player.defense}</p>
+                             <p contenteditable="true">💥: ${player.critical}</p>
+                             <p contenteditable="true">🔥:${player.elm_attack}</p>
+                             <p contenteditable="true">㊏: ${player.elm_defense}</p>
+                             <p contenteditable="true">🧪: ${player.elm_efficiency}</p>
+                        </div>
+                        <p>Increase ⚔️ by 35% 🎯: 85%</p>
+                    </div>
+                    `
                 }
             }
             $('#red_corner').append(redHtml)
+            $('#blue_corner').append(blueHtml)
         }
 
         function filterSuggestions(inputId, suggestionsId, team) {
