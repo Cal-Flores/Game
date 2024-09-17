@@ -4,10 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oklahoma State</title>
+        <title>Nebraska</title>
         <link rel="stylesheet" href="teams.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="../database/players.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="">
 
 
     </head>
@@ -56,25 +58,25 @@
             </a>
             <img>
         </header>
-        <header id="ok_state_header">
+        <header id="nebraska_header">
             <img class="header_logo"
-                src="https://sportslogohistory.com/wp-content/uploads/2018/07/oklahoma_state_cowboys_2015-pres.png">
-            <h1 id="penn_state_text">Oklahoma State Cowboys</h1>
-            <img id="harley" src="../assets/66E38003-5360-436A-9741-79612E8E15F8_1_105_c.jpeg">
+                src="data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2026.4.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version=%271.1%27%20id=%27Nebraska_N%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%20163%20152%27%20style=%27enable-background:new%200%200%20163%20152;%27%20xml:space=%27preserve%27%3e%3cstyle%20type=%27text/css%27%3e%20.st0{fill:%23FFFFFF;}%20%3c/style%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M159.1,144c-2.3,0-4.1,1.8-4.1,4s1.8,4,4,4s4-1.8,4-4S161.2,144,159.1,144z%20M159,151.2c-1.8,0-3.2-1.4-3.2-3.2%20s1.4-3.2,3.2-3.2c1.7,0,3.2,1.5,3.2,3.2C162.2,149.8,160.8,151.2,159,151.2z%27/%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M157.4,145.6h1.4c0.6,0,0.8,0,1.1,0.2c0.4,0.2,0.6,0.6,0.6,1.1c0,0.4-0.1,0.7-0.3,1c-0.1,0.2-0.3,0.2-0.6,0.4%20h-0.1l1.1,2.1h-0.8l-1-2h-0.6v2h-0.8L157.4,145.6L157.4,145.6z%20M158.6,147.7c0,0,0.3,0,0.4,0c0.4-0.1,0.6-0.3,0.6-0.8%20c0-0.3-0.1-0.5-0.4-0.6c-0.1,0-0.1,0-0.6,0h-0.4v1.4L158.6,147.7L158.6,147.7z%27/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M147,0H93h-5v5v35v5h5h5v24.8L55.2,2.3L53.7,0H51H5H0v5v35v5h5h5v62H5H0v5v35v5h5h54h5v-5v-35v-5h-5h-5V82.2%20l42.8,67.5l1.5,2.3h2.7h46h5v-5v-35v-5h-5h-5V45h5h5v-5V5V0H147z%20M150,5v35v3h-3h-7v66h7h3v3v35v3h-3h-46h-1.6l-0.9-1.4L52,75.3%20V109h7h3v3v35v3h-3H5H2v-3v-35v-3h3h7V43H5H2v-3V5V2h3h46h1.7l0.9,1.4L100,76.7V43h-7h-3v-3V5V2h3h54h3V5z%27/%3e%3c/g%3e%3cpath%20class=%27st0%27%20d=%27M103,87L103,87L51,5H5v35c0,0,7.8,0,10,0c0,3.3,0,68.7,0,72l0,0c-2.2,0-10,0-10,0v35h54v-35c0,0-7.8,0-10,0l0,0%20c0-2.6,0-47,0-47l52,82h46v-35c0,0-7.8,0-10,0l0,0c0-3.3,0-68.7,0-72c2.2,0,10,0,10,0V5H93v35c0,0,7.8,0,10,0%20C103,42.6,103,87,103,87z%27/%3e%3c/svg%3e">
+            <h1 id="penn_state_text">Nebraska Corn Huskers</h1>
+            <img id="harley" src="../assets/C9BA73D5-7688-413B-868B-2AFFF256AFE9_1_105_c.jpeg">
         </header>
         <main>
-            <div id="osu_stats" class="team_stats">
+            <div id="nebraska_team_stat" class="team_stats">
                 <p>Wins: 0</p>
                 <p>Losses: 0</p>
                 <p>0th Place</p>
             </div>
-            <div id="ok_state_players">
+            <div id="nebraska_players">
 
             </div>
         </main>
 
         <script>
-            let team = ok_state;
+            let team = nebraska;
             html = ''
             team.forEach((player, index) => {
                 html += `
@@ -87,26 +89,30 @@
                                 <h2>${player.name}</h2>
                                 <div class='nen_display'>
                                     <p>${player.nen_type}</p>
-                                    <img class='nen_img' src = https://files.idyllic.app/files/static/2009128>
+                                    <img class='nen_img' src = 'https://files.idyllic.app/files/static/2009128'>
                                 </div>
                                 <div class='nen_display'>
                                     <p>${player.element}</p>
-                                    <img class='elem_img' src ='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8'>
+                                    <img class='elem_img' src =${player.elm}>
                                 </div>
                             </div>
                             <div class='profile_stats'>
+                                <p>🖤: ${player.hp}</p>
+                                <p>Wins: ${player.wins}</p>
+                                <p>Losses: ${player.loss}</p>
                                 <p>⚔️: ${player.attack}</p>
                                 <p>🛡: ${player.defense}</p>
                                 <p>💥: ${player.critical}%</p>
                                 <p>🔥: ${player.elm_attack}</p>
                                 <p>♠︎: ${player.elm_defense}</p>
                                 <p>🧪: ${player.elm_efficiency}% </p>
+                                <p id='buff'>Increase ⚔️ by 35% 🎯: 85%</p>
                             </div>
                         </div>
                     </div>
                 `
             });
-            $('#ok_state_players').append(html)
+            $('#nebraska_players').append(html)
         </script>
 
     </body>

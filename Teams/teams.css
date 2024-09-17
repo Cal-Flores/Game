@@ -10,14 +10,13 @@ header {
     padding: 1%;
 }
 
-/* .header_logo {
-    margin-right: 30%;
-} */
+.header_logo {
+    max-width: 80px;
+}
 
 .team_stats {
     display: flex;
     flex-direction: row;
-    background-color: rgba(183, 170, 170, .5);
     justify-content: space-around;
     color: white;
     font-size: 18px;
@@ -139,6 +138,15 @@ header {
     width: 35px;
 }
 
+#harley {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#penn_state_text {
+    color: white;
+}
 
 /* penn state style */
 
@@ -146,14 +154,10 @@ header {
     background-color: rgb(4 30 66);
 }
 
-#penn_state_text {
-    color: white;
-}
 
-#harley {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+
+#penn_state_team_stat {
+    background-color: rgba(183, 170, 170, .5);
 }
 
 /* oklahoma state style  */
@@ -162,15 +166,92 @@ header {
     background-color: #fe5c00;
 }
 
+#osu_stats {
+    background-color: #000000;
+}
 
+/* iowa state styel */
 
+#iowa_state_header {
+    background-color: #a71930;
+}
 
+#iowa_state {
+    background-color: #FFC629;
+}
 
+/* cornell style */
 
+#cornell_state_team_stat {
+    background-color: #b31b1b;
+}
 
+#cornell_state_header {
+    background-color: #b31b1b;
+    border-bottom: 1px solid black;
+}
 
+/* stanford style */
+#stanford_header {
+    background-color: white;
 
+}
 
+#stanford_text {
+    color: #8C1515;
+}
+
+#stanford_team_stat {
+    background-color: #8C1515;
+}
+
+/* Ohio state style */
+#ohio_state_header {
+    background-color: rgb(17 17 17)
+}
+
+#ohio_state_team_stat {
+    background-color: #ce0f3d
+}
+
+/* michigan style */
+#michigan_state_header {
+    background-color: #00274C;
+}
+
+#michigan_team_stat {
+    background-color: #FFCB05;
+}
+
+/* nebraska style */
+#nebraska_header {
+    background-color: #D00000;
+}
+
+#nebraska_team_stat {
+    background-color: #FEFDFA;
+    color: #D00000;
+    border-bottom: 1px solid black;
+}
+
+/* vt style  */
+#vt_header {
+    background-color: #630031;
+}
+
+#vt_team_stat {
+    background-color: #cf4420;
+}
+
+/* iowa style */
+#iowa_header {
+
+    background-color: #000000;
+}
+
+#iowa_team_stat {
+    background-color: #FFCD00;
+}
 
 
 /* COPY THIS !!!!!!!! */
@@ -185,6 +266,78 @@ header {
 }
 
 #ok_state_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#iowa_state_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#cornell_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#stanford_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#ohio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#michigan_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#nebraska_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#vt_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#iowa_players {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

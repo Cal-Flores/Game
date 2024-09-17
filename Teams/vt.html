@@ -4,10 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oklahoma State</title>
+        <title>Virginia Tech</title>
         <link rel="stylesheet" href="teams.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="../database/players.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="">
 
 
     </head>
@@ -56,25 +58,25 @@
             </a>
             <img>
         </header>
-        <header id="ok_state_header">
+        <header id="vt_header">
             <img class="header_logo"
-                src="https://sportslogohistory.com/wp-content/uploads/2018/07/oklahoma_state_cowboys_2015-pres.png">
-            <h1 id="penn_state_text">Oklahoma State Cowboys</h1>
-            <img id="harley" src="../assets/66E38003-5360-436A-9741-79612E8E15F8_1_105_c.jpeg">
+                src="https://sportslogohistory.com/wp-content/uploads/2018/01/virginia_tech_hokies_1983-pres.png">
+            <h1 id="penn_state_text">Virginia Tech Hokies</h1>
+            <img id="harley" src="../assets/C9BA73D5-7688-413B-868B-2AFFF256AFE9_1_105_c.jpeg">
         </header>
         <main>
-            <div id="osu_stats" class="team_stats">
+            <div id="vt_team_stat" class="team_stats">
                 <p>Wins: 0</p>
                 <p>Losses: 0</p>
                 <p>0th Place</p>
             </div>
-            <div id="ok_state_players">
+            <div id="vt_players">
 
             </div>
         </main>
 
         <script>
-            let team = ok_state;
+            let team = virginia_tech;
             html = ''
             team.forEach((player, index) => {
                 html += `
@@ -87,26 +89,30 @@
                                 <h2>${player.name}</h2>
                                 <div class='nen_display'>
                                     <p>${player.nen_type}</p>
-                                    <img class='nen_img' src = https://files.idyllic.app/files/static/2009128>
+                                    <img class='nen_img' src = 'https://files.idyllic.app/files/static/2009128'>
                                 </div>
                                 <div class='nen_display'>
                                     <p>${player.element}</p>
-                                    <img class='elem_img' src ='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8'>
+                                    <img class='elem_img' src =${player.elm}>
                                 </div>
                             </div>
                             <div class='profile_stats'>
+                                <p>🖤: ${player.hp}</p>
+                                <p>Wins: ${player.wins}</p>
+                                <p>Losses: ${player.loss}</p>
                                 <p>⚔️: ${player.attack}</p>
                                 <p>🛡: ${player.defense}</p>
                                 <p>💥: ${player.critical}%</p>
                                 <p>🔥: ${player.elm_attack}</p>
                                 <p>♠︎: ${player.elm_defense}</p>
                                 <p>🧪: ${player.elm_efficiency}% </p>
+                                <p id='buff'>Increase ⚔️ by 35% 🎯: 85%</p>
                             </div>
                         </div>
                     </div>
                 `
             });
-            $('#ok_state_players').append(html)
+            $('#vt_players').append(html)
         </script>
 
     </body>
