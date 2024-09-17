@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .team_1_fighters {
@@ -132,6 +132,11 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    line-height: 5px;
+}
+
+.buff_stat {
+    width: 400px;
 }
 
 @media (max-width: 1000px) {
@@ -139,6 +144,7 @@
         display: none;
     }
 }
+
 
 /* !!!!!!!!!! FIGHT CORNER !!!!!!!!!! */
 .corner_container {
@@ -203,4 +209,14 @@
 .elem_img_corner {
     width: 15px;
     height: 15px;
+}
+
+.color_change {
+    background-color: bisque;
+    border: 1px solid gold;
+}
+
+.color_change:hover {
+    background-color: gold;
+    cursor: pointer;
 }
