@@ -86,23 +86,25 @@
             // Fetch and parse stats
             redAttack = parseInt($('#redAttack').text(), 10);
             redDefense = parseInt($('#redDefense').text(), 10);
-            redCrit = parseFloat($('#redCritical').text()); // Ensure it's a float
+            redCrit = parseFloat($('#redCritical').text());
             redElmAttack = parseInt($('#redElmAttack').text(), 10);
             redElmDef = parseInt($('#redElmDefense').text(), 10);
             redElmEffc = parseInt($('#redElmEfficiency').text(), 10);
             redHp = parseInt($('#redHP').text(), 10);
-            redStr = parseInt($('#redStrength').text(), 10);
+            redStr = parseInt($('#redStrength').text().trim());
             redPot = parseInt($('#redPotency').text(), 10);
 
             blueAttack = parseInt($('#blueAttack').text(), 10);
             blueDefense = parseInt($('#blueDefense').text(), 10);
-            blueCrit = parseFloat($('#blueCritical').text()); // Ensure it's a float
+            blueCrit = parseFloat($('#blueCritical').text());
             blueElmAttack = parseInt($('#blueElmAttack').text(), 10);
             blueElmDef = parseInt($('#blueElmDefense').text(), 10);
             blueElmEffc = parseInt($('#blueElmEfficiency').text(), 10);
             blueHp = parseInt($('#blueHP').text(), 10);
-            blueStr = parseInt($('#blueStrength').text(), 10);
+            blueStr = parseInt($('#blueStrength').text().trim());
             bluePot = parseInt($('#bluePotency').text(), 10);
+
+            console.log('Parsed Stats:', { redStr, blueStr });
 
             let variance = Math.random() * 0.2 - 0.1;
             if (action === 'Attack') {
@@ -111,7 +113,7 @@
                 if (attacker === 'red') {
                     isCritical = Math.random() < redCrit;
                     criticalMultiplier = isCritical ? redStr : 1.0;
-                    console.log(`Red Crit Chance: ${redCrit}, Is Critical: ${isCritical}`);
+                    console.log('Red Strength (after applying multiplier):', redStr);
                     let damage = ((redAttack * (1 + variance)) - (blueDefense / 2)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
                     $('#damage').text(damage);
@@ -120,7 +122,7 @@
                 } else {
                     isCritical = Math.random() < blueCrit;
                     criticalMultiplier = isCritical ? blueStr : 1.0;
-                    console.log(`Blue Crit Chance: ${blueCrit}, Is Critical: ${isCritical}`);
+                    console.log('Blue Strength (after applying multiplier):', blueStr);
                     let damage = ((blueAttack * (1 + variance)) - (redDefense / 2)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
                     $('#damage').text(damage);
@@ -130,7 +132,8 @@
             }
         }
 
-        $('#attack-form').submit(attack);
+
+
 
 
         $('#attack-form').submit(attack)
@@ -145,59 +148,61 @@
 
             for (let player of databaseArr) {
                 if (val_1 === player.name) {
-                    console.log(player);
                     redHtml = `
-                <div class='fight_time_card'>
-                    <div class='fight_corner_header'>
-                        <p>${player.name}</p>
-                        <img class='elem_img_corner' src='${player.elm}'>
-                    </div>
-                    <img class='corner_img' src='${player.image}'>
-                    <h4 contenteditable="true">🖤 <span class="hp" id='redHP'>${player.hp}</span></h4>
-                    <div class='fight_corner_stats'>
-                        <p contenteditable="true">⚔️: <span class="stat" id="redAttack">${player.attack}</span></p>
-                        <p contenteditable="true">🛡: <span class="stat" id="redDefense">${player.defense}</span></p>
-                        <p contenteditable="true">💥: <span class="stat" id="redCritical">${player.critical}</span></p>
-                        <p contenteditable="true">🔥: <span class="stat" id="redElmAttack">${player.elm_attack}</span></p>
-                        <p contenteditable="true">㊏: <span class="stat" id="redElmDefense">${player.elm_defense}</span></p>
-                        <p contenteditable="true">🧪: <span class="stat" id="redElmEfficiency">${player.elm_efficiency}</span></p>
-                        <p contenteditable="true">🪦: <span class="stat" id="redStrength">${player.strength}</span></p>
-                        <p contenteditable="true">🌪: <span class="stat" id="redPotency">${player.potency}</span></p>
-                    </div>
+            <div class='fight_time_card'>
+                <div class='fight_corner_header'>
+                    <p>${player.name}</p>
+                    <img class='elem_img_corner' src='${player.elm}'>
                 </div>
+                <img id='fight_corner_img' src='${player.image}'>
+                <h4 contenteditable="true">🖤 <span id='redHP'>${player.hp}</span></h4>
+                <p>${player.nen_type}</p>
+                <div class='fight_corner_stats'>
+                    <p contenteditable="true">⚔️: <span id="redAttack">${player.attack}</span></p>
+                    <p contenteditable="true">🛡: <span id="redDefense">${player.defense}</span></p>
+                    <p contenteditable="true">💥: <span id="redCritical">${player.critical}</span></p>
+                    <p contenteditable="true">🔥: <span id="redElmAttack">${player.elm_attack}</span></p>
+                    <p contenteditable="true">㊏: <span id="redElmDefense">${player.elm_defense}</span></p>
+                    <p contenteditable="true">🧪: <span id="redElmEfficiency">${player.elm_efficiency}</span></p>
+                    <p contenteditable="true">🪦: <span id="redStrength">${player.strength}</span></p>
+                    <p contenteditable="true">🌪: <span id="redPotency">${player.potency}</span></p>
+                </div>
+                <p>Increase ⚔️ by 35% 🎯: 85%</p>
+            </div>
             `;
                 } else if (val_2 === player.name) {
-                    console.log(player);
                     blueHtml = `
-                <div class='fight_time_card'>
-                    <div class='fight_corner_header'>
-                        <p>${player.name}</p>
-                        <img class='elem_img_corner' src='${player.elm}'>
-                    </div>
-                    <img class='corner_img' src='${player.image}'>
-                    <h4 contenteditable="true">🖤 <span class="hp" id='blueHP'>${player.hp}</span></h4>
-                    <div class='fight_corner_stats'>
-                        <p contenteditable="true">⚔️: <span class="stat" id="blueAttack">${player.attack}</span></p>
-                        <p contenteditable="true">🛡: <span class="stat" id="blueDefense">${player.defense}</span></p>
-                        <p contenteditable="true">💥: <span class="stat" id="blueCritical">${player.critical}</span></p>
-                        <p contenteditable="true">🔥: <span class="stat" id="blueElmAttack">${player.elm_attack}</span></p>
-                        <p contenteditable="true">㊏: <span class="stat" id="blueElmDefense">${player.elm_defense}</span></p>
-                        <p contenteditable="true">🧪: <span class="stat" id="blueElmEfficiency">${player.elm_efficiency}</span></p>
-                        <p contenteditable="true">🪦: <span class="stat" id="blueStrength">${player.strength}</span></p>
-                        <p contenteditable="true">🌪: <span class="stat" id="bluePotency">${player.potency}</span></p>
-                    </div>
+            <div class='fight_time_card'>
+                <div class='fight_corner_header'>
+                    <p>${player.name}</p>
+                    <img class='elem_img_corner' src='${player.elm}'>
                 </div>
+                <img id='fight_corner_img' src='${player.image}'>
+                <h4 contenteditable="true">🖤 <span id='blueHP'>${player.hp}</span></h4>
+                <p>${player.nen_type}</p>
+                <div class='fight_corner_stats'>
+                    <p contenteditable="true">⚔️: <span id="blueAttack">${player.attack}</span></p>
+                    <p contenteditable="true">🛡: <span id="blueDefense">${player.defense}</span></p>
+                    <p contenteditable="true">💥: <span id="blueCritical">${player.critical}</span></p>
+                    <p contenteditable="true">🔥: <span id="blueElmAttack">${player.elm_attack}</span></p>
+                    <p contenteditable="true">㊏: <span id="blueElmDefense">${player.elm_defense}</span></p>
+                    <p contenteditable="true">🧪: <span id="blueElmEfficiency">${player.elm_efficiency}</span></p>
+                    <p contenteditable="true">🪦: <span id="blueStrength">${player.strength}</span></p>
+                    <p contenteditable="true">🌪: <span id="bluePotency">${player.potency}</span></p>
+                </div>
+                <p>Increase ⚔️ by 35% 🎯: 85%</p>
+            </div>
             `;
                 }
             }
 
-            $('#red_corner').html(redHtml);
+            $('#red_corner').html(redHtml);  // Replacing the previous content to ensure updated values
             $('#blue_corner').html(blueHtml);
 
             // Ensure values are read after the HTML is updated
             redAttack = parseInt($('#redAttack').text(), 10);
             redDefense = parseInt($('#redDefense').text(), 10);
-            redCrit = parseInt($('#redCritical').text(), 10);
+            redCrit = parseFloat($('#redCritical').text()); // Use parseFloat for fractional values
             redElmAttack = parseInt($('#redElmAttack').text(), 10);
             redElmDef = parseInt($('#redElmDefense').text(), 10);
             redElmEffc = parseInt($('#redElmEfficiency').text(), 10);
@@ -207,7 +212,7 @@
 
             blueAttack = parseInt($('#blueAttack').text(), 10);
             blueDefense = parseInt($('#blueDefense').text(), 10);
-            blueCrit = parseInt($('#blueCritical').text(), 10);
+            blueCrit = parseFloat($('#blueCritical').text()); // Use parseFloat for fractional values
             blueElmAttack = parseInt($('#blueElmAttack').text(), 10);
             blueElmDef = parseInt($('#blueElmDefense').text(), 10);
             blueElmEffc = parseInt($('#blueElmEfficiency').text(), 10);
@@ -215,9 +220,10 @@
             blueStr = parseInt($('#blueStrength').text(), 10);
             bluePot = parseInt($('#bluePotency').text(), 10);
 
-            console.log('Red Stats:', redAttack, redDefense);
-            console.log('Blue Stats:', blueAttack, blueDefense);
+            console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
+            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });
         }
+
 
 
         function filterSuggestions(inputId, suggestionsId, team) {
