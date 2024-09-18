@@ -27,20 +27,25 @@
 
         <div class="corner_container">
             <div id="red_corner"></div>
-            <form>
-                <label>Turn</label>
-                <select>
-                    <option>Red</option>
-                    <option>Blue</option>
-                </select>
-                <lable>Action</lable>
-                <select>
-                    <option>Attack</option>
-                    <option>Elemental Attack</option>
-                    <option>Special Abbility</option>
-                </select>
-                <input type="submit">
-            </form>
+            <div>
+                <div>
+                    <p id="damage"></p>
+                </div>
+                <form id="attack-form">
+                    <label>Turn</label>
+                    <select id="attacker">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                    <lable>Action</lable>
+                    <select id="actioner">
+                        <option>Attack</option>
+                        <option>Elemental Attack</option>
+                        <option>Special Abbility</option>
+                    </select>
+                    <input type="submit">
+                </form>
+            </div>
             <div id="blue_corner"></div>
         </div>
     </body>
@@ -50,6 +55,57 @@
         let penn_state_team = penn_state;
         let ok_state_team = ok_state;
         let players_arr = [penn_state_team, ok_state_team];
+
+        let blueAttack
+        let blueDefense
+        let blueCrit
+        let blueElmAttack
+        let blueElmDef
+        let blueElmEffc
+        let blueHp
+
+        let redAttack
+        let redDefense
+        let redCrit
+        let redElmAttack
+        let redElmDef
+        let redElmEffc
+        let redHp
+        function attack(e) {
+            e.preventDefault()
+            attacker = $('#attacker').val()
+            action = $('#actioner').val()
+            let currBlueHp = parseInt($('#blueHP').text());
+            let currRedHp = parseInt($('#redHP').text());
+            console.log('blue hp', currBlueHp)
+            console.log('red hp', currRedHp)
+
+            let variance = Math.random() * 0.2 - 0.1;
+            if (action == 'Attack') {
+                if (attacker == 'red') {
+                    let isCritical = Math.random() < redCrit;
+                    console.log(isCritical)
+                    let criticalMultiplier = isCritical ? 2 : 1.0;
+                    let damage = ((redAttack * (1 + variance)) - (100 / 1.5)) * criticalMultiplier;
+                    damage = Math.max(1, Math.round(damage));
+                    console.log(damage)
+                    $('#damage').text(damage)
+                    $('#blueHP').text(currBlueHp - damage)
+                } else {
+                    let isCritical = Math.random() < blueCrit;
+                    console.log(isCritical)
+                    let criticalMultiplier = isCritical ? 2 : 1.0;
+                    let damage = ((blueAttack * (1 + variance)) - (redDefense / 1.5)) * criticalMultiplier;
+                    damage = Math.max(1, Math.round(damage));
+                    console.log(damage)
+                    $('#damage').text(damage)
+                    $('#redHP').text(currRedHp - damage)
+                }
+            }
+
+        }
+
+        $('#attack-form').submit(attack)
 
         function action(e) {
             e.preventDefault()
@@ -66,7 +122,7 @@
                             <img class='elem_img_corner' src='${player.elm}'>
                         </div>
                         <img id='fight_corner_img' src='${player.image}'>
-                        <h4 contenteditable="true">🖤 ${player.hp}</h4>
+                        <h4  contenteditable="true">🖤 <span id='redHP'>${player.hp}</span></h4>
                         <p>${player.nen_type}</p>
                         <div class='fight_corner_stats'>
                              <p contenteditable="true">⚔️: ${player.attack}</p>
@@ -75,10 +131,20 @@
                              <p contenteditable="true">🔥:${player.elm_attack}</p>
                              <p contenteditable="true">㊏: ${player.elm_defense}</p>
                              <p contenteditable="true">🧪: ${player.elm_efficiency}</p>
+                             <p contenteditable="true">🪦: ${player.strength}</p>
+                             <p contenteditable="true">🌪: ${player.potency}</p>
                         </div>
                         <p>Increase ⚔️ by 35% 🎯: 85%</p>
                     </div>
                     `
+                    redAttack = `${player.attack}`
+                    redDefense = `${player.defense}`
+                    redCrit = `${player.critical}`
+                    redElmAttack = `${player.elm_attack}`
+                    redElmDef = `${player.elm_defense}`
+                    redElmEffc = `${player.elm_efficiency}`
+                    redHp = `${player.hp}`
+
 
                 } else if (val_2 == player.name) {
                     console.log(player)
@@ -89,7 +155,7 @@
                             <img class='elem_img_corner' src='${player.elm}'>
                         </div>
                         <img id='fight_corner_img' src='${player.image}'>
-                        <h4 contenteditable="true">🖤 ${player.hp}</h4>
+                        <h4 id='redHP' contenteditable="true">🖤 <span id='blueHP'>${player.hp}</span></h4>
                         <p>${player.nen_type}</p>
                         <div class='fight_corner_stats'>
                              <p contenteditable="true">⚔️: ${player.attack}</p>
@@ -102,6 +168,13 @@
                         <p>Increase ⚔️ by 35% 🎯: 85%</p>
                     </div>
                     `
+                    blueAttack = `${player.attack}`
+                    blueDefense = `${player.defense}`
+                    blueCrit = `${player.critical}`
+                    blueElmAttack = `${player.elm_attack}`
+                    blueElmDef = `${player.elm_defense}`
+                    blueElmEffc = `${player.elm_efficiency}`
+                    blueHp = `${player.hp}`
                 }
             }
             $('#red_corner').append(redHtml)
