@@ -178,7 +178,7 @@
     line-height: 10px;
 }
 
-#fight_corner_img {
+.corner_img {
     width: 60%;
 }
 
@@ -194,7 +194,7 @@
 }
 
 .fight_corner_stats>p {
-    width: 33%;
+    width: 30%;
     font-size: 20px;
 }
 
