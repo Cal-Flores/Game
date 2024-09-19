@@ -10,8 +10,10 @@ const database = [
         elm_efficiency: 100,
         critical: .50,
         hp: 1200,
-        strength: 2,
+        strength: 12,
         potency: 2,
+        buff: 'Switch One stat with Opponents stat',
+        buff_acc: 30,
         elm: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg/2048px-Pok%C3%A9mon_Water_Type_Icon.svg.png',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
@@ -28,6 +30,8 @@ const database = [
         hp: 1200,
         strength: 2,
         potency: 2,
+        buff: 'Increase Strength by 50%',
+        buff_acc: 20,
         elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },

@@ -42,7 +42,8 @@
                     <select id="actioner">
                         <option>Attack</option>
                         <option>Elemental Attack</option>
-                        <option>Special Abbility</option>
+                        <option>Special Ability</option>
+                        <option>Update HP</option>
                     </select>
                     <input type="submit">
                 </form>
@@ -53,9 +54,6 @@
 
     <script>
         let databaseArr = database;
-        let penn_state_team = penn_state;
-        let ok_state_team = ok_state;
-        let players_arr = [penn_state_team, ok_state_team];
 
         let blueAttack
         let blueDefense
@@ -66,6 +64,7 @@
         let blueHp
         let blueStrength
         let bluePotency
+        let blueBuff
 
         let redAttack
         let redDefense
@@ -76,6 +75,29 @@
         let redHp
         let redStrength
         let redPotency
+        let redBuff
+
+        function buff(buff) {
+
+            buff = buff / 100
+            console.log(buff, 'aydin')
+            isBuff = Math.random() < buff;
+            if (isBuff) {
+                alert('Update Stat !!')
+                $('#damage').text('SUCCESS')
+            } else {
+                $('#damage').text('Fail')
+            }
+        }
+
+        function updateHealth() {
+            let red_corn_hp = prompt('red hp')
+            let blue_corn_hp = prompt('blue hp')
+            $('#redHP').text(red_corn_hp)
+            $('#blueHP').text(blue_corn_hp)
+        }
+
+
         function attack(e) {
             e.preventDefault();
             attacker = $('#attacker').val();
@@ -83,33 +105,31 @@
             let currBlueHp = parseInt($('#blueHP').text(), 10);
             let currRedHp = parseInt($('#redHP').text(), 10);
 
-            // Fetch and parse stats
-            redAttack = parseInt($('#redAttack').text(), 10);
-            redDefense = parseInt($('#redDefense').text(), 10);
-            redCrit = parseFloat($('#redCritical').text());
-            redElmAttack = parseInt($('#redElmAttack').text(), 10);
-            redElmDef = parseInt($('#redElmDefense').text(), 10);
-            redElmEffc = parseInt($('#redElmEfficiency').text(), 10);
-            redHp = parseInt($('#redHP').text(), 10);
-            redStr = parseInt($('#redStrength').text().trim());
-            redPot = parseInt($('#redPotency').text(), 10);
 
-            blueAttack = parseInt($('#blueAttack').text(), 10);
-            blueDefense = parseInt($('#blueDefense').text(), 10);
-            blueCrit = parseFloat($('#blueCritical').text());
-            blueElmAttack = parseInt($('#blueElmAttack').text(), 10);
-            blueElmDef = parseInt($('#blueElmDefense').text(), 10);
-            blueElmEffc = parseInt($('#blueElmEfficiency').text(), 10);
-            blueHp = parseInt($('#blueHP').text(), 10);
-            blueStr = parseInt($('#blueStrength').text().trim());
-            bluePot = parseInt($('#bluePotency').text(), 10);
 
-            console.log('Parsed Stats:', { redStr, blueStr });
+            console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
+            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });
+
 
             let variance = Math.random() * 0.2 - 0.1;
+            if (action == 'Update HP') {
+                updateHealth()
+            }
+            if (action == 'Special Ability') {
+                if (attacker == 'red') {
+                    console.log('a buff has been used!')
+                    buff(redBuff)
+                }
+
+            }
             if (action === 'Attack') {
                 let isCritical;
                 let criticalMultiplier;
+
+                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!buff updates go here:::::::::::::::::::::::::::::::::::::
+                redAttack = 382
+                console.log(redAttack)
+
                 if (attacker === 'red') {
                     isCritical = Math.random() < redCrit;
                     criticalMultiplier = isCritical ? redStr : 1.0;
@@ -167,9 +187,20 @@
                     <p contenteditable="true">🪦: <span id="redStrength">${player.strength}</span></p>
                     <p contenteditable="true">🌪: <span id="redPotency">${player.potency}</span></p>
                 </div>
-                <p>Increase ⚔️ by 35% 🎯: 85%</p>
+                <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
             </div>
             `;
+                    redAttack = player.attack;
+                    redDefense = player.defense;
+                    redCrit = player.critical;
+                    redElmAttack = player.elm_attack;
+                    redElmDef = player.elm_defense;
+                    redElmEffc = player.elm_efficiency;
+                    redHp = player.hp;
+                    redStr = player.strength;
+                    redPot = player.potency;
+                    redBuff = player.buff_acc
+
                 } else if (val_2 === player.name) {
                     blueHtml = `
             <div class='fight_time_card'>
@@ -189,36 +220,26 @@
                     <p contenteditable="true">🧪: <span id="blueElmEfficiency">${player.elm_efficiency}</span></p>
                     <p contenteditable="true">🪦: <span id="blueStrength">${player.strength}</span></p>
                     <p contenteditable="true">🌪: <span id="bluePotency">${player.potency}</span></p>
+
                 </div>
-                <p>Increase ⚔️ by 35% 🎯: 85%</p>
+               <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
             </div>
             `;
+                    blueAttack = player.attack;
+                    blueDefense = player.defense;
+                    blueCrit = player.critical;
+                    blueElmAttack = player.elm_attack;
+                    blueElmDef = player.elm_defense;
+                    blueElmEffc = player.elm_efficiency;
+                    blueHp = player.hp;
+                    blueStr = player.strength;
+                    bluePot = player.potency;
+                    blueBuff = player.buff_acc
                 }
             }
 
-            $('#red_corner').html(redHtml);  // Replacing the previous content to ensure updated values
+            $('#red_corner').html(redHtml);
             $('#blue_corner').html(blueHtml);
-
-            // Ensure values are read after the HTML is updated
-            redAttack = parseInt($('#redAttack').text(), 10);
-            redDefense = parseInt($('#redDefense').text(), 10);
-            redCrit = parseFloat($('#redCritical').text()); // Use parseFloat for fractional values
-            redElmAttack = parseInt($('#redElmAttack').text(), 10);
-            redElmDef = parseInt($('#redElmDefense').text(), 10);
-            redElmEffc = parseInt($('#redElmEfficiency').text(), 10);
-            redHp = parseInt($('#redHP').text(), 10);
-            redStr = parseInt($('#redStrength').text(), 10);
-            redPot = parseInt($('#redPotency').text(), 10);
-
-            blueAttack = parseInt($('#blueAttack').text(), 10);
-            blueDefense = parseInt($('#blueDefense').text(), 10);
-            blueCrit = parseFloat($('#blueCritical').text()); // Use parseFloat for fractional values
-            blueElmAttack = parseInt($('#blueElmAttack').text(), 10);
-            blueElmDef = parseInt($('#blueElmDefense').text(), 10);
-            blueElmEffc = parseInt($('#blueElmEfficiency').text(), 10);
-            blueHp = parseInt($('#blueHP').text(), 10);
-            blueStr = parseInt($('#blueStrength').text(), 10);
-            bluePot = parseInt($('#bluePotency').text(), 10);
 
             console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });
