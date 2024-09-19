@@ -65,6 +65,7 @@
         let blueStrength
         let bluePotency
         let blueBuff
+        let blueELM
 
         let redAttack
         let redDefense
@@ -76,11 +77,25 @@
         let redStrength
         let redPotency
         let redBuff
+        let redELM
+
+        const elementalWeaknesses = {
+            Water: 'Fire',
+            Fire: 'Wind',
+            Wind: 'Lightning',
+            Lightning: 'Earth',
+            Earth: 'Water'
+        };
+        function checkWeakness(attackerElement, defenderElement) {
+            return elementalWeaknesses[attackerElement] == defenderElement;
+        }
+
+
 
         function buff(buff) {
 
             buff = buff / 100
-            console.log(buff, 'aydin')
+            console.log(buff, 'buff check')
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('Update Stat !!')
@@ -107,11 +122,43 @@
 
 
 
-            console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
-            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });
-
+            console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM });
+            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM });
+            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!buff updates go here:::::::::::::::::::::::::::::::::::::
+            // redAttack = 382
+            // console.log(redAttack)
 
             let variance = Math.random() * 0.2 - 0.1;
+            if (action == 'Elemental Attack') {
+                if (attacker == 'red') {
+                    let magicEffectiveness = 1.0;
+                    if (checkWeakness(redELM, blueELM)) {
+                        console.log('is weak');
+                        magicEffectiveness = redElmEffc;
+                    } else {
+                        console.log('no weakness detected');
+                    }
+                    console.log('magic efffect multiplier is', magicEffectiveness)
+                    let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
+                    magicDamage = Math.max(1, Math.round(magicDamage));
+                    $('#damage').text(magicDamage);
+                    $('#blueHP').text(currBlueHp - magicDamage);
+                    $('#crit').text(magicEffectiveness != 1 ? '🔥⚡️💧🌱💨' : '');
+                } else {
+                    let magicEffectiveness = 1.0;
+                    if (checkWeakness(blueELM, redELM)) {
+                        console.log('is weak')
+                        magicEffectiveness = blueElmEffc;
+                    } else {
+                        console.log('no weakness detected')
+                    }
+                    let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
+                    magicDamage = Math.max(1, Math.round(magicDamage));
+                    $('#damage').text(magicDamage);
+                    $('#blueHP').text(currRedHp - magicDamage);
+                    $('#crit').text(magicEffectiveness != 1 ? '🔥⚡️💧🌱💨' : '');
+                }
+            }
             if (action == 'Update HP') {
                 updateHealth()
             }
@@ -119,6 +166,9 @@
                 if (attacker == 'red') {
                     console.log('a buff has been used!')
                     buff(redBuff)
+                } else {
+                    console.log('a buff has been used!')
+                    buff(blueBuff)
                 }
 
             }
@@ -126,9 +176,7 @@
                 let isCritical;
                 let criticalMultiplier;
 
-                // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!buff updates go here:::::::::::::::::::::::::::::::::::::
-                redAttack = 382
-                console.log(redAttack)
+
 
                 if (attacker === 'red') {
                     isCritical = Math.random() < redCrit;
@@ -199,7 +247,8 @@
                     redHp = player.hp;
                     redStr = player.strength;
                     redPot = player.potency;
-                    redBuff = player.buff_acc
+                    redBuff = player.buff_acc;
+                    redELM = player.element
 
                 } else if (val_2 === player.name) {
                     blueHtml = `
@@ -235,6 +284,7 @@
                     blueStr = player.strength;
                     bluePot = player.potency;
                     blueBuff = player.buff_acc
+                    blueELM = player.element
                 }
             }
 
