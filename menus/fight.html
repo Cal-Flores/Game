@@ -42,7 +42,8 @@
                     <select id="actioner">
                         <option>Attack</option>
                         <option>Elemental Attack</option>
-                        <option>Special Ability</option>
+                        <option>Special Attack</option>
+                        <option>Nen Attack</option>
                         <option>Update HP</option>
                     </select>
                     <input type="submit">
@@ -65,6 +66,7 @@
         let blueStrength
         let bluePotency
         let blueBuff
+        let blueBuff2
         let blueELM
 
         let redAttack
@@ -77,6 +79,7 @@
         let redStrength
         let redPotency
         let redBuff
+        let redBuff2
         let redELM
 
         const elementalWeaknesses = {
@@ -91,19 +94,108 @@
         }
 
 
-
         function buff(buff) {
-
-            buff = buff / 100
-            console.log(buff, 'buff check')
+            buff = buff / 100;
             isBuff = Math.random() < buff;
             if (isBuff) {
-                alert('Update Stat !!')
-                $('#damage').text('SUCCESS')
+                alert('success');
+                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM');
+                console.log('stat_max is ', stat_max);
+                let stat_type = prompt('Increase or Decrease');
+                let stat_number = parseFloat(prompt('By how much'));
+
+                switch (stat_max) {
+                    case 'redAttack':
+                        redAttack = (redAttack * (1 + stat_number));
+                        break;
+                    case 'redDefense':
+                        redDefense = (redDefense * (1 + stat_number));
+                        break;
+                    case 'redCrit':
+                        redCrit = (redCrit * (1 + stat_number));
+                        break;
+                    case 'redElmAttack':
+                        redElmAttack = (redElmAttack * (1 + stat_number));
+                        break;
+                    case 'redElmDef':
+                        redElmDef = (redElmDef * (1 + stat_number));
+                        break;
+                    case 'redElmEffc':
+                        redElmEffc = (redElmEffc * (1 + stat_number));
+                        break;
+                    case 'redHp':
+                        redHp = (redHp * (1 + stat_number));
+                        break;
+                    case 'redStr':
+                        redStr = (redStr * (1 + stat_number));
+                        break;
+                    case 'redPot':
+                        redPot = (redPot * (1 + stat_number));
+                        break;
+                    case 'redELM':
+                        redELM = (redELM * (1 + stat_number));
+                        break;
+                    case 'blueAttack':
+                        blueAttack = (blueAttack * (1 + stat_number));
+                        break;
+                    case 'blueDefense':
+                        blueDefense = (blueDefense * (1 + stat_number));
+                        break;
+                    case 'blueCrit':
+                        blueCrit = (blueCrit * (1 + stat_number));
+                        break;
+                    case 'blueElmAttack':
+                        blueElmAttack = (blueElmAttack * (1 + stat_number));
+                        break;
+                    case 'blueElmDef':
+                        blueElmDef = (blueElmDef * (1 + stat_number));
+                        break;
+                    case 'blueElmEffc':
+                        blueElmEffc = (blueElmEffc * (1 + stat_number));
+                        break;
+                    case 'blueHp':
+                        blueHp = (blueHp * (1 + stat_number));
+                        break;
+                    case 'blueStr':
+                        blueStr = (blueStr * (1 + stat_number));
+                        break;
+                    case 'bluePot':
+                        bluePot = (bluePot * (1 + stat_number));
+                        break;
+                    case 'blueELM':
+                        blueELM = (blueELM * (1 + stat_number));
+                        break;
+                    default:
+                        alert('Invalid stat');
+                }
+
+                // Update the stats on the page if necessary
+                $('#redAttack').text(redAttack);
+                $('#redDefense').text(redDefense);
+                $('#redCrit').text(redCrit);
+                $('#redElmAttack').text(redElmAttack);
+                $('#redElmDef').text(redElmDef);
+                $('#redElmEffc').text(redElmEffc);
+                $('#redHp').text(redHp);
+                $('#redStr').text(redStr);
+                $('#redPot').text(redPot);
+                $('#redELM').text(redELM);
+                $('#blueAttack').text(blueAttack);
+                $('#blueDefense').text(blueDefense);
+                $('#blueCrit').text(blueCrit);
+                $('#blueElmAttack').text(blueElmAttack);
+                $('#blueElmDef').text(blueElmDef);
+                $('#blueElmEffc').text(blueElmEffc);
+                $('#blueHp').text(blueHp);
+                $('#blueStr').text(blueStr);
+                $('#bluePot').text(bluePot);
+                $('#blueELM').text(blueELM);
+
             } else {
-                $('#damage').text('Fail')
+                $('#damage').text('Fail');
             }
         }
+
 
         function updateHealth() {
             let red_corn_hp = prompt('red hp')
@@ -125,8 +217,8 @@
             console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM });
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM });
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!buff updates go here:::::::::::::::::::::::::::::::::::::
-            // redAttack = 382
-            // console.log(redAttack)
+            // blueElmDef = 89
+            // console.log(blueAttack)
 
             let variance = Math.random() * 0.2 - 0.1;
             if (action == 'Elemental Attack') {
@@ -155,14 +247,14 @@
                     let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
                     magicDamage = Math.max(1, Math.round(magicDamage));
                     $('#damage').text(magicDamage);
-                    $('#blueHP').text(currRedHp - magicDamage);
+                    $('#redHP').text(currRedHp - magicDamage);
                     $('#crit').text(magicEffectiveness != 1 ? '🔥⚡️💧🌱💨' : '');
                 }
             }
             if (action == 'Update HP') {
                 updateHealth()
             }
-            if (action == 'Special Ability') {
+            if (action == 'Special Attack') {
                 if (attacker == 'red') {
                     console.log('a buff has been used!')
                     buff(redBuff)
@@ -171,6 +263,15 @@
                     buff(blueBuff)
                 }
 
+            }
+            if (action == 'Nen Attack') {
+                if (attacker == 'red') {
+                    console.log('a buff has been used!')
+                    buff(redBuff2)
+                } else {
+                    console.log('a buff has been used!')
+                    buff(blueBuff2)
+                }
             }
             if (action === 'Attack') {
                 let isCritical;
@@ -181,8 +282,8 @@
                 if (attacker === 'red') {
                     isCritical = Math.random() < redCrit;
                     criticalMultiplier = isCritical ? redStr : 1.0;
-                    console.log('Red Strength (after applying multiplier):', redStr);
-                    let damage = ((redAttack * (1 + variance)) - (blueDefense / 2)) * criticalMultiplier;
+                    console.log('!!!!!!!!!!!!!!!!!!Red Attack :', redAttack);
+                    let damage = ((redAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
                     $('#damage').text(damage);
                     $('#blueHP').text(currBlueHp - damage);
@@ -190,8 +291,8 @@
                 } else {
                     isCritical = Math.random() < blueCrit;
                     criticalMultiplier = isCritical ? blueStr : 1.0;
-                    console.log('Blue Strength (after applying multiplier):', blueStr);
-                    let damage = ((blueAttack * (1 + variance)) - (redDefense / 2)) * criticalMultiplier;
+                    console.log('Blue Strength (after applying multiplier):', blueAttack);
+                    let damage = ((blueAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
                     $('#damage').text(damage);
                     $('#redHP').text(currRedHp - damage);
@@ -228,12 +329,12 @@
                 <div class='fight_corner_stats'>
                     <p contenteditable="true">⚔️: <span id="redAttack">${player.attack}</span></p>
                     <p contenteditable="true">🛡: <span id="redDefense">${player.defense}</span></p>
-                    <p contenteditable="true">💥: <span id="redCritical">${player.critical}</span></p>
+                    <p contenteditable="true">💥: <span id="redCrit">${player.critical}</span></p>
                     <p contenteditable="true">🔥: <span id="redElmAttack">${player.elm_attack}</span></p>
-                    <p contenteditable="true">㊏: <span id="redElmDefense">${player.elm_defense}</span></p>
-                    <p contenteditable="true">🧪: <span id="redElmEfficiency">${player.elm_efficiency}</span></p>
-                    <p contenteditable="true">🪦: <span id="redStrength">${player.strength}</span></p>
-                    <p contenteditable="true">🌪: <span id="redPotency">${player.potency}</span></p>
+                    <p contenteditable="true">㊏: <span id="redElmDef">${player.elm_defense}</span></p>
+                    <p contenteditable="true">🧪: <span id="redElmEffc">${player.elm_efficiency}</span></p>
+                    <p contenteditable="true">🪦: <span id="redStr">${player.strength}</span></p>
+                    <p contenteditable="true">🌪: <span id="redPot">${player.potency}</span></p>
                 </div>
                 <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
             </div>
@@ -248,6 +349,7 @@
                     redStr = player.strength;
                     redPot = player.potency;
                     redBuff = player.buff_acc;
+                    redBuff2 = player.buff2_acc;
                     redELM = player.element
 
                 } else if (val_2 === player.name) {
@@ -263,15 +365,16 @@
                 <div class='fight_corner_stats'>
                     <p contenteditable="true">⚔️: <span id="blueAttack">${player.attack}</span></p>
                     <p contenteditable="true">🛡: <span id="blueDefense">${player.defense}</span></p>
-                    <p contenteditable="true">💥: <span id="blueCritical">${player.critical}</span></p>
+                    <p contenteditable="true">💥: <span id="blueCrit">${player.critical}</span></p>
                     <p contenteditable="true">🔥: <span id="blueElmAttack">${player.elm_attack}</span></p>
-                    <p contenteditable="true">㊏: <span id="blueElmDefense">${player.elm_defense}</span></p>
-                    <p contenteditable="true">🧪: <span id="blueElmEfficiency">${player.elm_efficiency}</span></p>
-                    <p contenteditable="true">🪦: <span id="blueStrength">${player.strength}</span></p>
-                    <p contenteditable="true">🌪: <span id="bluePotency">${player.potency}</span></p>
+                    <p contenteditable="true">㊏: <span id="blueElmDef">${player.elm_defense}</span></p>
+                    <p contenteditable="true">🧪: <span id="blueElmEffc">${player.elm_efficiency}</span></p>
+                    <p contenteditable="true">🪦: <span id="blueStr">${player.strength}</span></p>
+                    <p contenteditable="true">🌪: <span id="bluePot">${player.potency}</span></p>
 
                 </div>
                <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
+               <p>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
             </div>
             `;
                     blueAttack = player.attack;
@@ -284,6 +387,7 @@
                     blueStr = player.strength;
                     bluePot = player.potency;
                     blueBuff = player.buff_acc
+                    blueBuff2 = player.buff_acc2
                     blueELM = player.element
                 }
             }
