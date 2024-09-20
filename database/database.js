@@ -12,6 +12,10 @@ const database = [
         critical: .50, // .99 max icreases chance for critical
         strength: 3, // decimal multiplies physical attack on criticals
         potency: 2, // decimal base multiplier for magic users
+        chakra: 0, // max 100
+        chakra_rec: 50,
+        cost: 70,
+        chakra_attack: 'Covert Hands',
         buff: 'Switch One stat with Opponents stat',
         buff2: 'Use opponents Buff',
         buff_acc: 33,
@@ -36,6 +40,10 @@ const database = [
         buff2: 'Decrease Opponents Evasion to 0',
         buff_acc: 99,
         buff2_acc: 45,
+        chakra: 0, // max 100
+        chakra_rec: 25,
+        cost: 70,
+        chakra_attack: 'Bungee Gum',
         elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
