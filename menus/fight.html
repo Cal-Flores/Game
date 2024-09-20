@@ -13,17 +13,19 @@
 
     </head>
 
-    <body>
-        <form id="fight_form_fight">
+    <body id="fight_bg">
+        <form id="fight_form_fight" class="fight-form">
             <label for="red_corner_search">Red Corner</label>
-            <input type="text" id="red_corner_search" placeholder="Type player's name">
+            <input type="text" id="red_corner_search" placeholder="Type player's name" class="fight-input">
             <div id="red_corner_suggestions" class="suggestions"></div>
 
             <label for="blue_corner_search">Blue Corner</label>
-            <input type="text" id="blue_corner_search" placeholder="Type player's name">
+            <input type="text" id="blue_corner_search" placeholder="Type player's name" class="fight-input">
             <div id="blue_corner_suggestions" class="suggestions"></div>
-            <input type="submit">
+
+            <input type="submit" class="fight-submit" value="Fight">
         </form>
+
 
         <div class="corner_container">
             <div id="red_corner"></div>
@@ -38,13 +40,14 @@
                         <option value="red">Red</option>
                         <option value="blue">Blue</option>
                     </select>
-                    <lable>Action</lable>
+                    <label>Choose Move</label>
                     <select id="actioner">
                         <option>Attack</option>
                         <option>Elemental Attack</option>
                         <option>Ninjutsu</option>
                         <option>Special Attack</option>
                         <option>Nen Attack</option>
+                        <option>Boost</option>
                         <option>Update HP</option>
                     </select>
                     <input type="submit">
@@ -55,6 +58,7 @@
     </body>
 
     <script>
+        $('#attack-form').hide()
         let databaseArr = database;
 
         let blueAttack
@@ -114,147 +118,148 @@
                 switch (stat_max) {
                     case 'redAttack':
                         if (stat_type == 'Increase') {
-                            redAttack = (redAttack * (1 + stat_number));
+                            redAttack = Math.floor(redAttack * (1 + stat_number));
                         } else {
-                            redAttack = (redAttack * (1 - stat_number));
+                            redAttack = Math.floor(redAttack * (1 - stat_number));
                         }
                         break;
                     case 'redDefense':
                         if (stat_type == 'Increase') {
-                            redDefense = (redDefense * (1 + stat_number));
+                            redDefense = Math.floor(redDefense * (1 + stat_number));
                         } else {
-                            redDefense = (redDefense * (1 - stat_number));
+                            redDefense = Math.floor(redDefense * (1 - stat_number));
                         }
                         break;
                     case 'redCrit':
                         if (stat_type == 'Increase') {
-                            redCrit = (redCrit * (1 + stat_number));
+                            redCrit = Math.floor(redCrit * (1 + stat_number));
                         } else {
-                            redCrit = (redCrit * (1 - stat_number));
+                            redCrit = Math.floor(redCrit * (1 - stat_number));
                         }
                         break;
                     case 'redElmAttack':
                         if (stat_type == 'Increase') {
-                            redElmAttack = (redElmAttack * (1 + stat_number));
+                            redElmAttack = Math.floor(redElmAttack * (1 + stat_number));
                         } else {
-                            redElmAttack = (redElmAttack * (1 - stat_number));
+                            redElmAttack = Math.floor(redElmAttack * (1 - stat_number));
                         }
                         break;
                     case 'redElmDef':
                         if (stat_type == 'Increase') {
-                            redElmDef = (redElmDef * (1 + stat_number));
+                            redElmDef = Math.floor(redElmDef * (1 + stat_number));
                         } else {
-                            redElmDef = (redElmDef * (1 - stat_number));
+                            redElmDef = Math.floor(redElmDef * (1 - stat_number));
                         }
                         break;
                     case 'redElmEffc':
                         if (stat_type == 'Increase') {
-                            redElmEffc = (redElmEffc * (1 + stat_number));
+                            redElmEffc = Math.floor(redElmEffc * (1 + stat_number));
                         } else {
-                            redElmEffc = (redElmEffc * (1 - stat_number));
+                            redElmEffc = Math.floor(redElmEffc * (1 - stat_number));
                         }
                         break;
                     case 'redHp':
                         if (stat_type == 'Increase') {
-                            redHp = (redHp * (1 + stat_number));
+                            redHp = Math.floor(redHp * (1 + stat_number));
                         } else {
-                            redHp = (redHp * (1 - stat_number));
+                            redHp = Math.floor(redHp * (1 - stat_number));
                         }
                         break;
                     case 'redStr':
                         if (stat_type == 'Increase') {
-                            redStr = (redStr * (1 + stat_number));
+                            redStr = Math.floor(redStr * (1 + stat_number));
                         } else {
-                            redStr = (redStr * (1 - stat_number));
+                            redStr = Math.floor(redStr * (1 - stat_number));
                         }
                         break;
                     case 'redPot':
                         if (stat_type == 'Increase') {
-                            redPot = (redPot * (1 + stat_number));
+                            redPot = Math.floor(redPot * (1 + stat_number));
                         } else {
-                            redPot = (redPot * (1 - stat_number));
+                            redPot = Math.floor(redPot * (1 - stat_number));
                         }
                         break;
                     case 'redELM':
                         if (stat_type == 'Increase') {
-                            redELM = (redELM * (1 + stat_number));
+                            redELM = Math.floor(redELM * (1 + stat_number));
                         } else {
-                            redELM = (redELM * (1 - stat_number));
+                            redELM = Math.floor(redELM * (1 - stat_number));
                         }
                         break;
                     case 'blueAttack':
                         if (stat_type == 'Increase') {
-                            blueAttack = (blueAttack * (1 + stat_number));
+                            blueAttack = Math.floor(blueAttack * (1 + stat_number));
                         } else {
-                            blueAttack = (blueAttack * (1 - stat_number));
+                            blueAttack = Math.floor(blueAttack * (1 - stat_number));
                         }
                         break;
                     case 'blueDefense':
                         if (stat_type == 'Increase') {
-                            blueDefense = (blueDefense * (1 + stat_number));
+                            blueDefense = Math.floor(blueDefense * (1 + stat_number));
                         } else {
-                            blueDefense = (blueDefense * (1 - stat_number));
+                            blueDefense = Math.floor(blueDefense * (1 - stat_number));
                         }
                         break;
                     case 'blueCrit':
                         if (stat_type == 'Increase') {
-                            blueCrit = (blueCrit * (1 + stat_number));
+                            blueCrit = Math.floor(blueCrit * (1 + stat_number));
                         } else {
-                            blueCrit = (blueCrit * (1 - stat_number));
+                            blueCrit = Math.floor(blueCrit * (1 - stat_number));
                         }
                         break;
                     case 'blueElmAttack':
                         if (stat_type == 'Increase') {
-                            blueElmAttack = (blueElmAttack * (1 + stat_number));
+                            blueElmAttack = Math.floor(blueElmAttack * (1 + stat_number));
                         } else {
-                            blueElmAttack = (blueElmAttack * (1 - stat_number));
+                            blueElmAttack = Math.floor(blueElmAttack * (1 - stat_number));
                         }
                         break;
                     case 'blueElmDef':
                         if (stat_type == 'Increase') {
-                            blueElmDef = (blueElmDef * (1 + stat_number));
+                            blueElmDef = Math.floor(blueElmDef * (1 + stat_number));
                         } else {
-                            blueElmDef = (blueElmDef * (1 - stat_number));
+                            blueElmDef = Math.floor(blueElmDef * (1 - stat_number));
                         }
                         break;
                     case 'blueElmEffc':
                         if (stat_type == 'Increase') {
-                            blueElmEffc = (blueElmEffc * (1 + stat_number));
+                            blueElmEffc = Math.floor(blueElmEffc * (1 + stat_number));
                         } else {
-                            blueElmEffc = (blueElmEffc * (1 - stat_number));
+                            blueElmEffc = Math.floor(blueElmEffc * (1 - stat_number));
                         }
                         break;
                     case 'blueHp':
                         if (stat_type == 'Increase') {
-                            blueHp = (blueHp * (1 + stat_number));
+                            blueHp = Math.floor(blueHp * (1 + stat_number));
                         } else {
-                            blueHp = (blueHp * (1 - stat_number));
+                            blueHp = Math.floor(blueHp * (1 - stat_number));
                         }
                         break;
                     case 'blueStr':
                         if (stat_type == 'Increase') {
-                            blueStr = (blueStr * (1 + stat_number));
+                            blueStr = Math.floor(blueStr * (1 + stat_number));
                         } else {
-                            blueStr = (blueStr * (1 - stat_number));
+                            blueStr = Math.floor(blueStr * (1 - stat_number));
                         }
                         break;
                     case 'bluePot':
                         if (stat_type == 'Increase') {
-                            bluePot = (bluePot * (1 + stat_number));
+                            bluePot = Math.floor(bluePot * (1 + stat_number));
                         } else {
-                            bluePot = (bluePot * (1 - stat_number));
+                            bluePot = Math.floor(bluePot * (1 - stat_number));
                         }
                         break;
                     case 'blueELM':
                         if (stat_type == 'Increase') {
-                            blueELM = (blueELM * (1 + stat_number));
+                            blueELM = Math.floor(blueELM * (1 + stat_number));
                         } else {
-                            blueELM = (blueELM * (1 - stat_number));
+                            blueELM = Math.floor(blueELM * (1 - stat_number));
                         }
                         break;
                     default:
                         alert('Invalid stat');
                 }
+
 
 
                 // Update the stats on the page if necessary
@@ -331,9 +336,9 @@
                     console.log('magic efffect multiplier is', magicEffectiveness)
                     let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
                     magicDamage = Math.max(1, Math.round(magicDamage));
-                    $('#damage').text(magicDamage);
+                    $('#damage').hide().text(magicDamage).fadeIn(500);
                     $('#blueHP').text(currBlueHp - magicDamage);
-                    $('#crit').text(magicEffectiveness != 1 ? '🔥⚡️💧🌱💨' : '');
+                    $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                 } else {
                     let magicEffectiveness = 1.0;
                     if (checkWeakness(blueELM, redELM)) {
@@ -344,9 +349,9 @@
                     }
                     let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
                     magicDamage = Math.max(1, Math.round(magicDamage));
-                    $('#damage').text(magicDamage);
+                    $('#damage').hide().text(magicDamage).fadeIn(500);
                     $('#redHP').text(currRedHp - magicDamage);
-                    $('#crit').text(magicEffectiveness != 1 ? '🔥⚡️💧🌱💨' : '');
+                    $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                 }
             }
             if (action == 'Update HP') {
@@ -381,7 +386,19 @@
                     currRedChakra -= redCost
                     $('#redChakra').text(currRedChakra)
                     $('#blueHP').text(currBlueHp - 1000);
+                    $('#damage').text('🥷 1000 🥷')
                     return
+                }
+            }
+            if (action == 'Boost') {
+                if (attacker == 'red') {
+                    let boosted = redRecovery * 2
+                    currRedChakra += getRecovery(boosted);
+                    $('#redChakra').text(currRedChakra);
+                } else {
+                    let boosted = blueRecovery * 2
+                    currBlueChakra += getRecovery(boosted);
+                    $('#blueChakra').text(currBlueChakra);
                 }
             }
             if (action === 'Attack') {
@@ -396,25 +413,30 @@
                     console.log('!!!!!!!!!!!!!!!!!!Red Attack :', redAttack);
                     let damage = ((redAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
-                    $('#damage').text(damage);
                     $('#blueHP').text(currBlueHp - damage);
-                    $('#crit').text(isCritical ? '💥🔥👊' : '');
+                    $('#damage').hide().text(damage).fadeIn(500);
+                    $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
                 } else {
                     isCritical = Math.random() < blueCrit;
                     criticalMultiplier = isCritical ? blueStr : 1.0;
                     console.log('Blue Strength (after applying multiplier):', blueAttack);
                     let damage = ((blueAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
                     damage = Math.max(1, Math.round(damage));
-                    $('#damage').text(damage);
                     $('#redHP').text(currRedHp - damage);
-                    $('#crit').text(isCritical ? '💥🔥👊' : '');
+                    $('#damage').hide().text(damage).fadeIn(500);
+                    $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
                 }
             }
-            currRedChakra += getRecovery(redRecovery);
-            $('#redChakra').text(currRedChakra);
+            if (attacker == 'red') {
+                currRedChakra += getRecovery(redRecovery);
+                $('#redChakra').text(currRedChakra);
+            } else {
+                currBlueChakra += getRecovery(blueRecovery);
+                $('#blueChakra').text(currBlueChakra);
+            }
 
-            currBlueChakra += getRecovery(blueRecovery);
-            $('#blueChakra').text(currBlueChakra);
+
+
         }
 
 
@@ -425,6 +447,7 @@
 
         function action(e) {
             e.preventDefault();
+            $('#attack-form').show()
             let val_1 = $('#red_corner_search').val();
             let val_2 = $('#blue_corner_search').val();
 
@@ -436,23 +459,51 @@
                     redHtml = `
             <div class='fight_time_card'>
                 <div class='fight_corner_header'>
-                    <p>${player.name}</p>
+                    <h4 class='hi'>${player.name}</h4>
                     <img class='elem_img_corner' src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <h4 contenteditable="true">🖤 <span id='redHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
-                <div class='fight_corner_stats'>
-                    <p contenteditable="true">⚔️: <span id="redAttack">${player.attack}</span></p>
-                    <p contenteditable="true">🛡: <span id="redDefense">${player.defense}</span></p>
-                    <p contenteditable="true">💥: <span id="redCrit">${player.critical}</span></p>
-                    <p contenteditable="true">🔥: <span id="redElmAttack">${player.elm_attack}</span></p>
-                    <p contenteditable="true">㊏: <span id="redElmDef">${player.elm_defense}</span></p>
-                    <p contenteditable="true">🧪: <span id="redElmEffc">${player.elm_efficiency}</span></p>
-                    <p contenteditable="true">🪦: <span id="redStr">${player.strength}</span></p>
-                    <p contenteditable="true">🌪: <span id="redPot">${player.potency}</span></p>
-                    <p contenteditable="true">☸️: <span id="redChakra">${player.chakra}</span></p>
-                </div>
+             <div class="fight_corner_stats">
+    <div>
+        <p>⚔️</p>
+        <span id="redAttack">${player.attack}</span>
+    </div>
+    <div>
+        <p>🛡️</p>
+        <span id="redDefense">${player.defense}</span>
+    </div>
+    <div>
+        <p>💥</p>
+        <span id="redCrit">${player.critical}</span>
+    </div>
+    <div>
+        <p>🪄</p>
+        <span id="redElmAttack">${player.elm_attack}</span>
+    </div>
+    <div>
+        <p>♠️</p>
+        <span id="redElmDef">${player.elm_defense}</span>
+    </div>
+    <div>
+        <p>🧪</p>
+        <span id="redElmEffc">${player.elm_efficiency}</span>
+    </div>
+    <div>
+        <p>🪦</p>
+        <span id="redStr">${player.strength}</span>
+    </div>
+    <div>
+        <p>🌪</p>
+        <span id="redPot">${player.potency}</span>
+    </div>
+    <div>
+        <p>☸️</p>
+        <span id="redChakra">${player.chakra}</span>
+    </div>
+</div>
+
                 <p>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
                 <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
                 <p>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
@@ -477,23 +528,51 @@
                     blueHtml = `
             <div class='fight_time_card'>
                 <div class='fight_corner_header'>
-                    <p>${player.name}</p>
+                    <h4 class='hi'>${player.name}</h4>
                     <img class='elem_img_corner' src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <h4 contenteditable="true">🖤 <span id='blueHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
-                <div class='fight_corner_stats'>
-                    <p contenteditable="true">⚔️: <span id="blueAttack">${player.attack}</span></p>
-                    <p contenteditable="true">🛡: <span id="blueDefense">${player.defense}</span></p>
-                    <p contenteditable="true">💥: <span id="blueCrit">${player.critical}</span></p>
-                    <p contenteditable="true">🔥: <span id="blueElmAttack">${player.elm_attack}</span></p>
-                    <p contenteditable="true">㊏: <span id="blueElmDef">${player.elm_defense}</span></p>
-                    <p contenteditable="true">🧪: <span id="blueElmEffc">${player.elm_efficiency}</span></p>
-                    <p contenteditable="true">🪦: <span id="blueStr">${player.strength}</span></p>
-                    <p contenteditable="true">🌪: <span id="bluePot">${player.potency}</span></p>
-                     <p contenteditable="true">☸️: <span id="blueChakra">${player.chakra}</span></p>
-                </div>
+               <div class='fight_corner_stats'>
+    <div>
+        <p>⚔️</p>
+        <span id="blueAttack">${player.attack}</span>
+    </div>
+    <div>
+        <p>🛡</p>
+        <span id="blueDefense">${player.defense}</span>
+    </div>
+    <div>
+        <p>💥</p>
+        <span id="blueCrit">${player.critical}</span>
+    </div>
+    <div>
+        <p>🪄</p>
+        <span id="blueElmAttack">${player.elm_attack}</span>
+    </div>
+    <div>
+        <p>♠️</p>
+        <span id="blueElmDef">${player.elm_defense}</span>
+    </div>
+    <div>
+        <p>🧪</p>
+        <span id="blueElmEffc">${player.elm_efficiency}</span>
+    </div>
+    <div>
+        <p>🪦</p>
+        <span id="blueStr">${player.strength}</span>
+    </div>
+    <div>
+        <p>🌪</p>
+        <span id="bluePot">${player.potency}</span>
+    </div>
+    <div>
+        <p>☸️</p>
+        <span id="blueChakra">${player.chakra}</span>
+    </div>
+</div>
+
                <p>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
                <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
                <p>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
@@ -518,6 +597,7 @@
 
             $('#red_corner').html(redHtml);
             $('#blue_corner').html(blueHtml);
+            $('#fight_form_fight').hide()
 
             console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });

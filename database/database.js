@@ -13,14 +13,14 @@ const database = [
         strength: 3, // decimal multiplies physical attack on criticals
         potency: 2, // decimal base multiplier for magic users
         chakra: 0, // max 100
-        chakra_rec: 50,
+        chakra_rec: 9,
         cost: 70,
         chakra_attack: 'Covert Hands',
         buff: 'Switch One stat with Opponents stat',
         buff2: 'Use opponents Buff',
         buff_acc: 33,
         buff2_acc: 33,
-        elm: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg/2048px-Pok%C3%A9mon_Water_Type_Icon.svg.png',
+        elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w3fi-85063943-452c-4b80-8db1-5cf8ff52df52.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzNmaS04NTA2Mzk0My00NTJjLTRiODAtOGRiMS01Y2Y4ZmY1MmRmNTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.voroYLPZMwgOCJjmkVuK6GepgSaDWAjj25Ptq5CuGJg',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
     {
@@ -41,7 +41,7 @@ const database = [
         buff_acc: 99,
         buff2_acc: 45,
         chakra: 0, // max 100
-        chakra_rec: 25,
+        chakra_rec: 6,
         cost: 70,
         chakra_attack: 'Bungee Gum',
         elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8',
@@ -62,7 +62,7 @@ const database = [
         potency: 2,
         buff: 'Increase Potency by 50%',
         buff_acc: 20,
-        elm: 'https://cdn.pixabay.com/photo/2018/05/18/15/43/pokemon-3411389_960_720.png',
+        elm: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w476-824f2616-a647-4a21-a284-8a35db3dd34b.png/v1/fit/w_720,h_720/electric_energy_by_humac1_d50w476-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYWJhMWE3NTYtZDk1NS00M2Y2LWEyZTktNWI3ZDYwNDA2ODU0XC9kNTB3NDc2LTgyNGYyNjE2LWE2NDctNGEyMS1hMjg0LThhMzVkYjNkZDM0Yi5wbmciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.TWz0rw0cPCDqnXtwripN9OXA1V9qf5jNwrZYea4YZ7w',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
     {
@@ -135,7 +135,7 @@ const database = [
         buff: 'Reduce Opponents Attack by 40%',
         buff_acc: 33,
         elm: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg/2048px-Pok%C3%A9mon_Water_Type_Icon.svg.png',
-        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
     {
         name: 'Nobunaga',
@@ -190,7 +190,7 @@ const database = [
         potency: 1,
         buff: 'Eliminates one stat completley',
         buff_acc: 33,
-        elm: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg/2048px-Pok%C3%A9mon_Water_Type_Icon.svg.png',
+        elm: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/d/da/Pakunoda_YC_Portrait.png/revision/latest?cb=20190124184929'
     },
     {

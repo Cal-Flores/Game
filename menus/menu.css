@@ -2,7 +2,9 @@
     background-color: rgb(174, 174, 174);
 }
 
-
+#fight_bg {
+    background-color: rgb(159, 159, 159);
+}
 
 #menu_sch {
     background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/08/Hunter-x-Hunter-Gon-Killua-.jpg');
@@ -22,6 +24,14 @@
 
 #menu_fighters {
     background-image: url('https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/10/hunter-x-hunter-hunter-exam-2.jpeg');
+}
+
+#damage {
+    text-align: center;
+}
+
+#crit {
+    text-align: center;
 }
 
 .menu_cards {
@@ -118,12 +128,14 @@
     height: 75px;
     width: 75px;
     border-radius: 50%;
+
 }
 
 .fight_card_elm {
     height: 25px;
     width: 25px;
 }
+
 
 .fight_card_stats {
     display: flex;
@@ -153,22 +165,21 @@
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
-    background-color: rgb(177, 172, 172);
     margin: 5%;
 }
 
 #red_corner {
-    width: 25%;
+    width: 30%;
 }
 
 #blue_corner {
-    width: 25%;
+    width: 30%;
 }
 
 .fight_time_card {
     width: 100%;
     border: 4px double black;
-    background-color: rgb(217, 190, 33);
+    background-color: #424E5D;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,11 +187,15 @@
     padding: 1%;
     margin: 1%;
     line-height: 10px;
+    padding-bottom: 3%;
 }
 
 #fight_corner_img {
     width: 60%;
+    border: 4px solid #5D5142;
 }
+
+
 
 .fight_corner_stats {
     display: flex;
@@ -207,16 +222,187 @@
 }
 
 .elem_img_corner {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
 }
 
 .color_change {
     background-color: bisque;
-    border: 1px solid gold;
+    border: 1px solid #DEBCA1;
 }
 
 .color_change:hover {
-    background-color: gold;
+    background-color: #DEBCA1;
     cursor: pointer;
+}
+
+/* fomr style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+}
+
+#attack-form {
+    width: 250px;
+    background-color: #424E5D;
+    border: 2px solid #DEBCA1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#attack-form>label {
+    font-weight: bold;
+    color: #DEBCA1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#attacker,
+#actioner {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #424E5D;
+    background-color: #fff;
+    color: #424E5D;
+    font-weight: bold;
+}
+
+#attack-form input[type="submit"] {
+    background-color: #DEBCA1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#attack-form input[type="submit"]:hover {
+    background-color: #424E5D;
+    color: #424E5D;
+    border: 2px solid #DEBCA1;
+}
+
+/* FOIRM START HERE!!!!!!!!!!!!!!!!! */
+.fight_corner_stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Further reduced bottom margin */
+}
+
+.fight_corner_stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5b6775;
+    padding: 2px;
+    /* Significantly reduced padding */
+    border-radius: 4px;
+    /* Smaller border radius */
+    border: 1px solid #5D5142;
+    min-width: 60px;
+    /* Set a minimum width to prevent shrinking too much */
+}
+
+.fight_corner_stats p {
+    font-size: 18px;
+    /* Slightly smaller emoji size */
+    margin: 0;
+    margin-bottom: 0px;
+    /* No gap between emoji and stat */
+    line-height: 1;
+    padding: 0;
+}
+
+.fight_corner_stats span {
+    font-size: 14px;
+    /* Slightly smaller stat font size */
+    font-weight: bold;
+    color: #DEBCA1;
+}
+
+.fight_time_card p {
+    font-size: 14px;
+    color: #DEBCA1;
+    text-align: center;
+    margin: 3px 0;
+    padding: 2px;
+    background-color: transparent;
+    border: none;
+    font-weight: normal;
+}
+
+.fight_time_card span {
+    color: #3984e6;
+}
+
+
+
+/* enddddd */
+.fight_time_card span {
+    color: #DEBCA1;
+}
+
+#fight_form_fight {
+    width: 600px;
+    /* Increased width */
+    background-color: #424E5D;
+    border: 2px solid #DEBCA1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    /* Center the form */
+}
+
+#fight_form_fight>label {
+    font-weight: bold;
+    color: #DEBCA1;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#red_corner_search,
+#blue_corner_search {
+    width: calc(100% - 30px);
+    /* Adjusted width to account for padding */
+    padding: 15px;
+    /* Padding for input */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #424E5D;
+    background-color: #fff;
+    color: #424E5D;
+    font-weight: bold;
+}
+
+#fight_form_fight input[type="submit"] {
+    background-color: #DEBCA1;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 0;
+    /* Adjusted padding */
+    cursor: pointer;
+    width: 100%;
+}
+
+#fight_form_fight input[type="submit"]:hover {
+    background-color: #424E5D;
+    color: #424E5D;
+    border: 2px solid #DEBCA1;
+}
+
+.hi {
+    font-size: 20px;
+    color: #DEBCA1;
+    font-weight: normal;
 }
