@@ -45,9 +45,11 @@
                         <option>Attack</option>
                         <option>Elemental Attack</option>
                         <option>Ninjutsu</option>
+                        <option>Ultimate Ninjutsu</option>
                         <option>Special Attack</option>
                         <option>Nen Attack</option>
                         <option>Boost</option>
+                        <option>Drain</option>
                         <option>Update HP</option>
                     </select>
                     <input type="submit">
@@ -74,8 +76,14 @@
         let blueBuff2
         let blueELM
         let blueChakra
-        let blueRecovery
+        let blueRecovery //
         let blueCost
+        let blueChakraPower
+        let blueNinjutsu
+        let blueNinCost
+        let blueNinPower
+        let blueAcc
+        let blueEvas
 
         let redAttack
         let redDefense
@@ -92,6 +100,12 @@
         let redChakra
         let redRecovery
         let redCost
+        let redChakraPower
+        let redNinjutsu
+        let redNinCost
+        let redNinPower
+        let redAcc
+        let redEvas
 
         const elementalWeaknesses = {
             Water: 'Fire',
@@ -104,13 +118,17 @@
             return elementalWeaknesses[attackerElement] == defenderElement;
         }
 
+        function calculateHitChance(accuracy, evasion) {
+            const multiplier = 1.8;
+            return (accuracy * multiplier) / (accuracy + evasion);
+        }
 
         function buff(buff) {
             buff = buff / 100;
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM');
+                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower,blueEvas');
                 console.log('stat_max is ', stat_max);
                 let stat_type = prompt('Increase or Decrease');
                 let stat_number = parseFloat(prompt('By how much'));
@@ -160,9 +178,9 @@
                         break;
                     case 'redHp':
                         if (stat_type == 'Increase') {
-                            redHp = Math.floor(redHp * (1 + stat_number));
+                            redHp = Math.max(0, Math.floor(redHp * (1 + stat_number))); // Ensuring no negative values
                         } else {
-                            redHp = Math.floor(redHp * (1 - stat_number));
+                            redHp = Math.max(0, Math.floor(redHp * (1 - stat_number)));
                         }
                         break;
                     case 'redStr':
@@ -184,6 +202,48 @@
                             redELM = Math.floor(redELM * (1 + stat_number));
                         } else {
                             redELM = Math.floor(redELM * (1 - stat_number));
+                        }
+                        break;
+                    case 'redRecovery':
+                        if (stat_type == 'Increase') {
+                            redRecovery = Math.floor(redRecovery + stat_number); // Corrected to use redRecovery
+                        } else {
+                            redRecovery = Math.floor(redRecovery - stat_number);
+                        }
+                        break;
+                    case 'redCost':
+                        if (stat_type == 'Increase') {
+                            redCost = Math.floor(redCost * (1 + stat_number));
+                        } else {
+                            redCost = Math.floor(redCost * (1 - stat_number));
+                        }
+                        break;
+                    case 'redNinCost':
+                        if (stat_type == 'Increase') {
+                            redNinCost = Math.floor(redNinCost * (1 + stat_number));
+                        } else {
+                            redNinCost = Math.floor(redNinCost * (1 - stat_number));
+                        }
+                        break;
+                    case 'redAcc':
+                        if (stat_type == 'Increase') {
+                            redAcc = Math.floor(redAcc * (1 + stat_number));
+                        } else {
+                            redAcc = Math.floor(redAcc * (1 - stat_number));
+                        }
+                        break;
+                    case 'redEvas':
+                        if (stat_type == 'Increase') {
+                            redEvas = Math.floor(redEvas * (1 + stat_number));
+                        } else {
+                            redEvas = Math.floor(redEvas * (1 - stat_number));
+                        }
+                        break;
+                    case 'redChakraPower':
+                        if (stat_type == 'Increase') {
+                            redChakraPower = Math.floor(redChakraPower * (1 + stat_number));
+                        } else {
+                            redChakraPower = Math.floor(redChakraPower * (1 - stat_number));
                         }
                         break;
                     case 'blueAttack':
@@ -230,9 +290,9 @@
                         break;
                     case 'blueHp':
                         if (stat_type == 'Increase') {
-                            blueHp = Math.floor(blueHp * (1 + stat_number));
+                            blueHp = Math.max(0, Math.floor(blueHp * (1 + stat_number))); // Ensuring no negative values
                         } else {
-                            blueHp = Math.floor(blueHp * (1 - stat_number));
+                            blueHp = Math.max(0, Math.floor(blueHp * (1 - stat_number)));
                         }
                         break;
                     case 'blueStr':
@@ -256,9 +316,53 @@
                             blueELM = Math.floor(blueELM * (1 - stat_number));
                         }
                         break;
+                    case 'blueRecovery':
+                        if (stat_type == 'Increase') {
+                            blueRecovery = Math.floor(blueRecovery + stat_number); // Corrected to use blueRecovery
+                        } else {
+                            blueRecovery = Math.floor(blueRecovery - stat_number);
+                        }
+                        break;
+                    case 'blueCost':
+                        if (stat_type == 'Increase') {
+                            blueCost = Math.floor(blueCost * (1 + stat_number));
+                        } else {
+                            blueCost = Math.floor(blueCost * (1 - stat_number));
+                        }
+                        break;
+                    case 'blueNinCost':
+                        if (stat_type == 'Increase') {
+                            blueNinCost = Math.floor(blueNinCost * (1 + stat_number));
+                        } else {
+                            blueNinCost = Math.floor(blueNinCost * (1 - stat_number));
+                        }
+                        break;
+                    case 'blueAcc':
+                        if (stat_type == 'Increase') {
+                            blueAcc = Math.floor(blueAcc * (1 + stat_number));
+                        } else {
+                            blueAcc = Math.floor(blueAcc * (1 - stat_number));
+                        }
+                        break;
+                    case 'blueEvas':
+                        if (stat_type == 'Increase') {
+                            blueEvas = Math.floor(blueEvas * (1 + stat_number));
+                        } else {
+                            blueEvas = Math.floor(blueEvas * (1 - stat_number));
+                        }
+                        break;
+                    case 'blueChakraPower':
+                        if (stat_type == 'Increase') {
+                            blueChakraPower = Math.floor(blueChakraPower * (1 + stat_number));
+                        } else {
+                            blueChakraPower = Math.floor(blueChakraPower * (1 - stat_number));
+                        }
+                        break;
                     default:
                         alert('Invalid stat');
+                        break;
                 }
+
 
 
 
@@ -324,36 +428,54 @@
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
-            if (action == 'Elemental Attack') {
-                if (attacker == 'red') {
-                    let magicEffectiveness = 1.0;
-                    if (checkWeakness(redELM, blueELM)) {
-                        console.log('is weak');
-                        magicEffectiveness = redElmEffc;
+
+            if (action === 'Elemental Attack') {
+                let isHit;
+                let hitChance;
+
+                if (attacker === 'red') {
+                    hitChance = calculateHitChance(redAcc, blueEvas);
+                    isHit = Math.random() < hitChance;
+
+                    if (isHit) {
+                        let magicEffectiveness = 1.0;
+                        if (checkWeakness(redELM, blueELM)) {
+                            console.log('is weak');
+                            magicEffectiveness = redElmEffc;
+                        }
+                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
+                        magicDamage = Math.max(1, Math.round(magicDamage));
+
+                        $('#damage').hide().text(magicDamage).fadeIn(500);
+                        $('#blueHP').text(currBlueHp - magicDamage);
+                        $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                     } else {
-                        console.log('no weakness detected');
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
                     }
-                    console.log('magic efffect multiplier is', magicEffectiveness)
-                    let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
-                    magicDamage = Math.max(1, Math.round(magicDamage));
-                    $('#damage').hide().text(magicDamage).fadeIn(500);
-                    $('#blueHP').text(currBlueHp - magicDamage);
-                    $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
+
                 } else {
-                    let magicEffectiveness = 1.0;
-                    if (checkWeakness(blueELM, redELM)) {
-                        console.log('is weak')
-                        magicEffectiveness = blueElmEffc;
+                    hitChance = calculateHitChance(blueAcc, redEvas);
+                    isHit = Math.random() < hitChance;
+
+                    if (isHit) {
+                        let magicEffectiveness = 1.0;
+                        if (checkWeakness(blueELM, redELM)) {
+                            magicEffectiveness = blueElmEffc;
+                        }
+                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
+                        magicDamage = Math.max(1, Math.round(magicDamage));
+
+                        $('#damage').hide().text(magicDamage).fadeIn(500);
+                        $('#redHP').text(currRedHp - magicDamage);
+                        $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                     } else {
-                        console.log('no weakness detected')
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
                     }
-                    let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
-                    magicDamage = Math.max(1, Math.round(magicDamage));
-                    $('#damage').hide().text(magicDamage).fadeIn(500);
-                    $('#redHP').text(currRedHp - magicDamage);
-                    $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                 }
             }
+
             if (action == 'Update HP') {
                 updateHealth()
             }
@@ -378,65 +500,148 @@
             }
             if (action == 'Ninjutsu') {
                 if (attacker == 'red') {
-                    console.log(currRedChakra)
                     if (currRedChakra < redCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
                     currRedChakra -= redCost
                     $('#redChakra').text(currRedChakra)
-                    $('#blueHP').text(currBlueHp - 1000);
-                    $('#damage').text('🥷 1000 🥷')
+                    $('#blueHP').text(currBlueHp - redChakraPower);
+                    $('#damage').text(`🥷  ${redChakraPower}  🥷`)
+                    return
+                } else {
+                    if (currBlueChakra < blueCost) {
+                        alert('NOT ENOUGH CHAKRA LOSE TURN')
+                        return
+                    }
+                    currBlueChakra -= blueCost
+                    $('#blueChakra').text(currBlueChakra)
+                    $('#redHP').text(currRedHp - blueChakraPower);
+                    $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
+                    return
+                }
+            }
+            if (action == 'Ultimate Ninjutsu') {
+                if (attacker == 'red') {
+                    if (currRedChakra < redNinCost) {
+                        alert('NOT ENOUGH CHAKRA LOSE TURN')
+                        return
+                    }
+                    currRedChakra -= redNinCost
+                    $('#redChakra').text(currRedChakra)
+                    $('#blueHP').text(currBlueHp - redNinPower);
+                    $('#crit').text(redChakra)
+                    $('#damage').text(`🌋🌋 ${redNinPower}  🌋🌋`)
+                    buff(100)
+                    return
+                } else {
+                    if (currBlueChakra < blueNinCost) {
+                        alert('NOT ENOUGH CHAKRA LOSE TURN')
+                        return
+                    }
+                    currBlueChakra -= blueNinCost;
+                    $('#blueChakra').text(currBlueChakra)
+                    $('#redHP').text(currRedHp - blueNinPower);
+                    $('#damage').text(`🌋🌋  ${blueNinPower}  🌋🌋`)
+                    buff(100)
                     return
                 }
             }
             if (action == 'Boost') {
                 if (attacker == 'red') {
-                    let boosted = redRecovery * 2
-                    currRedChakra += getRecovery(boosted);
+                    let boosted = redRecovery * 2.5;
+                    let newChakra = getRecovery(boosted)
+                    currRedChakra += newChakra
+                    $('#damage').text(`Gained ${newChakra} chakra`)
                     $('#redChakra').text(currRedChakra);
                 } else {
-                    let boosted = blueRecovery * 2
-                    currBlueChakra += getRecovery(boosted);
+                    let boosted = blueRecovery * 2.5;
+                    let newChakra = getRecovery(boosted)
+                    currBlueChakra += newChakra
+                    $('#damage').text(`Gained ${newChakra} chakra`)
                     $('#blueChakra').text(currBlueChakra);
                 }
             }
+            if (action == 'Drain') {
+                if (attacker == 'red') {
+                    let drain = redRecovery * 3.5;
+                    let empty = getRecovery(drain)
+                    currBlueChakra -= empty;
+                    $('#damage').text(`${empty} Depleted`)
+                    $('#blueChakra').text(currBlueChakra)
+                } else {
+                    let drain = blueRecovery * 3.5;
+                    let empty = getRecovery(drain)
+                    currRedChakra -= empty;
+                    $('#damage').text(`${empty} Depleted`)
+                    $('#redChakra').text(currRedChakra)
+                }
+            }
+            function calculateHitChance(accuracy, evasion) {
+                const multiplier = 1.7;
+                return (accuracy * multiplier) / (accuracy + evasion);
+            }
+
             if (action === 'Attack') {
                 let isCritical;
                 let criticalMultiplier;
-
-
+                let hitChance;
+                let isHit;
 
                 if (attacker === 'red') {
-                    isCritical = Math.random() < redCrit;
-                    criticalMultiplier = isCritical ? redStr : 1.0;
-                    console.log('!!!!!!!!!!!!!!!!!!Red Attack :', redAttack);
-                    let damage = ((redAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
-                    damage = Math.max(1, Math.round(damage));
-                    $('#blueHP').text(currBlueHp - damage);
-                    $('#damage').hide().text(damage).fadeIn(500);
-                    $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                    hitChance = calculateHitChance(redAcc, blueEvas);
+                    isHit = Math.random() < hitChance;
+
+                    if (isHit) {
+                        isCritical = Math.random() < redCrit;
+                        criticalMultiplier = isCritical ? redStr : 1.0;
+                        console.log('Red Attack:', redAttack);
+
+                        let damage = ((redAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
+                        damage = Math.max(1, Math.round(damage));
+
+                        $('#blueHP').text(currBlueHp - damage);
+                        $('#damage').hide().text(damage).fadeIn(500);
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                    } else {
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                    }
                 } else {
-                    isCritical = Math.random() < blueCrit;
-                    criticalMultiplier = isCritical ? blueStr : 1.0;
-                    console.log('Blue Strength (after applying multiplier):', blueAttack);
-                    let damage = ((blueAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
-                    damage = Math.max(1, Math.round(damage));
-                    $('#redHP').text(currRedHp - damage);
-                    $('#damage').hide().text(damage).fadeIn(500);
-                    $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                    hitChance = calculateHitChance(blueAcc, redEvas);
+                    isHit = Math.random() < hitChance;
+
+                    if (isHit) {
+                        isCritical = Math.random() < blueCrit;
+                        criticalMultiplier = isCritical ? blueStr : 1.0;
+                        console.log('Blue Attack:', blueAttack);
+
+                        let damage = ((blueAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
+                        damage = Math.max(1, Math.round(damage));
+
+                        $('#redHP').text(currRedHp - damage);
+                        $('#damage').hide().text(damage).fadeIn(500);
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                    } else {
+                        // Display a miss message if the hit chance fails
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                    }
                 }
             }
-            if (attacker == 'red') {
+
+            if (attacker == 'red' && action != 'Drain') {
                 currRedChakra += getRecovery(redRecovery);
                 $('#redChakra').text(currRedChakra);
-            } else {
-                currBlueChakra += getRecovery(blueRecovery);
+                console.log('hisoka should get sime')
+            } else if (attacker == 'blue' && action != 'Drain') {
+                console.log('kuroro should get sime', blueRecovery)
+                let testRecovery = getRecovery(blueRecovery)
+                console.log('here is func return', testRecovery)
+                currBlueChakra += testRecovery;
                 $('#blueChakra').text(currBlueChakra);
+                console.log('here is current chakre', currBlueChakra)
             }
-
-
-
         }
 
 
@@ -502,11 +707,26 @@
         <p>☸️</p>
         <span id="redChakra">${player.chakra}</span>
     </div>
-</div>
 
-                <p>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
-                <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
-                <p>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
+     <div>
+        <p>🎯</p>
+        <span id="redAcc">${player.accuracy}</span>
+    </div>
+    <div>
+        <p>🕊</p>
+        <span id="redEvas">${player.evasion}</span>
+    </div>
+     <div>
+        <p>${player.chakra_pow}</p>
+        <span id="redAcc">${player.ninjutsu_pow}</span>
+    </div>
+</div>
+<hr>
+                <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
+                <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
+                <hr>
+                <p class='words'> ${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
+                <p class='words'>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
             </div>
             `;
                     redAttack = player.attack;
@@ -523,6 +743,12 @@
                     redELM = player.element
                     redRecovery = player.chakra_rec
                     redCost = player.cost
+                    redChakraPower = player.chakra_pow
+                    redNinjutsu = player.ninjutsu;
+                    redNinCost = player.nin_cost;
+                    redNinPower = player.ninjutsu_pow
+                    redAcc = player.accuracy
+                    redEvas = player.evasion
 
                 } else if (val_2 === player.name) {
                     blueHtml = `
@@ -571,11 +797,26 @@
         <p>☸️</p>
         <span id="blueChakra">${player.chakra}</span>
     </div>
+    <div>
+        <p>🎯</p>
+        <span id="blueAcc">${player.accuracy}</span>
+    </div>
+    <div>
+        <p>🕊</p>
+        <span id="blueEvas">${player.evasion}</span>
+    </div>
+     <div>
+        <p>${player.chakra_pow}</p>
+        <span id="redAcc">${player.ninjutsu_pow}</span>
+    </div>
 </div>
 
-               <p>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
-               <p>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
-               <p>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
+<hr>
+               <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
+                 <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
+                  <hr>
+               <p class='words'>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
+               <p class='words'>${player.buff2} ✮ <span id='buff_red'>${player.buff2_acc}%</span></p>
             </div>
             `;
                     blueAttack = player.attack;
@@ -588,10 +829,16 @@
                     blueStr = player.strength;
                     bluePot = player.potency;
                     blueBuff = player.buff_acc
-                    blueBuff2 = player.buff_acc2
+                    blueBuff2 = player.buff2_acc
                     blueELM = player.element
                     blueRecovery = player.chakra_rec
                     blueCost = player.cost
+                    blueChakraPower = player.chakra_pow
+                    blueNinjutsu = player.ninjutsu;
+                    blueNinCost = player.nin_cost;
+                    blueNinPower = player.ninjutsu_pow
+                    blueAcc = player.accuracy
+                    blueEvas = player.evasion
                 }
             }
 
