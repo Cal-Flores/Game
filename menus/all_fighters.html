@@ -7,6 +7,9 @@
         <title>Home</title>
         <link rel="stylesheet" href="../Teams/teams.css">
         <link rel="stylesheet" href="menu.css">
+        <script src="../database/database.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     </head>
 
     <body id="menu_color">
@@ -53,31 +56,51 @@
             </a>
             <img>
         </header>
-        <main class="menu_cont">
-            <div class="menu_cards">
-                <div class="menu_card" id='menu_sch'>
-                    <h2>Schedule</h2>
-                    <a class="menu_btn">View Schedule</a>
-                </div>
-                <div class="menu_card" id='menu_tstandings'>
-                    <h2>Team Standings</h2>
-                    <a class="menu_btn">View Schedule</a>
-                </div>
-                <div class="menu_card" id='menu_fighters'>
-                    <h2>All Standings</h2>
-                    <a class="menu_btn" href="all_fighters.html">View Fighters</a>
-                </div>
-                <div class="menu_card" id='menu_fight'>
-                    <h2>Dual</h2>
-                    <a class="menu_btn" href="dual.html">Dual</a>
-                </div>
-                <div class="menu_card" id='menu_draft'>
-                    <h2>Draft</h2>
-                    <a class="menu_btn" href="draft.html">Fight</a>
-                </div>
+        <main>
+            <h2>All Fighters</h2>
+            <div id="all_fight_cont">
 
             </div>
+
+
         </main>
+        <script>
+            html = ''
+            let databaseArr = database;
+            for (let player of databaseArr) {
+                html += `<p> ${player.name} </p>
+                        <p>${player.nen_type}</p>
+                        <p>HP: ${player.hp} </p>
+                        <div>
+                            <p>Attack: ${player.attack} </p>
+                            <p>Defense: ${player.defense} </p>
+                            <p>Critical %: ${player.critical} </p>
+                            <p>Strength: ${player.strength} </p>
+                        </div>
+                        <div>
+                            <p>Magic: ${player.elm_attack}</p>
+                            <p>Magic Defense: ${player.elm_defense}</p>
+                            <p>Elemental Power: ${player.elm_efficiency}</p>
+                            <p>Potency: ${player.potency}%</p>
+                            <p>Magic: ${player.elm_attack}</p>
+                        </div>
+                        <div>
+                            <p>Chakra Strength: ${player.chakra_rec}</p>
+                            <p>Accuracy: ${player.accuracy}</p>
+                            <p>Chakra Strength: ${player.evasion}</p>
+                        </div>
+                        <div>
+                            <h4>NinJutsu</h4>
+                            <p>${player.chakra_attack} - ${player.chakra_pow} Damage ${player.cost} cost</p>
+                            <p>${player.ninjutsu} - ${player.ninjutsu_pow} Damage ${player.nin_cost} cost</p>
+                            <h4>Nen Abilities</h4>
+                            <p>${player.buff} Accuracy ${player.buff_acc}</p>
+                            <p>${player.buff2} Accuracy ${player.buff2_acc}</p>
+                        </div>
+                `
+            }
+            $('#all_fight_cont').append(html)
+        </script>
 
     </body>
 
