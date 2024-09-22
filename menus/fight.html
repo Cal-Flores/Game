@@ -416,6 +416,10 @@
             return Math.max(0, Math.round(newRecovery));
         }
 
+        function calculateHitChance(accuracy, evasion) {
+            const multiplier = 1.7;
+            return (accuracy * multiplier) / (accuracy + evasion);
+        }
 
         function updateHealth() {
             let red_corn_hp = prompt('red hp')
@@ -444,27 +448,38 @@
                 let isHit;
                 let hitChance;
 
+                const redCrit = redPot;  // Assuming redPot represents crit chance as a decimal
+                const blueCrit = bluePot; // Assuming bluePot represents crit chance as a decimal
+
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
+                        let isCritical = Math.random() < redCrit; // Check for critical hit
+                        let critMessage = ''; // Initialize crit message
 
                         if (checkWeakness(redELM, blueELM)) {
                             magicEffectiveness = redElmEffc; // Adjust for weakness
-                            $('#crit').hide().text('⚡️ WEAKNESS ⚡️').fadeIn(500);
+                            critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
                         } else if (checkResistance(redELM, blueELM)) {
                             magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                            $('#crit').hide().text('🛡️ RESISTANT 🛡️').fadeIn(500);
-                        } else {
-                            $('#crit').hide().text('').fadeIn(500); // No special message
+                            critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
                         }
 
-                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
+                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness;
+
+                        // Apply critical hit multiplier
+                        if (isCritical) {
+                            magicDamage *= 1.5; // Multiply by 1.5 for critical hit
+                            critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
+                        }
+
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
-                        $('#damage').hide().text(magicDamage).fadeIn(500);
+                        // Update damage message and append critical message
+                        $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#blueHP').text(currBlueHp - magicDamage);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
@@ -477,21 +492,29 @@
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
+                        let isCritical = Math.random() < blueCrit; // Check for critical hit
+                        let critMessage = ''; // Initialize crit message
 
                         if (checkWeakness(blueELM, redELM)) {
                             magicEffectiveness = blueElmEffc; // Adjust for weakness
-                            $('#crit').hide().text('⚡️ WEAKNESS ⚡️').fadeIn(500);
+                            critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
                         } else if (checkResistance(blueELM, redELM)) {
                             magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                            $('#crit').hide().text('🛡️ RESISTANT 🛡️').fadeIn(500);
-                        } else {
-                            $('#crit').hide().text('').fadeIn(500); // No special message
+                            critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
                         }
 
-                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
+                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness;
+
+                        // Apply critical hit multiplier
+                        if (isCritical) {
+                            magicDamage *= 1.5; // Multiply by 1.5 for critical hit
+                            critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
+                        }
+
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
-                        $('#damage').hide().text(magicDamage).fadeIn(500);
+                        // Update damage message and append critical message
+                        $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#redHP').text(currRedHp - magicDamage);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
@@ -602,10 +625,7 @@
                     $('#redChakra').text(currRedChakra)
                 }
             }
-            function calculateHitChance(accuracy, evasion) {
-                const multiplier = 1.7;
-                return (accuracy * multiplier) / (accuracy + evasion);
-            }
+
 
             if (action === 'Attack') {
                 let isCritical;

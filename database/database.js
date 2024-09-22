@@ -21,7 +21,7 @@ const database = [
         elm_efficiency: 1.6, // decimal multiplies chakra elemental damage
         critical: .30, // .99 max icreases chance for critical
         strength: 2, // decimal multiplies physical attack on criticals
-        potency: 2, // decimal base multiplier for magic users
+        potency: .80, // crit calculator
         accuracy: 7,
         evasion: 7,
         chakra: 0,
@@ -51,7 +51,7 @@ const database = [
         critical: .45,
         hp: 1825,
         strength: 1.5,
-        potency: 1.7,
+        potency: .30,
         accuracy: 5,
         evasion: 5,
         buff: 'Increase Strength by 50%',
