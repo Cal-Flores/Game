@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 #alls {
     background-color: #6f6e6e;
     color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #player_img {
-    width: 50px;
+    width: 55px;
     border-radius: 50%;
 }
 
 #elem_img {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 #all_fight_conttt {
@@ -24,12 +27,14 @@
 }
 
 .all_fight_card {
-    border: 2px solid #32cd32;
+    border: 2px solid #1C1C1C;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 2%;
+    margin: 1%;
     padding: 2%;
+    background-color: #2A2E35;
 }
 
 #all_top {
@@ -37,5 +42,91 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #32cd32;
+    margin-bottom: 3%;
+}
+
+
+#all_middle {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.all_stat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.stat-box {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.all_stat p {
+    margin: 5px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.all_stat span {
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #E5C100;
+}
+
+#all_bottom {
+    line-height: 1;
+    font-size: 13px;
+    display: none;
+    /* Hide by default */
+}
+
+#all_bottom>h4 {
+    color: #E5C100;
+}
+
+.toggleButton {
+    width: 33%;
+    background-color: #1d1f23;
+    border: 1px solid #1C1C1C;
+    color: #ccc;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.toggleButton:hover {
+    cursor: pointer;
+    color: #E5C100;
+}
+
+@media screen and (max-width: 1300px) {
+    #all_middle {
+        max-width: 94%;
+        overflow: scroll;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #player_img {
+        display: none;
+    }
+
+    #all_type {
+        display: none;
+    }
 }
