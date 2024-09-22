@@ -108,14 +108,26 @@
         let redEvas
 
         const elementalWeaknesses = {
-            Water: 'Fire',
-            Fire: 'Wind',
-            Wind: 'Lightning',
-            Lightning: 'Earth',
-            Earth: 'Water'
+            Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
+            Fire: { strongAgainst: ['Wind', 'Grass'], weakAgainst: ['Water', 'Earth'] },
+            Wind: { strongAgainst: ['Water', 'Lightning'], weakAgainst: ['Earth', 'Fire'] },
+            Lightning: { strongAgainst: ['Water', 'Grass'], weakAgainst: ['Earth', 'Fighter'] },
+            Earth: { strongAgainst: ['Fire', 'Lightning'], weakAgainst: ['Water', 'Grass'] },
+            Grass: { strongAgainst: ['Water', 'Earth'], weakAgainst: ['Fire', 'Lightning'] },
+            Fighter: { strongAgainst: ['Dark', 'Grass'], weakAgainst: ['Lightning', 'Water'] },
+            Dark: { strongAgainst: ['Grass', 'Water'], weakAgainst: ['Fire', 'Fighter'] },
+            Sage: { strongAgainst: [], weakAgainst: [] },
+            Psychic: { strongAgainst: [], weakAgainst: [] },
         };
+
         function checkWeakness(attackerElement, defenderElement) {
-            return elementalWeaknesses[attackerElement] == defenderElement;
+            const weaknesses = elementalWeaknesses[attackerElement];
+            return weaknesses.strongAgainst.includes(defenderElement);
+        }
+
+        function checkResistance(attackerElement, defenderElement) {
+            const weaknesses = elementalWeaknesses[attackerElement];
+            return weaknesses.weakAgainst.includes(defenderElement);
         }
 
         function calculateHitChance(accuracy, evasion) {
@@ -428,7 +440,6 @@
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
-
             if (action === 'Elemental Attack') {
                 let isHit;
                 let hitChance;
@@ -439,42 +450,56 @@
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
+
                         if (checkWeakness(redELM, blueELM)) {
-                            console.log('is weak');
-                            magicEffectiveness = redElmEffc;
+                            magicEffectiveness = redElmEffc; // Adjust for weakness
+                            $('#crit').hide().text('⚡️ WEAKNESS ⚡️').fadeIn(500);
+                        } else if (checkResistance(redELM, blueELM)) {
+                            magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
+                            $('#crit').hide().text('🛡️ RESISTANT 🛡️').fadeIn(500);
+                        } else {
+                            $('#crit').hide().text('').fadeIn(500); // No special message
                         }
+
                         let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness * redPot;
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
                         $('#damage').hide().text(magicDamage).fadeIn(500);
                         $('#blueHP').text(currBlueHp - magicDamage);
-                        $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
                     }
 
-                } else {
+                } else { // For blue attacker
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
+
                         if (checkWeakness(blueELM, redELM)) {
-                            magicEffectiveness = blueElmEffc;
+                            magicEffectiveness = blueElmEffc; // Adjust for weakness
+                            $('#crit').hide().text('⚡️ WEAKNESS ⚡️').fadeIn(500);
+                        } else if (checkResistance(blueELM, redELM)) {
+                            magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
+                            $('#crit').hide().text('🛡️ RESISTANT 🛡️').fadeIn(500);
+                        } else {
+                            $('#crit').hide().text('').fadeIn(500); // No special message
                         }
+
                         let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness * bluePot;
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
                         $('#damage').hide().text(magicDamage).fadeIn(500);
                         $('#redHP').text(currRedHp - magicDamage);
-                        $('#crit').hide().text(magicEffectiveness != 1 ? '⚡️ WEAKNESS ⚡️' : '').fadeIn(500);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
                     }
                 }
             }
+
 
             if (action == 'Update HP') {
                 updateHealth()

@@ -85,14 +85,14 @@
     color: #E5C100;
 }
 
-#all_bottom {
+.all_bottom {
     line-height: 1;
     font-size: 13px;
     display: none;
     /* Hide by default */
 }
 
-#all_bottom>h4 {
+.all_bottom>h4 {
     color: #E5C100;
 }
 
