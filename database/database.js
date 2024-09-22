@@ -36,6 +36,7 @@ const database = [
         buff2: 'Use opponents Buff',
         buff_acc: 33,
         buff2_acc: 33,
+        luck: 8,
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
@@ -66,6 +67,7 @@ const database = [
         ninjutsu: "Texture Surprise - Enhances Bungee Gum by 100",
         nin_cost: 55,
         ninjutsu_pow: 385,
+        luck: 4,
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },

@@ -48,6 +48,7 @@
                         <option>Ultimate Ninjutsu</option>
                         <option>Special Attack</option>
                         <option>Nen Attack</option>
+                        <option>Devil Contract</option>
                         <option>Boost</option>
                         <option>Drain</option>
                         <option>Update HP</option>
@@ -84,6 +85,7 @@
         let blueNinPower
         let blueAcc
         let blueEvas
+        let blueLuck
 
         let redAttack
         let redDefense
@@ -106,6 +108,7 @@
         let redNinPower
         let redAcc
         let redEvas
+        let redLuck
 
         const elementalWeaknesses = {
             Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
@@ -140,7 +143,7 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower,blueEvas');
+                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, redLuck blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower,blueEvas, blueLuck');
                 console.log('stat_max is ', stat_max);
                 let stat_type = prompt('Increase or Decrease');
                 let stat_number = parseFloat(prompt('By how much'));
@@ -249,6 +252,13 @@
                             redEvas = Math.floor(redEvas * (1 + stat_number));
                         } else {
                             redEvas = Math.floor(redEvas * (1 - stat_number));
+                        }
+                        break;
+                    case 'redLuck':
+                        if (stat_type == 'Increase') {
+                            redLuck = Math.floor(redLuck * (1 + stat_number));
+                        } else {
+                            redLuck = Math.floor(redLuck * (1 - stat_number));
                         }
                         break;
                     case 'redChakraPower':
@@ -370,6 +380,13 @@
                             blueChakraPower = Math.floor(blueChakraPower * (1 - stat_number));
                         }
                         break;
+                    case 'blueLuck':
+                        if (stat_type == 'Increase') {
+                            blueLuck = Math.floor(blueLuck * (1 + stat_number));
+                        } else {
+                            blueLuck = Math.floor(blueLuck * (1 - stat_number));
+                        }
+                        break;
                     default:
                         alert('Invalid stat');
                         break;
@@ -427,6 +444,75 @@
             $('#redHP').text(red_corn_hp)
             $('#blueHP').text(blue_corn_hp)
         }
+        function gamble(attacker, defender) {
+            let currBlueHp = parseInt($('#blueHP').text(), 10);
+            let currRedHp = parseInt($('#redHP').text(), 10);
+            let attackerLuck = attacker === 'red' ? redLuck : blueLuck;
+            let defenderLuck = defender === 'red' ? redLuck : blueLuck;
+
+            let luckDisparity = attackerLuck - defenderLuck;
+
+            // Adjust defender choices based on luck disparity
+            let defenderChoices;
+            if (luckDisparity >= 7) {
+                defenderChoices = 1;
+            } else if (luckDisparity === 6) {
+                defenderChoices = 2;
+            } else if (luckDisparity === 5) {
+                defenderChoices = 3;
+            } else if (luckDisparity === 4) {
+                defenderChoices = 3;
+            } else if (luckDisparity == 3) {
+                defenderChoices = 4;
+            } else if (luckDisparity == 2) {
+                defenderChoices = 4;
+            } else if (luckDisparity === 1) {
+                defenderChoices = 5;
+            } else if (luckDisparity === -6) {
+                defenderChoices = 9;
+            } else if (luckDisparity === -5) {
+                defenderChoices = 8;
+            } else if (luckDisparity === -4) {
+                defenderChoices = 7;
+            } else if (luckDisparity == -3) {
+                defenderChoices = 7;
+            } else if (luckDisparity == -2) {
+                defenderChoices = 6;
+            } else if (luckDisparity === -1) {
+                defenderChoices = 5;
+            }
+
+            defenderChoices = Math.min(defenderChoices, 9); // Cap choices between 1-9
+
+            let defenderPick = prompt(`Defender, pick ${defenderChoices} numbers between 1-10 (separate by commas):`);
+            let defenderNumbers = defenderPick.split(',').map(num => parseInt(num.trim()));
+
+            let wager = parseInt(prompt("Attacker, name your wager (damage to deal if you win):"));
+            let dieRoll = Math.floor(Math.random() * 10) + 1;
+
+            if (defenderNumbers.includes(dieRoll)) {
+                console.log('Defender wins the gamble!');
+                let penalty = Math.max(0, Math.floor(wager * (1 + (luckDisparity * 0.2)))); // Ensure penalty is non-negative
+                attacker === 'red' ? currRedHp -= penalty : currBlueHp -= penalty;
+                $('#damage').hide().text(`Lost gamble! Lost ${penalty} HP ❌`).fadeIn(500);
+            } else {
+                console.log('Attacker wins the gamble!');
+                let bonusDamage = Math.max(0, Math.floor(wager * (luckDisparity > 0 ? 1 : 1.5))); // Ensure bonusDamage is non-negative
+                defender === 'red' ? currRedHp -= bonusDamage : currBlueHp -= bonusDamage;
+                $('#damage').hide().text(`Won gamble! Dealt ${bonusDamage} damage! 🎲`).fadeIn(500);
+            }
+
+            // Ensure HP does not drop below 0
+            currRedHp = Math.max(0, currRedHp);
+            currBlueHp = Math.max(0, currBlueHp);
+
+            // Update the displayed HP values
+            $('#redHP').text(currRedHp);
+            $('#blueHP').text(currBlueHp);
+        }
+
+
+
 
 
         function attack(e) {
@@ -526,6 +612,13 @@
 
             if (action == 'Update HP') {
                 updateHealth()
+            }
+            if (action == 'Devil Contract') {
+                if (attacker == 'red') {
+                    gamble('red', 'blue')
+                } else {
+                    gamble('blue', 'red')
+                }
             }
             if (action == 'Special Attack') {
                 if (attacker == 'red') {
@@ -736,20 +829,20 @@
         <p>♠️</p>
         <span id="redElmDef">${player.elm_defense}</span>
     </div>
-    <div>
+   <div>
         <p>🧪</p>
-        <span id="redElmEffc">${player.elm_efficiency}</span>
+        <span id="redPot">${player.potency}</span>
     </div>
     <div>
         <p>🪦</p>
         <span id="redStr">${player.strength}</span>
     </div>
-    <div>
-        <p>🌪</p>
-        <span id="redPot">${player.potency}</span>
+        <div>
+        <p>⛈</p>
+        <span id="redElmEffc">${player.elm_efficiency}</span>
     </div>
     <div>
-        <p>☸️</p>
+        <p><img id='deviant' src = 'https://www.pngall.com/wp-content/uploads/4/Chakra-PNG-File-Download-Free.png'></p>
         <span id="redChakra">${player.chakra}</span>
     </div>
 
@@ -764,6 +857,10 @@
      <div>
         <p>${player.chakra_pow}</p>
         <span id="redAcc">${player.ninjutsu_pow}</span>
+    </div>
+     <div>
+        <p>🍀</p>
+        <span id="redLuck">${player.luck}</span>
     </div>
 </div>
 <hr>
@@ -794,6 +891,7 @@
                     redNinPower = player.ninjutsu_pow
                     redAcc = player.accuracy
                     redEvas = player.evasion
+                    redLuck = player.luck
 
                 } else if (val_2 === player.name) {
                     blueHtml = `
@@ -828,15 +926,16 @@
     </div>
     <div>
         <p>🧪</p>
-        <span id="blueElmEffc">${player.elm_efficiency}</span>
+        <span id="bluePot">${player.potency}</span>
     </div>
     <div>
         <p>🪦</p>
         <span id="blueStr">${player.strength}</span>
     </div>
+
     <div>
-        <p>🌪</p>
-        <span id="bluePot">${player.potency}</span>
+        <p>⛈</p>
+        <span id="blueElmEffc">${player.elm_efficiency}</span>
     </div>
     <div>
         <p>☸️</p>
@@ -853,6 +952,10 @@
      <div>
         <p>${player.chakra_pow}</p>
         <span id="redAcc">${player.ninjutsu_pow}</span>
+    </div>
+     <div>
+        <p>🍀</p>
+        <span id="redLuck">${player.luck}</span>
     </div>
 </div>
 
@@ -884,6 +987,8 @@
                     blueNinPower = player.ninjutsu_pow
                     blueAcc = player.accuracy
                     blueEvas = player.evasion
+                    blueLuck = player.luck
+
                 }
             }
 
