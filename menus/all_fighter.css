@@ -1,0 +1,41 @@
+#alls {
+    background-color: #6f6e6e;
+    color: whitesmoke;
+}
+
+#player_img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#elem_img {
+    width: 25px;
+    height: 25px;
+}
+
+#all_fight_conttt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 3%;
+    width: 94%;
+}
+
+.all_fight_card {
+    border: 2px solid #32cd32;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 2%;
+    padding: 2%;
+}
+
+#all_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #32cd32;
+}

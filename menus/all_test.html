@@ -58,66 +58,24 @@
         </header>
         <main id='alls'>
             <h2>All Fighters</h2>
-            <div id="all_fight_conttt">
+            <div id="all_fight_cont">
+                <div>
+                    
+                </div>
 
             </div>
 
-            <!-- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-background-color: #2b2b2b;
-border: 2px solid #32cd32;
-background-color: #1e1e1e;
-border-color: #ff4500; -->
         </main>
-        <script>
-            html = ''
-            let databaseArr = database;
-            for (let player of databaseArr) {
-                html += `
-<div class='all_fight_card'>
-    <div id='all_top'>
-        <img id='player_img' src=${player.image}>
-        <p>${player.name}</p>
-        <p>${player.nen_type}</p>
-        <img id='elem_img' src=${player.elm}>
-    </div>
 
-    <div>
-        <div>
-            <p>Attack: ${player.attack}</p>
-            <p>Defense: ${player.defense}</p>
-            <p>Critical %: ${player.critical}</p>
-            <p>Strength: ${player.strength}</p>
-        </div>
-        <div>
-            <p>Magic: ${player.elm_attack}</p>
-            <p>Magic Defense: ${player.elm_defense}</p>
-            <p>Elemental Power: ${player.elm_efficiency}</p>
-            <p>Potency: ${player.potency}%</p>
-        </div>
-        <div>
-            <p>HP: ${player.hp}</p>
-            <p>Chakra Strength: ${player.chakra_rec}</p>
-            <p>Accuracy: ${player.accuracy}</p>
-            <p>Chakra Strength: ${player.evasion}</p>
-        </div> <!-- Missing closing </div> for this div -->
-    </div> <!-- Closing div for player info -->
-
-    <div>
-        <h4>NinJutsu</h4>
-        <p>${player.chakra_attack} - ${player.chakra_pow} Damage ${player.cost} cost</p>
-        <p>${player.ninjutsu} - ${player.ninjutsu_pow} Damage ${player.nin_cost} cost</p>
-        <h4>Nen Abilities</h4>
-        <p>${player.buff} Accuracy ${player.buff_acc}</p>
-        <p>${player.buff2} Accuracy ${player.buff2_acc}</p>
-    </div>
-</div>
-`
-
-            }
-
-            $('#all_fight_conttt').append(html)
-        </script>
 
     </body>
 
 </html>
+
+
+
+<!-- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+background-color: #2b2b2b;
+border: 2px solid #32cd32;
+background-color: #1e1e1e;
+border-color: #ff4500; -->
