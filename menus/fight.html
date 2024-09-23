@@ -48,6 +48,7 @@
                         <option>Ultimate Ninjutsu</option>
                         <option>Special Attack</option>
                         <option>Nen Attack</option>
+                        <option>Genjutsu</option>
                         <option>Devil Contract</option>
                         <option>Boost</option>
                         <option>Drain</option>
@@ -86,6 +87,9 @@
         let blueAcc
         let blueEvas
         let blueLuck
+        let blueGen
+        let blueWill;
+        let blueStatus = []
 
         let redAttack
         let redDefense
@@ -109,34 +113,10 @@
         let redAcc
         let redEvas
         let redLuck
+        let redGen;
+        let redWill;
+        let redStatus = []
 
-        const elementalWeaknesses = {
-            Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
-            Fire: { strongAgainst: ['Wind', 'Grass'], weakAgainst: ['Water', 'Earth'] },
-            Wind: { strongAgainst: ['Water', 'Lightning'], weakAgainst: ['Earth', 'Fire'] },
-            Lightning: { strongAgainst: ['Water', 'Grass'], weakAgainst: ['Earth', 'Fighter'] },
-            Earth: { strongAgainst: ['Fire', 'Lightning'], weakAgainst: ['Water', 'Grass'] },
-            Grass: { strongAgainst: ['Water', 'Earth'], weakAgainst: ['Fire', 'Lightning'] },
-            Fighter: { strongAgainst: ['Dark', 'Grass'], weakAgainst: ['Lightning', 'Water'] },
-            Dark: { strongAgainst: ['Grass', 'Water'], weakAgainst: ['Fire', 'Fighter'] },
-            Sage: { strongAgainst: [], weakAgainst: [] },
-            Psychic: { strongAgainst: [], weakAgainst: [] },
-        };
-
-        function checkWeakness(attackerElement, defenderElement) {
-            const weaknesses = elementalWeaknesses[attackerElement];
-            return weaknesses.strongAgainst.includes(defenderElement);
-        }
-
-        function checkResistance(attackerElement, defenderElement) {
-            const weaknesses = elementalWeaknesses[attackerElement];
-            return weaknesses.weakAgainst.includes(defenderElement);
-        }
-
-        function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.8;
-            return (accuracy * multiplier) / (accuracy + evasion);
-        }
 
         function buff(buff) {
             buff = buff / 100;
@@ -421,6 +401,123 @@
                 $('#damage').text('Fail');
             }
         }
+
+        let roundCounters = { red: {}, blue: {} }; // Track round counters
+        function genjutsuAttack(genjutsu, willpower, color) {
+            if (genjutsu > willpower) {
+                let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25)");
+                applyStatusEffect(color, statusEffect); // Apply effect to the defender
+            }
+        }
+
+        function applyStatusEffect(defender, statusEffect) {
+            let duration = 4; // Default duration for all effects
+
+            if (defender === 'red') {
+                redStatus.push(statusEffect);
+                roundCounters.red[statusEffect] = duration; // Set duration for this effect
+                $('#redStatus').show().text(redStatus.join(', '));
+            } else if (defender === 'blue') {
+                blueStatus.push(statusEffect);
+                roundCounters.blue[statusEffect] = duration; // Set duration for this effect
+                $('#blueStatus').show().text(blueStatus.join(', '));
+            }
+        }
+        function endRound() {
+            // Update round counters for each player's status effects
+            for (let status of Object.keys(roundCounters.red)) {
+                roundCounters.red[status]--;
+                if (roundCounters.red[status] === 0) {
+                    clearStatusEffect('red', status);
+                }
+            }
+
+            for (let status of Object.keys(roundCounters.blue)) {
+                roundCounters.blue[status]--;
+                if (roundCounters.blue[status] === 0) {
+                    clearStatusEffect('blue', status);
+                }
+            }
+        }
+
+        function clearStatusEffect(defender, statusEffect) {
+            if (defender === 'red') {
+                redStatus = redStatus.filter(status => status !== statusEffect); // Remove effect
+                delete roundCounters.red[statusEffect]; // Remove duration
+                $('#redStatus').show().text(redStatus.join(', ')); // Update UI
+                resetStats('red', statusEffect); // Reset stats when status effect ends
+
+            } else if (defender === 'blue') {
+                blueStatus = blueStatus.filter(status => status !== statusEffect); // Remove effect
+                delete roundCounters.blue[statusEffect]; // Remove duration
+                $('#blueStatus').show().text(blueStatus.join(', ')); // Update UI
+                resetStats('blue', statusEffect); // Reset stats when status effect ends
+            }
+        }
+
+        let originalBlueRecovery = blueRecovery
+        let originalRedRecovery = redRecovery
+        let originalBlueAttack = blueAttack
+        let originalRedAttack = redAttack
+        let originalRedMagic = redElmAttack
+        let originalBlueMagic = blueElmAttack
+
+        function resetStats(defender, statusEffect) {
+
+            switch (statusEffect) {
+                case 'Zombie':
+                    if (defender === 'red') {
+                        redRecovery = originalRedRecovery; // Reset to original value
+                    } else {
+                        blueRecovery = originalBlueRecovery; // Reset for blue
+                    }
+                    break;
+                case 'Darkness':
+                    if (defender === 'red') {
+                        redAttack = originalRedAttack; // Reset to original value
+                    } else {
+                        blueAttack = originalBlueAttack; // Reset for blue
+                    }
+                    break;
+                case 'Silence':
+                    if (defender === 'red') {
+                        console.log('sacftey', originalRedMagic)
+                        redElmAttack = originalRedMagic; // Reset to original value
+                    } else {
+                        blueElmAttack = originalBlueMagic;// Reset for blue
+                    }
+                    break;
+                // Handle other status effects here
+            }
+        }
+        const elementalWeaknesses = {
+            Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
+            Fire: { strongAgainst: ['Wind', 'Grass'], weakAgainst: ['Water', 'Earth'] },
+            Wind: { strongAgainst: ['Water', 'Lightning'], weakAgainst: ['Earth', 'Fire'] },
+            Lightning: { strongAgainst: ['Water', 'Grass'], weakAgainst: ['Earth', 'Fighter'] },
+            Earth: { strongAgainst: ['Fire', 'Lightning'], weakAgainst: ['Water', 'Grass'] },
+            Grass: { strongAgainst: ['Water', 'Earth'], weakAgainst: ['Fire', 'Lightning'] },
+            Fighter: { strongAgainst: ['Dark', 'Grass'], weakAgainst: ['Lightning', 'Water'] },
+            Dark: { strongAgainst: ['Grass', 'Water'], weakAgainst: ['Fire', 'Fighter'] },
+            Sage: { strongAgainst: [], weakAgainst: [] },
+            Psychic: { strongAgainst: [], weakAgainst: [] },
+        };
+
+        function checkWeakness(attackerElement, defenderElement) {
+            const weaknesses = elementalWeaknesses[attackerElement];
+            return weaknesses.strongAgainst.includes(defenderElement);
+        }
+
+        function checkResistance(attackerElement, defenderElement) {
+            const weaknesses = elementalWeaknesses[attackerElement];
+            return weaknesses.weakAgainst.includes(defenderElement);
+        }
+
+        function calculateHitChance(accuracy, evasion) {
+            const multiplier = 1.8;
+            return (accuracy * multiplier) / (accuracy + evasion);
+        }
+
         function getRecovery(baseRecovery) {
             let variance = (Math.random() * 0.8) - 0.4;
             let rareMultiplier = Math.random();
@@ -530,6 +627,33 @@
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! GENJUTSU CHECKPOINT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
+            let attackerStatusEffects = attacker === 'red' ? redStatus : blueStatus;
+            console.log('DITO', attackerStatusEffects)
+            if (attackerStatusEffects.includes('Zombie')) {
+                if (attacker === 'red') {
+                    redRecovery = 0;
+                } else {
+                    blueRecovery = 0
+                }
+            }
+            if (attackerStatusEffects.includes('Darkness')) {
+                if (attacker === 'red') {
+                    redAttack = 0;
+                } else {
+                    blueAttack = 0
+                }
+            }
+            if (attackerStatusEffects.includes('Silence')) {
+                if (attacker === 'red') {
+                    redElmAttack = 0;
+                } else {
+                    blueElmAttack = 0
+                }
+            }
+
+
+
             if (action === 'Elemental Attack') {
                 let isHit;
                 let hitChance;
@@ -554,7 +678,7 @@
                             critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
                         }
 
-                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 2)) * magicEffectiveness;
+                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 3)) * magicEffectiveness;
 
                         // Apply critical hit multiplier
                         if (isCritical) {
@@ -589,7 +713,7 @@
                             critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
                         }
 
-                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 2)) * magicEffectiveness;
+                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 3)) * magicEffectiveness;
 
                         // Apply critical hit multiplier
                         if (isCritical) {
@@ -608,7 +732,13 @@
                     }
                 }
             }
-
+            if (action == 'Genjutsu') {
+                if (attacker == 'red') {
+                    genjutsuAttack(redGen, blueWill, 'blue')
+                } else {
+                    genjutsuAttack(blueGen, redWill, 'red')
+                }
+            }
 
             if (action == 'Update HP') {
                 updateHealth()
@@ -705,13 +835,13 @@
             }
             if (action == 'Drain') {
                 if (attacker == 'red') {
-                    let drain = redRecovery * 3.5;
+                    let drain = redRecovery * 2.5;
                     let empty = getRecovery(drain)
                     currBlueChakra -= empty;
                     $('#damage').text(`${empty} Depleted`)
                     $('#blueChakra').text(currBlueChakra)
                 } else {
-                    let drain = blueRecovery * 3.5;
+                    let drain = blueRecovery * 2.5;
                     let empty = getRecovery(drain)
                     currRedChakra -= empty;
                     $('#damage').text(`${empty} Depleted`)
@@ -780,6 +910,7 @@
                 $('#blueChakra').text(currBlueChakra);
                 console.log('here is current chakre', currBlueChakra)
             }
+            endRound()
         }
 
 
@@ -793,6 +924,8 @@
             $('#attack-form').show()
             let val_1 = $('#red_corner_search').val();
             let val_2 = $('#blue_corner_search').val();
+            $('#redStatus').hide()
+            $('#blueStatus').hide()
 
             let redHtml = '';
             let blueHtml = '';
@@ -806,6 +939,7 @@
                     <img class='elem_img_corner' src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
+                <p id='redStatus'>${redStatus}</p>
                 <h4 contenteditable="true">🖤 <span id='redHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
              <div class="fight_corner_stats">
@@ -862,6 +996,14 @@
         <p>🍀</p>
         <span id="redLuck">${player.luck}</span>
     </div>
+     <div>
+        <p>𝟔</p>
+        <span id="redLuck">${player.genjutsu}</span>
+    </div>
+     <div>
+        <p>🚫</p>
+        <span id="redLuck">${player.willpower}</span>
+    </div>
 </div>
 <hr>
                 <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
@@ -892,6 +1034,12 @@
                     redAcc = player.accuracy
                     redEvas = player.evasion
                     redLuck = player.luck
+                    redGen = player.genjutsu
+                    redWill = player.willpower
+                    originalRedRecovery = player.chakra_rec
+                    originalRedAttack = player.attack
+                    originalRedMagic = player.elm_attack
+
 
                 } else if (val_2 === player.name) {
                     blueHtml = `
@@ -901,6 +1049,7 @@
                     <img class='elem_img_corner' src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
+                <p id='blueStatus'>${blueStatus}</p>
                 <h4 contenteditable="true">🖤 <span id='blueHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
                <div class='fight_corner_stats'>
@@ -957,6 +1106,14 @@
         <p>🍀</p>
         <span id="redLuck">${player.luck}</span>
     </div>
+      <div>
+        <p>𝟔</p>
+        <span id="redLuck">${player.genjutsu}</span>
+    </div>
+     <div>
+        <p>🚫</p>
+        <span id="redLuck">${player.willpower}</span>
+    </div>
 </div>
 
 <hr>
@@ -988,7 +1145,11 @@
                     blueAcc = player.accuracy
                     blueEvas = player.evasion
                     blueLuck = player.luck
-
+                    blueGen = player.genjutsu
+                    blueWill = player.willpower
+                    originalBlueRecovery = player.chakra_rec
+                    originalBlueAttack = player.attack
+                    originalBlueMagic = player.elm_attack
                 }
             }
 

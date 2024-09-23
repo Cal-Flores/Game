@@ -195,11 +195,17 @@
 }
 
 #fight_corner_img {
-    width: 55%;
-    border: 4px solid #5D5142;
+    width: 50%;
+    border: 5px solid #5D5142;
 }
 
+#redStatus {
+    display: none;
+}
 
+#blueStatus {
+    display: none;
+}
 
 .fight_corner_stats {
     display: flex;

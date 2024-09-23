@@ -36,7 +36,10 @@ const database = [
         buff2: 'Use opponents Buff',
         buff_acc: 33,
         buff2_acc: 33,
+        ninjutsu2: 'Sun and Moon',
         luck: 8,
+        genjutsu: 10,
+        willpower: 4,
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },
@@ -67,7 +70,9 @@ const database = [
         ninjutsu: "Texture Surprise - Enhances Bungee Gum by 100",
         nin_cost: 55,
         ninjutsu_pow: 385,
-        luck: 4,
+        luck: 5,
+        genjutsu: 10,
+        willpower: 4,
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
@@ -99,12 +104,13 @@ const database = [
         nin_cost: 150,
         ninjutsu_pow: 1000,
         elm: lightning,
+        luck: 6,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
     {
         name: 'Phinks',
         nen_type: 'Enhancer',
-        element: 'Fight',
+        element: 'Fighter',
         attack: 225,
         defense: 170,
         elm_attack: 90,
@@ -129,6 +135,7 @@ const database = [
         nin_cost: 35,
         ninjutsu_pow: 455,
         elm: fight,
+        luck: 4,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/88/HxH2011_EP41_Phinks_Portrait.png/revision/latest?cb=20221008055432'
     },
     {
@@ -159,6 +166,7 @@ const database = [
         nin_cost: 35,
         ninjutsu_pow: 315,
         elm: grass,
+        luck: 6,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/4c/Machi_Komacine_HA_Portrait.png/revision/latest?cb=20131116122706'
     },
     {
@@ -189,6 +197,7 @@ const database = [
         nin_cost: 70,
         ninjutsu_pow: 355,
         elm: wind,
+        luck: 5,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/9/9e/HxH2011_EP53_Shizuku_Portrait.png/revision/latest?cb=20230122061315'
     },
     {
@@ -219,6 +228,7 @@ const database = [
         nin_cost: 150,
         ninjutsu_pow: 700,
         elm: water,
+        luck: 6,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
     },
     {
@@ -249,6 +259,7 @@ const database = [
         nin_cost: 30,
         ninjutsu_pow: 350,
         elm: dark,
+        luck: 7,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/46/HxH2011_EP50_Nobunaga_Portrait.png/revision/latest?cb=20230122183803'
     },
     {
@@ -281,6 +292,7 @@ const database = [
         nin_cost: 100,
         ninjutsu_pow: 1200,
         elm: earth,
+        luck: 5,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
     {
@@ -311,6 +323,7 @@ const database = [
         nin_cost: 65,
         ninjutsu_pow: 400,
         elm: pyschic,
+        luck: 8,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/d/da/Pakunoda_YC_Portrait.png/revision/latest?cb=20190124184929'
     },
     {
@@ -341,6 +354,7 @@ const database = [
         nin_cost: 52,
         ninjutsu_pow: 600,
         elm: fire,
+        luck: 6,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251'
     },
     {
@@ -371,6 +385,7 @@ const database = [
         nin_cost: 85,
         ninjutsu_pow: 600,
         elm: wind,
+        luck: 6,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     },
 
@@ -404,6 +419,7 @@ const database = [
         nin_cost: 100,
         ninjutsu_pow: 1500,
         elm: dark,
+        luck: 8,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/5/58/Meruem_CA_Portrait.png/revision/latest?cb=20190419124312'
     },
     {
