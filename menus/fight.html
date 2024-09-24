@@ -402,10 +402,32 @@
             }
         }
 
+
+
+        function triggerTsukuyomiExplosion(defender) {
+            // Define the damage for Tsukuyomi explosion
+            if (defender === 'red') {
+                let power = parseInt($('#blueChakra').text(), 10)
+                let explosionDamage = power * 10;
+                let currRedHp = parseInt($('#redHP').text(), 10);
+                $('#redHP').text(currRedHp - explosionDamage);
+                alert('Tsukuyomi explodes! Red takes ' + explosionDamage + ' damage.');
+            } else if (defender === 'blue') {
+                let power = parseInt($('#redChakra').text(), 10)
+                let explosionDamage = power * 10;
+                let currBlueHp = parseInt($('#blueHP').text(), 10);
+                $('#blueHP').text(currBlueHp - explosionDamage);
+                alert('Tsukuyomi explodes! Blue takes ' + explosionDamage + ' damage.');
+            }
+            clearStatusEffect(defender, 'Tsukuyomi'); // Clear the Tsukuyomi status effect after it explodes
+        }
+
         let roundCounters = { red: {}, blue: {} }; // Track round counters
+        let tsukuyomiCounters = { red: 0, blue: 0 }; // Track Tsukuyomi specific counters
+
         function genjutsuAttack(genjutsu, willpower, color) {
             if (genjutsu > willpower) {
-                let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25)");
+                let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25), Tsukuyomi, Kotoamatsukami");
                 applyStatusEffect(color, statusEffect); // Apply effect to the defender
             }
         }
@@ -414,6 +436,9 @@
             let duration = 4; // Default duration for all effects
             if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
                 duration = 2
+            } else if (statusEffect == 'Tsukuyomi') {
+                duration = 7; // Tsukuyomi takes 6 rounds to trigger
+                tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
             }
 
             if (defender === 'red') {
@@ -441,6 +466,21 @@
                     clearStatusEffect('blue', status);
                 }
             }
+            if (redStatus.includes('Tsukuyomi')) {
+                tsukuyomiCounters.red++;
+                console.log('counter', tsukuyomiCounters.red)
+                if (tsukuyomiCounters.red >= 6) {
+                    triggerTsukuyomiExplosion('red');
+                }
+            }
+            if (blueStatus.includes('Tsukuyomi')) {
+                tsukuyomiCounters.blue++;
+                console.log('counter', tsukuyomiCounters.blue)
+                if (tsukuyomiCounters.blue >= 6) {
+                    triggerTsukuyomiExplosion('blue');
+                }
+            }
+
         }
 
         function clearStatusEffect(defender, statusEffect) {
@@ -653,6 +693,13 @@
                     blueElmAttack = 0
                 }
             }
+            if (attackerStatusEffects.includes('Paralysis')) {
+                if (attacker === 'red') {
+                    alert('RED IS PARALYZED! Blue goes twice')
+                } else {
+                    alert('Blue IS PARALYZED! Red goes twice')
+                }
+            }
             if (attackerStatusEffects.includes('Ultima')) {
                 if (attacker === 'red') {
                     let genDamage = 1000;
@@ -675,6 +722,7 @@
                     $('#blueHP').text(currBlueHp - flareDamage);
                 }
             }
+
 
 
 
@@ -859,7 +907,7 @@
             }
             if (action == 'Drain') {
                 if (attacker == 'red') {
-                    let drain = redRecovery * 2.5;
+                    let drain = redRecovery * 2;
                     let empty = getRecovery(drain)
                     currBlueChakra -= empty;
                     $('#damage').text(`${empty} Depleted`)
@@ -956,11 +1004,11 @@
             }
 
 
-            if (attacker == 'red' && action != 'Drain') {
+            if (attacker == 'red' && action != 'Drain' && action != 'Boost') {
                 currRedChakra += getRecovery(redRecovery);
                 $('#redChakra').text(currRedChakra);
                 console.log('hisoka should get sime')
-            } else if (attacker == 'blue' && action != 'Drain') {
+            } else if (attacker == 'blue' && action != 'Drain' && action != 'Boost') {
                 console.log('kuroro should get sime', blueRecovery)
                 let testRecovery = getRecovery(blueRecovery)
                 console.log('here is func return', testRecovery)
@@ -1013,6 +1061,10 @@
         <p>💥</p>
         <span id="redCrit">${player.critical}</span>
     </div>
+     <div>
+        <p>🪦</p>
+        <span id="redStr">${player.strength}</span>
+    </div>
     <div>
         <p>🪄</p>
         <span id="redElmAttack">${player.elm_attack}</span>
@@ -1025,20 +1077,16 @@
         <p>🧪</p>
         <span id="redPot">${player.potency}</span>
     </div>
-    <div>
-        <p>🪦</p>
-        <span id="redStr">${player.strength}</span>
-    </div>
         <div>
         <p>⛈</p>
         <span id="redElmEffc">${player.elm_efficiency}</span>
     </div>
-    <div>
-        <p><img id='deviant' src = 'https://www.pngall.com/wp-content/uploads/4/Chakra-PNG-File-Download-Free.png'></p>
-        <span id="redChakra">${player.chakra}</span>
+        <div>
+        <p>🍀</p>
+        <span id="redLuck">${player.luck}</span>
     </div>
 
-     <div>
+    <div>
         <p>🎯</p>
         <span id="redAcc">${player.accuracy}</span>
     </div>
@@ -1046,22 +1094,27 @@
         <p>🕊</p>
         <span id="redEvas">${player.evasion}</span>
     </div>
-     <div>
+    <div>
+        <p><img id = 'shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <span id="redChakra">${player.chakra}</span>
+    </div>
+    <div>
+        <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
+        <span id="redLuck">${player.genjutsu}</span>
+    </div>
+    <div>
+          <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
+        <span id="redLuck">${player.willpower}</span>
+    </div>
+    <div>
         <p>${player.chakra_pow}</p>
         <span id="redAcc">${player.ninjutsu_pow}</span>
     </div>
-     <div>
-        <p>🍀</p>
-        <span id="redLuck">${player.luck}</span>
-    </div>
-     <div>
-        <p>𝟔</p>
-        <span id="redLuck">${player.genjutsu}</span>
-    </div>
-     <div>
-        <p>🚫</p>
-        <span id="redLuck">${player.willpower}</span>
-    </div>
+
+
+
+
+
 </div>
 <hr>
                 <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
@@ -1124,6 +1177,10 @@
         <span id="blueCrit">${player.critical}</span>
     </div>
     <div>
+        <p>🪦</p>
+        <span id="blueStr">${player.strength}</span>
+    </div>
+    <div>
         <p>🪄</p>
         <span id="blueElmAttack">${player.elm_attack}</span>
     </div>
@@ -1136,17 +1193,12 @@
         <span id="bluePot">${player.potency}</span>
     </div>
     <div>
-        <p>🪦</p>
-        <span id="blueStr">${player.strength}</span>
-    </div>
-
-    <div>
         <p>⛈</p>
         <span id="blueElmEffc">${player.elm_efficiency}</span>
     </div>
-    <div>
-        <p>☸️</p>
-        <span id="blueChakra">${player.chakra}</span>
+     <div>
+        <p>🍀</p>
+        <span id="redLuck">${player.luck}</span>
     </div>
     <div>
         <p>🎯</p>
@@ -1156,21 +1208,21 @@
         <p>🕊</p>
         <span id="blueEvas">${player.evasion}</span>
     </div>
-     <div>
-        <p>${player.chakra_pow}</p>
-        <span id="redAcc">${player.ninjutsu_pow}</span>
+    <div>
+        <p><img id = 'shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <span id="blueChakra">${player.chakra}</span>
     </div>
-     <div>
-        <p>🍀</p>
-        <span id="redLuck">${player.luck}</span>
-    </div>
-      <div>
-        <p>𝟔</p>
+    <div>
+           <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="redLuck">${player.genjutsu}</span>
     </div>
-     <div>
-        <p>🚫</p>
+    <div>
+        <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
         <span id="redLuck">${player.willpower}</span>
+    </div>
+    <div>
+        <p>${player.chakra_pow}</p>
+        <span id="redAcc">${player.ninjutsu_pow}</span>
     </div>
 </div>
 

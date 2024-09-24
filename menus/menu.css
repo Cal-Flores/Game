@@ -136,8 +136,12 @@
 }
 
 .fight_card_elm {
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
+}
+
+#shar {
+    width: 15px;
 }
 
 
@@ -300,7 +304,7 @@ body {
 /* FOIRM START HERE!!!!!!!!!!!!!!!!! */
 .fight_corner_stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     text-align: center;
     margin-bottom: 10px;
