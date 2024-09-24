@@ -873,7 +873,6 @@
                 }
             }
 
-
             if (action === 'Attack') {
                 let isCritical;
                 let criticalMultiplier;
@@ -884,35 +883,69 @@
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
 
-                    if (isHit) {
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Red is Confused and hits themselves!');
+
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStr : 1.0;
-                        console.log('Red Attack:', redAttack);
+
+                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
+                        selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < redCrit;
+                        criticalMultiplier = isCritical ? redStr : 1.0;
 
                         let damage = ((redAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));
 
-                        $('#blueHP').text(currBlueHp - damage);
-                        $('#damage').hide().text(damage).fadeIn(500);
+                        $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
                     }
-                } else {
+                } else if (attacker === 'blue') {
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
 
-                    if (isHit) {
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Blue is Confused and hits themselves!');
+
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStr : 1.0;
-                        console.log('Blue Attack:', blueAttack);
+
+                        let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 2.5)) * criticalMultiplier;
+                        selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < blueCrit;
+                        criticalMultiplier = isCritical ? blueStr : 1.0;
 
                         let damage = ((blueAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));
 
-                        $('#redHP').text(currRedHp - damage);
-                        $('#damage').hide().text(damage).fadeIn(500);
+                        $('#redHP').text(currRedHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
                     } else {
                         // Display a miss message if the hit chance fails
@@ -921,6 +954,7 @@
                     }
                 }
             }
+
 
             if (attacker == 'red' && action != 'Drain') {
                 currRedChakra += getRecovery(redRecovery);
