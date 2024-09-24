@@ -412,6 +412,9 @@
 
         function applyStatusEffect(defender, statusEffect) {
             let duration = 4; // Default duration for all effects
+            if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
+                duration = 2
+            }
 
             if (defender === 'red') {
                 redStatus.push(statusEffect);
@@ -481,7 +484,6 @@
                     break;
                 case 'Silence':
                     if (defender === 'red') {
-                        console.log('sacftey', originalRedMagic)
                         redElmAttack = originalRedMagic; // Reset to original value
                     } else {
                         blueElmAttack = originalBlueMagic;// Reset for blue
@@ -649,6 +651,28 @@
                     redElmAttack = 0;
                 } else {
                     blueElmAttack = 0
+                }
+            }
+            if (attackerStatusEffects.includes('Ultima')) {
+                if (attacker === 'red') {
+                    let genDamage = 1000;
+                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    $('#redHP').text(currRedHp - genDamage);
+                } else {
+                    let genDamage = 1000;
+                    $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    $('#blueHP').text(currBlueHp - genDamage);
+                }
+            }
+            if (attackerStatusEffects.includes('Flare')) {
+                if (attacker === 'red') {
+                    let flareDamage = 500;
+                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    $('#redHP').text(currRedHp - flareDamage);
+                } else {
+                    let flareDamage = 500;
+                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    $('#blueHP').text(currBlueHp - flareDamage);
                 }
             }
 
