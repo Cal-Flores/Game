@@ -1193,14 +1193,14 @@
                     buff(100)
                     return
                 } else {
-                    if (currBlueChakra < blueNinCost) {
+                    if (currBlueChakra < blueNenNinCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currBlueChakra -= blueNinCost;
+                    currBlueChakra -= blueNenNinCost;
                     $('#blueChakra').text(currBlueChakra)
-                    $('#redHP').text(currRedHp - blueNinPower);
-                    $('#damage').text(`✫  ${blueNinPower}  ✫`)
+                    $('#redHP').text(currRedHp - blueNenNinDmg);
+                    $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
                     buff(100)
                     return
                 }

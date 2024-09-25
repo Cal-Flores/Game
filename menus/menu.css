@@ -200,6 +200,7 @@
     margin: 1%;
     line-height: 10px;
     padding-bottom: 3%;
+    overflow: scroll;
 }
 
 #fight_corner_img {
