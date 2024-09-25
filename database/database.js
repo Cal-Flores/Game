@@ -39,7 +39,7 @@ const database = [
         ninjutsu2: 'Sun and Moon',
         luck: 8,
         genjutsu: 10,
-        gen_power: 7,
+        gen_power: 100,
         willpower: 7,
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
@@ -73,7 +73,7 @@ const database = [
         ninjutsu_pow: 385,
         luck: 5,
         genjutsu: 10,
-        gen_power: 3,
+        gen_power: 65,
         willpower: 5,
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'

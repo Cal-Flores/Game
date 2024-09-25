@@ -436,13 +436,14 @@
             let hitChance = (genjutsu * multiplier) / (genjutsu * multiplier + willpower * scalingFactor);
             hitChance = Math.min(Math.max(hitChance, 0), 1)
             const isHit = Math.random() < hitChance;
-            console.log('HEHEHEHE', hitChance)
+            console.log('Hit chance', hitChance)
 
             if (isHit) {
+                alert('"Youre Already Under My GenJutsu.."')
                 let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25), Tsukuyomi, Kotoamatsukami");
                 applyStatusEffect(color, statusEffect); // Apply effect to the defender
             } else {
-                alert('WILLPOWER RESISTED THE TRANCE')
+                alert('GenJutsu of that level doesnt work on me')
             }
         }
 
@@ -454,7 +455,7 @@
                 duration = 7; // Tsukuyomi takes 6 rounds to trigger
                 tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
             } else if (statusEffect == 'Kotoamatsukami') {
-                duration = 16;
+                duration = 18;
                 kotoamatsukamiCounters[defender] = 0;
             }
 
@@ -760,24 +761,40 @@
                 }
             }
             if (attackerStatusEffects.includes('Ultima')) {
-                if (attacker === 'red') {
-                    let genDamage = 1000;
-                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
-                    $('#redHP').text(currRedHp - genDamage);
+                let randomFactor = Math.random();
+                let variance = Math.random() * 0.2 - 0.1;
+                let ultimaChance;
+
+                if (randomFactor < 0.5) {
+                    ultimaChance = 0.5;  // 50% chance to deal half damage
+                    alert('Ultima is docile..');
                 } else {
-                    let genDamage = 1000;
-                    $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
-                    $('#blueHP').text(currBlueHp - genDamage);
+                    ultimaChance = 2;  // 50% chance to deal 200% extra damage
+                    alert('ULTIMA\'S POWER GROWS');
+                }
+
+                if (attacker === 'red') {
+                    let ultDamage = Math.round(((blueGenPow * 2.75) * (1 + variance)) * ultimaChance);
+                    alert(`Ultima deals ${ultDamage} damage to Red 🐈‍⬛`);
+                    $('#redHP').text(currRedHp - ultDamage);  // Subtract correct damage
+                } else {
+                    let ultDamage = Math.round(((redGenPow * 2.75) * (1 + variance)) * ultimaChance);
+                    alert(`Ultima deals ${ultDamage} damage to Blue 🐈‍⬛`);
+                    $('#blueHP').text(currBlueHp - ultDamage);  // Subtract correct damage
                 }
             }
+
+
             if (attackerStatusEffects.includes('Flare')) {
                 if (attacker === 'red') {
-                    let flareDamage = 500;
-                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    let variance = Math.random() * 0.2 - 0.1;
+                    let flareDamage = Math.round((blueGenPow * 2.75) * (1 + variance));
+                    alert(`Flare! Red takes ${flareDamage} damage ❤️‍🔥`)
                     $('#redHP').text(currRedHp - flareDamage);
                 } else {
-                    let flareDamage = 500;
-                    // $('#damage').hide().text(`ULTIMA ${genDamage}❤️‍🔥`).fadeIn(500);
+                    let variance = Math.random() * 0.2 - 0.1;
+                    let flareDamage = Math.round((redGenPow * 2.75) * (1 + variance));  // Rounding to nearest whole number
+                    alert(`Flare! Blue takes ${flareDamage} damage ❤️‍🔥`)
                     $('#blueHP').text(currBlueHp - flareDamage);
                 }
             }
@@ -1286,7 +1303,7 @@
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
-        <span id="redLuck">${player.willpower}</span>
+        <span id="blueWill">${player.willpower}</span>
     </div>
     <div>
         <p>${player.chakra_pow}</p>
