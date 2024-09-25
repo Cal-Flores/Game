@@ -455,7 +455,7 @@
                 duration = 7; // Tsukuyomi takes 6 rounds to trigger
                 tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
             } else if (statusEffect == 'Kotoamatsukami') {
-                duration = 18;
+                duration = 20;
                 kotoamatsukamiCounters[defender] = 0;
             }
 
@@ -503,48 +503,94 @@
                 kotoamatsukamiCounters.red++;
 
                 if (kotoamatsukamiCounters.red === 4) {
-                    redEvas = 2; // Set Red's evasion to 2
-                    alert('Red\'s evasive movements have been compromised, evasion reduced to ' + redEvas + ' due to Kotoamatsukami.');
-                    $('#redEvas').text(redEvas);
+                    // 50% chance for redEvas to be set to 2
+                    if (Math.random() < 0.5) {
+                        redEvas = 2; // Set Red's evasion to 2
+                        alert('Red\'s evasive movements have been compromised, evasion reduced to ' + redEvas + ' due to Kotoamatsukami.');
+                        $('#redEvas').text(redEvas);
+                    } else {
+                        redWill = 0;
+                        alert('Red has lost the will to fight, willpower dropped to ' + redWill + ' due to Kotoamatsukami.');
+                        $('#redWill').text(redWill)
+                    }
                 } else if (kotoamatsukamiCounters.red === 8) {
-                    redWill = 0; // Set Red's willpower to 0
-                    alert('Red has lost the will to fight, willpower dropped to ' + redWill + ' due to Kotoamatsukami.');
-                    $('#redWill').text(redWill);
+                    // 50% chance to reduce redAttack by 25%
+                    if (Math.random() < 0.5) {
+                        redAttack = Math.round(redAttack * 0.75)
+                        alert('Red\'s attack power has been reduced by 25% due to Kotoamatsukami.');
+                        $('#redAttack').text(redAttack);
+                    } else {
+                        // 50% chance to reduce redElmAttack by 25%
+                        redElmAttack = Math.round(redElmAttack * .75) // Reduce Red's elemental attack by 25%
+                        alert('Red\'s elemental attack power has been reduced by 25% due to Kotoamatsukami.');
+                        $('#redElmAttack').text(redElmAttack);
+                    }
                 } else if (kotoamatsukamiCounters.red === 12) {
-                    redAcc /= 2; // Halve Red's accuracy
-                    alert('Red\'s perception is clouded, accuracy halved due to Kotoamatsukami.');
-                    $('#redAcc').text(redAcc);
-                } else if (kotoamatsukamiCounters.red === 16) {
+                    // 50% chance to halve redAcc
+                    if (Math.random() < 0.5) {
+                        redAcc = Math.round(redAcc /= 2); // Halve Red's accuracy
+                        alert('Red\'s perception is clouded, accuracy halved due to Kotoamatsukami.');
+                        $('#redAcc').text(redAcc);
+                    } else {
+                        // 50% chance to halve redRecovery
+                        redRecovery = Math.round(redRecovery /= 2); // Halve Red's recovery
+                        alert('Red\'s recovery ability is impaired, recovery halved due to Kotoamatsukami.');
+                        $('#redRecovery').text(redRecovery);
+                    }
+                } else if (kotoamatsukamiCounters.red === 18) {
                     alert('Red\'s mind has been fully controlled by Kotoamatsukami!');
                     buff(100); // Call the buff function
                     clearStatusEffect('red', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Red
                 }
             }
 
+
+            // Check and update Kotoamatsukami effects for Blue
             // Check and update Kotoamatsukami effects for Blue
             if (blueStatus.includes('Kotoamatsukami')) {
                 kotoamatsukamiCounters.blue++;
 
                 if (kotoamatsukamiCounters.blue === 4) {
-                    blueEvas = 2; // Set Blue's evasion to 2
-                    alert('Blue\'s evasive movements have been compromised, evasion reduced to ' + blueEvas + ' due to Kotoamatsukami.');
-                    $('#blueEvas').text(blueEvas);
+
+                    if (Math.random() < 0.5) {
+                        blueEvas = 2; // Set Blue's evasion to 2
+                        alert('Blue\'s evasive movements have been compromised, evasion reduced to ' + blueEvas + ' due to Kotoamatsukami.');
+                        $('#blueEvas').text(blueEvas);
+                    } else {
+                        blueWill = 0;
+                        alert('Blue has lost the will to fight, willpower dropped to ' + blueWill + ' due to Kotoamatsukami.');
+                        $('#blueWill').text(blueWill)
+                    }
                 } else if (kotoamatsukamiCounters.blue === 8) {
-                    blueWill = 0; // Set Blue's willpower to 0
-                    alert('Blue has lost the will to fight, willpower dropped to ' + blueWill + ' due to Kotoamatsukami.');
-                    $('#blueWill').text(blueWill);
+                    // 50% chance to reduce blueAttack by 25%
+                    if (Math.random() < 0.5) {
+                        blueAttack = Math.round(blueAttack *= 0.75); // Reduce Blue's attack by 25%
+                        alert('Blue\'s attack power has been reduced by 25% due to Kotoamatsukami.');
+                        $('#blueAttack').text(blueAttack);
+                    } else {
+                        // 50% chance to reduce blueElmAttack by 25%
+                        blueElmAttack = Math.Round(blueElmAttack *= .75); // Reduce Blue's elemental attack by 25%
+                        alert('Blue\'s elemental attack power has been reduced by 25% due to Kotoamatsukami.');
+                        $('#blueElmAttack').text(blueElmAttack);
+                    }
                 } else if (kotoamatsukamiCounters.blue === 12) {
-                    blueAcc /= 2; // Halve Blue's accuracy
-                    alert('Blue\'s accuracy has fallen by half due to Kotoamatsukami.');
-                    $('#blueAcc').text(blueAcc);
+                    // 50% chance to halve blueAcc
+                    if (Math.random() < 0.5) {
+                        blueAcc = Math.round(blueAcc /= 2); // Halve Blue's accuracy
+                        alert('Blue\'s accuracy has fallen by half due to Kotoamatsukami.');
+                        $('#blueAcc').text(blueAcc);
+                    } else {
+                        // 50% chance to halve blueRecovery
+                        blueRecovery = Math.round(blueRecovery /= 2); // Halve Blue's recovery
+                        alert('Blue\'s recovery ability is impaired, recovery halved due to Kotoamatsukami.');
+                        $('#blueRecovery').text(blueRecovery);
+                    }
                 } else if (kotoamatsukamiCounters.blue === 16) {
                     alert('Blue\'s mind has been fully controlled by Kotoamatsukami!');
                     buff(100); // Call the buff function
                     clearStatusEffect('blue', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Blue
                 }
             }
-
-
         }
 
         function clearStatusEffect(defender, statusEffect) {
