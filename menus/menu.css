@@ -144,6 +144,10 @@
     width: 15px;
 }
 
+#devi {
+    width: 11px;
+}
+
 
 .fight_card_stats {
     display: flex;

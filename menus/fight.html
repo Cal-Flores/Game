@@ -88,6 +88,7 @@
         let blueEvas
         let blueLuck
         let blueGen
+        let blueGenPow
         let blueWill;
         let blueStatus = []
 
@@ -114,6 +115,7 @@
         let redEvas
         let redLuck
         let redGen;
+        let redGenPow
         let redWill;
         let redStatus = []
 
@@ -424,11 +426,23 @@
 
         let roundCounters = { red: {}, blue: {} }; // Track round counters
         let tsukuyomiCounters = { red: 0, blue: 0 }; // Track Tsukuyomi specific counters
+        let kotoamatsukamiCounters = { red: 0, blue: 0 }; // Track Kotoamatsukami specific counters
+
 
         function genjutsuAttack(genjutsu, willpower, color) {
-            if (genjutsu > willpower) {
+            const multiplier = 1.7; // Genjutsu multiplier
+            const scalingFactor = 0.678; // Derived scaling factor from willpower
+
+            let hitChance = (genjutsu * multiplier) / (genjutsu * multiplier + willpower * scalingFactor);
+            hitChance = Math.min(Math.max(hitChance, 0), 1)
+            const isHit = Math.random() < hitChance;
+            console.log('HEHEHEHE', hitChance)
+
+            if (isHit) {
                 let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25), Tsukuyomi, Kotoamatsukami");
                 applyStatusEffect(color, statusEffect); // Apply effect to the defender
+            } else {
+                alert('WILLPOWER RESISTED THE TRANCE')
             }
         }
 
@@ -439,6 +453,9 @@
             } else if (statusEffect == 'Tsukuyomi') {
                 duration = 7; // Tsukuyomi takes 6 rounds to trigger
                 tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
+            } else if (statusEffect == 'Kotoamatsukami') {
+                duration = 16;
+                kotoamatsukamiCounters[defender] = 0;
             }
 
             if (defender === 'red') {
@@ -480,6 +497,52 @@
                     triggerTsukuyomiExplosion('blue');
                 }
             }
+            // Check and update Kotoamatsukami effects for Red
+            if (redStatus.includes('Kotoamatsukami')) {
+                kotoamatsukamiCounters.red++;
+
+                if (kotoamatsukamiCounters.red === 4) {
+                    redEvas = 2; // Set Red's evasion to 2
+                    alert('Red\'s evasive movements have been compromised, evasion reduced to ' + redEvas + ' due to Kotoamatsukami.');
+                    $('#redEvas').text(redEvas);
+                } else if (kotoamatsukamiCounters.red === 8) {
+                    redWill = 0; // Set Red's willpower to 0
+                    alert('Red has lost the will to fight, willpower dropped to ' + redWill + ' due to Kotoamatsukami.');
+                    $('#redWill').text(redWill);
+                } else if (kotoamatsukamiCounters.red === 12) {
+                    redAcc /= 2; // Halve Red's accuracy
+                    alert('Red\'s perception is clouded, accuracy halved due to Kotoamatsukami.');
+                    $('#redAcc').text(redAcc);
+                } else if (kotoamatsukamiCounters.red === 16) {
+                    alert('Red\'s mind has been fully controlled by Kotoamatsukami!');
+                    buff(100); // Call the buff function
+                    clearStatusEffect('red', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Red
+                }
+            }
+
+            // Check and update Kotoamatsukami effects for Blue
+            if (blueStatus.includes('Kotoamatsukami')) {
+                kotoamatsukamiCounters.blue++;
+
+                if (kotoamatsukamiCounters.blue === 4) {
+                    blueEvas = 2; // Set Blue's evasion to 2
+                    alert('Blue\'s evasive movements have been compromised, evasion reduced to ' + blueEvas + ' due to Kotoamatsukami.');
+                    $('#blueEvas').text(blueEvas);
+                } else if (kotoamatsukamiCounters.blue === 8) {
+                    blueWill = 0; // Set Blue's willpower to 0
+                    alert('Blue has lost the will to fight, willpower dropped to ' + blueWill + ' due to Kotoamatsukami.');
+                    $('#blueWill').text(blueWill);
+                } else if (kotoamatsukamiCounters.blue === 12) {
+                    blueAcc /= 2; // Halve Blue's accuracy
+                    alert('Blue\'s accuracy has fallen by half due to Kotoamatsukami.');
+                    $('#blueAcc').text(blueAcc);
+                } else if (kotoamatsukamiCounters.blue === 16) {
+                    alert('Blue\'s mind has been fully controlled by Kotoamatsukami!');
+                    buff(100); // Call the buff function
+                    clearStatusEffect('blue', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Blue
+                }
+            }
+
 
         }
 
@@ -555,10 +618,6 @@
             return weaknesses.weakAgainst.includes(defenderElement);
         }
 
-        function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.8;
-            return (accuracy * multiplier) / (accuracy + evasion);
-        }
 
         function getRecovery(baseRecovery) {
             let variance = (Math.random() * 0.8) - 0.4;
@@ -1095,16 +1154,20 @@
         <span id="redEvas">${player.evasion}</span>
     </div>
     <div>
-        <p><img id = 'shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
         <span id="redChakra">${player.chakra}</span>
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="redLuck">${player.genjutsu}</span>
     </div>
+     <div>
+        <p><img id='devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c359dd66-9e20-4344-8d5d-0e2ef292d317/d4t4t8l-9a2dbc38-cdee-48a1-90c8-e844f7a23a8f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzNTlkZDY2LTllMjAtNDM0NC04ZDVkLTBlMmVmMjkyZDMxN1wvZDR0NHQ4bC05YTJkYmMzOC1jZGVlLTQ4YTEtOTBjOC1lODQ0ZjdhMjNhOGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0DqohEo1tRU2GNzploqd60S_ACwBeEcWF7fmT-HpwKc'></p>
+        <span id="redLuck">${player.gen_power}</span>
+    </div>
     <div>
           <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
-        <span id="redLuck">${player.willpower}</span>
+        <span id="redWill">${player.willpower}</span>
     </div>
     <div>
         <p>${player.chakra_pow}</p>
@@ -1146,6 +1209,7 @@
                     redEvas = player.evasion
                     redLuck = player.luck
                     redGen = player.genjutsu
+                    redGenPow = player.gen_power
                     redWill = player.willpower
                     originalRedRecovery = player.chakra_rec
                     originalRedAttack = player.attack
@@ -1209,12 +1273,16 @@
         <span id="blueEvas">${player.evasion}</span>
     </div>
     <div>
-        <p><img id = 'shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
         <span id="blueChakra">${player.chakra}</span>
     </div>
     <div>
-           <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
+        <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="redLuck">${player.genjutsu}</span>
+    </div>
+    <div>
+        <p><img id='devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c359dd66-9e20-4344-8d5d-0e2ef292d317/d4t4t8l-9a2dbc38-cdee-48a1-90c8-e844f7a23a8f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzNTlkZDY2LTllMjAtNDM0NC04ZDVkLTBlMmVmMjkyZDMxN1wvZDR0NHQ4bC05YTJkYmMzOC1jZGVlLTQ4YTEtOTBjOC1lODQ0ZjdhMjNhOGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0DqohEo1tRU2GNzploqd60S_ACwBeEcWF7fmT-HpwKc'></p>
+        <span id="redLuck">${player.gen_power}</span>
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
@@ -1256,6 +1324,7 @@
                     blueEvas = player.evasion
                     blueLuck = player.luck
                     blueGen = player.genjutsu
+                    blueGenPow = player.gen_power
                     blueWill = player.willpower
                     originalBlueRecovery = player.chakra_rec
                     originalBlueAttack = player.attack
