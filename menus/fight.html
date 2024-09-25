@@ -927,11 +927,67 @@
                 }
             }
             if (action == 'Genjutsu') {
+
+                const multiplier = 1.7; // Genjutsu multiplier
+                const scalingFactor = 0.678; // Derived scaling factor from willpower
+                let genjutsu;
+                let willpower;
+
                 if (attacker == 'red') {
-                    genjutsuAttack(redGen, blueWill, 'blue')
+                    genjutsu = redGen;
+                    willpower = blueWill;
                 } else {
-                    genjutsuAttack(blueGen, redWill, 'red')
+                    genjutsu = blueGen;
+                    willpower = redWill;
                 }
+
+                let hitChance = (genjutsu * multiplier) / (genjutsu * multiplier + willpower * scalingFactor);
+                hitChance = Math.min(Math.max(hitChance, 0), 1);
+                const isHit = Math.random() < hitChance;
+                console.log('Hit chance', hitChance);
+
+
+                if (isHit) {
+                    alert('"You\'re Already Under My GenJutsu.."');
+                    let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
+                    let statusEffect = prompt("Choose a status effect to apply: Darkness (5), Silence (5), Confusion (5), Paralysis (5), Zombie (5), Ultima (25), Flare(25), Tsukuyomi, Kotoamatsukami");
+
+                    // Determine the current chakra variable and decrement it
+                    if (attacker == 'red') {
+                        if (light.includes(statusEffect)) {
+                            currRedChakra -= 8;
+                        } else if (statusEffect == 'Flare') {
+                            currRedChakra -= 15;
+                        } else if (statusEffect == 'Ultima') {
+                            currRedChakra -= 12;
+                        } else if (statusEffect == 'Tsukuyomi') {
+                            currRedChakra -= 28;
+                        } else if (statusEffect == 'Kotoamatsukami') {
+                            currRedChakra -= 35;
+                        }
+                        $('#redChakra').text(currRedChakra); // Update the displayed chakra
+                        applyStatusEffect('blue', statusEffect); // Apply effect to the defender
+                    } else {
+                        if (light.includes(statusEffect)) {
+                            currBlueChakra -= 8;
+                        } else if (statusEffect == 'Flare') {
+                            currBlueChakra -= 15;
+                        } else if (statusEffect == 'Ultima') {
+                            currBlueChakra -= 12;
+                        } else if (statusEffect == 'Tsukuyomi') {
+                            currBlueChakra -= 28;
+                        } else if (statusEffect == 'Kotoamatsukami') {
+                            currBlueChakra -= 35;
+                        }
+                        $('#blueChakra').text(currBlueChakra); // Update the displayed chakra
+                        applyStatusEffect('red', statusEffect); // Apply effect to the defender
+                    }
+
+
+                } else {
+                    alert('GenJutsu of that level doesn\'t work on me');
+                }
+                return
             }
 
             if (action == 'Update HP') {
