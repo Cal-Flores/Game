@@ -650,9 +650,9 @@
             Earth: { strongAgainst: ['Fire', 'Lightning'], weakAgainst: ['Water', 'Grass'] },
             Grass: { strongAgainst: ['Water', 'Earth'], weakAgainst: ['Fire', 'Lightning'] },
             Fighter: { strongAgainst: ['Dark', 'Grass'], weakAgainst: ['Lightning', 'Water'] },
-            Dark: { strongAgainst: ['Grass', 'Water'], weakAgainst: ['Fire', 'Fighter'] },
-            Sage: { strongAgainst: [], weakAgainst: [] },
-            Psychic: { strongAgainst: [], weakAgainst: [] },
+            Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fire', 'Fighter'] },
+            Sage: { strongAgainst: [], weakAgainst: ['Psychic', 'Dark'] },
+            Psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
         };
 
         function checkWeakness(attackerElement, defenderElement) {
@@ -662,6 +662,9 @@
 
         function checkResistance(attackerElement, defenderElement) {
             const weaknesses = elementalWeaknesses[attackerElement];
+            if (defenderElement === 'Psychic') {
+                return true;
+            }
             return weaknesses.weakAgainst.includes(defenderElement);
         }
 
@@ -854,7 +857,6 @@
 
                 const redCrit = redPot;  // Assuming redPot represents crit chance as a decimal
                 const blueCrit = bluePot; // Assuming bluePot represents crit chance as a decimal
-
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
@@ -864,12 +866,26 @@
                         let isCritical = Math.random() < redCrit; // Check for critical hit
                         let critMessage = ''; // Initialize crit message
 
-                        if (checkWeakness(redELM, blueELM)) {
-                            magicEffectiveness = redElmEffc; // Adjust for weakness
-                            critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
-                        } else if (checkResistance(redELM, blueELM)) {
-                            magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                            critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                        // Unique behavior for Sage and Psychic for red attacker
+                        if (redELM === 'Sage') {
+                            magicEffectiveness *= 1.5; // Increase damage by 50% against all elements
+                            critMessage += '🌟 SAGE POWER 🌟 '; // Add Sage message
+
+                            // Reduce critical hit chance
+                            if (Math.random() < (redCrit - 0.15)) { // Reduce critical hit chance by 15%
+                                isCritical = false;
+                            }
+                        } else if (redELM === 'Psychic') {
+                            magicEffectiveness = 1; // Normal damage, no enhancements
+                            critMessage += '🔮 PSYCHIC POWER 🔮 '; // Add Psychic message
+                        } else {
+                            if (checkWeakness(redELM, blueELM)) {
+                                magicEffectiveness = redElmEffc; // Adjust for weakness
+                                critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
+                            } else if (checkResistance(redELM, blueELM)) {
+                                magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
+                                critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                            }
                         }
 
                         let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 3)) * magicEffectiveness;
@@ -899,12 +915,27 @@
                         let isCritical = Math.random() < blueCrit; // Check for critical hit
                         let critMessage = ''; // Initialize crit message
 
-                        if (checkWeakness(blueELM, redELM)) {
-                            magicEffectiveness = blueElmEffc; // Adjust for weakness
-                            critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
-                        } else if (checkResistance(blueELM, redELM)) {
-                            magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                            critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                        // Unique behavior for Sage and Psychic for blue attacker
+                        if (blueELM === 'Sage') {
+                            magicEffectiveness *= 1.5; // Increase damage by 50% against all elements
+                            critMessage += '🌟 SAGE POWER 🌟 '; // Add Sage message
+
+                            // Reduce critical hit chance
+                            if (Math.random() < (blueCrit - 0.15)) { // Reduce critical hit chance by 15%
+                                isCritical = false;
+                            }
+                        } else if (blueELM === 'Psychic') {
+                            magicEffectiveness = 1; // Normal damage, no enhancements
+                            critMessage += '🔮 PSYCHIC POWER 🔮 '; // Add Psychic message
+                        } else {
+                            // Regular elemental interactions for other elements
+                            if (checkWeakness(blueELM, redELM)) {
+                                magicEffectiveness = blueElmEffc; // Adjust for weakness
+                                critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
+                            } else if (checkResistance(blueELM, redELM)) {
+                                magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
+                                critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                            }
                         }
 
                         let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 3)) * magicEffectiveness;
@@ -925,6 +956,7 @@
                         $('#crit').hide().text('').fadeIn(500);
                     }
                 }
+
             }
             if (action == 'Genjutsu') {
 
