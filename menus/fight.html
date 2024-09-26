@@ -128,7 +128,7 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill');
+                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal');
                 if (stat_max == 'redHeal') {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -139,7 +139,7 @@
                 } else if (stat_max == 'blueHeal') {
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
-                    currRedHp += healAmount;
+                    currBlueHp += healAmount;
                     $('#damage').text(`Blue Recoverd ${healAmount} HP 🖤`)
                     $('#blueHP').text(currRedHp)
                     return
@@ -227,9 +227,9 @@
                         break;
                     case 'redCost':
                         if (stat_type == 'Increase') {
-                            redCost = Math.floor(redCost * (1 + stat_number));
+                            redCost = (redCost * (1 + stat_number)).toFixed(2);
                         } else {
-                            redCost = Math.floor(redCost * (1 - stat_number));
+                            redCost = (redCost * (1 - stat_number)).toFixed(2);
                         }
                         break;
                     case 'redNinCost':
@@ -367,9 +367,9 @@
                         break;
                     case 'blueCost':
                         if (stat_type == 'Increase') {
-                            blueCost = Math.floor(blueCost * (1 + stat_number));
+                            blueCost = (blueCost * (1 + stat_number)).toFixed(2);
                         } else {
-                            blueCost = Math.floor(blueCost * (1 - stat_number));
+                            blueCost = (blueCost * (1 - stat_number)).toFixed(2);
                         }
                         break;
                     case 'blueNinCost':
@@ -381,16 +381,16 @@
                         break;
                     case 'blueAcc':
                         if (stat_type == 'Increase') {
-                            blueAcc = Math.floor(blueAcc * (1 + stat_number));
+                            blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
                         } else {
-                            blueAcc = Math.floor(blueAcc * (1 - stat_number));
+                            blueAcc = (blueAcc * (1 - stat_number)).toFixed(2);
                         }
                         break;
                     case 'blueEvas':
                         if (stat_type == 'Increase') {
-                            blueEvas = Math.floor(blueEvas * (1 + stat_number));
+                            blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
                         } else {
-                            blueEvas = Math.floor(blueEvas * (1 - stat_number));
+                            blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
                         }
                         break;
                     case 'blueChakraPower':
@@ -435,7 +435,7 @@
 
 
 
-
+                // #redLuck #redNinPow #redUltPow
                 // Update the stats on the page if necessary
                 $('#redAttack').text(redAttack);
                 $('#redDefense').text(redDefense);
@@ -453,7 +453,8 @@
                 $('#redAcc').text(redAcc)
                 $('#redEvas').text(redEvas)
                 $('#redChakraPow').text(redChakraPower)
-                $('#blueAcc').text(redAcc)
+                $('#blueAcc').text(blueAcc)
+                $('#blueEvas').text(blueEvas)
                 $('#blueAttack').text(blueAttack);
                 $('#blueDefense').text(blueDefense);
                 $('#blueCrit').text(blueCrit);
@@ -1440,9 +1441,10 @@
           <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
         <span id="redWill">${player.willpower}</span>
     </div>
-    <div>
+    <div class='nen_numbers'>
         <p id="redChakraPow">${player.chakra_pow}</p>
-        <span id="redNinPow">${player.ninJutsu2Dmg}</span>
+        <p id="redNinPow">${player.ninJutsu2Dmg}</p>
+        <p id="redUltPow">${player.ninjutsu_pow}</p>
     </div>
 
 
@@ -1563,9 +1565,10 @@
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
         <span id="blueWill">${player.willpower}</span>
     </div>
-    <div>
+    <div class='nen_numbers'>
         <p id="blueChakraPow">${player.chakra_pow}</p>
-        <span id="blueNinPow">${player.ninJutsu2Dmg}</span>
+        <p id="blueNinPow">${player.ninJutsu2Dmg}</p>
+        <p id="blueUltPow">${player.ninjutsu_pow}</p>
     </div>
 </div>
 
