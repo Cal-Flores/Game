@@ -128,7 +128,14 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('STAT? redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, redRecovery,redCost,redNinCost,redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal');
+                let stat_max = prompt(`
+                                                                STAT?
+                redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery,
+                redCost, redNinCost, redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal,
+           ----------------------------------------------------------------------------------------------------------------------------------
+                blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery,
+                blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal
+                `);
                 if (stat_max == 'redHeal') {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -213,9 +220,13 @@
                         break;
                     case 'redELM':
                         if (stat_type == 'Increase') {
-                            redELM = stat_number
+                            affinity = prompt('Change Affinity')
+                            redELM = affinity
+                            $('#red_elm_imgg').attr('src', affinity)
                         } else {
-                            redELM = stat_number
+                            affinity = prompt('Change Affinity')
+                            redELM = affinity
+                            $('#red_elm_imgg').attr('src', affinity)
                         }
                         break;
                     case 'redRecovery':
@@ -339,9 +350,9 @@
                         break;
                     case 'blueStr':
                         if (stat_type == 'Increase') {
-                            blueStr = Math.floor(blueStr * (1 + stat_number));
+                            blueStr = (blueStr * (1 + stat_number)).toFixed(2);
                         } else {
-                            blueStr = Math.floor(blueStr * (1 - stat_number));
+                            blueStr = (blueStr * (1 - stat_number)).toFixed(2);
                         }
                         break;
                     case 'bluePot':
@@ -353,9 +364,13 @@
                         break;
                     case 'blueELM':
                         if (stat_type == 'Increase') {
-                            blueELM = Math.floor(blueELM * (1 + stat_number));
+                            affinity = prompt('Change Affinity')
+                            redELM = affinity
+                            $('#blue_elm_imgg').attr('src', affinity)
                         } else {
-                            blueELM = Math.floor(blueELM * (1 - stat_number));
+                            affinity = prompt('Change Affinity')
+                            redELM = affinity
+                            $('#blue_elm_imgg').attr('src', affinity)
                         }
                         break;
                     case 'blueRecovery':
@@ -462,13 +477,13 @@
                 $('#blueElmDef').text(blueElmDef);
                 $('#blueElmEffc').text(blueElmEffc);
                 $('#blueHp').text(blueHp);
-                $('#blueStr').text(blueStr);
                 $('#bluePot').text(bluePot);
                 $('#blueELM').text(blueELM);
                 $('#blueGen').text(blueGen)
                 $('#blueGenPow').text(blueGenPow)
                 $('#blueWill').text(blueWill)
                 $('#blueChakraPow').text(blueChakraPower)
+                $('#blueStr').text(blueStr)
 
             } else {
                 $('#damage').text('Fail');
@@ -894,11 +909,11 @@
                 }
 
                 if (attacker === 'red') {
-                    let ultDamage = Math.round(((blueGenPow * 2.75) * (1 + variance)) * ultimaChance);
+                    let ultDamage = Math.round(((blueGenPow * 3.75) * (1 + variance)) * ultimaChance);
                     alert(`Ultima deals ${ultDamage} damage to Red 🐈‍⬛`);
                     $('#redHP').text(currRedHp - ultDamage);  // Subtract correct damage
                 } else {
-                    let ultDamage = Math.round(((redGenPow * 2.75) * (1 + variance)) * ultimaChance);
+                    let ultDamage = Math.round(((redGenPow * 3.75) * (1 + variance)) * ultimaChance);
                     alert(`Ultima deals ${ultDamage} damage to Blue 🐈‍⬛`);
                     $('#blueHP').text(currBlueHp - ultDamage);  // Subtract correct damage
                 }
@@ -908,12 +923,12 @@
             if (attackerStatusEffects.includes('Flare')) {
                 if (attacker === 'red') {
                     let variance = Math.random() * 0.2 - 0.1;
-                    let flareDamage = Math.round((blueGenPow * 2.75) * (1 + variance));
+                    let flareDamage = Math.round((blueGenPow * 3.75) * (1 + variance));
                     alert(`Flare! Red takes ${flareDamage} damage ❤️‍🔥`)
                     $('#redHP').text(currRedHp - flareDamage);
                 } else {
                     let variance = Math.random() * 0.2 - 0.1;
-                    let flareDamage = Math.round((redGenPow * 2.75) * (1 + variance));  // Rounding to nearest whole number
+                    let flareDamage = Math.round((redGenPow * 3.75) * (1 + variance));  // Rounding to nearest whole number
                     alert(`Flare! Blue takes ${flareDamage} damage ❤️‍🔥`)
                     $('#blueHP').text(currBlueHp - flareDamage);
                 }
@@ -1053,7 +1068,7 @@
                 if (isHit) {
                     alert('"You\'re Already Under My GenJutsu.."');
                     let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
-                    let statusEffect = prompt("Choose a status effect to apply: Darkness (8), Silence (8), Confusion (8), Paralysis (8), Zombie (8), Ultima (12), Flare(15), Tsukuyomi (28), Kotoamatsukami (35)");
+                    let statusEffect = prompt("Choose a status effect to apply: Darkness (10), Silence (10), Confusion (10), Paralysis (10), Zombie (10), Ultima (15), Flare(18), Tsukuyomi (28), Kotoamatsukami (35)");
                     // Determine the current chakra variable and decrement it
                     if (attacker === 'red') {
                         // Check if Red has enough chakra for the attack
@@ -1373,7 +1388,7 @@
             <div class='fight_time_card'>
                 <div class='fight_corner_header'>
                     <h4 class='hi'>${player.name}</h4>
-                    <img class='elem_img_corner' src='${player.elm}'>
+                    <img class='elem_img_corner' red_elm_imgg src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <p id='redStatus'>${redStatus}</p>
@@ -1498,7 +1513,7 @@
             <div class='fight_time_card'>
                 <div class='fight_corner_header'>
                     <h4 class='hi'>${player.name}</h4>
-                    <img class='elem_img_corner' src='${player.elm}'>
+                    <img class='elem_img_corner' id='blue_elm_imgg' src='${player.elm}'>
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <p id='blueStatus'>${blueStatus}</p>
