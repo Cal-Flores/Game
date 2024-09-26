@@ -128,14 +128,7 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt(`
-                                                                STAT?
-                redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery,
-                redCost, redNinCost, redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal,
-           ----------------------------------------------------------------------------------------------------------------------------------
-                blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery,
-                blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal
-                `);
+                let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redCost, redNinCost, redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal');
                 if (stat_max == 'redHeal') {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -231,9 +224,11 @@
                         break;
                     case 'redRecovery':
                         if (stat_type == 'Increase') {
-                            redRecovery = Math.floor(redRecovery + stat_number); // Corrected to use redRecovery
+                            redRecovery = Math.floor(redRecovery + stat_number);
+                            alert(`Red's chakra recovery increases to ${redRecovery}`)
                         } else {
                             redRecovery = Math.floor(redRecovery - stat_number);
+                            alert(`Red's chakra recovery decreases to ${redRecovery}`)
                         }
                         break;
                     case 'redCost':
@@ -376,8 +371,10 @@
                     case 'blueRecovery':
                         if (stat_type == 'Increase') {
                             blueRecovery = Math.floor(blueRecovery + stat_number); // Corrected to use blueRecovery
+                            alert(`Blue's chakra recovery increases to ${blueRecovery}`)
                         } else {
                             blueRecovery = Math.floor(blueRecovery - stat_number);
+                            alert(`Blue's chakra recovery increases to ${blueRecovery}`)
                         }
                         break;
                     case 'blueCost':
@@ -702,31 +699,7 @@
         let originalBlueMagic = blueElmAttack
 
         function resetStats(defender, statusEffect) {
-
-            switch (statusEffect) {
-                case 'Zombie':
-                    if (defender === 'red') {
-                        redRecovery = originalRedRecovery; // Reset to original value
-                    } else {
-                        blueRecovery = originalBlueRecovery; // Reset for blue
-                    }
-                    break;
-                case 'Darkness':
-                    if (defender === 'red') {
-                        redAttack = originalRedAttack; // Reset to original value
-                    } else {
-                        blueAttack = originalBlueAttack; // Reset for blue
-                    }
-                    break;
-                case 'Silence':
-                    if (defender === 'red') {
-                        redElmAttack = originalRedMagic; // Reset to original value
-                    } else {
-                        blueElmAttack = originalBlueMagic;// Reset for blue
-                    }
-                    break;
-                // Handle other status effects here
-            }
+            console.log('no reset')
         }
         const elementalWeaknesses = {
             Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
@@ -866,28 +839,28 @@
             let variance = Math.random() * 0.2 - 0.1;
             //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! GENJUTSU CHECKPOINT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
             let attackerStatusEffects = attacker === 'red' ? redStatus : blueStatus;
-            console.log('DITO', attackerStatusEffects)
-            if (attackerStatusEffects.includes('Zombie')) {
-                if (attacker === 'red') {
-                    redRecovery = 0;
-                } else {
-                    blueRecovery = 0
-                }
-            }
-            if (attackerStatusEffects.includes('Darkness')) {
-                if (attacker === 'red') {
-                    redAttack = 0;
-                } else {
-                    blueAttack = 0
-                }
-            }
-            if (attackerStatusEffects.includes('Silence')) {
-                if (attacker === 'red') {
-                    redElmAttack = 0;
-                } else {
-                    blueElmAttack = 0
-                }
-            }
+            // console.log('DITO', attackerStatusEffects)
+            // if (attackerStatusEffects.includes('Zombie')) {
+            //     if (attacker === 'red') {
+            //         redRecovery = 0;
+            //     } else {
+            //         blueRecovery = 0
+            //     }
+            // }
+            // if (attackerStatusEffects.includes('Darkness')) {
+            //     if (attacker === 'red') {
+            //         redAttack = 0;
+            //     } else {
+            //         blueAttack = 0
+            //     }
+            // }
+            // if (attackerStatusEffects.includes('Silence')) {
+            //     if (attacker === 'red') {
+            //         redElmAttack = 0;
+            //     } else {
+            //         blueElmAttack = 0
+            //     }
+            // }
             if (attackerStatusEffects.includes('Paralysis')) {
                 if (attacker === 'red') {
                     alert('RED IS PARALYZED! Blue goes twice')
