@@ -954,16 +954,16 @@
 
                         // Unique behavior for Sage and Psychic for red attacker
                         if (redELM === 'Sage') {
-                            magicEffectiveness *= 1.5; // Increase damage by 50% against all elements
-                            critMessage += '🌟 SAGE POWER 🌟 '; // Add Sage message
+                            magicEffectiveness *= 1.35; // Increase damage by 50% against all elements
+                            critMessage += '🌗 SAGE 🌒'; // Add Sage message
 
                             // Reduce critical hit chance
-                            if (Math.random() < (redCrit - 0.15)) { // Reduce critical hit chance by 15%
+                            if (Math.random() < (redCrit - 0.2)) { // Reduce critical hit chance by 15%
                                 isCritical = false;
                             }
                         } else if (redELM === 'Psychic') {
                             magicEffectiveness = 1; // Normal damage, no enhancements
-                            critMessage += '🔮 PSYCHIC POWER 🔮 '; // Add Psychic message
+                            critMessage += '🔮 Psychic 🔮 '; // Add Psychic message
                         } else {
                             if (checkWeakness(redELM, blueELM)) {
                                 magicEffectiveness = redElmEffc; // Adjust for weakness
@@ -1003,16 +1003,16 @@
 
                         // Unique behavior for Sage and Psychic for blue attacker
                         if (blueELM === 'Sage') {
-                            magicEffectiveness *= 1.5; // Increase damage by 50% against all elements
-                            critMessage += '🌟 SAGE POWER 🌟 '; // Add Sage message
+                            magicEffectiveness *= 1.35; // Increase damage by 50% against all elements
+                            critMessage += '🌘 SAGE 🌓 '; // Add Sage message
 
                             // Reduce critical hit chance
-                            if (Math.random() < (blueCrit - 0.15)) { // Reduce critical hit chance by 15%
+                            if (Math.random() < (blueCrit - 0.2)) { // Reduce critical hit chance by 15%
                                 isCritical = false;
                             }
                         } else if (blueELM === 'Psychic') {
                             magicEffectiveness = 1; // Normal damage, no enhancements
-                            critMessage += '🔮 PSYCHIC POWER 🔮 '; // Add Psychic message
+                            critMessage += '🔮Psychic🔮 '; // Add Psychic message
                         } else {
                             // Regular elemental interactions for other elements
                             if (checkWeakness(blueELM, redELM)) {
