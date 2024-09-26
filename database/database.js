@@ -408,7 +408,7 @@ const database = [
         ninjutsu: "Memory Bomb - Decrease 2 Stats by 25%",
         nin_cost: 45,
         ninjutsu_pow: 225,
-        ninjutsu2: 'Nen Bullets',
+        ninjutsu2: 'Nen Bullets - Decrease Stat by 40%',
         ninJutsu2cost: 45,
         ninJutsu2Dmg: 225,
         elm: pyschic,

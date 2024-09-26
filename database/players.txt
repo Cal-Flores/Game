@@ -140,3 +140,27 @@ Ramen Naruto
 Jutsu Naruto
 Pakkun
 Cat
+
+PERFECT -   1020 | 255 each
+
+GRADE 1 -    969 | 242 each
+
+GRADE 2 -    918 | 230 each
+
+Grade 3 -    867 | 217 each
+
+Grade 4 -    816 | 204 each
+
+Grade 5 -    765 | 191 each
+
+Grade 6 -    714 | 179 each
+
+Grade 7 -    663 | 166 each
+
+Grade 8 -    632 | 158 each
+
+Grade 9 -    612 | 153 each
+
+Grade 10 -   582 | 146 each
+
+Grade 11 -   561 | 140 each
