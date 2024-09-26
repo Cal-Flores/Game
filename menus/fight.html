@@ -533,7 +533,8 @@
         function applyStatusEffect(defender, statusEffect) {
             let duration = 4; // Default duration for all effects
             if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
-                duration = 1
+                duration = 2
+                console.log('FLARE/ULT ADDED!')
             } else if (statusEffect == 'Tsukuyomi') {
                 duration = 7; // Tsukuyomi takes 6 rounds to trigger
                 tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
@@ -895,11 +896,13 @@
 
             if (attackerStatusEffects.includes('Flare')) {
                 if (attacker === 'red') {
+                    console('flare is lurking and coiunting..')
                     let variance = Math.random() * 0.2 - 0.1;
                     let flareDamage = Math.round((blueGenPow * 3.75) * (1 + variance));
                     alert(`Flare! Red takes ${flareDamage} damage ❤️‍🔥`)
                     $('#redHP').text(currRedHp - flareDamage);
                 } else {
+                    console('flare is lurking and coiunting..')
                     let variance = Math.random() * 0.2 - 0.1;
                     let flareDamage = Math.round((redGenPow * 3.75) * (1 + variance));  // Rounding to nearest whole number
                     alert(`Flare! Blue takes ${flareDamage} damage ❤️‍🔥`)
@@ -1101,6 +1104,7 @@
                 } else {
                     alert('GenJutsu of that level doesn\'t work on me');
                 }
+                endRound()
                 return
             }
 
@@ -1143,6 +1147,7 @@
                     $('#redChakra').text(currRedChakra)
                     $('#blueHP').text(currBlueHp - redChakraPower);
                     $('#damage').text(`🥷  ${redChakraPower}  🥷`)
+                    endRound()
                     return
                 } else {
                     if (currBlueChakra < blueCost) {
@@ -1153,6 +1158,7 @@
                     $('#blueChakra').text(currBlueChakra)
                     $('#redHP').text(currRedHp - blueChakraPower);
                     $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
+                    endRound()
                     return
                 }
             }
@@ -1168,6 +1174,7 @@
                     $('#crit').text(redChakra)
                     $('#damage').text(`🌋🌋 ${redNinPower}  🌋🌋`)
                     buff(100)
+                    endRound()
                     return
                 } else {
                     if (currBlueChakra < blueNinCost) {
@@ -1179,6 +1186,7 @@
                     $('#redHP').text(currRedHp - blueNinPower);
                     $('#damage').text(`🌋🌋  ${blueNinPower}  🌋🌋`)
                     buff(100)
+                    endRound()
                     return
                 }
             }
@@ -1194,6 +1202,7 @@
                     $('#crit').text(redChakra)
                     $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
                     buff(100)
+                    endRound()
                     return
                 } else {
                     if (currBlueChakra < blueNenNinCost) {
@@ -1205,6 +1214,7 @@
                     $('#redHP').text(currRedHp - blueNenNinDmg);
                     $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
                     buff(100)
+                    endRound()
                     return
                 }
             }
