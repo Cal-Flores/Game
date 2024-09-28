@@ -1271,7 +1271,7 @@
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStr : 1.0;
 
-                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 2.5)) * criticalMultiplier;
+                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
                         $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
