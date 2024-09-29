@@ -212,15 +212,9 @@
                         }
                         break;
                     case 'redELM':
-                        if (stat_type == 'Increase') {
-                            affinity = prompt('Change Affinity')
-                            redELM = affinity
-                            $('#red_elm_imgg').attr('src', affinity)
-                        } else {
-                            affinity = prompt('Change Affinity')
-                            redELM = affinity
-                            $('#red_elm_imgg').attr('src', affinity)
-                        }
+                        affinity = prompt('Change Affinity')
+                        redELM = affinity
+                        $('#red_elm_imgg').attr('src', affinity)
                         break;
                     case 'redRecovery':
                         if (stat_type == 'Increase') {
@@ -797,6 +791,8 @@
 
             let wager = parseInt(prompt("Attacker, name your wager (damage to deal if you win):"));
             let dieRoll = Math.floor(Math.random() * 10) + 1;
+            $('#crit').text(`DIE ROLL: ${dieRoll}`)
+            console.log('die roll,', dieRoll)
 
             if (defenderNumbers.includes(dieRoll)) {
                 console.log('Defender wins the gamble!');
