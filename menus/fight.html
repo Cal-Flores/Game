@@ -213,9 +213,9 @@
                         }
                         break;
                     case 'redELM':
-                        affinity = prompt('Change Affinity')
+                        affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
                         redELM = affinity
-                        $('#red_elm_imgg').attr('src', affinity)
+                        alert(`Red Affinity changed to ${redELM}`)
                         break;
                     case 'redRecovery':
                         if (stat_type == 'Increase') {
@@ -353,15 +353,9 @@
                         }
                         break;
                     case 'blueELM':
-                        if (stat_type == 'Increase') {
-                            affinity = prompt('Change Affinity')
-                            redELM = affinity
-                            $('#blue_elm_imgg').attr('src', affinity)
-                        } else {
-                            affinity = prompt('Change Affinity')
-                            redELM = affinity
-                            $('#blue_elm_imgg').attr('src', affinity)
-                        }
+                        affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
+                        blueELM = affinity
+                        alert(`Red Affinity changed to ${blueELM}`)
                         break;
                     case 'blueRecovery':
                         if (stat_type == 'Increase') {
@@ -496,7 +490,7 @@
                 let power = parseInt($('#redChakra').text(), 10)
                 let explosionDamage = power * 10;
                 let currBlueHp = parseInt($('#blueHP').text(), 10);
-                
+
                 $('#blueHP').text(currBlueHp - explosionDamage);
                 alert('Tsukuyomi explodes! Blue takes ' + explosionDamage + ' damage.');
             }
@@ -741,6 +735,13 @@
             const multiplier = 1.7;
             return (accuracy * multiplier) / (accuracy + evasion);
         }
+        function calculateNinjutsuChance(accuracy, evasion) {
+            const multiplier = 1.7;
+            let newEvasion = evasion / 2.5
+            return (accuracy * multiplier) / (accuracy + evasion);
+        }
+
+
 
         function updateHealth() {
             let red_corn_hp = prompt('red hp')
@@ -1051,13 +1052,13 @@
                         if (light.includes(statusEffect)) {
                             requiredChakra = 8;
                         } else if (statusEffect === 'Flare') {
-                            requiredChakra = 15;
+                            requiredChakra = 12;
                         } else if (statusEffect === 'Ultima') {
                             requiredChakra = 12;
                         } else if (statusEffect === 'Tsukuyomi') {
-                            requiredChakra = 28;
+                            requiredChakra = 20;
                         } else if (statusEffect === 'Kotoamatsukami') {
-                            requiredChakra = 35;
+                            requiredChakra = 25;
                         }
 
                         if (currRedChakra < requiredChakra) {
@@ -1141,23 +1142,36 @@
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currRedChakra -= redCost
-                    $('#redChakra').text(currRedChakra)
-                    $('#blueHP').text(currBlueHp - redChakraPower);
-                    $('#damage').text(`🥷  ${redChakraPower}  🥷`)
-                    endRound()
-                    return
+                    let isNinHit = calculateNinjutsuChance(redAcc, blueEvas)
+                    if (isNinHit) {
+                        currRedChakra -= redCost
+                        $('#redChakra').text(currRedChakra)
+                        $('#blueHP').text(currBlueHp - redChakraPower);
+                        $('#damage').text(`🥷  ${redChakraPower}  🥷`)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Red Misses ❌')
+                        return
+                    }
+
                 } else {
                     if (currBlueChakra < blueCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currBlueChakra -= blueCost
-                    $('#blueChakra').text(currBlueChakra)
-                    $('#redHP').text(currRedHp - blueChakraPower);
-                    $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
-                    endRound()
-                    return
+                    let isNinHit = calculateNinjutsuChance(blueAcc, redEvas)
+                    if (isNinHit) {
+                        currBlueChakra -= blueCost
+                        $('#blueChakra').text(currBlueChakra)
+                        $('#redHP').text(currRedHp - blueChakraPower);
+                        $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Blue Misses ❌')
+                        return
+                    }
                 }
             }
             if (action == 'Ultimate Ninjutsu') {
@@ -1166,26 +1180,40 @@
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currRedChakra -= redNinCost
-                    $('#redChakra').text(currRedChakra)
-                    $('#blueHP').text(currBlueHp - redNinPower);
-                    $('#crit').text(redChakra)
-                    $('#damage').text(`🌋🌋 ${redNinPower}  🌋🌋`)
-                    buff(100)
-                    endRound()
-                    return
+                    let hitted = calculateNinjutsuChance(redAcc, blueEvas)
+                    if (hitted) {
+                        currRedChakra -= redNinCost
+                        $('#redChakra').text(currRedChakra)
+                        $('#blueHP').text(currBlueHp - redNinPower);
+                        $('#crit').text(redChakra)
+                        $('#damage').text(`🌋🌋 ${redNinPower}  🌋🌋`)
+                        buff(100)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Red Misses ❌')
+                        return
+                    }
+
                 } else {
                     if (currBlueChakra < blueNinCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currBlueChakra -= blueNinCost;
-                    $('#blueChakra').text(currBlueChakra)
-                    $('#redHP').text(currRedHp - blueNinPower);
-                    $('#damage').text(`🌋🌋  ${blueNinPower}  🌋🌋`)
-                    buff(100)
-                    endRound()
-                    return
+                    let hitted = calculateNinjutsuChance(blueAcc, redEvas)
+                    if (hitted) {
+                        currBlueChakra -= blueNinCost;
+                        $('#blueChakra').text(currBlueChakra)
+                        $('#redHP').text(currRedHp - blueNinPower);
+                        $('#damage').text(`🌋🌋  ${blueNinPower}  🌋🌋`)
+                        buff(100)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Blue Misses ❌')
+                        return
+                    }
+
                 }
             }
             if (action == 'Nen Ninjutsu') {
@@ -1194,26 +1222,40 @@
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currRedChakra -= redNenNinCost
-                    $('#redChakra').text(currRedChakra)
-                    $('#blueHP').text(currBlueHp - redNenNinDmg);
-                    $('#crit').text(redChakra)
-                    $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
-                    buff(100)
-                    endRound()
-                    return
+                    let isHitt = calculateNinjutsuChance(redAcc, blueEvas)
+                    if (isHitt) {
+                        currRedChakra -= redNenNinCost
+                        $('#redChakra').text(currRedChakra)
+                        $('#blueHP').text(currBlueHp - redNenNinDmg);
+                        $('#crit').text(redChakra)
+                        $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
+                        buff(100)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Red Misses ❌')
+                        return
+                    }
+
                 } else {
                     if (currBlueChakra < blueNenNinCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
                         return
                     }
-                    currBlueChakra -= blueNenNinCost;
-                    $('#blueChakra').text(currBlueChakra)
-                    $('#redHP').text(currRedHp - blueNenNinDmg);
-                    $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
-                    buff(100)
-                    endRound()
-                    return
+                    let isHitt = calculateNinjutsuChance(blueAcc, redEvas)
+                    if (isHitt) {
+                        currBlueChakra -= blueNenNinCost;
+                        $('#blueChakra').text(currBlueChakra)
+                        $('#redHP').text(currRedHp - blueNenNinDmg);
+                        $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
+                        buff(100)
+                        endRound()
+                        return
+                    } else {
+                        $('#damage').text('Blue Misses ❌')
+                        return
+                    }
+
                 }
             }
 
