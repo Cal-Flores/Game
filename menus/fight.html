@@ -124,6 +124,7 @@
 
 
         function buff(buff) {
+
             buff = buff / 100;
             isBuff = Math.random() < buff;
             if (isBuff) {
@@ -495,6 +496,7 @@
                 let power = parseInt($('#redChakra').text(), 10)
                 let explosionDamage = power * 10;
                 let currBlueHp = parseInt($('#blueHP').text(), 10);
+                
                 $('#blueHP').text(currBlueHp - explosionDamage);
                 alert('Tsukuyomi explodes! Blue takes ' + explosionDamage + ' damage.');
             }
@@ -1217,13 +1219,13 @@
 
             if (action == 'Boost') {
                 if (attacker == 'red') {
-                    let boosted = redRecovery * 2.5;
+                    let boosted = redRecovery * 2;
                     let newChakra = getRecovery(boosted)
                     currRedChakra += newChakra
                     $('#damage').text(`Gained ${newChakra} chakra`)
                     $('#redChakra').text(currRedChakra);
                 } else {
-                    let boosted = blueRecovery * 2.5;
+                    let boosted = blueRecovery * 2;
                     let newChakra = getRecovery(boosted)
                     currBlueChakra += newChakra
                     $('#damage').text(`Gained ${newChakra} chakra`)
