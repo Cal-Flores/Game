@@ -93,6 +93,16 @@ const database = [
         genjutsu: 3,
         gen_power: 65,
         willpower: 5,
+        // cursed attacks
+        cursed_energy: 20,
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Boogie-Woogie - Increase Evasion 50%',
+        curse_duration: 6,
+        curse_cost: 6,
+        dom_purity: 9,
+        dom_lethal: 300,
+        dom_duration: 3,
+        dom_cost: 30,
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },

@@ -6,6 +6,13 @@
     background-color: rgb(159, 159, 159);
 }
 
+body {
+    transition: background 2s ease;
+    /* Smooth transition for 2 seconds */
+    background: linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159));
+    /* Initial state */
+}
+
 #deviant {
     width: 22px;
 }
@@ -148,6 +155,9 @@
     width: 11px;
 }
 
+#finger {
+    width: 25px;
+}
 
 .fight_card_stats {
     display: flex;
@@ -333,6 +343,7 @@ body {
     border: 1px solid #5D5142;
     min-width: 60px;
     /* Set a minimum width to prevent shrinking too much */
+    height: 37px;
 }
 
 .fight_corner_stats p {

@@ -49,6 +49,7 @@
                         <option>Curse Technique</option>
                         <option>Genjutsu</option>
                         <option>Devil Contract</option>
+                        <option>Domain Expansion</option>
                         <option>Hatsu Buff</option>
                         <option>Zetsu Buff</option>
                         <option>Boost</option>
@@ -829,6 +830,79 @@
             return (accuracy * multiplier) / (accuracy + evasion);
         }
 
+        /// ko -> ken -> ryu ->
+        function getRandomItem(list) {
+            const randomIndex = Math.floor(Math.random() * list.length);
+            return list[randomIndex];
+        }
+
+
+        function determineWinner(player1Choice, player2Choice) {
+            player1Choice = player1Choice;
+            player2Choice = player2Choice;
+            console.log('player1Choice', player1Choice)
+            console.log('player2Choice', player2Choice)
+            if (
+                (player1Choice === 'Ko' && player2Choice === 'Ken') ||
+                (player1Choice === 'Ken' && player2Choice === 'Ryu') ||
+                (player1Choice === 'Ryu' && player2Choice === 'Ko')
+            ) {
+                console.log('SAFE')
+                return 'SAFE';
+            } else {
+                console.log('DAMAGE')
+                return 'DAMAGE';
+            }
+        }
+        function tryEscape(purity, defense) {
+            let baseChance = 35;
+            let escapeChance = Math.min(Math.max(baseChance + (defense - purity) * 10, 0), 100); // Calculate escape chance and clamp between 0 and 100
+
+            return Math.random() * 100 <= escapeChance; // Return true if escape successful, false otherwise
+        }
+
+        function callDomain(attacker, purity, lethal, duration, defense) {
+            let runningDamage = 0;
+            let currRedHp = parseInt($('#redHP').text(), 10);
+            let currBlueHp = parseInt($('#blueHP').text(), 10);
+            let currRedCurse = parseInt($('#redCurrCurse').text(), 10);
+            let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10);
+            let cost = 10;
+
+            $('#fight_bg').css('background', 'linear-gradient(to bottom, black, black)');
+
+            setTimeout(() => {
+                kyo = ['Ko', 'Ken', 'Ryu']
+                if (attacker == 'red') {
+                    alert(`Ryōiki Tenkai.. defend ${duration} hits!`)
+                    for (let i = 1; i <= duration; i++) {
+                        if (i % 2 == 1 && i != 1) {
+                            let chance = tryEscape(redDomPurity, blueDomPurity)
+                            if (chance) {
+                                alert('You have created a hole to escape from!')
+                                $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
+                                return
+                            } else {
+                                alert('The Domain wont break!')
+                            }
+                        }
+                        let attackerChoice = getRandomItem(kyo)
+                        let defenderChoice = prompt('Ko -> Ken -> Ryu')
+                        let outcome = determineWinner(defenderChoice, attackerChoice)
+                        if (outcome != 'SAFE') {
+                            runningDamage += 1
+                            currBlueHp -= lethal
+                            $('#blueHP').text(currBlueHp - lethal);
+                            alert(`Lethal Hit! ${lethal} damage dealt, total: ${lethal * runningDamage}`)
+                        } else {
+                            alert('blocked 🛡🛡')
+                        }
+                    }
+                    alert('Domain has concluded..')
+                }
+                $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
+            }, 50); // Short timeout (50ms) to allow the browser to repaint
+        }
 
 
         function updateHealth() {
@@ -1082,6 +1156,21 @@
                     }
                 }
 
+            }
+            if (action == 'Domain Expansion') {
+                if (attacker == 'red') {
+                    let purity = redDomPurity;
+                    let lethal = redDomLethal;
+                    let duration = redDomDuration;
+                    let defense = blueDomPurity
+                    callDomain(attacker, purity, lethal, duration, defense)
+                } else {
+                    let purity = blueDomPurity;
+                    let lethal = blueDomLethal;
+                    let duration = blueDomDuration;
+                    let defense = redDomPurity
+                    callDomain(attacker, purity, lethal, duration, defense)
+                }
             }
             if (action == 'Curse Technique') {
                 let techName;
@@ -1548,19 +1637,19 @@
         <span id="redChakra">${player.chakra}</span>
     </div>
      <div>
-        <p>Domain</p>
+        <p>🤞🏼</p>
         <span>${player.dom_purity}</span>
     </div>
     <div>
-        <p>Lethal</p>
+        <p>🩸</p>
         <span>${player.dom_lethal}</span>
     </div>
     <div>
-        <p>Duration</p>
+        <p>🌘</p>
         <span>${player.dom_duration}</span>
     </div>
     <div>
-        <p>Energy</p>
+        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
         <span  id='redCurrCurse'>${player.cursed_energy}</span>
     </div>
     <div>
@@ -1693,19 +1782,19 @@
     </div>
 
     <div>
-        <p>Domain</p>
+        <p>🤞🏼</p>
         <span>${player.dom_purity}</span>
     </div>
     <div>
-        <p>Lethal</p>
+        <p>🩸</p>
         <span>${player.dom_lethal}</span>
     </div>
     <div>
-        <p>Duration</p>
+        <p>🌒</p>
         <span>${player.dom_duration}</span>
     </div>
     <div>
-        <p>Energy</p>
+        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
         <span id='blueCurrCurse'>${player.cursed_energy}</span>
     </div>
 
