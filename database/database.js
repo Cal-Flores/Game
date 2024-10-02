@@ -46,10 +46,10 @@ const database = [
         gen_power: 75,
         willpower: 8,
         // cursed attacks
-        cursed_energy: 0,
+        cursed_energy: 20,
         cursed_recovery: 50, // 100 is best
         cursed_tech: 'Teleport - Increase Evasion 50%',
-        curse_duration: 4,
+        curse_duration: 6,
         curse_cost: 6,
         dom_purity: 9,
         dom_lethal: 300,

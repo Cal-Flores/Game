@@ -530,19 +530,38 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        function applyCurseTech(attacker, curseWord, duration) {
+        function applyCurseTech(attacker, curseWord, duration, cost) {
             let curse = curseWord.split(" ")[0]
             console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns`)
             let amount = parseInt(prompt('Add how much'), 10)
+            let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10)
+            let currRedCurse = parseInt($('#redCurrCurse').text(), 10)
+
+            // all curse Techniques!!!!!!!! //////////
+            let evasive = ['Teleport', 'Boogie-Woogie', 'Flying-Rajin']
 
             if (attacker == 'red') {
+                if (redCurseEnergy < cost) {
+                    alert('Not enough curse energy')
+                    return
+                } else {
+                    currRedCurse -= cost;
+                    $('#redCurrCurse').text(currRedCurse)
+                }
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
-                if (curse == 'Teleport') {
+                if (evasive.includes(curse)) {
                     redEvas += amount
                     $('#redEvas').text(redEvas)
                 }
                 $('#redCurseUi').text(curse)
             } else {
+                if (blueCurseEnergy < cost) {
+                    alert('Not enough curse energy')
+                    return
+                } else {
+                    currBlueCurse -= cost;
+                    $('#blueCurrCurse').text(currBlueCurse)
+                }
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
                 if (curse == 'Teleport') {
                     blueEvas += amount
@@ -567,9 +586,11 @@
                 if (player === 'red') {
                     redEvas -= amount;
                     $('#redEvas').text(redEvas);
+                    $('#redCurseUi').text('')
                 } else {
                     blueEvas -= amount;
                     $('#blueEvas').text(blueEvas);
+                    $('#blueCurseUi').text('')
                 }
             }
             curses.splice(curseIndex, 1);
@@ -1065,14 +1086,17 @@
             if (action == 'Curse Technique') {
                 let techName;
                 let duration;
+                let cost;
                 if (attacker == 'red') {
                     techName = $('#redTechName').text()
                     duration = redCurseDuration
+                    cost = redCurseCost
                 } else {
                     techName = $('#blueTechName').text()
                     duration = blueCurseDuration
+                    cost = blueCurseCost
                 }
-                applyCurseTech(attacker, techName, duration)
+                applyCurseTech(attacker, techName, duration, cost)
             }
             if (action == 'Genjutsu') {
 
@@ -1537,7 +1561,7 @@
     </div>
     <div>
         <p>Energy</p>
-        <span>${player.cursed_energy}</span>
+        <span  id='redCurrCurse'>${player.cursed_energy}</span>
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
@@ -1682,7 +1706,7 @@
     </div>
     <div>
         <p>Energy</p>
-        <span>${player.cursed_energy}</span>
+        <span id='blueCurrCurse'>${player.cursed_energy}</span>
     </div>
 
 
