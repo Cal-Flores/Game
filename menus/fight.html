@@ -513,7 +513,7 @@
 
             if (isHit) {
                 alert('"Youre Already Under My GenJutsu.."')
-                let statusEffect = prompt("Choose a status effect to apply: Darkness (8), Silence (8), Confusion (8), Paralysis (8), Zombie (8), Ultima (12), Flare(15), Tsukuyomi (28), Kotoamatsukami (35)");
+                let statusEffect = prompt("Choose a status effect to apply: Darkness (8), Silence (8), Confusion (8), Paralysis (8), Zombie (8), Ultima (12), Flare(12), Tsukuyomi (25), Kotoamatsukami (25)");
                 applyStatusEffect(color, statusEffect); // Apply effect to the defender
             } else {
                 alert('GenJutsu of that level doesnt work on me')
@@ -524,7 +524,8 @@
             let duration = 4; // Default duration for all effects
             if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
                 duration = 2
-                console.log('FLARE/ULT ADDED!')
+            } else if (statusEffect == 'Confusion') {
+                duration = 4
             } else if (statusEffect == 'Tsukuyomi') {
                 duration = 7; // Tsukuyomi takes 6 rounds to trigger
                 tsukuyomiCounters[defender] = 0; // Start Tsukuyomi counter at 0
@@ -895,13 +896,11 @@
 
             if (attackerStatusEffects.includes('Flare')) {
                 if (attacker === 'red') {
-                    console('flare is lurking and coiunting..')
                     let variance = Math.random() * 0.2 - 0.1;
                     let flareDamage = Math.round((blueGenPow * 3.75) * (1 + variance));
                     alert(`Flare! Red takes ${flareDamage} damage ❤️‍🔥`)
                     $('#redHP').text(currRedHp - flareDamage);
                 } else {
-                    console('flare is lurking and coiunting..')
                     let variance = Math.random() * 0.2 - 0.1;
                     let flareDamage = Math.round((redGenPow * 3.75) * (1 + variance));  // Rounding to nearest whole number
                     alert(`Flare! Blue takes ${flareDamage} damage ❤️‍🔥`)
@@ -1043,7 +1042,7 @@
                 if (isHit) {
                     alert('"You\'re Already Under My GenJutsu.."');
                     let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
-                    let statusEffect = prompt("Choose a status effect to apply: Darkness (10), Silence (10), Confusion (10), Paralysis (10), Zombie (10), Ultima (15), Flare(18), Tsukuyomi (28), Kotoamatsukami (35)");
+                    let statusEffect = prompt("Choose a status effect to apply: Darkness (8), Silence (8), Confusion (8), Paralysis (8), Zombie (8), Ultima (15), Flare(15), Tsukuyomi (25), Kotoamatsukami (25)");
                     // Determine the current chakra variable and decrement it
                     if (attacker === 'red') {
                         // Check if Red has enough chakra for the attack
@@ -1056,7 +1055,7 @@
                         } else if (statusEffect === 'Ultima') {
                             requiredChakra = 12;
                         } else if (statusEffect === 'Tsukuyomi') {
-                            requiredChakra = 28;
+                            requiredChakra = 25;
                         } else if (statusEffect === 'Kotoamatsukami') {
                             requiredChakra = 25;
                         }
@@ -1083,9 +1082,9 @@
                         } else if (statusEffect === 'Ultima') {
                             requiredChakra = 12;
                         } else if (statusEffect === 'Tsukuyomi') {
-                            requiredChakra = 28;
+                            requiredChakra = 25;
                         } else if (statusEffect === 'Kotoamatsukami') {
-                            requiredChakra = 20;
+                            requiredChakra = 25;
                         }
 
                         if (currBlueChakra < requiredChakra) {
