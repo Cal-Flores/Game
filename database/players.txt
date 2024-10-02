@@ -175,7 +175,7 @@ Grade 11 -   561 | 140 each
 3. Megumi ✅
 4. Gojo ✅
 5. Nanami ✅
-6. Sukuna
+6. Sukuna ✅
 7. Todo ✅
 8. Kakazu
 9. Kisame
@@ -196,15 +196,19 @@ Grade 11 -   561 | 140 each
 1. ramen Naruto
 2. Jutsu Naruto
 3. Komugi
-7. beat 1
-8. beat 2
-9. massacre Itachi
-10. Deidara
-11. sharingan Kakashi
-12. Rasenshuriken
-13. Hidan
+4. beat 1
+5. beat 2
+6. massacre Itachi
+7. Deidara
+8. sharingan Kakashi
+9. Rasenshuriken
+10. Hidan
+11. Cat
+12. Pakkun
 
----- OUT ---
-1. Cat
-2. Pakkun
-3.
+
+Naruto - 58
+Hunter x Hunter - 43
+Jujutsu Kaisen - 17
+Chainsaw Man - 10
+Attack on Titan - 1

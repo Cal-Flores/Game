@@ -18,14 +18,15 @@ const database = [
         defense: 195,
         elm_attack: 226,
         elm_defense: 225,
-        elm_efficiency: 1, // decimal multiplies chakra elemental damage
-        critical: .30, // .99 max icreases chance for critical
-        strength: 2, // decimal multiplies physical attack on criticals
-        potency: .35, // crit calculator
+        elm_efficiency: 1,
+        critical: .30,
+        strength: 2,
+        potency: .35,
         accuracy: 4,
         evasion: 7,
         chakra: 0,
         chakra_rec: 7,
+        // ninjutsu and luck
         chakra_attack: 'Sun and Moon',
         cost: 26,
         chakra_pow: 400,
@@ -40,9 +41,21 @@ const database = [
         ninJutsu2cost: 21,
         ninJutsu2Dmg: 200,
         luck: 6,
+        // genjutsu
         genjutsu: 4,
         gen_power: 75,
         willpower: 8,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Teleport - Increase Evasion 50%',
+        curse_duration: 4,
+        curse_cost: 6,
+        dom_purity: 9,
+        dom_lethal: 300,
+        dom_duration: 10,
+        dom_cost: 30,
+        //additonal
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
     },

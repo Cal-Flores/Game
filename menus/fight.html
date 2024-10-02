@@ -45,7 +45,6 @@
                         <option>Attack</option>
                         <option>Elemental Attack</option>
                         <option>Ninjutsu</option>
-                        <option>Nen Ninjutsu</option>
                         <option>Ultimate Ninjutsu</option>
                         <option>Genjutsu</option>
                         <option>Devil Contract</option>
@@ -92,6 +91,15 @@
         let blueGenPow
         let blueWill;
         let blueNenNinDmg
+        let blueNenNinCost
+        let blueCurseEnergy
+        let blueCurseRec
+        let blueCurseTech
+        let blueCurseDuration
+        let blueCurseCost
+        let blueDomPurity
+        let blueDomLethal
+        let blueDomDuration
         let blueStatus = []
 
         let redAttack
@@ -120,6 +128,15 @@
         let redGenPow
         let redWill;
         let redNenNinDmg
+        let redNenNinCost
+        let redCurseEnergy
+        let redCurseRec
+        let redCurseTech
+        let redCurseDuration
+        let redCurseCost
+        let redDomPurity
+        let redDomLethal
+        let redDomDuration
         let redStatus = []
 
 
@@ -129,7 +146,7 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redCost, redNinCost, redChakraPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueCost, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal');
+                let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redNinCost, redNinjutsuPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal, redNinjutsuCost, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal, blueNinjutsuCost, blueNinjutsuPower');
                 if (stat_max == 'redHeal') {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -226,20 +243,6 @@
                             alert(`Red's chakra recovery decreases to ${redRecovery}`)
                         }
                         break;
-                    case 'redCost':
-                        if (stat_type == 'Increase') {
-                            redCost = (redCost * (1 + stat_number)).toFixed(2);
-                        } else {
-                            redCost = (redCost * (1 - stat_number)).toFixed(2);
-                        }
-                        break;
-                    case 'redNinCost':
-                        if (stat_type == 'Increase') {
-                            redNinCost = Math.floor(redNinCost * (1 + stat_number));
-                        } else {
-                            redNinCost = Math.floor(redNinCost * (1 - stat_number));
-                        }
-                        break;
                     case 'redAcc':
                         if (stat_type == 'Increase') {
                             redAcc = Math.floor(redAcc * (1 + stat_number));
@@ -261,13 +264,21 @@
                             redLuck = Math.floor(redLuck * (1 - stat_number));
                         }
                         break;
-                    case 'redChakraPower':
+                    case 'redNinjutsuPower':
                         if (stat_type == 'Increase') {
-                            redChakraPower = Math.floor(redChakraPower * (1 + stat_number));
+                            redNenNinDmg = Math.floor(redNenNinDmg * (1 + stat_number));
                         } else {
-                            redChakraPower = Math.floor(redChakraPower * (1 - stat_number));
+                            redNenNinDmg = Math.floor(redNenNinDmg * (1 - stat_number));
                         }
                         break;
+                    case 'redNinjutsuCost':
+                        if (stat_type == 'Increase') {
+                            redNenNinCost = Math.floor(redNenNinCost * (1 + stat_number));
+                        } else {
+                            redNenNinCost = Math.floor(redNenNinCost * (1 - stat_number));
+                        }
+                        break;
+
                     case 'redGen':
                         if (stat_type == 'Increase') {
                             redGen = Math.floor(redGen * (1 + stat_number));
@@ -366,20 +377,6 @@
                             alert(`Blue's chakra recovery increases to ${blueRecovery}`)
                         }
                         break;
-                    case 'blueCost':
-                        if (stat_type == 'Increase') {
-                            blueCost = (blueCost * (1 + stat_number)).toFixed(2);
-                        } else {
-                            blueCost = (blueCost * (1 - stat_number)).toFixed(2);
-                        }
-                        break;
-                    case 'blueNinCost':
-                        if (stat_type == 'Increase') {
-                            blueNinCost = Math.floor(blueNinCost * (1 + stat_number));
-                        } else {
-                            blueNinCost = Math.floor(blueNinCost * (1 - stat_number));
-                        }
-                        break;
                     case 'blueAcc':
                         if (stat_type == 'Increase') {
                             blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
@@ -392,13 +389,6 @@
                             blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
                         } else {
                             blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
-                        }
-                        break;
-                    case 'blueChakraPower':
-                        if (stat_type == 'Increase') {
-                            blueChakraPower = Math.floor(blueChakraPower * (1 + stat_number));
-                        } else {
-                            blueChakraPower = Math.floor(blueChakraPower * (1 - stat_number));
                         }
                         break;
                     case 'blueLuck':
@@ -429,6 +419,21 @@
                             blueWill = Math.floor(blueWill * (1 - stat_number));
                         }
                         break;
+                    case 'blueNinjutsuPower':
+                        if (stat_type == 'Increase') {
+                            blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + stat_number));
+                        } else {
+                            blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - stat_number));
+                        }
+                        break;
+
+                    case 'blueNinjutsuCost':
+                        if (stat_type == 'Increase') {
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 + stat_number));
+                        } else {
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 - stat_number));
+                        }
+                        break;
                     default:
                         alert('Invalid stat');
                         break;
@@ -450,6 +455,7 @@
                 $('#redELM').text(redELM);
                 $('#redGen').text(redGen)
                 $('#redGenPow').text(redGenPow)
+                $('#redNinPow').text(redNenNinDmg)
                 $('#redWill').text(redWill)
                 $('#redAcc').text(redAcc)
                 $('#redEvas').text(redEvas)
@@ -470,6 +476,7 @@
                 $('#blueWill').text(blueWill)
                 $('#blueChakraPow').text(blueChakraPower)
                 $('#blueStr').text(blueStr)
+                $('#blueNinPow').text(blueNenNinDmg)
 
             } else {
                 $('#damage').text('Fail');
@@ -1135,44 +1142,44 @@
                     buff(blueBuff2)
                 }
             }
-            if (action == 'Ninjutsu') {
-                if (attacker == 'red') {
-                    if (currRedChakra < redCost) {
-                        alert('NOT ENOUGH CHAKRA LOSE TURN')
-                        return
-                    }
-                    let isNinHit = calculateNinjutsuChance(redAcc, blueEvas)
-                    if (isNinHit) {
-                        currRedChakra -= redCost
-                        $('#redChakra').text(currRedChakra)
-                        $('#blueHP').text(currBlueHp - redChakraPower);
-                        $('#damage').text(`🥷  ${redChakraPower}  🥷`)
-                        endRound()
-                        return
-                    } else {
-                        $('#damage').text('Red Misses ❌')
-                        return
-                    }
+            // if (action == 'Ninjutsu') {
+            //     if (attacker == 'red') {
+            //         if (currRedChakra < redCost) {
+            //             alert('NOT ENOUGH CHAKRA LOSE TURN')
+            //             return
+            //         }
+            //         let isNinHit = calculateNinjutsuChance(redAcc, blueEvas)
+            //         if (isNinHit) {
+            //             currRedChakra -= redCost
+            //             $('#redChakra').text(currRedChakra)
+            //             $('#blueHP').text(currBlueHp - redChakraPower);
+            //             $('#damage').text(`🥷  ${redChakraPower}  🥷`)
+            //             endRound()
+            //             return
+            //         } else {
+            //             $('#damage').text('Red Misses ❌')
+            //             return
+            //         }
 
-                } else {
-                    if (currBlueChakra < blueCost) {
-                        alert('NOT ENOUGH CHAKRA LOSE TURN')
-                        return
-                    }
-                    let isNinHit = calculateNinjutsuChance(blueAcc, redEvas)
-                    if (isNinHit) {
-                        currBlueChakra -= blueCost
-                        $('#blueChakra').text(currBlueChakra)
-                        $('#redHP').text(currRedHp - blueChakraPower);
-                        $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
-                        endRound()
-                        return
-                    } else {
-                        $('#damage').text('Blue Misses ❌')
-                        return
-                    }
-                }
-            }
+            //     } else {
+            //         if (currBlueChakra < blueCost) {
+            //             alert('NOT ENOUGH CHAKRA LOSE TURN')
+            //             return
+            //         }
+            //         let isNinHit = calculateNinjutsuChance(blueAcc, redEvas)
+            //         if (isNinHit) {
+            //             currBlueChakra -= blueCost
+            //             $('#blueChakra').text(currBlueChakra)
+            //             $('#redHP').text(currRedHp - blueChakraPower);
+            //             $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
+            //             endRound()
+            //             return
+            //         } else {
+            //             $('#damage').text('Blue Misses ❌')
+            //             return
+            //         }
+            //     }
+            // }
             if (action == 'Ultimate Ninjutsu') {
                 if (attacker == 'red') {
                     if (currRedChakra < redNinCost) {
@@ -1215,7 +1222,7 @@
 
                 }
             }
-            if (action == 'Nen Ninjutsu') {
+            if (action == 'Ninjutsu') {
                 if (attacker == 'red') {
                     if (currRedChakra < redNenNinCost) {
                         alert('NOT ENOUGH CHAKRA LOSE TURN')
@@ -1479,7 +1486,6 @@
         <span id="redWill">${player.willpower}</span>
     </div>
     <div class='nen_numbers'>
-        <p id="redChakraPow">${player.chakra_pow}</p>
         <p id="redNinPow">${player.ninJutsu2Dmg}</p>
         <p id="redUltPow">${player.ninjutsu_pow}</p>
     </div>
@@ -1490,7 +1496,7 @@
 
 </div>
 <hr>
-                <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
+                <p class='words'>${player.cursed_tech} 😈 ${player.curse_duration} turns ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                 <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                 <hr>
@@ -1525,9 +1531,17 @@
                     redGen = player.genjutsu
                     redGenPow = player.gen_power
                     redWill = player.willpower
+                    redCurseEnergy = player.cursed_energy
+                    redCurseRec = player.cursed_recovery
+                    redCurseTech = player.cursed_tech
+                    redCurseCost = player.curse_duration
+                    redDomPurity = player.dom_purity
+                    redDomLethal = player.dom_lethal
+                    redDomDuration = player.dom_duration
                     originalRedRecovery = player.chakra_rec
                     originalRedAttack = player.attack
                     originalRedMagic = player.elm_attack
+
 
 
                 } else if (val_2 === player.name) {
@@ -1590,6 +1604,25 @@
         <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
         <span id="blueChakra">${player.chakra}</span>
     </div>
+
+    <div>
+        <p>Domain</p>
+        <span>${player.dom_purity}</span>
+    </div>
+    <div>
+        <p>Lethal</p>
+        <span>${player.dom_lethal}</span>
+    </div>
+    <div>
+        <p>Duration</p>
+        <span>${player.dom_duration}</span>
+    </div>
+    <div>
+        <p>Energy</p>
+        <span>${player.cursed_energy}</span>
+    </div>
+
+
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="blueGen">${player.genjutsu}</span>
@@ -1603,14 +1636,13 @@
         <span id="blueWill">${player.willpower}</span>
     </div>
     <div class='nen_numbers'>
-        <p id="blueChakraPow">${player.chakra_pow}</p>
         <p id="blueNinPow">${player.ninJutsu2Dmg}</p>
         <p id="blueUltPow">${player.ninjutsu_pow}</p>
     </div>
 </div>
 
 <hr>
-               <p class='words'>${player.chakra_attack} ✮ <span id='cost'>${player.cost}</span></p>
+               <p class='words'>${player.cursed_tech} 😈 ${player.curse_duration} turns ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                   <hr>
@@ -1642,6 +1674,12 @@
                     blueGen = player.genjutsu
                     blueGenPow = player.gen_power
                     blueWill = player.willpower
+                    blueCurseEnergy = player.cursed_energy
+                    blueCurseRec = player.cursed_recovery
+                    blueCurseTech = player.cursed_tech
+                    blueCurseCost = player.curse_duration
+                    blueDomPurity = player.dom_purity
+                    blueDomLethal = player.dom_lethal
                     originalBlueRecovery = player.chakra_rec
                     originalBlueAttack = player.attack
                     originalBlueMagic = player.elm_attack
