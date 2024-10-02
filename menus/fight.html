@@ -46,6 +46,7 @@
                         <option>Elemental Attack</option>
                         <option>Ninjutsu</option>
                         <option>Ultimate Ninjutsu</option>
+                        <option>Curse Technique</option>
                         <option>Genjutsu</option>
                         <option>Devil Contract</option>
                         <option>Hatsu Buff</option>
@@ -101,6 +102,7 @@
         let blueDomLethal
         let blueDomDuration
         let blueStatus = []
+        let blueCurses = []
 
         let redAttack
         let redDefense
@@ -138,6 +140,7 @@
         let redDomLethal
         let redDomDuration
         let redStatus = []
+        let redCurses = []
 
 
         function buff(buff) {
@@ -509,6 +512,7 @@
         let kotoamatsukamiCounters = { red: 0, blue: 0 }; // Track Kotoamatsukami specific counters
 
 
+
         function genjutsuAttack(genjutsu, willpower, color) {
             const multiplier = 1.7; // Genjutsu multiplier
             const scalingFactor = 0.678; // Derived scaling factor from willpower
@@ -526,6 +530,53 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
+        function applyCurseTech(attacker, curseWord, duration) {
+            let curse = curseWord.split(" ")[0]
+            console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns`)
+            let amount = parseInt(prompt('Add how much'), 10)
+
+            if (attacker == 'red') {
+                redCurses.push({ name: curse, turnsLeft: duration, amount })
+                if (curse == 'Teleport') {
+                    redEvas += amount
+                    $('#redEvas').text(redEvas)
+                }
+                $('#redCurseUi').text(curse)
+            } else {
+                blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                if (curse == 'Teleport') {
+                    blueEvas += amount
+                    $('#blueEvas').text(blueEvas)
+                }
+                $('#blueCurseUi').text(curse)
+            }
+
+        }
+        // Function to remove a curse for a player
+        function removeCurse(player, curseName) {
+            let curses = player === 'red' ? redCurses : blueCurses;
+            const curseIndex = curses.findIndex(c => c.name === curseName);
+            if (curseIndex === -1) {
+                console.log(`${curseName} is not active on Player ${player.toUpperCase()}.`);
+                return;
+            }
+
+            const amount = curses[curseIndex].amount;
+
+            if (curseName === 'Teleport') {
+                if (player === 'red') {
+                    redEvas -= amount;
+                    $('#redEvas').text(redEvas);
+                } else {
+                    blueEvas -= amount;
+                    $('#blueEvas').text(blueEvas);
+                }
+            }
+            curses.splice(curseIndex, 1);
+            console.log(`${curseName} has worn off on Player ${player.toUpperCase()}!`);
+        }
+
+
 
         function applyStatusEffect(defender, statusEffect) {
             let duration = 4; // Default duration for all effects
@@ -566,6 +617,14 @@
                     clearStatusEffect('blue', status);
                 }
             }
+            [redCurses, blueCurses].forEach((curses, index) => {
+                curses.forEach(curse => {
+                    curse.turnsLeft--;
+                    if (curse.turnsLeft <= 0) {
+                        removeCurse(index === 0 ? 'red' : 'blue', curse.name);
+                    }
+                });
+            });
             if (redStatus.includes('Tsukuyomi')) {
                 tsukuyomiCounters.red++;
                 console.log('counter', tsukuyomiCounters.red)
@@ -845,30 +904,8 @@
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! GENJUTSU CHECKPOINT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
             let attackerStatusEffects = attacker === 'red' ? redStatus : blueStatus;
-            // console.log('DITO', attackerStatusEffects)
-            // if (attackerStatusEffects.includes('Zombie')) {
-            //     if (attacker === 'red') {
-            //         redRecovery = 0;
-            //     } else {
-            //         blueRecovery = 0
-            //     }
-            // }
-            // if (attackerStatusEffects.includes('Darkness')) {
-            //     if (attacker === 'red') {
-            //         redAttack = 0;
-            //     } else {
-            //         blueAttack = 0
-            //     }
-            // }
-            // if (attackerStatusEffects.includes('Silence')) {
-            //     if (attacker === 'red') {
-            //         redElmAttack = 0;
-            //     } else {
-            //         blueElmAttack = 0
-            //     }
-            // }
+
             if (attackerStatusEffects.includes('Paralysis')) {
                 if (attacker === 'red') {
                     alert('RED IS PARALYZED! Blue goes twice')
@@ -1024,6 +1061,18 @@
                     }
                 }
 
+            }
+            if (action == 'Curse Technique') {
+                let techName;
+                let duration;
+                if (attacker == 'red') {
+                    techName = $('#redTechName').text()
+                    duration = redCurseDuration
+                } else {
+                    techName = $('#blueTechName').text()
+                    duration = blueCurseDuration
+                }
+                applyCurseTech(attacker, techName, duration)
             }
             if (action == 'Genjutsu') {
 
@@ -1421,6 +1470,7 @@
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <p id='redStatus'>${redStatus}</p>
+                <p id='redCurseUi'></p>
                 <h4 contenteditable="true">🖤 <span id='redHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
              <div class="fight_corner_stats">
@@ -1473,6 +1523,22 @@
         <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
         <span id="redChakra">${player.chakra}</span>
     </div>
+     <div>
+        <p>Domain</p>
+        <span>${player.dom_purity}</span>
+    </div>
+    <div>
+        <p>Lethal</p>
+        <span>${player.dom_lethal}</span>
+    </div>
+    <div>
+        <p>Duration</p>
+        <span>${player.dom_duration}</span>
+    </div>
+    <div>
+        <p>Energy</p>
+        <span>${player.cursed_energy}</span>
+    </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="redGen">${player.genjutsu}</span>
@@ -1489,14 +1555,9 @@
         <p id="redNinPow">${player.ninJutsu2Dmg}</p>
         <p id="redUltPow">${player.ninjutsu_pow}</p>
     </div>
-
-
-
-
-
 </div>
 <hr>
-                <p class='words'>${player.cursed_tech} 😈 ${player.curse_duration} turns ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
+                <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> 😈 ${player.curse_duration} turns ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                 <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                 <hr>
@@ -1534,7 +1595,8 @@
                     redCurseEnergy = player.cursed_energy
                     redCurseRec = player.cursed_recovery
                     redCurseTech = player.cursed_tech
-                    redCurseCost = player.curse_duration
+                    redCurseCost = player.curse_cost
+                    redCurseDuration = player.curse_duration
                     redDomPurity = player.dom_purity
                     redDomLethal = player.dom_lethal
                     redDomDuration = player.dom_duration
@@ -1553,6 +1615,7 @@
                 </div>
                 <img id='fight_corner_img' src='${player.image}'>
                 <p id='blueStatus'>${blueStatus}</p>
+                <p id='blueCurseUi'></p>
                 <h4 contenteditable="true">🖤 <span id='blueHP'>${player.hp}</span></h4>
                 <p>${player.nen_type}</p>
                <div class='fight_corner_stats'>
@@ -1642,7 +1705,7 @@
 </div>
 
 <hr>
-               <p class='words'>${player.cursed_tech} 😈 ${player.curse_duration} turns ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
+               <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> 😈 ${player.curse_duration} turns ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                   <hr>
@@ -1677,7 +1740,8 @@
                     blueCurseEnergy = player.cursed_energy
                     blueCurseRec = player.cursed_recovery
                     blueCurseTech = player.cursed_tech
-                    blueCurseCost = player.curse_duration
+                    blueCurseCost = player.curse_cost
+                    blueCurseDuration = player.curse_duration
                     blueDomPurity = player.dom_purity
                     blueDomLethal = player.dom_lethal
                     originalBlueRecovery = player.chakra_rec
