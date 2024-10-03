@@ -102,6 +102,8 @@
         let blueDomPurity
         let blueDomLethal
         let blueDomDuration
+        let blueDomCost
+        let blueDomName
         let blueStatus = []
         let blueCurses = []
 
@@ -140,6 +142,8 @@
         let redDomPurity
         let redDomLethal
         let redDomDuration
+        let redDomCost
+        let redDomName
         let redStatus = []
         let redCurses = []
 
@@ -861,18 +865,24 @@
             return Math.random() * 100 <= escapeChance; // Return true if escape successful, false otherwise
         }
 
-        function callDomain(attacker, purity, lethal, duration, defense) {
+        function callDomain(attacker, purity, lethal, duration, defense, cost) {
             let runningDamage = 0;
             let currRedHp = parseInt($('#redHP').text(), 10);
             let currBlueHp = parseInt($('#blueHP').text(), 10);
             let currRedCurse = parseInt($('#redCurrCurse').text(), 10);
             let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10);
-            let cost = 10;
 
             $('#fight_bg').css('background', 'linear-gradient(to bottom, black, black)');
 
             setTimeout(() => {
                 kyo = ['Ko', 'Ken', 'Ryu']
+                if (currRedCurse < cost) {
+                    alert('Not enought curse energy')
+                    return
+                } else {
+                    currRedCurse -= cost
+                    $('#redCurrCurse').text(currRedCurse)
+                }
                 if (attacker == 'red') {
                     alert(`Ryōiki Tenkai.. defend ${duration} hits!`)
                     for (let i = 1; i <= duration; i++) {
@@ -1163,13 +1173,15 @@
                     let lethal = redDomLethal;
                     let duration = redDomDuration;
                     let defense = blueDomPurity
-                    callDomain(attacker, purity, lethal, duration, defense)
+                    let cost = redDomCost
+                    callDomain(attacker, purity, lethal, duration, defense, cost)
                 } else {
                     let purity = blueDomPurity;
                     let lethal = blueDomLethal;
                     let duration = blueDomDuration;
                     let defense = redDomPurity
-                    callDomain(attacker, purity, lethal, duration, defense)
+                    let cost = redDomCost
+                    callDomain(attacker, purity, lethal, duration, defense, cost)
                 }
             }
             if (action == 'Curse Technique') {
@@ -1646,7 +1658,7 @@
     </div>
     <div>
         <p>🌘</p>
-        <span>${player.dom_duration}</span>
+        <span>${player.dom_duration} / ${player.dom_cost}</span>
     </div>
     <div>
         <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
@@ -1713,6 +1725,8 @@
                     redDomPurity = player.dom_purity
                     redDomLethal = player.dom_lethal
                     redDomDuration = player.dom_duration
+                    redDomCost = player.dom_cost
+                    redDomName = player.dom_name
                     originalRedRecovery = player.chakra_rec
                     originalRedAttack = player.attack
                     originalRedMagic = player.elm_attack
@@ -1791,7 +1805,7 @@
     </div>
     <div>
         <p>🌒</p>
-        <span>${player.dom_duration}</span>
+        <span>${player.dom_duration} / ${player.dom_cost}</span>
     </div>
     <div>
         <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
@@ -1857,6 +1871,8 @@
                     blueCurseDuration = player.curse_duration
                     blueDomPurity = player.dom_purity
                     blueDomLethal = player.dom_lethal
+                    blueDomCost = player.dom_cost
+                    blueDomName = player.dom_name
                     originalBlueRecovery = player.chakra_rec
                     originalBlueAttack = player.attack
                     originalBlueMagic = player.elm_attack

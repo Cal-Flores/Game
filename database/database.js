@@ -55,6 +55,7 @@ const database = [
         dom_lethal: 300,
         dom_duration: 10,
         dom_cost: 30,
+        dom_name: 'Infinate Void',
         //additonal
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
@@ -102,7 +103,8 @@ const database = [
         dom_purity: 9,
         dom_lethal: 300,
         dom_duration: 3,
-        dom_cost: 30,
+        dom_cost: 10,
+        dom_name: 'Hells Cabinet',
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
