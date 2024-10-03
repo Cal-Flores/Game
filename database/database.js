@@ -667,9 +667,9 @@ const database = [
         potency: .2,
         accuracy: 4,
         evasion: 1,
-        buff: 'Increase Chakra by 5',
+        buff: 'Double Acuracy/ halve Defense',
         buff2: 'Increase WillPower by 2',
-        buff_acc: 55,
+        buff_acc: 90,
         buff2_acc: 55,
         chakra: 0,
         chakra_rec: 3,
@@ -687,6 +687,18 @@ const database = [
         genjutsu: 1,
         gen_power: 15,
         willpower: 3,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 40, // 100 is best
+        cursed_tech: 'Muscular-Expansion - Critical x 4',
+        curse_amount: .45, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 10,
+        dom_purity: 8,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.redd.it/k2fme3l6e8m61.jpg'
     },
 
@@ -725,6 +737,18 @@ const database = [
         genjutsu: 6,
         gen_power: 25,
         willpower: 3,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Hollow-Wicker-Basket - Invincible to all Stat attacks',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 15,
+        dom_purity: 5,
+        dom_lethal: 60,
+        dom_duration: 6,
+        dom_cost: 25,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/denaruto3/images/b/bb/ObitoUchiha.png/revision/latest?cb=20140816152828&path-prefix=de'
     },
     {
@@ -759,9 +783,21 @@ const database = [
         ninjutsu: 'Yasaka Magatama - Increase Chakra by 3%',
         elm: fire,
         luck: 2,
-        genjutsu: 7,
+        genjutsu: 5,
         gen_power: 33,
         willpower: 9,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Black-Bird-Manipulation - Triple Genjutsu',
+        curse_amount: 10, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 14,
+        dom_purity: 5,
+        dom_lethal: 60,
+        dom_duration: 6,
+        dom_cost: 28,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/denaruto3/images/3/3c/ItachiUchiha.PNG/revision/latest?cb=20120705195723&path-prefix=de'
     },
     {
@@ -799,6 +835,18 @@ const database = [
         genjutsu: 5,
         gen_power: 60,
         willpower: 5,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 40, // 100 is best
+        cursed_tech: 'Reverse - Increase Defense by 75',
+        curse_amount: 75, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 8,
+        dom_purity: 4,
+        dom_lethal: 20,
+        dom_duration: 4,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.pinimg.com/736x/e6/96/43/e6964375383d77adfa552aaffc174e84.jpg'
     },
     {
@@ -836,6 +884,18 @@ const database = [
         genjutsu: 2,
         gen_power: 30,
         willpower: 2,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Idle-Death-Gamble - Can Devil Contract 700',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 16,
+        dom_purity: 2,
+        dom_lethal: 20,
+        dom_duration: 4,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.pinimg.com/474x/94/4a/97/944a97524606a98af81120fa453b07e6.jpg'
     },
     {
@@ -873,6 +933,18 @@ const database = [
         genjutsu: 2,
         gen_power: 15,
         willpower: 5,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 40, // 100 is best
+        cursed_tech: 'Granite-Blast - 500 Damage',
+        curse_amount: 500, //instead of prompt
+        curse_duration: 1,
+        curse_cost: 20,
+        dom_purity: 2,
+        dom_lethal: 20,
+        dom_duration: 4,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/naruto/images/3/33/Deidara_Eye_Scope.png/revision/latest?cb=20160109162348'
     },
     {
@@ -910,6 +982,18 @@ const database = [
         genjutsu: 6,
         gen_power: 45,
         willpower: 2,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Limitless-Reversal: Red',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 1,
+        curse_cost: 25,
+        dom_purity: 8,
+        dom_lethal: 10,
+        dom_duration: 4,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.redd.it/y8xbcb5tiooa1.jpg'
     },
     {
@@ -947,6 +1031,18 @@ const database = [
         genjutsu: 10,
         gen_power: 60,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 40, // 100 is best
+        cursed_tech: 'Albatross - Increase Element Attack by 100',
+        curse_amount: 100, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 15,
+        dom_purity: 3,
+        dom_lethal: 30,
+        dom_duration: 5,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.pinimg.com/236x/3a/8f/da/3a8fdaabc0abd426c7c09e8b0588949a.jpg'
     },
     {
@@ -984,6 +1080,18 @@ const database = [
         genjutsu: 4,
         gen_power: 40,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 55, // 100 is best
+        cursed_tech: 'Resonance - Incrase Critical by .65',
+        curse_amount: .65, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 9,
+        dom_purity: 5,
+        dom_lethal: 50,
+        dom_duration: 5,
+        dom_cost: 31,
+        dom_name: '',
         image: 'https://i.pinimg.com/originals/d8/08/eb/d808eb40caf400d332c02751eda72d68.jpg'
     },
     {
@@ -1021,6 +1129,18 @@ const database = [
         genjutsu: 3,
         gen_power: 20,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Blade of the right hand - Increase Attack by 60',
+        curse_amount: 60, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 12,
+        dom_purity: 2,
+        dom_lethal: 20,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://i.pinimg.com/736x/a8/26/45/a826458e9ec3b3e63687e831a0841546.jpg'
     },
     {
@@ -1058,6 +1178,18 @@ const database = [
         genjutsu: 6,
         gen_power: 60,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 65, // 100 is best
+        cursed_tech: 'Idle-Transfiguration - Decrease Any Stat by 20%',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 1,
+        curse_cost: 20,
+        dom_purity: 2,
+        dom_lethal: 20,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/narutolightningchronicles/images/e/e8/Orochimaru2.jpg/revision/latest?cb=20120916043631'
     },
     {
@@ -1074,7 +1206,7 @@ const database = [
         strength: 1.5,
         potency: .10,
         accuracy: 8,
-        evasion: 8,
+        evasion: 6,
         buff: 'Increase Elemental Defense by 30%',
         buff2: 'Increase Chakra Recovery by 3',
         buff_acc: 65,
@@ -1095,6 +1227,18 @@ const database = [
         genjutsu: 3,
         gen_power: 30,
         willpower: 3,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 55, // 100 is best
+        cursed_tech: 'Projection-Sorcery - Double Evasion',
+        curse_amount: 6, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 10,
+        dom_purity: 7,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://preview.redd.it/i-tried-to-make-kishibe-a-bit-more-lively-v0-ke8dx7n9oxoa1.jpg?width=640&crop=smart&auto=webp&s=30f8a2bebb02a1782f1418be2c76debf6493d0e9'
     },
     {
@@ -1133,7 +1277,7 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 70, // 100 is best
-        cursed_tech: "Idle-Transfiguration - Decrease any stat by 15%",
+        cursed_tech: "Idle-Transfiguration - Decrease any stat by 20%",
         curse_duration: 1,
         curse_cost: 12,
         dom_purity: 10,

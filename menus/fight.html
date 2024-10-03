@@ -576,18 +576,21 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-rajin"];
-        const attack = ["Divergent-Fist", "Blade"];
+        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin"];
+        const attacking = ["Divergent-Fist", "Blade"];
         const defense = ["Reverse"];
-        const critical = ["Black-Flash"];
+        const critical = ["Black-Flash", "Resonance"];
         const strength = ["Muscular-Expansion"];
         const potency = ["Disaster-Flames", "Hairpin"];
         const magic_defense = ["Simple-Barrier"];
+        const magic_attack = ['Albatross']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
-        const damage = ["Dismantle"];
-        const luck = ["Miracle", "Idle-Death-Gamble"];
+        const damage = ["Dismantle", 'Granite-Blast']; //** NEW please add me**
+        const luck = ["Miracle"];
         const chakra_cost = ["Falling-Blossom-Emotion"];
-        const misc = ["Idle-Death-Gamble"];
+        const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
+        const drain = ['Limitless-Reversal:'] //** NEW please add me**
+        const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
 
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
             let curse = curseWord.split(" ")[0]
@@ -613,7 +616,7 @@
                 if (abusive.includes(curse)) {
                     buff(100)
                 }
-                if (attack.includes(curse)) {
+                if (attacking.includes(curse)) {
                     redAttack += amount;
                     $('#redAttack').text(redAttack);
                 }
@@ -630,7 +633,7 @@
                     $('#redStr').text(redStr);
                 }
                 if (potency.includes(curse)) {
-                    redPotency += amount
+                    redPot += amount
                     $('#redPot').text(redPot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -657,44 +660,44 @@
                 }
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
                 ///////// LONG IF CHAIN ADD HERE//////////
-                if (evasive.includes(curse)) {
+                if (evasion.includes(curse)) {
                     blueEvas += amount
-                    $('#blueEvas').text(redEvas)
+                    $('#blueEvas').text(bluedEvas)
                 }
                 if (abusive.includes(curse)) {
                     buff(100)
                 }
-                if (attack.includes(curse)) {
+                if (attacking.includes(curse)) {
                     blueAttack += amount;
-                    $('#blueAttack').text(redAttack);
+                    $('#blueAttack').text(blueAttack);
                 }
                 if (defense.includes(curse)) {
                     blueDefense += amount
-                    $('#blueDefense').text(redDefense);
+                    $('#blueDefense').text(blueDefense);
                 }
                 if (critical.includes(curse)) {
                     blueCrit += amount;
-                    $('#blueCrit').text(redCrit);
+                    $('#blueCrit').text(blueCrit);
                 }
                 if (strength.includes(curse)) {
                     blueStrength += amount;
-                    $('#blueStr').text(redStr);
+                    $('#blueStr').text(blueStr);
                 }
                 if (potency.includes(curse)) {
-                    bluePotency += amount
-                    $('#bluePot').text(redPot);
+                    bluePot += amount
+                    $('#bluePot').text(bluePot);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef += amount
-                    $('#blueElmDef').text(redElmDef);
+                    $('#blueElmDef').text(blueElmDef);
                 }
                 if (luck.includes(curse)) {
                     blueLuck += amount
-                    $('#blueLuck').text(redLuck)
+                    $('#blueLuck').text(blueLuck)
                 }
                 if (chakra_cost.includes(curse)) {
                     blueNenNinCost -= amount
-                    $('#blueNinPow').text(redNenNinCost)
+                    $('#blueNinPow').text(blueNenNinCost)
                 }
                 /////////// END OF IF CHAIN /////////////
                 $('#blueCurseUi').text(curse)
@@ -702,11 +705,11 @@
 
         }
         // Function to remove a curse for a player
-        function removeCurse(player, curseName) {
+        function removeCurse(player, curse) {
             let curses = player === 'red' ? redCurses : blueCurses;
-            const curseIndex = curses.findIndex(c => c.name === curseName);
+            const curseIndex = curses.findIndex(c => c.name === curse);
             if (curseIndex === -1) {
-                console.log(`${curseName} is not active on Player ${player.toUpperCase()}.`);
+                console.log(`${curse} is not active on Player ${player.toUpperCase()}.`);
                 return;
             }
 
@@ -718,7 +721,7 @@
                     redEvas -= amount
                     $('#redEvas').text(redEvas)
                 }
-                if (attack.includes(curse)) {
+                if (attacking.includes(curse)) {
                     redAttack -= amount;
                     $('#redAttack').text(redAttack);
                 }
@@ -735,7 +738,7 @@
                     $('#redStr').text(redStr);
                 }
                 if (potency.includes(curse)) {
-                    redPotency -= amount
+                    redPot -= amount
                     $('#redPot').text(redPot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -750,13 +753,14 @@
                     redNenNinCost += amount
                     $('#redNinPow').text(redNenNinCost)
                 }
+                $('#redCurseUi').text('')
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (evasion.includes(curse)) {
                     blueEvas -= amount
                     $('#blueEvas').text(blueEvas)
                 }
-                if (attack.includes(curse)) {
+                if (attacking.includes(curse)) {
                     blueAttack -= amount;
                     $('#blueAttack').text(blueAttack);
                 }
@@ -773,7 +777,7 @@
                     $('#blueStr').text(blueStr);
                 }
                 if (potency.includes(curse)) {
-                    bluePotency -= amount
+                    bluePot -= amount
                     $('#bluePot').text(bluePot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -788,9 +792,10 @@
                     blueNenNinCost += amount
                     $('#blueNinPow').text(blueNenNinCost)
                 }
+                $('#blueCurseUi').text('')
             }
             curses.splice(curseIndex, 1);
-            console.log(`${curseName} has worn off on Player ${player.toUpperCase()}!`);
+            console.log(`${curse} has worn off on Player ${player.toUpperCase()}!`);
         }
 
 

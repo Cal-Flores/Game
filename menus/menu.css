@@ -341,7 +341,7 @@ body {
     border: 1px solid #5D5142;
     min-width: 60px;
     /* Set a minimum width to prevent shrinking too much */
-    height: 36px;
+    height: 35px;
 }
 
 .fight_corner_stats p {
@@ -452,10 +452,12 @@ hr {
 }
 
 .nen_numbers>p {
-    line-height: 3px;
+    line-height: 2px;
     font-size: 13px;
 }
 
 .nen_numbers {
-    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
