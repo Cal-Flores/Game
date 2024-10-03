@@ -23,7 +23,7 @@ const database = [
         strength: 2,
         potency: .35,
         accuracy: 4,
-        evasion: 7,
+        evasion: 4,
         chakra: 0,
         chakra_rec: 7,
         // ninjutsu and luck
@@ -47,15 +47,16 @@ const database = [
         willpower: 8,
         // cursed attacks
         cursed_energy: 0,
-        cursed_recovery: 90, // 100 is best
-        cursed_tech: 'Teleport - Increase Evasion 50%',
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Projection-Sorcery - Increase Evasion by 5',
+        curse_amount: 5,
         curse_duration: 6,
-        curse_cost: 6,
-        dom_purity: 9,
-        dom_lethal: 300,
-        dom_duration: 10,
+        curse_cost: 9,
+        dom_purity: 6,
+        dom_lethal: 75,
+        dom_duration: 3,
         dom_cost: 30,
-        dom_name: 'Infinate Void',
+        dom_name: '',
         //additonal
         elm: sage,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/78/Chrollo_Lucilfer_GI_Portrait.png/revision/latest?cb=20130502190618'
@@ -97,14 +98,15 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 50, // 100 is best
-        cursed_tech: 'Boogie-Woogie - Increase Evasion 50%',
+        cursed_tech: 'Falling-Blossom-Emotion - Ninjutsu cost halved',
+        curse_amount: 6, //instead of prompt
         curse_duration: 6,
         curse_cost: 6,
-        dom_purity: 9,
-        dom_lethal: 300,
+        dom_purity: 4,
+        dom_lethal: 120,
         dom_duration: 3,
-        dom_cost: 10,
-        dom_name: 'Hells Cabinet',
+        dom_cost: 28,
+        dom_name: '',
         elm: fire,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
@@ -120,7 +122,7 @@ const database = [
         critical: .80,
         hp: 2368,
         strength: 1.7,
-        potency: .40,
+        potency: .25,
         accuracy: 9,
         evasion: 8,
         buff: 'Increase Defense by 40%',
@@ -143,6 +145,18 @@ const database = [
         genjutsu: 5,
         gen_power: 70,
         willpower: 3,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Disaster-Flames - Increase Potency by .50',
+        curse_amount: .50, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 6,
+        dom_purity: 6,
+        dom_lethal: 85,
+        dom_duration: 5,
+        dom_cost: 28,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
     {
@@ -180,6 +194,18 @@ const database = [
         genjutsu: 9,
         gen_power: 70,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Brain-Manipulation - Decrease a stat by 20%',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 1,
+        curse_cost: 10,
+        dom_purity: 6,
+        dom_lethal: 65,
+        dom_duration: 5,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/72/Illumi_Zoldyck_HCE_Portrait.png/revision/latest/scale-to-width/360?cb=20181227022223'
     },
     {
@@ -217,6 +243,18 @@ const database = [
         genjutsu: 2,
         gen_power: 20,
         willpower: 2,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 30, // 100 is best
+        cursed_tech: 'Divergent-Fist - Increase Attack by 44',
+        curse_amount: 44, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 14,
+        dom_purity: 2,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/88/HxH2011_EP41_Phinks_Portrait.png/revision/latest?cb=20221008055432'
     },
     {
@@ -246,14 +284,26 @@ const database = [
         ninjutsu: "Nen Threads - Take two turns after capture",
         nin_cost: 25,
         ninjutsu_pow: 135,
-        ninjutsu2: 'Nen Stiches - Recover 150 Hp',
-        ninJutsu2cost: 17,
+        ninjutsu2: 'Nen Stiches - Recover 200 Hp',
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 0,
         elm: lightning,
         luck: 6,
         genjutsu: 2,
         gen_power: 20,
         willpower: 6,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 40, // 100 is best
+        cursed_tech: 'Reverse - Increase Defense by 100',
+        curse_amount: 100, //instead of prompt
+        curse_duration: 8,
+        curse_cost: 11,
+        dom_purity: 2,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/4c/Machi_Komacine_HA_Portrait.png/revision/latest?cb=20131116122706'
     },
     {
@@ -291,6 +341,18 @@ const database = [
         genjutsu: 4,
         gen_power: 30,
         willpower: 2,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 55, // 100 is best
+        cursed_tech: 'Falling-Blossom-Emotion take 6 off Chakra cost',
+        curse_amount: 6, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 6,
+        dom_purity: 2,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/9/9e/HxH2011_EP53_Shizuku_Portrait.png/revision/latest?cb=20230122061315'
     },
     {
@@ -328,6 +390,18 @@ const database = [
         genjutsu: 7,
         gen_power: 40,
         willpower: 8,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: 'Brain-Manipulation - Decrease any stat by 10%',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 1,
+        curse_cost: 8,
+        dom_purity: 6,
+        dom_lethal: 70,
+        dom_duration: 5,
+        dom_cost: 27,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
     },
     {
@@ -357,7 +431,7 @@ const database = [
         ninjutsu: "Dark Bushido - Reduce Genjutsu by 80%",
         nin_cost: 30,
         ninjutsu_pow: 400,
-        ninjutsu2: 'Iaidō Master - Increase Attack by 5%',
+        ninjutsu2: 'Iaidō Master - Increase Element Defense by 8%',
         ninJutsu2cost: 18,
         ninJutsu2Dmg: 270,
         elm: dark,
@@ -365,6 +439,18 @@ const database = [
         genjutsu: 4,
         gen_power: 30,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 65, // 100 is best
+        cursed_tech: 'Blade of the Right Hand - Increase Attack by 55',
+        curse_amount: 55, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 8,
+        dom_purity: 6,
+        dom_lethal: 60,
+        dom_duration: 4,
+        dom_cost: 20,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/46/HxH2011_EP50_Nobunaga_Portrait.png/revision/latest?cb=20230122183803'
     },
     {
@@ -404,6 +490,18 @@ const database = [
         genjutsu: 3,
         gen_power: 30,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 30, // 100 is best
+        cursed_tech: 'Muscular-Expansion - Doubles Strength',
+        curse_amount: 2, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 12,
+        dom_purity: 6,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
     {
@@ -441,6 +539,18 @@ const database = [
         genjutsu: 7,
         gen_power: 70,
         willpower: 7,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 60, // 100 is best
+        cursed_tech: 'Idle Death Gamble - Can gamble 800 health',
+        curse_amount: 0, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 11,
+        dom_purity: 7,
+        dom_lethal: 125,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/d/da/Pakunoda_YC_Portrait.png/revision/latest?cb=20190124184929'
     },
     {
@@ -478,6 +588,18 @@ const database = [
         genjutsu: 4,
         gen_power: 25,
         willpower: 4,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 35, // 100 is best
+        cursed_tech: 'Hairpin - Increase Potency by .55',
+        curse_amount: .55, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 8,
+        dom_purity: 2,
+        dom_lethal: 25,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251'
     },
     {
@@ -515,6 +637,18 @@ const database = [
         genjutsu: 8,
         gen_power: 80,
         willpower: 6,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 65, // 100 is best
+        cursed_tech: 'Simple-Barrier',
+        curse_amount: 80, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 12,
+        dom_purity: 7,
+        dom_lethal: 50,
+        dom_duration: 10,
+        dom_cost: 34,
+        dom_name: '',
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     },
 
@@ -999,7 +1133,7 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 70, // 100 is best
-        cursed_tech: "Idle-Transfiguration - decrease any stat by 35%",
+        cursed_tech: "Idle-Transfiguration - Decrease any stat by 15%",
         curse_duration: 1,
         curse_cost: 12,
         dom_purity: 10,
