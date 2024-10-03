@@ -146,7 +146,24 @@
         let redDomName
         let redStatus = []
         let redCurses = []
+        function chargeCurse(player, damage) {
+            console.log(`time to charge ${player} player,,,${damage} damage`)
+            let currRedCurse = parseInt($('#redCurrCurse').text(), 10);
+            let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10);
 
+            if (player == 'red') {
+                let firstRecovery = 100 - redCurseRec;
+                let recovery = damage / firstRecovery;
+                currRedCurse += recovery;
+                $('#redCurrCurse').text(Math.round(currRedCurse))
+            } else {
+                let firstRecovery = 100 - blueCurseRec;
+                let recovery = damage / firstRecovery;
+                currBlueCurse += recovery;
+                $('#blueCurrCurse').text(Math.round(currBlueCurse))
+            }
+
+        }
 
         function buff(buff) {
 
@@ -154,7 +171,7 @@
             isBuff = Math.random() < buff;
             if (isBuff) {
                 alert('success');
-                let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redNinCost, redNinjutsuPower, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redHeal, redNinjutsuCost, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueNinCost, blueChakraPower, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueHeal, blueNinjutsuCost, blueNinjutsuPower');
+                let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
                 if (stat_max == 'redHeal') {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -200,6 +217,13 @@
                             redElmAttack = Math.floor(redElmAttack * (1 + stat_number));
                         } else {
                             redElmAttack = Math.floor(redElmAttack * (1 - stat_number));
+                        }
+                        break;
+                    case 'redUltNinCost':
+                        if (stat_type == 'Increase') {
+                            redNinCost = Math.floor(redNinCost * (1 + stat_number));
+                        } else {
+                            redNinCost = Math.floor(redNinCost * (1 - stat_number));
                         }
                         break;
                     case 'redElmDef':
@@ -442,6 +466,20 @@
                             blueNenNinCost = Math.floor(blueNenNinCost * (1 - stat_number));
                         }
                         break;
+                    case 'blueDomPurity':
+                        if (stat_type == 'Increase') {
+                            blueDomPurity = Math.floor(blueDomPurity * (1 + stat_number));
+                        } else {
+                            blueDomPurity = Math.floor(blueDomPurity * (1 - stat_number));
+                        }
+                        break;
+                    case 'redDomPurity':
+                        if (stat_type == 'Increase') {
+                            redDomPurity = Math.floor(redDomPurity * (1 + stat_number));
+                        } else {
+                            redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
+                        }
+                        break;
                     default:
                         alert('Invalid stat');
                         break;
@@ -500,12 +538,13 @@
                 let explosionDamage = power * 10;
                 let currRedHp = parseInt($('#redHP').text(), 10);
                 $('#redHP').text(currRedHp - explosionDamage);
+                chargeCurse('red', explosionDamage)
                 alert('Tsukuyomi explodes! Red takes ' + explosionDamage + ' damage.');
             } else if (defender === 'blue') {
                 let power = parseInt($('#redChakra').text(), 10)
                 let explosionDamage = power * 10;
                 let currBlueHp = parseInt($('#blueHP').text(), 10);
-
+                chargeCurse('blue', explosionDamage)
                 $('#blueHP').text(currBlueHp - explosionDamage);
                 alert('Tsukuyomi explodes! Blue takes ' + explosionDamage + ' damage.');
             }
@@ -537,16 +576,17 @@
         }
         function applyCurseTech(attacker, curseWord, duration, cost) {
             let curse = curseWord.split(" ")[0]
-            console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns`)
+            console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns and a cost of ${cost}`)
             let amount = parseInt(prompt('Add how much'), 10)
             let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10)
             let currRedCurse = parseInt($('#redCurrCurse').text(), 10)
 
             // all curse Techniques!!!!!!!! //////////
             let evasive = ['Teleport', 'Boogie-Woogie', 'Flying-Rajin']
+            let abusive = ['Idle-Transfiguration']
 
             if (attacker == 'red') {
-                if (redCurseEnergy < cost) {
+                if (currRedCurse < cost) {
                     alert('Not enough curse energy')
                     return
                 } else {
@@ -554,13 +594,17 @@
                     $('#redCurrCurse').text(currRedCurse)
                 }
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
+                ///////// LONG IF CHAIN ADD HERE//////////
                 if (evasive.includes(curse)) {
                     redEvas += amount
                     $('#redEvas').text(redEvas)
                 }
+                if (abusive.includes(curse)) {
+                    buff(100)
+                }
                 $('#redCurseUi').text(curse)
             } else {
-                if (blueCurseEnergy < cost) {
+                if (currBlueCurse < cost) {
                     alert('Not enough curse energy')
                     return
                 } else {
@@ -568,9 +612,13 @@
                     $('#blueCurrCurse').text(currBlueCurse)
                 }
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
-                if (curse == 'Teleport') {
+                ///////// LONG IF CHAIN ADD HERE//////////
+                if (evasive.includes(curse)) {
                     blueEvas += amount
                     $('#blueEvas').text(blueEvas)
+                }
+                if (abusive.includes(curse)) {
+                    buff(100)
                 }
                 $('#blueCurseUi').text(curse)
             }
@@ -578,6 +626,8 @@
         }
         // Function to remove a curse for a player
         function removeCurse(player, curseName) {
+            let evasive = ['Teleport', 'Boogie-Woogie', 'Flying-Rajin']
+            let abusive = ['Idle-Transfiguration']
             let curses = player === 'red' ? redCurses : blueCurses;
             const curseIndex = curses.findIndex(c => c.name === curseName);
             if (curseIndex === -1) {
@@ -586,8 +636,8 @@
             }
 
             const amount = curses[curseIndex].amount;
-
-            if (curseName === 'Teleport') {
+            ////////// LONG IF CHAIN //////////////
+            if (evasive.includes(curseName)) {
                 if (player === 'red') {
                     redEvas -= amount;
                     $('#redEvas').text(redEvas);
@@ -595,6 +645,14 @@
                 } else {
                     blueEvas -= amount;
                     $('#blueEvas').text(blueEvas);
+                    $('#blueCurseUi').text('')
+                }
+            }
+            if (abusive.includes(curseName)) {
+                if (player === 'red') {
+                    $('#redCurseUi').text('')
+                } else {
+                    blueEvas -= amount;
                     $('#blueCurseUi').text('')
                 }
             }
@@ -607,7 +665,7 @@
         function applyStatusEffect(defender, statusEffect) {
             let duration = 4; // Default duration for all effects
             if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
-                duration = 2
+                duration = 4
             } else if (statusEffect == 'Confusion') {
                 duration = 4
             } else if (statusEffect == 'Tsukuyomi') {
@@ -876,14 +934,16 @@
 
             setTimeout(() => {
                 kyo = ['Ko', 'Ken', 'Ryu']
-                if (currRedCurse < cost) {
-                    alert('Not enought curse energy')
-                    return
-                } else {
-                    currRedCurse -= cost
-                    $('#redCurrCurse').text(currRedCurse)
-                }
+
                 if (attacker == 'red') {
+                    if (currRedCurse < cost) {
+                        alert('Not enought curse energy')
+                        $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
+                        return
+                    } else {
+                        currRedCurse -= cost
+                        $('#redCurrCurse').text(currRedCurse)
+                    }
                     alert(`Ryōiki Tenkai.. defend ${duration} hits!`)
                     for (let i = 1; i <= duration; i++) {
                         if (i % 2 == 1 && i != 1) {
@@ -903,6 +963,42 @@
                             runningDamage += 1
                             currBlueHp -= lethal
                             $('#blueHP').text(currBlueHp - lethal);
+                            chargeCurse('blue', lethal)
+                            alert(`Lethal Hit! ${lethal} damage dealt, total: ${lethal * runningDamage}`)
+                        } else {
+                            alert('blocked 🛡🛡')
+                        }
+                    }
+                    alert('Domain has concluded..')
+                } else {
+                    if (currBlueCurse < cost) {
+                        alert('Not enought curse energy')
+                        $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
+                        return
+                    } else {
+                        currBlueCurse -= cost
+                        $('#blueCurrCurse').text(currBlueCurse)
+                    }
+                    alert(`Ryōiki Tenkai.. defend ${duration} hits!`)
+                    for (let i = 1; i <= duration; i++) {
+                        if (i % 2 == 1 && i != 1) {
+                            let chance = tryEscape(blueDomPurity, redDomPurity)
+                            if (chance) {
+                                alert('You have created a hole to escape from!')
+                                $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
+                                return
+                            } else {
+                                alert('The Domain wont break!')
+                            }
+                        }
+                        let attackerChoice = getRandomItem(kyo)
+                        let defenderChoice = prompt('Ko -> Ken -> Ryu')
+                        let outcome = determineWinner(defenderChoice, attackerChoice)
+                        if (outcome != 'SAFE') {
+                            runningDamage += 1
+                            currRedHp -= lethal
+                            $('#redHP').text(currRedHp - lethal);
+                            chargeCurse('red', lethal)
                             alert(`Lethal Hit! ${lethal} damage dealt, total: ${lethal * runningDamage}`)
                         } else {
                             alert('blocked 🛡🛡')
@@ -1035,9 +1131,11 @@
                     let ultDamage = Math.round(((blueGenPow * 3.75) * (1 + variance)) * ultimaChance);
                     alert(`Ultima deals ${ultDamage} damage to Red 🐈‍⬛`);
                     $('#redHP').text(currRedHp - ultDamage);  // Subtract correct damage
+                    chargeCurse('red', ultDamage)
                 } else {
                     let ultDamage = Math.round(((redGenPow * 3.75) * (1 + variance)) * ultimaChance);
                     alert(`Ultima deals ${ultDamage} damage to Blue 🐈‍⬛`);
+                    chargeCurse('blue', ultDamage)
                     $('#blueHP').text(currBlueHp - ultDamage);  // Subtract correct damage
                 }
             }
@@ -1049,11 +1147,13 @@
                     let flareDamage = Math.round((blueGenPow * 3.75) * (1 + variance));
                     alert(`Flare! Red takes ${flareDamage} damage ❤️‍🔥`)
                     $('#redHP').text(currRedHp - flareDamage);
+                    chargeCurse('red', flareDamage)
                 } else {
                     let variance = Math.random() * 0.2 - 0.1;
                     let flareDamage = Math.round((redGenPow * 3.75) * (1 + variance));  // Rounding to nearest whole number
                     alert(`Flare! Blue takes ${flareDamage} damage ❤️‍🔥`)
                     $('#blueHP').text(currBlueHp - flareDamage);
+                    chargeCurse('blue', flareDamage)
                 }
             }
 
@@ -1110,9 +1210,11 @@
                         // Update damage message and append critical message
                         $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#blueHP').text(currBlueHp - magicDamage);
+                        chargeCurse('blue', magicDamage)
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('blue', 175)
                     }
 
                 } else { // For blue attacker
@@ -1160,9 +1262,11 @@
                         // Update damage message and append critical message
                         $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#redHP').text(currRedHp - magicDamage);
+                        chargeCurse('red', magicDamage)
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('red', 175)
                     }
                 }
 
@@ -1180,7 +1284,7 @@
                     let lethal = blueDomLethal;
                     let duration = blueDomDuration;
                     let defense = redDomPurity
-                    let cost = redDomCost
+                    let cost = blueDomCost
                     callDomain(attacker, purity, lethal, duration, defense, cost)
                 }
             }
@@ -1192,10 +1296,12 @@
                     techName = $('#redTechName').text()
                     duration = redCurseDuration
                     cost = redCurseCost
+                    console.log('CURSESSSSS', cost)
                 } else {
                     techName = $('#blueTechName').text()
                     duration = blueCurseDuration
                     cost = blueCurseCost
+                    console.log('CURSESSSSS', cost)
                 }
                 applyCurseTech(attacker, techName, duration, cost)
             }
@@ -1367,11 +1473,13 @@
                         $('#blueHP').text(currBlueHp - redNinPower);
                         $('#crit').text(redChakra)
                         $('#damage').text(`🌋🌋 ${redNinPower}  🌋🌋`)
+                        chargeCurse('blue', redNinPower)
                         buff(100)
                         endRound()
                         return
                     } else {
                         $('#damage').text('Red Misses ❌')
+                        chargeCurse('blue', blueNinPower)
                         return
                     }
 
@@ -1386,11 +1494,13 @@
                         $('#blueChakra').text(currBlueChakra)
                         $('#redHP').text(currRedHp - blueNinPower);
                         $('#damage').text(`🌋🌋  ${blueNinPower}  🌋🌋`)
+                        chargeCurse('red', blueNinPower)
                         buff(100)
                         endRound()
                         return
                     } else {
                         $('#damage').text('Blue Misses ❌')
+                        chargeCurse('red', blueNinPower)
                         return
                     }
 
@@ -1409,11 +1519,13 @@
                         $('#blueHP').text(currBlueHp - redNenNinDmg);
                         $('#crit').text(redChakra)
                         $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
+                        chargeCurse('blue', redNinPower)
                         buff(100)
                         endRound()
                         return
                     } else {
                         $('#damage').text('Red Misses ❌')
+                        chargeCurse('blue', redNinPower)
                         return
                     }
 
@@ -1428,11 +1540,13 @@
                         $('#blueChakra').text(currBlueChakra)
                         $('#redHP').text(currRedHp - blueNenNinDmg);
                         $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
+                        chargeCurse('red', blueNinPower)
                         buff(100)
                         endRound()
                         return
                     } else {
                         $('#damage').text('Blue Misses ❌')
+                        chargeCurse('red', blueNinPower)
                         return
                     }
 
@@ -1497,6 +1611,7 @@
                         $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
                         $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        chargeCurse('red', selfDamage)
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < redCrit;
@@ -1508,9 +1623,11 @@
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                        chargeCurse('blue', damage)
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('blue', 175)
                     }
                 } else if (attacker === 'blue') {
                     hitChance = calculateHitChance(blueAcc, redEvas);
@@ -1533,6 +1650,7 @@
                         $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
                         $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        chargeCurse('blue', selfDamage)
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < blueCrit;
@@ -1544,10 +1662,12 @@
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
+                        chargeCurse('red', damage)
                     } else {
                         // Display a miss message if the hit chance fails
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('red', 175)
                     }
                 }
             }
@@ -1682,7 +1802,7 @@
     </div>
 </div>
 <hr>
-                <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> 😈 ${player.curse_duration} turns ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
+                <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                 <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                 <hr>
@@ -1832,7 +1952,7 @@
 </div>
 
 <hr>
-               <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> 😈 ${player.curse_duration} turns ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
+               <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
                <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
                   <hr>
@@ -1872,6 +1992,7 @@
                     blueDomPurity = player.dom_purity
                     blueDomLethal = player.dom_lethal
                     blueDomCost = player.dom_cost
+                    blueDomDuration = player.dom_duration
                     blueDomName = player.dom_name
                     originalBlueRecovery = player.chakra_rec
                     originalBlueAttack = player.attack
