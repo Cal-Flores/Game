@@ -597,6 +597,11 @@
             console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns and a cost of ${cost} increased by ${amount}`)
             let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10)
             let currRedCurse = parseInt($('#redCurrCurse').text(), 10)
+            let currBlueHp = parseInt($('#blueHP').text(), 10);
+            let currRedHp = parseInt($('#redHP').text(), 10);
+            let currBlueChakra = parseInt($('#blueChakra').text(), 10);
+            let currRedChakra = parseInt($('#redChakra').text(), 10);
+
 
 
             if (attacker == 'red') {
@@ -612,6 +617,18 @@
                 if (evasion.includes(curse)) {
                     redEvas += amount
                     $('#redEvas').text(redEvas)
+                }
+                if (damage.includes(curse)) {
+                    currBlueHp -= amount;
+                    $('#blueHP').text(currBlueHp);
+                }
+                if (genjutsu.includes(curse)) {
+                    redGen += amount;
+                    $('#redGen').text(redGen)
+                }
+                if (drain.includes(curse)) {
+                    currBlueChakra -= amount;
+                    $('#blueChakra').text(currBlueChakra)
                 }
                 if (abusive.includes(curse)) {
                     buff(100)
@@ -699,6 +716,18 @@
                     blueNenNinCost -= amount
                     $('#blueNinPow').text(blueNenNinCost)
                 }
+                if (damage.includes(curse)) {
+                    currRedHp -= amount;
+                    $('#redHP').text(currRedHp);
+                }
+                if (genjutsu.includes(curse)) {
+                    blueGen += amount;
+                    $('#blueGen').text(blueGen)
+                }
+                if (drain.includes(curse)) {
+                    currRedChakra -= amount;
+                    $('#redChakra').text(currRedChakra)
+                }
                 /////////// END OF IF CHAIN /////////////
                 $('#blueCurseUi').text(curse)
             }
@@ -753,6 +782,10 @@
                     redNenNinCost += amount
                     $('#redNinPow').text(redNenNinCost)
                 }
+                if (genjutsu.includes(curse)) {
+                    redGen -= amount;
+                    $('#redGen').text(redGen)
+                }
                 $('#redCurseUi').text('')
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
@@ -791,6 +824,10 @@
                 if (chakra_cost.includes(curse)) {
                     blueNenNinCost += amount
                     $('#blueNinPow').text(blueNenNinCost)
+                }
+                if (genjutsu.includes(curse)) {
+                    blueGen -= amount;
+                    $('#blueGen').text(blueGen)
                 }
                 $('#blueCurseUi').text('')
             }

@@ -986,7 +986,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 50, // 100 is best
         cursed_tech: 'Limitless-Reversal: Red',
-        curse_amount: 0, //instead of prompt
+        curse_amount: 50, //instead of prompt
         curse_duration: 1,
         curse_cost: 25,
         dom_purity: 8,
