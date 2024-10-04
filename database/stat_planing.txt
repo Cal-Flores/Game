@@ -13,11 +13,26 @@ domain-Lethal-duration | curse | Ninjutsu
 Genjutsu | power | willpower | buff
 
 
+Speed:
+
+1| Meruem -
+2| Neferpitou -
+2| Minato -
+2| Tobirama -
+2| Chakra Naruto -
+3| Anbu Kakashi -
+5| Godspeed Killua -
+6| Rage Tobi -
+8| Kobeni -
+9| Ikalgo -
+
+
+
 Defense:
 
 1| Armor Titan - Def, m def, attack, willpower | critical, ninjutsu, recovery, evas, curse, genjutsu, domain, power
 2| Menthuthuyoupi - Def, M.def, magic, domain | willpower, ninjutsu, recovery, evas, poteny, genjutsu, power, critical
-3| Killer Bee - Def, M.def, Ninjutsu, recovery buffs, domain | magic, luck, genjutsu, willpower, magics, defense, 
+3| Killer Bee - Def, M.def, Ninjutsu, recovery buffs, domain | magic, luck, genjutsu, willpower, magics, defense,
 5| Gaara - Def, M.def, domain, ninjutsu, curse | attack, strength, effieciency, acc, evas, will power, genjutsu, power,
 7| Shukaku
 9| Choji
