@@ -1,0 +1,46 @@
+attack | defense | critical |  strength
+
+
+magic | magic defense | potency |  efficiency
+
+
+Luck | Accuracy | Evasion | recovery
+
+
+domain-Lethal-duration | curse | Ninjutsu
+
+
+Genjutsu | power | willpower | buff
+
+
+Defense:
+
+1| Armor Titan - Def, m def, attack, willpower | critical, ninjutsu, recovery, evas, curse, genjutsu, domain, power
+2| Menthuthuyoupi - Def, M.def, magic, domain | willpower, ninjutsu, recovery, evas, poteny, genjutsu, power, critical
+3| Killer Bee - Def, M.def, Ninjutsu, recovery buffs, domain | magic, luck, genjutsu, willpower, magics, defense, 
+5| Gaara - Def, M.def, domain, ninjutsu, curse | attack, strength, effieciency, acc, evas, will power, genjutsu, power,
+7| Shukaku
+9| Choji
+
+
+Emitters:
+3 good magic stats 0 bad no 2 bad| 1 good physical 1 bad | ❌ recovery | 1 good/bad def stat| 2 good gen |
+
+2| Amaterasu Sasuke - Magic, Eff, Ninjutsu, Def, Acc, Gen |  Domain, potency, Luck, Evasion, Power, critical | 217
+3| Itachi - Magic, Ninjutsu, attack, power, buff, Evas | Domain, Lucky, magic def, strength, critical, willpower | 209
+4| Feitan - Magic, Evas, Acc, critical, potency, efficiency | curse, def, genjutsu, recovery, luck, M.def | 201
+5| Konan - Magic, willpower, domain, curse, potency, def | attack, efficiency, acc, m.def, luck, recovery | 194
+7| Franklin - Magic, m.def, def, ninjutsu, luck | attack, potency, evas, acc, domain, willpower | 178
+7| Yamato
+7| Kalluto
+8| Bisky
+8| Killua
+8| Pokkle
+8| Temari
+8| Suigetsu
+8| Sai
+
+Megumi
+Kakazu
+Noritoshi
+Beast titan

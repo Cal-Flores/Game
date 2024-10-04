@@ -170,29 +170,37 @@ Grade 11 -   561 | 140 each
 
 
 ---- IN ---
-1. Itadori ✅
-2. Nobara ✅
-3. Megumi ✅
-4. Gojo ✅
-5. Nanami ✅
-6. Sukuna ✅
-7. Todo ✅
-8. Kakazu
-9. Kisame
-10. Geto ✅
-11. Mahito ✅
-12. Toge ✅
-13. Panda ✅
-14. Mai ✅
-15. Kasume
-16. Mechamaru
-17. Momo ✅
-18. Noritoshi
-19. Maki ✅
-20. machette head
+1. Itadori ✅ attack
+2. Nobara ✅ curse
+3. Megumi ✅ emiiter
+4. Gojo ✅ domain
+5. Nanami ✅ attack
+6. Sukuna ✅ domain
+7. Todo ✅ attack
+8. Kakazu emitter
+9. Kisame chakra nen type
+10. Geto ✅ curse
+11. Mahito ✅ curse
+12. Toge ✅ curse
+13. Panda ✅ defense
+14. Mai ✅ luck
+15. Kasume ninjutsu
+16. Mechamaru ✅ pre-requisite
+17. Momo ✅ genjutsu
+18. Noritoshi emitter
+19. Maki ✅ attack
+20. Katana Man attack
+21. Female Titan ninjutsu
+22. Levi speed
+23. Attack Titan attack
+24. Mikasa attack
+25. Beast Titan emitter
+26. Collosal Titan defense
+27. Porco speed
+28. Pieck genjutsu 
+29. OPEN
 
-
----- MAYBE -----
+---- OUT -----
 1. ramen Naruto
 2. Jutsu Naruto
 3. Komugi
@@ -205,6 +213,16 @@ Grade 11 -   561 | 140 each
 10. Hidan
 11. Cat
 12. Pakkun
+13. Saskura
+14. Netero
+15. Pochita
+16. Hiroku
+17. Hisoka
+18. Gamabunta
+19. Gamakichi
+20. Sword Sasuke
+21. Auction Gon
+22. sign
 
 
 Naruto - 58
