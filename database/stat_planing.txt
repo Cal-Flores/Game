@@ -16,8 +16,8 @@ Genjutsu | power | willpower | buff
 Speed:
 
 1| Meruem -
-2| Neferpitou -
-2| Minato -
+2| Neferpitou - Evas,
+2| Minato - Evas, Ninjutsu, Willpower, critcial, strength, acc | domain, genjutsu, power, defense. m.defense, m.attack 
 2| Tobirama -
 2| Chakra Naruto -
 3| Anbu Kakashi -

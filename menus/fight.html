@@ -576,11 +576,11 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin"];
+        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash'];
         const attacking = ["Divergent-Fist", "Blade", 'Mutation'];
         const defense = ["Reverse", 'Veil'];
         const critical = ["Black-Flash"];
-        const strength = ["Muscular-Expansion"];
+        const strength = ["Muscular-Expansion", "Cursed-8-Swords"];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
         const magic_attack = ['Albatross']
@@ -646,7 +646,7 @@
                     $('#redCrit').text(redCrit);
                 }
                 if (strength.includes(curse)) {
-                    redStrength += amount;
+                    redStr += amount;
                     $('#redStr').text(redStr);
                 }
                 if (potency.includes(curse)) {
@@ -679,7 +679,7 @@
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (evasion.includes(curse)) {
                     blueEvas += amount
-                    $('#blueEvas').text(bluedEvas)
+                    $('#blueEvas').text(blueEvas)
                 }
                 if (abusive.includes(curse)) {
                     buff(100)
@@ -697,7 +697,7 @@
                     $('#blueCrit').text(blueCrit);
                 }
                 if (strength.includes(curse)) {
-                    blueStrength += amount;
+                    blueStr += amount;
                     $('#blueStr').text(blueStr);
                 }
                 if (potency.includes(curse)) {
