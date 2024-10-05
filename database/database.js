@@ -940,6 +940,56 @@ const database = [
         dom_name: '',
         image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
     },
+    {
+        name: 'Neferpitou',
+        nen_type: 'Specialist',
+        element: 'Dark',
+        attack: 294,
+        defense: 180,
+        elm_attack: 168,
+        elm_defense: 180,
+        elm_efficiency: 1,
+        critical: .55,
+        hp: 2353,
+        strength: 1.3,
+        potency: .15,
+        accuracy: 5,
+        evasion: 12,
+        buff: '',
+        buff2: '',
+        buff_acc: 60,
+        buff2_acc: 40,
+        chakra: 0,
+        chakra_rec: 3,
+        //ninjutsu
+        ninjutsu2: "Rasengan Decrease Curse by 10%",
+        ninJutsu2cost: 10,
+        ninJutsu2Dmg: 230,
+        nin2amount: -.10,
+        nin_cost: 34,
+        ninjutsu_pow: 0,
+        ninamount: -6,
+        ninjutsu: 'Reaper Death Seal - Seal away chakra by 6',
+        //end
+        elm: wind,
+        luck: 4,
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 7,
+        // cursed attacks
+        cursed_energy: 0,
+        cursed_recovery: 25, // 100 is best
+        cursed_tech: 'Flying-Rajin - Take two turns while activated',
+        curse_amount: 2, //instead of prompt
+        curse_duration: 6,
+        curse_cost: 12,
+        dom_purity: 3,
+        dom_lethal: 10,
+        dom_duration: 2,
+        dom_cost: 30,
+        dom_name: '',
+        image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
+    },
 
     {
         name: 'Obito',
