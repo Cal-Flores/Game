@@ -132,13 +132,13 @@ const database = [
         chakra: 0, // max 100
         chakra_rec: 3,
         //ninjutsu
-        ninjutsu2: "Rising Sun - Enhances defense by 100%",
+        ninjutsu2: "Rising-Sun - Enhances defense by 100%",
         ninJutsu2cost: 42,
         ninJutsu2Dmg: 380,
         nin2amount: 1,
         ninEnhance: true,
         //ultimate ninjutsu
-        ninjutsu: 'Pain Packer - Enhances Elemental by 8%',
+        ninjutsu: 'Pain-Packer - Enhances Elemental by 8%',
         nin_cost: 14,
         ninjutsu_pow: 225,
         ninamount: .08,
@@ -585,10 +585,10 @@ const database = [
         nin2amount: 0,
         ninEnhance: true,
         //ultimate ninjutsu
-        ninjutsu: "Double Machine Gun - Increase Nen Bullets by 40%",
+        ninjutsu: "Double-Machine Gun - Increase Nen Bullets by 25%",
         nin_cost: 19,
-        ninjutsu_pow: 200,
-        ninamount: .40,
+        ninjutsu_pow: 185,
+        ninamount: .25,
         ultEnhance: true,
         //end
         elm: water,
@@ -735,14 +735,14 @@ const database = [
         chakra: 0,
         chakra_rec: 5,
         //ninjutsu
-        ninjutsu2: "Sand Coffin - Increase Attack by 5%",
+        ninjutsu2: "Sand-Coffin - Increase Attack by 5%",
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 260,
         nin2amount: .05,
         ninEnhance: true,
         //ultimate ninjutsu
-        ninjutsu: 'Sand Mauseliem - Double Domain Duration',
-        nin_cost: 30,
+        ninjutsu: 'Sand-Mauseliem - Double Domain Duration',
+        nin_cost: 34,
         ninjutsu_pow: 200,
         ninamount: 4,
         ultEnhance: true,
@@ -788,7 +788,7 @@ const database = [
         chakra: 0,
         chakra_rec: 4,
         //ninjutsu
-        ninjutsu2: "Rage Blast - Decrease M.Def by 20%",
+        ninjutsu2: "Rage-Blast - Decrease M.Def by 20%",
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 300,
         nin2amount: .20,
@@ -851,7 +851,7 @@ const database = [
         nin_cost: 38,
         ninjutsu_pow: 500,
         ninamount: 0,
-        ultEnhance: false,
+        ultEnhance: true,
         //end
         elm: lightning,
         luck: 3,
@@ -861,8 +861,8 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 35, // 100 is best
-        cursed_tech: 'Cursed-8-Swords - Adds .8 to Weapon Strength',
-        curse_amount: .8, //instead of prompt
+        cursed_tech: 'Cursed-Gyuuki',
+        curse_amount: 4, //instead of prompt
         curse_duration: 6,
         curse_cost: 16,
         dom_purity: 9,
@@ -894,7 +894,7 @@ const database = [
         chakra: 0,
         chakra_rec: 5,
         //ninjutsu
-        ninjutsu2: "Aura Synthesis - Increase Any Stat by 10%",
+        ninjutsu2: "Aura-Synthesis - Increase Any Stat by 10%",
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 100,
         nin2amount: .10,
@@ -931,8 +931,8 @@ const database = [
         element: 'Wind',
         attack: 233,
         defense: 214,
-        elm_attack: 198,
-        elm_defense: 204,
+        elm_attack: 148,
+        elm_defense: 164,
         elm_efficiency: 1.2,
         critical: .50,
         hp: 2764,
@@ -989,30 +989,30 @@ const database = [
         elm_efficiency: 1,
         critical: .55,
         hp: 2353,
-        strength: 1.3,
+        strength: 1.2,
         potency: .15,
         accuracy: 5,
         evasion: 12,
-        buff: '',
-        buff2: '',
+        buff: 'Decrease Any stat by 10%',
+        buff2: 'Decrease Any stat by 10%',
         buff_acc: 60,
-        buff2_acc: 40,
+        buff2_acc: 60,
         chakra: 0,
         chakra_rec: 3,
         //ninjutsu
-        ninjutsu2: "",
-        ninJutsu2cost: 10,
-        ninJutsu2Dmg: 230,
-        nin2amount: -.10,
-        ninEnhance: false,
+        ninjutsu2: "Terpsichora - Increase Accuracy by 2",
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 245,
+        nin2amount: 2,
+        ninEnhance: true,
         //ultimate
-        ninjutsu: '',
-        nin_cost: 34,
+        ninjutsu: 'Doctor Blythe - Recover 275 HP',
+        nin_cost: 23,
         ninjutsu_pow: 0,
-        ninamount: -6,
-        ultEnhance: false,
+        ninamount: 275,
+        ultEnhance: true,
         //end
-        elm: wind,
+        elm: dark,
         luck: 6,
         genjutsu: 2,
         gen_power: 10,
@@ -1020,8 +1020,8 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 50, // 100 is best
-        cursed_tech: '',
-        curse_amount: 2, //instead of prompt
+        cursed_tech: 'Polymorphic Soul Isomer - Increase Strength by .8',
+        curse_amount: .8, //instead of prompt
         curse_duration: 6,
         curse_cost: 12,
         dom_purity: 3,
@@ -1029,7 +1029,7 @@ const database = [
         dom_duration: 2,
         dom_cost: 30,
         dom_name: '',
-        image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/20/109_-_Neferpitou_portrait.png/revision/latest?cb=20131218034405'
     },
 
     {
@@ -1103,7 +1103,7 @@ const database = [
         chakra: 0,
         chakra_rec: 5,
         // ninjutsu
-        ninjutsu2: "Amaterasu - Decrease Element Def or Def by 10%",
+        ninjutsu2: "Amaterasu - Decrease Defense by 10%",
         ninJutsu2cost: 22,
         ninJutsu2Dmg: 215,
         nin2amount: .10,
@@ -1125,12 +1125,12 @@ const database = [
         cursed_recovery: 35, // 100 is best
         cursed_tech: 'Black-Bird-Manipulation - Triple Genjutsu',
         curse_amount: 8, //instead of prompt
-        curse_duration: 6,
-        curse_cost: 10,
+        curse_duration: 8,
+        curse_cost: 12,
         dom_purity: 2,
-        dom_lethal: 20,
-        dom_duration: 2,
-        dom_cost: 30,
+        dom_lethal: 80,
+        dom_duration: 5,
+        dom_cost: 25,
         dom_name: '',
         image: 'https://static.wikia.nocookie.net/denaruto3/images/3/3c/ItachiUchiha.PNG/revision/latest?cb=20120705195723&path-prefix=de'
     },
@@ -1211,7 +1211,7 @@ const database = [
         nin2amount: 2,
         ninEnhance: true,
         //ultimate ninjutsu
-        ninjutsu: 'Amaterasu - Decrease Elemental defense by 20%',
+        ninjutsu: 'Flame-Control Amaterasu - Decrease Elemental defense by 20%',
         nin_cost: 29,
         ninjutsu_pow: 310,
         ninamount: .20,
@@ -1454,7 +1454,7 @@ const database = [
         chakra: 0,
         chakra_rec: 4,
         //ninjutsu
-        ninjutsu2: "Explosive Tags - Increase Efficiency by 10%",
+        ninjutsu2: "Explosive Tags - Increase Potency by 10%",
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 210,
         nin2amount: .10,

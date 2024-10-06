@@ -185,38 +185,39 @@
             }
 
             //physical
-            let attack = []
-            let defense = []
+            let attack = ['Sand-Coffin']
+            let defense = ['Harden', 'RAGE', 'Rising-Sun']
             let critical = []
             let Strength = []
             //Magic
-            let magic = []
-            let magicDef = []
-            let potency = []
+            let magic = ['Pain-Packer']
+            let magicDef = ['Amaterasu', 'Flame-Control', "Rage-Blast"]
+            let potency = ['Explosive']
             let efficieny = []
             //speed + recovery + luck
             let accuracy = []
-            let evasion = []
-            let recovery = ['Reaper']
+            let evasion = ['Dance']
+            let recovery = ['Reaper', 'Yasaka']
             let luck = []
             // genjutsu
             let genjutsu = []
             let power = []
-            let willpower = []
+            let willpower = ['Sharingan']
             // curse tech
             let curseRec = ['Teleporting-Rasengan']
             let curseCost = []
             let curseDur = []
             let domPurity = []
-            let domDur = []
+            let domDur = ['Sand-Mauseliem']
             let domLethal = []
             let domCost = []
             // ninjutsu
             let ninCosted = []
-            let ninDamage = []
+            let ninDamage = ["Double-Machine", "Lariat"]
             let ultCosted = []
             let ultDamage = []
             let elem = []
+            let misc = ['Aura-Synthesis', 'Aura']
 
 
             buff = buff / 100;
@@ -227,60 +228,62 @@
                 if (attack.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redAttack += Math.floor(redAttack * (1 + amount));
+                            redAttack = Math.floor(redAttack * (1 + amount));
                         } else {
-                            blueAttack -= Math.floor(blueAttack * (1 - amount));
+                            blueAttack = Math.floor(blueAttack * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueAttack += Math.floor(blueAttack * (1 + amount))
+                            blueAttack = Math.floor(blueAttack * (1 + amount))
                         } else {
-                            redAttack -= Math.floor(redAttack * (1 - amount))
+                            redAttack = Math.floor(redAttack * (1 - amount))
                         }
                     }
                 }
                 if (defense.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redDefense += Math.floor(redDefense * (1 + amount));
+                            redDefense = Math.floor(redDefense * (1 + amount));
                         } else {
-                            blueDefense -= Math.floor(blueDefense * (1 - amount));
+                            blueDefense = Math.floor(blueDefense * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueDefense += Math.floor(blueDefense * (1 + amount))
+                            blueDefense = Math.floor(blueDefense * (1 + amount))
                         } else {
-                            redDefense -= Math.floor(redDefense * (1 - amount))
+                            redDefense = Math.floor(redDefense * (1 - amount))
                         }
                     }
                 }
                 if (critical.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redCrit += Math.floor(redCrit * (1 + amount));
+                            redCrit = (redCrit * (1 + amount)).toFixed(2)
                         } else {
-                            blueCrit -= Math.floor(blueCrit * (1 - amount));
+                            blueCrit = (blueCrit * (1 - amount)).toFixed(2)
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueCrit += Math.floor(blueCrit * (1 + amount))
+                            blueCrit = (blueCrit * (1 + amount)).toFixed(2)
                         } else {
-                            redCrit -= Math.floor(redCrit * (1 - amount))
+                            redCrit = (redCrit * (1 - amount)).toFixed(2)
                         }
                     }
                 }
                 if (strength.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redStrength += Math.floor(redStrength * (1 + amount));
+                            redStrength = (redStrength * (1 + amount)).toFixed(2);
+                            alert(`red strength increased to ${redStrength}`)
                         } else {
-                            blueStrength -= Math.floor(blueStrength * (1 - amount));
+                            blueStrength = (blueStrength * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueStrength += Math.floor(blueStrength * (1 + amount))
+                            blueStrength = (blueStrength * (1 + amount).toFixed(2))
+                            alert(`blue strength increased to ${blueStrength}`)
                         } else {
-                            redStrength -= Math.floor(redStrength * (1 - amount))
+                            redStrength = (redStrength * (1 - amount).toFixed(2))
                         }
                     }
                 }
@@ -288,60 +291,60 @@
                 if (magic.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redElmAttack += Math.floor(redElmAttack * (1 + amount));
+                            redElmAttack = Math.floor(redElmAttack * (1 + amount));
                         } else {
-                            blueElmAttack -= Math.floor(blueElmAttack * (1 - amount));
+                            blueElmAttack = Math.floor(blueElmAttack * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueElmAttack += Math.floor(blueElmAttack * (1 + amount))
+                            blueElmAttack = Math.floor(blueElmAttack * (1 + amount))
                         } else {
-                            redElmAttack -= Math.floor(redElmAttack * (1 - amount))
+                            redElmAttack = Math.floor(redElmAttack * (1 - amount))
                         }
                     }
                 }
                 if (magicDef.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redElmDef += Math.floor(redElmDef * (1 + amount));
+                            redElmDef = Math.floor(redElmDef * (1 + amount));
                         } else {
-                            blueElmDef -= Math.floor(blueElmDef * (1 - amount));
+                            blueElmDef = Math.floor(blueElmDef * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueElmDef += Math.floor(blueElmDef * (1 + amount))
+                            blueElmDef = Math.floor(blueElmDef * (1 + amount))
                         } else {
-                            redElmDef -= Math.floor(redElmDef * (1 - amount))
+                            redElmDef = Math.floor(redElmDef * (1 - amount))
                         }
                     }
                 }
                 if (efficieny.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redElmEffc += Math.floor(redElmEffc * (1 + amount));
+                            redElmEffc = (redElmEffc * (1 + amount)).toFixed(2);
                         } else {
-                            blueElmDef -= Math.floor(blueElmEffc * (1 - amount));
+                            blueElmDef = (blueElmEffc * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueElmEffc += Math.floor(blueElmEffc * (1 + amount))
+                            blueElmEffc = (blueElmEffc * (1 + amount)).toFixed(2)
                         } else {
-                            redElmEffc -= Math.floor(redElmEffc * (1 - amount))
+                            redElmEffc = (redElmEffc * (1 - amount)).toFixed(2)
                         }
                     }
                 }
                 if (potency.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redPotency += Math.floor(redPotency * (1 + amount));
+                            redPotency += (redPotency * (1 + amount)).toFixed(2);
                         } else {
-                            bluPotency -= Math.floor(bluePotency * (1 - amount));
+                            bluPotency -= (bluePotency * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            bluePotency += Math.floor(bluePotency * (1 + amount))
+                            bluePotency += (bluePotency * (1 + amount)).toFixed(2)
                         } else {
-                            redPotency -= Math.floor(redPotency * (1 - amount))
+                            redPotency -= (redPotency * (1 - amount)).toFixed(2)
                         }
                     }
                 }
@@ -349,30 +352,30 @@
                 if (accuracy.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redElmAcc += Math.floor(redElmAcc * (1 + amount));
+                            redElmAcc = Math.floor(redElmAcc * (1 + amount));
                         } else {
-                            blueElAcc -= Math.floor(blueElmAcc * (1 - amount));
+                            blueElAcc = Math.floor(blueElmAcc * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueElmAcc += Math.floor(blueElmAcc * (1 + amount))
+                            blueElmAcc = Math.floor(blueElmAcc * (1 + amount))
                         } else {
-                            redElmAcc -= Math.floor(redElmAcc * (1 - amount))
+                            redElmAcc = Math.floor(redElmAcc * (1 - amount))
                         }
                     }
                 }
                 if (evasion.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redEvas += Math.floor(redEvas * (1 + amount));
+                            redEvas = Math.floor(redEvas * (1 + amount));
                         } else {
-                            bluevas -= Math.floor(blueEvas * (1 - amount));
+                            bluevas = Math.floor(blueEvas * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueEvas += Math.floor(blueEvas * (1 + amount))
+                            blueEvas = Math.floor(blueEvas * (1 + amount))
                         } else {
-                            redEvas -= Math.floor(redEvas * (1 - amount))
+                            redEvas = Math.floor(redEvas * (1 - amount))
                         }
                     }
                 }
@@ -433,30 +436,30 @@
                 if (genjutsu.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redGen += Math.floor(redGen * (1 + amount));
+                            redGen = Math.floor(redGen * (1 + amount));
                         } else {
-                            blueGen -= Math.floor(blueGen * (1 - amount));
+                            blueGen = Math.floor(blueGen * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueGen += Math.floor(blueGen * (1 + amount))
+                            blueGen = Math.floor(blueGen * (1 + amount))
                         } else {
-                            redGen -= Math.floor(redGen * (1 - amount))
+                            redGen = Math.floor(redGen * (1 - amount))
                         }
                     }
                 }
                 if (power.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redGenPow += Math.floor(redGenPow * (1 + amount));
+                            redGenPow = Math.floor(redGenPow * (1 + amount));
                         } else {
-                            blueGenPow -= Math.floor(blueGenPow * (1 - amount));
+                            blueGenPow = Math.floor(blueGenPow * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueGenPow += Math.floor(blueGenPow * (1 + amount))
+                            blueGenPow = Math.floor(blueGenPow * (1 + amount))
                         } else {
-                            redGenPow -= Math.floor(redGenPow * (1 - amount))
+                            redGenPow = Math.floor(redGenPow * (1 - amount))
                         }
                     }
                 }
@@ -495,15 +498,15 @@
                 if (curseCost.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redCurseCost += Math.floor(redCurseCost * (1 + amount));
+                            redCurseCost = Math.floor(redCurseCost * (1 + amount));
                         } else {
-                            blueCurseCost -= Math.floor(blueCurseCost * (1 - amount));
+                            blueCurseCost = Math.floor(blueCurseCost * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueCurseCost += Math.floor(blueCurseCost * (1 + amount))
+                            blueCurseCost = Math.floor(blueCurseCost * (1 + amount))
                         } else {
-                            redCurseCost -= Math.floor(redCurseCost * (1 - amount))
+                            redCurseCost = Math.floor(redCurseCost * (1 - amount))
                         }
                     }
                 }
@@ -511,15 +514,15 @@
                 if (domPurity.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redDomPurity += redDomPurity * (1 + amount).toFixed(2);
+                            redDomPurity = (redDomPurity * (1 + amount)).toFixed(2);
                         } else {
-                            blueDomPurity -= blueDomPurity * (1 - amount).toFixed(2);
+                            blueDomPurity = (blueDomPurity * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueDomPurity += blueDomPurity * (1 + amount).toFixed(2)
+                            blueDomPurity = (blueDomPurity * (1 + amount)).toFixed(2)
                         } else {
-                            redDomPurity -= redDomPurity * (1 - amount).toFixed(2)
+                            redDomPurity = (redDomPurity * (1 - amount)).toFixed(2)
                         }
                     }
                 }
@@ -528,7 +531,7 @@
                         if (enhance) {
                             redDomDuration = redDomDuration + amount;
                         } else {
-                            blueCurseDuration = blueDomDuration + amount
+                            blueCurseDuration = blueDomDuration - amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
@@ -541,30 +544,30 @@
                 if (domCost.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redDomCost += redDomCost * (1 + amount).toFixed(2);
+                            redDomCost += (redDomCost * (1 + amount)).toFixed(2);
                         } else {
-                            blueDomCost -= blueDomCost * (1 - amount).toFixed(2);
+                            blueDomCost -= (blueDomCost * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueDomCost += blueDomCost * (1 + amount).toFixed(2)
+                            blueDomCost += (blueDomCost * (1 + amount)).toFixed(2)
                         } else {
-                            redDomCost -= redDomCost * (1 - amount).toFixed(2)
+                            redDomCost -= (redDomCost * (1 - amount)).toFixed(2)
                         }
                     }
                 }
                 if (domLethal.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redDomLethal += Math.floor(redDomLethal * (1 + amount));
+                            redDomLethal = Math.floor(redDomLethal * (1 + amount));
                         } else {
-                            blueDomLethal -= Math.floor(blueDomLethal * (1 - amount));
+                            blueDomLethal = Math.floor(blueDomLethal * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueDomLethal += Math.floor(blueDomLethal * (1 + amount))
+                            blueDomLethal = Math.floor(blueDomLethal * (1 + amount))
                         } else {
-                            redDomLethal -= Math.floor(redDomLethal * (1 - amount))
+                            redDomLethal = Math.floor(redDomLethal * (1 - amount))
                         }
                     }
                 }
@@ -572,30 +575,35 @@
                 if (ninCosted.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redNenNinCost += Math.floor(redNenNinCost * (1 + amount));
+                            redNenNinCost = Math.floor(redNenNinCost * (1 + amount));
                         } else {
-                            blueNenNinCost -= Math.floor(blueNenNinCost * (1 - amount));
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueNenNinCost += Math.floor(blueNenNinCost * (1 + amount))
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 + amount))
                         } else {
-                            redNenNinCost -= Math.floor(redNenNinCost * (1 - amount))
+                            redNenNinCost = Math.floor(redNenNinCost * (1 - amount))
                         }
                     }
                 }
                 if (ninDamage.includes(jutsu)) {
+                    console.log('LARIATOOO is in the Array!!!!', blueNenNinDmg)
                     if (attacker == 'red') {
                         if (enhance) {
-                            redNenNinDmg += Math.floor(redNenNinDmg * (1 + amount));
+                            redNenNinDmg = Math.floor(redNenNinDmg * (1 + amount));
+                            console.log('LARIATOOO im red?', blueNenNinDmg)
                         } else {
-                            blueNenNinDmg -= Math.floor(blueNenNinDmg * (1 - amount));
+                            blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - amount));
+                            console.log('LARIATOOO im red?', blueNenNinDmg)
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueNenNinDmg += Math.floor(blueNenNinDmg * (1 + amount))
+                            blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + amount))
+                            console.log('LARIATOOO im blue', blueNenNinDmg)
                         } else {
-                            redNenNinDmg -= Math.floor(redNenNinDmg * (1 - amount))
+                            redNenNinDmg = Math.floor(redNenNinDmg * (1 - amount))
+                            console.log('LARIATOOO im false', blueNenNinDmg)
                         }
                     }
                 }
@@ -603,34 +611,34 @@
                 if (ultCosted.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redNinCost += Math.floor(redNinCost * (1 + amount));
+                            redNinCost = Math.floor(redNinCost * (1 + amount));
                         } else {
-                            blueNinCost -= Math.floor(blueNinCost * (1 - amount));
+                            blueNinCost = Math.floor(blueNinCost * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueNinCost += Math.floor(blueNinCost * (1 + amount))
+                            blueNinCost = Math.floor(blueNinCost * (1 + amount))
                         } else {
-                            redNinCost -= Math.floor(redNinCost * (1 - amount))
+                            redNinCost = Math.floor(redNinCost * (1 - amount))
                         }
                     }
                 }
                 if (ultDamage.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redNinPower += Math.floor(redNinPower * (1 + amount));
+                            redNinPower = Math.floor(redNinPower * (1 + amount));
                         } else {
-                            blueNinPower -= Math.floor(blueNinPower * (1 - amount));
+                            blueNinPower = Math.floor(blueNinPower * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueNinPower += Math.floor(blueNinPower * (1 + amount))
+                            blueNinPower = Math.floor(blueNinPower * (1 + amount))
                         } else {
-                            redNinPower -= Math.floor(redNinPower * (1 - amount))
+                            redNinPower = Math.floor(redNinPower * (1 - amount))
                         }
                     }
                 }
-                if (jutsu == 'MISC') {
+                if (jutsu == 'MISC' || misc.includes(jutsu)) {
                     let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
@@ -843,9 +851,9 @@
                             break;
                         case 'blueStr':
                             if (stat_type == 'Increase') {
-                                blueStr = (blueStr * (1 + stat_number)).toFixed(2);
+                                blueStrength = (blueStrength * (1 + stat_number)).toFixed(2);
                             } else {
-                                blueStr = (blueStr * (1 - stat_number)).toFixed(2);
+                                blueStrength = (blueStrength * (1 - stat_number)).toFixed(2);
                             }
                             break;
                         case 'bluePot':
@@ -975,7 +983,7 @@
                 $('#blueAttack').text(blueAttack);
                 $('#blueDefense').text(blueDefense);
                 $('#blueCrit').text(blueCrit);
-                $('#blueStr').text(blueStr)
+                $('#blueStr').text(blueStrength)
                 $('#blueAcc').text(blueAcc)
                 $('#blueEvas').text(blueEvas)
                 $('#bluePot').text(bluePot);
@@ -988,12 +996,12 @@
                 $('#blueWill').text(blueWill)
                 $('#blueNinPow').text(blueNenNinDmg)
                 $('#blueUltPow').text(blueNinPower)
-                $('#bluecost1').text(redNenNinCost)
-                $('#bluecost2').text(redNinCost)
+                $('#bluecost1').text(blueNenNinCost)
+                $('#bluecost2').text(blueNinCost)
                 $('#blue_dom_purity').text(blueDomPurity)
                 $('#blue_dom_lethal').text(blueDomLethal)
-                $('#blue_dom_duration').text(redDomDuration)
-                $('#blue_dom_cost').text(redDomCost)
+                $('#blue_dom_duration').text(blueDomDuration)
+                $('#blue_dom_cost').text(blueDomCost)
 
             } else {
                 $('#damage').text('Fail');
@@ -1049,7 +1057,7 @@
         const attacking = ["Divergent-Fist", "Blade", 'Mutation'];
         const defense = ["Reverse", 'Veil'];
         const critical = ["Black-Flash"];
-        const strength = ["Muscular-Expansion", "Cursed-8-Swords"];
+        const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
         const magic_attack = ['Albatross']
@@ -1059,6 +1067,7 @@
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
+        const recovery = ['Cursed-Gyuuki']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
 
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
@@ -1083,6 +1092,9 @@
                 }
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
                 ///////// LONG IF CHAIN ADD HERE//////////
+                if (recovery.includes(curse)) {
+                    redRecovery += amount
+                }
                 if (evasion.includes(curse)) {
                     redEvas += amount
                     $('#redEvas').text(redEvas)
@@ -1115,8 +1127,8 @@
                     $('#redCrit').text(redCrit);
                 }
                 if (strength.includes(curse)) {
-                    redStr += amount;
-                    $('#redStr').text(redStr);
+                    redStrength += amount;
+                    $('#redStr').text(redStrength);
                 }
                 if (potency.includes(curse)) {
                     redPot += amount
@@ -1146,6 +1158,9 @@
                 }
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
                 ///////// LONG IF CHAIN ADD HERE//////////
+                if (recovery.includes(curse)) {
+                    blueRecovery += amount
+                }
                 if (evasion.includes(curse)) {
                     blueEvas += amount
                     $('#blueEvas').text(blueEvas)
@@ -1166,8 +1181,8 @@
                     $('#blueCrit').text(blueCrit);
                 }
                 if (strength.includes(curse)) {
-                    blueStr += amount;
-                    $('#blueStr').text(blueStr);
+                    blueStrength += amount;
+                    $('#blueStr').text(blueStrength);
                 }
                 if (potency.includes(curse)) {
                     bluePot += amount
@@ -1215,6 +1230,9 @@
 
             if (player == 'red') {
                 ///////// LONG IF CHAIN ADD HERE//////////
+                if (recovery.includes(curse)) {
+                    redRecovery -= amount
+                }
                 if (evasion.includes(curse)) {
                     redEvas -= amount
                     $('#redEvas').text(redEvas)
@@ -1233,7 +1251,7 @@
                 }
                 if (strength.includes(curse)) {
                     redStrength -= amount;
-                    $('#redStr').text(redStr);
+                    $('#redStr').text(redStrength);
                 }
                 if (potency.includes(curse)) {
                     redPot -= amount
@@ -1258,6 +1276,9 @@
                 $('#redCurseUi').text('')
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
+                if (recovery.includes(curse)) {
+                    blueRecovery += amount
+                }
                 if (evasion.includes(curse)) {
                     blueEvas -= amount
                     $('#blueEvas').text(blueEvas)
@@ -1276,7 +1297,7 @@
                 }
                 if (strength.includes(curse)) {
                     blueStrength -= amount;
-                    $('#blueStr').text(blueStr);
+                    $('#blueStr').text(blueStrength);
                 }
                 if (potency.includes(curse)) {
                     bluePot -= amount
@@ -1309,7 +1330,7 @@
         function applyStatusEffect(defender, statusEffect) {
             let duration = 4; // Default duration for all effects
             if (statusEffect == 'Ultima' || statusEffect == 'Flare') {
-                duration = 4
+                duration = 2
             } else if (statusEffect == 'Confusion') {
                 duration = 4
             } else if (statusEffect == 'Tsukuyomi') {
@@ -1746,7 +1767,7 @@
 
 
             console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot, redELM, currRedChakra });
-            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot, blueELM, currBlueChakra });
+            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStrength, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
             let attackerStatusEffects = attacker === 'red' ? redStatus : blueStatus;
@@ -2435,7 +2456,7 @@
                     redElmDef = player.elm_defense;
                     redElmEffc = player.elm_efficiency;
                     redHp = player.hp;
-                    redStr = player.strength;
+                    redStrength = player.strength;
                     redPot = player.potency;
                     redBuff = player.buff_acc;
                     redBuff2 = player.buff2_acc;
@@ -2588,7 +2609,7 @@
                     blueElmDef = player.elm_defense;
                     blueElmEffc = player.elm_efficiency;
                     blueHp = player.hp;
-                    blueStr = player.strength;
+                    blueStrength = player.strength;
                     bluePot = player.potency;
                     blueBuff = player.buff_acc
                     blueBuff2 = player.buff2_acc
