@@ -912,13 +912,15 @@ const database = [
         chakra: 0,
         chakra_rec: 5,
         //ninjutsu
-        ninjutsu2: "Rasengan Decrease Curse by 10%",
+        ninjutsu2: "Teleporting-Rasengan Decrease Curse by 10%",
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 230,
-        nin2amount: -.10,
+        nin2amount: .50,
+        ninEnhance: false,
         nin_cost: 34,
         ninjutsu_pow: 0,
-        ninamount: -6,
+        ninamount: 6,
+        ultEnhance: false,
         ninjutsu: 'Reaper Death Seal - Seal away chakra by 6',
         //end
         elm: wind,
