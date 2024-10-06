@@ -945,8 +945,8 @@ const database = [
         nen_type: 'Specialist',
         element: 'Dark',
         attack: 294,
-        defense: 180,
-        elm_attack: 168,
+        defense: 160,
+        elm_attack: 180,
         elm_defense: 180,
         elm_efficiency: 1,
         critical: .55,
@@ -962,24 +962,24 @@ const database = [
         chakra: 0,
         chakra_rec: 3,
         //ninjutsu
-        ninjutsu2: "Rasengan Decrease Curse by 10%",
+        ninjutsu2: "",
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 230,
         nin2amount: -.10,
         nin_cost: 34,
         ninjutsu_pow: 0,
         ninamount: -6,
-        ninjutsu: 'Reaper Death Seal - Seal away chakra by 6',
+        ninjutsu: '',
         //end
         elm: wind,
-        luck: 4,
+        luck: 6,
         genjutsu: 2,
         gen_power: 10,
-        willpower: 7,
+        willpower: 3,
         // cursed attacks
         cursed_energy: 0,
-        cursed_recovery: 25, // 100 is best
-        cursed_tech: 'Flying-Rajin - Take two turns while activated',
+        cursed_recovery: 50, // 100 is best
+        cursed_tech: '',
         curse_amount: 2, //instead of prompt
         curse_duration: 6,
         curse_cost: 12,
