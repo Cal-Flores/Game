@@ -185,7 +185,7 @@
             }
 
             //physical
-            let attack = ['Teleporting-Rasengan']
+            let attack = []
             let defense = []
             let critical = []
             let Strength = []
@@ -204,7 +204,7 @@
             let power = []
             let willpower = []
             // curse tech
-            let curseRec = []
+            let curseRec = ['Teleporting-Rasengan']
             let curseCost = []
             let curseDur = []
             let domPurity = []
@@ -212,13 +212,11 @@
             let domLethal = []
             let domCost = []
             // ninjutsu
-            let ninCost = []
+            let ninCosted = []
             let ninDamage = []
-            let ultCost = []
+            let ultCosted = []
             let ultDamage = []
-            // misc
             let elem = []
-
 
 
             buff = buff / 100;
@@ -231,7 +229,7 @@
                         if (enhance) {
                             redAttack += Math.floor(redAttack * (1 + amount));
                         } else {
-                            blueAttack -= Math.floor(redAttack * (1 - amount));
+                            blueAttack -= Math.floor(blueAttack * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
@@ -241,22 +239,143 @@
                         }
                     }
                 }
-                if (attack.includes(jutsu)) {
+                if (defense.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redAttack += Math.floor(redAttack * (1 + amount));
+                            redDefense += Math.floor(redDefense * (1 + amount));
                         } else {
-                            blueAttack -= Math.floor(redAttack * (1 - amount));
+                            blueDefense -= Math.floor(blueDefense * (1 - amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueAttack += Math.floor(blueAttack * (1 + amount))
+                            blueDefense += Math.floor(blueDefense * (1 + amount))
                         } else {
-                            redAttack -= Math.floor(redAttack * (1 - amount))
+                            redDefense -= Math.floor(redDefense * (1 - amount))
                         }
                     }
                 }
-                // RECOVERY RRRRRRRR
+                if (critical.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redCrit += Math.floor(redCrit * (1 + amount));
+                        } else {
+                            blueCrit -= Math.floor(blueCrit * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueCrit += Math.floor(blueCrit * (1 + amount))
+                        } else {
+                            redCrit -= Math.floor(redCrit * (1 - amount))
+                        }
+                    }
+                }
+                if (strength.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redStrength += Math.floor(redStrength * (1 + amount));
+                        } else {
+                            blueStrength -= Math.floor(blueStrength * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueStrength += Math.floor(blueStrength * (1 + amount))
+                        } else {
+                            redStrength -= Math.floor(redStrength * (1 - amount))
+                        }
+                    }
+                }
+                // MAGIC
+                if (magic.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redElmAttack += Math.floor(redElmAttack * (1 + amount));
+                        } else {
+                            blueElmAttack -= Math.floor(blueElmAttack * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueElmAttack += Math.floor(blueElmAttack * (1 + amount))
+                        } else {
+                            redElmAttack -= Math.floor(redElmAttack * (1 - amount))
+                        }
+                    }
+                }
+                if (magicDef.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redElmDef += Math.floor(redElmDef * (1 + amount));
+                        } else {
+                            blueElmDef -= Math.floor(blueElmDef * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueElmDef += Math.floor(blueElmDef * (1 + amount))
+                        } else {
+                            redElmDef -= Math.floor(redElmDef * (1 - amount))
+                        }
+                    }
+                }
+                if (efficieny.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redElmEffc += Math.floor(redElmEffc * (1 + amount));
+                        } else {
+                            blueElmDef -= Math.floor(blueElmEffc * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueElmEffc += Math.floor(blueElmEffc * (1 + amount))
+                        } else {
+                            redElmEffc -= Math.floor(redElmEffc * (1 - amount))
+                        }
+                    }
+                }
+                if (potency.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redPotency += Math.floor(redPotency * (1 + amount));
+                        } else {
+                            bluPotency -= Math.floor(bluePotency * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            bluePotency += Math.floor(bluePotency * (1 + amount))
+                        } else {
+                            redPotency -= Math.floor(redPotency * (1 - amount))
+                        }
+                    }
+                }
+                //SPPED
+                if (accuracy.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redElmAcc += Math.floor(redElmAcc * (1 + amount));
+                        } else {
+                            blueElAcc -= Math.floor(blueElmAcc * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueElmAcc += Math.floor(blueElmAcc * (1 + amount))
+                        } else {
+                            redElmAcc -= Math.floor(redElmAcc * (1 - amount))
+                        }
+                    }
+                }
+                if (evasion.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redEvas += Math.floor(redEvas * (1 + amount));
+                        } else {
+                            bluevas -= Math.floor(blueEvas * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueEvas += Math.floor(blueEvas * (1 + amount))
+                        } else {
+                            redEvas -= Math.floor(redEvas * (1 - amount))
+                        }
+                    }
+                }
                 if (recovery.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
@@ -276,362 +395,605 @@
                         }
                     }
                 }
+                if (luck.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redLuck += amount
+                            alert(`red Luck has risen to ${redLuck}`)
+                        } else {
+                            blueLuck -= amount
+                            alert(`Blue Luck has fallen to ${blueLuck}`)
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueLuck += amount
+                            alert(`Blue Luck has risen to ${blueLuck}`)
+                        } else {
+                            redLuck -= amount
+                            alert(`Red Luck has fallen to ${redLuck}`)
+                        }
+                    }
+                }
+                // GENJUTSUUU
+                if (willpower.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redWill += amount
+                        } else {
+                            blueWill -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueWill += amount
+                        } else {
+                            redWill -= amount
+                        }
+                    }
+                }
+                if (genjutsu.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redGen += Math.floor(redGen * (1 + amount));
+                        } else {
+                            blueGen -= Math.floor(blueGen * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueGen += Math.floor(blueGen * (1 + amount))
+                        } else {
+                            redGen -= Math.floor(redGen * (1 - amount))
+                        }
+                    }
+                }
+                if (power.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redGenPow += Math.floor(redGenPow * (1 + amount));
+                        } else {
+                            blueGenPow -= Math.floor(blueGenPow * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueGenPow += Math.floor(blueGenPow * (1 + amount))
+                        } else {
+                            redGenPow -= Math.floor(redGenPow * (1 - amount))
+                        }
+                    }
+                }
+                // CURSE AND DOMAIN
+                if (curseRec.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redCurseRec = redCurseRec + amount;
+                        } else {
+                            blueCurseRec = blueCurseRec - amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueCurseRec = blueCurseRec + amount
+                        } else {
+                            redCurseRec = redCurseRec - amount
+                        }
+                    }
+                    console.log('CHAMA', blueCurseRec)
+                }
+                if (curseDur.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redCurseDuration = redCurseDuration + amount;
+                        } else {
+                            blueCurseDuration = blueCurseDuration - amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueCurseDuration = blueCurseDuration + amount
+                        } else {
+                            redCurseDuration = redCurseDuration - amount
+                        }
+                    }
+                }
+                if (curseCost.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redCurseCost += Math.floor(redCurseCost * (1 + amount));
+                        } else {
+                            blueCurseCost -= Math.floor(blueCurseCost * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueCurseCost += Math.floor(blueCurseCost * (1 + amount))
+                        } else {
+                            redCurseCost -= Math.floor(redCurseCost * (1 - amount))
+                        }
+                    }
+                }
+                //DOMAIN
+                if (domPurity.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redDomPurity += redDomPurity * (1 + amount).toFixed(2);
+                        } else {
+                            blueDomPurity -= blueDomPurity * (1 - amount).toFixed(2);
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueDomPurity += blueDomPurity * (1 + amount).toFixed(2)
+                        } else {
+                            redDomPurity -= redDomPurity * (1 - amount).toFixed(2)
+                        }
+                    }
+                }
+                if (domDur.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redDomDuration = redDomDuration + amount;
+                        } else {
+                            blueCurseDuration = blueDomDuration + amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueDomDuration = blueDomDuration + amount
+                        } else {
+                            redDomDuration = redDomDuration - amount
+                        }
+                    }
+                }
+                if (domCost.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redDomCost += redDomCost * (1 + amount).toFixed(2);
+                        } else {
+                            blueDomCost -= blueDomCost * (1 - amount).toFixed(2);
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueDomCost += blueDomCost * (1 + amount).toFixed(2)
+                        } else {
+                            redDomCost -= redDomCost * (1 - amount).toFixed(2)
+                        }
+                    }
+                }
+                if (domLethal.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redDomLethal += Math.floor(redDomLethal * (1 + amount));
+                        } else {
+                            blueDomLethal -= Math.floor(blueDomLethal * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueDomLethal += Math.floor(blueDomLethal * (1 + amount))
+                        } else {
+                            redDomLethal -= Math.floor(redDomLethal * (1 - amount))
+                        }
+                    }
+                }
+                //NINJUTS STATSSS
+                if (ninCosted.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redNenNinCost += Math.floor(redNenNinCost * (1 + amount));
+                        } else {
+                            blueNenNinCost -= Math.floor(blueNenNinCost * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueNenNinCost += Math.floor(blueNenNinCost * (1 + amount))
+                        } else {
+                            redNenNinCost -= Math.floor(redNenNinCost * (1 - amount))
+                        }
+                    }
+                }
+                if (ninDamage.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redNenNinDmg += Math.floor(redNenNinDmg * (1 + amount));
+                        } else {
+                            blueNenNinDmg -= Math.floor(blueNenNinDmg * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueNenNinDmg += Math.floor(blueNenNinDmg * (1 + amount))
+                        } else {
+                            redNenNinDmg -= Math.floor(redNenNinDmg * (1 - amount))
+                        }
+                    }
+                }
+                // ULTIMATE NINJUTSU
+                if (ultCosted.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redNinCost += Math.floor(redNinCost * (1 + amount));
+                        } else {
+                            blueNinCost -= Math.floor(blueNinCost * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueNinCost += Math.floor(blueNinCost * (1 + amount))
+                        } else {
+                            redNinCost -= Math.floor(redNinCost * (1 - amount))
+                        }
+                    }
+                }
+                if (ultDamage.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redNinPower += Math.floor(redNinPower * (1 + amount));
+                        } else {
+                            blueNinPower -= Math.floor(blueNinPower * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueNinPower += Math.floor(blueNinPower * (1 + amount))
+                        } else {
+                            redNinPower -= Math.floor(redNinPower * (1 - amount))
+                        }
+                    }
+                }
+                if (jutsu == 'MISC') {
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
+                    if (stat_max == 'redHeal') {
+                        let currRedHp = parseInt($('#redHP').text(), 10)
+                        let healAmount = parseInt(prompt('Healing Factor?'), 10)
+                        currRedHp += healAmount;
+                        $('#damage').text(`Red Recoverd ${healAmount} HP 🖤`)
+                        $('#redHP').text(currRedHp)
+                        return
+                    } else if (stat_max == 'blueHeal') {
+                        let currBlueHp = parseInt($('#blueHP').text(), 10)
+                        let healAmount = parseInt(prompt('Healing Factor?'), 10)
+                        currBlueHp += healAmount;
+                        $('#damage').text(`Blue Recoverd ${healAmount} HP 🖤`)
+                        $('#blueHP').text(currBlueHp)
+                        return
+                    }
+                    let stat_type = prompt('Increase or Decrease');
+                    let stat_number = parseFloat(prompt('By how much'));
 
+                    switch (stat_max) {
+                        case 'redAttack':
+                            if (stat_type == 'Increase') {
+                                redAttack = Math.floor(redAttack * (1 + stat_number));
+                            } else {
+                                redAttack = Math.floor(redAttack * (1 - stat_number));
+                            }
+                            break;
+                        case 'redDefense':
+                            if (stat_type == 'Increase') {
+                                redDefense = Math.floor(redDefense * (1 + stat_number));
+                            } else {
+                                redDefense = Math.floor(redDefense * (1 - stat_number));
+                            }
+                            break;
+                        case 'redCrit':
+                            if (stat_type == 'Increase') {
+                                redCrit = (redCrit * (1 + stat_number)).toFixed(2);
+                            } else {
+                                redCrit = (redCrit * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'redElmAttack':
+                            if (stat_type == 'Increase') {
+                                redElmAttack = Math.floor(redElmAttack * (1 + stat_number));
+                            } else {
+                                redElmAttack = Math.floor(redElmAttack * (1 - stat_number));
+                            }
+                            break;
+                        case 'redUltNinCost':
+                            if (stat_type == 'Increase') {
+                                redNinCost = Math.floor(redNinCost * (1 + stat_number));
+                            } else {
+                                redNinCost = Math.floor(redNinCost * (1 - stat_number));
+                            }
+                            break;
+                        case 'redElmDef':
+                            if (stat_type == 'Increase') {
+                                redElmDef = Math.floor(redElmDef * (1 + stat_number));
+                            } else {
+                                redElmDef = Math.floor(redElmDef * (1 - stat_number));
+                            }
+                            break;
+                        case 'redElmEffc':
+                            if (stat_type == 'Increase') {
+                                redElmEffc = (redElmEffc * (1 + stat_number)).toFixed(2);
+                            } else {
+                                redElmEffc = (redElmEffc * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'redHp':
+                            if (stat_type == 'Increase') {
+                                redHp = Math.max(0, Math.floor(redHp * (1 + stat_number))); // Ensuring no negative values
+                            } else {
+                                redHp = Math.max(0, Math.floor(redHp * (1 - stat_number)));
+                            }
+                            break;
+                        case 'redStr':
+                            if (stat_type == 'Increase') {
+                                redStr = (redStr * (1 + stat_number)).toFixed(2);
+                            } else {
+                                redStr = (redStr * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'redPot':
+                            if (stat_type == 'Increase') {
+                                redPot = (redPot * (1 + stat_number)).toFixed(2);
+                            } else {
+                                redPot = (redPot * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'redELM':
+                            affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
+                            redELM = affinity
+                            alert(`Red Affinity changed to ${redELM}`)
+                            break;
+                        case 'redRecovery':
+                            if (stat_type == 'Increase') {
+                                redRecovery = Math.floor(redRecovery + stat_number);
+                                alert(`Red's chakra recovery increases to ${redRecovery}`)
+                            } else {
+                                redRecovery = Math.floor(redRecovery - stat_number);
+                                alert(`Red's chakra recovery decreases to ${redRecovery}`)
+                            }
+                            break;
+                        case 'redAcc':
+                            if (stat_type == 'Increase') {
+                                redAcc = Math.floor(redAcc * (1 + stat_number));
+                            } else {
+                                redAcc = Math.floor(redAcc * (1 - stat_number));
+                            }
+                            break;
+                        case 'redEvas':
+                            if (stat_type == 'Increase') {
+                                redEvas = Math.floor(redEvas * (1 + stat_number));
+                            } else {
+                                redEvas = Math.floor(redEvas * (1 - stat_number));
+                            }
+                            break;
+                        case 'redLuck':
+                            if (stat_type == 'Increase') {
+                                redLuck = Math.floor(redLuck * (1 + stat_number));
+                            } else {
+                                redLuck = Math.floor(redLuck * (1 - stat_number));
+                            }
+                            break;
+                        case 'redNinjutsuPower':
+                            if (stat_type == 'Increase') {
+                                redNenNinDmg = Math.floor(redNenNinDmg * (1 + stat_number));
+                            } else {
+                                redNenNinDmg = Math.floor(redNenNinDmg * (1 - stat_number));
+                            }
+                            break;
+                        case 'redNinjutsuCost':
+                            if (stat_type == 'Increase') {
+                                redNenNinCost = Math.floor(redNenNinCost * (1 + stat_number));
+                            } else {
+                                redNenNinCost = Math.floor(redNenNinCost * (1 - stat_number));
+                            }
+                            break;
 
+                        case 'redGen':
+                            if (stat_type == 'Increase') {
+                                redGen = Math.floor(redGen * (1 + stat_number));
+                            } else {
+                                redGen = Math.floor(redGen * (1 - stat_number));
+                            }
+                            break;
+                        case 'redGenPow':
+                            if (stat_type == 'Increase') {
+                                redGenPow = Math.floor(redGenPow * (1 + stat_number));
+                            } else {
+                                redGenPow = Math.floor(redGenPow * (1 - stat_number));
+                            }
+                            break;
+                        case 'redWill':
+                            if (stat_type == 'Increase') {
+                                redWill = Math.floor(redWill * (1 + stat_number));
+                            } else {
+                                redWill = Math.floor(redWill * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueAttack':
+                            if (stat_type == 'Increase') {
+                                blueAttack = Math.floor(blueAttack * (1 + stat_number));
+                            } else {
+                                blueAttack = Math.floor(blueAttack * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueDefense':
+                            if (stat_type == 'Increase') {
+                                blueDefense = Math.floor(blueDefense * (1 + stat_number));
+                            } else {
+                                blueDefense = Math.floor(blueDefense * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueCrit':
+                            if (stat_type == 'Increase') {
+                                blueCrit = (blueCrit * (1 + stat_number)).toFixed(2);
+                            } else {
+                                blueCrit = (blueCrit * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'blueElmAttack':
+                            if (stat_type == 'Increase') {
+                                blueElmAttack = Math.floor(blueElmAttack * (1 + stat_number));
+                            } else {
+                                blueElmAttack = Math.floor(blueElmAttack * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueElmDef':
+                            if (stat_type == 'Increase') {
+                                blueElmDef = Math.floor(blueElmDef * (1 + stat_number));
+                            } else {
+                                blueElmDef = Math.floor(blueElmDef * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueElmEffc':
+                            if (stat_type == 'Increase') {
+                                blueElmEffc = Math.floor(blueElmEffc * (1 + stat_number));
+                            } else {
+                                blueElmEffc = Math.floor(blueElmEffc * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueHp':
+                            if (stat_type == 'Increase') {
+                                blueHp = Math.max(0, Math.floor(blueHp * (1 + stat_number))); // Ensuring no negative values
+                            } else {
+                                blueHp = Math.max(0, Math.floor(blueHp * (1 - stat_number)));
+                            }
+                            break;
+                        case 'blueStr':
+                            if (stat_type == 'Increase') {
+                                blueStr = (blueStr * (1 + stat_number)).toFixed(2);
+                            } else {
+                                blueStr = (blueStr * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'bluePot':
+                            if (stat_type == 'Increase') {
+                                bluePot = (bluePot * (1 + stat_number)).toFixed(2);
+                            } else {
+                                bluePot = (bluePot * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'blueELM':
+                            affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
+                            blueELM = affinity
+                            alert(`Red Affinity changed to ${blueELM}`)
+                            break;
+                        case 'blueRecovery':
+                            if (stat_type == 'Increase') {
+                                blueRecovery = Math.floor(blueRecovery + stat_number); // Corrected to use blueRecovery
+                                alert(`Blue's chakra recovery increases to ${blueRecovery}`)
+                            } else {
+                                blueRecovery = Math.floor(blueRecovery - stat_number);
+                                alert(`Blue's chakra recovery increases to ${blueRecovery}`)
+                            }
+                            break;
+                        case 'blueAcc':
+                            if (stat_type == 'Increase') {
+                                blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
+                            } else {
+                                blueAcc = (blueAcc * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'blueEvas':
+                            if (stat_type == 'Increase') {
+                                blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
+                            } else {
+                                blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
+                            }
+                            break;
+                        case 'blueLuck':
+                            if (stat_type == 'Increase') {
+                                blueLuck = Math.floor(blueLuck * (1 + stat_number));
+                            } else {
+                                blueLuck = Math.floor(blueLuck * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueGen':
+                            if (stat_type == 'Increase') {
+                                blueGen = Math.floor(blueGen * (1 + stat_number));
+                            } else {
+                                blueGen = Math.floor(blueGen * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueGenPow':
+                            if (stat_type == 'Increase') {
+                                blueGenPow = Math.floor(blueGenPow * (1 + stat_number));
+                            } else {
+                                blueGenPow = Math.floor(blueGenPow * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueWill':
+                            if (stat_type == 'Increase') {
+                                blueWill = Math.floor(blueWill * (1 + stat_number));
+                            } else {
+                                blueWill = Math.floor(blueWill * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueNinjutsuPower':
+                            if (stat_type == 'Increase') {
+                                blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + stat_number));
+                            } else {
+                                blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - stat_number));
+                            }
+                            break;
 
-                //let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
-                // THIS IS FOR HEALING !!
-                // if (stat_max == 'redHeal') {
-                //     let currRedHp = parseInt($('#redHP').text(), 10)
-                //     let healAmount = parseInt(prompt('Healing Factor?'), 10)
-                //     currRedHp += healAmount;
-                //     $('#damage').text(`Red Recoverd ${healAmount} HP 🖤`)
-                //     $('#redHP').text(currRedHp)
-                //     return
-                // } else if (stat_max == 'blueHeal') {
-                //     let currBlueHp = parseInt($('#blueHP').text(), 10)
-                //     let healAmount = parseInt(prompt('Healing Factor?'), 10)
-                //     currBlueHp += healAmount;
-                //     $('#damage').text(`Blue Recoverd ${healAmount} HP 🖤`)
-                //     $('#blueHP').text(currBlueHp)
-                //     return
-                // }
-                // let stat_type = prompt('Increase or Decrease');
-                //let stat_number = parseFloat(prompt('By how much'));
+                        case 'blueNinjutsuCost':
+                            if (stat_type == 'Increase') {
+                                blueNenNinCost = Math.floor(blueNenNinCost * (1 + stat_number));
+                            } else {
+                                blueNenNinCost = Math.floor(blueNenNinCost * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueDomPurity':
+                            if (stat_type == 'Increase') {
+                                blueDomPurity = Math.floor(blueDomPurity * (1 + stat_number));
+                            } else {
+                                blueDomPurity = Math.floor(blueDomPurity * (1 - stat_number));
+                            }
+                            break;
+                        case 'redDomPurity':
+                            if (stat_type == 'Increase') {
+                                redDomPurity = Math.floor(redDomPurity * (1 + stat_number));
+                            } else {
+                                redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
+                            }
+                            break;
+                        default:
+                            alert('Invalid stat');
+                            break;
+                    }
 
-                // switch (stat_max) {
-                //     case 'redAttack':
-                //         if (stat_type == 'Increase') {
-                //             redAttack = Math.floor(redAttack * (1 + stat_number));
-                //         } else {
-                //             redAttack = Math.floor(redAttack * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redDefense':
-                //         if (stat_type == 'Increase') {
-                //             redDefense = Math.floor(redDefense * (1 + stat_number));
-                //         } else {
-                //             redDefense = Math.floor(redDefense * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redCrit':
-                //         if (stat_type == 'Increase') {
-                //             redCrit = (redCrit * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             redCrit = (redCrit * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'redElmAttack':
-                //         if (stat_type == 'Increase') {
-                //             redElmAttack = Math.floor(redElmAttack * (1 + stat_number));
-                //         } else {
-                //             redElmAttack = Math.floor(redElmAttack * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redUltNinCost':
-                //         if (stat_type == 'Increase') {
-                //             redNinCost = Math.floor(redNinCost * (1 + stat_number));
-                //         } else {
-                //             redNinCost = Math.floor(redNinCost * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redElmDef':
-                //         if (stat_type == 'Increase') {
-                //             redElmDef = Math.floor(redElmDef * (1 + stat_number));
-                //         } else {
-                //             redElmDef = Math.floor(redElmDef * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redElmEffc':
-                //         if (stat_type == 'Increase') {
-                //             redElmEffc = (redElmEffc * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             redElmEffc = (redElmEffc * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'redHp':
-                //         if (stat_type == 'Increase') {
-                //             redHp = Math.max(0, Math.floor(redHp * (1 + stat_number))); // Ensuring no negative values
-                //         } else {
-                //             redHp = Math.max(0, Math.floor(redHp * (1 - stat_number)));
-                //         }
-                //         break;
-                //     case 'redStr':
-                //         if (stat_type == 'Increase') {
-                //             redStr = (redStr * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             redStr = (redStr * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'redPot':
-                //         if (stat_type == 'Increase') {
-                //             redPot = (redPot * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             redPot = (redPot * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'redELM':
-                //         affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
-                //         redELM = affinity
-                //         alert(`Red Affinity changed to ${redELM}`)
-                //         break;
-                //     case 'redRecovery':
-                //         if (stat_type == 'Increase') {
-                //             redRecovery = Math.floor(redRecovery + stat_number);
-                //             alert(`Red's chakra recovery increases to ${redRecovery}`)
-                //         } else {
-                //             redRecovery = Math.floor(redRecovery - stat_number);
-                //             alert(`Red's chakra recovery decreases to ${redRecovery}`)
-                //         }
-                //         break;
-                //     case 'redAcc':
-                //         if (stat_type == 'Increase') {
-                //             redAcc = Math.floor(redAcc * (1 + stat_number));
-                //         } else {
-                //             redAcc = Math.floor(redAcc * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redEvas':
-                //         if (stat_type == 'Increase') {
-                //             redEvas = Math.floor(redEvas * (1 + stat_number));
-                //         } else {
-                //             redEvas = Math.floor(redEvas * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redLuck':
-                //         if (stat_type == 'Increase') {
-                //             redLuck = Math.floor(redLuck * (1 + stat_number));
-                //         } else {
-                //             redLuck = Math.floor(redLuck * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redNinjutsuPower':
-                //         if (stat_type == 'Increase') {
-                //             redNenNinDmg = Math.floor(redNenNinDmg * (1 + stat_number));
-                //         } else {
-                //             redNenNinDmg = Math.floor(redNenNinDmg * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redNinjutsuCost':
-                //         if (stat_type == 'Increase') {
-                //             redNenNinCost = Math.floor(redNenNinCost * (1 + stat_number));
-                //         } else {
-                //             redNenNinCost = Math.floor(redNenNinCost * (1 - stat_number));
-                //         }
-                //         break;
+                }
 
-                //     case 'redGen':
-                //         if (stat_type == 'Increase') {
-                //             redGen = Math.floor(redGen * (1 + stat_number));
-                //         } else {
-                //             redGen = Math.floor(redGen * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redGenPow':
-                //         if (stat_type == 'Increase') {
-                //             redGenPow = Math.floor(redGenPow * (1 + stat_number));
-                //         } else {
-                //             redGenPow = Math.floor(redGenPow * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redWill':
-                //         if (stat_type == 'Increase') {
-                //             redWill = Math.floor(redWill * (1 + stat_number));
-                //         } else {
-                //             redWill = Math.floor(redWill * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueAttack':
-                //         if (stat_type == 'Increase') {
-                //             blueAttack = Math.floor(blueAttack * (1 + stat_number));
-                //         } else {
-                //             blueAttack = Math.floor(blueAttack * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueDefense':
-                //         if (stat_type == 'Increase') {
-                //             blueDefense = Math.floor(blueDefense * (1 + stat_number));
-                //         } else {
-                //             blueDefense = Math.floor(blueDefense * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueCrit':
-                //         if (stat_type == 'Increase') {
-                //             blueCrit = (blueCrit * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             blueCrit = (blueCrit * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'blueElmAttack':
-                //         if (stat_type == 'Increase') {
-                //             blueElmAttack = Math.floor(blueElmAttack * (1 + stat_number));
-                //         } else {
-                //             blueElmAttack = Math.floor(blueElmAttack * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueElmDef':
-                //         if (stat_type == 'Increase') {
-                //             blueElmDef = Math.floor(blueElmDef * (1 + stat_number));
-                //         } else {
-                //             blueElmDef = Math.floor(blueElmDef * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueElmEffc':
-                //         if (stat_type == 'Increase') {
-                //             blueElmEffc = Math.floor(blueElmEffc * (1 + stat_number));
-                //         } else {
-                //             blueElmEffc = Math.floor(blueElmEffc * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueHp':
-                //         if (stat_type == 'Increase') {
-                //             blueHp = Math.max(0, Math.floor(blueHp * (1 + stat_number))); // Ensuring no negative values
-                //         } else {
-                //             blueHp = Math.max(0, Math.floor(blueHp * (1 - stat_number)));
-                //         }
-                //         break;
-                //     case 'blueStr':
-                //         if (stat_type == 'Increase') {
-                //             blueStr = (blueStr * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             blueStr = (blueStr * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'bluePot':
-                //         if (stat_type == 'Increase') {
-                //             bluePot = (bluePot * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             bluePot = (bluePot * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'blueELM':
-                //         affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
-                //         blueELM = affinity
-                //         alert(`Red Affinity changed to ${blueELM}`)
-                //         break;
-                //     case 'blueRecovery':
-                //         if (stat_type == 'Increase') {
-                //             blueRecovery = Math.floor(blueRecovery + stat_number); // Corrected to use blueRecovery
-                //             alert(`Blue's chakra recovery increases to ${blueRecovery}`)
-                //         } else {
-                //             blueRecovery = Math.floor(blueRecovery - stat_number);
-                //             alert(`Blue's chakra recovery increases to ${blueRecovery}`)
-                //         }
-                //         break;
-                //     case 'blueAcc':
-                //         if (stat_type == 'Increase') {
-                //             blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             blueAcc = (blueAcc * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'blueEvas':
-                //         if (stat_type == 'Increase') {
-                //             blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
-                //         } else {
-                //             blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
-                //         }
-                //         break;
-                //     case 'blueLuck':
-                //         if (stat_type == 'Increase') {
-                //             blueLuck = Math.floor(blueLuck * (1 + stat_number));
-                //         } else {
-                //             blueLuck = Math.floor(blueLuck * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueGen':
-                //         if (stat_type == 'Increase') {
-                //             blueGen = Math.floor(blueGen * (1 + stat_number));
-                //         } else {
-                //             blueGen = Math.floor(blueGen * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueGenPow':
-                //         if (stat_type == 'Increase') {
-                //             blueGenPow = Math.floor(blueGenPow * (1 + stat_number));
-                //         } else {
-                //             blueGenPow = Math.floor(blueGenPow * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueWill':
-                //         if (stat_type == 'Increase') {
-                //             blueWill = Math.floor(blueWill * (1 + stat_number));
-                //         } else {
-                //             blueWill = Math.floor(blueWill * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueNinjutsuPower':
-                //         if (stat_type == 'Increase') {
-                //             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + stat_number));
-                //         } else {
-                //             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - stat_number));
-                //         }
-                //         break;
-
-                //     case 'blueNinjutsuCost':
-                //         if (stat_type == 'Increase') {
-                //             blueNenNinCost = Math.floor(blueNenNinCost * (1 + stat_number));
-                //         } else {
-                //             blueNenNinCost = Math.floor(blueNenNinCost * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'blueDomPurity':
-                //         if (stat_type == 'Increase') {
-                //             blueDomPurity = Math.floor(blueDomPurity * (1 + stat_number));
-                //         } else {
-                //             blueDomPurity = Math.floor(blueDomPurity * (1 - stat_number));
-                //         }
-                //         break;
-                //     case 'redDomPurity':
-                //         if (stat_type == 'Increase') {
-                //             redDomPurity = Math.floor(redDomPurity * (1 + stat_number));
-                //         } else {
-                //             redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
-                //         }
-                //         break;
-                //     default:
-                //         alert('Invalid stat');
-                //         break;
-                // }
-
-
-
-                // #redLuck #redNinPow #redUltPow
-                // Update the stats on the page if necessary
+                $('#redHp').text(redHp);
                 $('#redAttack').text(redAttack);
                 $('#redDefense').text(redDefense);
                 $('#redCrit').text(redCrit);
+                $('#redStr').text(redStr);
+                $('#redELM').text(redELM);
                 $('#redElmAttack').text(redElmAttack);
                 $('#redElmDef').text(redElmDef);
                 $('#redElmEffc').text(redElmEffc);
-                $('#redHp').text(redHp);
-                $('#redStr').text(redStr);
                 $('#redPot').text(redPot);
-                $('#redELM').text(redELM);
                 $('#redGen').text(redGen)
                 $('#redGenPow').text(redGenPow)
-                $('#redNinPow').text(redNenNinDmg)
                 $('#redWill').text(redWill)
                 $('#redAcc').text(redAcc)
                 $('#redEvas').text(redEvas)
-                $('#redChakraPow').text(redChakraPower)
-                $('#blueAcc').text(blueAcc)
-                $('#blueEvas').text(blueEvas)
+                $('#redNinPow').text(redNenNinDmg)
+                $('#redUltPow').text(redNinPower)
+                $('#redcost1').text(redNenNinCost)
+                $('#redcost2').text(redNinCost)
+                $('#red_dom_purity').text(redDomPurity)
+                $('#red_dom_lethal').text(redDomLethal)
+                $('#red_dom_duration').text(redDomDuration)
+                $('#red_dom_cost').text(redDomCost)
+
+                $('#blueHp').text(blueHp);
                 $('#blueAttack').text(blueAttack);
                 $('#blueDefense').text(blueDefense);
                 $('#blueCrit').text(blueCrit);
+                $('#blueStr').text(blueStr)
+                $('#blueAcc').text(blueAcc)
+                $('#blueEvas').text(blueEvas)
+                $('#bluePot').text(bluePot);
+                $('#blueELM').text(blueELM);
                 $('#blueElmAttack').text(blueElmAttack);
                 $('#blueElmDef').text(blueElmDef);
                 $('#blueElmEffc').text(blueElmEffc);
-                $('#blueHp').text(blueHp);
-                $('#bluePot').text(bluePot);
-                $('#blueELM').text(blueELM);
                 $('#blueGen').text(blueGen)
                 $('#blueGenPow').text(blueGenPow)
                 $('#blueWill').text(blueWill)
-                $('#blueChakraPow').text(blueChakraPower)
-                $('#blueStr').text(blueStr)
                 $('#blueNinPow').text(blueNenNinDmg)
+                $('#blueUltPow').text(blueNinPower)
+                $('#bluecost1').text(redNenNinCost)
+                $('#bluecost2').text(redNinCost)
+                $('#blue_dom_purity').text(blueDomPurity)
+                $('#blue_dom_lethal').text(blueDomLethal)
+                $('#blue_dom_duration').text(redDomDuration)
+                $('#blue_dom_cost').text(redDomCost)
 
             } else {
                 $('#damage').text('Fail');
@@ -738,7 +1100,7 @@
                     $('#blueChakra').text(currBlueChakra)
                 }
                 if (abusive.includes(curse)) {
-                    buff(100)
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                 }
                 if (attacking.includes(curse)) {
                     redAttack += amount;
@@ -789,7 +1151,7 @@
                     $('#blueEvas').text(blueEvas)
                 }
                 if (abusive.includes(curse)) {
-                    buff(100)
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                 }
                 if (attacking.includes(curse)) {
                     blueAttack += amount;
@@ -1046,7 +1408,7 @@
                     }
                 } else if (kotoamatsukamiCounters.red === 18) {
                     alert('Red\'s mind has been fully controlled by Kotoamatsukami!');
-                    buff(100); // Call the buff function
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     clearStatusEffect('red', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Red
                 }
             }
@@ -1094,7 +1456,7 @@
                     }
                 } else if (kotoamatsukamiCounters.blue === 16) {
                     alert('Blue\'s mind has been fully controlled by Kotoamatsukami!');
-                    buff(100); // Call the buff function
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     clearStatusEffect('blue', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Blue
                 }
             }
@@ -1689,60 +2051,22 @@
             if (action == 'Hatsu Buff') {
                 if (attacker == 'red') {
                     console.log('a buff has been used!')
-                    buff(redBuff)
+                    buff(redBuff, 'und', 0, 0, 'MISC', 'no', 'no')
                 } else {
                     console.log('a buff has been used!')
-                    buff(blueBuff)
+                    buff(blueBuff, 'und', 0, 0, 'MISC', 'no', 'no')
                 }
 
             }
             if (action == 'Zetsu Buff') {
                 if (attacker == 'red') {
                     console.log('a buff has been used!')
-                    buff(redBuff2)
+                    buff(redBuff2, 'und', 0, 0, 'MISC', 'no', 'no')
                 } else {
                     console.log('a buff has been used!')
-                    buff(blueBuff2)
+                    buff(blueBuff2, 'und', 0, 0, 'MISC', 'no', 'no')
                 }
             }
-            // if (action == 'Ninjutsu') {
-            //     if (attacker == 'red') {
-            //         if (currRedChakra < redCost) {
-            //             alert('NOT ENOUGH CHAKRA LOSE TURN')
-            //             return
-            //         }
-            //         let isNinHit = calculateNinjutsuChance(redAcc, blueEvas)
-            //         if (isNinHit) {
-            //             currRedChakra -= redCost
-            //             $('#redChakra').text(currRedChakra)
-            //             $('#blueHP').text(currBlueHp - redChakraPower);
-            //             $('#damage').text(`🥷  ${redChakraPower}  🥷`)
-            //             endRound()
-            //             return
-            //         } else {
-            //             $('#damage').text('Red Misses ❌')
-            //             return
-            //         }
-
-            //     } else {
-            //         if (currBlueChakra < blueCost) {
-            //             alert('NOT ENOUGH CHAKRA LOSE TURN')
-            //             return
-            //         }
-            //         let isNinHit = calculateNinjutsuChance(blueAcc, redEvas)
-            //         if (isNinHit) {
-            //             currBlueChakra -= blueCost
-            //             $('#blueChakra').text(currBlueChakra)
-            //             $('#redHP').text(currRedHp - blueChakraPower);
-            //             $('#damage').text(`🥷  ${blueChakraPower}  🥷`)
-            //             endRound()
-            //             return
-            //         } else {
-            //             $('#damage').text('Blue Misses ❌')
-            //             return
-            //         }
-            //     }
-            // }
             if (action == 'Ultimate Ninjutsu') {
                 let redJutsu = redNenNin.split(' ')[0];
                 let redUltJutsu = redNinjutsu.split(' ')[0];
@@ -2063,15 +2387,15 @@
     </div>
      <div>
         <p>🤞🏼</p>
-        <span>${player.dom_purity}</span>
+        <span id='red_dom_purity'>${player.dom_purity}</span>
     </div>
     <div>
         <p>🩸</p>
-        <span>${player.dom_lethal}</span>
+        <span id='red_dom_lethal'>${player.dom_lethal}</span>
     </div>
     <div>
         <p>🌘</p>
-        <span>${player.dom_duration} / ${player.dom_cost}</span>
+        <span><span id='red_dom_duration'>${player.dom_duration}</span> / <span id='red_dom_cost'>${player.dom_cost}</span></span>
     </div>
     <div>
         <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
@@ -2096,8 +2420,8 @@
 </div>
 <hr>
 
-                <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
-                <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
+                <p class='words'>${player.ninjutsu2} ✮ <span id='redcost1'>${player.ninJutsu2cost}</span></p>
+                <p class='words'>${player.ninjutsu} ✮ <span id='redcost2'>${player.nin_cost}</span></p>
                   <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <hr>
                 <p class='words'> ${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
@@ -2213,15 +2537,15 @@
 
     <div>
         <p>🤞🏼</p>
-        <span>${player.dom_purity}</span>
+        <span id='blue_dom_purity'>${player.dom_purity}</span>
     </div>
     <div>
         <p>🩸</p>
-        <span>${player.dom_lethal}</span>
+        <span id='blue_dom_lethal'>${player.dom_lethal}</span>
     </div>
     <div>
         <p>🌒</p>
-        <span>${player.dom_duration} / ${player.dom_cost}</span>
+        <span><span id='blue_dom_duration'>${player.dom_duration}</span> / <span id='blue_dom_cost'>${player.dom_cost}</span></span>
     </div>
     <div>
         <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
@@ -2249,8 +2573,8 @@
 
 <hr>
 
-               <p class='words'>${player.ninjutsu2} ✮ <span id='cost'>${player.ninJutsu2cost}</span></p>
-               <p class='words'>${player.ninjutsu} ✮ <span id='cost'>${player.nin_cost}</span></p>
+               <p class='words'>${player.ninjutsu2} ✮ <span id='bluecost1'>${player.ninJutsu2cost}</span></p>
+               <p class='words'>${player.ninjutsu} ✮ <span id='bluecost2'>${player.nin_cost}</span></p>
                  <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                   <hr>
                <p class='words'>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>

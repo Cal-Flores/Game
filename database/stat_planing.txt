@@ -59,3 +59,335 @@ Megumi
 Kakazu
 Noritoshi
 Beast titan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                // let ultCost = []
+                // let ultDamage = []
+                // let elem = []
+                //let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
+                // THIS IS FOR HEALING !!
+                // if (stat_max == 'redHeal') {
+                //     let currRedHp = parseInt($('#redHP').text(), 10)
+                //     let healAmount = parseInt(prompt('Healing Factor?'), 10)
+                //     currRedHp += healAmount;
+                //     $('#damage').text(`Red Recoverd ${healAmount} HP 🖤`)
+                //     $('#redHP').text(currRedHp)
+                //     return
+                // } else if (stat_max == 'blueHeal') {
+                //     let currBlueHp = parseInt($('#blueHP').text(), 10)
+                //     let healAmount = parseInt(prompt('Healing Factor?'), 10)
+                //     currBlueHp += healAmount;
+                //     $('#damage').text(`Blue Recoverd ${healAmount} HP 🖤`)
+                //     $('#blueHP').text(currBlueHp)
+                //     return
+                // }
+                // let stat_type = prompt('Increase or Decrease');
+                //let stat_number = parseFloat(prompt('By how much'));
+
+                // switch (stat_max) {
+                //     case 'redAttack':
+                //         if (stat_type == 'Increase') {
+                //             redAttack = Math.floor(redAttack * (1 + stat_number));
+                //         } else {
+                //             redAttack = Math.floor(redAttack * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redDefense':
+                //         if (stat_type == 'Increase') {
+                //             redDefense = Math.floor(redDefense * (1 + stat_number));
+                //         } else {
+                //             redDefense = Math.floor(redDefense * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redCrit':
+                //         if (stat_type == 'Increase') {
+                //             redCrit = (redCrit * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             redCrit = (redCrit * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'redElmAttack':
+                //         if (stat_type == 'Increase') {
+                //             redElmAttack = Math.floor(redElmAttack * (1 + stat_number));
+                //         } else {
+                //             redElmAttack = Math.floor(redElmAttack * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redUltNinCost':
+                //         if (stat_type == 'Increase') {
+                //             redNinCost = Math.floor(redNinCost * (1 + stat_number));
+                //         } else {
+                //             redNinCost = Math.floor(redNinCost * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redElmDef':
+                //         if (stat_type == 'Increase') {
+                //             redElmDef = Math.floor(redElmDef * (1 + stat_number));
+                //         } else {
+                //             redElmDef = Math.floor(redElmDef * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redElmEffc':
+                //         if (stat_type == 'Increase') {
+                //             redElmEffc = (redElmEffc * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             redElmEffc = (redElmEffc * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'redHp':
+                //         if (stat_type == 'Increase') {
+                //             redHp = Math.max(0, Math.floor(redHp * (1 + stat_number))); // Ensuring no negative values
+                //         } else {
+                //             redHp = Math.max(0, Math.floor(redHp * (1 - stat_number)));
+                //         }
+                //         break;
+                //     case 'redStr':
+                //         if (stat_type == 'Increase') {
+                //             redStr = (redStr * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             redStr = (redStr * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'redPot':
+                //         if (stat_type == 'Increase') {
+                //             redPot = (redPot * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             redPot = (redPot * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'redELM':
+                //         affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
+                //         redELM = affinity
+                //         alert(`Red Affinity changed to ${redELM}`)
+                //         break;
+                //     case 'redRecovery':
+                //         if (stat_type == 'Increase') {
+                //             redRecovery = Math.floor(redRecovery + stat_number);
+                //             alert(`Red's chakra recovery increases to ${redRecovery}`)
+                //         } else {
+                //             redRecovery = Math.floor(redRecovery - stat_number);
+                //             alert(`Red's chakra recovery decreases to ${redRecovery}`)
+                //         }
+                //         break;
+                //     case 'redAcc':
+                //         if (stat_type == 'Increase') {
+                //             redAcc = Math.floor(redAcc * (1 + stat_number));
+                //         } else {
+                //             redAcc = Math.floor(redAcc * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redEvas':
+                //         if (stat_type == 'Increase') {
+                //             redEvas = Math.floor(redEvas * (1 + stat_number));
+                //         } else {
+                //             redEvas = Math.floor(redEvas * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redLuck':
+                //         if (stat_type == 'Increase') {
+                //             redLuck = Math.floor(redLuck * (1 + stat_number));
+                //         } else {
+                //             redLuck = Math.floor(redLuck * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redNinjutsuPower':
+                //         if (stat_type == 'Increase') {
+                //             redNenNinDmg = Math.floor(redNenNinDmg * (1 + stat_number));
+                //         } else {
+                //             redNenNinDmg = Math.floor(redNenNinDmg * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redNinjutsuCost':
+                //         if (stat_type == 'Increase') {
+                //             redNenNinCost = Math.floor(redNenNinCost * (1 + stat_number));
+                //         } else {
+                //             redNenNinCost = Math.floor(redNenNinCost * (1 - stat_number));
+                //         }
+                //         break;
+
+                //     case 'redGen':
+                //         if (stat_type == 'Increase') {
+                //             redGen = Math.floor(redGen * (1 + stat_number));
+                //         } else {
+                //             redGen = Math.floor(redGen * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redGenPow':
+                //         if (stat_type == 'Increase') {
+                //             redGenPow = Math.floor(redGenPow * (1 + stat_number));
+                //         } else {
+                //             redGenPow = Math.floor(redGenPow * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redWill':
+                //         if (stat_type == 'Increase') {
+                //             redWill = Math.floor(redWill * (1 + stat_number));
+                //         } else {
+                //             redWill = Math.floor(redWill * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueAttack':
+                //         if (stat_type == 'Increase') {
+                //             blueAttack = Math.floor(blueAttack * (1 + stat_number));
+                //         } else {
+                //             blueAttack = Math.floor(blueAttack * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueDefense':
+                //         if (stat_type == 'Increase') {
+                //             blueDefense = Math.floor(blueDefense * (1 + stat_number));
+                //         } else {
+                //             blueDefense = Math.floor(blueDefense * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueCrit':
+                //         if (stat_type == 'Increase') {
+                //             blueCrit = (blueCrit * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             blueCrit = (blueCrit * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'blueElmAttack':
+                //         if (stat_type == 'Increase') {
+                //             blueElmAttack = Math.floor(blueElmAttack * (1 + stat_number));
+                //         } else {
+                //             blueElmAttack = Math.floor(blueElmAttack * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueElmDef':
+                //         if (stat_type == 'Increase') {
+                //             blueElmDef = Math.floor(blueElmDef * (1 + stat_number));
+                //         } else {
+                //             blueElmDef = Math.floor(blueElmDef * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueElmEffc':
+                //         if (stat_type == 'Increase') {
+                //             blueElmEffc = Math.floor(blueElmEffc * (1 + stat_number));
+                //         } else {
+                //             blueElmEffc = Math.floor(blueElmEffc * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueHp':
+                //         if (stat_type == 'Increase') {
+                //             blueHp = Math.max(0, Math.floor(blueHp * (1 + stat_number))); // Ensuring no negative values
+                //         } else {
+                //             blueHp = Math.max(0, Math.floor(blueHp * (1 - stat_number)));
+                //         }
+                //         break;
+                //     case 'blueStr':
+                //         if (stat_type == 'Increase') {
+                //             blueStr = (blueStr * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             blueStr = (blueStr * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'bluePot':
+                //         if (stat_type == 'Increase') {
+                //             bluePot = (bluePot * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             bluePot = (bluePot * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'blueELM':
+                //         affinity = prompt('Change Affinity (Earth, Water, Fire, Wind, Lightning, Fighter, Grass, Dark)')
+                //         blueELM = affinity
+                //         alert(`Red Affinity changed to ${blueELM}`)
+                //         break;
+                //     case 'blueRecovery':
+                //         if (stat_type == 'Increase') {
+                //             blueRecovery = Math.floor(blueRecovery + stat_number); // Corrected to use blueRecovery
+                //             alert(`Blue's chakra recovery increases to ${blueRecovery}`)
+                //         } else {
+                //             blueRecovery = Math.floor(blueRecovery - stat_number);
+                //             alert(`Blue's chakra recovery increases to ${blueRecovery}`)
+                //         }
+                //         break;
+                //     case 'blueAcc':
+                //         if (stat_type == 'Increase') {
+                //             blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             blueAcc = (blueAcc * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'blueEvas':
+                //         if (stat_type == 'Increase') {
+                //             blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
+                //         } else {
+                //             blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
+                //         }
+                //         break;
+                //     case 'blueLuck':
+                //         if (stat_type == 'Increase') {
+                //             blueLuck = Math.floor(blueLuck * (1 + stat_number));
+                //         } else {
+                //             blueLuck = Math.floor(blueLuck * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueGen':
+                //         if (stat_type == 'Increase') {
+                //             blueGen = Math.floor(blueGen * (1 + stat_number));
+                //         } else {
+                //             blueGen = Math.floor(blueGen * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueGenPow':
+                //         if (stat_type == 'Increase') {
+                //             blueGenPow = Math.floor(blueGenPow * (1 + stat_number));
+                //         } else {
+                //             blueGenPow = Math.floor(blueGenPow * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueWill':
+                //         if (stat_type == 'Increase') {
+                //             blueWill = Math.floor(blueWill * (1 + stat_number));
+                //         } else {
+                //             blueWill = Math.floor(blueWill * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueNinjutsuPower':
+                //         if (stat_type == 'Increase') {
+                //             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + stat_number));
+                //         } else {
+                //             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - stat_number));
+                //         }
+                //         break;
+
+                //     case 'blueNinjutsuCost':
+                //         if (stat_type == 'Increase') {
+                //             blueNenNinCost = Math.floor(blueNenNinCost * (1 + stat_number));
+                //         } else {
+                //             blueNenNinCost = Math.floor(blueNenNinCost * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'blueDomPurity':
+                //         if (stat_type == 'Increase') {
+                //             blueDomPurity = Math.floor(blueDomPurity * (1 + stat_number));
+                //         } else {
+                //             blueDomPurity = Math.floor(blueDomPurity * (1 - stat_number));
+                //         }
+                //         break;
+                //     case 'redDomPurity':
+                //         if (stat_type == 'Increase') {
+                //             redDomPurity = Math.floor(redDomPurity * (1 + stat_number));
+                //         } else {
+                //             redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
+                //         }
+                //         break;
+                //     default:
+                //         alert('Invalid stat');
+                //         break;
+                // }
+                // Update the stats on the page if necessary

@@ -132,12 +132,17 @@ const database = [
         chakra: 0, // max 100
         chakra_rec: 3,
         //ninjutsu
-        ninjutsu: 'Pain Packer - Enhances Elemental by 8%',
-        nin_cost: 14,
-        ninjutsu_pow: 225,
         ninjutsu2: "Rising Sun - Enhances defense by 100%",
         ninJutsu2cost: 42,
         ninJutsu2Dmg: 380,
+        nin2amount: 1,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Pain Packer - Enhances Elemental by 8%',
+        nin_cost: 14,
+        ninjutsu_pow: 225,
+        ninamount: .08,
+        ultEnhance: true,
         //end
         elm: fire,
         luck: 2,
@@ -574,12 +579,17 @@ const database = [
         chakra: 0, // max 100
         chakra_rec: 6,
         // ninjutsu stats
-        ninjutsu: 'Nen Bullets',
-        nin_cost: 19,
-        ninjutsu_pow: 200,
-        ninjutsu2: "Double Machine Gun - Increase Nen Bullets by 40%",
+        ninjutsu2: 'Nen Bullets',
         ninJutsu2cost: 32,
         ninJutsu2Dmg: 200,
+        nin2amount: 0,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: "Double Machine Gun - Increase Nen Bullets by 40%",
+        nin_cost: 19,
+        ninjutsu_pow: 200,
+        ninamount: .40,
+        ultEnhance: true,
         //end
         elm: water,
         luck: 8,
@@ -675,9 +685,14 @@ const database = [
         ninjutsu2: "Harden - Increase Defense by 10%",
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 285,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ultimate
+        ninjutsu: 'RAGE - Decrease Defense by 10%',
         nin_cost: 20,
         ninjutsu_pow: 280,
-        ninjutsu: 'RAGE - Decrease Defense by 10%',
+        ninamount: .10,
+        ultEnhance: false,
         //end
         elm: earth,
         luck: 5,
@@ -723,9 +738,14 @@ const database = [
         ninjutsu2: "Sand Coffin - Increase Attack by 5%",
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 260,
+        nin2amount: .05,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Sand Mauseliem - Double Domain Duration',
         nin_cost: 30,
         ninjutsu_pow: 200,
-        ninjutsu: 'Sand Mauseliem - Double Domain Duration',
+        ninamount: 4,
+        ultEnhance: true,
         //end
         elm: earth,
         luck: 5,
@@ -771,9 +791,14 @@ const database = [
         ninjutsu2: "Rage Blast - Decrease M.Def by 20%",
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 300,
+        nin2amount: .20,
+        ninEnhance: false,
+        //ultimate ninjutsu
+        ninjutsu: 'Rage Incarnate',
         nin_cost: 40,
         ninjutsu_pow: 600,
-        ninjutsu: 'Rage Incarnate',
+        ninamount: 0,
+        ultEnhance: false,
         //end
         elm: earth,
         luck: 4,
@@ -819,9 +844,14 @@ const database = [
         ninjutsu2: "Lariat - Increase Lariat Damage by 25%",
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 200,
+        nin2amount: .25,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Tailed Beast Bomb',
         nin_cost: 38,
         ninjutsu_pow: 500,
-        ninjutsu: 'Tailed Beast Bomb',
+        ninamount: 0,
+        ultEnhance: false,
         //end
         elm: lightning,
         luck: 3,
@@ -867,9 +897,14 @@ const database = [
         ninjutsu2: "Aura Synthesis - Increase Any Stat by 10%",
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 100,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Aura Synthesis II - Decrease Any Stat by 10%',
         nin_cost: 20,
         ninjutsu_pow: 100,
-        ninjutsu: 'Aura Synthesis II - Decrease Any Stat by 10%',
+        ninamount: .10,
+        ultEnhance: false,
         //end
         elm: water,
         luck: 1,
@@ -912,16 +947,17 @@ const database = [
         chakra: 0,
         chakra_rec: 5,
         //ninjutsu
-        ninjutsu2: "Teleporting-Rasengan Decrease Curse by 10%",
+        ninjutsu2: "Teleporting-Rasengan Decrease Curse by 5",
         ninJutsu2cost: 10,
-        ninJutsu2Dmg: 230,
-        nin2amount: .50,
+        ninJutsu2Dmg: 215,
+        nin2amount: 5,
         ninEnhance: false,
+        //ultimate ninjutsu
+        ninjutsu: 'Reaper Death Seal - Seal away chakra by 5',
         nin_cost: 34,
         ninjutsu_pow: 0,
-        ninamount: 6,
+        ninamount: 5,
         ultEnhance: false,
-        ninjutsu: 'Reaper Death Seal - Seal away chakra by 6',
         //end
         elm: wind,
         luck: 4,
@@ -968,10 +1004,13 @@ const database = [
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 230,
         nin2amount: -.10,
+        ninEnhance: false,
+        //ultimate
+        ninjutsu: '',
         nin_cost: 34,
         ninjutsu_pow: 0,
         ninamount: -6,
-        ninjutsu: '',
+        ultEnhance: false,
         //end
         elm: wind,
         luck: 6,
@@ -1062,14 +1101,19 @@ const database = [
         buff_acc: 65,
         buff2_acc: 70,
         chakra: 0,
-        // ninjutsu
         chakra_rec: 5,
+        // ninjutsu
         ninjutsu2: "Amaterasu - Decrease Element Def or Def by 10%",
         ninJutsu2cost: 22,
         ninJutsu2Dmg: 215,
+        nin2amount: .10,
+        ninEnhance: false,
+        //ultimate ninjutsu
+        ninjutsu: 'Yasaka Magatama - Increase Chakra by 3',
         nin_cost: 32,
         ninjutsu_pow: 320,
-        ninjutsu: 'Yasaka Magatama - Increase Chakra by 3%',
+        ninamount: 3,
+        ultEnhance: true,
         //end
         elm: fire,
         luck: 2,
@@ -1160,13 +1204,19 @@ const database = [
         buff2_acc: 50,
         chakra: 0,
         chakra_rec: 5,
-        cost: 12,
+        //ninjutsu
         ninjutsu2: "Sharingan - Increase Will Power by 2",
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 185,
+        nin2amount: 2,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Amaterasu - Decrease Elemental defense by 20%',
         nin_cost: 29,
         ninjutsu_pow: 310,
-        ninjutsu: 'Amaterasu - Decrease Elemental defense by 20%',
+        ninamount: .20,
+        ultEnhance: false,
+        //end
         elm: fire,
         luck: 2,
         genjutsu: 5,
@@ -1407,9 +1457,14 @@ const database = [
         ninjutsu2: "Explosive Tags - Increase Efficiency by 10%",
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 210,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ultimate ninjutsu
+        ninjutsu: 'Dance of the Shikigami - Increase Evasion by 60%',
         nin_cost: 36,
         ninjutsu_pow: 345,
-        ninjutsu: 'Dance of the Shikigami - Increase Evasion by 60%',
+        ninamount: .60,
+        ultEnhance: true,
         //end
         elm: wind,
         luck: 2,
