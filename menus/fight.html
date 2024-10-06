@@ -105,6 +105,8 @@
         let blueDomDuration
         let blueDomCost
         let blueDomName
+        let blueNinAmount
+        let blueUltAmount
         let blueStatus = []
         let blueCurses = []
 
@@ -146,6 +148,8 @@
         let redDomDuration
         let redDomCost
         let redDomName
+        let redNinAmount
+        let redUltAmount
         let redStatus = []
         let redCurses = []
         function chargeCurse(player, damage) {
@@ -2028,9 +2032,8 @@
                     originalRedRecovery = player.chakra_rec
                     originalRedAttack = player.attack
                     originalRedMagic = player.elm_attack
-
-
-
+                    redNinAmount = player.nin2amount
+                    redUltAmount = player.ninamount
                 } else if (val_2 === player.name) {
                     blueHtml = `
             <div class='fight_time_card'>
@@ -2180,6 +2183,8 @@
                     blueNenNin = player.ninjutsu2
                     blueNenNinCost = player.ninJutsu2cost
                     blueNenNinDmg = player.ninJutsu2Dmg
+                    blueNinAmount = player.nin2amount
+                    blueUltAmount = player.ninamount
                 }
             }
 
