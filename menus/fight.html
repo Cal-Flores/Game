@@ -592,18 +592,14 @@
                     if (attacker == 'red') {
                         if (enhance) {
                             redNenNinDmg = Math.floor(redNenNinDmg * (1 + amount));
-                            console.log('LARIATOOO im red?', blueNenNinDmg)
                         } else {
                             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 - amount));
-                            console.log('LARIATOOO im red?', blueNenNinDmg)
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
                             blueNenNinDmg = Math.floor(blueNenNinDmg * (1 + amount))
-                            console.log('LARIATOOO im blue', blueNenNinDmg)
                         } else {
                             redNenNinDmg = Math.floor(redNenNinDmg * (1 - amount))
-                            console.log('LARIATOOO im false', blueNenNinDmg)
                         }
                     }
                 }

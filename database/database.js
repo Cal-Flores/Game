@@ -1675,7 +1675,7 @@ const database = [
         ninjutsu: 'Knife Devil Contract - Doubles Claw damage',
         nin_cost: 22,
         ninjutsu_pow: 333,
-        ninamount: 2,
+        ninamount: 1,
         ultEnhance: true,
         //endx1
         elm: fight,
@@ -1687,7 +1687,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 25, // 100 is best
         cursed_tech: 'Projection-Sorcery - Triple Evasion',
-        curse_amount: 2, //instead of prompt
+        curse_amount: 12, //instead of prompt
         curse_duration: 6,
         curse_cost: 15,
         dom_purity: 2,

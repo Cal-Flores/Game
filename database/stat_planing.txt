@@ -1,3 +1,17 @@
+	MODEL 4
+GRADE 1:	 0.88 → 224
+GRADE 2:	 0.85 → 217
+GRADE 3: 	 0.82 → 209
+GRADE 4: 	 0.79 → 201
+GRADE 5: 	 0.76 → 194
+GRADE 6: 	 0.73 → 186
+GRADE 7: 	 0.70 → 178
+GRADE 8:	 0.68 → 173
+GRADE 9:	 0.66 → 168
+GRADE 10:	 0.64 → 163
+GRADE 11:	 0.62 → 158
+
+
 attack | defense | critical |  strength
 
 
@@ -81,6 +95,7 @@ Megumi
 Kakazu
 Noritoshi
 Beast titan
+
 
 
 
