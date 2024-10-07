@@ -552,14 +552,14 @@ const database = [
         chakra_rec: 4,
         // NINJUTSU
         ninjutsu2: "Ripper-Cyclotron",
-        ninJutsu2cost: 8,
+        ninJutsu2cost: 11,
         ninJutsu2Dmg: 215,
         nin2amount: 0,
         ninEnhance: true,
         ninjutsu: 'Ripper-Cyclotron x 15 - Double Ripper Cyclotron',
         nin_cost: 42,
         ninjutsu_pow: 415,
-        ninamount: .2,
+        ninamount: 1,
         ultEnhance: true,
         //end
         elm: fight,
@@ -1755,9 +1755,9 @@ const database = [
         name: 'Pokkle',
         nen_type: 'Emitter',
         element: 'Fire',
-        attack: 185,
+        attack: 175,
         defense: 149,
-        elm_attack: 185,
+        elm_attack: 195,
         elm_defense: 173,
         elm_efficiency: 1.3,
         critical: .15,
@@ -1771,10 +1771,10 @@ const database = [
         buff_acc: 50,
         buff2_acc: 35,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 4,
         //NINJUTSU
-        ninjutsu2: 'Orange-Arrow - Increase Attack by 15%',
-        ninJutsu2cost: 16,
+        ninjutsu2: 'Orange-Arrow - Increase Attack by 10%',
+        ninJutsu2cost: 14,
         ninJutsu2Dmg: 150,
         nin2amount: .15,
         ninEnhance: true,
@@ -1793,8 +1793,8 @@ const database = [
         // cursed attacks
         cursed_energy: 0,
         cursed_recovery: 25, // 100 is best
-        cursed_tech: 'Seven-Spectrum Array - Increase Purple Arrow',
-        curse_amount: 12, //instead of prompt
+        cursed_tech: 'Seven-Spectrum Array - Double Recovery',
+        curse_amount: 4, //instead of prompt
         curse_duration: 6,
         curse_cost: 15,
         dom_purity: 2,
@@ -1802,6 +1802,6 @@ const database = [
         dom_duration: 2,
         dom_cost: 30,
         dom_name: '',
-        image: 'https://preview.redd.it/i-tried-to-make-kishibe-a-bit-more-lively-v0-ke8dx7n9oxoa1.jpg?width=640&crop=smart&auto=webp&s=30f8a2bebb02a1782f1418be2c76debf6493d0e9'
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/0/0a/Pokkle_HxH_11.PNG/revision/latest?cb=20120323055002'
     },
 ];
