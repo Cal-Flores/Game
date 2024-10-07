@@ -170,34 +170,34 @@ Grade 11 -   561 | 140 each
 
 
 ---- IN ---
-1. Itadori ✅ attack
-2. Nobara ✅ curse
-3. Megumi ✅ emiiter
-4. Gojo ✅ domain
-5. Nanami ✅ attack
-6. Sukuna ✅ domain
-7. Todo ✅ attack
-8. Kakazu emitter
-9. Kisame chakra nen type
-10. Geto ✅ curse
-11. Mahito ✅ curse
-12. Toge ✅ curse
-13. Panda ✅ defense
-14. Mai ✅ luck
-15. Kasume ninjutsu
-16. Mechamaru ✅ pre-requisite
-17. Momo ✅ genjutsu
-18. Noritoshi emitter
-19. Maki ✅ attack
-20. Katana Man attack
+1. Itadori ✅ attack fighter
+2. Nobara ✅ curse lightning
+3. Megumi ✅ emiiter Dark
+4. Gojo ✅ domain dark
+5. Nanami ✅ attack fighter
+6. Sukuna ✅ domain dark
+7. Todo ✅ attack earth
+8. Kakazu emitter earth
+9. Kisame chakra water
+10. Geto ✅ curse dark
+11. Mahito ✅ curse water
+12. Toge ✅ curse grass
+13. Panda ✅ defense earth
+14. Mai ✅ luck ❌
+15. Kasume ninjutsu ❌
+16. Mechamaru ✅ pre-requisite ❌
+17. Momo ✅ genjutsu wind
+18. Noritoshi emitter water
+19. Maki ✅ attack wind
+20. Katana Man attack ❌
 21. Female Titan ninjutsu
-22. Levi speed ✅
-23. Attack Titan attack ✅
-24. Mikasa attack ✅
-25. Beast Titan emitter
-26. Collosal Titan defense ✅
-27. Porco speed
-28. Pieck genjutsu
+22. Levi speed ✅ lightning
+23. Attack Titan attack ✅ fighter
+24. Mikasa attack ✅ lightning
+25. Beast Titan emitter earth
+26. Collosal Titan defense ✅ fire
+27. Porco speed ❌
+28. Pieck genjutsu ❌
 29. OPEN
 
 ---- OUT -----

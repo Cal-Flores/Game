@@ -185,13 +185,13 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3']
             let defense = ['Harden', 'RAGE', 'Rising-Sun']
             let critical = []
             let Strength = []
             //Magic
             let magic = ['Pain-Packer']
-            let magicDef = ['Amaterasu', 'Flame-Control', "Rage-Blast"]
+            let magicDef = ['Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping']
             let potency = ['Explosive']
             let efficieny = []
             //speed + recovery + luck
@@ -204,7 +204,7 @@
             let power = []
             let willpower = ['Sharingan']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan']
+            let curseRec = ['Teleporting-Rasengan', 'C4-Karura']
             let curseCost = []
             let curseDur = []
             let domPurity = []
@@ -213,7 +213,7 @@
             let domCost = []
             // ninjutsu
             let ninCosted = []
-            let ninDamage = ["Double-Machine", "Lariat"]
+            let ninDamage = ["Double-Machine", "Lariat", 'Knife']
             let ultCosted = []
             let ultDamage = []
             let elem = []
@@ -639,7 +639,7 @@
                     }
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
-                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower, redDomPurity, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueHeal');
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
                         let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -717,9 +717,9 @@
                             break;
                         case 'redStr':
                             if (stat_type == 'Increase') {
-                                redStr = (redStr * (1 + stat_number)).toFixed(2);
+                                redStrength = (redStrength * (1 + stat_number)).toFixed(2);
                             } else {
-                                redStr = (redStr * (1 - stat_number)).toFixed(2);
+                                redStrength = (redStrength * (1 - stat_number)).toFixed(2);
                             }
                             break;
                         case 'redPot':
@@ -948,6 +948,34 @@
                                 redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
                             }
                             break;
+                        case 'redDomDur':
+                            if (stat_type == 'Increase') {
+                                redDomDuration = Math.floor(redDomDuration * (1 + stat_number));
+                            } else {
+                                redDomDuration = Math.floor(redDomDuration * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueDomDur':
+                            if (stat_type == 'Increase') {
+                                blueDomDuration = Math.floor(blueDomDuration * (1 + stat_number));
+                            } else {
+                                blueDomDuration = Math.floor(blueDomDuration * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueDomLethal':
+                            if (stat_type == 'Increase') {
+                                blueDomLethal = Math.floor(blueDomLethal * (1 + stat_number));
+                            } else {
+                                blueDomLethal = Math.floor(blueDomLethal * (1 - stat_number));
+                            }
+                            break;
+                        case 'redDomLethal':
+                            if (stat_type == 'Increase') {
+                                redDomLethal = Math.floor(redDomLethal * (1 + stat_number));
+                            } else {
+                                redDomLethal = Math.floor(redDomLethal * (1 - stat_number));
+                            }
+                            break;
                         default:
                             alert('Invalid stat');
                             break;
@@ -959,7 +987,7 @@
                 $('#redAttack').text(redAttack);
                 $('#redDefense').text(redDefense);
                 $('#redCrit').text(redCrit);
-                $('#redStr').text(redStr);
+                $('#redStr').text(redStrength);
                 $('#redELM').text(redELM);
                 $('#redElmAttack').text(redElmAttack);
                 $('#redElmDef').text(redElmDef);
@@ -2241,7 +2269,7 @@
                         console.log('Red is Confused and hits themselves!');
 
                         isCritical = Math.random() < redCrit;
-                        criticalMultiplier = isCritical ? redStr : 1.0;
+                        criticalMultiplier = isCritical ? redStrength : 1.0;
 
                         let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
@@ -2253,7 +2281,7 @@
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < redCrit;
-                        criticalMultiplier = isCritical ? redStr : 1.0;
+                        criticalMultiplier = isCritical ? redStrength : 1.0;
 
                         let damage = ((redAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));
@@ -2280,7 +2308,7 @@
                         console.log('Blue is Confused and hits themselves!');
 
                         isCritical = Math.random() < blueCrit;
-                        criticalMultiplier = isCritical ? blueStr : 1.0;
+                        criticalMultiplier = isCritical ? blueStrength : 1.0;
 
                         let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
@@ -2292,7 +2320,7 @@
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < blueCrit;
-                        criticalMultiplier = isCritical ? blueStr : 1.0;
+                        criticalMultiplier = isCritical ? blueStrength : 1.0;
 
                         let damage = ((blueAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));

@@ -13,12 +13,34 @@ domain-Lethal-duration | curse | Ninjutsu
 Genjutsu | power | willpower | buff
 
 
+Enhancer:
+1|Adult Gon
+1|Netero
+3|Kishibe - attack, critical, evasion, luck | m. defense, curse, willpower, domain
+2|Buff Bisky
+3|Sage Naruto
+5|Aki
+5|Nobonaga
+Rock Lee
+Neji
+5| Phinks
+Scarlet Kurapika
+Chainsaw-Man
+4|Uvogin
+3|Akatsuki Sasuke
+Might Guy
+6|Deidara
+Hunter Gon
+Hunter Killua
+
+
+
 Speed:
 
 1| Meruem -
 2| Neferpitou - Evas, attack, critcal, curse, luck | defense, m.defense, recovery, will power, magic,
 2| Minato - Evas, Ninjutsu, Willpower, critcial, strength, acc | domain, genjutsu, power, defense. m.defense, m.attack
-2| Tobirama - Evas, magic, m.def, eff,
+2| Tobirama - Evas, Magic, willpower, efficiency, ninjutsu| domain,  defense, potency, str, crit, curse
 2| Chakra Naruto -
 3| Anbu Kakashi -
 5| Godspeed Killua -
