@@ -37,7 +37,7 @@ Enhancer:
 5|Nobonaga
 Rock Lee
 Neji
-5| Phinks
+5| Phinks attack
 Scarlet Kurapika
 Chainsaw-Man
 4|Uvogin
@@ -97,7 +97,20 @@ Noritoshi
 Beast titan
 
 
+//ninjutsu
+        ninjutsu2: "Rising-Sun - Enhances defense by 100%",
+        ninJutsu2cost: 42,
+        ninJutsu2Dmg: 380,
+        nin2amount: 1,
+        ninEnhance: true,
 
+        //ultimate ninjutsu
+        ninjutsu: 'Pain-Packer - Enhances Elemental by 8%',
+        nin_cost: 14,
+        ninjutsu_pow: 225,
+        ninamount: .08,
+        ultEnhance: true,
+//end
 
 
 
