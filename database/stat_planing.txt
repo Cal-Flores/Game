@@ -33,17 +33,17 @@ Enhancer:
 3|Kishibe - attack, critical, evasion, luck | m. defense, curse, willpower, domain
 2|Buff Bisky
 3|Sage Naruto
-5|Aki
-5|Nobonaga
+5|Aki ✅
+5|Nobonaga ✅
 Rock Lee
 Neji
-5| Phinks attack
+5| Phinks attack ✅
 Scarlet Kurapika
 Chainsaw-Man
-4|Uvogin
-3|Akatsuki Sasuke
+4|Uvogin ✅
+3|Akatsuki Sasuke ✅
 Might Guy
-6|Deidara
+6|Deidara ✅
 Hunter Gon
 Hunter Killua
 
