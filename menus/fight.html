@@ -43,7 +43,8 @@
                     <label>Choose Move</label>
                     <select id="actioner">
                         <option>Attack</option>
-                        <option>Elemental Attack</option>
+                        <option>Magic Attack</option>
+                        <option>Cursed Tool Attack</option>
                         <option>Ninjutsu</option>
                         <option>Ultimate Ninjutsu</option>
                         <option>Curse Technique</option>
@@ -109,6 +110,14 @@
         let blueUltAmount
         let blueNinEnhance
         let blueUltEnhance
+        let blueWeapon
+        let blueShield
+        let blueWeaponCrit
+        let blueWeaponCurse
+        let blueWeaponAmount
+        let blueStun
+        let blueDrain
+        let blueNegative
         let blueStatus = []
         let blueCurses = []
 
@@ -154,6 +163,14 @@
         let redUltAmount
         let redNinEnhance
         let redUltEnhance
+        let redWeapon
+        let redShield
+        let redWeaponCrit
+        let redWeaponCurse
+        let redWeaponAmount
+        let redStun
+        let redDrain
+        let redNegative
         let redStatus = []
         let redCurses = []
         function chargeCurse(player, damage) {
@@ -1775,6 +1792,26 @@
             $('#blueHP').text(currBlueHp);
         }
 
+        function cursedTool(attacker, curse, amount) {
+            if (attacker == 'red') {
+                //// LONG IF CHAIN ///
+                if (curse == 'Shield') {
+                    blueShield -= amount
+                    console.log('NANAMI CURSED UR shield')
+                }
+            }
+            if (attacker == 'blue') {
+                //// LONG IF CHAIN ///
+                if (curse == 'Shield') {
+                    redShield -= amount
+                }
+            }
+            // UPDATE U.I
+            console.log('NANAMI CURSED U', blueShield)
+            $('#blueShield').text(blueShield)
+            $('#redShield').text(redShield)
+        }
+
 
 
 
@@ -1847,9 +1884,102 @@
             }
 
 
+            if (action == 'Cursed Tool Attack') {
+                let isCritical;
+                let criticalMultiplier;
+                let hitChance;
+                let isHit;
 
+                if (attacker === 'red') {
+                    hitChance = calculateHitChance(redAcc, blueEvas);
+                    isHit = Math.random() < hitChance;
 
-            if (action === 'Elemental Attack') {
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Red is Confused and hits themselves!');
+
+                        // isCritical = Math.random() < redCrit;
+                        // criticalMultiplier = isCritical ? redStrength : 1.0;
+
+                        // let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
+                        // selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        // $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
+                        // $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        // $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        // chargeCurse('red', selfDamage)
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < redWeaponCrit;
+                        if (isCritical) {
+                            console.log('NANAMI CURSED YOU')
+                            cursedTool(attacker, redWeaponCurse, redWeaponAmount)
+                        }
+                        console.log(`${redWeapon} attcking ${blueShield} with a varience of ${variance}`)
+                        let damage = ((redWeapon * (1 + variance)) - (blueShield / 4));
+                        damage = Math.max(1, Math.round(damage));
+
+                        $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 🏹' : '').fadeIn(500);
+                        chargeCurse('blue', damage)
+                    } else {
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('blue', 175)
+                    }
+                } else if (attacker === 'blue') {
+                    hitChance = calculateHitChance(blueAcc, redEvas);
+                    isHit = Math.random() < hitChance;
+
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Blue is Confused and hits themselves!');
+
+                        // isCritical = Math.random() < blueCrit;
+                        // criticalMultiplier = isCritical ? blueStrength : 1.0;
+
+                        // let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
+                        // selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        // $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
+                        // $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        // $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        // chargeCurse('blue', selfDamage)
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < blueWeaponCrit;
+                        // criticalMultiplier = isCritical ? blueStrength : 1.0;
+                        if (isCritical) {
+                            console.log('NANAMI CURSED YOU')
+                            cursedTool(attacker, blueWeaponCurse, blueWeaponAmount)
+                        }
+
+                        let damage = ((blueWeapon * (1 + variance)) - (redShield / 4));
+                        damage = Math.max(1, Math.round(damage));
+
+                        $('#redHP').text(currRedHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 🏹' : '').fadeIn(500);
+                        chargeCurse('red', damage)
+                    } else {
+                        // Display a miss message if the hit chance fails
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('red', 175)
+                    }
+                }
+            }
+
+            if (action === 'Magic Attack') {
                 let isHit;
                 let hitChance;
 
@@ -2413,7 +2543,23 @@
         <p>⛈</p>
         <span id="redElmEffc">${player.elm_efficiency}</span>
     </div>
-        <div>
+     <div>
+        <p>🏹</p>
+        <span id="redWeapon">${player.weapon}</span>
+    </div>
+    <div>
+        <p>𐂫</p>
+        <span id="redShield">${player.shield}</span>
+    </div>
+    <div class='nen_numbers'>
+        <p >${player.weaponCurse}</p>
+        <p id="redWeaponCrit">${player.curse_crit}</p>
+    </div>
+    <div class='nen_numbers'>
+        <p id="redDrain">Drain: ${player.drain}</p>
+        <p id="redNegative">Negative: ${player.negative_energy}</p>
+    </div>
+    <div>
         <p>🍀</p>
         <span id="redLuck">${player.luck}</span>
     </div>
@@ -2462,11 +2608,12 @@
         <p id="redNinPow">${player.ninJutsu2Dmg}</p>
         <p id="redUltPow">${player.ninjutsu_pow}</p>
     </div>
+
 </div>
-<hr>
 
                 <p class='words'>${player.ninjutsu2} ✮ <span id='redcost1'>${player.ninJutsu2cost}</span></p>
                 <p class='words'>${player.ninjutsu} ✮ <span id='redcost2'>${player.nin_cost}</span></p>
+                <hr>
                   <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <hr>
                 <p class='words'> ${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
@@ -2518,6 +2665,14 @@
                     redUltAmount = player.ninamount
                     redNinEnhance = player.ninEnhance
                     redUltEnhance = player.ultEnhance
+                    redWeapon = player.weapon
+                    redShield = player.shield
+                    redWeaponCrit = player.curse_crit
+                    redWeaponCurse = player.weaponCurse
+                    redWeaponAmount = player.weapon_amount
+                    redStun = player.stun
+                    redDrain = player.drain
+                    redNegative = player.negative_energy
                 } else if (val_2 === player.name) {
                     blueHtml = `
             <div class='fight_time_card'>
@@ -2562,6 +2717,22 @@
     <div>
         <p>⛈</p>
         <span id="blueElmEffc">${player.elm_efficiency}</span>
+    </div>
+     <div>
+        <p>🏹</p>
+        <span id="blueWeapon">${player.weapon}</span>
+    </div>
+    <div>
+        <p>𐂫</p>
+        <span id="blueShield">${player.shield}</span>
+    </div>
+    <div class='nen_numbers'>
+        <p >${player.weaponCurse}</p>
+        <p id="blueWeaponCrit">${player.curse_crit}</p>
+    </div>
+    <div class='nen_numbers'>
+        <p id="blueDrain">: ${player.drain}</p>
+        <p id="blueNegative">Negative: ${player.negative_energy}</p>
     </div>
      <div>
         <p>🍀</p>
@@ -2614,12 +2785,14 @@
         <p id="blueNinPow">${player.ninJutsu2Dmg}</p>
         <p id="blueUltPow">${player.ninjutsu_pow}</p>
     </div>
+
 </div>
 
-<hr>
+
 
                <p class='words'>${player.ninjutsu2} ✮ <span id='bluecost1'>${player.ninJutsu2cost}</span></p>
                <p class='words'>${player.ninjutsu} ✮ <span id='bluecost2'>${player.nin_cost}</span></p>
+               <hr>
                  <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                   <hr>
                <p class='words'>${player.buff} ✮ <span id='buff_red'>${player.buff_acc}%</span></p>
@@ -2671,15 +2844,20 @@
                     blueUltAmount = player.ninamount
                     blueNinEnhance = player.ninEnhance
                     blueUltEnhance = player.ultEnhance
+                    blueWeapon = player.weapon
+                    blueShield = player.shield
+                    blueWeaponCrit = player.curse_crit
+                    blueWeaponCurse = player.weaponCurse
+                    blueWeaponAmount = player.weapon_amount
+                    blueStun = player.stun
+                    blueDrain = player.drain
+                    blueNegative = player.negative_energy
                 }
             }
 
             $('#red_corner').html(redHtml);
             $('#blue_corner').html(blueHtml);
             $('#fight_form_fight').hide()
-
-            console.log('Red Stats:', { redAttack, redDefense, redCrit, redElmAttack, redElmDef, redElmEffc, redHp, redStr, redPot });
-            console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStr, bluePot });
         }
 
 
