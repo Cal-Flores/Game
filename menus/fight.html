@@ -1893,6 +1893,13 @@
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < redStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Blue is Stunned!');
+                        }, 1500);
+
+                    }
 
                     ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
@@ -1935,6 +1942,13 @@
                 } else if (attacker === 'blue') {
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < blueStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('red is Stunned!');
+                        }, 1500);
+
+                    }
 
                     ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
@@ -1988,6 +2002,13 @@
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < redStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Blue is Stunned!');
+                        }, 1500);
+
+                    }
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
@@ -2039,6 +2060,13 @@
                 } else { // For blue attacker
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < blueStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Red is Stunned!');
+                        }, 1500);
+
+                    }
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
@@ -2362,14 +2390,12 @@
             }
             if (action == 'Drain') {
                 if (attacker == 'red') {
-                    let drain = redRecovery * 1.5;
-                    let empty = getRecovery(drain)
+                    let empty = getRecovery(redDrain)
                     currBlueChakra -= empty;
                     $('#damage').text(`${empty} Depleted`)
                     $('#blueChakra').text(currBlueChakra)
                 } else {
-                    let drain = blueRecovery * 1.5;
-                    let empty = getRecovery(drain)
+                    let empty = getRecovery(blueDrain)
                     currRedChakra -= empty;
                     $('#damage').text(`${empty} Depleted`)
                     $('#redChakra').text(currRedChakra)
@@ -2385,6 +2411,13 @@
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < redStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Blue is Stunned!');
+                        }, 1500);
+
+                    }
 
                     ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
@@ -2424,6 +2457,13 @@
                 } else if (attacker === 'blue') {
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
+                    isStun = Math.random() < blueStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Red is Stunned!');
+                        }, 1500);
+
+                    }
 
                     ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
@@ -2731,8 +2771,8 @@
         <p id="blueWeaponCrit">${player.curse_crit}</p>
     </div>
     <div class='nen_numbers'>
-        <p id="blueDrain">: ${player.drain}</p>
-        <p id="blueNegative">Negative: ${player.negative_energy}</p>
+        <p id="blueDrain">♺ ${player.drain}</p>
+        <p id="blueNegative">🫥 ${player.negative_energy}</p>
     </div>
      <div>
         <p>🍀</p>
