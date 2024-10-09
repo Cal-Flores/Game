@@ -209,11 +209,16 @@
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow']
             let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping']
-            let potency = ['Explosive']
+            let potency = ['Explosive', 'Flowing-Red-Scale']
             let efficieny = []
+            // Cursed tool
+            let weapon = []
+            let shield = []
+            let witherPer = []
+            let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Dance', 'Blood-Sharingan']
+            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale']
             let luck = []
             // genjutsu
@@ -353,15 +358,79 @@
                 if (potency.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redPotency += (redPotency * (1 + amount)).toFixed(2);
+                            redPotency = (redPotency * (1 + amount)).toFixed(2);
                         } else {
-                            bluPotency -= (bluePotency * (1 - amount)).toFixed(2);
+                            bluePotency = (bluePotency * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            bluePotency += (bluePotency * (1 + amount)).toFixed(2)
+                            bluePotency = (bluePotency * (1 + amount)).toFixed(2)
+                            alert(`Blues potency has increased to ${bluePotency}`)
                         } else {
-                            redPotency -= (redPotency * (1 - amount)).toFixed(2)
+                            redPotency = (redPotency * (1 - amount)).toFixed(2)
+                        }
+                    }
+                }
+                // CURSED TOLL
+                if (weapon.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redWeapon += amount
+                        } else {
+                            blueWeapon -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueWeapon += amount
+                        } else {
+                            redWeapon -= amount
+                        }
+                    }
+                }
+                if (shield.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redShield += amount
+                        } else {
+                            blueShield -= amount;
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueShield += amount
+                        } else {
+                            redShield -= amount
+                        }
+                    }
+                }
+                if (witherPer.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redWeaponCrit += amount
+                        } else {
+                            blueWeaponCrit -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueWeaponCrit += amount
+                        } else {
+                            redWeaponCrit -= amount
+                        }
+                    }
+                }
+                if (witherAmount.includes(jutsu)) {
+                    alert('nanami ultimate nin casted', enhance)
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redWeaponAmount += amount
+                            alert(`Nanami wither increased to ${redWeaponAmount}`)
+                        } else {
+                            blueWeaponAmount -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueWeaponAmount += amount
+                        } else {
+                            redWeaponAmount -= amount
                         }
                     }
                 }
@@ -384,15 +453,15 @@
                 if (evasion.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redEvas = Math.floor(redEvas * (1 + amount));
+                            redEvas += amount;
                         } else {
-                            bluevas = Math.floor(blueEvas * (1 - amount));
+                            blueEvas -= amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueEvas = Math.floor(blueEvas * (1 + amount))
+                            blueEvas += amount
                         } else {
-                            redEvas = Math.floor(redEvas * (1 - amount))
+                            redEvas -= amount
                         }
                     }
                 }
@@ -737,9 +806,9 @@
                             break;
                         case 'redPot':
                             if (stat_type == 'Increase') {
-                                redPot = (redPot * (1 + stat_number)).toFixed(2);
+                                redPotency = (redPotency * (1 + stat_number)).toFixed(2);
                             } else {
-                                redPot = (redPot * (1 - stat_number)).toFixed(2);
+                                redPotency = (redPotency * (1 - stat_number)).toFixed(2);
                             }
                             break;
                         case 'redELM':
@@ -871,9 +940,9 @@
                             break;
                         case 'bluePot':
                             if (stat_type == 'Increase') {
-                                bluePot = (bluePot * (1 + stat_number)).toFixed(2);
+                                bluePotency = (bluePotency * (1 + stat_number)).toFixed(2);
                             } else {
-                                bluePot = (bluePot * (1 - stat_number)).toFixed(2);
+                                bluePotency = (bluePotency * (1 - stat_number)).toFixed(2);
                             }
                             break;
                         case 'blueELM':
@@ -1005,7 +1074,7 @@
                 $('#redElmAttack').text(redElmAttack);
                 $('#redElmDef').text(redElmDef);
                 $('#redElmEffc').text(redElmEffc);
-                $('#redPot').text(redPot);
+                $('#redPot').text(redPotency);
                 $('#redGen').text(redGen)
                 $('#redGenPow').text(redGenPow)
                 $('#redWill').text(redWill)
@@ -1019,6 +1088,9 @@
                 $('#red_dom_lethal').text(redDomLethal)
                 $('#red_dom_duration').text(redDomDuration)
                 $('#red_dom_cost').text(redDomCost)
+                $('#redWeapon').text(redWeapon)
+                $('#redShield').text(redShield)
+                $('#redWeapon').text(redWeapon)
 
                 $('#blueHp').text(blueHp);
                 $('#blueAttack').text(blueAttack);
@@ -1027,7 +1099,7 @@
                 $('#blueStr').text(blueStrength)
                 $('#blueAcc').text(blueAcc)
                 $('#blueEvas').text(blueEvas)
-                $('#bluePot').text(bluePot);
+                $('#bluePot').text(bluePotency);
                 $('#blueELM').text(blueELM);
                 $('#blueElmAttack').text(blueElmAttack);
                 $('#blueElmDef').text(blueElmDef);
@@ -1043,6 +1115,8 @@
                 $('#blue_dom_lethal').text(blueDomLethal)
                 $('#blue_dom_duration').text(blueDomDuration)
                 $('#blue_dom_cost').text(blueDomCost)
+                $('#blueShield').text(blueShield)
+                $('#blueWeapon').text(blueWeapon)
 
             } else {
                 $('#damage').text('Fail');
@@ -1103,8 +1177,9 @@
         const magic_defense = ["Simple-Barrier"];
         const magic_attack = ['Albatross']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
-        const damage = ["Dismantle", 'Granite-Blast']; //** NEW please add me**
+        const damage = ["Dismantle", 'Granite-Blast', 'Convergence']; //** NEW please add me**
         const luck = ["Miracle"];
+        const weapon = ['Overtime']
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
@@ -1144,6 +1219,10 @@
                     currBlueHp -= amount;
                     $('#blueHP').text(currBlueHp);
                 }
+                if (weapon.includes(curse)) {
+                    redWeapon += amount
+                    $('#redWeapon').text(redWeapon);
+                }
                 if (genjutsu.includes(curse)) {
                     redGen += amount;
                     $('#redGen').text(redGen)
@@ -1172,7 +1251,7 @@
                     $('#redStr').text(redStrength);
                 }
                 if (potency.includes(curse)) {
-                    redPot += amount
+                    redPotency += amount
                     $('#redPot').text(redPot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -1226,8 +1305,12 @@
                     $('#blueStr').text(blueStrength);
                 }
                 if (potency.includes(curse)) {
-                    bluePot += amount
+                    bluePotency += amount
                     $('#bluePot').text(bluePot);
+                }
+                if (weapon.includes(curse)) {
+                    blueWeapon += amount
+                    $('#blueWeapon').text(blueWeapon);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef += amount
@@ -1295,7 +1378,7 @@
                     $('#redStr').text(redStrength);
                 }
                 if (potency.includes(curse)) {
-                    redPot -= amount
+                    redPotency -= amount
                     $('#redPot').text(redPot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -1341,7 +1424,7 @@
                     $('#blueStr').text(blueStrength);
                 }
                 if (potency.includes(curse)) {
-                    bluePot -= amount
+                    bluePotency -= amount
                     $('#bluePot').text(bluePot);
                 }
                 if (magic_defense.includes(curse)) {
@@ -1797,7 +1880,9 @@
                 //// LONG IF CHAIN ///
                 if (curse == 'Shield') {
                     blueShield -= amount
-                    console.log('NANAMI CURSED UR shield')
+                }
+                if (curse == 'Critical') {
+                    blueCrit = (blueCrit -= amount).toFixed(2)
                 }
             }
             if (attacker == 'blue') {
@@ -1805,11 +1890,16 @@
                 if (curse == 'Shield') {
                     redShield -= amount
                 }
+                if (curse == 'Critical') {
+                    redCrit = (redCrit -= amount).toFixed(2)
+                }
             }
             // UPDATE U.I
             console.log('NANAMI CURSED U', blueShield)
             $('#blueShield').text(blueShield)
             $('#redShield').text(redShield)
+            $('#blueCrit').text(blueCrit)
+            $('#redCrit').text(redCrit)
         }
 
 
@@ -1997,8 +2087,8 @@
                 let isHit;
                 let hitChance;
 
-                const redCrit = redPot;  // Assuming redPot represents crit chance as a decimal
-                const blueCrit = bluePot; // Assuming bluePot represents crit chance as a decimal
+                const redCrit = redPotency;  // Assuming redPot represents crit chance as a decimal
+                const blueCrit = bluePotency; // Assuming bluePot represents crit chance as a decimal
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
@@ -2340,7 +2430,7 @@
                         $('#crit').text(redChakra)
                         $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
                         chargeCurse('blue', redNinPower)
-                        buff(100, 'red', redNinAmount, redUltAmount, redJutsu, redUltEnhance, false)
+                        buff(100, 'red', redNinAmount, redUltAmount, redJutsu, redNinEnhance, false)
                         endRound()
                         return
                     } else {
@@ -2361,7 +2451,7 @@
                         $('#redHP').text(currRedHp - blueNenNinDmg);
                         $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
                         chargeCurse('red', blueNinPower)
-                        buff(100, 'blue', blueNinAmount, blueUltAmount, blueJutsu, blueUltEnhance, false)
+                        buff(100, 'blue', blueNinAmount, blueUltAmount, blueJutsu, blueNinEnhance, false)
                         endRound()
                         return
                     } else {
@@ -2668,7 +2758,7 @@
                     redElmEffc = player.elm_efficiency;
                     redHp = player.hp;
                     redStrength = player.strength;
-                    redPot = player.potency;
+                    redPotency = player.potency;
                     redBuff = player.buff_acc;
                     redBuff2 = player.buff2_acc;
                     redELM = player.element
@@ -2847,7 +2937,7 @@
                     blueElmEffc = player.elm_efficiency;
                     blueHp = player.hp;
                     blueStrength = player.strength;
-                    bluePot = player.potency;
+                    bluePotency = player.potency;
                     blueBuff = player.buff_acc
                     blueBuff2 = player.buff2_acc
                     blueELM = player.element

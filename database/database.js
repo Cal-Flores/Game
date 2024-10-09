@@ -57,17 +57,17 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu: "Ratio-Technique - Increase Wither by 10",
-        nin_cost: 16,
-        ninjutsu_pow: 180,
-        nin2amount: 12,
-        ninEnhance: true,
-        //ULTIMATE
         ninjutsu2: 'Collapse - Decrease Evasion by 1',
         ninJutsu2cost: 18,
         ninJutsu2Dmg: 180,
-        ninamount: 1,
-        ultEnhance: false,
+        nin2amount: 1,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Ratio-Technique - Increase Wither by 10",
+        nin_cost: 19,
+        ninjutsu_pow: 180,
+        ninamount: 16,
+        ultEnhance: true,
         //BUFFS
         buff: 'Increase Curse Recovery by 10',
         buff2: 'Decrease Critical by 20%',
@@ -123,15 +123,15 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu: 'Flowing-Red-Scale - Increase Potency by 35%',
-        nin_cost: 13,
-        ninjutsu_pow: 155,
+        ninjutsu2: 'Flowing-Red-Scale - Increase Potency by 35%',
+        ninJutsu2cost: 13,
+        ninJutsu2Dmg: 155,
         nin2amount: .35,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu2: 'Crimson-Binding - Trap opponent for 2 turns',
-        ninJutsu2cost: 26,
-        ninJutsu2Dmg: 190,
+        ninjutsu: 'Crimson-Binding - Trap opponent for 2 turns',
+        nin_cost: 26,
+        ninjutsu_pow: 190,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
