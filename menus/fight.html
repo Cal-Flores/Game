@@ -202,15 +202,15 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike']
             let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu']
-            let critical = []
+            let critical = ['Awakening']
             let Strength = []
             //Magic
-            let magic = ['Pain-Packer', 'Purple-Arrow']
+            let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master']
             let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping']
             let potency = ['Explosive', 'Flowing-Red-Scale']
-            let efficieny = []
+            let efficieny = ['Thunder-Spear']
             // Cursed tool
             let weapon = []
             let shield = []
@@ -1169,9 +1169,9 @@
             }
         }
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash'];
-        const attacking = ["Divergent-Fist", "Blade", 'Mutation'];
+        const attacking = ["Divergent-Fist", 'Mutation'];
         const defense = ["Reverse", 'Veil'];
-        const critical = ["Black-Flash"];
+        const critical = ["Black-Flash", 'Blade'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
@@ -1244,6 +1244,7 @@
                 }
                 if (critical.includes(curse)) {
                     redCrit += amount;
+                    alert('sucker')
                     $('#redCrit').text(redCrit);
                 }
                 if (strength.includes(curse)) {
@@ -1884,6 +1885,12 @@
                 if (curse == 'Critical') {
                     blueCrit = (blueCrit -= amount).toFixed(2)
                 }
+                if (curse == 'Defense') {
+                    blueDefense = (blueDefense -= amount)
+                }
+                if (curse == 'Purity') {
+                    blueDomPurity = (blueDomPurity -= amount)
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -1893,13 +1900,22 @@
                 if (curse == 'Critical') {
                     redCrit = (redCrit -= amount).toFixed(2)
                 }
+                if (curse == 'Defense') {
+                    redDefense = (redDefense -= amount)
+                }
+                if (curse == 'Purity') {
+                    redDomPurity = (redDomPurity -= amount)
+                }
             }
             // UPDATE U.I
-            console.log('NANAMI CURSED U', blueShield)
             $('#blueShield').text(blueShield)
             $('#redShield').text(redShield)
             $('#blueCrit').text(blueCrit)
             $('#redCrit').text(redCrit)
+            $('#blueDefense').text(blueDefense);
+            $('#redDefense').text(redDefense);
+            $('#blue_dom_purity').text(blueDomPurity)
+            $('#red_dom_purity').text(redDomPurity)
         }
 
 
