@@ -202,7 +202,7 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades']
             let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu']
             let critical = ['Awakening']
             let Strength = []
@@ -218,13 +218,13 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse']
+            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = []
-            let willpower = ['Sharingan']
+            let willpower = ['Sharingan', 'Art-of-the-Doppelganger']
             // curse tech
             let curseRec = ['Teleporting-Rasengan', 'C4-Karura']
             let curseCost = []
@@ -239,7 +239,9 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
+            let heal = ['Blood-Consumption']
             let misc = ['Aura-Synthesis', 'Aura']
+            let stun = ['Batto-Sword-Drawing']
 
 
             buff = buff / 100;
@@ -247,6 +249,8 @@
             if (isBuff) {
                 //LONG IF CHAIN HEREEEE
                 // ATTACK
+                let currRedHp = parseInt($('#redHP').text(), 10)
+                let currBlueHp = parseInt($('#blueHP').text(), 10)
                 if (attack.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
@@ -365,9 +369,21 @@
                     } else if (attacker == 'blue') {
                         if (enhance) {
                             bluePotency = (bluePotency * (1 + amount)).toFixed(2)
-                            alert(`Blues potency has increased to ${bluePotency}`)
                         } else {
                             redPotency = (redPotency * (1 - amount)).toFixed(2)
+                        }
+                    }
+                }
+                if (heal.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            currRedHp += amount;
+                            $('#redHP').text(currRedHp)
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            currBlueHp += amount;
+                            $('#blueHP').text(currBlueHp)
                         }
                     }
                 }
@@ -502,6 +518,22 @@
                             alert(`Red Luck has fallen to ${redLuck}`)
                         }
                     }
+                }
+                if (stun.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redStun += amount
+                        } else {
+                            blueStun -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueStun += amount
+                        } else {
+                            redStun -= amount
+                        }
+                    }
+                    console.log(`red stun: ${redStun}, blue stun ${blueStun}`)
                 }
                 // GENJUTSUUU
                 if (willpower.includes(jutsu)) {
@@ -721,7 +753,7 @@
                     }
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
-                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueHeal');
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
                         let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -1058,6 +1090,22 @@
                                 redDomLethal = Math.floor(redDomLethal * (1 - stat_number));
                             }
                             break;
+                        case 'redCurseRec':
+                            if (stat_type == 'Increase') {
+                                redCurseRec += stat_number
+                            } else {
+                                redCurseRec -= stat_number
+                            }
+                            alert(`Curse Recovery is ${redCurseRec}`)
+                            break;
+                        case 'blueCurseRec':
+                            if (stat_type == 'Increase') {
+                                blueCurseRec += stat_number
+                            } else {
+                                blueCurseRec -= stat_number
+                            }
+                            alert(`Curse Recovery is ${blueCurseRec}`)
+                            break;
                         default:
                             alert('Invalid stat');
                             break;
@@ -1169,8 +1217,8 @@
             }
         }
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash'];
-        const attacking = ["Divergent-Fist", 'Mutation'];
-        const defense = ["Reverse", 'Veil'];
+        const attacking = ["Divergent-Fist", 'Mutation', '8th-Gate'];
+        const defense = ["Reverse", 'Veil', 'Simple-Domain'];
         const critical = ["Black-Flash", 'Blade'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
@@ -1183,7 +1231,7 @@
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
-        const recovery = ['Cursed-Gyuuki', 'Seven-Spectrum']
+        const recovery = ['Cursed-Gyuuki', 'Seven-Spectrum', 'Reverse-Flow-Recovery']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
 
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
@@ -1210,6 +1258,9 @@
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (recovery.includes(curse)) {
                     redRecovery += amount
+                }
+                if (weapon.includes(curse)) {
+                    redWeapon += amount
                 }
                 if (evasion.includes(curse)) {
                     redEvas += amount
@@ -1281,6 +1332,9 @@
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (recovery.includes(curse)) {
                     blueRecovery += amount
+                }
+                if (weapon.includes(curse)) {
+                    blueWeapon += amount
                 }
                 if (evasion.includes(curse)) {
                     blueEvas += amount
@@ -1358,6 +1412,9 @@
                 if (recovery.includes(curse)) {
                     redRecovery -= amount
                 }
+                if (weapon.includes(curse)) {
+                    redWeapon -= amount
+                }
                 if (evasion.includes(curse)) {
                     redEvas -= amount
                     $('#redEvas').text(redEvas)
@@ -1402,7 +1459,10 @@
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (recovery.includes(curse)) {
-                    blueRecovery += amount
+                    blueRecovery -= amount
+                }
+                if (weapon.includes(curse)) {
+                    blueWeapon -= amount
                 }
                 if (evasion.includes(curse)) {
                     blueEvas -= amount
@@ -1891,6 +1951,18 @@
                 if (curse == 'Purity') {
                     blueDomPurity = (blueDomPurity -= amount)
                 }
+                if (curse == 'Attack') {
+                    blueAttack = (blueAttack -= amount)
+                }
+                if (curse == 'Magic') {
+                    blueElmAttack = (blueElmAttack -= amount)
+                }
+                if (curse == 'Accuracy') {
+                    blueAcc -= amount
+                }
+                if (curse == 'Curse') {
+                    blueCurseRec -= amount
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -1906,16 +1978,72 @@
                 if (curse == 'Purity') {
                     redDomPurity = (redDomPurity -= amount)
                 }
+                if (curse == 'Attack') {
+                    redAttack = (redAttack -= amount)
+                }
+                if (curse == 'Magic') {
+                    redElmAttack = (redElmAttack -= amount)
+                }
+                if (curse == 'Accuracy') {
+                    redAcc -= amount
+                }
+                if (curse == 'Curse') {
+                    redCurseRec -= amount
+                }
             }
             // UPDATE U.I
-            $('#blueShield').text(blueShield)
-            $('#redShield').text(redShield)
-            $('#blueCrit').text(blueCrit)
-            $('#redCrit').text(redCrit)
-            $('#blueDefense').text(blueDefense);
+            $('#redHp').text(redHp);
+            $('#redAttack').text(redAttack);
             $('#redDefense').text(redDefense);
-            $('#blue_dom_purity').text(blueDomPurity)
+            $('#redCrit').text(redCrit);
+            $('#redStr').text(redStrength);
+            $('#redELM').text(redELM);
+            $('#redElmAttack').text(redElmAttack);
+            $('#redElmDef').text(redElmDef);
+            $('#redElmEffc').text(redElmEffc);
+            $('#redPot').text(redPotency);
+            $('#redGen').text(redGen)
+            $('#redGenPow').text(redGenPow)
+            $('#redWill').text(redWill)
+            $('#redAcc').text(redAcc)
+            $('#redEvas').text(redEvas)
+            $('#redNinPow').text(redNenNinDmg)
+            $('#redUltPow').text(redNinPower)
+            $('#redcost1').text(redNenNinCost)
+            $('#redcost2').text(redNinCost)
             $('#red_dom_purity').text(redDomPurity)
+            $('#red_dom_lethal').text(redDomLethal)
+            $('#red_dom_duration').text(redDomDuration)
+            $('#red_dom_cost').text(redDomCost)
+            $('#redWeapon').text(redWeapon)
+            $('#redShield').text(redShield)
+            $('#redWeapon').text(redWeapon)
+
+            $('#blueHp').text(blueHp);
+            $('#blueAttack').text(blueAttack);
+            $('#blueDefense').text(blueDefense);
+            $('#blueCrit').text(blueCrit);
+            $('#blueStr').text(blueStrength)
+            $('#blueAcc').text(blueAcc)
+            $('#blueEvas').text(blueEvas)
+            $('#bluePot').text(bluePotency);
+            $('#blueELM').text(blueELM);
+            $('#blueElmAttack').text(blueElmAttack);
+            $('#blueElmDef').text(blueElmDef);
+            $('#blueElmEffc').text(blueElmEffc);
+            $('#blueGen').text(blueGen)
+            $('#blueGenPow').text(blueGenPow)
+            $('#blueWill').text(blueWill)
+            $('#blueNinPow').text(blueNenNinDmg)
+            $('#blueUltPow').text(blueNinPower)
+            $('#bluecost1').text(blueNenNinCost)
+            $('#bluecost2').text(blueNinCost)
+            $('#blue_dom_purity').text(blueDomPurity)
+            $('#blue_dom_lethal').text(blueDomLethal)
+            $('#blue_dom_duration').text(blueDomDuration)
+            $('#blue_dom_cost').text(blueDomCost)
+            $('#blueShield').text(blueShield)
+            $('#blueWeapon').text(blueWeapon)
         }
 
 
@@ -2143,7 +2271,7 @@
                             }
                         }
 
-                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 3)) * magicEffectiveness;
+                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 4)) * magicEffectiveness;
 
                         // Apply critical hit multiplier
                         if (isCritical) {
@@ -2202,7 +2330,7 @@
                             }
                         }
 
-                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 3)) * magicEffectiveness;
+                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 4)) * magicEffectiveness;
 
                         // Apply critical hit multiplier
                         if (isCritical) {
@@ -2536,7 +2664,7 @@
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStrength : 1.0;
 
-                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
+                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 4)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
                         $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
@@ -2548,7 +2676,7 @@
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStrength : 1.0;
 
-                        let damage = ((redAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
+                        let damage = ((redAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
@@ -2582,7 +2710,7 @@
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
 
-                        let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
+                        let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
                         $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
@@ -2594,7 +2722,7 @@
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
 
-                        let damage = ((blueAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
+                        let damage = ((blueAttack * (1 + variance)) - (redDefense / 4)) * criticalMultiplier;
                         damage = Math.max(1, Math.round(damage));
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
@@ -2702,8 +2830,8 @@
         <p id="redWeaponCrit">${player.curse_crit}</p>
     </div>
     <div class='nen_numbers'>
-        <p id="redDrain">Drain: ${player.drain}</p>
-        <p id="redNegative">Negative: ${player.negative_energy}</p>
+        <p id="redDrain">♺ ${player.drain}</p>
+        <p id="redNegative">🪬 ${player.negative_energy}</p>
     </div>
     <div>
         <p>🍀</p>
@@ -2878,7 +3006,7 @@
     </div>
     <div class='nen_numbers'>
         <p id="blueDrain">♺ ${player.drain}</p>
-        <p id="blueNegative">🫥 ${player.negative_energy}</p>
+        <p id="blueNegative">🪬 ${player.negative_energy}</p>
     </div>
      <div>
         <p>🍀</p>
