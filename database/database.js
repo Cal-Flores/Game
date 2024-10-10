@@ -28,18 +28,18 @@ const database = [
         //WEAPON
         weapon: 274,
         shield: 236,
-        curse_crit: .85,
+        curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 16,
+        weapon_amount: 10,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 3,
-        luck: 7,
+        luck: 6,
         stun: .08,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 25,
-        willpower: 9,
+        willpower: 8,
         chakra: 0,
         chakra_rec: 4,
         drain: 4,
@@ -50,7 +50,7 @@ const database = [
         cursed_tech: 'Overtime - Increase Curse Tool by 60',
         curse_amount: 60,
         curse_duration: 100,
-        curse_cost: 34,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -58,15 +58,15 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Collapse - Decrease Evasion by 1',
-        ninJutsu2cost: 18,
+        ninJutsu2cost: 14,
         ninJutsu2Dmg: 180,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Ratio-Technique - Increase Wither by 10",
-        nin_cost: 19,
-        ninjutsu_pow: 180,
-        ninamount: 16,
+        nin_cost: 16,
+        ninjutsu_pow: 240,
+        ninamount: 10,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Curse Recovery by 10',
@@ -282,7 +282,7 @@ const database = [
         //PHYSICAL
         attack: 245,
         defense: 185,
-        critical: .20,
+        critical: .30,
         strength: 1.8,
         //MAGIC
         elm_attack: 152,
@@ -309,12 +309,12 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 34,
+        cursed_recovery: 35,
         negative_energy: 15,
         cursed_tech: '8th-Gate of death - Triple Attack',
         curse_amount: 440,
         curse_duration: 100,
-        curse_cost: 40,
+        curse_cost: 36,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -368,7 +368,7 @@ const database = [
         stun: .04,
         //GENJUTSU
         genjutsu: 9,
-        gen_power: 80,
+        gen_power: 65,
         willpower: 8,
         chakra: 0,
         chakra_rec: 6,
@@ -469,7 +469,7 @@ const database = [
         buff2: 'Decrease Potency by 40%',
         buff_acc: 50,
         buff2_acc: 50,
-        image: 'https://64.media.tumblr.com/90e3f957aa349041015b45d44d332bac/4066ed29c16e99ed-7c/s400x600/31d0868e1b1ddec150c0bc577f7cf24c61f12990.png'
+        image: 'https://i.pinimg.com/736x/7d/f8/b8/7df8b897b7ac8b7233c8ce4882de5fbd.jpg'
     },
     {
         name: 'Katana Man',
@@ -536,5 +536,134 @@ const database = [
         buff_acc: 40,
         buff2_acc: 30,
         image: 'https://i.pinimg.com/736x/b8/d4/38/b8d438d6a6db0c7b2f6080558e3d993f.jpg'
+    },
+    {
+        name: 'Maki',
+        nen_type: 'Transmuter',
+        element: 'Wind',
+        elm: wind,
+        hp: 2863,
+        //PHYSICAL
+        attack: 204,
+        defense: 170,
+        critical: .45,
+        strength: 1.3,
+        //MAGIC
+        elm_attack: 146,
+        elm_defense: 190,
+        elm_efficiency: 1.3,
+        potency: .18,
+        //WEAPON
+        weapon: 247,
+        shield: 224,
+        curse_crit: .14,
+        weaponCurse: 'Recovery',
+        weapon_amount: 1,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 8,
+        luck: 4,
+        stun: .09,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 10,
+        negative_energy: 10,
+        cursed_tech: "Falling-Blossom-Emotion",
+        curse_amount: 8,
+        curse_duration: 6,
+        curse_cost: 12,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Playful-Cloud - Increase Attack by 20%',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 160,
+        nin2amount: .20,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
+        nin_cost: 20,
+        ninjutsu_pow: 180,
+        ninamount: .40,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Chackra Recovery by 2',
+        buff2: 'Decrease Attack by 25%',
+        buff_acc: 70,
+        buff2_acc: 60,
+        image: 'https://thicc.mywaifulist.moe/waifus/26112/2ce0a9ba09c15a29b46fbda0ba73c91ce081e3e31b9d5e4186791980fa31fe4c_thumb.png'
+    },
+    {
+        name: 'Chainsaw Man',
+        nen_type: 'Conjuror',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3053,
+        //PHYSICAL
+        attack: 196,
+        defense: 229,
+        critical: .23,
+        strength: 1.75,
+        //MAGIC
+        elm_attack: 120,
+        elm_defense: 166,
+        elm_efficiency: 2.0,
+        potency: .30,
+        //WEAPON
+        weapon: 284,
+        shield: 201,
+        curse_crit: .28,
+        weaponCurse: 'Weapon',
+        weapon_amount: 12,
+        //SPEED / LUCK
+        accuracy: 4,
+        evasion: 5,
+        luck: 9,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 40,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 50,
+        cursed_tech: 'Devil-Transformation - Increase Weapon by 100',
+        curse_amount: 100,
+        curse_duration: 6,
+        curse_cost: 20,
+        //DOMAIN
+        dom_purity: 3,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Chain-Entanglement - Decrease Evasion by 1',
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 240,
+        nin2amount: 1,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Blood-Consumption",
+        nin_cost: 26,
+        ninjutsu_pow: 0,
+        ninamount: 350,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Triple Domain Purity',
+        buff2: 'Decrease Luck by 2',
+        buff_acc: 50,
+        buff2_acc: 65,
+        image: 'https://i.pinimg.com/736x/c4/87/23/c48723566f7392d5218218a17171294b.jpg'
     },
 ]

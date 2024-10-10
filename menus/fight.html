@@ -202,8 +202,8 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades']
-            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud']
+            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu', 'Heavenly-Restriction']
             let critical = ['Awakening']
             let Strength = []
             //Magic
@@ -218,7 +218,7 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash']
+            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale']
             let luck = []
             // genjutsu
@@ -753,7 +753,7 @@
                     }
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
-                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec blueHeal');
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
                         let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -1106,6 +1106,34 @@
                             }
                             alert(`Curse Recovery is ${blueCurseRec}`)
                             break;
+                        case 'redWeapon':
+                            if (stat_type == 'Increase') {
+                                redWeapon += stat_number
+                            } else {
+                                redWeapon -= stat_number
+                            }
+                            break;
+                        case 'redShield':
+                            if (stat_type == 'Increase') {
+                                redShield += stat_number
+                            } else {
+                                redShield -= stat_number
+                            }
+                            break;
+                        case 'blueWeapon':
+                            if (stat_type == 'Increase') {
+                                blueWeapon += stat_number
+                            } else {
+                                blueWeapon -= stat_number
+                            }
+                            break;
+                        case 'blueShield':
+                            if (stat_type == 'Increase') {
+                                blueShield += stat_number
+                            } else {
+                                blueShield -= stat_number
+                            }
+                            break;
                         default:
                             alert('Invalid stat');
                             break;
@@ -1177,14 +1205,14 @@
             // Define the damage for Tsukuyomi explosion
             if (defender === 'red') {
                 let power = parseInt($('#blueChakra').text(), 10)
-                let explosionDamage = power * 10;
+                let explosionDamage = power * 5;
                 let currRedHp = parseInt($('#redHP').text(), 10);
                 $('#redHP').text(currRedHp - explosionDamage);
                 chargeCurse('red', explosionDamage)
                 alert('Tsukuyomi explodes! Red takes ' + explosionDamage + ' damage.');
             } else if (defender === 'blue') {
                 let power = parseInt($('#redChakra').text(), 10)
-                let explosionDamage = power * 10;
+                let explosionDamage = power * 5;
                 let currBlueHp = parseInt($('#blueHP').text(), 10);
                 chargeCurse('blue', explosionDamage)
                 $('#blueHP').text(currBlueHp - explosionDamage);
@@ -1227,7 +1255,7 @@
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence']; //** NEW please add me**
         const luck = ["Miracle"];
-        const weapon = ['Overtime']
+        const weapon = ['Overtime', 'Devil-Transformation']
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
@@ -1963,6 +1991,13 @@
                 if (curse == 'Curse') {
                     blueCurseRec -= amount
                 }
+                if (curse == 'Recovery') {
+                    blueRecovery -= amount
+                    alert(`Blue recovery drops to ${blueRecovery}`)
+                }
+                if (curse == 'Weapon') {
+                    blueWeapon -= amount
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -1989,6 +2024,13 @@
                 }
                 if (curse == 'Curse') {
                     redCurseRec -= amount
+                }
+                if (curse == 'Recovery') {
+                    redRecovery -= amount
+                    alert(`Red recovery drops to ${redRecovery}`)
+                }
+                if (curse == 'Weapon') {
+                    redWeapon -= amount
                 }
             }
             // UPDATE U.I
