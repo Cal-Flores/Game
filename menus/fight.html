@@ -213,7 +213,7 @@
             let efficieny = ['Thunder-Spear']
             // Cursed tool
             let weapon = []
-            let shield = []
+            let shield = ['Claws']
             let witherPer = []
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
@@ -224,7 +224,7 @@
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = []
-            let willpower = ['Sharingan', 'Art-of-the-Doppelganger']
+            let willpower = ['Sharingan', 'Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
             let curseRec = ['Teleporting-Rasengan', 'C4-Karura']
             let curseCost = []
@@ -454,15 +454,15 @@
                 if (accuracy.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redElmAcc = Math.floor(redElmAcc * (1 + amount));
+                            redAcc += amount
                         } else {
-                            blueElAcc = Math.floor(blueElmAcc * (1 - amount));
+                            blueAcc -= amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueElmAcc = Math.floor(blueElmAcc * (1 + amount))
+                            blueAcc += amount
                         } else {
-                            redElmAcc = Math.floor(redElmAcc * (1 - amount))
+                            redAcc -= amount
                         }
                     }
                 }
@@ -554,15 +554,15 @@
                 if (genjutsu.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redGen = Math.floor(redGen * (1 + amount));
+                            redGen += amount;
                         } else {
-                            blueGen = Math.floor(blueGen * (1 - amount));
+                            blueGen -= amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueGen = Math.floor(blueGen * (1 + amount))
+                            blueGen += amount
                         } else {
-                            redGen = Math.floor(redGen * (1 - amount))
+                            redGen -= amount
                         }
                     }
                 }
@@ -1247,7 +1247,7 @@
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash'];
         const attacking = ["Divergent-Fist", 'Mutation', '8th-Gate'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain'];
-        const critical = ["Black-Flash", 'Blade'];
+        const critical = ["Black-Flash", 'Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
@@ -1298,10 +1298,6 @@
                     currBlueHp -= amount;
                     $('#blueHP').text(currBlueHp);
                 }
-                if (weapon.includes(curse)) {
-                    redWeapon += amount
-                    $('#redWeapon').text(redWeapon);
-                }
                 if (genjutsu.includes(curse)) {
                     redGen += amount;
                     $('#redGen').text(redGen)
@@ -1323,7 +1319,6 @@
                 }
                 if (critical.includes(curse)) {
                     redCrit += amount;
-                    alert('sucker')
                     $('#redCrit').text(redCrit);
                 }
                 if (strength.includes(curse)) {
@@ -1390,10 +1385,6 @@
                 if (potency.includes(curse)) {
                     bluePotency += amount
                     $('#bluePot').text(bluePot);
-                }
-                if (weapon.includes(curse)) {
-                    blueWeapon += amount
-                    $('#blueWeapon').text(blueWeapon);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef += amount
@@ -1998,6 +1989,9 @@
                 if (curse == 'Weapon') {
                     blueWeapon -= amount
                 }
+                if (curse == 'Gen-Power') {
+                    blueGenPow -= amount
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -2031,6 +2025,9 @@
                 }
                 if (curse == 'Weapon') {
                     redWeapon -= amount
+                }
+                if (curse == 'Gen-Power') {
+                    redGenPow -= amount
                 }
             }
             // UPDATE U.I

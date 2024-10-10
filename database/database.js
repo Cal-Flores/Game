@@ -89,7 +89,7 @@ const database = [
         //MAGIC
         elm_attack: 115,
         elm_defense: 191,
-        elm_efficiency: .10,
+        elm_efficiency: 1.15,
         potency: .25,
         //WEAPON
         weapon: 256,
@@ -131,13 +131,13 @@ const database = [
         //ULTIMATE
         ninjutsu: 'Crimson-Binding - Trap opponent for 2 turns',
         nin_cost: 26,
-        ninjutsu_pow: 190,
+        ninjutsu_pow: 135,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
         buff: 'Double Magic Attack',
         buff2: 'Halve Potency',
-        buff_acc: 30,
+        buff_acc: 55,
         buff2_acc: 45,
         image: 'https://64.media.tumblr.com/11d79e538d170ebc91403fa7825be14a/ac5ce7753d2dffd1-7d/s1280x1920/5e3752a4fc826febaef45197801b139f48d244de.jpg'
     },
@@ -585,10 +585,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Playful-Cloud - Increase Attack by 20%',
+        ninjutsu2: 'Playful-Cloud - Increase Attack by 10%',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 160,
-        nin2amount: .20,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
@@ -597,7 +597,7 @@ const database = [
         ninamount: .40,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Chackra Recovery by 2',
+        buff: 'Increase Chakra Recovery by 2',
         buff2: 'Decrease Attack by 25%',
         buff_acc: 70,
         buff2_acc: 60,
@@ -629,6 +629,7 @@ const database = [
         accuracy: 4,
         evasion: 5,
         luck: 9,
+        drain: 3,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 40,
@@ -639,6 +640,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 50,
         cursed_tech: 'Devil-Transformation - Increase Weapon by 100',
+        negative_energy: 25,
         curse_amount: 100,
         curse_duration: 6,
         curse_cost: 20,
@@ -650,14 +652,14 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Chain-Entanglement - Decrease Evasion by 1',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 240,
+        ninJutsu2Dmg: 190,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Blood-Consumption",
+        ninjutsu: "Blood-Consumption - Recover 300 HP",
         nin_cost: 26,
         ninjutsu_pow: 0,
-        ninamount: 350,
+        ninamount: 300,
         ultEnhance: true,
         //BUFFS
         buff: 'Triple Domain Purity',
@@ -666,4 +668,70 @@ const database = [
         buff2_acc: 65,
         image: 'https://i.pinimg.com/736x/c4/87/23/c48723566f7392d5218218a17171294b.jpg'
     },
+    {
+        name: 'Hunter Killua',
+        nen_type: 'Transmuter',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 2822,
+        //PHYSICAL
+        attack: 184,
+        defense: 188,
+        critical: .32,
+        strength: 1.4,
+        //MAGIC
+        elm_attack: 127,
+        elm_defense: 134,
+        elm_efficiency: 1.3,
+        potency: .10,
+        //WEAPON
+        weapon: 241,
+        shield: 136,
+        curse_crit: .22,
+        weaponCurse: 'Gen-Power',
+        weapon_amount: 10,
+        //SPEED / LUCK
+        accuracy: 8,
+        evasion: 5,
+        luck: 7,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 5,
+        gen_power: 45,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 7,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 55,
+        negative_energy: 47,
+        cursed_tech: 'Thunderclap-Veil - Double Critical',
+        curse_amount: .32,
+        curse_duration: 6,
+        curse_cost: 26,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Rhythm-Echo - Increase Willpower by 2',
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 135,
+        nin2amount: 2,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: 'Claws - Decrease Shield by 30',
+        nin_cost: 21,
+        ninjutsu_pow: 185,
+        ninamount: 30,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Genjutsu by 3',
+        buff2: 'Decrease Attack by 25%',
+        buff_acc: 70,
+        buff2_acc: 45,
+        image: 'https://64.media.tumblr.com/5a4d57c5a295356ef574e7ca4512b484/ace490199105949f-6f/s1280x1920/9dfa87a978d53b3bdf6446a37e0b7efcdeb74be5.jpg'
+    }
 ]
