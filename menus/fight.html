@@ -202,35 +202,35 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud']
-            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu', 'Heavenly-Restriction']
-            let critical = ['Awakening']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall']
+            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun']
+            let critical = ['Awakening', 'Explosive Tags']
             let Strength = []
             //Magic
-            let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master']
-            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping']
+            let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Flame-Control',]
+            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow',]
             let potency = ['Explosive', 'Flowing-Red-Scale']
-            let efficieny = ['Thunder-Spear']
+            let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
-            let weapon = []
-            let shield = ['Claws']
+            let weapon = ['Knife']
+            let shield = ['Claws', 'Earth-Grudge-Fear']
             let witherPer = []
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement']
+            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = []
-            let willpower = ['Sharingan', 'Art-of-the-Doppelganger', 'Rhythm-Echo']
+            let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'C4-Karura']
+            let curseRec = ['Teleporting-Rasengan', 'C4-Karura', 'Yasaka-Magatama']
             let curseCost = []
             let curseDur = []
             let domPurity = []
-            let domDur = ['Sand-Mauseliem']
+            let domDur = ['Sand-Mauseliem', 'Dance of the Shikigami']
             let domLethal = []
             let domCost = []
             // ninjutsu
@@ -239,8 +239,8 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption']
-            let misc = ['Aura-Synthesis', 'Aura']
+            let heal = ['Blood-Consumption', 'Heart-Mask']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil']
             let stun = ['Batto-Sword-Drawing']
 
 
@@ -334,7 +334,9 @@
                         if (enhance) {
                             redElmDef = Math.floor(redElmDef * (1 + amount));
                         } else {
+                            alert('sasuke doing work')
                             blueElmDef = Math.floor(blueElmDef * (1 - amount));
+                            alert(blueElmDef)
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
@@ -391,30 +393,30 @@
                 if (weapon.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redWeapon += amount
+                            redWeapon = (redWeapon * (1 + amount)).toFixed(2);
                         } else {
-                            blueWeapon -= amount
+                            redWeapon = (redWeapon * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueWeapon += amount
+                            blueWeapon = (blueWeapon * (1 + amount)).toFixed(2);
                         } else {
-                            redWeapon -= amount
+                            blueWeapon = (blueWeapon * (1 - amount)).toFixed(2);
                         }
                     }
                 }
                 if (shield.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redShield += amount
+                            redShield = (redShield * (1 - amount)).toFixed(2);
                         } else {
-                            blueShield -= amount;
+                            redShield = (redShield * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueShield += amount
+                            blueShield = (blueShield * (1 - amount)).toFixed(2);
                         } else {
-                            redShield -= amount
+                            blueShield = (blueShield * (1 - amount)).toFixed(2);
                         }
                     }
                 }
@@ -859,23 +861,23 @@
                             break;
                         case 'redAcc':
                             if (stat_type == 'Increase') {
-                                redAcc = Math.floor(redAcc * (1 + stat_number));
+                                redAcc += stat_number
                             } else {
-                                redAcc = Math.floor(redAcc * (1 - stat_number));
+                                redAcc -= stat_number
                             }
                             break;
                         case 'redEvas':
                             if (stat_type == 'Increase') {
-                                redEvas = Math.floor(redEvas * (1 + stat_number));
+                                redEvas += stat_number
                             } else {
-                                redEvas = Math.floor(redEvas * (1 - stat_number));
+                                redEvas -= stat_number
                             }
                             break;
                         case 'redLuck':
                             if (stat_type == 'Increase') {
-                                redLuck = Math.floor(redLuck * (1 + stat_number));
+                                redLuck += stat_number
                             } else {
-                                redLuck = Math.floor(redLuck * (1 - stat_number));
+                                redLuck -= stat_number
                             }
                             break;
                         case 'redNinjutsuPower':
@@ -895,23 +897,23 @@
 
                         case 'redGen':
                             if (stat_type == 'Increase') {
-                                redGen = Math.floor(redGen * (1 + stat_number));
+                                redGen += stat_number
                             } else {
-                                redGen = Math.floor(redGen * (1 - stat_number));
+                                redGen -= stat_number
                             }
                             break;
                         case 'redGenPow':
                             if (stat_type == 'Increase') {
-                                redGenPow = Math.floor(redGenPow * (1 + stat_number));
+                                redGenPow += stat_number
                             } else {
-                                redGenPow = Math.floor(redGenPow * (1 - stat_number));
+                                redGenPow -= stat_number
                             }
                             break;
                         case 'redWill':
                             if (stat_type == 'Increase') {
-                                redWill = Math.floor(redWill * (1 + stat_number));
+                                redWill += stat_number
                             } else {
-                                redWill = Math.floor(redWill * (1 - stat_number));
+                                redWill -= stat_number
                             }
                             break;
                         case 'blueAttack':
@@ -993,44 +995,44 @@
                             break;
                         case 'blueAcc':
                             if (stat_type == 'Increase') {
-                                blueAcc = (blueAcc * (1 + stat_number)).toFixed(2);
+                                blueAcc += stat_number
                             } else {
-                                blueAcc = (blueAcc * (1 - stat_number)).toFixed(2);
+                                blueAcc -= stat_number
                             }
                             break;
                         case 'blueEvas':
                             if (stat_type == 'Increase') {
-                                blueEvas = (blueEvas * (1 + stat_number)).toFixed(2);
+                                blueEvas += stat_number
                             } else {
-                                blueEvas = (blueEvas * (1 - stat_number)).toFixed(2);
+                                blueEvas -= stat_number
                             }
                             break;
                         case 'blueLuck':
                             if (stat_type == 'Increase') {
-                                blueLuck = Math.floor(blueLuck * (1 + stat_number));
+                                blueLuck += stat_number
                             } else {
-                                blueLuck = Math.floor(blueLuck * (1 - stat_number));
+                                blueLuck -= stat_number
                             }
                             break;
                         case 'blueGen':
                             if (stat_type == 'Increase') {
-                                blueGen = Math.floor(blueGen * (1 + stat_number));
+                                blueGen += stat_number
                             } else {
-                                blueGen = Math.floor(blueGen * (1 - stat_number));
+                                blueGen -= stat_number
                             }
                             break;
                         case 'blueGenPow':
                             if (stat_type == 'Increase') {
-                                blueGenPow = Math.floor(blueGenPow * (1 + stat_number));
+                                blueGenPow += stat_number
                             } else {
-                                blueGenPow = Math.floor(blueGenPow * (1 - stat_number));
+                                blueGenPow -= stat_number
                             }
                             break;
                         case 'blueWill':
                             if (stat_type == 'Increase') {
-                                blueWill = Math.floor(blueWill * (1 + stat_number));
+                                blueWill += stat_number
                             } else {
-                                blueWill = Math.floor(blueWill * (1 - stat_number));
+                                blueWill -= stat_number
                             }
                             break;
                         case 'blueNinjutsuPower':
@@ -1050,30 +1052,30 @@
                             break;
                         case 'blueDomPurity':
                             if (stat_type == 'Increase') {
-                                blueDomPurity = Math.floor(blueDomPurity * (1 + stat_number));
+                                blueDomPurity += stat_number
                             } else {
-                                blueDomPurity = Math.floor(blueDomPurity * (1 - stat_number));
+                                blueDomPurity -= stat_number
                             }
                             break;
                         case 'redDomPurity':
                             if (stat_type == 'Increase') {
-                                redDomPurity = Math.floor(redDomPurity * (1 + stat_number));
+                                redDomPurity += stat_number
                             } else {
-                                redDomPurity = Math.floor(redDomPurity * (1 - stat_number));
+                                redDomPurity -= stat_number
                             }
                             break;
                         case 'redDomDur':
                             if (stat_type == 'Increase') {
-                                redDomDuration = Math.floor(redDomDuration * (1 + stat_number));
+                                redDomDuration += stat_number
                             } else {
-                                redDomDuration = Math.floor(redDomDuration * (1 - stat_number));
+                                redDomDuration -= stat_number
                             }
                             break;
                         case 'blueDomDur':
                             if (stat_type == 'Increase') {
-                                blueDomDuration = Math.floor(blueDomDuration * (1 + stat_number));
+                                blueDomDuration += stat_number
                             } else {
-                                blueDomDuration = Math.floor(blueDomDuration * (1 - stat_number));
+                                blueDomDuration -= stat_number
                             }
                             break;
                         case 'blueDomLethal':
@@ -1108,30 +1110,30 @@
                             break;
                         case 'redWeapon':
                             if (stat_type == 'Increase') {
-                                redWeapon += stat_number
+                                redWeapon = Math.floor(redWeapon * (1 + stat_number));
                             } else {
-                                redWeapon -= stat_number
+                                redWeapon = Math.floor(redWeapon * (1 - stat_number));
                             }
                             break;
                         case 'redShield':
                             if (stat_type == 'Increase') {
-                                redShield += stat_number
+                                redShield = Math.floor(redShield * (1 + stat_number));
                             } else {
-                                redShield -= stat_number
+                                redShield = Math.floor(redShield * (1 - stat_number));
                             }
                             break;
                         case 'blueWeapon':
                             if (stat_type == 'Increase') {
-                                blueWeapon += stat_number
+                                blueWeapon = Math.floor(blueWeapon * (1 + stat_number));
                             } else {
-                                blueWeapon -= stat_number
+                                blueWeapon = Math.floor(blueWeapon * (1 - stat_number));
                             }
                             break;
                         case 'blueShield':
                             if (stat_type == 'Increase') {
-                                blueShield += stat_number
+                                blueShield = Math.floor(blueShield * (1 + stat_number));
                             } else {
-                                blueShield -= stat_number
+                                blueShield = Math.floor(blueShield * (1 - stat_number));
                             }
                             break;
                         default:
@@ -1244,7 +1246,7 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash'];
+        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
         const attacking = ["Divergent-Fist", 'Mutation', '8th-Gate'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain'];
         const critical = ["Black-Flash", 'Blade', 'Thunderclap-Veil'];
@@ -1257,7 +1259,8 @@
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation']
         const chakra_cost = ["Falling-Blossom-Emotion"];
-        const genjutsu = ['Black-Bird-Manipulation'] //** NEW please add me**
+        const genjutsu = [] //** NEW please add me**
+        const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
         const recovery = ['Cursed-Gyuuki', 'Seven-Spectrum', 'Reverse-Flow-Recovery']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
@@ -1301,6 +1304,11 @@
                 if (genjutsu.includes(curse)) {
                     redGen += amount;
                     $('#redGen').text(redGen)
+                }
+                if (genPower.includes(curse)) {
+                    redGenPow += amount;
+                    $('#redGenPow').text(redGenPow)
+                    alert('oh yeyey boi')
                 }
                 if (drain.includes(curse)) {
                     currBlueChakra -= amount;
@@ -1406,6 +1414,10 @@
                     blueGen += amount;
                     $('#blueGen').text(blueGen)
                 }
+                if (genPower.includes(curse)) {
+                    blueGenPow += amount;
+                    $('#blueGenPow').text(blueGenPow)
+                }
                 if (drain.includes(curse)) {
                     currRedChakra -= amount;
                     $('#redChakra').text(currRedChakra)
@@ -1474,6 +1486,10 @@
                     redGen -= amount;
                     $('#redGen').text(redGen)
                 }
+                if (genPower.includes(curse)) {
+                    redGenPow -= amount;
+                    $('#redGenPow').text(redGen)
+                }
                 $('#redCurseUi').text('')
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
@@ -1522,6 +1538,10 @@
                 if (genjutsu.includes(curse)) {
                     blueGen -= amount;
                     $('#blueGen').text(blueGen)
+                }
+                if (genPower.includes(curse)) {
+                    blueGenPow -= amount;
+                    $('#blueGenPow').text(blueGen)
                 }
                 $('#blueCurseUi').text('')
             }
@@ -1831,7 +1851,7 @@
                         if (outcome != 'SAFE') {
                             runningDamage += 1
                             currBlueHp -= lethal
-                            $('#blueHP').text(currBlueHp - lethal);
+                            $('#blueHP').text(currBlueHp);
                             chargeCurse('blue', lethal)
                             alert(`Lethal Hit! ${lethal} damage dealt, total: ${lethal * runningDamage}`)
                         } else {
@@ -1841,7 +1861,7 @@
                     alert('Domain has concluded..')
                 } else {
                     if (currBlueCurse < cost) {
-                        alert('Not enought curse energy')
+                        alert('Not enough curse energy')
                         $('#fight_bg').css('background', 'linear-gradient(to bottom, rgb(159, 159, 159), rgb(159, 159, 159))');
                         return
                     } else {
@@ -1866,7 +1886,7 @@
                         if (outcome != 'SAFE') {
                             runningDamage += 1
                             currRedHp -= lethal
-                            $('#redHP').text(currRedHp - lethal);
+                            $('#redHP').text(currRedHp);
                             chargeCurse('red', lethal)
                             alert(`Lethal Hit! ${lethal} damage dealt, total: ${lethal * runningDamage}`)
                         } else {
@@ -1992,6 +2012,9 @@
                 if (curse == 'Gen-Power') {
                     blueGenPow -= amount
                 }
+                if (curse == 'Magic-Def') {
+                    blueElmDef -= amount
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -2028,6 +2051,9 @@
                 }
                 if (curse == 'Gen-Power') {
                     redGenPow -= amount
+                }
+                if (curse == 'Magic-Def') {
+                    redElmDef -= amount
                 }
             }
             // UPDATE U.I
@@ -2450,7 +2476,7 @@
                 if (isHit) {
                     alert('"You\'re Already Under My GenJutsu.."');
                     let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
-                    let statusEffect = prompt("Choose a status effect to apply: Darkness (8), Silence (8), Confusion (8), Paralysis (8), Zombie (8), Ultima (15), Flare(15), Tsukuyomi (25), Kotoamatsukami (25)");
+                    let statusEffect = prompt("Choose a status effect to apply: Darkness (6), Silence (6), Paralysis (6), Zombie (6), Ultima (15), Flare(15), Tsukuyomi (15), Kotoamatsukami (18)");
                     // Determine the current chakra variable and decrement it
                     if (attacker === 'red') {
                         // Check if Red has enough chakra for the attack
@@ -2463,9 +2489,9 @@
                         } else if (statusEffect === 'Ultima') {
                             requiredChakra = 12;
                         } else if (statusEffect === 'Tsukuyomi') {
-                            requiredChakra = 25;
+                            requiredChakra = 15;
                         } else if (statusEffect === 'Kotoamatsukami') {
-                            requiredChakra = 25;
+                            requiredChakra = 18;
                         }
 
                         if (currRedChakra < requiredChakra) {
@@ -2484,7 +2510,7 @@
                         let requiredChakra = 0;
 
                         if (light.includes(statusEffect)) {
-                            requiredChakra = 8;
+                            requiredChakra = 6;
                         } else if (statusEffect === 'Flare') {
                             requiredChakra = 12;
                         } else if (statusEffect === 'Ultima') {
