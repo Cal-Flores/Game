@@ -34,6 +34,7 @@
                     <p id="crit"></p>
                     <p id="damage"></p>
                 </div>
+                <a target="_blank" href="affinity.html">View Elemental Chart</a>
                 <form id="attack-form">
                     <label>Turn</label>
                     <select id="attacker">
@@ -1733,16 +1734,18 @@
             console.log('no reset')
         }
         const elementalWeaknesses = {
-            Water: { strongAgainst: ['Fire', 'Earth'], weakAgainst: ['Lightning', 'Grass'] },
-            Fire: { strongAgainst: ['Wind', 'Grass'], weakAgainst: ['Water', 'Earth'] },
-            Wind: { strongAgainst: ['Water', 'Lightning'], weakAgainst: ['Earth', 'Fire'] },
-            Lightning: { strongAgainst: ['Water', 'Grass'], weakAgainst: ['Earth', 'Fighter'] },
-            Earth: { strongAgainst: ['Fire', 'Lightning'], weakAgainst: ['Water', 'Grass'] },
-            Grass: { strongAgainst: ['Water', 'Earth'], weakAgainst: ['Fire', 'Lightning'] },
-            Fighter: { strongAgainst: ['Dark', 'Grass', 'Sage'], weakAgainst: ['Lightning', 'Water'] },
-            Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fire', 'Fighter'] },
-            Sage: { strongAgainst: [], weakAgainst: ['Psychic', 'Dark', 'Fighter'] },
-            Psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
+            Water: { strongAgainst: ['Fire', 'Earth', 'Fighter'], weakAgainst: ['Lightning', 'Grass', 'Fairy'] },
+            Fire: { strongAgainst: ['Wind', 'Grass', 'Fairy'], weakAgainst: ['Water', 'Earth', 'Ghost'] },
+            Wind: { strongAgainst: ['Water', 'Lightning', 'Ghost'], weakAgainst: ['Earth', 'Fire', 'Fairy'] },
+            Lightning: { strongAgainst: ['Water', 'Grass', 'Ghost'], weakAgainst: ['Earth', 'Fighter', 'Wood'] },
+            Earth: { strongAgainst: ['Fire', 'Lightning', 'Fairy'], weakAgainst: ['Water', 'Grass', 'Wood'] },
+            Grass: { strongAgainst: ['Water', 'Earth', 'Wood'], weakAgainst: ['Fire', 'Lightning', 'Ghost'] },
+            Fighter: { strongAgainst: ['Dark', 'Grass', 'Sage'], weakAgainst: ['Lightning', 'Water', 'Ghost'] },
+            Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fairy', 'Fire', 'Ghost'] },
+            Fairy: { strongAgainst: ['Dark', 'Fighter', 'Ghost'], weakAgainst: ['Fire', 'Wind', 'Earth'] },
+            Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
+            Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: ['Fire', 'Grass', 'Lightning'] },
+            psychic: { strongAgainst: ['Sage'], weakAgainst: [] }
         };
 
         function checkWeakness(attackerElement, defenderElement) {
