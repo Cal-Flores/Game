@@ -29,12 +29,12 @@
 
         <div class="corner_container">
             <div id="red_corner"></div>
-            <div>
+            <div class="chart">
                 <div>
                     <p id="crit"></p>
                     <p id="damage"></p>
                 </div>
-                <a target="_blank" href="affinity.html">View Elemental Chart</a>
+
                 <form id="attack-form">
                     <label>Turn</label>
                     <select id="attacker">
@@ -60,6 +60,7 @@
                     </select>
                     <input type="submit">
                 </form>
+                <a target="_blank" href="affinity.html" class="chart-a">View Elemental Chart</a>
             </div>
             <div id="blue_corner"></div>
         </div>
@@ -209,18 +210,18 @@
             let Strength = []
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Flame-Control',]
-            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow',]
-            let potency = ['Explosive', 'Flowing-Red-Scale']
+            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets']
+            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun']
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
             let weapon = ['Knife']
-            let shield = ['Claws', 'Earth-Grudge-Fear']
+            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall']
             let witherPer = []
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Dance', 'Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil']
-            let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind']
+            let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -231,18 +232,18 @@
             let curseCost = []
             let curseDur = []
             let domPurity = []
-            let domDur = ['Sand-Mauseliem', 'Dance of the Shikigami']
+            let domDur = ['Sand-Mauseliem', 'Dance']
             let domLethal = []
             let domCost = []
             // ninjutsu
             let ninCosted = ['Seven-Spectrum']
-            let ninDamage = ["Double-Machine", "Lariat", 'Knife', 'Ripper-Cyclotron']
+            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron']
             let ultCosted = []
             let ultDamage = []
             let elem = []
             let heal = ['Blood-Consumption', 'Heart-Mask']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil']
-            let stun = ['Batto-Sword-Drawing']
+            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo']
 
 
             buff = buff / 100;
@@ -409,15 +410,15 @@
                 if (shield.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redShield = (redShield * (1 - amount)).toFixed(2);
+                            redShield = Math.floor((redShield * (1 + amount)));
                         } else {
-                            redShield = (redShield * (1 - amount)).toFixed(2);
+                            blueShield = Math.floor((blueShield * (1 - amount)));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueShield = (blueShield * (1 - amount)).toFixed(2);
+                            blueShield = Math.floor((blueShield * (1 + amount)));
                         } else {
-                            blueShield = (blueShield * (1 - amount)).toFixed(2);
+                            redShield = Math.floor((redShield * (1 - amount)));
                         }
                     }
                 }
@@ -1254,7 +1255,7 @@
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
-        const magic_attack = ['Albatross']
+        const magic_attack = ['Albatross', 'Electro-Strike-Manipulation']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence']; //** NEW please add me**
         const luck = ["Miracle"];
@@ -1265,6 +1266,7 @@
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
         const recovery = ['Cursed-Gyuuki', 'Seven-Spectrum', 'Reverse-Flow-Recovery']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
+        const domDuration1 = ['Domain-Amplification']
 
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
             let curse = curseWord.split(" ")[0]
@@ -1350,6 +1352,10 @@
                     redNenNinCost -= amount
                     $('#redNinPow').text(redNenNinCost)
                 }
+                if (domDuration1.includes(curse)) {
+                    redDomDuration += amount
+                    $('#red_dom_duration').text(redDomDuration)
+                }
                 /////////// END OF IF CHAIN /////////////
                 $('#redCurseUi').text(curse)
             } else {
@@ -1422,6 +1428,10 @@
                 if (drain.includes(curse)) {
                     currRedChakra -= amount;
                     $('#redChakra').text(currRedChakra)
+                }
+                if (domDuration1.includes(curse)) {
+                    blueDomDuration += amount
+                    $('#blue_dom_duration').text(blueDomDuration)
                 }
                 /////////// END OF IF CHAIN /////////////
                 $('#blueCurseUi').text(curse)

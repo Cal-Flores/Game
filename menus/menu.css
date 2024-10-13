@@ -215,6 +215,19 @@ body {
     overflow: scroll;
 }
 
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-a {
+    color: #5D5142;
+
+    margin-top: 10px;
+}
+
 #fight_corner_img {
     width: 52%;
     height: 210px;
