@@ -204,7 +204,7 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'Orange-Arrow', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall']
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall']
             let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun']
             let critical = ['Awakening', 'Explosive Tags']
             let Strength = []
@@ -220,7 +220,7 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique']
             let luck = []
             // genjutsu
@@ -1260,11 +1260,11 @@
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation']
-        const chakra_cost = ["Falling-Blossom-Emotion"];
+        const chakra_cost = ["Falling-Blossom-Emotion", 'Seven-Spectrum'];
         const genjutsu = [] //** NEW please add me**
         const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
-        const recovery = ['Cursed-Gyuuki', 'Seven-Spectrum', 'Reverse-Flow-Recovery']
+        const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
         const domDuration1 = ['Domain-Amplification']
 
@@ -1755,7 +1755,8 @@
             Fairy: { strongAgainst: ['Dark', 'Fighter', 'Ghost'], weakAgainst: ['Fire', 'Wind', 'Earth'] },
             Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
             Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: ['Fire', 'Grass', 'Lightning'] },
-            psychic: { strongAgainst: ['Sage'], weakAgainst: [] }
+            psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
+            sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] }
         };
 
         function checkWeakness(attackerElement, defenderElement) {
@@ -2014,6 +2015,7 @@
                 }
                 if (curse == 'Curse') {
                     blueCurseRec -= amount
+                    alert(`Blue curse recovery drops to ${blueCurseRec}`)
                 }
                 if (curse == 'Recovery') {
                     blueRecovery -= amount
@@ -2054,6 +2056,7 @@
                 }
                 if (curse == 'Curse') {
                     redCurseRec -= amount
+                    alert(`Red curse recovery drops to ${redCurseRec}`)
                 }
                 if (curse == 'Recovery') {
                     redRecovery -= amount
