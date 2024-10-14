@@ -283,9 +283,9 @@ const database = [
         elm: fire,
         hp: 3115,
         //PHYSICAL
-        attack: 225,
+        attack: 242,
         defense: 185,
-        critical: .30,
+        critical: .20,
         strength: 1.8,
         //MAGIC
         elm_attack: 152,
@@ -315,9 +315,9 @@ const database = [
         cursed_recovery: 35,
         negative_energy: 15,
         cursed_tech: '8th-Gate of death - Triple Attack',
-        curse_amount: 440,
+        curse_amount: 400,
         curse_duration: 100,
-        curse_cost: 36,
+        curse_cost: 40,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -456,10 +456,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 5%',
-        ninJutsu2cost: 14,
+        ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 6%',
+        ninJutsu2cost: 11,
         ninJutsu2Dmg: 170,
-        nin2amount: .05,
+        nin2amount: .06,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "New-Shadow-Style",
@@ -950,7 +950,7 @@ const database = [
         elm_attack: 243,
         elm_defense: 189,
         elm_efficiency: 1.8,
-        potency: 0.44,
+        potency: 0.34,
         //WEAPON
         weapon: 226,
         shield: 163,
@@ -1118,7 +1118,7 @@ const database = [
         ninjutsu2: 'Flame-Control Amaterasu - Increase Magic Defense by 10%',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 175,
-        nin2amount: 10,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Amaterasu-Arrow - Decrease Magic defense by 25%",
@@ -1589,10 +1589,142 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Double Stun rate',
+        buff: 'Stun rate plus .08',
         buff2: 'Decrease Accuracy by 2',
         buff_acc: 70,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/0/0a/Pokkle_HxH_11.PNG/revision/latest?cb=20120323055002'
     },
+    {
+        name: 'Kalluto',
+        nen_type: 'Emitter',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 2814,
+        //PHYSICAL
+        attack: 112,
+        defense: 150,
+        critical: .10,
+        strength: 1,
+        //MAGIC
+        elm_attack: 244,
+        elm_defense: 182,
+        elm_efficiency: 2,
+        potency: .28,
+        //WEAPON
+        weapon: 175,
+        shield: 202,
+        curse_crit: .40,
+        weaponCurse: 'Magic',
+        weapon_amount: 20,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 6,
+        luck: 7,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 8,
+        gen_power: 70,
+        willpower: 5,
+        chakra: 0,
+        chakra_rec: 8,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 65,
+        cursed_tech: 'Falling-Blossom-Emotion - 8 off chakra cost',
+        curse_amount: 8,
+        curse_duration: 8,
+        curse_cost: 16,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Explosive Tags - Increase Potency by 10%',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 145,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Dance-of-the-Serpent's-Bite - Increase Power by 30%",
+        nin_cost: 24,
+        ninjutsu_pow: 300,
+        ninamount: .30,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Weapon by 30%',
+        buff2: 'Decrease Magic by 30%',
+        buff_acc: 70,
+        buff2_acc: 70,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/b/bb/HxH2011_EP97_Kalluto_Close_Up.png/revision/latest?cb=20221123201432'
+    },
+    {
+        name: 'Temari',
+        nen_type: 'Emitter',
+        element: 'Wind',
+        elm: wind,
+        hp: 2962,
+        //PHYSICAL
+        attack: 134,
+        defense: 161,
+        critical: .28,
+        strength: 1.4,
+        //MAGIC
+        elm_attack: 246,
+        elm_defense: 193,
+        elm_efficiency: 1.75,
+        potency: 0.30,
+        //WEAPON
+        weapon: 230,
+        shield: 168,
+        curse_crit: .40,
+        weaponCurse: 'Magic',
+        weapon_amount: 9,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 3,
+        luck: 6,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 3,
+        gen_power: 10,
+        willpower: 4,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 32,
+        negative_energy: 28,
+        cursed_tech: 'Simple-Domain - Increase Defense by 100',
+        curse_amount: 100,
+        curse_duration: 6,
+        curse_cost: 16,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Kamaitachi - Increase Weapon Critical by 20%',
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 165,
+        nin2amount: .20,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: 'Kamikaze  - Traps Enemy in Wind-Vortex for 1 turn',
+        nin_cost: 24,
+        ninjutsu_pow: 230,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Magic Attack by 8%',
+        buff2: 'Decrease Attack by 20%',
+        buff_acc: 65,
+        buff2_acc: 70,
+        image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
+    }
 ]

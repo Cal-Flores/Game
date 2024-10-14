@@ -209,14 +209,14 @@
             let critical = ['Awakening', 'Explosive Tags']
             let Strength = []
             //Magic
-            let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Flame-Control',]
+            let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori',]
             let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun']
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
             let weapon = ['Knife']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall']
-            let witherPer = []
+            let witherPer = ['Kamaitachi']
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
@@ -225,7 +225,7 @@
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
-            let power = []
+            let power = ["Dance-of-the-Serpent's-Bite"]
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
             let curseRec = ['Teleporting-Rasengan', 'C4-Karura', 'Yasaka-Magatama']
@@ -757,7 +757,7 @@
                     }
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
-                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueHeal');
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redStun, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueStun, blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
                         let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -917,6 +917,14 @@
                             } else {
                                 redWill -= stat_number
                             }
+                            break;
+                        case 'redStun':
+                            if (stat_type == 'Increase') {
+                                redStun += stat_number
+                            } else {
+                                redStun -= stat_number
+                            }
+                            alert('Stun increases')
                             break;
                         case 'blueAttack':
                             if (stat_type == 'Increase') {
@@ -1138,6 +1146,14 @@
                                 blueShield = Math.floor(blueShield * (1 - stat_number));
                             }
                             break;
+                        case 'blueStun':
+                            if (stat_type == 'Increase') {
+                                blueStun += stat_number
+                            } else {
+                                blueStun -= stat_number
+                            }
+                            alert('Stun increases')
+                            break;
                         default:
                             alert('Invalid stat');
                             break;
@@ -1250,7 +1266,7 @@
         }
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
         const attacking = ["Divergent-Fist", 'Mutation', '8th-Gate'];
-        const defense = ["Reverse", 'Veil', 'Simple-Domain'];
+        const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ["Black-Flash", 'Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
@@ -1338,11 +1354,15 @@
                 }
                 if (potency.includes(curse)) {
                     redPotency += amount
-                    $('#redPot').text(redPot);
+                    $('#redPot').text(redPotency);
                 }
                 if (magic_defense.includes(curse)) {
                     redElmDef += amount
                     $('#redElmDef').text(redElmDef);
+                }
+                if (magic_attack.includes(curse)) {
+                    redElmAttack += amount
+                    $('#redElmAttack').text(redElmAttack);
                 }
                 if (luck.includes(curse)) {
                     redLuck += amount
@@ -1399,11 +1419,15 @@
                 }
                 if (potency.includes(curse)) {
                     bluePotency += amount
-                    $('#bluePot').text(bluePot);
+                    $('#bluePot').text(bluePotency);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef += amount
                     $('#blueElmDef').text(blueElmDef);
+                }
+                if (magic_attack.includes(curse)) {
+                    blueElmAttack += amount
+                    $('#blueElmAttack').text(blueElmAttack);
                 }
                 if (luck.includes(curse)) {
                     blueLuck += amount
@@ -1479,11 +1503,15 @@
                 }
                 if (potency.includes(curse)) {
                     redPotency -= amount
-                    $('#redPot').text(redPot);
+                    $('#redPot').text(redPotency);
                 }
                 if (magic_defense.includes(curse)) {
                     redElmDef -= amount
                     $('#redElmDef').text(redElmDef);
+                }
+                if (magic_attack.includes(curse)) {
+                    redElmAttack -= amount
+                    $('#redElmAttack').text(redElmAttack);
                 }
                 if (luck.includes(curse)) {
                     redLuck -= amount
@@ -1532,11 +1560,15 @@
                 }
                 if (potency.includes(curse)) {
                     bluePotency -= amount
-                    $('#bluePot').text(bluePot);
+                    $('#bluePot').text(bluePotency);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef -= amount
                     $('#blueElmDef').text(blueElmDef);
+                }
+                if (magic_attack.includes(curse)) {
+                    blueElmAttack -= amount
+                    $('#blueElmAttack').text(blueElmAttack);
                 }
                 if (luck.includes(curse)) {
                     blueLuck -= amount
