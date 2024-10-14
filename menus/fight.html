@@ -189,6 +189,7 @@
                 let firstRecovery = 100 - blueCurseRec;
                 let recovery = damage / firstRecovery;
                 currBlueCurse += recovery;
+                console.log(`this is recovery ${firstRecovery} and after dicison its ${recovery} added`)
                 $('#blueCurrCurse').text(Math.round(currBlueCurse))
             }
 
@@ -1283,6 +1284,7 @@
         const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
         const domDuration1 = ['Domain-Amplification']
+        const toji = ['Inventory-Curse']
 
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
             let curse = curseWord.split(" ")[0]
@@ -1306,6 +1308,7 @@
                 }
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
                 ///////// LONG IF CHAIN ADD HERE//////////
+
                 if (recovery.includes(curse)) {
                     redRecovery += amount
                 }
@@ -1375,6 +1378,31 @@
                 if (domDuration1.includes(curse)) {
                     redDomDuration += amount
                     $('#red_dom_duration').text(redDomDuration)
+                }
+                if (toji.includes(curse)) {
+                    let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
+                    if (weapon == 'Split Soul Katana') {
+                        redWeaponCrit = .90
+                        redWeaponCurse = 'Shield'
+                        redWeaponAmount = 35
+                    }
+                    if (weapon == 'Inverted Spear of Heaven') {
+                        redWeaponCrit = .55
+                        redWeaponCurse = 'Curse'
+                        redWeaponAmount = 12
+                    }
+                    if (weapon == 'Chain of a Thousand Miles') {
+                        redWeaponCrit = .75
+                        redWeaponCurse = 'Magic'
+                        redWeaponAmount = 25
+                    }
+                    if (weapon == 'Playful Cloud') {
+                        redWeaponCrit = .75
+                        redWeaponCurse = 'Attack'
+                        redWeaponAmount = 25
+                    }
+                    $('.redWeaponCurse').text(blueWeaponCurse)
+                    $('#redWeaponCrit').text(blueWeaponCrit)
                 }
                 /////////// END OF IF CHAIN /////////////
                 $('#redCurseUi').text(curse)
@@ -1460,7 +1488,31 @@
                 /////////// END OF IF CHAIN /////////////
                 $('#blueCurseUi').text(curse)
             }
-
+            if (toji.includes(curse)) {
+                let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
+                if (weapon == 'Split Soul Katana') {
+                    blueWeaponCrit = .90
+                    blueWeaponCurse = 'Shield'
+                    blueWeaponAmount = 25
+                }
+                if (weapon == 'Inverted Spear of Heaven') {
+                    blueWeaponCrit = .55
+                    blueWeaponCurse = 'Curse'
+                    blueWeaponAmount = 12
+                }
+                if (weapon == 'Chain of a Thousand Miles') {
+                    blueWeaponCrit = .75
+                    blueWeaponCurse = 'Magic'
+                    blueWeaponAmount = 15
+                }
+                if (weapon == 'Playful Cloud') {
+                    blueWeaponCrit = .75
+                    blueWeaponCurse = 'Attack'
+                    blueWeaponAmount = 15
+                }
+                $('.blueWeaponCurse').text(blueWeaponCurse)
+                $('#blueWeaponCrit').text(blueWeaponCrit)
+            }
         }
         // Function to remove a curse for a player
         function removeCurse(player, curse) {
@@ -2939,7 +2991,7 @@
         <span id="redShield">${player.shield}</span>
     </div>
     <div class='nen_numbers'>
-        <p >${player.weaponCurse}</p>
+        <p class='redWeaponCurse' >${player.weaponCurse}</p>
         <p id="redWeaponCrit">${player.curse_crit}</p>
     </div>
     <div class='nen_numbers'>
@@ -3114,7 +3166,7 @@
         <span id="blueShield">${player.shield}</span>
     </div>
     <div class='nen_numbers'>
-        <p >${player.weaponCurse}</p>
+        <p class='blueWeaponCurse'>${player.weaponCurse}</p>
         <p id="blueWeaponCrit">${player.curse_crit}</p>
     </div>
     <div class='nen_numbers'>

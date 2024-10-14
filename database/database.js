@@ -13,10 +13,76 @@ let ghost = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-
 let sage = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w4gu-bcf44127-7bc3-468d-b148-1af8cf4e7ac0.png/v1/fit/w_720,h_720/colorless_energy_by_humac1_d50w4gu-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYWJhMWE3NTYtZDk1NS00M2Y2LWEyZTktNWI3ZDYwNDA2ODU0XC9kNTB3NGd1LWJjZjQ0MTI3LTdiYzMtNDY4ZC1iMTQ4LTFhZjhjZjRlN2FjMC5wbmciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.I2hRnHXhqZrAh05uX4UyxVC8C-iVQrj00LWU7nvS9C8'
 const database = [
     {
+        name: 'Toji',
+        nen_type: 'Enhancer',
+        element: 'Ghost',
+        elm: ghost,
+        hp: 3500,
+        //PHYSICAL
+        attack: 220,
+        defense: 200,
+        critical: .40,
+        strength: 1.6,
+        //MAGIC
+        elm_attack: 121,
+        elm_defense: 153,
+        elm_efficiency: 1.5,
+        potency: .15,
+        //WEAPON
+        weapon: 300,
+        shield: 238,
+        curse_crit: 0.0,
+        weaponCurse: 'Katana',
+        weapon_amount: 0,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 9,
+        luck: 3,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 0,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 3,
+        drain: 0,
+        //CURSE
+        cursed_energy: 5,
+        cursed_recovery: 100,
+        negative_energy: 0,
+        cursed_tech: 'Inventory-Curse - Change Weapons',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 1,
+        //DOMAIN
+        dom_purity: 5,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Increase Defense by 15%',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 180,
+        nin2amount: .15,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Increase Magic Defense by 20%",
+        nin_cost: 15,
+        ninjutsu_pow: 215,
+        ninamount: .20,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Domain Purity by 4',
+        buff2: 'Reduce Critical by 70%',
+        buff_acc: 60,
+        buff2_acc: 50,
+        image: 'https://i0.wp.com/ovicio.com.br/wp-content/uploads/2023/06/20230626-fzgi5egxsainwyd.jpg?resize=555%2C555&ssl=1'
+    },
+    {
         name: 'Nanami',
         nen_type: 'Enhancer',
-        element: 'Fairy',
-        elm: fairy,
+        element: 'Fighter',
+        elm: fighter,
         hp: 3289,
         //PHYSICAL
         attack: 232,
@@ -48,7 +114,7 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 30,
+        cursed_recovery: 0,
         negative_energy: 20,
         cursed_tech: 'Overtime - Increase Curse Tool by 60',
         curse_amount: 60,
@@ -312,12 +378,12 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 35,
+        cursed_recovery: 30,
         negative_energy: 15,
-        cursed_tech: '8th-Gate of death - Triple Attack',
-        curse_amount: 400,
+        cursed_tech: '8th-Gate of death - Double Attack',
+        curse_amount: 242,
         curse_duration: 100,
-        curse_cost: 40,
+        curse_cost: 36,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -336,9 +402,9 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Curse Recovery by 30',
+        buff: 'Increase Curse Recovery by 15',
         buff2: 'Halve Genjutsu',
-        buff_acc: 40,
+        buff_acc: 50,
         buff2_acc: 50,
         image: 'https://i.pinimg.com/736x/25/80/3b/25803b13e5a6e1b7420070889dc5ecc6.jpg'
     },
@@ -841,7 +907,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 28,
         negative_energy: 34,
-        cursed_tech: 'Blade of the right hand - Add 50 to attack',
+        cursed_tech: 'Divergent-Fist - Add 50 to attack',
         curse_amount: 50,
         curse_duration: 6,
         curse_cost: 17,
