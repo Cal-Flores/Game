@@ -229,12 +229,12 @@
             let power = ["Dance-of-the-Serpent's-Bite"]
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'C4-Karura', 'Yasaka-Magatama']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama']
             let curseCost = []
             let curseDur = []
             let domPurity = []
             let domDur = ['Sand-Mauseliem', 'Dance']
-            let domLethal = []
+            let domLethal = ['C4']
             let domCost = []
             // ninjutsu
             let ninCosted = ['Seven-Spectrum']
@@ -681,15 +681,15 @@
                 if (domLethal.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redDomLethal = Math.floor(redDomLethal * (1 + amount));
+                            redDomLethal += amount;
                         } else {
-                            blueDomLethal = Math.floor(blueDomLethal * (1 - amount));
+                            blueDomLethal -= amount;
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueDomLethal = Math.floor(blueDomLethal * (1 + amount))
+                            blueDomLethal += amount
                         } else {
-                            redDomLethal = Math.floor(redDomLethal * (1 - amount))
+                            redDomLethal -= amount
                         }
                     }
                 }
