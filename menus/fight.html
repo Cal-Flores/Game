@@ -1298,7 +1298,10 @@
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
         const domDuration1 = ['Domain-Amplification']
         const toji = ['Inventory-Curse']
+        const black = ['Black-Flash']
 
+
+        let blackTech;
         function applyCurseTech(attacker, curseWord, duration, cost, amount) {
             let curse = curseWord.split(" ")[0]
             console.log(`${attacker} has used the ${curse} curse technique! lasts ${duration} turns and a cost of ${cost} increased by ${amount}`)
@@ -1319,7 +1322,7 @@
                     currRedCurse -= cost;
                     $('#redCurrCurse').text(currRedCurse)
                 }
-                redCurses.push({ name: curse, turnsLeft: duration, amount })
+
                 ///////// LONG IF CHAIN ADD HERE//////////
 
                 if (recovery.includes(curse)) {
@@ -1417,7 +1420,27 @@
                     $('.redWeaponCurse').text(blueWeaponCurse)
                     $('#redWeaponCrit').text(blueWeaponCrit)
                 }
+                if (black.includes(curse)) {
+                    blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
+                    if (blackTech == 'Black-Flash') {
+                        redCrit = 1.0;
+                        redStrength = 2.5
+                        duration = 2;
+                        $('#redCrit').text(redCrit)
+                        $('#redStr').text(redStrength)
+                    } else if (blackTech == 'Divergent-Fist') {
+                        redStun = .75;
+                        currRedCurse -= 9
+                        alert(`Stun rate has increased to ${redStun}`)
+                        duration = 6
+                    } else {
+                        redEvas = 1000
+                        duration = 2
+                        $('redEvas').text('∞')
+                    }
+                }
                 /////////// END OF IF CHAIN /////////////
+                redCurses.push({ name: curse, turnsLeft: duration, amount })
                 $('#redCurseUi').text(curse)
             } else {
                 if (currBlueCurse < cost) {
@@ -1427,7 +1450,6 @@
                     currBlueCurse -= cost;
                     $('#blueCurrCurse').text(currBlueCurse)
                 }
-                blueCurses.push({ name: curse, turnsLeft: duration, amount })
                 ///////// LONG IF CHAIN ADD HERE//////////
                 if (recovery.includes(curse)) {
                     blueRecovery += amount
@@ -1498,33 +1520,53 @@
                     blueDomDuration += amount
                     $('#blue_dom_duration').text(blueDomDuration)
                 }
+                if (toji.includes(curse)) {
+                    let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
+                    if (weapon == 'Split Soul Katana') {
+                        blueWeaponCrit = .90
+                        blueWeaponCurse = 'Shield'
+                        blueWeaponAmount = 25
+                    }
+                    if (weapon == 'Inverted Spear of Heaven') {
+                        blueWeaponCrit = .55
+                        blueWeaponCurse = 'Curse'
+                        blueWeaponAmount = 12
+                    }
+                    if (weapon == 'Chain of a Thousand Miles') {
+                        blueWeaponCrit = .75
+                        blueWeaponCurse = 'Magic'
+                        blueWeaponAmount = 15
+                    }
+                    if (weapon == 'Playful Cloud') {
+                        blueWeaponCrit = .75
+                        blueWeaponCurse = 'Attack'
+                        blueWeaponAmount = 15
+                    }
+                    $('.blueWeaponCurse').text(blueWeaponCurse)
+                    $('#blueWeaponCrit').text(blueWeaponCrit)
+                }
+                if (black.includes(curse)) {
+                    blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
+                    if (blackTech == 'Black-Flash') {
+                        blueCrit = 1.0;
+                        blueStrength = 2.5
+                        duration = 2;
+                        $('#blueCrit').text(blueCrit)
+                        $('#blueStr').text(blueStrength)
+                    } else if (blackTech == 'Divergent-Fist') {
+                        blueStun = .75;
+                        currBlueCurse -= 9
+                        alert(`Stun rate has increased to ${blueStun}`)
+                        duration = 6
+                    } else {
+                        blueEvas = 1000
+                        duration = 2
+                        $('blueEvas').text('∞')
+                    }
+                }
                 /////////// END OF IF CHAIN /////////////
+                blueCurses.push({ name: curse, turnsLeft: duration, amount })
                 $('#blueCurseUi').text(curse)
-            }
-            if (toji.includes(curse)) {
-                let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
-                if (weapon == 'Split Soul Katana') {
-                    blueWeaponCrit = .90
-                    blueWeaponCurse = 'Shield'
-                    blueWeaponAmount = 25
-                }
-                if (weapon == 'Inverted Spear of Heaven') {
-                    blueWeaponCrit = .55
-                    blueWeaponCurse = 'Curse'
-                    blueWeaponAmount = 12
-                }
-                if (weapon == 'Chain of a Thousand Miles') {
-                    blueWeaponCrit = .75
-                    blueWeaponCurse = 'Magic'
-                    blueWeaponAmount = 15
-                }
-                if (weapon == 'Playful Cloud') {
-                    blueWeaponCrit = .75
-                    blueWeaponCurse = 'Attack'
-                    blueWeaponAmount = 15
-                }
-                $('.blueWeaponCurse').text(blueWeaponCurse)
-                $('#blueWeaponCrit').text(blueWeaponCrit)
             }
         }
         // Function to remove a curse for a player
@@ -1594,6 +1636,21 @@
                     redGenPow -= amount;
                     $('#redGenPow').text(redGen)
                 }
+                if (black.includes(curse)) {
+                    if (blackTech == 'Black-Flash') {
+                        redCrit = .23;
+                        redStrength = 1.65
+                        $('#redCrit').text(redCrit)
+                        $('#redStr').text(redStrength)
+                    } else if (blackTech == 'Divergent-Fist') {
+                        redStun = .07;
+                        alert(`Stun rate has Decreased to ${redStun}%`)
+                    } else {
+                        redEvas = 6
+                        $('redEvas').text(redEvas)
+                    }
+                }
+
                 $('#redCurseUi').text('')
             } else {
                 ///////// LONG IF CHAIN ADD HERE//////////
@@ -1651,12 +1708,25 @@
                     blueGenPow -= amount;
                     $('#blueGenPow').text(blueGen)
                 }
-                $('#blueCurseUi').text('')
+                if (black.includes(curse)) {
+                    if (blackTech == 'Black-Flash') {
+                        blueCrit = .23;
+                        blueStrength = 1.65
+                        $('#blueCrit').text(blueCrit)
+                        $('#blueStr').text(blueStrength)
+                    } else if (blackTech == 'Divergent-Fist') {
+                        blueStun = .07;
+                        alert(`Stun rate has Decreased to ${blueStun}%`)
+                    } else {
+                        blueEvas = 6
+                        $('blueEvas').text(blueEvas)
+                    }
+                    $('#blueCurseUi').text('')
+                }
+                curses.splice(curseIndex, 1);
+                console.log(`${curse} has worn off on Player ${player.toUpperCase()}!`);
             }
-            curses.splice(curseIndex, 1);
-            console.log(`${curse} has worn off on Player ${player.toUpperCase()}!`);
         }
-
 
 
         function applyStatusEffect(defender, statusEffect) {
