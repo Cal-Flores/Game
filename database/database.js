@@ -935,6 +935,8 @@ const database = [
         buff2_acc: 57,
         image: 'https://i.pinimg.com/736x/a8/26/45/a826458e9ec3b3e63687e831a0841546.jpg'
     },
+    //// END /////
+    /////// SUB-EMITTERS ////////
     {
         name: 'Akatsuki Sasuke',
         nen_type: 'Enhancer',
@@ -1792,5 +1794,205 @@ const database = [
         buff_acc: 65,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
-    }
+    },
+    // END //
+    ////// sub-Enhancer ///
+    {
+        name: 'Gon',
+        nen_type: 'Enhancer',
+        element: 'Fighter',
+        elm: fighter,
+        hp: 3085,
+        //PHYSICAL
+        attack: 253,
+        defense: 238,
+        critical: .30,
+        strength: 1.5,
+        //MAGIC
+        elm_attack: 120,
+        elm_defense: 166,
+        elm_efficiency: 1.1,
+        potency: .10,
+        //WEAPON
+        weapon: 196,
+        shield: 192,
+        curse_crit: .10,
+        weaponCurse: 'Evasion',
+        weapon_amount: 1,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 6,
+        luck: 8,
+        stun: .08,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 15,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 0,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 65,
+        cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 8',
+        curse_amount: 8,
+        curse_duration: 6,
+        curse_cost: 18,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Scissor - Increase Critical by 10%',
+        ninJutsu2cost: 10,
+        ninJutsu2Dmg: 175,
+        nin2amount: .10,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Jajanken - Increase Strength by 1 | Reduce Recovery by 3",
+        nin_cost: 20,
+        ninjutsu_pow: 350,
+        ninamount: 0,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Willpower by 4',
+        buff2: 'Decrease Defense by 10%',
+        buff_acc: 50,
+        buff2_acc: 60,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/3/3e/HxH2011_EP147_Gon_Portrait.png/revision/latest?cb=20230904181801'
+    },
+    {
+        name: 'Phinks',
+        nen_type: 'Enhancer',
+        element: 'Fighter',
+        elm: fighter,
+        hp: 3415,
+        //PHYSICAL
+        attack: 264,
+        defense: 255,
+        critical: .28,
+        strength: 1.6,
+        //MAGIC
+        elm_attack: 112,
+        elm_defense: 150,
+        elm_efficiency: 1.2,
+        potency: 0.10,
+        //WEAPON
+        weapon: 185,
+        shield: 215,
+        curse_crit: .05,
+        weaponCurse: 'Attack',
+        weapon_amount: 10,
+        //SPEED / LUCK
+        accuracy: 4,
+        evasion: 4,
+        luck: 5,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 7,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 2,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 20,
+        negative_energy: 12,
+        cursed_tech: 'Reverse-Flow-Recovery Increace Recovery by 5',
+        curse_amount: 5,
+        curse_duration: 6,
+        curse_cost: 16,
+        //DOMAIN
+        dom_purity: 7,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ripper-Cyclotron',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 185,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Ripper-Cyclotron 15x Increase Cyclotron by 50%",
+        nin_cost: 30,
+        ninjutsu_pow: 230,
+        ninamount: .50,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Magic Defense by 10%',
+        buff2: 'Decrease Weapon by 10%',
+        buff_acc: 70,
+        buff2_acc: 70,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/88/HxH2011_EP41_Phinks_Portrait.png/revision/latest?cb=20221008055432'
+    },
+    {
+        name: 'Uvogin',
+        nen_type: 'Enhancer',
+        element: 'Earth',
+        elm: earth,
+        hp: 3500,
+        //PHYSICAL
+        attack: 280,
+        defense: 262,
+        critical: .18,
+        strength: 2,
+        //MAGIC
+        elm_attack: 130,
+        elm_defense: 232,
+        elm_efficiency: 1,
+        potency: .06,
+        //WEAPON
+        weapon: 162,
+        shield: 227,
+        curse_crit: .05,
+        weaponCurse: 'Weapon',
+        weapon_amount: 20,
+        //SPEED / LUCK
+        accuracy: 4,
+        evasion: 3,
+        luck: 3,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 0,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 3,
+        drain: 3,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 15,
+        negative_energy: 10,
+        cursed_tech: "Black-Flash - Increase Critical by 25%",
+        curse_amount: .25,
+        curse_duration: 4,
+        curse_cost: 18,
+        //DOMAIN
+        dom_purity: 5,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'SCREAM - Decrease Evasion by 2',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 140,
+        nin2amount: 2,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Big-Bang-Impact - Decrease Defense by 70%",
+        nin_cost: 32,
+        ninjutsu_pow: 750,
+        ninamount: .70,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Double Critical',
+        buff2: 'Decrease GenPower by 20%',
+        buff_acc: 50,
+        buff2_acc: 50,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
+    },
 ]

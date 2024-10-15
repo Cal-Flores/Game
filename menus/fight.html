@@ -206,8 +206,8 @@
 
             //physical
             let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall']
-            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun']
-            let critical = ['Awakening', 'Explosive Tags']
+            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun']
+            let critical = ['Awakening', 'Explosive Tags', 'Scissor']
             let Strength = []
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori',]
@@ -221,7 +221,7 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique']
             let luck = []
             // genjutsu
@@ -245,6 +245,7 @@
             let heal = ['Blood-Consumption', 'Heart-Mask']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo']
+            let trade = ['Jajanken']
 
 
             buff = buff / 100;
@@ -302,17 +303,15 @@
                 if (strength.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redStrength = (redStrength * (1 + amount)).toFixed(2);
-                            alert(`red strength increased to ${redStrength}`)
+                            redStrength += amount
                         } else {
-                            blueStrength = (blueStrength * (1 - amount)).toFixed(2);
+                            blueStrength -= amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueStrength = (blueStrength * (1 + amount).toFixed(2))
-                            alert(`blue strength increased to ${blueStrength}`)
+                            blueStrength += amount
                         } else {
-                            redStrength = (redStrength * (1 - amount).toFixed(2))
+                            redStrength -= amount
                         }
                     }
                 }
@@ -754,6 +753,20 @@
                             blueNinPower = Math.floor(blueNinPower * (1 + amount))
                         } else {
                             redNinPower = Math.floor(redNinPower * (1 - amount))
+                        }
+                    }
+                }
+                if (trade.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redStrength += 1;
+                            redRecovery -= 3
+                        }
+                    }
+                    else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueStrength += 1;
+                            blueRecovery -= 3
                         }
                     }
                 }
