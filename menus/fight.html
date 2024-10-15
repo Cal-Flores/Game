@@ -216,12 +216,12 @@
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
             let weapon = ['Knife']
-            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall']
+            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Rotation']
             let witherPer = ['Kamaitachi']
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique']
             let luck = []
             // genjutsu
@@ -244,7 +244,7 @@
             let elem = []
             let heal = ['Blood-Consumption', 'Heart-Mask']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil']
-            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo']
+            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane']
             let trade = ['Jajanken']
 
 
@@ -537,7 +537,7 @@
                             redStun -= amount
                         }
                     }
-                    console.log(`red stun: ${redStun}, blue stun ${blueStun}`)
+                    alert(`red stun: ${redStun}, blue stun ${blueStun}`)
                 }
                 // GENJUTSUUU
                 if (willpower.includes(jutsu)) {
@@ -1279,9 +1279,9 @@
             }
         }
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
-        const attacking = ["Divergent-Fist", 'Mutation', '8th-Gate'];
+        const attacking = ['Mutation', '8th-Gate'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
-        const critical = ["Black-Flash", 'Blade', 'Thunderclap-Veil'];
+        const critical = ['Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
         const magic_defense = ["Simple-Barrier"];
@@ -1426,6 +1426,7 @@
                         redCrit = 1.0;
                         redStrength = 2.5
                         duration = 2;
+                        redAcc += 6;
                         $('#redCrit').text(redCrit)
                         $('#redStr').text(redStrength)
                     } else if (blackTech == 'Divergent-Fist') {
@@ -1551,6 +1552,7 @@
                         blueCrit = 1.0;
                         blueStrength = 2.5
                         duration = 2;
+                        blueAcc += 6;
                         $('#blueCrit').text(blueCrit)
                         $('#blueStr').text(blueStrength)
                     } else if (blackTech == 'Divergent-Fist') {
@@ -1640,6 +1642,7 @@
                     if (blackTech == 'Black-Flash') {
                         redCrit = .23;
                         redStrength = 1.65
+                        redAcc -= 6;
                         $('#redCrit').text(redCrit)
                         $('#redStr').text(redStrength)
                     } else if (blackTech == 'Divergent-Fist') {
@@ -1712,6 +1715,7 @@
                     if (blackTech == 'Black-Flash') {
                         blueCrit = .23;
                         blueStrength = 1.65
+                        blueAcc -= 15
                         $('#blueCrit').text(blueCrit)
                         $('#blueStr').text(blueStrength)
                     } else if (blackTech == 'Divergent-Fist') {
