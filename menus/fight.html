@@ -757,16 +757,18 @@
                     }
                 }
                 if (trade.includes(jutsu)) {
+
                     if (attacker == 'red') {
                         if (enhance) {
-                            redStrength += 1;
-                            redRecovery -= 3
+                            redNinPower += 200;
+                            redRecovery -= 2
+                            alert(`Jajanken ${redNinPower} power, ${redRecovery} recovery`)
                         }
                     }
                     else if (attacker == 'blue') {
                         if (enhance) {
-                            blueStrength += 1;
-                            blueRecovery -= 3
+                            blueNinPower += 200
+                            blueRecovery -= 2
                         }
                     }
                 }
