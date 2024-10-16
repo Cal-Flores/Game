@@ -205,10 +205,10 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall']
-            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun']
-            let critical = ['Awakening', 'Explosive Tags', 'Scissor']
-            let Strength = []
+            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall', 'Ice-Fist']
+            let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun', 'Rasenshuriken']
+            let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury']
+            let Strength1 = ["Roar"]
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori',]
             let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex']
@@ -216,7 +216,7 @@
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
             let weapon = ['Knife']
-            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Rotation']
+            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Rotation', 'Ice-Harden']
             let witherPer = ['Kamaitachi']
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
@@ -229,7 +229,7 @@
             let power = ["Dance-of-the-Serpent's-Bite"]
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan']
             let curseCost = []
             let curseDur = []
             let domPurity = []
@@ -300,7 +300,7 @@
                         }
                     }
                 }
-                if (strength.includes(jutsu)) {
+                if (Strength1.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
                             redStrength += amount
@@ -1281,7 +1281,7 @@
             }
         }
         const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
-        const attacking = ['Mutation', '8th-Gate'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
@@ -1296,7 +1296,7 @@
         const genjutsu = [] //** NEW please add me**
         const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
-        const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery']
+        const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery', 'Cursed-Kyuubi']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket'];
         const domDuration1 = ['Domain-Amplification']
         const toji = ['Inventory-Curse']
