@@ -2134,7 +2134,7 @@ const database = [
         elm: fairy,
         hp: 2875,
         //PHYSICAL
-        attack: 235,
+        attack: 231,
         defense: 174,
         critical: .65,
         strength: 1.2,
@@ -2200,7 +2200,7 @@ const database = [
         elm: earth,
         hp: 2872,
         //PHYSICAL
-        attack: 234,
+        attack: 238,
         defense: 194,
         critical: .24,
         strength: 1.7,
@@ -2258,5 +2258,71 @@ const database = [
         buff_acc: 50,
         buff2_acc: 70,
         image: 'https://imgix.ranker.com/user_node_img/50088/1001756931/original/the-lotus-of-the-leaf-village-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
+    },
+    {
+        name: 'Bisky',
+        nen_type: 'Enhancer',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 3491,
+        //PHYSICAL
+        attack: 280,
+        defense: 271,
+        critical: .16,
+        strength: 2,
+        //MAGIC
+        elm_attack: 164,
+        elm_defense: 185,
+        elm_efficiency: 2,
+        potency: .20,
+        //WEAPON
+        weapon: 148,
+        shield: 219,
+        curse_crit: .05,
+        weaponCurse: 'Attack',
+        weapon_amount: 50,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 3,
+        luck: 3,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 30,
+        willpower: 6,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 2,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 24,
+        negative_energy: 12,
+        cursed_tech: 'Granite-Blast',
+        curse_amount: 300,
+        curse_duration: 1,
+        curse_cost: 24,
+        //DOMAIN
+        dom_purity: 7,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Flex - Increase Magic Defense by 8%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 0,
+        nin2amount: .08,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Magical-Esthetician - Recover 355 HP",
+        nin_cost: 30,
+        ninjutsu_pow: 0,
+        ninamount: 355,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Accuracy by 4',
+        buff2: 'Decrease Weapon by 10%',
+        buff_acc: 40,
+        buff2_acc: 65,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/cd/Biscuit_Krueger_CA_Portrait.png/revision/latest?cb=20190630140152'
     },
 ]

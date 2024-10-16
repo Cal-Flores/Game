@@ -211,7 +211,7 @@
             let Strength = []
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori',]
-            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets']
+            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", 'Water-Formation-Wall', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun']
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
@@ -242,7 +242,7 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane']
             let trade = ['Jajanken']
@@ -1284,7 +1284,7 @@
         const critical = ['Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
-        const magic_defense = ["Simple-Barrier"];
+        const magic_defense = ["Simple-Barrier", 'Rage-Blast'];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence']; //** NEW please add me**
@@ -1321,6 +1321,7 @@
                 } else {
                     currRedCurse -= cost;
                     $('#redCurrCurse').text(currRedCurse)
+                    console.log('red has casted a curse for this duration', duration)
                 }
 
                 ///////// LONG IF CHAIN ADD HERE//////////
@@ -1443,6 +1444,7 @@
                 /////////// END OF IF CHAIN /////////////
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
                 $('#redCurseUi').text(curse)
+                console.log('here are red curses array', redCurses)
             } else {
                 if (currBlueCurse < cost) {
                     alert('Not enough curse energy')
@@ -1599,7 +1601,7 @@
                     $('#redAttack').text(redAttack);
                 }
                 if (defense.includes(curse)) {
-                    redDefense -= amount
+                    redDefense -= amount;
                     $('#redDefense').text(redDefense);
                 }
                 if (critical.includes(curse)) {
@@ -1611,68 +1613,63 @@
                     $('#redStr').text(redStrength);
                 }
                 if (potency.includes(curse)) {
-                    redPotency -= amount
+                    redPotency -= amount;
                     $('#redPot').text(redPotency);
                 }
                 if (magic_defense.includes(curse)) {
-                    redElmDef -= amount
+                    redElmDef -= amount;
                     $('#redElmDef').text(redElmDef);
                 }
                 if (magic_attack.includes(curse)) {
-                    redElmAttack -= amount
+                    redElmAttack -= amount;
                     $('#redElmAttack').text(redElmAttack);
                 }
                 if (luck.includes(curse)) {
-                    redLuck -= amount
-                    $('#redLuck').text(redLuck)
+                    redLuck -= amount;
+                    $('#redLuck').text(redLuck);
                 }
                 if (chakra_cost.includes(curse)) {
-                    redNenNinCost += amount
-                    $('#redNinPow').text(redNenNinCost)
+                    redNenNinCost += amount;
+                    $('#redNinPow').text(redNenNinCost);
                 }
                 if (genjutsu.includes(curse)) {
                     redGen -= amount;
-                    $('#redGen').text(redGen)
+                    $('#redGen').text(redGen);
                 }
                 if (genPower.includes(curse)) {
                     redGenPow -= amount;
-                    $('#redGenPow').text(redGen)
+                    $('#redGenPow').text(redGenPow);
+                }
+                if (domDuration1.includes(curse)) {
+                    redDomDuration -= amount;
+                    $('#red_dom_duration').text(redDomDuration);
                 }
                 if (black.includes(curse)) {
-                    if (blackTech == 'Black-Flash') {
-                        redCrit = .23;
-                        redStrength = 1.65
-                        redAcc -= 6;
-                        $('#redCrit').text(redCrit)
-                        $('#redStr').text(redStrength)
-                    } else if (blackTech == 'Divergent-Fist') {
-                        redStun = .07;
-                        alert(`Stun rate has Decreased to ${redStun}%`)
-                    } else {
-                        redEvas = 6
-                        $('redEvas').text(redEvas)
-                    }
+                    redCrit = .023;
+                    redStrength = 1.65
+                    redAcc -= 6;
+                    $('#redCrit').text(blueCrit)
+                    $('#redStr').text(blueStrength)
                 }
 
-                $('#redCurseUi').text('')
             } else {
-                ///////// LONG IF CHAIN ADD HERE//////////
+                ///////// BLUE PLAYER CURSE REMOVAL /////////
                 if (recovery.includes(curse)) {
-                    blueRecovery -= amount
+                    blueRecovery -= amount;
                 }
                 if (weapon.includes(curse)) {
-                    blueWeapon -= amount
+                    blueWeapon -= amount;
                 }
                 if (evasion.includes(curse)) {
-                    blueEvas -= amount
-                    $('#blueEvas').text(blueEvas)
+                    blueEvas -= amount;
+                    $('#blueEvas').text(blueEvas);
                 }
                 if (attacking.includes(curse)) {
                     blueAttack -= amount;
                     $('#blueAttack').text(blueAttack);
                 }
                 if (defense.includes(curse)) {
-                    blueDefense -= amount
+                    blueDefense -= amount;
                     $('#blueDefense').text(blueDefense);
                 }
                 if (critical.includes(curse)) {
@@ -1684,52 +1681,52 @@
                     $('#blueStr').text(blueStrength);
                 }
                 if (potency.includes(curse)) {
-                    bluePotency -= amount
-                    $('#bluePot').text(bluePotency);
+                    bluePotency -= amount;
+                    $('#bluePot').text(bluePot);
                 }
                 if (magic_defense.includes(curse)) {
-                    blueElmDef -= amount
+                    blueElmDef -= amount;
                     $('#blueElmDef').text(blueElmDef);
                 }
                 if (magic_attack.includes(curse)) {
-                    blueElmAttack -= amount
+                    blueElmAttack -= amount;
                     $('#blueElmAttack').text(blueElmAttack);
                 }
                 if (luck.includes(curse)) {
-                    blueLuck -= amount
-                    $('#blueLuck').text(blueLuck)
+                    blueLuck -= amount;
+                    $('#blueLuck').text(blueLuck);
                 }
                 if (chakra_cost.includes(curse)) {
-                    blueNenNinCost += amount
-                    $('#blueNinPow').text(blueNenNinCost)
+                    blueNenNinCost += amount;
+                    $('#blueNinPow').text(blueNenNinCost);
                 }
                 if (genjutsu.includes(curse)) {
                     blueGen -= amount;
-                    $('#blueGen').text(blueGen)
+                    $('#blueGen').text(blueGen);
                 }
                 if (genPower.includes(curse)) {
                     blueGenPow -= amount;
-                    $('#blueGenPow').text(blueGen)
+                    $('#blueGenPow').text(blueGenPow);
+                }
+                if (drain.includes(curse)) {
+                    // Handle chakra drain reversal here if necessary
+                }
+                if (domDuration1.includes(curse)) {
+                    blueDomDuration -= amount;
+                    $('#blue_dom_duration').text(blueDomDuration);
                 }
                 if (black.includes(curse)) {
-                    if (blackTech == 'Black-Flash') {
-                        blueCrit = .23;
-                        blueStrength = 1.65
-                        blueAcc -= 15
-                        $('#blueCrit').text(blueCrit)
-                        $('#blueStr').text(blueStrength)
-                    } else if (blackTech == 'Divergent-Fist') {
-                        blueStun = .07;
-                        alert(`Stun rate has Decreased to ${blueStun}%`)
-                    } else {
-                        blueEvas = 6
-                        $('blueEvas').text(blueEvas)
-                    }
-                    $('#blueCurseUi').text('')
+                    blueCrit = .23
+                    blueStrength = 1.65
+                    blueAcc -= 6
+                    $('#blueCrit').text(blueCrit)
+                    $('#blueStr').text(blueStrength)
                 }
-                curses.splice(curseIndex, 1);
-                console.log(`${curse} has worn off on Player ${player.toUpperCase()}!`);
             }
+
+            // Remove the curse from the array
+            curses.splice(curseIndex, 1);
+            player === 'red' ? $('#redCurseUi').text('') : $('#blueCurseUi').text('');
         }
 
 
@@ -1775,7 +1772,9 @@
             [redCurses, blueCurses].forEach((curses, index) => {
                 curses.forEach(curse => {
                     curse.turnsLeft--;
+                    console.log(curse.turnsLeft)
                     if (curse.turnsLeft <= 0) {
+                        console.log('time to call the end')
                         removeCurse(index === 0 ? 'red' : 'blue', curse.name);
                     }
                 });
