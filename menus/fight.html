@@ -1435,12 +1435,13 @@
                     } else if (blackTech == 'Divergent-Fist') {
                         redStun = .75;
                         currRedCurse -= 9
+                        $('#redCurrCurse').text(currRedCurse)
                         alert(`Stun rate has increased to ${redStun}`)
                         duration = 6
                     } else {
-                        redEvas += 15
+                        redEvas += 100
                         duration = 2
-                        $('redEvas').text(redEvas)
+                        $('#redEvas').text(redEvas)
                     }
                 }
                 /////////// END OF IF CHAIN /////////////
@@ -1562,12 +1563,13 @@
                     } else if (blackTech == 'Divergent-Fist') {
                         blueStun = .75;
                         currBlueCurse -= 9
+                        $('#blueCurrCurse').text(currBlueCurse)
                         alert(`Stun rate has increased to ${blueStun}`)
                         duration = 6
                     } else {
-                        blueEvas += 15
+                        blueEvas += 100
                         duration = 2
-                        $('blueEvas').text(blueEvas)
+                        $('#blueEvas').text(blueEvas)
                     }
                 }
                 /////////// END OF IF CHAIN /////////////
@@ -1647,11 +1649,18 @@
                     $('#red_dom_duration').text(redDomDuration);
                 }
                 if (black.includes(curse)) {
-                    redCrit = .023;
-                    redStrength = 1.65
-                    redAcc -= 6;
-                    $('#redCrit').text(blueCrit)
-                    $('#redStr').text(blueStrength)
+                    if (blackTech == 'Black-Flash') {
+                        redCrit = .23;
+                        redStrength = 1.65
+                        redAcc -= 6;
+                    } else if (blackTech == 'Divergent-Fist') {
+                        redStun = .05
+                    } else {
+                        redEvas -= 100;
+                    }
+                    $('#redEvas').text(redEvas)
+                    $('#redCrit').text(redCrit)
+                    $('#redStr').text(redStrength)
                 }
 
             } else {
@@ -1718,9 +1727,16 @@
                     $('#blue_dom_duration').text(blueDomDuration);
                 }
                 if (black.includes(curse)) {
-                    blueCrit = .23
-                    blueStrength = 1.65
-                    blueAcc -= 6
+                    if (blackTech == 'Black-Flash') {
+                        blueCrit = .23;
+                        blueStrength = 1.65
+                        blueAcc -= 6;
+                    } else if (blackTech == 'Divergent-Fist') {
+                        blueStun = .05
+                    } else {
+                        blueEvas -= 100;
+                    }
+                    $('#blueEvas').text(blueEvas)
                     $('#blueCrit').text(blueCrit)
                     $('#blueStr').text(blueStrength)
                 }

@@ -2033,10 +2033,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 66,
         negative_energy: 35,
-        cursed_tech: 'Black-Flash - 13/22',
+        cursed_tech: 'Black-Flash - 16/26',
         curse_amount: 0,
         curse_duration: 2,
-        curse_cost: 13,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -2389,7 +2389,7 @@ const database = [
         buff2: 'Decrease Curse Recovery by 15',
         buff_acc: 50,
         buff2_acc: 50,
-        image: 'https://pbs.twimg.com/profile_images/1397430377996824577/QXzPZoyh_400x400.jpg'
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFsCy10eLB6HVbE4osYPs0UcWv-9QWOVxa_JzFHZsni5Haz7p7Uk-OKCeGA-8FmU2aHoM&usqp=CAU'
     },
     {
         name: 'Female Titan',
@@ -2627,7 +2627,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 55,
         negative_energy: 15,
-        cursed_tech: 'Black-Flash - 15/15',
+        cursed_tech: 'Black-Flash - 16/16',
         curse_amount: 0,
         curse_duration: 1,
         curse_cost: 15,
@@ -2662,7 +2662,7 @@ const database = [
         elm: fighter,
         hp: 3275,
         //PHYSICAL
-        attack: 297,
+        attack: 287,
         defense: 215,
         critical: .25,
         strength: 1.5,
@@ -2719,7 +2719,7 @@ const database = [
         buff2: 'Zero-Hand - Deal 1000 Damage',
         buff_acc: 30,
         buff2_acc: 0,
-        image: 'https://64.media.tumblr.com/b3add61800c26d58b7e6a7627c9b2c00/e1d0c57be4c47966-59/s1280x1920/960f28661bd237e20ba6b5a71a74a9d127f51e9f.jpg'
+        image: 'https://pbs.twimg.com/profile_images/618001800973520896/mTClxCoR_400x400.png'
     },
     ///////////////////// END ////////////////////////
 ]
