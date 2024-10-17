@@ -221,7 +221,7 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Third-Hand']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique']
             let luck = []
             // genjutsu
@@ -229,7 +229,7 @@
             let power = ["Dance-of-the-Serpent's-Bite"]
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap']
             let curseCost = []
             let curseDur = []
             let domPurity = []
@@ -1280,8 +1280,8 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", "Boogie-Woogie", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling'];
+        const evasion = ["Projection-Sorcery", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
@@ -1438,9 +1438,9 @@
                         alert(`Stun rate has increased to ${redStun}`)
                         duration = 6
                     } else {
-                        redEvas = 1000
+                        redEvas += 15
                         duration = 2
-                        $('redEvas').text('∞')
+                        $('redEvas').text(redEvas)
                     }
                 }
                 /////////// END OF IF CHAIN /////////////
@@ -1565,9 +1565,9 @@
                         alert(`Stun rate has increased to ${blueStun}`)
                         duration = 6
                     } else {
-                        blueEvas = 1000
+                        blueEvas += 15
                         duration = 2
-                        $('blueEvas').text('∞')
+                        $('blueEvas').text(blueEvas)
                     }
                 }
                 /////////// END OF IF CHAIN /////////////
