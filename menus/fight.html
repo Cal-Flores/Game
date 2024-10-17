@@ -205,7 +205,7 @@
             }
 
             //physical
-            let attack = ['Sand-Coffin', 'Future-Devil-Contract', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall', 'Ice-Fist']
+            let attack = ['Sand-Coffin', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall', 'Ice-Fist']
             let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun', 'Rasenshuriken']
             let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury']
             let Strength1 = ["Roar"]
@@ -1281,7 +1281,7 @@
             }
         }
         const evasion = ["Projection-Sorcery", "Flying-Rajin", 'Flash', 'Body-Manipulation'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil'];
         const strength = ["Muscular-Expansion", 'Polymorphic'];
@@ -1401,27 +1401,27 @@
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
                     if (weapon == 'Split Soul Katana') {
-                        redWeaponCrit = .90
+                        redWeaponCrit = .80
                         redWeaponCurse = 'Shield'
-                        redWeaponAmount = 35
+                        redWeaponAmount = 15
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
-                        redWeaponCrit = .55
+                        redWeaponCrit = .65
                         redWeaponCurse = 'Curse'
-                        redWeaponAmount = 12
+                        redWeaponAmount = 10
                     }
                     if (weapon == 'Chain of a Thousand Miles') {
-                        redWeaponCrit = .75
+                        redWeaponCrit = .65
                         redWeaponCurse = 'Magic'
-                        redWeaponAmount = 25
+                        redWeaponAmount = 10
                     }
                     if (weapon == 'Playful Cloud') {
-                        redWeaponCrit = .75
+                        redWeaponCrit = .65
                         redWeaponCurse = 'Attack'
-                        redWeaponAmount = 25
+                        redWeaponAmount = 10
                     }
-                    $('.redWeaponCurse').text(blueWeaponCurse)
-                    $('#redWeaponCrit').text(blueWeaponCrit)
+                    $('.redWeaponCurse').text(redWeaponCurse)
+                    $('#redWeaponCrit').text(redWeaponCrit)
                 }
                 if (black.includes(curse)) {
                     blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
@@ -1529,24 +1529,24 @@
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
                     if (weapon == 'Split Soul Katana') {
-                        blueWeaponCrit = .90
+                        blueWeaponCrit = .80
                         blueWeaponCurse = 'Shield'
-                        blueWeaponAmount = 25
+                        blueWeaponAmount = 15
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
-                        blueWeaponCrit = .55
+                        blueWeaponCrit = .65
                         blueWeaponCurse = 'Curse'
-                        blueWeaponAmount = 12
+                        blueWeaponAmount = 10
                     }
                     if (weapon == 'Chain of a Thousand Miles') {
-                        blueWeaponCrit = .75
+                        blueWeaponCrit = .65
                         blueWeaponCurse = 'Magic'
-                        blueWeaponAmount = 15
+                        blueWeaponAmount = 10
                     }
                     if (weapon == 'Playful Cloud') {
-                        blueWeaponCrit = .75
+                        blueWeaponCrit = .65
                         blueWeaponCurse = 'Attack'
-                        blueWeaponAmount = 15
+                        blueWeaponAmount = 10
                     }
                     $('.blueWeaponCurse').text(blueWeaponCurse)
                     $('#blueWeaponCrit').text(blueWeaponCrit)
@@ -2520,7 +2520,7 @@
 
                         // Unique behavior for Sage and Psychic for red attacker
                         if (redELM === 'Sage') {
-                            magicEffectiveness *= 1.35; // Increase damage by 50% against all elements
+                            magicEffectiveness *= 1.25; // Increase damage by 50% against all elements
                             critMessage += '🌗 SAGE 🌒'; // Add Sage message
 
                             // Reduce critical hit chance
@@ -2544,7 +2544,7 @@
 
                         // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.5; // Multiply by 1.5 for critical hit
+                            magicDamage *= 1.375; // Multiply by 1.5 for critical hit
                             critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
                         }
 
@@ -2578,7 +2578,7 @@
 
                         // Unique behavior for Sage and Psychic for blue attacker
                         if (blueELM === 'Sage') {
-                            magicEffectiveness *= 1.35; // Increase damage by 50% against all elements
+                            magicEffectiveness *= 1.25; // Increase damage by 50% against all elements
                             critMessage += '🌘 SAGE 🌓 '; // Add Sage message
 
                             // Reduce critical hit chance
@@ -2603,7 +2603,7 @@
 
                         // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.5; // Multiply by 1.5 for critical hit
+                            magicDamage *= 1.375; // Multiply by 1.5 for critical hit
                             critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
                         }
 

@@ -280,20 +280,20 @@ const database = [
         name: 'Mikasa',
         nen_type: 'Enhancer',
         element: 'Lightning',
-        elm: earth,
+        elm: lightning,
         hp: 2971,
         //PHYSICAL
-        attack: 228,
+        attack: 238,
         defense: 173,
         critical: .38,
         strength: 1.4,
         //MAGIC
-        elm_attack: 241,
+        elm_attack: 251,
         elm_defense: 126,
         elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
-        weapon: 245,
+        weapon: 255,
         shield: 169,
         curse_crit: .20,
         weaponCurse: 'Defense',
@@ -378,12 +378,12 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 30,
+        cursed_recovery: 35,
         negative_energy: 15,
         cursed_tech: '8th-Gate of death - Double Attack',
         curse_amount: 242,
         curse_duration: 100,
-        curse_cost: 36,
+        curse_cost: 33,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -403,9 +403,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Curse Recovery by 15',
-        buff2: 'Halve Genjutsu',
+        buff2: 'Decrease Evasion by 2',
         buff_acc: 50,
-        buff2_acc: 50,
+        buff2_acc: 40,
         image: 'https://i.pinimg.com/736x/25/80/3b/25803b13e5a6e1b7420070889dc5ecc6.jpg'
     },
     {
@@ -594,10 +594,10 @@ const database = [
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: 'Blood-Consumption - Recover 365 HP',
+        ninjutsu: 'Blood-Consumption - Recover 465 HP',
         nin_cost: 27,
         ninjutsu_pow: 0,
-        ninamount: 365,
+        ninamount: 465,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Evasion by 3',
@@ -725,10 +725,10 @@ const database = [
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Blood-Consumption - Recover 300 HP",
+        ninjutsu: "Blood-Consumption - Recover 400 HP",
         nin_cost: 26,
         ninjutsu_pow: 0,
-        ninamount: 300,
+        ninamount: 400,
         ultEnhance: true,
         //BUFFS
         buff: 'Triple Domain Purity',
@@ -907,7 +907,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 28,
         negative_energy: 34,
-        cursed_tech: 'Divergent-Fist - Add 50 to attack',
+        cursed_tech: 'Cursed-Blade - Add 50 to attack',
         curse_amount: 50,
         curse_duration: 6,
         curse_cost: 17,
@@ -1255,14 +1255,14 @@ const database = [
         nin2amount: .25,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Rising-Sun - Enhances Defense by 50%",
-        nin_cost: 20,
+        ninjutsu: "Rising-Sun - Enhances Defense by 20%",
+        nin_cost: 25,
         ninjutsu_pow: 245,
-        ninamount: .50,
+        ninamount: .20,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Shield by 25%',
-        buff2: 'Decrease Magic by 25%',
+        buff: 'Increase Shield by 20%',
+        buff2: 'Decrease Magic by 20%',
         buff_acc: 70,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
@@ -1321,10 +1321,10 @@ const database = [
         nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Heart-Mask - Recover 360 HP",
+        ninjutsu: "Heart-Mask - Recover 460 HP",
         nin_cost: 28,
         ninjutsu_pow: 0,
-        ninamount: 360,
+        ninamount: 460,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 3',
@@ -1456,7 +1456,7 @@ const database = [
         ninjutsu: "Eletric-Yo-Yo - Increase Stun",
         nin_cost: 12,
         ninjutsu_pow: 115,
-        ninamount: .06,
+        ninamount: .10,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Attack by 25%',
@@ -1566,8 +1566,8 @@ const database = [
         chakra_rec: 7,
         drain: 8,
         //CURSE
-        cursed_energy: 16,
-        cursed_recovery: 20,
+        cursed_energy: 0,
+        cursed_recovery: 25,
         negative_energy: 22,
         cursed_tech: 'Domain-Amplification Double Duration',
         curse_amount: 5,
@@ -1711,8 +1711,8 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Explosive Tags - Increase Potency by 10%',
-        ninJutsu2cost: 12,
+        ninjutsu2: 'Explosive Tags - Increase Potency by .04%',
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 145,
         nin2amount: .10,
         ninEnhance: true,
@@ -1835,8 +1835,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 65,
-        cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 8',
-        curse_amount: 8,
+        cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 5',
+        curse_amount: 5,
         curse_duration: 6,
         curse_cost: 18,
         //DOMAIN
@@ -1845,11 +1845,11 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Scissors - Increase Critical by 10%',
-        ninJutsu2cost: 10,
+        ninjutsu2: 'Scissors - Increase Critical',
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 175,
-        nin2amount: .10,
-        ninEnhance: false,
+        nin2amount: .30,
+        ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Stengthen Jajanken by 200 | Reduce Recovery by 2",
         nin_cost: 20,
@@ -1913,12 +1913,12 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Ripper-Cyclotron',
         ninJutsu2cost: 12,
-        ninJutsu2Dmg: 185,
+        ninJutsu2Dmg: 200,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Ripper-Cyclotron 15x Increase Cyclotron by 50%",
-        nin_cost: 30,
+        nin_cost: 34,
         ninjutsu_pow: 230,
         ninamount: .50,
         ultEnhance: true,
@@ -1978,7 +1978,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'SCREAM - Decrease Evasion by 2',
-        ninJutsu2cost: 14,
+        ninJutsu2cost: 24,
         ninJutsu2Dmg: 140,
         nin2amount: 2,
         ninEnhance: false,
@@ -2229,7 +2229,7 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 45,
+        cursed_recovery: 35,
         negative_energy: 22,
         cursed_tech: '8th-Gate - Increase Attack by 100',
         curse_amount: 100,
@@ -2245,7 +2245,7 @@ const database = [
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 200,
         nin2amount: .06,
-        ninEnhance: false,
+        ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Gate-Release - Increase Evasion by 1",
         nin_cost: 20,
@@ -2313,10 +2313,10 @@ const database = [
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Magical-Esthetician - Recover 355 HP",
+        ninjutsu: "Magical-Esthetician - Recover 455 HP",
         nin_cost: 30,
         ninjutsu_pow: 0,
-        ninamount: 355,
+        ninamount: 455,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 4',
@@ -2716,9 +2716,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Recovery by 2',
-        buff2: 'Zero-Hand - Deal 1000 Damage',
+        buff2: 'Zero-Hand - Deal 1500 Damage',
         buff_acc: 30,
-        buff2_acc: 0,
+        buff2_acc: 10,
         image: 'https://pbs.twimg.com/profile_images/618001800973520896/mTClxCoR_400x400.png'
     },
     ///////////////////// END ////////////////////////
