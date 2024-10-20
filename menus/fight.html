@@ -207,7 +207,7 @@
             //physical
             let attack = ['Sand-Coffin', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Water-Formation-Wall', 'Ice-Fist']
             let defense = ['Harden', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun', 'Rasenshuriken']
-            let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury']
+            let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury', 'Auto-Pilot-Mode']
             let Strength1 = ["Roar"]
             //Magic
             let magic = ['Pain-Packer', 'Purple-Arrow', 'Iaidō-Master', 'Chidori',]
@@ -215,7 +215,7 @@
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun']
             let efficieny = ['Thunder-Spear', 'Pain-Packer']
             // Cursed tool
-            let weapon = ['Knife']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Rotation', 'Ice-Harden']
             let witherPer = ['Kamaitachi']
             let witherAmount = ['Ratio-Technique']
@@ -227,14 +227,14 @@
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = ["Dance-of-the-Serpent's-Bite"]
-            let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
+            let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo', 'Black-Voice-Control']
             // curse tech
             let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap']
             let curseCost = []
             let curseDur = []
             let domPurity = []
-            let domDur = ['Sand-Mauseliem', 'Dance']
-            let domLethal = ['C4']
+            let domDur = ['Sand-Mauseliem', 'Dance', 'Tsukoyomi']
+            let domLethal = ['C4', 'Hypnotic-Spell']
             let domCost = []
             // ninjutsu
             let ninCosted = ['Seven-Spectrum']
@@ -1771,6 +1771,17 @@
                 roundCounters.blue[statusEffect] = duration; // Set duration for this effect
                 $('#blueStatus').show().text(blueStatus.join(', '));
             }
+            if (statusEffect == 'Izanagi') {
+                const randomValue = Math.random();
+                let chance = randomValue < 0.5;
+                if (chance) {
+                    alert("Reality will be rewritten...");
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                } else {
+                    alert("Failure!");
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                }
+            }
         }
         function endRound() {
             // Update round counters for each player's status effects
@@ -2680,7 +2691,7 @@
                 if (isHit) {
                     alert('"You\'re Already Under My GenJutsu.."');
                     let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
-                    let statusEffect = prompt("Choose a status effect to apply: Darkness (6), Silence (6), Paralysis (6), Zombie (6), Ultima (15), Flare(15), Tsukuyomi (15), Kotoamatsukami (18)");
+                    let statusEffect = prompt("Choose a status effect to apply: Darkness (6), Silence (6), Zombie (6), Ultima (15), Flare(15), Tsukuyomi (15), Izanagi (15), Kotoamatsukami (18)");
                     // Determine the current chakra variable and decrement it
                     if (attacker === 'red') {
                         // Check if Red has enough chakra for the attack
@@ -2696,6 +2707,8 @@
                             requiredChakra = 15;
                         } else if (statusEffect === 'Kotoamatsukami') {
                             requiredChakra = 18;
+                        } else if (statusEffect === 'Izanagi') {
+                            requiredChakra = 15;
                         }
 
                         if (currRedChakra < requiredChakra) {
@@ -2723,6 +2736,8 @@
                             requiredChakra = 25;
                         } else if (statusEffect === 'Kotoamatsukami') {
                             requiredChakra = 25;
+                        } else if (statusEffect === 'Izanagi') {
+                            requiredChakra = 15;
                         }
 
                         if (currBlueChakra < requiredChakra) {

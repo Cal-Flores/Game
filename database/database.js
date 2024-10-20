@@ -2722,4 +2722,203 @@ const database = [
         image: 'https://pbs.twimg.com/profile_images/618001800973520896/mTClxCoR_400x400.png'
     },
     ///////////////////// END ////////////////////////
+    ///////////////////// GENJUTSU TYPE //////////////
+    {
+        name: 'Anbu Itachi',
+        nen_type: 'Manipulator',
+        element: 'Fire',
+        elm: fire,
+        hp: 3132,
+        //PHYSICAL
+        attack: 154,
+        defense: 167,
+        critical: .18,
+        strength: 1.3,
+        //MAGIC
+        elm_attack: 180,
+        elm_defense: 175,
+        elm_efficiency: 1.2,
+        potency: .40,
+        //WEAPON
+        weapon: 221,
+        shield: 207,
+        curse_crit: .15,
+        weaponCurse: 'Willpower',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 7,
+        luck: 4,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 10,
+        gen_power: 100,
+        willpower: 7,
+        chakra: 0,
+        chakra_rec: 12,
+        drain: 6,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 15,
+        negative_energy: 30,
+        cursed_tech: 'Black-Bird-Manipulation - Increase Genjutsu Power by 50',
+        curse_amount: 50,
+        curse_duration: 6,
+        curse_cost: 20,
+        //DOMAIN
+        dom_purity: 6,
+        dom_lethal: 150,
+        dom_duration: 4,
+        dom_cost: 25,
+        //NINJUTSU
+        ninjutsu2: 'Totsuka-Blade - Increase Weapon by 15%',
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 190,
+        nin2amount: .15,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Tsukoyomi - Increase Duration by 1",
+        nin_cost: 26,
+        ninjutsu_pow: 0,
+        ninamount: 1,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Defense by 20%',
+        buff2: 'Decrease Weapon by 15%',
+        buff_acc: 70,
+        buff2_acc: 70,
+        image: 'https://fbi.cults3d.com/uploaders/18749279/illustration-file/1861899f-985b-4d5c-b20c-7963bab4409a/tumblr_40988e0d72ec3b0ef605d977222b3828_e2a7cb11_1280.jpg'
+    },
+    {
+        name: 'Illumi',
+        nen_type: 'Manipulator',
+        element: 'Dark',
+        elm: dark,
+        hp: 3162,
+        //PHYSICAL
+        attack: 129,
+        defense: 137,
+        critical: .20,
+        strength: 1.1,
+        //MAGIC
+        elm_attack: 153,
+        elm_defense: 234,
+        elm_efficiency: 1.9,
+        potency: .12,
+        //WEAPON
+        weapon: 212,
+        shield: 168,
+        curse_crit: .35,
+        weaponCurse: 'Willpower',
+        weapon_amount: 1,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 6,
+        luck: 3,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 10,
+        gen_power: 78,
+        willpower: 6,
+        chakra: 0,
+        chakra_rec: 12,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 55,
+        negative_energy: 30,
+        cursed_tech: 'Brain-Manipulation - Decrease any stat by 17%',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 16,
+        //DOMAIN
+        dom_purity: 5,
+        dom_lethal: 35,
+        dom_duration: 9,
+        dom_cost: 27,
+        //NINJUTSU
+        ninjutsu2: 'Body-Alteration - Increase Weapon by 8%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 125,
+        nin2amount: .08,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Hypnotic-Spell - Increase Lethal by 15",
+        nin_cost: 19,
+        ninjutsu_pow: 0,
+        ninamount: 15,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Purity by 2',
+        buff2: 'Decrease Critical by 50%',
+        buff_acc: 65,
+        buff2_acc: 60,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/72/Illumi_Zoldyck_HCE_Portrait.png/revision/latest/scale-to-width/360?cb=20181227022223'
+    },
+    {
+        name: 'Shalnark',
+        nen_type: 'Manipulator',
+        element: 'Grass',
+        elm: grass,
+        hp: 2928,
+        //PHYSICAL
+        attack: 183,
+        defense: 198,
+        critical: .15,
+        strength: 2,
+        //MAGIC
+        elm_attack: 185,
+        elm_defense: 166,
+        elm_efficiency: 1.4,
+        potency: .20,
+        //WEAPON
+        weapon: 124,
+        shield: 229,
+        curse_crit: .18,
+        weaponCurse: 'Willpower',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 4,
+        luck: 7,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 9,
+        gen_power: 68,
+        willpower: 9,
+        chakra: 0,
+        chakra_rec: 8,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 45,
+        negative_energy: 24,
+        cursed_tech: 'Brain-Manipulation - Decrease Any Stat by 15%',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 16,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Black-Voice-Control - Decrease Willpower by 1',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 0,
+        nin2amount: 1,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Auto-Pilot-Mode - Increase Critical to 70%",
+        nin_cost: 60,
+        ninjutsu_pow: 500,
+        ninamount: .55,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Double Attack',
+        buff2: 'Decrease Accuracy by 2',
+        buff_acc: 45,
+        buff2_acc: 50,
+        image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
+    },
 ]
