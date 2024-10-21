@@ -57,13 +57,19 @@
         </header>
         <main id='alls'>
             <div id="all_fight_conttt"></div>
+            <div id="name"></div>
         </main>
         <script>
             html = ''
+            name = ''
+            count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             for (let player of databaseArr) {
-                console.log(player.name)
+                name += `${player.name}, `
+                count += 1
             }
+            console.log(count)
+            $('#name').text(name)
             for (let player of databaseArr) {
                 html += `
             <div class='all_fight_card'>
