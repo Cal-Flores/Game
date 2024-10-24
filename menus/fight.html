@@ -207,22 +207,22 @@
             //physical
             let attack = ['Sand-Coffin', 'C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode']
             let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun', 'Rasenshuriken', 'Unblockable-Drumming-Beat']
-            let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury']
+            let critical = ['Awakening', 'Explosive Tags', 'Scissors', 'Fury', 'Terpsichora']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode']
             //Magic
-            let magic = ['Purple-Arrow', 'Iaidō-Master', 'Chidori',]
-            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex']
-            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun']
+            let magic = ['Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt']
+            let magicDef = ['Blood-Amaterasu', 'Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb']
+            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe']
             // Cursed tool
-            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Rotation', 'Ice-Harden', 'Water-Formation-Wall']
             let witherPer = ['Kamaitachi']
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Harden']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Third-Hand']
-            let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Third-Hand', 'Speed-of-Lightning', 'Cystal-Claws']
+            let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -238,11 +238,11 @@
             let domCost = []
             // ninjutsu
             let ninCosted = ['Seven-Spectrum']
-            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere']
+            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri']
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane']
             let trade = ['Jajanken']
@@ -1238,17 +1238,25 @@
 
 
         function triggerTsukuyomiExplosion(defender) {
-            // Define the damage for Tsukuyomi explosion
+            const weightedNumbers = [
+                5,
+                6, 6,
+                7, 7, 7,
+                8, 8,
+                9
+            ];
+            const randomIndex = Math.floor(Math.random() * weightedNumbers.length);
+            let tsuMulti = weightedNumbers[randomIndex];
             if (defender === 'red') {
                 let power = parseInt($('#blueChakra').text(), 10)
-                let explosionDamage = power * 5;
+                let explosionDamage = power * tsuMulti;
                 let currRedHp = parseInt($('#redHP').text(), 10);
                 $('#redHP').text(currRedHp - explosionDamage);
                 chargeCurse('red', explosionDamage)
                 alert('Tsukuyomi explodes! Red takes ' + explosionDamage + ' damage.');
             } else if (defender === 'blue') {
                 let power = parseInt($('#redChakra').text(), 10)
-                let explosionDamage = power * 5;
+                let explosionDamage = power * tsuMulti;
                 let currBlueHp = parseInt($('#blueHP').text(), 10);
                 chargeCurse('blue', explosionDamage)
                 $('#blueHP').text(currBlueHp - explosionDamage);
@@ -1285,7 +1293,7 @@
         const defense = ["Reverse", 'Veil', 'Simple-Domain'];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic'];
-        const potency = ["Disaster-Flames", "Hairpin", "Resonance"];
+        const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier", 'Rage-Blast'];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
@@ -1805,7 +1813,6 @@
                     buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                 } else {
                     alert("Failure!");
-                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                 }
             }
         }
@@ -2730,15 +2737,15 @@
                         let requiredChakra = 0;
 
                         if (light.includes(statusEffect)) {
-                            requiredChakra = 8;
+                            requiredChakra = 6;
                         } else if (statusEffect === 'Flare') {
-                            requiredChakra = 12;
-                        } else if (statusEffect === 'Ultima') {
-                            requiredChakra = 12;
-                        } else if (statusEffect === 'Tsukuyomi') {
                             requiredChakra = 15;
+                        } else if (statusEffect === 'Ultima') {
+                            requiredChakra = 15;
+                        } else if (statusEffect === 'Tsukuyomi') {
+                            requiredChakra = 20;
                         } else if (statusEffect === 'Kotoamatsukami') {
-                            requiredChakra = 18;
+                            requiredChakra = 25;
                         } else if (statusEffect === 'Izanagi') {
                             requiredChakra = 15;
                         }
@@ -2761,11 +2768,11 @@
                         if (light.includes(statusEffect)) {
                             requiredChakra = 6;
                         } else if (statusEffect === 'Flare') {
-                            requiredChakra = 12;
+                            requiredChakra = 15;
                         } else if (statusEffect === 'Ultima') {
-                            requiredChakra = 12;
+                            requiredChakra = 15;
                         } else if (statusEffect === 'Tsukuyomi') {
-                            requiredChakra = 25;
+                            requiredChakra = 20;
                         } else if (statusEffect === 'Kotoamatsukami') {
                             requiredChakra = 25;
                         } else if (statusEffect === 'Izanagi') {
