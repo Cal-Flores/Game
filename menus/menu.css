@@ -200,6 +200,18 @@ body {
     width: 32%;
 }
 
+.hi1 {
+    font-size: 20px;
+    color: #DEBCA1;
+    font-weight: normal;
+}
+
+.hi2 {
+    font-size: 20px;
+    color: #DEBCA1;
+    font-weight: normal;
+}
+
 .fight_time_card {
     width: 100%;
     border: 4px double black;
@@ -212,7 +224,7 @@ body {
     margin: 1%;
     line-height: 10px;
     padding-bottom: 3%;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .chart {

@@ -35,6 +35,7 @@
     margin: 1%;
     padding: 2%;
     background-color: #2A2E35;
+    overflow: scroll;
 }
 
 #all_top {

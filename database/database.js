@@ -17,7 +17,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Ghost',
         elm: ghost,
-        hp: 3500,
+        hp: 3472,
         //PHYSICAL
         attack: 220,
         defense: 200,
@@ -36,7 +36,7 @@ const database = [
         weapon_amount: 0,
         //SPEED / LUCK
         accuracy: 7,
-        evasion: 9,
+        evasion: 8,
         luck: 3,
         stun: .06,
         //GENJUTSU
@@ -60,13 +60,13 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Increase Defense by 15%',
+        ninjutsu2: 'Heavenly-Restriction - Increase Defense by 15%',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 180,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Increase Magic Defense by 20%",
+        ninjutsu: "Heavenly-Weeping - Increase Magic Defense by 20%",
         nin_cost: 15,
         ninjutsu_pow: 215,
         ninamount: .20,
@@ -206,8 +206,8 @@ const database = [
         //BUFFS
         buff: 'Double Magic Attack',
         buff2: 'Halve Potency',
-        buff_acc: 55,
-        buff2_acc: 45,
+        buff_acc: 65,
+        buff2_acc: 55,
         image: 'https://64.media.tumblr.com/11d79e538d170ebc91403fa7825be14a/ac5ce7753d2dffd1-7d/s1280x1920/5e3752a4fc826febaef45197801b139f48d244de.jpg'
     },
     {
@@ -227,7 +227,7 @@ const database = [
         elm_efficiency: .12,
         potency: .16,
         //WEAPON
-        weapon: 270,
+        weapon: 272,
         shield: 164,
         curse_crit: .17,
         weaponCurse: 'Purity',
@@ -250,13 +250,13 @@ const database = [
         negative_energy: 18,
         cursed_tech: 'Blade of the Right Hand - 90% Critical rate',
         curse_amount: .55,
-        curse_duration: 8,
-        curse_cost: 21,
+        curse_duration: 6,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 85,
-        dom_duration: 6,
-        dom_cost: 34,
+        dom_duration: 7,
+        dom_cost: 22,
         //NINJUTSU
         ninjutsu2: 'En-Strike - Decrease Attack by 5%',
         ninJutsu2cost: 15,
@@ -272,7 +272,7 @@ const database = [
         //BUFFS
         buff: 'Double Domain Purity',
         buff2: 'Decrease Will Power by 20%',
-        buff_acc: 60,
+        buff_acc: 70,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/46/HxH2011_EP50_Nobunaga_Portrait.png/revision/latest?cb=20230122183803'
     },
@@ -425,7 +425,7 @@ const database = [
         elm_efficiency: 1.2,
         potency: .13,
         //WEAPON
-        weapon: 252,
+        weapon: 236,
         shield: 189,
         curse_crit: 0.10,
         weaponCurse: 'Accuracy',
@@ -437,7 +437,7 @@ const database = [
         stun: .04,
         //GENJUTSU
         genjutsu: 9,
-        gen_power: 65,
+        gen_power: 68,
         willpower: 8,
         chakra: 0,
         chakra_rec: 6,
@@ -446,10 +446,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 17,
         negative_energy: 23,
-        cursed_tech: 'Reverse-Flow-Recovery - Double Chakra Recovery',
-        curse_amount: 6,
+        cursed_tech: 'Reverse-Flow-Recovery - Increase Chakra Recovery',
+        curse_amount: 4,
         curse_duration: 6,
-        curse_cost: 12,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -500,7 +500,7 @@ const database = [
         accuracy: 7,
         evasion: 5,
         luck: 8,
-        stun: .18,
+        stun: .20,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 50,
@@ -525,11 +525,11 @@ const database = [
         ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 10%',
         ninJutsu2cost: 13,
         ninJutsu2Dmg: 170,
-        nin2amount: .15,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "New-Shadow-Style",
-        nin_cost: 24,
+        nin_cost: 20,
         ninjutsu_pow: 330,
         ninamount: 0,
         ultEnhance: false,
@@ -557,7 +557,7 @@ const database = [
         elm_efficiency: 1.2,
         potency: 0.12,
         //WEAPON
-        weapon: 258,
+        weapon: 263,
         shield: 242,
         curse_crit: 0.24,
         weaponCurse: 'Attack',
@@ -590,7 +590,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Sword-Draw-Dash - Decrease Evasion by 1',
         ninJutsu2cost: 18,
-        ninJutsu2Dmg: 140,
+        ninJutsu2Dmg: 180,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
@@ -600,10 +600,10 @@ const database = [
         ninamount: 465,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Evasion by 3',
-        buff2: 'Decrease Defense by 40%',
-        buff_acc: 40,
-        buff2_acc: 30,
+        buff: 'Increase Accuracy by 3',
+        buff2: 'Increase Evasion by 3',
+        buff_acc: 50,
+        buff2_acc: 50,
         image: 'https://i.pinimg.com/736x/b8/d4/38/b8d438d6a6db0c7b2f6080558e3d993f.jpg'
     },
     {
@@ -623,7 +623,7 @@ const database = [
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
-        weapon: 247,
+        weapon: 257,
         shield: 224,
         curse_crit: .14,
         weaponCurse: 'Recovery',
@@ -644,30 +644,30 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 10,
         negative_energy: 10,
-        cursed_tech: "Falling-Blossom-Emotion",
+        cursed_tech: "Hollow-Wicker-Basket - Immune to Genjutsu and Stat effects",
         curse_amount: 8,
         curse_duration: 6,
-        curse_cost: 12,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Playful-Cloud - Increase Attack by 6%',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 160,
-        nin2amount: .06,
+        ninjutsu2: 'Playful-Cloud - Increase Attack by 12%',
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 175,
+        nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
-        nin_cost: 20,
-        ninjutsu_pow: 180,
+        nin_cost: 22,
+        ninjutsu_pow: 315,
         ninamount: .40,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Chakra Recovery by 2',
-        buff2: 'Decrease Attack by 25%',
+        buff2: 'Decrease Attack by 20%',
         buff_acc: 70,
         buff2_acc: 60,
         image: 'https://thicc.mywaifulist.moe/waifus/26112/2ce0a9ba09c15a29b46fbda0ba73c91ce081e3e31b9d5e4186791980fa31fe4c_thumb.png'
@@ -732,7 +732,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Triple Domain Purity',
-        buff2: 'Decrease Luck by 2',
+        buff2: 'Increase Accuracy by 2',
         buff_acc: 50,
         buff2_acc: 65,
         image: 'https://i.pinimg.com/736x/c4/87/23/c48723566f7392d5218218a17171294b.jpg'
@@ -820,7 +820,7 @@ const database = [
         elm_efficiency: 1.2,
         potency: .10,
         //WEAPON
-        weapon: 255,
+        weapon: 265,
         shield: 234,
         curse_crit: 0.12,
         weaponCurse: 'Accuracy',
@@ -886,7 +886,7 @@ const database = [
         elm_efficiency: 1.2,
         potency: .10,
         //WEAPON
-        weapon: 272,
+        weapon: 270,
         shield: 198,
         curse_crit: .27,
         weaponCurse: 'Shield',
@@ -895,7 +895,7 @@ const database = [
         accuracy: 7,
         evasion: 7,
         luck: 7,
-        stun: .07,
+        stun: .11,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 15,
@@ -907,18 +907,18 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 28,
         negative_energy: 34,
-        cursed_tech: 'Cursed-Blade - Add 50 to attack',
-        curse_amount: 50,
+        cursed_tech: 'Cursed-Blade - Add 100 to attack',
+        curse_amount: 100,
         curse_duration: 6,
         curse_cost: 17,
         //DOMAIN
         dom_purity: 9,
-        dom_lethal: 40,
-        dom_duration: 8,
-        dom_cost: 27,
+        dom_lethal: 77,
+        dom_duration: 7,
+        dom_cost: 21,
         //NINJUTSU
         ninjutsu2: 'Future-Devil Contract - Increase Evasion by 1',
-        ninJutsu2cost: 17,
+        ninJutsu2cost: 24,
         ninJutsu2Dmg: 177,
         nin2amount: 1,
         ninEnhance: true,
@@ -932,7 +932,7 @@ const database = [
         buff: 'Curse Devil Contract II',
         buff2: 'Curse Devil Contract III - Erase 1 stat',
         buff_acc: 77,
-        buff2_acc: 57,
+        buff2_acc: 77,
         image: 'https://i.pinimg.com/736x/a8/26/45/a826458e9ec3b3e63687e831a0841546.jpg'
     },
     //// END /////
@@ -1017,8 +1017,8 @@ const database = [
         //MAGIC
         elm_attack: 243,
         elm_defense: 189,
-        elm_efficiency: 1.8,
-        potency: 0.34,
+        elm_efficiency: 1.6,
+        potency: 0.28,
         //WEAPON
         weapon: 226,
         shield: 163,
@@ -1042,7 +1042,7 @@ const database = [
         cursed_recovery: 30,
         negative_energy: 32,
         cursed_tech: 'Body-Manipulation - Double Evasion',
-        curse_amount: 5,
+        curse_amount: 6,
         curse_duration: 6,
         curse_cost: 14,
         //DOMAIN
@@ -1063,10 +1063,10 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Shield by 20%',
-        buff2: 'Decrease Attack by 20%',
+        buff: 'Increase Shield by 15%',
+        buff2: 'Decrease Attack by 10%',
         buff_acc: 65,
-        buff2_acc: 70,
+        buff2_acc: 80,
         image: 'https://static.wikia.nocookie.net/naruto/images/5/5e/Suigetsu_H%C5%8Dzuki_Parte_II_Anime.png/revision/latest?cb=20130308180649&path-prefix=es'
     },
     {
@@ -1107,8 +1107,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 21,
         negative_energy: 20,
-        cursed_tech: 'Black-Bird-Manipulation - Increase Gen-Power by 100',
-        curse_amount: 100,
+        cursed_tech: 'Black-Bird-Manipulation - Increase Gen-Power by 50',
+        curse_amount: 50,
         curse_duration: 10,
         curse_cost: 25,
         //DOMAIN
@@ -1225,7 +1225,7 @@ const database = [
         weapon_amount: 20,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 9,
+        evasion: 8,
         luck: 4,
         stun: .04,
         //GENJUTSU
@@ -1246,8 +1246,8 @@ const database = [
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 90,
-        dom_duration: 4,
-        dom_cost: 25,
+        dom_duration: 6,
+        dom_cost: 18,
         //NINJUTSU
         ninjutsu2: 'Pain-Packer - Enhances Efficiency by 25%',
         ninJutsu2cost: 10,
@@ -1279,7 +1279,7 @@ const database = [
         critical: .23,
         strength: 2,
         //MAGIC
-        elm_attack: 240,
+        elm_attack: 250,
         elm_defense: 166,
         elm_efficiency: 1,
         potency: .15,
@@ -1329,7 +1329,7 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 3',
         buff2: 'Decrease Genjutsu by 2',
-        buff_acc: 40,
+        buff_acc: 50,
         buff2_acc: 70,
         image: 'https://i.pinimg.com/236x/9d/40/38/9d4038be829e441d494f3f06a9c22f2c.jpg'
     },
@@ -1393,7 +1393,7 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Add 2 to Domain Purity',
+        buff: 'Increase Accuracy by 2',
         buff2: 'Decrease Weapon by 25%',
         buff_acc: 65,
         buff2_acc: 75,
@@ -1460,7 +1460,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Attack by 25%',
-        buff2: 'Decrease Effiecieny by 80%',
+        buff2: 'Cancel Effiecieny by 80%',
         buff_acc: 70,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/b/bd/HxH2011_EP147_Killua_Portrait.png/revision/latest?cb=20230904181904'
@@ -1473,11 +1473,11 @@ const database = [
         hp: 3318,
         //PHYSICAL
         attack: 128,
-        defense: 265,
+        defense: 256,
         critical: .05,
         strength: 1,
         //MAGIC
-        elm_attack: 247,
+        elm_attack: 254,
         elm_defense: 252,
         elm_efficiency: 1.1,
         potency: .25,
@@ -1503,10 +1503,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 22,
         negative_energy: 20,
-        cursed_tech: 'Granite-Blast Deal 250 Damage',
+        cursed_tech: 'Granite-Blast Deal 300 Damage',
         curse_amount: 250,
         curse_duration: 1,
-        curse_cost: 20,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
@@ -1514,21 +1514,21 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Nen-Bullets - Lower Magic Defense by 10%',
-        ninJutsu2cost: 14,
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 175,
         nin2amount: .10,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Double-Machine-Gun - Increase Potency by 25%",
-        nin_cost: 18,
+        nin_cost: 15,
         ninjutsu_pow: 235,
         ninamount: .25,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Weapon by 30%',
         buff2: 'Decrease Shield by 30%',
-        buff_acc: 70,
-        buff2_acc: 65,
+        buff_acc: 75,
+        buff2_acc: 75,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251'
     },
     {
@@ -1543,7 +1543,7 @@ const database = [
         critical: .10,
         strength: 1.1,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 252,
         elm_defense: 204,
         elm_efficiency: 1.8,
         potency: .18,
@@ -1574,7 +1574,7 @@ const database = [
         curse_duration: 100,
         curse_cost: 22,
         //DOMAIN
-        dom_purity: 5,
+        dom_purity: 7,
         dom_lethal: 85,
         dom_duration: 5,
         dom_cost: 21,
@@ -1591,7 +1591,7 @@ const database = [
         ninamount: 1,
         ultEnhance: false,
         //BUFFS
-        buff: 'Stun plus .06',
+        buff: 'Increase Curse Recovery by 15',
         buff2: 'Decrease Purity by 2',
         buff_acc: 65,
         buff2_acc: 65,
@@ -1609,7 +1609,7 @@ const database = [
         critical: .10,
         strength: 1.3,
         //MAGIC
-        elm_attack: 239,
+        elm_attack: 249,
         elm_defense: 238,
         elm_efficiency: 1.5,
         potency: .35,
@@ -1635,10 +1635,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 25,
         negative_energy: 15,
-        cursed_tech: 'Seven-Spectrum - Minus 6 Cost Ninjutsu',
-        curse_amount: 6,
+        cursed_tech: 'Seven-Spectrum - Increase Magic by 55',
+        curse_amount: 55,
         curse_duration: 6,
-        curse_cost: 15,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 1,
         dom_lethal: 0,
@@ -1652,14 +1652,14 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Orange-Arrow - Increase Evasion by 1",
-        nin_cost: 18,
-        ninjutsu_pow: 145,
+        nin_cost: 22,
+        ninjutsu_pow: 185,
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Stun rate plus .08',
-        buff2: 'Decrease Accuracy by 2',
-        buff_acc: 70,
+        buff: 'Stun rate plus .25',
+        buff2: 'Decrease Willpower by 4',
+        buff_acc: 60,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/0/0a/Pokkle_HxH_11.PNG/revision/latest?cb=20120323055002'
     },
@@ -1692,7 +1692,7 @@ const database = [
         stun: .06,
         //GENJUTSU
         genjutsu: 8,
-        gen_power: 70,
+        gen_power: 65,
         willpower: 5,
         chakra: 0,
         chakra_rec: 8,
@@ -1701,30 +1701,30 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 65,
-        cursed_tech: 'Falling-Blossom-Emotion - 8 off chakra cost',
-        curse_amount: 8,
+        cursed_tech: 'Albatross - Increase Magic by 60',
+        curse_amount: 60,
         curse_duration: 8,
-        curse_cost: 16,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Explosive Tags - Increase Potency by .04%',
+        ninjutsu2: 'Explosive Tags - Increase Potency by .20%',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 145,
-        nin2amount: .10,
+        nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Dance-of-the-Serpent's-Bite - Increase Power by 30%",
+        ninjutsu: "Dance-of-the-Serpent's-Bite - Increase Power by 20%",
         nin_cost: 24,
         ninjutsu_pow: 300,
-        ninamount: .30,
+        ninamount: .20,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Weapon by 30%',
-        buff2: 'Decrease Magic by 30%',
+        buff2: 'Decrease Magic by 10%',
         buff_acc: 70,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/b/bb/HxH2011_EP97_Kalluto_Close_Up.png/revision/latest?cb=20221123201432'
@@ -1741,7 +1741,7 @@ const database = [
         critical: .28,
         strength: 1.4,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 256,
         elm_defense: 193,
         elm_efficiency: 1.75,
         potency: 0.30,
@@ -1777,10 +1777,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Kamaitachi - Increase Weapon Critical by 20%',
+        ninjutsu2: 'Kamaitachi - Increase Weapon by 15%',
         ninJutsu2cost: 18,
-        ninJutsu2Dmg: 165,
-        nin2amount: .20,
+        ninJutsu2Dmg: 185,
+        nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: 'Kamikaze  - Traps Enemy in Wind-Vortex for 1 turn',
@@ -1790,7 +1790,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Magic Attack by 8%',
-        buff2: 'Decrease Attack by 20%',
+        buff2: 'Decrease Attack by 15%',
         buff_acc: 65,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
@@ -1820,10 +1820,10 @@ const database = [
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 6,
         evasion: 6,
         luck: 8,
-        stun: .08,
+        stun: .10,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 15,
@@ -1845,21 +1845,21 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Scissors - Increase Critical',
+        ninjutsu2: 'Scissors - Increase Strength by .20',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 175,
-        nin2amount: .30,
+        nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Stengthen Jajanken by 200 | Reduce Recovery by 2",
         nin_cost: 30,
-        ninjutsu_pow: 300,
+        ninjutsu_pow: 350,
         ninamount: 0,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Willpower by 4',
+        buff: 'Increase Reovery by 1',
         buff2: 'Decrease Defense by 10%',
-        buff_acc: 50,
+        buff_acc: 65,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/3/3e/HxH2011_EP147_Gon_Portrait.png/revision/latest?cb=20230904181801'
     },
@@ -1895,16 +1895,16 @@ const database = [
         gen_power: 10,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 6,
         drain: 2,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 20,
         negative_energy: 12,
-        cursed_tech: 'Reverse-Flow-Recovery Increace Recovery by 5',
-        curse_amount: 5,
+        cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 4',
+        curse_amount: 4,
         curse_duration: 6,
-        curse_cost: 16,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -1937,7 +1937,7 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 280,
-        defense: 262,
+        defense: 275,
         critical: .18,
         strength: 2,
         //MAGIC
@@ -1990,9 +1990,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Double Critical',
-        buff2: 'Decrease GenPower by 20%',
+        buff2: 'Increase Accuracy by 2',
         buff_acc: 50,
-        buff2_acc: 50,
+        buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
     {
@@ -2002,7 +2002,7 @@ const database = [
         elm: ghost,
         hp: 3396,
         //PHYSICAL
-        attack: 257,
+        attack: 255,
         defense: 246,
         critical: .23,
         strength: 1.65,
@@ -2018,7 +2018,7 @@ const database = [
         weaponCurse: 'Critical',
         weapon_amount: .10,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 6,
         evasion: 6,
         luck: 7,
         stun: .07,
@@ -2033,10 +2033,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 50,
         negative_energy: 35,
-        cursed_tech: 'Black-Flash - 16/26',
+        cursed_tech: 'Black-Flash - 18/26',
         curse_amount: 0,
         curse_duration: 2,
-        curse_cost: 16,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -2070,8 +2070,8 @@ const database = [
         //PHYSICAL
         attack: 231,
         defense: 188,
-        critical: .60,
-        strength: 1.2,
+        critical: .66,
+        strength: 1.25,
         //MAGIC
         elm_attack: 218,
         elm_defense: 196,
@@ -2107,7 +2107,7 @@ const database = [
         dom_purity: 6,
         dom_lethal: 50,
         dom_duration: 6,
-        dom_cost: 30,
+        dom_cost: 20,
         //NINJUTSU
         ninjutsu2: 'C3 - Increase Attack by 5%',
         ninJutsu2cost: 15,
@@ -2134,9 +2134,9 @@ const database = [
         elm: fairy,
         hp: 2875,
         //PHYSICAL
-        attack: 231,
+        attack: 236,
         defense: 174,
-        critical: .65,
+        critical: .68,
         strength: 1.2,
         //MAGIC
         elm_attack: 165,
@@ -2168,12 +2168,12 @@ const database = [
         cursed_tech: 'Domain-Amplification Increase Domain Duration by 4',
         curse_amount: 4,
         curse_duration: 100,
-        curse_cost: 18,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 85,
         dom_duration: 8,
-        dom_cost: 26,
+        dom_cost: 23,
         //NINJUTSU
         ninjutsu2: '8-Trigram-64-Palms - Increase Stun by 8%',
         ninJutsu2cost: 12,
@@ -2181,10 +2181,10 @@ const database = [
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Rotation - Increase Sheild by 15%",
+        ninjutsu: "Rotation - Increase Purity by 2",
         nin_cost: 16,
         ninjutsu_pow: 200,
-        ninamount: .15,
+        ninamount: 2,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 5',
@@ -2195,12 +2195,12 @@ const database = [
     },
     {
         name: 'Rock Lee',
-        nen_type: 'Engancer',
+        nen_type: 'Enhancer',
         element: 'Earth',
         elm: earth,
         hp: 2872,
         //PHYSICAL
-        attack: 238,
+        attack: 244,
         defense: 194,
         critical: .24,
         strength: 1.7,
@@ -2248,7 +2248,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Gate-Release - Increase Evasion by 1",
-        nin_cost: 16,
+        nin_cost: 26,
         ninjutsu_pow: 0,
         ninamount: 1,
         ultEnhance: true,
@@ -2373,10 +2373,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Scissors - Increase Critical by .05',
+        ninjutsu2: 'Scissors - Increase Strength by .30',
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 150,
-        nin2amount: .05,
+        nin2amount: .30,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Increase Jajanken by 200 | Reduce Recovery by 2",
@@ -2439,10 +2439,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Ice-Fist - Increase Attack by 8%',
+        ninjutsu2: 'Ice-Fist - Increase Attack by 12%',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 170,
-        nin2amount: .08,
+        nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Ice-Harden - Increase Shield 15%",
@@ -2628,10 +2628,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 15,
-        cursed_tech: 'Black-Flash - 16/16',
+        cursed_tech: 'Black-Flash - 18/18',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 15,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -2651,9 +2651,9 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
-        buff2: 'Decrease Magic by 10%',
+        buff2: 'Decrease Magic by 15%',
         buff_acc: 50,
-        buff2_acc: 45,
+        buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/ef/Aoi_Todo.jpg/revision/latest?cb=20210904074234&path-prefix=pl'
     },
     {
@@ -2756,7 +2756,7 @@ const database = [
         gen_power: 100,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 14,
+        chakra_rec: 10,
         drain: 6,
         //CURSE
         cursed_energy: 0,
@@ -2822,21 +2822,21 @@ const database = [
         gen_power: 88,
         willpower: 6,
         chakra: 0,
-        chakra_rec: 13,
+        chakra_rec: 10,
         drain: 4,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 55,
         negative_energy: 30,
-        cursed_tech: 'Brain-Manipulation - Decrease any stat by 17%',
+        cursed_tech: 'Brain-Manipulation - Decrease any stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 16,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 5,
-        dom_lethal: 35,
+        dom_lethal: 45,
         dom_duration: 9,
-        dom_cost: 27,
+        dom_cost: 25,
         //NINJUTSU
         ninjutsu2: 'Body-Alteration - Increase Weapon by 8%',
         ninJutsu2cost: 14,
@@ -2850,7 +2850,7 @@ const database = [
         ninamount: 15,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Purity by 2',
+        buff: 'Increase Purity by 3',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 65,
         buff2_acc: 60,
@@ -2863,9 +2863,9 @@ const database = [
         elm: grass,
         hp: 2928,
         //PHYSICAL
-        attack: 183,
+        attack: 153,
         defense: 198,
-        critical: .15,
+        critical: .35,
         strength: 2,
         //MAGIC
         elm_attack: 185,
@@ -2885,40 +2885,40 @@ const database = [
         stun: .04,
         //GENJUTSU
         genjutsu: 9,
-        gen_power: 78,
+        gen_power: 60,
         willpower: 9,
         chakra: 0,
-        chakra_rec: 11,
+        chakra_rec: 9,
         drain: 8,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 24,
-        cursed_tech: 'Brain-Manipulation - Decrease Any Stat by 15%',
+        cursed_tech: 'Brain-Manipulation - Decrease Any Stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 12,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Black-Voice-Control - Decrease Any Stat by 10%',
-        ninJutsu2cost: 15,
+        ninjutsu2: 'Black-Voice-Control - Decrease Any Stat by 18%',
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 0,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Auto-Pilot-Mode - Double Attack",
-        nin_cost: 40,
+        ninjutsu: "Auto-Pilot-Mode - Increase Attack",
+        nin_cost: 50,
         ninjutsu_pow: 500,
-        ninamount: .55,
+        ninamount: .35,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Critical to 70%',
-        buff2: 'Decrease Accuracy by 2',
-        buff_acc: 50,
+        buff: 'Inrease Attack by 20%',
+        buff2: 'Decrease Curse Recovery by 20',
+        buff_acc: 70,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
     },
@@ -2960,24 +2960,24 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 50,
-        cursed_tech: 'Harden - Increase Defense by 70',
-        curse_amount: 70,
-        curse_duration: 6,
-        curse_cost: 18,
+        cursed_tech: 'Whispering-Dominion - Can Boost after casting Tsukoyomi',
+        curse_amount: 0,
+        curse_duration: 20,
+        curse_cost: 16,
         //DOMAIN
-        dom_purity: 5,
-        dom_lethal: 100,
+        dom_purity: 6,
+        dom_lethal: 115,
         dom_duration: 4,
-        dom_cost: 28,
+        dom_cost: 22,
         //NINJUTSU
-        ninjutsu2: 'Insect-Sphere - Increase Ninjutsu Power by 8%',
-        ninJutsu2cost: 20,
+        ninjutsu2: 'Insect-Sphere - Increase Recovery by 2',
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 240,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Parasitic-Destruction - Decrease Recovery by 2",
-        nin_cost: 24,
+        ninjutsu: "Parasitic-Destruction - Decrease Recovery by 4",
+        nin_cost: 18,
         ninjutsu_pow: 190,
         ninamount: 2,
         ultEnhance: false,
@@ -3032,9 +3032,9 @@ const database = [
         curse_cost: 12,
         //DOMAIN
         dom_purity: 7,
-        dom_lethal: 80,
+        dom_lethal: 120,
         dom_duration: 6,
-        dom_cost: 27,
+        dom_cost: 20,
         //NINJUTSU
         ninjutsu2: 'Battle-Cantabile-Jupiter - Increase Genjutsu Power by 10%',
         ninJutsu2cost: 14,
@@ -3066,7 +3066,7 @@ const database = [
         critical: .08,
         strength: 1.1,
         //MAGIC
-        elm_attack: 213,
+        elm_attack: 228,
         elm_defense: 208,
         elm_efficiency: 1.6,
         potency: .30,
@@ -3086,38 +3086,38 @@ const database = [
         gen_power: 60,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 9,
         drain: 7,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 32,
         negative_energy: 28,
-        cursed_tech: 'Miracle - Increase Luck by 5',
-        curse_amount: 5,
-        curse_duration: 4,
-        curse_cost: 20,
+        cursed_tech: 'Cursed-Bee-Bomb - Deal 350 Damage Take Another Turn',
+        curse_amount: 350,
+        curse_duration: 1,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Sting - Increase Stun by 10%',
-        ninJutsu2cost: 14,
+        ninjutsu2: 'Sting - Increase Curse Recovery by 10',
+        ninJutsu2cost: 10,
         ninJutsu2Dmg: 100,
-        nin2amount: .10,
+        nin2amount: 1,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Bee-Manipulation - Paralyzed for 1 turn",
-        nin_cost: 18,
+        ninjutsu: "Bee-Manipulation - Paralyzed for 2 turns",
+        nin_cost: 22,
         ninjutsu_pow: 170,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Shield by 25%',
-        buff2: 'Decrease Accuracy by 2',
+        buff2: 'Bee-Bomb - 1000 Damage',
         buff_acc: 70,
-        buff2_acc: 50,
+        buff2_acc: 20,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/1/13/Ponzu_CA_Portrait.png/revision/latest?cb=20130506101012'
     },
     {
@@ -3132,7 +3132,7 @@ const database = [
         critical: .06,
         strength: 1.05,
         //MAGIC
-        elm_attack: 229,
+        elm_attack: 245,
         elm_defense: 238,
         elm_efficiency: 1.75,
         potency: .20,
@@ -3158,26 +3158,26 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 30,
         negative_energy: 25,
-        cursed_tech: 'Albatross - Increase Magic by 60',
-        curse_amount: 60,
-        curse_duration: 6,
-        curse_cost: 18,
+        cursed_tech: 'Whispering-Dominion - Status Effects do not take a turn',
+        curse_amount: 0,
+        curse_duration: 25,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Wind-Scythe - Increase Efficiency by 35%',
+        ninjutsu2: 'Wind-Scythe - Increase Efficiency by 20%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 180,
-        nin2amount: .35,
+        ninJutsu2Dmg: 225,
+        nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Cursed-Broom - Increase Genjutsu Power by 10",
+        ninjutsu: "Cursed-Broom - Increase Genjutsu Power by .20",
         nin_cost: 18,
         ninjutsu_pow: 0,
-        ninamount: 10,
+        ninamount: .20,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Evasion by 3',
@@ -3196,17 +3196,17 @@ const database = [
         hp: 3254,
         //PHYSICAL
         attack: 138,
-        defense: 247,
+        defense: 253,
         critical: .15,
         strength: 1.2,
         //MAGIC
-        elm_attack: 243,
+        elm_attack: 259,
         elm_defense: 213,
         elm_efficiency: 1.6,
         potency: .20,
         //WEAPON
         weapon: 135,
-        shield: 260,
+        shield: 266,
         curse_crit: .06,
         weaponCurse: 'Magic',
         weapon_amount: 25,
@@ -3232,14 +3232,14 @@ const database = [
         curse_cost: 15,
         //DOMAIN
         dom_purity: 8,
-        dom_lethal: 100,
-        dom_duration: 5,
-        dom_cost: 27,
+        dom_lethal: 125,
+        dom_duration: 6,
+        dom_cost: 25,
         //NINJUTSU
-        ninjutsu2: 'Sand-Coffin - Increase Magic by 5%',
+        ninjutsu2: 'Sand-Coffin - Increase Magic by 8%',
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 250,
-        nin2amount: .05,
+        nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Sand-Mauseliem - Increase Domain Duration by 1",
@@ -3271,7 +3271,7 @@ const database = [
         elm_efficiency: 2,
         potency: .18,
         //WEAPON
-        weapon: 237,
+        weapon: 247,
         shield: 199,
         curse_crit: .13,
         weaponCurse: 'Evasion',
@@ -3302,10 +3302,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Lariat - Increase Lariat Damage by 20%',
-        ninJutsu2cost: 18,
-        ninJutsu2Dmg: 200,
-        nin2amount: .20,
+        ninjutsu2: 'Lariat - Increase Lariat Damage by 25%',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 250,
+        nin2amount: .25,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Tailed Beast Bomb - Deals 500 Damage",
@@ -3327,13 +3327,13 @@ const database = [
         elm: earth,
         hp: 3500,
         //PHYSICAL
-        attack: 205,
-        defense: 231,
-        critical: .10,
+        attack: 225,
+        defense: 265,
+        critical: .20,
         strength: 1.85,
         //MAGIC
         elm_attack: 268,
-        elm_defense: 270,
+        elm_defense: 275,
         elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
@@ -3376,7 +3376,7 @@ const database = [
         //ULTIMATE
         ninjutsu: "Rage-Incarnate",
         nin_cost: 34,
-        ninjutsu_pow: 500,
+        ninjutsu_pow: 650,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -3394,12 +3394,12 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 245,
-        defense: 255,
+        defense: 265,
         critical: .15,
         strength: 1.65,
         //MAGIC
         elm_attack: 125,
-        elm_defense: 230,
+        elm_defense: 235,
         elm_efficiency: 1,
         potency: .05,
         //WEAPON
@@ -3434,21 +3434,21 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Harden - Increase Accuracy by 1',
+        ninjutsu2: 'Harden - Increase Strength by .15',
         ninJutsu2cost: 9,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 250,
         nin2amount: 1,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "RAM - Decrease Defense by 10%",
         nin_cost: 14,
-        ninjutsu_pow: 260,
+        ninjutsu_pow: 320,
         ninamount: .10,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Accuracy by 3',
-        buff2: 'Decrease Domain Purity by 2',
-        buff_acc: 70,
+        buff2: 'Set Efficiency to 1.20',
+        buff_acc: 50,
         buff2_acc: 40,
         image: 'https://i.redd.it/k2fme3l6e8m61.jpg'
     },
@@ -3460,9 +3460,9 @@ const database = [
         hp: 3489,
         //PHYSICAL
         attack: 257,
-        defense: 258,
-        critical: .11,
-        strength: 2.20,
+        defense: 268,
+        critical: .15,
+        strength: 2.25,
         //MAGIC
         elm_attack: 135,
         elm_defense: 206,
@@ -3470,7 +3470,7 @@ const database = [
         potency: .07,
         //WEAPON
         weapon: 195,
-        shield: 259,
+        shield: 269,
         curse_crit: .09,
         weaponCurse: 'Defense',
         weapon_amount: 20,
@@ -3490,7 +3490,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 25,
-        cursed_tech: 'Simple-Barrier Increase Defense by 75',
+        cursed_tech: 'Simple-Barrier Increase Magic Defense by 75',
         curse_amount: 75,
         curse_duration: 6,
         curse_cost: 14,
@@ -3506,16 +3506,16 @@ const database = [
         nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "ButterFly-Mode - Increase Strength by 30%",
-        nin_cost: 30,
-        ninjutsu_pow: 260,
-        ninamount: .30,
+        ninjutsu: "ButterFly-Mode - Increase Strength by 70%",
+        nin_cost: 34,
+        ninjutsu_pow: 360,
+        ninamount: .70,
         ultEnhance: true,
         //BUFFS
         buff: 'Double Critical',
-        buff2: 'Double Critical',
-        buff_acc: 60,
-        buff2_acc: 40,
+        buff2: 'Increase Critical by 50%',
+        buff_acc: 65,
+        buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/fourworldseries/images/9/96/Choji_Akimichi.png/revision/latest?cb=20170523182002'
     },
     {
@@ -3603,9 +3603,9 @@ const database = [
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
-        weapon: 238,
+        weapon: 233,
         shield: 213,
-        curse_crit: .25,
+        curse_crit: .20,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPEED / LUCK
@@ -3618,7 +3618,7 @@ const database = [
         gen_power: 10,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 8,
         drain: 8,
         //CURSE
         cursed_energy: 0,
@@ -3634,7 +3634,7 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Rasengan - Decrease Curse by 10',
+        ninjutsu2: 'Rasengan - Decrease Curse by 8',
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 255,
         nin2amount: 10,
@@ -3730,7 +3730,7 @@ const database = [
         critical: .30,
         strength: 1.5,
         //MAGIC
-        elm_attack: 281,
+        elm_attack: 286,
         elm_defense: 237,
         elm_efficiency: 2.25,
         potency: .18,
@@ -3801,7 +3801,7 @@ const database = [
         elm_efficiency: 1.7,
         potency: .18,
         //WEAPON
-        weapon: 247,
+        weapon: 267,
         shield: 221,
         curse_crit: .18,
         weaponCurse: 'Attack',
@@ -3838,8 +3838,8 @@ const database = [
         nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Ackerman-Curse - Increase Weapon by .10",
-        nin_cost: 13,
+        ninjutsu: "Ackerman-Curse - Increase Weapon by 10%",
+        nin_cost: 16,
         ninjutsu_pow: 185,
         ninamount: .10,
         ultEnhance: true,
@@ -3898,10 +3898,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Terpsichora - Increase critical by 30%',
-        ninJutsu2cost: 10,
+        ninjutsu2: 'Terpsichora - Increase critical by 12%',
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 125,
-        nin2amount: .30,
+        nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Doctor-Blythe - Recover 400 HP",
@@ -3964,10 +3964,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Thunderbolt - Increase Magic by 10%',
-        ninJutsu2cost: 10,
+        ninjutsu2: 'Thunderbolt - Increase Magic by 5%',
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 200,
-        nin2amount: .10,
+        nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Speed-of-Lightning - Decrease Evasion by 2",
@@ -3989,7 +3989,7 @@ const database = [
         elm: wood,
         hp: 3480,
         //PHYSICAL
-        attack: 262,
+        attack: 252,
         defense: 204,
         critical: .25,
         strength: 1.5,
@@ -3999,11 +3999,11 @@ const database = [
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 238,
+        weapon: 235,
         shield: 162,
         curse_crit: .15,
         weaponCurse: 'Potency',
-        weapon_amount: 0,
+        weapon_amount: .10,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 11,
@@ -4065,7 +4065,7 @@ const database = [
         elm_efficiency: 1.75,
         potency: .20,
         //WEAPON
-        weapon: 253,
+        weapon: 249,
         shield: 228,
         curse_crit: .18,
         weaponCurse: 'Power',
@@ -4096,10 +4096,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Raikiri - Increase Raikiri by 8%',
+        ninjutsu2: 'Raikiri - Increase Raikiri by 10%',
         ninJutsu2cost: 13,
         ninJutsu2Dmg: 215,
-        nin2amount: .08,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Lightning-Clone - Increase Recovery by 2",
@@ -4131,7 +4131,7 @@ const database = [
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
-        weapon: 256,
+        weapon: 250,
         shield: 187,
         curse_crit: .25,
         weaponCurse: 'Defense',
@@ -4180,4 +4180,137 @@ const database = [
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/shingekinokyojin/images/d/da/Jaw_Titan_%28Anime%29_character_image_%28Porco_Galliard%29.png/revision/latest?cb=20201220224328'
     },
+    {
+        name: 'Rage Tobi',
+        nen_type: 'Emitter',
+        element: 'Wood',
+        elm: wood,
+        hp: 3050,
+        //PHYSICAL
+        attack: 175,
+        defense: 135,
+        critical: .20,
+        strength: 1.85,
+        //MAGIC
+        elm_attack: 254,
+        elm_defense: 230,
+        elm_efficiency: 1.75,
+        potency: .20,
+        //WEAPON
+        weapon: 170,
+        shield: 164,
+        curse_crit: .12,
+        weaponCurse: 'Genjutsu',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 6,
+        evasion: 10,
+        luck: 4,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 8,
+        gen_power: 55,
+        willpower: 8,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 2,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 45,
+        negative_energy: 21,
+        cursed_tech: 'Kamui - Intangibility for 1 Turn',
+        curse_amount: 0,
+        curse_duration: 3,
+        curse_cost: 10,
+        //DOMAIN
+        dom_purity: 0,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Great-Forest-Technique - Reduce Chakra by 2',
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 275,
+        nin2amount: 2,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Regeneration - Recover 415 HP",
+        nin_cost: 22,
+        ninjutsu_pow: 0,
+        ninamount: 415,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Double Critical',
+        buff2: 'Decrease Strength by 80%',
+        buff_acc: 40,
+        buff2_acc: 50,
+        image: 'https://preview.redd.it/xoz3wxi3k2a81.png?width=630&format=png&auto=webp&s=6aaad9b3c2d2e3a7c536332d8dc32bdc91f94c3b'
+    },
+    {
+        name: 'Kobeni',
+        nen_type: 'Enhancer',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 3213,
+        //PHYSICAL
+        attack: 155,
+        defense: 168,
+        critical: .45,
+        strength: 1.2,
+        //MAGIC
+        elm_attack: 115,
+        elm_defense: 164,
+        elm_efficiency: 1.1,
+        potency: .07,
+        //WEAPON
+        weapon: 243,
+        shield: 237,
+        curse_crit: .20,
+        weaponCurse: 'Shield',
+        weapon_amount: 15,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 10,
+        luck: 8,
+        stun: .10,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 0,
+        willpower: 1,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 35,
+        cursed_tech: 'Polymorphic - Increase Strength to 3.75',
+        curse_amount: 2.55,
+        curse_duration: 8,
+        curse_cost: 24,
+        //DOMAIN
+        dom_purity: 1,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Knife-Fighter - Increase Stun by 10%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 210,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Cowardly-Monster-Hunter - Increase Evasion by 1",
+        nin_cost: 18,
+        ninjutsu_pow: 0,
+        ninamount: 1,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Attack by 30%',
+        buff2: 'Decrease Potency by 50%',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://i.pinimg.com/736x/7d/12/bb/7d12bbfc5c828eadf3e599013626d70f.jpg'
+    },
+
 ]
