@@ -337,7 +337,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Shield by 25%',
-        buff2: 'Decrease Accuracy by 2',
+        buff2: 'Decrease Strength by .30',
         buff_acc: 70,
         buff2_acc: 70,
         image: 'https://preview.redd.it/what-do-you-dislike-about-mikasas-character-v0-s42udm18c6bb1.jpg?auto=webp&s=e7c072a57d924d5aa9bd83dbae93ed7bc93c160f'
@@ -3556,8 +3556,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 15,
-        cursed_tech: 'Gorilla-Mode - Increase Critical to 85%',
-        curse_amount: .62,
+        cursed_tech: 'Gorilla-Mode - Increase Critical to 60%',
+        curse_amount: .42,
         curse_duration: 8,
         curse_cost: 24,
         //DOMAIN
@@ -3567,7 +3567,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Knuckle-Bracers - Increase Strength by .08%',
-        ninJutsu2cost: 14,
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 165,
         nin2amount: .08,
         ninEnhance: true,
@@ -3610,7 +3610,7 @@ const database = [
         weapon_amount: 1,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 12,
+        evasion: 11,
         luck: 4,
         stun: .06,
         //GENJUTSU
@@ -3676,7 +3676,7 @@ const database = [
         weapon_amount: 30,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 13,
+        evasion: 11,
         luck: 3,
         stun: .05,
         //GENJUTSU
@@ -3742,7 +3742,7 @@ const database = [
         weapon_amount: 1,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 12,
+        evasion: 11,
         luck: 3,
         stun: .04,
         //GENJUTSU
@@ -3808,7 +3808,7 @@ const database = [
         weapon_amount: 15,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 12,
+        evasion: 10,
         luck: 7,
         stun: .05,
         //GENJUTSU
@@ -3874,7 +3874,7 @@ const database = [
         weapon_amount: 1,
         //SPEED / LUCK
         accuracy: 7,
-        evasion: 11,
+        evasion: 10,
         luck: 5,
         stun: .07,
         //GENJUTSU
@@ -3940,7 +3940,7 @@ const database = [
         weapon_amount: 25,
         //SPEED / LUCK
         accuracy: 7,
-        evasion: 12,
+        evasion: 10,
         luck: 4,
         stun: .08,
         //GENJUTSU
@@ -4006,7 +4006,7 @@ const database = [
         weapon_amount: .10,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 11,
+        evasion: 10,
         luck: 5,
         stun: .04,
         //GENJUTSU
@@ -4072,7 +4072,7 @@ const database = [
         weapon_amount: 10,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 10,
+        evasion: 9,
         luck: 3,
         stun: .06,
         //GENJUTSU
@@ -4138,7 +4138,7 @@ const database = [
         weapon_amount: 20,
         //SPEED / LUCK
         accuracy: 7,
-        evasion: 11,
+        evasion: 10,
         luck: 3,
         stun: .06,
         //GENJUTSU
@@ -4204,7 +4204,7 @@ const database = [
         weapon_amount: 2,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 10,
+        evasion: 9,
         luck: 4,
         stun: .05,
         //GENJUTSU
@@ -4270,7 +4270,7 @@ const database = [
         weapon_amount: 15,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 10,
+        evasion: 9,
         luck: 8,
         stun: .10,
         //GENJUTSU
