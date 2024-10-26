@@ -3990,17 +3990,17 @@ const database = [
         hp: 3480,
         //PHYSICAL
         attack: 252,
-        defense: 204,
-        critical: .25,
+        defense: 194,
+        critical: .20,
         strength: 1.5,
         //MAGIC
         elm_attack: 246,
-        elm_defense: 167,
+        elm_defense: 157,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 235,
-        shield: 162,
+        shield: 172,
         curse_crit: .15,
         weaponCurse: 'Potency',
         weapon_amount: .10,
@@ -4164,14 +4164,14 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Jaws - Increase Weapon by 5%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 250,
+        ninJutsu2Dmg: 210,
         nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Cystal-Claws - Increase Evasion by 1",
+        ninjutsu: "Cystal-Claws - Increase Wither Amount",
         nin_cost: 15,
-        ninjutsu_pow: 160,
-        ninamount: 1,
+        ninjutsu_pow: 210,
+        ninamount: 10,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Stun by 10%',
