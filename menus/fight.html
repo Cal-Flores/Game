@@ -221,7 +221,7 @@
             let witherAmount = ['Ratio-Technique']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Third-Hand', 'Speed-of-Lightning', 'Cystal-Claws', 'Cowardly-Monster-Hunter']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Cystal-Claws', 'Cowardly-Monster-Hunter']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone']
             let luck = []
             // genjutsu
@@ -229,7 +229,7 @@
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -1897,19 +1897,19 @@
                         alert('Red has lost the will to fight, willpower dropped to ' + redWill + ' due to Kotoamatsukami.');
                         $('#redWill').text(redWill)
                     }
-                } else if (kotoamatsukamiCounters.red === 8) {
+                } else if (kotoamatsukamiCounters.red === 10) {
                     // 50% chance to reduce redAttack by 25%
                     if (Math.random() < 0.5) {
-                        redAttack = Math.round(redAttack * 0.75)
-                        alert('Red\'s attack power has been reduced by 25% due to Kotoamatsukami.');
+                        redAttack = Math.round(redAttack * 0.85)
+                        alert('Red\'s attack power has been reduced by 15% due to Kotoamatsukami.');
                         $('#redAttack').text(redAttack);
                     } else {
-                        // 50% chance to reduce redElmAttack by 25%
-                        redElmAttack = Math.round(redElmAttack * .75) // Reduce Red's elemental attack by 25%
+                        // 50% chance to reduce redElmAttack by 15%
+                        redElmAttack = Math.round(redElmAttack * .85) // Reduce Red's elemental attack by 25%
                         alert('Red\'s elemental attack power has been reduced by 25% due to Kotoamatsukami.');
                         $('#redElmAttack').text(redElmAttack);
                     }
-                } else if (kotoamatsukamiCounters.red === 12) {
+                } else if (kotoamatsukamiCounters.red === 14) {
                     // 50% chance to halve redAcc
                     if (Math.random() < 0.5) {
                         redAcc = Math.round(redAcc /= 2); // Halve Red's accuracy
@@ -1921,7 +1921,7 @@
                         alert('Red\'s recovery ability is impaired, recovery halved due to Kotoamatsukami.');
                         $('#redRecovery').text(redRecovery);
                     }
-                } else if (kotoamatsukamiCounters.red === 18) {
+                } else if (kotoamatsukamiCounters.red === 20) {
                     alert('Red\'s mind has been fully controlled by Kotoamatsukami!');
                     buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     clearStatusEffect('red', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Red
@@ -1945,19 +1945,19 @@
                         alert('Blue has lost the will to fight, willpower dropped to ' + blueWill + ' due to Kotoamatsukami.');
                         $('#blueWill').text(blueWill)
                     }
-                } else if (kotoamatsukamiCounters.blue === 8) {
+                } else if (kotoamatsukamiCounters.blue === 10) {
                     // 50% chance to reduce blueAttack by 25%
                     if (Math.random() < 0.5) {
-                        blueAttack = Math.round(blueAttack *= 0.75); // Reduce Blue's attack by 25%
-                        alert('Blue\'s attack power has been reduced by 25% due to Kotoamatsukami.');
+                        blueAttack = Math.round(blueAttack *= 0.85); // Reduce Blue's attack by 25%
+                        alert('Blue\'s attack power has been reduced by 15% due to Kotoamatsukami.');
                         $('#blueAttack').text(blueAttack);
                     } else {
                         // 50% chance to reduce blueElmAttack by 25%
-                        blueElmAttack = Math.Round(blueElmAttack *= .75); // Reduce Blue's elemental attack by 25%
-                        alert('Blue\'s elemental attack power has been reduced by 25% due to Kotoamatsukami.');
+                        blueElmAttack = Math.Round(blueElmAttack *= .85); // Reduce Blue's elemental attack by 25%
+                        alert('Blue\'s elemental attack power has been reduced by 15% due to Kotoamatsukami.');
                         $('#blueElmAttack').text(blueElmAttack);
                     }
-                } else if (kotoamatsukamiCounters.blue === 12) {
+                } else if (kotoamatsukamiCounters.blue === 14) {
                     // 50% chance to halve blueAcc
                     if (Math.random() < 0.5) {
                         blueAcc = Math.round(blueAcc /= 2); // Halve Blue's accuracy
@@ -1969,7 +1969,7 @@
                         alert('Blue\'s recovery ability is impaired, recovery halved due to Kotoamatsukami.');
                         $('#blueRecovery').text(blueRecovery);
                     }
-                } else if (kotoamatsukamiCounters.blue === 16) {
+                } else if (kotoamatsukamiCounters.blue === 20) {
                     alert('Blue\'s mind has been fully controlled by Kotoamatsukami!');
                     buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     clearStatusEffect('blue', 'Kotoamatsukami'); // Clear the Kotoamatsukami status effect from Blue

@@ -403,7 +403,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Curse Recovery by 15',
-        buff2: 'Decrease Evasion by 2',
+        buff2: 'Decrease Evasion by 4',
         buff_acc: 50,
         buff2_acc: 40,
         image: 'https://i.pinimg.com/736x/25/80/3b/25803b13e5a6e1b7420070889dc5ecc6.jpg'
@@ -1984,7 +1984,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Big-Bang-Impact - Decrease Defense by 70%",
-        nin_cost: 32,
+        nin_cost: 48,
         ninjutsu_pow: 750,
         ninamount: .70,
         ultEnhance: false,
@@ -2704,14 +2704,14 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Third-Hand - Increase Evasion by 1',
+        ninjutsu2: 'Third-Hand - Decrease Curse by 6',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 185,
         nin2amount: 1,
-        ninEnhance: true,
+        ninEnhance: false,
         //ULTIMATE
         ninjutsu: "First-Hand - Deal 330 Damage",
-        nin_cost: 16,
+        nin_cost: 24,
         ninjutsu_pow: 330,
         ninamount: 0,
         ultEnhance: false,
@@ -3049,7 +3049,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Magic by 25%',
-        buff2: 'Decrease Accuracy by 3',
+        buff2: 'Decrease Recovery by 3',
         buff_acc: 60,
         buff2_acc: 40,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
@@ -3820,12 +3820,12 @@ const database = [
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 16,
+        cursed_recovery: 19,
         negative_energy: 12,
         cursed_tech: 'Polymorphic - Increase Strength to 5',
         curse_amount: 3.75,
         curse_duration: 6,
-        curse_cost: 20,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 5,
         dom_lethal: 0,
