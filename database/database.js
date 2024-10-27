@@ -985,23 +985,23 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Chidori - Increase Magic by 5%',
+        ninjutsu2: 'Chidori - Increase Magic by 10%',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 200,
-        nin2amount: .05,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Sharingan - Increase Evasion by 1",
-        nin_cost: 15,
-        ninjutsu_pow: 135,
-        ninamount: 1,
+        ninjutsu: "Heal-Bite - Recover 380 HP",
+        nin_cost: 20,
+        ninjutsu_pow: 0,
+        ninamount: 380,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Potency by 30%',
         buff2: 'Decrease Will Power by 4',
         buff_acc: 70,
         buff2_acc: 60,
-        image: 'https://i.pinimg.com/736x/e6/96/43/e6964375383d77adfa552aaffc174e84.jpg'
+        image: 'https://i.pinimg.com/736x/55/79/69/557969ea5cae68d1680951f29db84e66.jpg'
     },
     {
         name: 'Suigetsu',
@@ -1425,7 +1425,7 @@ const database = [
         accuracy: 5,
         evasion: 6,
         luck: 6,
-        stun: .06,
+        stun: .12,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 20,
@@ -1440,22 +1440,22 @@ const database = [
         cursed_tech: 'Electro-Strike-Manipulation - Increase Magic Attack by 75',
         curse_amount: 75,
         curse_duration: 6,
-        curse_cost: 22,
+        curse_cost: 19,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 25,
         dom_duration: 4,
         dom_cost: 15,
         //NINJUTSU
-        ninjutsu2: 'Whirlwind - Increase Evasion by 1',
+        ninjutsu2: 'Whirlwind - Increase Accuracy by 1',
         ninJutsu2cost: 11,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 150,
         nin2amount: 1,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Eletric-Yo-Yo - Increase Stun",
         nin_cost: 12,
-        ninjutsu_pow: 115,
+        ninjutsu_pow: 175,
         ninamount: .10,
         ultEnhance: true,
         //BUFFS
@@ -2097,16 +2097,16 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 15,
+        cursed_recovery: 27,
         negative_energy: 14,
         cursed_tech: 'Granite-Blast - Deal 300 Damage',
         curse_amount: 260,
         curse_duration: 1,
-        curse_cost: 18,
+        curse_cost: 17,
         //DOMAIN
         dom_purity: 6,
-        dom_lethal: 50,
-        dom_duration: 6,
+        dom_lethal: 60,
+        dom_duration: 9,
         dom_cost: 20,
         //NINJUTSU
         ninjutsu2: 'C3 - Increase Attack by 5%',
@@ -2357,7 +2357,7 @@ const database = [
         gen_power: 40,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 6,
         drain: 2,
         //CURSE
         cursed_energy: 0,
@@ -2688,14 +2688,14 @@ const database = [
         gen_power: 10,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 10,
+        chakra_rec: 7,
         drain: 2,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 25,
         negative_energy: 15,
-        cursed_tech: 'Ninety-Ninth-Hand - Add 100 to Attack',
-        curse_amount: 100,
+        cursed_tech: 'Ninety-Ninth-Hand - Add 50 to Attack',
+        curse_amount: 50,
         curse_duration: 6,
         curse_cost: 25,
         //DOMAIN
@@ -2707,19 +2707,19 @@ const database = [
         ninjutsu2: 'Third-Hand - Decrease Curse by 6',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 185,
-        nin2amount: 1,
+        nin2amount: 6,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "First-Hand - Deal 330 Damage",
-        nin_cost: 24,
-        ninjutsu_pow: 330,
+        ninjutsu: "First-Hand - Deal 335 Damage",
+        nin_cost: 26,
+        ninjutsu_pow: 335,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Recovery by 2',
+        buff: 'Increase Recovery by 4',
         buff2: 'Zero-Hand - Deal 1500 Damage',
-        buff_acc: 30,
-        buff2_acc: 10,
+        buff_acc: 60,
+        buff2_acc: 15,
         image: 'https://pbs.twimg.com/profile_images/618001800973520896/mTClxCoR_400x400.png'
     },
     ///////////////////// END ////////////////////////
@@ -3232,7 +3232,7 @@ const database = [
         curse_cost: 15,
         //DOMAIN
         dom_purity: 8,
-        dom_lethal: 125,
+        dom_lethal: 165,
         dom_duration: 6,
         dom_cost: 25,
         //NINJUTSU
@@ -3675,7 +3675,7 @@ const database = [
         weaponCurse: 'Defense',
         weapon_amount: 30,
         //SPEED / LUCK
-        accuracy: 6,
+        accuracy: 7,
         evasion: 11,
         luck: 3,
         stun: .05,
@@ -3782,7 +3782,8 @@ const database = [
         buff2: 'Decrease Critical vy 20%',
         buff_acc: 50,
         buff2_acc: 65,
-        image: 'https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png/revision/latest?cb=20160115192559'
+        //image: 'https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png/revision/latest?cb=20160115192559'
+        image: 'https://i.pinimg.com/736x/62/70/03/627003d2ec8fc1b4d9bb6ce957746db7.jpg'
     },
     {
         name: 'Levi',
@@ -3891,7 +3892,7 @@ const database = [
         cursed_tech: 'Reverse - Increase Defense by 100',
         curse_amount: 100,
         curse_duration: 6,
-        curse_cost: 14,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -3899,8 +3900,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Terpsichora - Increase critical by 15%',
-        ninJutsu2cost: 14,
-        ninJutsu2Dmg: 125,
+        ninJutsu2cost: 17,
+        ninJutsu2Dmg: 165,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
@@ -3911,7 +3912,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Stun by 20%',
-        buff2: 'Decrease Stun to 0',
+        buff2: 'Decrease Critical by 50%',
         buff_acc: 50,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/20/109_-_Neferpitou_portrait.png/revision/latest?cb=20131218034405'
@@ -4096,10 +4097,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Raikiri - Increase Raikiri by 10%',
+        ninjutsu2: 'Raikiri - Increase Raikiri by 15%',
         ninJutsu2cost: 13,
         ninJutsu2Dmg: 215,
-        nin2amount: .10,
+        nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Lightning-Clone - Increase Recovery by 2",
@@ -4174,7 +4175,7 @@ const database = [
         ninamount: 10,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Stun by 10%',
+        buff: 'Increase Stun by 20%',
         buff2: 'Decrease Weapon by 15%',
         buff_acc: 65,
         buff2_acc: 65,
@@ -4297,13 +4298,13 @@ const database = [
         ninjutsu2: 'Knife-Fighter - Increase Stun by 7%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 210,
-        nin2amount: .7,
+        nin2amount: .07,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Cowardly-Monster-Hunter - Increase Critical by .10",
+        ninjutsu: "Cowardly-Monster-Hunter - Increase Critical by .15",
         nin_cost: 18,
         ninjutsu_pow: 0,
-        ninamount: 1,
+        ninamount: .15,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Attack by 30%',
