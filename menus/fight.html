@@ -207,7 +207,7 @@
             //physical
             let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode']
             let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Blood-Amaterasu', 'Heavenly-Restriction', 'Rising-Sun', 'Rasenshuriken', 'Unblockable-Drumming-Beat']
-            let critical = ['Awakening', 'Explosive Tags', 'Fury', 'Terpsichora']
+            let critical = ['Awakening', 'Explosive Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
             let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt']
@@ -221,7 +221,7 @@
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             //speed + recovery + luck
             let accuracy = ['SCREAM']
-            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Cowardly-Monster-Hunter']
+            let evasion = ['Blood-Sharingan', 'Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Sharingan', 'Future-Devil', 'Whirlwind', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning']
             let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone']
             let luck = []
             // genjutsu
@@ -600,7 +600,7 @@
                             redCurseRec = redCurseRec - amount
                         }
                     }
-                    console.log('CHAMA', blueCurseRec)
+                    alert(`Red Curse: ${redCurseRec}, Blue Curse ${blueCurseRec}`)
                 }
                 if (curseDur.includes(jutsu)) {
                     if (attacker == 'red') {
@@ -1446,7 +1446,7 @@
                     if (weapon == 'Split Soul Katana') {
                         redWeaponCrit = .70
                         redWeaponCurse = 'Shield'
-                        redWeaponAmount = 15
+                        redWeaponAmount = 8
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
                         redWeaponCrit = .50
@@ -1469,10 +1469,10 @@
                 if (black.includes(curse)) {
                     blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
                     if (blackTech == 'Black-Flash') {
-                        redCrit = .80;
+                        redCrit = .85;
                         redStrength = 2.5
                         duration = 2;
-                        redAcc += 4;
+                        redAcc += 5;
                         $('#redCrit').text(redCrit)
                         $('#redStr').text(redStrength)
                     } else if (blackTech == 'Divergent-Fist') {
@@ -1580,7 +1580,7 @@
                     if (weapon == 'Split Soul Katana') {
                         blueWeaponCrit = .70
                         blueWeaponCurse = 'Shield'
-                        blueWeaponAmount = 15
+                        blueWeaponAmount = 8
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
                         blueWeaponCrit = .50
@@ -1603,10 +1603,10 @@
                 if (black.includes(curse)) {
                     blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
                     if (blackTech == 'Black-Flash') {
-                        blueCrit = .80;
+                        blueCrit = .85;
                         blueStrength = 2.5
                         duration = 2;
-                        blueAcc += 4;
+                        blueAcc += 5;
                         $('#blueCrit').text(blueCrit)
                         $('#blueStr').text(blueStrength)
                     } else if (blackTech == 'Divergent-Fist') {
@@ -2923,7 +2923,7 @@
                         $('#blueHP').text(currBlueHp - redNenNinDmg);
                         $('#crit').text(redChakra)
                         $('#damage').text(`✫ ${redNenNinDmg}  ✫`)
-                        chargeCurse('blue', redNinPower)
+                        chargeCurse('blue', redNenNinDmg)
                         buff(100, 'red', redNinAmount, redUltAmount, redJutsu, redNinEnhance, false)
                         endRound()
                         return
@@ -2944,7 +2944,7 @@
                         $('#blueChakra').text(currBlueChakra)
                         $('#redHP').text(currRedHp - blueNenNinDmg);
                         $('#damage').text(`✫  ${blueNenNinDmg}  ✫`)
-                        chargeCurse('red', blueNinPower)
+                        chargeCurse('red', blueNenNinDmg)
                         buff(100, 'blue', blueNinAmount, blueUltAmount, blueJutsu, blueNinEnhance, false)
                         endRound()
                         return

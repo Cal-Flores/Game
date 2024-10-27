@@ -99,7 +99,7 @@ const database = [
         shield: 236,
         curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 10,
+        weapon_amount: 12,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 3,
@@ -471,7 +471,7 @@ const database = [
         buff: 'Increase Defense by 35%',
         buff2: 'Decrease Critical by 15%',
         buff_acc: 55,
-        buff2_acc: 15,
+        buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/a/aa/HxH2011_EP3_Hanzo_Portrait.png/revision/latest?cb=20221007164354'
     },
     {
@@ -2512,7 +2512,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rasenshuriken - Decrease Defense by 30%",
-        nin_cost: 24,
+        nin_cost: 28,
         ninjutsu_pow: 400,
         ninamount: .30,
         ultEnhance: false,
@@ -2753,7 +2753,7 @@ const database = [
         stun: .05,
         //GENJUTSU
         genjutsu: 10,
-        gen_power: 100,
+        gen_power: 90,
         willpower: 7,
         chakra: 0,
         chakra_rec: 10,
@@ -2819,7 +2819,7 @@ const database = [
         stun: .05,
         //GENJUTSU
         genjutsu: 10,
-        gen_power: 88,
+        gen_power: 80,
         willpower: 6,
         chakra: 0,
         chakra_rec: 10,
@@ -3618,7 +3618,7 @@ const database = [
         gen_power: 10,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 7,
         drain: 8,
         //CURSE
         cursed_energy: 0,
@@ -3634,10 +3634,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Rasengan - Decrease Curse by 8',
+        ninjutsu2: 'Rasengan - Decrease Curse by 5',
         ninJutsu2cost: 10,
-        ninJutsu2Dmg: 255,
-        nin2amount: 10,
+        ninJutsu2Dmg: 230,
+        nin2amount: 5,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Reaper-Death-Seal - Reverse Any Damage",
@@ -3857,9 +3857,9 @@ const database = [
         elm: dark,
         hp: 2976,
         //PHYSICAL
-        attack: 255,
+        attack: 258,
         defense: 179,
-        critical: .20,
+        critical: .25,
         strength: 1.6,
         //MAGIC
         elm_attack: 131,
@@ -3876,11 +3876,11 @@ const database = [
         accuracy: 7,
         evasion: 10,
         luck: 5,
-        stun: .07,
+        stun: .08,
         //GENJUTSU
         genjutsu: 1,
         gen_power: 0,
-        willpower: 0,
+        willpower: 3,
         chakra: 0,
         chakra_rec: 6,
         drain: 3,
@@ -3898,10 +3898,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Terpsichora - Increase critical by 12%',
-        ninJutsu2cost: 12,
+        ninjutsu2: 'Terpsichora - Increase critical by 15%',
+        ninJutsu2cost: 14,
         ninJutsu2Dmg: 125,
-        nin2amount: .12,
+        nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Doctor-Blythe - Recover 400 HP",
@@ -4294,13 +4294,13 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Knife-Fighter - Increase Stun by 10%',
+        ninjutsu2: 'Knife-Fighter - Increase Stun by 7%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 210,
-        nin2amount: .10,
+        nin2amount: .7,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Cowardly-Monster-Hunter - Increase Evasion by 1",
+        ninjutsu: "Cowardly-Monster-Hunter - Increase Critical by .10",
         nin_cost: 18,
         ninjutsu_pow: 0,
         ninamount: 1,
