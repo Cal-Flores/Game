@@ -26,7 +26,7 @@ const database = [
         //MAGIC
         elm_attack: 121,
         elm_defense: 153,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1,
         potency: .15,
         //WEAPON
         weapon: 300,
@@ -199,7 +199,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: 'Crimson-Binding - Trap opponent for 2 turns',
-        nin_cost: 26,
+        nin_cost: 30,
         ninjutsu_pow: 135,
         ninamount: 0,
         ultEnhance: false,
@@ -224,7 +224,7 @@ const database = [
         //MAGIC
         elm_attack: 157,
         elm_defense: 232,
-        elm_efficiency: .12,
+        elm_efficiency: 1.12,
         potency: .16,
         //WEAPON
         weapon: 272,
@@ -290,7 +290,7 @@ const database = [
         //MAGIC
         elm_attack: 251,
         elm_defense: 126,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.25,
         potency: .20,
         //WEAPON
         weapon: 255,
@@ -356,7 +356,7 @@ const database = [
         //MAGIC
         elm_attack: 152,
         elm_defense: 174,
-        elm_efficiency: 1.4,
+        elm_efficiency: 1.15,
         potency: .15,
         //WEAPON
         weapon: 280,
@@ -422,7 +422,7 @@ const database = [
         //MAGIC
         elm_attack: 126,
         elm_defense: 136,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.20,
         potency: .13,
         //WEAPON
         weapon: 236,
@@ -488,7 +488,7 @@ const database = [
         //MAGIC
         elm_attack: 156,
         elm_defense: 248,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.18,
         potency: .10,
         //WEAPON
         weapon: 242,
@@ -620,7 +620,7 @@ const database = [
         //MAGIC
         elm_attack: 146,
         elm_defense: 190,
-        elm_efficiency: 1.3,
+        elm_efficiency: 1.26,
         potency: .18,
         //WEAPON
         weapon: 257,
@@ -686,7 +686,7 @@ const database = [
         //MAGIC
         elm_attack: 120,
         elm_defense: 166,
-        elm_efficiency: 2.0,
+        elm_efficiency: 1.3,
         potency: .30,
         //WEAPON
         weapon: 284,
@@ -817,7 +817,7 @@ const database = [
         //MAGIC
         elm_attack: 155,
         elm_defense: 168,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
         weapon: 265,
@@ -951,7 +951,7 @@ const database = [
         //MAGIC
         elm_attack: 214,
         elm_defense: 207,
-        elm_efficiency: 1.7,
+        elm_efficiency: 1.4,
         potency: .25,
         //WEAPON
         weapon: 244,
@@ -1017,7 +1017,7 @@ const database = [
         //MAGIC
         elm_attack: 243,
         elm_defense: 189,
-        elm_efficiency: 1.6,
+        elm_efficiency: 1.45,
         potency: 0.28,
         //WEAPON
         weapon: 226,
@@ -1083,7 +1083,7 @@ const database = [
         //MAGIC
         elm_attack: 278,
         elm_defense: 254,
-        elm_efficiency: 1.3,
+        elm_efficiency: 1.36,
         potency: .30,
         //WEAPON
         weapon: 152,
@@ -1347,7 +1347,7 @@ const database = [
         //MAGIC
         elm_attack: 268,
         elm_defense: 239,
-        elm_efficiency: 1.1,
+        elm_efficiency: 1.2,
         potency: .60,
         //WEAPON
         weapon: 114,
@@ -1381,7 +1381,7 @@ const database = [
         dom_duration: 5,
         dom_cost: 28,
         //NINJUTSU
-        ninjutsu2: 'Explosive Tags - Increase Potency by 10%',
+        ninjutsu2: 'Explosive-Tags - Increase Potency by 10%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 165,
         nin2amount: .10,
@@ -1413,7 +1413,7 @@ const database = [
         //MAGIC
         elm_attack: 251,
         elm_defense: 199,
-        elm_efficiency: 1.75,
+        elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
         weapon: 110,
@@ -1545,7 +1545,7 @@ const database = [
         //MAGIC
         elm_attack: 252,
         elm_defense: 204,
-        elm_efficiency: 1.8,
+        elm_efficiency: 1.4,
         potency: .18,
         //WEAPON
         weapon: 123,
@@ -1611,7 +1611,7 @@ const database = [
         //MAGIC
         elm_attack: 249,
         elm_defense: 238,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.35,
         potency: .35,
         //WEAPON
         weapon: 226,
@@ -1677,7 +1677,7 @@ const database = [
         //MAGIC
         elm_attack: 244,
         elm_defense: 182,
-        elm_efficiency: 2,
+        elm_efficiency: 1.5,
         potency: .28,
         //WEAPON
         weapon: 175,
@@ -1743,7 +1743,7 @@ const database = [
         //MAGIC
         elm_attack: 256,
         elm_defense: 193,
-        elm_efficiency: 1.75,
+        elm_efficiency: 1.45,
         potency: 0.30,
         //WEAPON
         weapon: 230,
@@ -1811,7 +1811,7 @@ const database = [
         //MAGIC
         elm_attack: 120,
         elm_defense: 166,
-        elm_efficiency: 1.1,
+        elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
         weapon: 196,
@@ -1991,7 +1991,7 @@ const database = [
         //BUFFS
         buff: 'Double Critical',
         buff2: 'Increase Accuracy by 2',
-        buff_acc: 50,
+        buff_acc: 60,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
@@ -2009,7 +2009,7 @@ const database = [
         //MAGIC
         elm_attack: 134,
         elm_defense: 197,
-        elm_efficiency: 1.4,
+        elm_efficiency: 1.25,
         potency: .40,
         //WEAPON
         weapon: 171,
@@ -2075,7 +2075,7 @@ const database = [
         //MAGIC
         elm_attack: 218,
         elm_defense: 196,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.38,
         potency: .20,
         //WEAPON
         weapon: 110,
@@ -2141,7 +2141,7 @@ const database = [
         //MAGIC
         elm_attack: 165,
         elm_defense: 220,
-        elm_efficiency: 1.4,
+        elm_efficiency: 1.2,
         potency: .15,
         //WEAPON
         weapon: 148,
@@ -2273,7 +2273,7 @@ const database = [
         //MAGIC
         elm_attack: 164,
         elm_defense: 185,
-        elm_efficiency: 2,
+        elm_efficiency: 1.28,
         potency: .20,
         //WEAPON
         weapon: 148,
@@ -2339,7 +2339,7 @@ const database = [
         //MAGIC
         elm_attack: 131,
         elm_defense: 201,
-        elm_efficiency: 1.3,
+        elm_efficiency: 1.25,
         potency: .10,
         //WEAPON
         weapon: 128,
@@ -2357,7 +2357,7 @@ const database = [
         gen_power: 40,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 7,
         drain: 2,
         //CURSE
         cursed_energy: 0,
@@ -2385,9 +2385,9 @@ const database = [
         ninamount: 0,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Curse Recovery by 15',
+        buff: 'Increase Accuracy by 1',
         buff2: 'Decrease Curse Recovery by 15',
-        buff_acc: 50,
+        buff_acc: 80,
         buff2_acc: 50,
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFsCy10eLB6HVbE4osYPs0UcWv-9QWOVxa_JzFHZsni5Haz7p7Uk-OKCeGA-8FmU2aHoM&usqp=CAU'
     },
@@ -2471,7 +2471,7 @@ const database = [
         //MAGIC
         elm_attack: 132,
         elm_defense: 145,
-        elm_efficiency: 2,
+        elm_efficiency: 1.38,
         potency: .50,
         //WEAPON
         weapon: 160,
@@ -2538,7 +2538,7 @@ const database = [
         //MAGIC
         elm_attack: 120,
         elm_defense: 208,
-        elm_efficiency: 1.3,
+        elm_efficiency: 1.2,
         potency: .40,
         //WEAPON
         weapon: 131,
@@ -2663,7 +2663,7 @@ const database = [
         elm: fighter,
         hp: 3275,
         //PHYSICAL
-        attack: 287,
+        attack: 277,
         defense: 215,
         critical: .25,
         strength: 1.5,
@@ -2738,7 +2738,7 @@ const database = [
         //MAGIC
         elm_attack: 180,
         elm_defense: 175,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.3,
         potency: .40,
         //WEAPON
         weapon: 221,
@@ -2756,19 +2756,19 @@ const database = [
         gen_power: 90,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 10,
+        chakra_rec: 9,
         drain: 6,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 15,
+        cursed_recovery: 25,
         negative_energy: 30,
         cursed_tech: 'Black-Bird-Manipulation - Increase Genjutsu Power by 20',
         curse_amount: 20,
         curse_duration: 6,
         curse_cost: 20,
         //DOMAIN
-        dom_purity: 6,
-        dom_lethal: 150,
+        dom_purity: 8,
+        dom_lethal: 185,
         dom_duration: 4,
         dom_cost: 25,
         //NINJUTSU
@@ -2804,7 +2804,7 @@ const database = [
         //MAGIC
         elm_attack: 153,
         elm_defense: 234,
-        elm_efficiency: 1.9,
+        elm_efficiency: 1.4,
         potency: .12,
         //WEAPON
         weapon: 212,
@@ -2870,7 +2870,7 @@ const database = [
         //MAGIC
         elm_attack: 185,
         elm_defense: 166,
-        elm_efficiency: 1.4,
+        elm_efficiency: 1.3,
         potency: .20,
         //WEAPON
         weapon: 124,
@@ -3002,7 +3002,7 @@ const database = [
         //MAGIC
         elm_attack: 224,
         elm_defense: 229,
-        elm_efficiency: 2,
+        elm_efficiency: 1.4,
         potency: .25,
         //WEAPON
         weapon: 130,
@@ -3068,7 +3068,7 @@ const database = [
         //MAGIC
         elm_attack: 228,
         elm_defense: 208,
-        elm_efficiency: 1.6,
+        elm_efficiency: 1.35,
         potency: .30,
         //WEAPON
         weapon: 140,
@@ -3134,7 +3134,7 @@ const database = [
         //MAGIC
         elm_attack: 245,
         elm_defense: 238,
-        elm_efficiency: 1.75,
+        elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 135,
@@ -3202,7 +3202,7 @@ const database = [
         //MAGIC
         elm_attack: 259,
         elm_defense: 213,
-        elm_efficiency: 1.6,
+        elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 135,
@@ -3268,7 +3268,7 @@ const database = [
         //MAGIC
         elm_attack: 137,
         elm_defense: 242,
-        elm_efficiency: 2,
+        elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
         weapon: 247,
@@ -3334,7 +3334,7 @@ const database = [
         //MAGIC
         elm_attack: 268,
         elm_defense: 275,
-        elm_efficiency: 1.2,
+        elm_efficiency: 1.25,
         potency: .20,
         //WEAPON
         weapon: 166,
@@ -3532,7 +3532,7 @@ const database = [
         //MAGIC
         elm_attack: 132,
         elm_defense: 274,
-        elm_efficiency: 1.3,
+        elm_efficiency: 1.2,
         potency: .30,
         //WEAPON
         weapon: 194,
@@ -3556,8 +3556,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 15,
-        cursed_tech: 'Gorilla-Mode - Increase Critical to 60%',
-        curse_amount: .42,
+        cursed_tech: 'Gorilla-Mode - Increase Critical to 50%',
+        curse_amount: .32,
         curse_duration: 8,
         curse_cost: 24,
         //DOMAIN
@@ -3600,7 +3600,7 @@ const database = [
         //MAGIC
         elm_attack: 129,
         elm_defense: 239,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
         weapon: 233,
@@ -3634,10 +3634,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Rasengan - Decrease Curse by 5',
+        ninjutsu2: 'Rasengan - Decrease Curse by 8',
         ninJutsu2cost: 10,
-        ninJutsu2Dmg: 230,
-        nin2amount: 5,
+        ninJutsu2Dmg: 250,
+        nin2amount: 8,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Reaper-Death-Seal - Reverse Any Damage",
@@ -3732,7 +3732,7 @@ const database = [
         //MAGIC
         elm_attack: 286,
         elm_defense: 237,
-        elm_efficiency: 2.25,
+        elm_efficiency: 1.65,
         potency: .18,
         //WEAPON
         weapon: 229,
@@ -3757,9 +3757,9 @@ const database = [
         cursed_recovery: 34,
         negative_energy: 11,
         cursed_tech: 'Flying-Rajin - Increase Stun to 50%',
-        curse_amount: .50,
+        curse_amount: .46,
         curse_duration: 8,
-        curse_cost: 20,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -3773,13 +3773,13 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Weeping - Decrease Magic Def by 10%",
-        nin_cost: 16,
+        nin_cost: 18,
         ninjutsu_pow: 235,
         ninamount: .10,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Willpower by 4',
-        buff2: 'Decrease Critical vy 20%',
+        buff2: 'Decrease Critical by 20%',
         buff_acc: 50,
         buff2_acc: 65,
         //image: 'https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png/revision/latest?cb=20160115192559'
@@ -3799,7 +3799,7 @@ const database = [
         //MAGIC
         elm_attack: 165,
         elm_defense: 169,
-        elm_efficiency: 1.7,
+        elm_efficiency: 1.35,
         potency: .18,
         //WEAPON
         weapon: 267,
@@ -3815,7 +3815,7 @@ const database = [
         //GENJUTSU
         genjutsu: 1,
         gen_power: 0,
-        willpower: 0,
+        willpower: 2,
         chakra: 0,
         chakra_rec: 5,
         drain: 2,
@@ -3840,8 +3840,8 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Ackerman-Curse - Increase Weapon by 10%",
-        nin_cost: 16,
-        ninjutsu_pow: 185,
+        nin_cost: 20,
+        ninjutsu_pow: 215,
         ninamount: .10,
         ultEnhance: true,
         //BUFFS
@@ -3931,7 +3931,7 @@ const database = [
         //MAGIC
         elm_attack: 266,
         elm_defense: 238,
-        elm_efficiency: 2,
+        elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 124,
@@ -3997,7 +3997,7 @@ const database = [
         //MAGIC
         elm_attack: 246,
         elm_defense: 157,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
         weapon: 235,
@@ -4032,21 +4032,21 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Rasenshuriken - Decrease Defense by 15%',
-        ninJutsu2cost: 16,
-        ninJutsu2Dmg: 230,
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 250,
         nin2amount: .15,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Tailed-Beast-Bomb - Decrease Magic Defense by 30%",
-        nin_cost: 24,
-        ninjutsu_pow: 380,
+        nin_cost: 28,
+        ninjutsu_pow: 400,
         ninamount: .30,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Accuracy by 5',
         buff2: 'Decrease Critical by 80%',
         buff_acc: 50,
-        buff2_acc: 560,
+        buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/b7/a1/0b/b7a10b1beda89afa5d5d61cca9e9f35d.jpg'
     },
     {
@@ -4063,7 +4063,7 @@ const database = [
         //MAGIC
         elm_attack: 192,
         elm_defense: 188,
-        elm_efficiency: 1.75,
+        elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
         weapon: 249,
@@ -4090,17 +4090,17 @@ const database = [
         cursed_tech: 'Kamui - Intangibility for 3 turns',
         curse_amount: 0,
         curse_duration: 6,
-        curse_cost: 26,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Raikiri - Increase Raikiri by 15%',
-        ninJutsu2cost: 13,
-        ninJutsu2Dmg: 215,
-        nin2amount: .15,
+        ninjutsu2: 'Raikiri - Increase Raikiri by 10%',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 200,
+        nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Lightning-Clone - Increase Recovery by 2",
@@ -4195,7 +4195,7 @@ const database = [
         //MAGIC
         elm_attack: 254,
         elm_defense: 230,
-        elm_efficiency: 1.75,
+        elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
         weapon: 170,
@@ -4222,7 +4222,7 @@ const database = [
         cursed_tech: 'Kamui - Intangibility for 1 Turn',
         curse_amount: 0,
         curse_duration: 3,
-        curse_cost: 10,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 0,
         dom_lethal: 0,
@@ -4236,7 +4236,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Regeneration - Recover 415 HP",
-        nin_cost: 22,
+        nin_cost: 28,
         ninjutsu_pow: 0,
         ninamount: 415,
         ultEnhance: true,
