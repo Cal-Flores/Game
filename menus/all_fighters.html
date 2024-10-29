@@ -64,7 +64,7 @@
             name = ''
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
-            databaseArr.sort((a, b) => b.elm_efficiency - a.elm_efficiency);
+            databaseArr.sort((a, b) => b.accuracy - a.accuracy);
             for (let player of databaseArr) {
                 $('#name').append(`<li>${player.name}</li>`)
                 count += 1

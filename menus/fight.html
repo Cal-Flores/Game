@@ -205,24 +205,24 @@
             }
 
             //physical
-            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode']
-            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat']
+            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance']
+            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals']
             let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt']
-            let magicDef = [ 'Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance']
+            let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears']
-            let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe']
+            let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
-            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi']
-            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance']
+            let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall', 'Strength-of-a-Hundred-Seals']
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind']
-            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning']
-            let recovery = ['Reaper', 'Yasaka', 'Enhanced-Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone']
+            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
+            let recovery = ['Reaper', 'Yasaka', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -237,15 +237,18 @@
             let domLethal = ['C4', 'Hypnotic-Spell', 'Battle-Cantabile-Metamorphosen']
             let domCost = []
             // ninjutsu
-            let ninCosted = ['Seven-Spectrum']
-            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri']
+            let ninCosted = ['Texture-Surprise']
+            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking']
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter']
             let trade = ['Jajanken']
+            let percentDmg = ['Blood-Suck']
+            let special = ['I.R.S']
+            let setNin = ['Hakoware'] //ie SET CHAKRA TO 0
 
 
             buff = buff / 100;
@@ -397,13 +400,13 @@
                         if (enhance) {
                             redWeapon = (redWeapon * (1 + amount)).toFixed(2);
                         } else {
-                            redWeapon = (redWeapon * (1 - amount)).toFixed(2);
+                            blueWeapon = (blueWeapon * (1 - amount)).toFixed(2);
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
                             blueWeapon = (blueWeapon * (1 + amount)).toFixed(2);
                         } else {
-                            blueWeapon = (blueWeapon * (1 - amount)).toFixed(2);
+                            redWeapon = (redWeapon * (1 - amount)).toFixed(2);
                         }
                     }
                 }
@@ -697,15 +700,16 @@
                 if (ninCosted.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redNenNinCost = Math.floor(redNenNinCost * (1 + amount));
+                            redNenNinCost = Math.floor(redNenNinCost * (1 - amount));
+                            alert(`half off! ${redNenNinCost}`)
                         } else {
-                            blueNenNinCost = Math.floor(blueNenNinCost * (1 - amount));
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 + amount));
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueNenNinCost = Math.floor(blueNenNinCost * (1 + amount))
+                            blueNenNinCost = Math.floor(blueNenNinCost * (1 - amount))
                         } else {
-                            redNenNinCost = Math.floor(redNenNinCost * (1 - amount))
+                            redNenNinCost = Math.floor(redNenNinCost * (1 + amount))
                         }
                     }
                 }
@@ -1315,24 +1319,25 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", 'Body-Manipulation'];
+        const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation'];
         const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade'];
-        const defense = ["Reverse", 'Veil', 'Simple-Domain'];
+        const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
-        const magic_defense = ["Simple-Barrier", 'Rage-Blast'];
+        const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
         const luck = ["Miracle"];
-        const weapon = ['Overtime', 'Devil-Transformation']
+        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge']
+        const shield = []
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = [] //** NEW please add me**
         const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
         const drain = ['Limitless-Reversal:'] //** NEW please add me**
         const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery', 'Cursed-Kyuubi']
-        const stunn = ['Flash', "Flying-Rajin"]
+        const stunn = ['Flash', "Flying-Rajin", 'God’s-Accomplice']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket', 'Whispering-Dominion',];
         const domDuration1 = ['Domain-Amplification']
         const ninjutsuStr = ['Yellow-Flash']
@@ -1376,6 +1381,9 @@
                 }
                 if (weapon.includes(curse)) {
                     redWeapon += amount
+                }
+                if (shield.includes(curse)) {
+                    redShield += amount
                 }
                 if (evasion.includes(curse)) {
                     redEvas += amount
@@ -1511,6 +1519,9 @@
                 }
                 if (weapon.includes(curse)) {
                     blueWeapon += amount
+                }
+                if (shield.includes(curse)) {
+                    Shield += amount
                 }
                 if (evasion.includes(curse)) {
                     blueEvas += amount
