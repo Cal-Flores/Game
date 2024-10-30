@@ -222,7 +222,7 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
-            let recovery = ['Reaper', 'Yasaka', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -242,7 +242,7 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter']
             let trade = ['Jajanken']
@@ -774,6 +774,11 @@
                             blueNinPower += 200
                             blueRecovery -= 2
                         }
+                    }
+                }
+                if (jutsu == 'Hakoware') {
+                    if (attacker == 'red') {
+
                     }
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
@@ -1320,7 +1325,7 @@
             }
         }
         const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic'];
