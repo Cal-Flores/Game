@@ -205,17 +205,17 @@
             }
 
             //physical
-            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance']
-            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals']
+            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka']
+            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres']
             let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka']
             let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals']
-            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears']
+            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
-            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall', 'Strength-of-a-Hundred-Seals']
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
@@ -238,7 +238,7 @@
             let domCost = []
             // ninjutsu
             let ninCosted = ['Texture-Surprise']
-            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking']
+            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam']
             let ultCosted = []
             let ultDamage = []
             let elem = []
@@ -777,9 +777,40 @@
                     }
                 }
                 if (jutsu == 'Hakoware') {
+                    let currBlueChakra = parseInt($('#blueChakra').text(), 10);
+                    let currRedChakra = parseInt($('#redChakra').text(), 10);
+                    let currredHp = parseInt($('#redHP').text(), 10)
+                    let currBlueHp = parseInt($('#blueHP').text(), 10)
+                    let hakDamage = 0
                     if (attacker == 'red') {
-
+                        currBlueChakra += Math.floor(currRedChakra / 1.5)
+                        hakDamage = currRedChakra * 12;
+                        currBlueHp = currBlueHp -= hakDamage
+                        currRedChakra = 0;
+                        alert(`Hakoware loans and deals ${hakDamage} to Blue`)
+                    } else {
+                        currRedChakra += Math.floor(currBlueChakra / 2)
+                        hakDamage = currBlueChakra * 12;
+                        currredHp = currredHp -= hakDamage
+                        currBlueChakra = 0;
+                        alert(`Hakoware loans and deals ${hakDamage} to Red`)
                     }
+
+                    $('#redHP').text(currredHp)
+                    $('#blueHP').text(currBlueHp)
+                    $('#redChakra').text(currRedChakra)
+                    $('#blueChakra').text(currBlueChakra)
+                }
+                if (jutsu == 'Blood-Suck') {
+                    let currRedHp = parseInt($('#redHP').text(), 10)
+                    let currBlueHp = parseInt($('#blueHP').text(), 10)
+                    if (attacker == 'red') {
+                        currBlueHp *= .88;
+                    } else {
+                        currRedHp *= .88;
+                    }
+                    $('#redHP').text(Math.floor(currRedHp))
+                    $('#blueHP').text(Math.floor(currBlueHp))
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
                     let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redStun, redWitherPer, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueStun, blueWitherPer, blueHeal');
@@ -1325,14 +1356,14 @@
             }
         }
         const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
-        const abusive = ["Idle-Transfiguration", "Brain-Manipulation"];
+        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge']

@@ -4700,9 +4700,9 @@ const database = [
         nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Blood-Suck - Effect Health by 10%",
+        ninjutsu: "Blood-Suck - Damage Health by 12%",
         nin_cost: 30,
-        ninjutsu_pow: 360,
+        ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -4761,8 +4761,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Hakoware - Send chakra to Opponent but damage them',
-        ninJutsu2cost: 16,
-        ninJutsu2Dmg: 265,
+        ninJutsu2cost: 0,
+        ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
@@ -5123,7 +5123,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 315,
-        elm_defense: 264,
+        elm_defense: 254,
         elm_efficiency: 1.6,
         potency: .17,
         //WEAPON
@@ -5175,5 +5175,137 @@ const database = [
         buff_acc: 70,
         buff2_acc: 60,
         image: 'https://64.media.tumblr.com/d49f2f2e0ff3e5b387225b4c2156f1a7/ec7fcc889a68343d-94/s540x810/e0c67f043cd465e14e4cf4acd24f59c688c1e284.jpg'
+    },
+    {
+        name: 'Madara',
+        nen_type: 'Emitter',
+        element: 'Fire',
+        elm: fire,
+        hp: 3464,
+        //PHYSICAL
+        attack: 137,
+        defense: 168,
+        critical: .20,
+        strength: 1.6,
+        //MAGIC
+        elm_attack: 300,
+        elm_defense: 246,
+        elm_efficiency: 1.6,
+        potency: .19,
+        //WEAPON
+        weapon: 236,
+        shield: 210,
+        curse_crit: .20,
+        weaponCurse: 'Magic-Def',
+        weapon_amount: 20,
+        //SPEED / LUCK
+        accuracy: 8,
+        evasion: 5,
+        luck: 2,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 8,
+        gen_power: 50,
+        willpower: 8,
+        chakra: 0,
+        chakra_rec: 8,
+        drain: 2,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 28,
+        negative_energy: 12,
+        cursed_tech: 'Cursed-Gunbai - Reflect attack back (Both take damage)',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 17,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Great-Fire-Annhilation - Increase Potency by 16%',
+        ninJutsu2cost: 22,
+        ninJutsu2Dmg: 230,
+        nin2amount: .16,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Yasaka Magatama - Decrease all Attacks",
+        nin_cost: 31,
+        ninjutsu_pow: 300,
+        ninamount: .14,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Negate all Efficiency',
+        buff2: 'Decrease Recovery by 2',
+        buff_acc: 75,
+        buff2_acc: 65,
+        image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/32871384_357633448063300_2080573104114892800_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8t0qIren8i4Q7kNvgF4L6uz&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AnZWoeCZNuhcJZqKhqwiDiy&oh=00_AYB9MBnMfXebhbL4EdJAxx0Z1q6GFrBB-NDynGK1gRscYg&oe=6749278D'
+    },
+    {
+        name: 'Kurama',
+        nen_type: 'Emitter',
+        element: 'Dark',
+        elm: dark,
+        hp: 3500,
+        //PHYSICAL
+        attack: 232,
+        defense: 217,
+        critical: .28,
+        strength: 1.33,
+        //MAGIC
+        elm_attack: 220,
+        elm_defense: 254,
+        elm_efficiency: 1.17,
+        potency: .18,
+        //WEAPON
+        weapon: 116,
+        shield: 147,
+        curse_crit: .10,
+        weaponCurse: 'Accuracy',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 3,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 12,
+        drain: 10,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 40,
+        negative_energy: 25,
+        cursed_tech: 'Nine-Tails-Chakra-Mode - Increase Attack by 125',
+        curse_amount: 125,
+        curse_duration: 6,
+        curse_cost: 18,
+        //DOMAIN
+        dom_purity: 10,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Tailed-Beast-Beam - Increase Beam by 10%',
+        ninJutsu2cost: 28,
+        ninJutsu2Dmg: 300,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Tailed-Beast-Blast-Spheres - Decrease Defense by 20%",
+        nin_cost: 30,
+        ninjutsu_pow: 360,
+        ninamount: .20,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Set Efficiency to 1.20',
+        buff2: 'Decrease Evasion by 2',
+        buff_acc: 70,
+        buff2_acc: 70,
+        image: 'https://static.wikia.nocookie.net/narutofanworks/images/c/c8/YinKurama.jpg/revision/latest?cb=20230712172913'
     },
 ]
