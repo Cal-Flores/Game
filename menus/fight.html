@@ -222,7 +222,7 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -242,13 +242,14 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui']
-            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly']
+            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Satellitonbo']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck']
             let special = ['I.R.S']
             let setNin = ['Hakoware'] //ie SET CHAKRA TO 0
+
 
 
             buff = buff / 100;
@@ -784,13 +785,13 @@
                     let hakDamage = 0
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
-                        hakDamage = currRedChakra * 12;
+                        hakDamage = currRedChakra * 8;
                         currBlueHp = currBlueHp -= hakDamage
                         currRedChakra = 0;
                         alert(`Hakoware loans and deals ${hakDamage} to Blue`)
                     } else {
                         currRedChakra += Math.floor(currBlueChakra / 2)
-                        hakDamage = currBlueChakra * 12;
+                        hakDamage = currBlueChakra * 8;
                         currredHp = currredHp -= hakDamage
                         currBlueChakra = 0;
                         alert(`Hakoware loans and deals ${hakDamage} to Red`)
@@ -805,12 +806,15 @@
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     if (attacker == 'red') {
-                        currBlueHp *= .88;
+                        currBlueHp *= .82;
                     } else {
-                        currRedHp *= .88;
+                        currRedHp *= .82;
                     }
                     $('#redHP').text(Math.floor(currRedHp))
                     $('#blueHP').text(Math.floor(currBlueHp))
+                }
+                if (jutsu == 'Psychometry') {
+                    genjutsuAttack(10, 0, attacker)
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
                     let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redStun, redWitherPer, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueStun, blueWitherPer, blueHeal');
@@ -1366,7 +1370,7 @@
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
         const luck = ["Miracle"];
-        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge']
+        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom']
         const shield = []
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = [] //** NEW please add me**
@@ -2060,7 +2064,7 @@
             Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fairy', 'Fire', 'Ghost'] },
             Fairy: { strongAgainst: ['Dark', 'Fighter', 'Ghost'], weakAgainst: ['Fire', 'Wind', 'Earth'] },
             Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
-            Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: ['Fire', 'Grass', 'Lightning'] },
+            Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: [, 'Grass', 'Lightning'] },
             psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
             sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] }
         };
@@ -2226,6 +2230,76 @@
             $('#redHP').text(red_corn_hp)
             $('#blueHP').text(blue_corn_hp)
         }
+        // function gamble(attacker, defender) {
+        //     let currBlueHp = parseInt($('#blueHP').text(), 10);
+        //     let currRedHp = parseInt($('#redHP').text(), 10);
+        //     let attackerLuck = attacker === 'red' ? redLuck : blueLuck;
+        //     let defenderLuck = defender === 'red' ? redLuck : blueLuck;
+
+        //     let luckDisparity = attackerLuck - defenderLuck;
+
+        //     // Adjust defender choices based on luck disparity
+        //     let defenderChoices;
+        //     if (luckDisparity >= 7) {
+        //         defenderChoices = 1;
+        //     } else if (luckDisparity === 6) {
+        //         defenderChoices = 2;
+        //     } else if (luckDisparity === 5) {
+        //         defenderChoices = 3;
+        //     } else if (luckDisparity === 4) {
+        //         defenderChoices = 3;
+        //     } else if (luckDisparity == 3) {
+        //         defenderChoices = 4;
+        //     } else if (luckDisparity == 2) {
+        //         defenderChoices = 4;
+        //     } else if (luckDisparity === 1 || luckDisparity === 0) {
+        //         defenderChoices = 5;
+        //     } else if (luckDisparity === -6) {
+        //         defenderChoices = 9;
+        //     } else if (luckDisparity === -5) {
+        //         defenderChoices = 8;
+        //     } else if (luckDisparity === -4) {
+        //         defenderChoices = 7;
+        //     } else if (luckDisparity == -3) {
+        //         defenderChoices = 7;
+        //     } else if (luckDisparity == -2) {
+        //         defenderChoices = 6;
+        //     } else if (luckDisparity === -1) {
+        //         defenderChoices = 5;
+        //     }
+
+        //     defenderChoices = Math.min(defenderChoices, 9); // Cap choices between 1-9
+
+        //     let defenderPick = prompt(`Defender, pick ${defenderChoices} numbers between 1-10 (separate by commas):`);
+        //     let defenderNumbers = defenderPick.split(',').map(num => parseInt(num.trim()));
+
+        //     let wager = parseInt(prompt("Attacker, name your wager (damage to deal if you win):"));
+        //     let dieRoll = Math.floor(Math.random() * 10) + 1;
+        //     $('#crit').text(`DIE ROLL: ${dieRoll}`)
+        //     console.log('die roll,', dieRoll)
+
+        //     if (defenderNumbers.includes(dieRoll)) {
+        //         console.log('Defender wins the gamble!');
+        //         let penalty = Math.max(0, Math.floor(wager * (1 + (luckDisparity * 0.2)))); // Ensure penalty is non-negative
+        //         //let penalty = wager
+        //         attacker === 'red' ? currRedHp -= penalty : currBlueHp -= penalty;
+        //         $('#damage').hide().text(`Lost gamble! Lost ${penalty} HP ❌`).fadeIn(500);
+        //     } else {
+        //         console.log('Attacker wins the gamble!');
+        //         let bonusDamage = Math.max(0, Math.floor(wager * (luckDisparity > 0 ? 1 : 1.5))); // Ensure bonusDamage is non-negative
+        //         //let penalty = wager
+        //         defender === 'red' ? currRedHp -= bonusDamage : currBlueHp -= bonusDamage;
+        //         $('#damage').hide().text(`Won gamble! Dealt ${penalty} damage! 🎲`).fadeIn(500);
+        //     }
+
+        //     // Ensure HP does not drop below 0
+        //     currRedHp = Math.max(0, currRedHp);
+        //     currBlueHp = Math.max(0, currBlueHp);
+
+        //     // Update the displayed HP values
+        //     $('#redHP').text(currRedHp);
+        //     $('#blueHP').text(currBlueHp);
+        // }
         function gamble(attacker, defender) {
             let currBlueHp = parseInt($('#blueHP').text(), 10);
             let currRedHp = parseInt($('#redHP').text(), 10);
@@ -2240,25 +2314,19 @@
                 defenderChoices = 1;
             } else if (luckDisparity === 6) {
                 defenderChoices = 2;
-            } else if (luckDisparity === 5) {
+            } else if (luckDisparity === 5 || luckDisparity === 4) {
                 defenderChoices = 3;
-            } else if (luckDisparity === 4) {
-                defenderChoices = 3;
-            } else if (luckDisparity == 3) {
+            } else if (luckDisparity === 3 || luckDisparity === 2) {
                 defenderChoices = 4;
-            } else if (luckDisparity == 2) {
-                defenderChoices = 4;
-            } else if (luckDisparity === 1) {
+            } else if (luckDisparity === 1 || luckDisparity === 0) {
                 defenderChoices = 5;
             } else if (luckDisparity === -6) {
                 defenderChoices = 9;
             } else if (luckDisparity === -5) {
                 defenderChoices = 8;
-            } else if (luckDisparity === -4) {
+            } else if (luckDisparity === -4 || luckDisparity === -3) {
                 defenderChoices = 7;
-            } else if (luckDisparity == -3) {
-                defenderChoices = 7;
-            } else if (luckDisparity == -2) {
+            } else if (luckDisparity === -2) {
                 defenderChoices = 6;
             } else if (luckDisparity === -1) {
                 defenderChoices = 5;
@@ -2271,18 +2339,36 @@
 
             let wager = parseInt(prompt("Attacker, name your wager (damage to deal if you win):"));
             let dieRoll = Math.floor(Math.random() * 10) + 1;
-            $('#crit').text(`DIE ROLL: ${dieRoll}`)
-            console.log('die roll,', dieRoll)
+            $('#crit').text(`DIE ROLL: ${dieRoll}`);
+            console.log('die roll,', dieRoll);
 
             if (defenderNumbers.includes(dieRoll)) {
                 console.log('Defender wins the gamble!');
-                let penalty = Math.max(0, Math.floor(wager * (1 + (luckDisparity * 0.2)))); // Ensure penalty is non-negative
-                attacker === 'red' ? currRedHp -= penalty : currBlueHp -= penalty;
+
+                // Only add extra penalty if a high-luck attacker loses to a low-luck defender
+                let penalty = luckDisparity > 0 ? Math.floor(wager * (1 + (luckDisparity * 0.2))) : wager;
+
+                // Apply penalty
+                if (attacker === 'red') {
+                    currRedHp -= penalty;
+                } else {
+                    currBlueHp -= penalty;
+                }
+
                 $('#damage').hide().text(`Lost gamble! Lost ${penalty} HP ❌`).fadeIn(500);
             } else {
                 console.log('Attacker wins the gamble!');
-                let bonusDamage = Math.max(0, Math.floor(wager * (luckDisparity > 0 ? 1 : 1.5))); // Ensure bonusDamage is non-negative
-                defender === 'red' ? currRedHp -= bonusDamage : currBlueHp -= bonusDamage;
+
+                // No extra bonus damage if attacker has lower luck; just apply wager
+                let bonusDamage = wager;
+
+                // Apply bonus damage
+                if (defender === 'red') {
+                    currRedHp -= bonusDamage;
+                } else {
+                    currBlueHp -= bonusDamage;
+                }
+
                 $('#damage').hide().text(`Won gamble! Dealt ${bonusDamage} damage! 🎲`).fadeIn(500);
             }
 
@@ -2294,6 +2380,7 @@
             $('#redHP').text(currRedHp);
             $('#blueHP').text(currBlueHp);
         }
+
 
         function cursedTool(attacker, curse, amount) {
             if (attacker == 'red') {
@@ -2318,6 +2405,9 @@
                 }
                 if (curse == 'Accuracy') {
                     blueAcc -= amount
+                }
+                if (curse == 'Luck') {
+                    blueLuck -= amount
                 }
                 if (curse == 'Curse') {
                     blueCurseRec -= amount
@@ -2383,6 +2473,9 @@
                 if (curse == 'Evasion') {
                     redEvas -= amount
                 }
+                if (curse == 'Luck') {
+                    redLuck -= amount
+                }
             }
             // UPDATE U.I
             $('#redHp').text(redHp);
@@ -2399,6 +2492,7 @@
             $('#redGenPow').text(redGenPow)
             $('#redWill').text(redWill)
             $('#redAcc').text(redAcc)
+            $('#redLuck').text(redLuck)
             $('#redEvas').text(redEvas)
             $('#redNinPow').text(redNenNinDmg)
             $('#redUltPow').text(redNinPower)
@@ -2419,6 +2513,7 @@
             $('#blueStr').text(blueStrength)
             $('#blueAcc').text(blueAcc)
             $('#blueEvas').text(blueEvas)
+            $('#blueLuck').text(blueLuck)
             $('#bluePot').text(bluePotency);
             $('#blueELM').text(blueELM);
             $('#blueElmAttack').text(blueElmAttack);
