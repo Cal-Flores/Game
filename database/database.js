@@ -64,13 +64,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Heavenly-Restriction - Increase Defense by 15%',
         ninJutsu2cost: 12,
-        ninJutsu2Dmg: 180,
+        ninJutsu2Dmg: 115,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Weeping - Increase Magic Defense by 20%",
         nin_cost: 15,
-        ninjutsu_pow: 215,
+        ninjutsu_pow: 125,
         ninamount: .20,
         ultEnhance: true,
         //BUFFS
@@ -97,7 +97,7 @@ const database = [
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
-        weapon: 274,
+        weapon: 278,
         shield: 236,
         curse_crit: .50,
         weaponCurse: 'Shield',
@@ -130,13 +130,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Collapse - Decrease Evasion by 1',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 180,
+        ninJutsu2Dmg: 150,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Ratio-Technique - Increase Wither by 10",
         nin_cost: 16,
-        ninjutsu_pow: 240,
+        ninjutsu_pow: 210,
         ninamount: 10,
         ultEnhance: true,
         //BUFFS
@@ -156,7 +156,7 @@ const database = [
         attack: 135,
         defense: 128,
         critical: .12,
-        strength: .10,
+        strength: 1.17,
         //MAGIC
         elm_attack: 115,
         elm_defense: 191,
@@ -196,13 +196,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Flowing-Red-Scale - Increase Potency by 35%',
         ninJutsu2cost: 13,
-        ninJutsu2Dmg: 155,
+        ninJutsu2Dmg: 135,
         nin2amount: .35,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: 'Crimson-Binding - Trap opponent for 2 turns',
-        nin_cost: 30,
-        ninjutsu_pow: 135,
+        nin_cost: 31,
+        ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -262,13 +262,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'En-Strike - Decrease Attack by 5%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 165,
+        ninJutsu2Dmg: 150,
         nin2amount: .05,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Iaidō-Master - Decrease Magic by 5%",
         nin_cost: 15,
-        ninjutsu_pow: 165,
+        ninjutsu_pow: 150,
         ninamount: .05,
         ultEnhance: false,
         //BUFFS
@@ -328,7 +328,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Thunder-Spear - Increase Effieciency by 35%',
         ninJutsu2cost: 13,
-        ninJutsu2Dmg: 245,
+        ninJutsu2Dmg: 220,
         nin2amount: .35,
         ninEnhance: true,
         //ULTIMATE
@@ -382,8 +382,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 15,
-        cursed_tech: '8th-Gate of death - Double Attack',
-        curse_amount: 242,
+        cursed_tech: '8th-Gate of death - Attack by 180',
+        curse_amount: 180,
         curse_duration: 100,
         curse_cost: 33,
         //DOMAIN
@@ -393,14 +393,14 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Morning Peacock',
-        ninJutsu2cost: 28,
-        ninJutsu2Dmg: 350,
+        ninJutsu2cost: 26,
+        ninJutsu2Dmg: 250,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Daytime-Tiger",
         nin_cost: 38,
-        ninjutsu_pow: 500,
+        ninjutsu_pow: 450,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -466,7 +466,7 @@ const database = [
         //ULTIMATE
         ninjutsu: 'Art-of-the-Doppelganger - Decrease Willpower by 2',
         nin_cost: 21,
-        ninjutsu_pow: 155,
+        ninjutsu_pow: 135,
         ninamount: 2,
         ultEnhance: false,
         //BUFFS
@@ -532,7 +532,7 @@ const database = [
         //ULTIMATE
         ninjutsu: "New-Shadow-Style",
         nin_cost: 20,
-        ninjutsu_pow: 330,
+        ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -580,8 +580,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 49,
         negative_energy: 34,
-        cursed_tech: 'Dismantle - Deal 325 Damage',
-        curse_amount: 325,
+        cursed_tech: 'Dismantle - Deal 300 Damage',
+        curse_amount: 300,
         curse_duration: 1,
         curse_cost: 20,
         //DOMAIN
@@ -596,10 +596,10 @@ const database = [
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: 'Blood-Consumption - Recover 465 HP',
+        ninjutsu: 'Blood-Consumption - Recover 365 HP',
         nin_cost: 27,
         ninjutsu_pow: 0,
-        ninamount: 465,
+        ninamount: 365,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 3',
@@ -658,13 +658,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Playful-Cloud - Increase Attack by 12%',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 175,
+        ninJutsu2Dmg: 165,
         nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
         nin_cost: 22,
-        ninjutsu_pow: 315,
+        ninjutsu_pow: 285,
         ninamount: .40,
         ultEnhance: true,
         //BUFFS
@@ -710,9 +710,9 @@ const database = [
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 50,
-        cursed_tech: 'Devil-Transformation - Increase Weapon by 100',
+        cursed_tech: 'Devil-Transformation - Increase Weapon by 85',
         negative_energy: 25,
-        curse_amount: 100,
+        curse_amount: 85,
         curse_duration: 6,
         curse_cost: 20,
         //DOMAIN
@@ -723,14 +723,14 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Chain-Entanglement - Decrease Evasion by 1',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 190,
+        ninJutsu2Dmg: 170,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Blood-Consumption - Recover 400 HP",
+        ninjutsu: "Blood-Consumption - Recover 320 HP",
         nin_cost: 26,
         ninjutsu_pow: 0,
-        ninamount: 400,
+        ninamount: 320,
         ultEnhance: true,
         //BUFFS
         buff: 'Triple Domain Purity',
@@ -789,13 +789,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Rhythm-Echo - Increase Willpower by 2',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 135,
+        ninJutsu2Dmg: 125,
         nin2amount: 2,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: 'Claws - Decrease Shield by 8%',
         nin_cost: 21,
-        ninjutsu_pow: 185,
+        ninjutsu_pow: 175,
         ninamount: .08,
         ultEnhance: false,
         //BUFFS
@@ -891,7 +891,7 @@ const database = [
         weapon: 270,
         shield: 198,
         curse_crit: .27,
-        weaponCurse: 'Shield',
+        weaponCurse: 'Magic',
         weapon_amount: 7,
         //SPEED / LUCK
         accuracy: 7,
@@ -909,12 +909,12 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 28,
         negative_energy: 34,
-        cursed_tech: 'Cursed-Blade - Add 100 to attack',
-        curse_amount: 100,
+        cursed_tech: 'Cursed-Blade - Add 77 to attack',
+        curse_amount: 77,
         curse_duration: 6,
         curse_cost: 17,
         //DOMAIN
-        dom_purity: 9,
+        dom_purity: 7,
         dom_lethal: 77,
         dom_duration: 7,
         dom_cost: 21,
@@ -936,6 +936,72 @@ const database = [
         buff_acc: 77,
         buff2_acc: 77,
         image: 'https://i.pinimg.com/736x/a8/26/45/a826458e9ec3b3e63687e831a0841546.jpg'
+    },
+    {
+        name: 'Mei Mei',
+        nen_type: 'Manipulator',
+        element: 'Dark',
+        elm: dark,
+        hp: 3233,
+        //PHYSICAL
+        attack: 122,
+        defense: 186,
+        critical: .10,
+        strength: 1.20,
+        //MAGIC
+        elm_attack: 121,
+        elm_defense: 158,
+        elm_efficiency: 1.10,
+        potency: .20,
+        //WEAPON
+        weapon: 275,
+        shield: 251,
+        curse_crit: .16,
+        weaponCurse: 'Magic',
+        weapon_amount: 16,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 5,
+        luck: 3,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 8,
+        gen_power: 40,
+        willpower: 7,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 43,
+        negative_energy: 25,
+        cursed_tech: 'Black-Bird-Manipulation - Increase Genjutsu Power by 50',
+        curse_amount: 50,
+        curse_duration: 6,
+        curse_cost: 15,
+        //DOMAIN
+        dom_purity: 6,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Cursed-Energy-Reinforcement - Increase Defense by 15%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 145,
+        nin2amount: .15,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Bird-Strike - Deal 270 damage",
+        nin_cost: 20,
+        ninjutsu_pow: 270,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Accuracy by 3',
+        buff2: 'Decrease Weapon by 10%',
+        buff_acc: 75,
+        buff2_acc: 60,
+        image: 'https://i.pinimg.com/736x/35/55/44/355544918e7be34a3a10221439133856.jpg'
     },
     //// END /////
     /////// SUB-EMITTERS ////////
@@ -993,10 +1059,10 @@ const database = [
         nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Heal-Bite - Recover 370 HP",
+        ninjutsu: "Heal-Bite - Recover 300 HP",
         nin_cost: 20,
         ninjutsu_pow: 0,
-        ninamount: 370,
+        ninamount: 300,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Potency by 30%',
@@ -1281,7 +1347,7 @@ const database = [
         critical: .23,
         strength: 2,
         //MAGIC
-        elm_attack: 250,
+        elm_attack: 255,
         elm_defense: 166,
         elm_efficiency: 1,
         potency: .15,
@@ -1748,7 +1814,7 @@ const database = [
         elm_efficiency: 1.5,
         potency: 0.30,
         //WEAPON
-        weapon: 230,
+        weapon: 236,
         shield: 168,
         curse_crit: .40,
         weaponCurse: 'Magic',
@@ -1792,9 +1858,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Magic Attack by 8%',
-        buff2: 'Decrease Attack by 15%',
+        buff2: 'Decrease Attack by 10%',
         buff_acc: 65,
-        buff2_acc: 70,
+        buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
     },
     // END //
@@ -2587,9 +2653,9 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Accuracy by 2',
+        buff: 'Increase Accuracy by 3',
         buff2: 'Decrease Attack by 20%',
-        buff_acc: 65,
+        buff_acc: 60,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/shingekinokyojin/images/a/ae/Attack_Titan_%28Anime%29_character_image_%28Eren_Jaeger%29.png/revision/latest/scale-to-width-down/1000?cb=20170513212951'
     },
@@ -3069,7 +3135,7 @@ const database = [
         critical: .08,
         strength: 1.1,
         //MAGIC
-        elm_attack: 228,
+        elm_attack: 222,
         elm_defense: 208,
         elm_efficiency: 1.35,
         potency: .30,
@@ -3112,7 +3178,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Bee-Manipulation - Paralyzed for 2 turns",
-        nin_cost: 22,
+        nin_cost: 34,
         ninjutsu_pow: 170,
         ninamount: 0,
         ultEnhance: false,
@@ -3188,6 +3254,73 @@ const database = [
         buff_acc: 60,
         buff2_acc: 50,
         image: 'https://image.tensorartassets.com/model_showcase/645968480362936778/252404c0-4a75-a16b-7f79-d30aca612a47.jpeg'
+    },
+    {
+        name: 'Utahime',
+        nen_type: 'Manipulator',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 2958,
+        //PHYSICAL
+        attack: 175,
+        defense: 175,
+        critical: .20,
+        strength: 1.25,
+        //MAGIC
+        elm_attack: 205,
+        elm_defense: 205,
+        elm_efficiency: 1.25,
+        potency: .20,
+        //WEAPON
+        weapon: 185,
+        shield: 185,
+        curse_crit: .15,
+        weaponCurse: 'Evasion',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 5,
+        luck: 7,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 8,
+        gen_power: 65,
+        willpower: 8,
+        chakra: 0,
+        chakra_rec: 8,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 38,
+        negative_energy: 35,
+        cursed_tech: 'Limitless-Reversal - Cursed Effects are shared',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 30,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Solo-Forbidden-Area - Increase any stat by 20%',
+        ninJutsu2cost: 24,
+        ninJutsu2Dmg: 120,
+        nin2amount: 20,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Solo-Leveling - Deal 20% HP Drain",
+        nin_cost: 30,
+        ninjutsu_pow: 0,
+        ninamount: .20,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Cursed Bomb Deal 600 Damage',
+        buff2: 'Increase Any Stat by 20%',
+        buff_acc: 25,
+        buff2_acc: 100,
+        //image: 'https://www.nautiljon.com/images/perso/00/72/iori_utahime_20027.webp'
+        image: 'https://preview.redd.it/what-kind-of-scar-does-utahime-have-v0-efrpgw7dxk5d1.jpg?width=640&crop=smart&auto=webp&s=a15aed4fed51acd355be951ee10eaa7b7c63f7fc'
     },
     //////////////////////////// END /////////////////////////////
     //////////////////////////// DEFENSE ///////////////////////
@@ -3364,7 +3497,7 @@ const database = [
         cursed_tech: 'Mutation - Add 120 to attack',
         curse_amount: 120,
         curse_duration: 6,
-        curse_cost: 14,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -3378,7 +3511,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rage-Incarnate",
-        nin_cost: 34,
+        nin_cost: 36,
         ninjutsu_pow: 650,
         ninamount: 0,
         ultEnhance: false,
@@ -3704,8 +3837,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Rasengan - Decrease Curse by 12',
-        ninJutsu2cost: 10,
-        ninJutsu2Dmg: 265,
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 235,
         nin2amount: 12,
         ninEnhance: false,
         //ULTIMATE
@@ -4053,7 +4186,7 @@ const database = [
         image: 'https://i.redd.it/u9yd7rzmlag81.jpg'
     },
     {
-        name: 'Chakra Naruto',
+        name: 'Naruto',
         nen_type: 'Emitter',
         element: 'Wood',
         elm: wood,
@@ -4191,7 +4324,7 @@ const database = [
         elm: fighter,
         hp: 2988,
         //PHYSICAL
-        attack: 246,
+        attack: 236,
         defense: 160,
         critical: .70,
         strength: 1.3,
@@ -4201,7 +4334,7 @@ const database = [
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
-        weapon: 250,
+        weapon: 246,
         shield: 187,
         curse_crit: .25,
         weaponCurse: 'Defense',
@@ -4216,7 +4349,7 @@ const database = [
         gen_power: 10,
         willpower: 2,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 6,
         drain: 8,
         //CURSE
         cursed_energy: 0,
@@ -4262,7 +4395,7 @@ const database = [
         critical: .20,
         strength: 1.85,
         //MAGIC
-        elm_attack: 254,
+        elm_attack: 249,
         elm_defense: 230,
         elm_efficiency: 1.40,
         potency: .20,
@@ -4431,7 +4564,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Satellitonbo - Increase Stun by 9%',
-        ninJutsu2cost: 17,
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 185,
         nin2amount: .09,
         ninEnhance: true,
@@ -4638,8 +4771,8 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Nen-Threads - Capture Opponent for 2 turns",
-        nin_cost: 28,
-        ninjutsu_pow: 100,
+        nin_cost: 38,
+        ninjutsu_pow: 25,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -4727,7 +4860,7 @@ const database = [
         critical: .07,
         strength: 1.1,
         //MAGIC
-        elm_attack: 229,
+        elm_attack: 224,
         elm_defense: 226,
         elm_efficiency: 1.35,
         potency: .21,
@@ -4839,7 +4972,7 @@ const database = [
         ninjutsu: "Blood-Suck - Damage Health by 20%",
         nin_cost: 30,
         ninjutsu_pow: 0,
-        ninamount: 0,
+        ninamount: 20,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Attack by 20%',
@@ -5444,6 +5577,72 @@ const database = [
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/narutofanworks/images/c/c8/YinKurama.jpg/revision/latest?cb=20230712172913'
     },
+    {
+        name: 'Shoko',
+        nen_type: 'Conjuror',
+        element: 'Lucky',
+        elm: lucky,
+        hp: 2814,
+        //PHYSICAL
+        attack: 154,
+        defense: 170,
+        critical: .10,
+        strength: 1.05,
+        //MAGIC
+        elm_attack: 228,
+        elm_defense: 212,
+        elm_efficiency: 1.5,
+        potency: .36,
+        //WEAPON
+        weapon: 125,
+        shield: 174,
+        curse_crit: .10,
+        weaponCurse: 'Curse',
+        weapon_amount: 10,
+        //SPEED / LUCK
+        accuracy: 8,
+        evasion: 5,
+        luck: 8,
+        stun: .08,
+        //GENJUTSU
+        genjutsu: 5,
+        gen_power: 50,
+        willpower: 5,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 7,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 44,
+        negative_energy: 35,
+        cursed_tech: 'Miracle - Double Luck',
+        curse_amount: 8,
+        curse_duration: 6,
+        curse_cost: 20,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Purple-Arrow - Increase Magic by 8%',
+        ninJutsu2cost: 13,
+        ninJutsu2Dmg: 175,
+        nin2amount: .08,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Reverse-Curse-Technique - Damage is reversed to Health",
+        nin_cost: 25,
+        ninjutsu_pow: 0,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Defense by 15%',
+        buff2: 'Decrease Weapon by 15%',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://pbs.twimg.com/media/GBp3P2PXwAAIf8i.jpg'
+    },
     //////////////////////// END //////////////////////
     /////////////////////// LUCK //////////////////////
 
@@ -5710,7 +5909,7 @@ const database = [
         buff2: 'Reserved for Enchanted-Melody',
         buff_acc: 60,
         buff2_acc: 100,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAQpzJ2t7nh-zndCEvO7SWC7lEE6x-nXH7tNjA5H8fQ5eU_qJh_OAZTv6DYcNewNGo1rA&usqp=CAU'
+        image: 'https://www.nautiljon.com/images/perso/00/25/senritsu_18052.webp'
     },
     {
         name: 'Zetsu',
@@ -5778,4 +5977,337 @@ const database = [
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/denaruto3/images/a/a9/Zetsu.png/revision/latest/thumbnail/width/360/height/360?cb=20100706154256&path-prefix=de'
     },
+    {
+        name: 'Himeno',
+        nen_type: 'Specialist',
+        element: 'Luck',
+        elm: lucky,
+        hp: 3149,
+        //PHYSICAL
+        attack: 211,
+        defense: 176,
+        critical: .24,
+        strength: 1.30,
+        //MAGIC
+        elm_attack: 145,
+        elm_defense: 201,
+        elm_efficiency: 1,
+        potency: .14,
+        //WEAPON
+        weapon: 122,
+        shield: 177,
+        curse_crit: .55,
+        weaponCurse: 'Recovery',
+        weapon_amount: 1,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 4,
+        luck: 9,
+        stun: .11,
+        //GENJUTSU
+        genjutsu: 4,
+        gen_power: 10,
+        willpower: 9,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 45,
+        negative_energy: 45,
+        cursed_tech: 'Miracle - Increase Luck by 5',
+        curse_amount: 5,
+        curse_duration: 100,
+        curse_cost: 25,
+        //DOMAIN
+        dom_purity: 1,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ghost-Punch - Stunned for 1 turn | Increase Stun by 8%',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 190,
+        nin2amount: .08,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Spectral-Curse - Increase Ghost Power by 20%",
+        nin_cost: 20,
+        ninjutsu_pow: 0,
+        ninamount: .20,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Attack by 70%',
+        buff2: 'Sacrifice 7 Recovery',
+        buff_acc: 100,
+        buff2_acc: 50,
+        image: 'https://i.pinimg.com/736x/be/a2/6f/bea26f63a8949b6b218a3c1b8132ae87.jpg'
+    },
+    //////////////////////// END ///////////////////////
+    /////////////////////// BALANCED ///////////////////
+    {
+        name: 'Kakashi',
+        nen_type: 'Specialist',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3158,
+        //PHYSICAL
+        attack: 134,
+        defense: 216,
+        critical: .20,
+        strength: 1.3,
+        //MAGIC
+        elm_attack: 236,
+        elm_defense: 218,
+        elm_efficiency: 1.36,
+        potency: .28,
+        //WEAPON
+        weapon: 197,
+        shield: 186,
+        curse_crit: .20,
+        weaponCurse: 'Genjutsu',
+        weapon_amount: 3,
+        //SPEED / LUCK
+        accuracy: 8,
+        evasion: 7,
+        luck: 5,
+        stun: .08,
+        //GENJUTSU
+        genjutsu: 5,
+        gen_power: 40,
+        willpower: 5,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 35,
+        cursed_tech: 'Kamui - Warp away any Damage',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 24,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Raikiri - Increases Raikiri Damage by 6%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 200,
+        nin2amount: .06,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Copy-Ninja - Use any Ninjutsu immediatley after",
+        nin_cost: 20,
+        ninjutsu_pow: 0,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Change Elemental Affinity *5',
+        buff2: 'Reserved for Copy Technique',
+        buff_acc: 70,
+        buff2_acc: 100,
+        image: 'https://preview.redd.it/whats-your-opinion-on-hatake-kakashi-is-he-overrated-v0-54lk9zp713kc1.jpeg?width=640&crop=smart&auto=webp&s=15bbb27d35ac382e7b4036876c6f26616dceec2d'
+    },
+    {
+        name: 'Hinata',
+        nen_type: 'Enhancer',
+        element: 'Water',
+        elm: water,
+        hp: 2872,
+        //PHYSICAL
+        attack: 221,
+        defense: 165,
+        critical: .45,
+        strength: 1.20,
+        //MAGIC
+        elm_attack: 201,
+        elm_defense: 220,
+        elm_efficiency: 1.19,
+        potency: .20,
+        //WEAPON
+        weapon: 142,
+        shield: 185,
+        curse_crit: .20,
+        weaponCurse: 'Recovery',
+        weapon_amount: 2,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 4,
+        luck: 5,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 20,
+        willpower: 5,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 35,
+        cursed_tech: 'Gentle-Step-Twin-Lion-Fists - Increase Attack by 50',
+        curse_amount: 50,
+        curse_duration: 8,
+        curse_cost: 26,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Gentle-Fist - Increase Stun | Critical by 10%',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 180,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Eight-Trigrams-Vacuum-Palm - Decrease Defense | Critical",
+        nin_cost: 20,
+        ninjutsu_pow: 200,
+        ninamount: .15,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Magic by 15%',
+        buff2: 'Decrease Evasion by 5',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://static.wikia.nocookie.net/naruto-bleach/images/0/09/Hinatashippuden.png/revision/latest?cb=20110805192858'
+    },
+    {
+        name: 'Kiba',
+        nen_type: 'Specialist',
+        element: 'Wind',
+        elm: wind,
+        hp: 3061,
+        //PHYSICAL
+        attack: 224,
+        defense: 203,
+        critical: .24,
+        strength: 1.28,
+        //MAGIC
+        elm_attack: 147,
+        elm_defense: 194,
+        elm_efficiency: 1.12,
+        potency: .18,
+        //WEAPON
+        weapon: 160,
+        shield: 199,
+        curse_crit: .40,
+        weaponCurse: 'Weapon',
+        weapon_amount: 13,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 5,
+        luck: 7,
+        stun: .10,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 47,
+        negative_energy: 35,
+        cursed_tech: 'Three-Headed-Wolf - Increase Strength to 4',
+        curse_amount: 2.72,
+        curse_duration: 8,
+        curse_cost: 28,
+        //DOMAIN
+        dom_purity: 6,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Fang-Over-Fang - Decrease Defense by 10%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 190,
+        nin2amount: .10,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Fang-Passing-Fang - Increase Accuracy by 2",
+        nin_cost: 18,
+        ninjutsu_pow: 230,
+        ninamount: 2,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Evasion by 2',
+        buff2: 'Decrease Potency by 50%',
+        buff_acc: 50,
+        buff2_acc: 80,
+        image: 'https://i.pinimg.com/236x/1c/fd/4a/1cfd4a20677c5fd68e40a9550716f2c9.jpg'
+    },
+    {
+        name: 'Cart Titan',
+        nen_type: 'Conjuror',
+        element: 'Earth',
+        elm: earth,
+        hp: 2842,
+        //PHYSICAL
+        attack: 133,
+        defense: 128,
+        critical: .33,
+        strength: 1.18,
+        //MAGIC
+        elm_attack: 112,
+        elm_defense: 132,
+        elm_efficiency: 1.16,
+        potency: .10,
+        //WEAPON
+        weapon: 215,
+        shield: 230,
+        curse_crit: .24,
+        weaponCurse: 'Shield',
+        weapon_amount: 16,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 7,
+        stun: .10,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 0,
+        willpower: 4,
+        chakra: 0,
+        chakra_rec: 9,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 35,
+        cursed_tech: 'Granite-Blast - Deal 265 damage',
+        curse_amount: 265,
+        curse_duration: 1,
+        curse_cost: 24,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Machine-Gun - Heal 200 and Damage 200',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 200,
+        nin2amount: 200,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Artillary-Strike - Deal 500 Damage",
+        nin_cost: 30,
+        ninjutsu_pow: 500,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Accuracy by 2',
+        buff2: 'Decrease Potency by 50%',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://static.wikia.nocookie.net/shingekinokyojin/images/3/33/Pieck_Finger_%28Anime%29_character_image_%28854%29.png/revision/latest?cb=20231105183326'
+    },
+
 ]

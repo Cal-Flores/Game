@@ -176,20 +176,21 @@
         let redStatus = []
         let redCurses = []
         function chargeCurse(player, damage) {
-            console.log(`time to charge ${player} player,,,${damage} damage`)
             let currRedCurse = parseInt($('#redCurrCurse').text(), 10);
             let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10);
 
+
             if (player == 'red') {
+                if (redCurseRec <= 0) return
                 let firstRecovery = 100 - redCurseRec;
                 let recovery = damage / firstRecovery;
                 currRedCurse += recovery;
                 $('#redCurrCurse').text(Math.round(currRedCurse))
             } else {
+                if (blueCurseRec <= 0) return
                 let firstRecovery = 100 - blueCurseRec;
                 let recovery = damage / firstRecovery;
                 currBlueCurse += recovery;
-                console.log(`this is recovery ${firstRecovery} and after dicison its ${recovery} added`)
                 $('#blueCurrCurse').text(Math.round(currBlueCurse))
             }
 
@@ -206,8 +207,8 @@
 
             //physical
             let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka']
-            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres']
-            let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter']
+            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement']
+            let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
             let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka']
@@ -220,7 +221,7 @@
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             //speed + recovery + luck
-            let accuracy = ['SCREAM', 'Whirlwind']
+            let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
             let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique']
             let luck = []
@@ -238,15 +239,15 @@
             let domCost = []
             // ninjutsu
             let ninCosted = ['Texture-Surprise']
-            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam']
+            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam', 'Spectral-Curse']
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly']
-            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Satellitonbo']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique']
+            let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist']
             let trade = ['Jajanken']
-            let percentDmg = ['Blood-Suck']
+            let percentDmg = ['Blood-Suck', 'Solo-Leveling']
             let special = ['I.R.S']
             let setNin = ['Hakoware'] //ie SET CHAKRA TO 0
 
@@ -785,13 +786,13 @@
                     let hakDamage = 0
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
-                        hakDamage = currRedChakra * 8;
+                        hakDamage = currRedChakra * 9;
                         currBlueHp = currBlueHp -= hakDamage
                         currRedChakra = 0;
                         alert(`Hakoware loans and deals ${hakDamage} to Blue`)
                     } else {
                         currRedChakra += Math.floor(currBlueChakra / 2)
-                        hakDamage = currBlueChakra * 8;
+                        hakDamage = currBlueChakra * 9;
                         currredHp = currredHp -= hakDamage
                         currBlueChakra = 0;
                         alert(`Hakoware loans and deals ${hakDamage} to Red`)
@@ -802,13 +803,13 @@
                     $('#redChakra').text(currRedChakra)
                     $('#blueChakra').text(currBlueChakra)
                 }
-                if (jutsu == 'Blood-Suck') {
+                if (percentDmg.includes(jutsu)) {
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     if (attacker == 'red') {
-                        currBlueHp *= .82;
+                        currBlueHp *= (100 - amount);
                     } else {
-                        currRedHp *= .82;
+                        currRedHp *= ((100 - amount));
                     }
                     $('#redHP').text(Math.floor(currRedHp))
                     $('#blueHP').text(Math.floor(currBlueHp))
@@ -1360,14 +1361,14 @@
             }
         }
         const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
-        const strength = ['Polymorphic'];
+        const strength = ['Polymorphic', 'Three-Headed-Wolf'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
-        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai'];
+        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom']
@@ -1375,7 +1376,7 @@
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = [] //** NEW please add me**
         const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
-        const drain = ['Limitless-Reversal:'] //** NEW please add me**
+        const drain = [] //** NEW please add me**
         const recovery = ['Cursed-Gyuuki', 'Reverse-Flow-Recovery', 'Cursed-Kyuubi']
         const stunn = ['Flash', "Flying-Rajin", 'God’s-Accomplice']
         const misc = ["Idle-Death-Gamble", 'Hollow-Wicker-Basket', 'Whispering-Dominion',];
@@ -2066,10 +2067,12 @@
             Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
             Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: [, 'Grass', 'Lightning'] },
             psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
-            sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] }
+            sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] },
+            Lucky: { strongAgainst: ['Sage'], weakAgainst: ['Fighter', 'Fairy', 'Psychic'], }
         };
 
         function checkWeakness(attackerElement, defenderElement) {
+            console.log(attackerElement)
             const weaknesses = elementalWeaknesses[attackerElement];
             return weaknesses.strongAgainst.includes(defenderElement);
         }
@@ -2096,7 +2099,7 @@
         }
 
         function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.7;
+            const multiplier = 1.8;
             return (accuracy * multiplier) / (accuracy + evasion);
         }
         function calculateNinjutsuChance(accuracy, evasion) {
@@ -2553,6 +2556,8 @@
             console.log('Blue Stats:', { blueAttack, blueDefense, blueCrit, blueElmAttack, blueElmDef, blueElmEffc, blueHp, blueStrength, bluePot, blueELM, currBlueChakra });
 
             let variance = Math.random() * 0.2 - 0.1;
+            let baseDamage = 85;
+            let damageReductionFactor = 0.75;
             let attackerStatusEffects = attacker === 'red' ? redStatus : blueStatus;
 
             if (attackerStatusEffects.includes('Paralysis')) {
@@ -2649,8 +2654,8 @@
                             cursedTool(attacker, redWeaponCurse, redWeaponAmount)
                         }
                         console.log(`${redWeapon} attcking ${blueShield} with a varience of ${variance}`)
-                        let damage = ((redWeapon * (1 + variance)) - (blueShield / 4));
-                        damage = Math.max(1, Math.round(damage));
+                        let damage = Math.max(1, Math.round((baseDamage + (redWeapon - (blueShield * damageReductionFactor))) * (1 + variance)));
+
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
@@ -2699,8 +2704,7 @@
                             cursedTool(attacker, blueWeaponCurse, blueWeaponAmount)
                         }
 
-                        let damage = ((blueWeapon * (1 + variance)) - (redShield / 4));
-                        damage = Math.max(1, Math.round(damage));
+                        let damage = Math.max(1, Math.round((baseDamage + (blueWeapon - (redShield * damageReductionFactor))) * (1 + variance)));
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
@@ -2759,11 +2763,10 @@
                             }
                         }
 
-                        let magicDamage = ((redElmAttack * (1 + variance)) - (blueElmDef / 4)) * magicEffectiveness;
-
+                        let magicDamage = Math.max(1, Math.round((baseDamage + (redElmAttack - (blueElmDef * damageReductionFactor))) * (1 + variance) * magicEffectiveness));
                         // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.375; // Multiply by 1.5 for critical hit
+                            magicDamage *= 1.35; // Multiply by 1.5 for critical hit
                             critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
                         }
 
@@ -2818,11 +2821,10 @@
                             }
                         }
 
-                        let magicDamage = ((blueElmAttack * (1 + variance)) - (redElmDef / 4)) * magicEffectiveness;
-
+                        let magicDamage = Math.max(1, Math.round((baseDamage + (blueElmAttack - (redElmDef * damageReductionFactor))) * (1 + variance) * magicEffectiveness));
                         // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.375; // Multiply by 1.5 for critical hit
+                            magicDamage *= 1.35; // Multiply by 1.5 for critical hit
                             critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
                         }
 
@@ -3157,6 +3159,7 @@
                         criticalMultiplier = isCritical ? redStrength : 1.0;
 
                         let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 4)) * criticalMultiplier;
+                        let variance = Math.random() * 0.2 - 0.1;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
                         $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
@@ -3164,12 +3167,12 @@
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
                         chargeCurse('red', selfDamage)
                     } else if (isHit) {
-                        // Normal attack sequence if not hitting self
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStrength : 1.0;
+                        //THE OG FORMULA //let damage = ((redAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier
+                        // FINAL FANTASY X //let damage = ((Math.pow(redAttack, 2) / (redAttack + blueDefense)) + 50) * variance * criticalMultiplier;
 
-                        let damage = ((redAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier;
-                        damage = Math.max(1, Math.round(damage));
+                        let damage = Math.max(1, Math.round((baseDamage + (redAttack - (blueDefense * damageReductionFactor))) * (1 + variance) * criticalMultiplier));
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
@@ -3214,8 +3217,7 @@
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
 
-                        let damage = ((blueAttack * (1 + variance)) - (redDefense / 4)) * criticalMultiplier;
-                        damage = Math.max(1, Math.round(damage));
+                        let damage = Math.max(1, Math.round((baseDamage + (blueAttack - (redDefense * damageReductionFactor))) * (1 + variance) * criticalMultiplier));
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
