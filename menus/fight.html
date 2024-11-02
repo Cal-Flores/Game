@@ -211,7 +211,7 @@
             let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets']
             let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
@@ -223,7 +223,7 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -239,7 +239,7 @@
             let domCost = []
             // ninjutsu
             let ninCosted = ['Texture-Surprise']
-            let ninDamage = ["Lariat", 'Knife', 'Ripper-Cyclotron', 'Insect-Sphere', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam', 'Spectral-Curse']
+            let ninDamage = ["Lariat", 'Ripper-Cyclotron-15x', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam', 'Spectral-Curse']
             let ultCosted = []
             let ultDamage = []
             let elem = []
@@ -807,9 +807,9 @@
                     let currRedHp = parseInt($('#redHP').text(), 10)
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     if (attacker == 'red') {
-                        currBlueHp *= (100 - amount);
+                        currBlueHp *= (1 - amount);
                     } else {
-                        currRedHp *= ((100 - amount));
+                        currRedHp *= ((1 - amount));
                     }
                     $('#redHP').text(Math.floor(currRedHp))
                     $('#blueHP').text(Math.floor(currBlueHp))
@@ -2374,10 +2374,6 @@
 
                 $('#damage').hide().text(`Won gamble! Dealt ${bonusDamage} damage! 🎲`).fadeIn(500);
             }
-
-            // Ensure HP does not drop below 0
-            currRedHp = Math.max(0, currRedHp);
-            currBlueHp = Math.max(0, currBlueHp);
 
             // Update the displayed HP values
             $('#redHP').text(currRedHp);
