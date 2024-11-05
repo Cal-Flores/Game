@@ -230,7 +230,7 @@
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -1540,23 +1540,35 @@
                 }
                 if (gojo.includes(curse)) {
                     let curse;
-                    limitTech = prompt('Infinity (5) | Reversel: Red | Maximum-Lapse: Blue (20)')
+                    limitTech = prompt('Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue ')
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
                         redEvas += 12;
                         $('#redEvas').text(redEvas)
-                        alert(`Gojo uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
-                    } else if (limitTech == 'Reversel: Red') {
-                        curse = 'Reversel: Red'
+                        //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
+                    } else if (limitTech == 'Reversal: Red') {
+                        curse = 'Reversal: Red'
                         duration = 8
-                        currRedCurse -= 8;
+                        currRedCurse -= 10;
                         redAttack += 50
-                        redElmAttack += 60
                         $('#redAttack').text(redAttack)
+                        $('#redCurrCurse').text(currRedCurse)
+                        //alert(`Attack ${redAttack}`)
+                    } else if (limitTech == 'Maximum Lapse: Blue') {
+                        curse = 'Maximum Lapse: Blue';
+                        duration = 8;
+                        currRedCurse -= 10;
+                        redElmAttack += 70
                         $('#redElmAttack').text(redElmAttack)
                         $('#redCurrCurse').text(currRedCurse)
-                        alert(`Gojos Attack ${redAttack} ${redElmAttack}`)
+                    } else if (limitTech == 'Neutral: Blue') {
+                        curse = 'Neutral: Blue'
+                        duration = 8
+                        currRedCurse -= 5;
+                        redAcc += 20;
+                        $('#redAcc').text(redAcc);
+                        //alert(`blue Accuracy ${redAcc}`)
                     }
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#redCurseUi').text(curse)
@@ -1700,13 +1712,40 @@
                     }
                 }
                 if (gojo.includes(curse)) {
-                    limitTech = prompt('Infinity (5) | Reversel: Red | Maximum Lapse: Blue (20)')
+                    let curse;
+                    limitTech = prompt('Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue ')
                     if (limitTech == 'Infinity') {
+                        curse = 'Infinity'
                         duration = 6
                         blueEvas += 12;
                         $('#blueEvas').text(blueEvas)
-                        alert(`Gojo uses Infinity! Evasion: ${blueEvas}, Duration: ${duration}`)
+                        //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
+                    } else if (limitTech == 'Reversal: Red') {
+                        curse = 'Reversal: Red'
+                        duration = 8
+                        currBlueCurse -= 10;
+                        blueAttack += 50
+                        $('#blueAttack').text(blueAttack)
+                        $('#blueCurrCurse').text(currBlueCurse)
+                        //alert(`Attack ${redAttack}`)
+                    } else if (limitTech == 'Maximum Lapse: Blue') {
+                        curse = 'Maximum Lapse: Blue';
+                        duration = 8;
+                        currBlueCurse -= 10;
+                        blueElmAttack += 70
+                        $('#blueElmAttack').text(blueElmAttack)
+                        $('#blueCurrCurse').text(currBlueCurse)
+                    } else if (limitTech == 'Neutral: Blue') {
+                        curse = 'Neutral: Blue'
+                        duration = 8
+                        currBlueCurse -= 5;
+                        blueAcc += 20;
+                        $('#blueAcc').text(blueAcc);
+                        //alert(`blue Accuracy ${redAcc}`)
                     }
+                    blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#blueCurseUi').text(curse)
+                    return;
                 }
                 /////////// END OF IF CHAIN /////////////
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -1805,17 +1844,24 @@
                     $('#redStr').text(redStrength)
                 }
                 /// gojo
-                if (curse == 'Infinity' || curse == 'Reversel: Red') {
+                // Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue
+                if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
                         redEvas -= 12;
                         $('#redEvas').text(redEvas)
-                        alert('Infinity Lifted')
-                    } else if (curse == 'Reversel: Red') {
-                        alert('Reversal Red lifted')
+                        //alert('Infinity Lifted')
+                    } else if (curse == 'Reversal: Red') {
                         redAttack -= 50;
-                        redElmAttack -= 60;
                         $('#redAttack').text(redAttack)
+                        //alert('Reversal Red lifted')
+                    } else if (curse == 'Maximum Lapse: Blue') {
+                        redElmAttack -= 70;
                         $('#redElmAttack').text(redElmAttack)
+                        //alert('maximum lifted')
+                    } else if (curse == 'Neutral: Blue') {
+                        redAcc -= 20;
+                        $('#redAcc').text(redAcc);
+                        //alert(`Neutral released!`)
                     }
                 }
 
@@ -1901,6 +1947,25 @@
                     $('#blueEvas').text(blueEvas)
                     $('#blueCrit').text(blueCrit)
                     $('#blueStr').text(blueStrength)
+                }
+                if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
+                    if (curse == 'Infinity') {
+                        blueEvas -= 12;
+                        $('#blueEvas').text(blueEvas)
+                        //alert('Infinity Lifted')
+                    } else if (curse == 'Reversal: Red') {
+                        blueAttack -= 50;
+                        $('#blueAttack').text(blueAttack)
+                        //alert('Reversal Red lifted')
+                    } else if (curse == 'Maximum Lapse: Blue') {
+                        blueElmAttack -= 70;
+                        $('#blueElmAttack').text(blueElmAttack)
+                        //alert('maximum lifted')
+                    } else if (curse == 'Neutral: Blue') {
+                        blueAcc -= 20;
+                        $('#blueAcc').text(blueAcc);
+                        //alert(`Neutral released!`)
+                    }
                 }
             }
 
