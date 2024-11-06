@@ -213,7 +213,7 @@
             //Magic
             let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets']
             let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals']
-            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation']
+            let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation', 'Divine-Flame']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
             let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka']
@@ -244,7 +244,7 @@
             let ultDamage = []
             let elem = []
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -1385,6 +1385,8 @@
         const toji = ['Inventory-Curse']
         const black = ['Black-Flash']
         const gojo = ['Limitless']
+        const kenjaku = ['Uzumaki']
+        const sukuna = ['Malevolent Shrine']
 
 
         let blackTech;
@@ -1544,13 +1546,13 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        redEvas += 12;
+                        redEvas += 20;
                         $('#redEvas').text(redEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
                         curse = 'Reversal: Red'
                         duration = 8
-                        currRedCurse -= 10;
+                        currRedCurse -= 12;
                         redAttack += 50
                         $('#redAttack').text(redAttack)
                         $('#redCurrCurse').text(currRedCurse)
@@ -1569,6 +1571,41 @@
                         redAcc += 20;
                         $('#redAcc').text(redAcc);
                         //alert(`blue Accuracy ${redAcc}`)
+                    }
+                    redCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#redCurseUi').text(curse)
+                    return;
+                }
+                if (kenjaku.includes(curse)) {
+                    let curse = prompt('Maximum: Uzumaki |  Antigravity System');
+                    if (curse == 'Maximum: Uzumaki') {
+                        duration = 1
+                        let uzuCurse = parseInt($('#redCurrCurse').text(), 10)
+                        let uzuHp = parseInt($('#blueHP').text(), 10);
+                        let health = Math.floor(uzuHp - (uzuCurse * 8))
+                        alert(`Maximum Damage: ${uzuCurse * 8}`)
+                        $('#blueHP').text(health)
+                    } else if (curse == 'Antigravity System') {
+                        duration = 3
+                        currRedCurse -= 25;
+                        alert('Player is crushed by gravity for 2 turns!')
+                        blueEvas -= 10
+                        $('#blueEvas').text(blueEvas)
+                    }
+                    $('#redCurrCurse').text(currRedCurse)
+                    redCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#redCurseUi').text(curse)
+                    return;
+                }
+                if (sukuna.includes(curse)) {
+                    curse = prompt('Cleave | Dismantle');
+                    if (curse == 'Cleave') {
+                        redWeapon += 70;
+                        $('#redWeapon').text(redWeapon)
+                    } else if (curse == 'Dismantle') {
+                        currRedCurse -= 30;
+                        currBlueHp -= 425;
+                        $('#blueHP').text(currBlueHp);
                     }
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#redCurseUi').text(curse)
@@ -1717,13 +1754,13 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        blueEvas += 12;
+                        blueEvas += 20;
                         $('#blueEvas').text(blueEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
                         curse = 'Reversal: Red'
                         duration = 8
-                        currBlueCurse -= 10;
+                        currBlueCurse -= 12;
                         blueAttack += 50
                         $('#blueAttack').text(blueAttack)
                         $('#blueCurrCurse').text(currBlueCurse)
@@ -1742,6 +1779,41 @@
                         blueAcc += 20;
                         $('#blueAcc').text(blueAcc);
                         //alert(`blue Accuracy ${redAcc}`)
+                    }
+                    blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#blueCurseUi').text(curse)
+                    return;
+                }
+                if (kenjaku.includes(curse)) {
+                    let curse = prompt('Maximum: Uzumaki |  Antigravity System');
+                    if (curse == 'Maximum: Uzumaki') {
+                        duration = 1
+                        let uzuCurse = parseInt($('#blueCurrCurse').text(), 10)
+                        let uzuHp = parseInt($('#redHP').text(), 10);
+                        let health = Math.floor(uzuHp - (uzuCurse * 8))
+                        alert(`Maximum Damage: ${uzuCurse * 8}`)
+                        $('#redHP').text(health)
+                    } else if (curse == 'Antigravity System') {
+                        duration = 3
+                        currBlueCurse -= 25;
+                        alert('Player is crushed by gravity for 2 turns!')
+                        redEvas -= 10
+                        $('#redEvas').text(redEvas)
+                    }
+                    $('#blueCurrCurse').text(currBlueCurse)
+                    blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#blueCurseUi').text(curse)
+                    return;
+                }
+                if (sukuna.includes(curse)) {
+                    curse = prompt('Cleave | Dismantle');
+                    if (curse == 'Cleave') {
+                        blueWeapon += 70;
+                        $('#blueWeapon').text(blueWeapon)
+                    } else if (curse == 'Dismantle') {
+                        currBlueCurse -= 30;
+                        currRedHp -= 425;
+                        $('#redHP').text(currRedHp);
                     }
                     blueCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#blueCurseUi').text(curse)
@@ -1847,7 +1919,7 @@
                 // Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        redEvas -= 12;
+                        redEvas -= 20;
                         $('#redEvas').text(redEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -1864,6 +1936,15 @@
                         //alert(`Neutral released!`)
                     }
                 }
+                if (curse == 'Antigravity System') {
+                    blueEvas += 10;
+                    $('#blueEvas').text(blueEvas)
+                }
+                if (curse == 'Cleave') {
+                    redWeapon -= 70;
+                    $('#redWeapon').text(redWeapon)
+                }
+
 
             } else {
                 ///////// BLUE PLAYER CURSE REMOVAL /////////
@@ -1950,7 +2031,7 @@
                 }
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        blueEvas -= 12;
+                        blueEvas -= 20;
                         $('#blueEvas').text(blueEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -1966,6 +2047,14 @@
                         $('#blueAcc').text(blueAcc);
                         //alert(`Neutral released!`)
                     }
+                }
+                if (curse == 'Antigravity System') {
+                    redEvas += 10;
+                    $('#redEvas').text(redEvas)
+                }
+                if (curse == 'Cleave') {
+                    blueWeapon -= 70;
+                    $('#blueWeapon').text(blueWeapon)
                 }
             }
 
@@ -2182,8 +2271,11 @@
             Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: [, 'Grass', 'Lightning'] },
             psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
             sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] },
-            Lucky: { strongAgainst: ['Sage'], weakAgainst: ['Fighter', 'Fairy', 'Psychic'], }
+            Lucky: { strongAgainst: ['Sage'], weakAgainst: ['Fighter', 'Fairy', 'Psychic'], },
+            Holy: { strongAgainst: [], weakAgainst: [] },
+            Sand: { strongAgainst: [], weakAgainst: [] },
         };
+
 
         function checkWeakness(attackerElement, defenderElement) {
             console.log(attackerElement)

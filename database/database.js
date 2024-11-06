@@ -10,8 +10,9 @@ let wood = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-a
 let fire = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8'
 let fairy = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-a6a6-4871-bed6-e8e0b9ce2af0/d6jtiuy-f4dc7bea-beb7-417b-ba85-736ae9f5c030.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MjZmYmRkLWE2YTYtNDg3MS1iZWQ2LWU4ZTBiOWNlMmFmMFwvZDZqdGl1eS1mNGRjN2JlYS1iZWI3LTQxN2ItYmE4NS03MzZhZTlmNWMwMzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.A7u24I0bww1aTVrw5_r3CLN3r22RCZ0UwN64WCHUBMo'
 let ghost = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-a6a6-4871-bed6-e8e0b9ce2af0/d60owgy-a7268d0a-16b8-4fcd-ba33-8693f0bd401e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MjZmYmRkLWE2YTYtNDg3MS1iZWQ2LWU4ZTBiOWNlMmFmMFwvZDYwb3dneS1hNzI2OGQwYS0xNmI4LTRmY2QtYmEzMy04NjkzZjBiZDQwMWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YviN7Ut0mDSC85LB34cdO43vBTexZICfV-w_C-iUVgk'
-let posion = '../menus/poison.png'
+let holy = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl6n-4e403272-f641-4ec0-a451-49061d40aef6.png/v1/fill/w_894,h_894/flying_type_symbol_galar_by_jormxdos_dffvl6n-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmw2bi00ZTQwMzI3Mi1mNjQxLTRlYzAtYTQ1MS00OTA2MWQ0MGFlZjYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.xTE63SRI89iYddks3zDYryz4UkqEFOCAOH5_feLbQHs'
 let lucky = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dhcbrna-7f9be329-2790-4042-a14c-d26d9a730ac8.png/v1/crop/w_125,h_125,x_0,y_0,scl_0.25/pokemon_type_temporel___temporal_by_wergan_dhcbrna-125s.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTAwIiwicGF0aCI6IlwvZlwvNDcyZjRhNDQtMGI2OC00NmE5LWJmZDEtZmZjYTVmNWQ0MTFmXC9kaGNicm5hLTdmOWJlMzI5LTI3OTAtNDA0Mi1hMTRjLWQyNmQ5YTczMGFjOC5wbmciLCJ3aWR0aCI6Ijw9NTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_ol9-e4eGQ_1_aH8JdRvIk5wGSEESzTPAoeQWz5b3Y'
+let sand = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dhcbrmr-a20b0e35-ef48-4712-9a8c-1fd459906b8a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3MmY0YTQ0LTBiNjgtNDZhOS1iZmQxLWZmY2E1ZjVkNDExZlwvZGhjYnJtci1hMjBiMGUzNS1lZjQ4LTQ3MTItOWE4Yy0xZmQ0NTk5MDZiOGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Pru4epDPkCEhauCM6F18cWuvbPnzo5MGCQkrKiXtLs4'
 let sage = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w4gu-bcf44127-7bc3-468d-b148-1af8cf4e7ac0.png/v1/fit/w_720,h_720/colorless_energy_by_humac1_d50w4gu-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYWJhMWE3NTYtZDk1NS00M2Y2LWEyZTktNWI3ZDYwNDA2ODU0XC9kNTB3NGd1LWJjZjQ0MTI3LTdiYzMtNDY4ZC1iMTQ4LTFhZjhjZjRlN2FjMC5wbmciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.I2hRnHXhqZrAh05uX4UyxVC8C-iVQrj00LWU7nvS9C8'
 const database = [
     {
@@ -3327,8 +3328,8 @@ const database = [
     {
         name: 'Gaara',
         nen_type: 'Manipulator',
-        element: 'Earth',
-        elm: earth,
+        element: 'Sand',
+        elm: sand,
         hp: 3254,
         //PHYSICAL
         attack: 138,
@@ -3370,7 +3371,7 @@ const database = [
         dom_purity: 8,
         dom_lethal: 165,
         dom_duration: 6,
-        dom_cost: 31,
+        dom_cost: 28,
         //NINJUTSU
         ninjutsu2: 'Sand-Coffin - Increase Magic by 8%',
         ninJutsu2cost: 16,
@@ -6314,8 +6315,8 @@ const database = [
     {
         name: 'Gojo',
         nen_type: 'Specialist',
-        element: 'Ghost',
-        elm: ghost,
+        element: 'Holy',
+        elm: holy,
         hp: 3444,
         //PHYSICAL
         attack: 214,
@@ -6347,12 +6348,12 @@ const database = [
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 60,
+        cursed_recovery: 70,
         negative_energy: 50,
-        cursed_tech: 'Limitless - 15 | 25 ',
+        cursed_tech: 'Limitless - 10 | 22 ',
         curse_amount: 10,
         curse_duration: 6,
-        curse_cost: 15,
+        curse_cost: 10,
         //DOMAIN
         dom_purity: 15,
         dom_lethal: 100,
@@ -6360,7 +6361,7 @@ const database = [
         dom_cost: 50,
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
-        ninJutsu2cost: 15,
+        ninJutsu2cost: 10,
         ninJutsu2Dmg: 0,
         nin2amount: 10,
         ninEnhance: true,
@@ -6376,5 +6377,137 @@ const database = [
         buff_acc: 70,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/theunitedorganizationtoonsheroes/images/7/77/Satoru_Gojo.jpg/revision/latest/scale-to-width-down/450?cb=20220201130911'
+    },
+    {
+        name: 'Kenjaku',
+        nen_type: 'Manipulator',
+        element: 'Dark',
+        elm: dark,
+        hp: 3266,
+        //PHYSICAL
+        attack: 125,
+        defense: 242,
+        critical: .10,
+        strength: 1.12,
+        //MAGIC
+        elm_attack: 246,
+        elm_defense: 165,
+        elm_efficiency: 1.40,
+        potency: .20,
+        //WEAPON
+        weapon: 125,
+        shield: 232,
+        curse_crit: 1.0,
+        weaponCurse: 'Curse',
+        weapon_amount: 8,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 3,
+        luck: 5,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 4,
+        gen_power: 40,
+        willpower: 4,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 10,
+        //CURSE
+        cursed_energy: 100,
+        cursed_recovery: 70,
+        negative_energy: 70,
+        cursed_tech: 'Uzumaki 0 | 25',
+        curse_amount: 0,
+        curse_duration: 3,
+        curse_cost: 0,
+        //DOMAIN
+        dom_purity: 10,
+        dom_lethal: 122,
+        dom_duration: 7,
+        dom_cost: 50,
+        //NINJUTSU
+        ninjutsu2: 'Extracted-Technique - Decrease Any stat by 15%',
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 0,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health",
+        nin_cost: 24,
+        ninjutsu_pow: 0,
+        ninamount: 0,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Recovery by 2',
+        buff2: 'Decrease Critical by 25%',
+        buff_acc: 50,
+        buff2_acc: 60,
+        image: 'https://i0.wp.com/beebom.com/wp-content/uploads/2023/09/Kenjaku-in-anime.jpg?ssl=1&resize=426%2C426'
+    },
+    {
+        name: 'Sukuna',
+        nen_type: 'Transmuter',
+        element: 'Fire',
+        elm: fire,
+        hp: 3389,
+        //PHYSICAL
+        attack: 137,
+        defense: 143,
+        critical: .12,
+        strength: 1.25,
+        //MAGIC
+        elm_attack: 288,
+        elm_defense: 189,
+        elm_efficiency: 1.42,
+        potency: .25,
+        //WEAPON
+        weapon: 250,
+        shield: 185,
+        curse_crit: .12,
+        weaponCurse: 'Magic Def',
+        weapon_amount: 20,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 5,
+        luck: 5,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 4,
+        gen_power: 40,
+        willpower: 4,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 3,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 80,
+        negative_energy: 25,
+        cursed_tech: 'Malevolent Shrine - 20 | 30',
+        curse_amount: 0,
+        curse_duration: 6,
+        curse_cost: 20,
+        //DOMAIN
+        dom_purity: 14,
+        dom_lethal: 220,
+        dom_duration: 5,
+        dom_cost: 50,
+        //NINJUTSU
+        ninjutsu2: 'Divine-Flame - Increase Potency by 30%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 150,
+        nin2amount: .30,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Shrine - Decrease any stat by 18%",
+        nin_cost: 22,
+        ninjutsu_pow: 0,
+        ninamount: .18,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Magic Defense by 10%',
+        buff2: 'Decrease Evasion by 3',
+        buff_acc: 65,
+        buff2_acc: 50,
+        image: 'https://pbs.twimg.com/media/ErKDr0UXAAAFux9.jpg'
     },
 ]
