@@ -347,8 +347,8 @@ body {
 /* FOIRM START HERE!!!!!!!!!!!!!!!!! */
 .fight_corner_stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
     text-align: center;
     margin-bottom: 10px;
     /* Further reduced bottom margin */
@@ -364,7 +364,7 @@ body {
     border-radius: 4px;
     /* Smaller border radius */
     border: 1px solid #5D5142;
-    min-width: 60px;
+    min-width: 50px;
     /* Set a minimum width to prevent shrinking too much */
     height: 35px;
 }

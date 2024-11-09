@@ -45,6 +45,7 @@
                     <select id="actioner">
                         <option>Attack</option>
                         <option>Magic Attack</option>
+                        <option>Spirit Attack</option>
                         <option>Cursed Tool Attack</option>
                         <option>Ninjutsu</option>
                         <option>Ultimate Ninjutsu</option>
@@ -120,6 +121,11 @@
         let blueStun
         let blueDrain
         let blueNegative
+        let blueSpirit // SPIRIT IS HERE
+        let blueTalis
+        let blueSpiritCrit
+        let blueSpiritCurse
+        let blueSpiritAmount
         let blueStatus = []
         let blueCurses = []
 
@@ -173,6 +179,11 @@
         let redStun
         let redDrain
         let redNegative
+        let redSpirit // SPIRIT IS HERE
+        let redTalis
+        let redSpiritCrit
+        let redSpiritCurse
+        let redSpiritAmount
         let redStatus = []
         let redCurses = []
         function chargeCurse(player, damage) {
@@ -2486,9 +2497,14 @@
             if (defenderNumbers.includes(dieRoll)) {
                 console.log('Defender wins the gamble!');
 
-                // Only add extra penalty if a high-luck attacker loses to a low-luck defender
-                //let penalty = luckDisparity > 0 ? Math.floor(wager * (1 + (luckDisparity * 0.2))) : wager;
-                let penalty = Math.floor(wager * 1.5);
+                let penalty
+                let penaltyChance = Math.floor(Math.random() * 2) + 1;
+                if (penaltyChance == 1) {
+                    penalty = Math.floor(wager * 1.5);
+                } else {
+                    penalty = Math.floor(wager * 2);
+                }
+
 
                 // Apply penalty
                 if (attacker === 'red') {
@@ -2674,6 +2690,181 @@
             $('#blueShield').text(blueShield)
             $('#blueWeapon').text(blueWeapon)
         }
+        function cursedSpirit(attacker, curse, amount) {
+            //alert(`${curse} : ${amount}`)
+            let currBlueHp = parseInt($('#blueHP').text(), 10);
+            let currRedHp = parseInt($('#redHP').text(), 10);
+            if (attacker == 'blue') {
+                //// LONG IF CHAIN ///
+                if (curse == 'Shield') {
+                    blueShield += amount
+                }
+                if (curse == 'Critical') {
+                    blueCrit = (blueCrit += amount).toFixed(2)
+                }
+                if (curse == 'Defense') {
+                    blueDefense = (blueDefense += amount)
+                }
+                if (curse == 'Attack') {
+                    blueAttack = (blueAttack += amount)
+                }
+                if (curse == 'Magic') {
+                    blueElmAttack = (blueElmAttack += amount)
+                }
+                if (curse == 'Accuracy') {
+                    blueAcc += amount
+                }
+                if (curse == 'Luck') {
+                    blueLuck += amount
+                }
+                if (curse == 'Curse') {
+                    blueCurseRec += amount
+                    alert(`Blue curse recovery drops to ${blueCurseRec}`)
+                }
+                if (curse == 'Recovery') {
+                    blueRecovery += amount
+                    alert(`Blue recovery drops to ${blueRecovery}`)
+                }
+                if (curse == 'Weapon') {
+                    blueWeapon += amount
+                }
+                if (curse == 'Gen-Power') {
+                    blueGenPow += amount
+                }
+                if (curse == 'Magic-Def') {
+                    blueElmDef += amount
+                }
+                if (curse == 'Evasion') {
+                    blueEvas += amount
+                }
+                if (curse == 'Purity') {
+                    blueDomPurity += amount
+                }
+                if (curse == 'Health') {
+                    currBlueHp += amount
+                }
+                if (curse == 'Spirit') {
+                    blueSpirit += amount
+                }
+            }
+
+            if (attacker == 'red') {
+                //// LONG IF CHAIN ///
+                if (curse == 'Shield') {
+                    redShield += amount
+                }
+                if (curse == 'Critical') {
+                    redCrit = (redCrit += amount).toFixed(2)
+                }
+                if (curse == 'Defense') {
+                    redDefense = (redDefense += amount)
+                }
+
+                if (curse == 'Attack') {
+                    redAttack = (redAttack += amount)
+                }
+                if (curse == 'Magic') {
+                    redElmAttack = (redElmAttack += amount)
+                }
+                if (curse == 'Accuracy') {
+                    redAcc += amount
+                }
+                if (curse == 'Curse') {
+                    redCurseRec += amount
+                    alert(`Red curse recovery drops to ${redCurseRec}`)
+                }
+                if (curse == 'Recovery') {
+                    redRecovery += amount
+                    alert(`Red recovery drops to ${redRecovery}`)
+                }
+                if (curse == 'Weapon') {
+                    redWeapon += amount
+                }
+                if (curse == 'Gen-Power') {
+                    redGenPow += amount
+                }
+                if (curse == 'Magic-Def') {
+                    redElmDef += amount
+                }
+                if (curse == 'Evasion') {
+                    redEvas += amount
+                }
+                if (curse == 'Luck') {
+                    redLuck += amount
+                }
+                if (curse == 'Purity') {
+                    redDomPurity += amount
+                }
+                if (curse == 'Health') {
+                    alert('joe burrrrr')
+                    currRedHp += amount
+                }
+                if (curse == 'Spirit') {
+                    redSpirit += amount
+                }
+            }
+            // UPDATE U.I
+            $('#redHp').text(redHp);
+            $('#redAttack').text(redAttack);
+            $('#redDefense').text(redDefense);
+            $('#redCrit').text(redCrit);
+            $('#redStr').text(redStrength);
+            $('#redELM').text(redELM);
+            $('#redElmAttack').text(redElmAttack);
+            $('#redElmDef').text(redElmDef);
+            $('#redElmEffc').text(redElmEffc);
+            $('#redPot').text(redPotency);
+            $('#redGen').text(redGen)
+            $('#redGenPow').text(redGenPow)
+            $('#redWill').text(redWill)
+            $('#redAcc').text(redAcc)
+            $('#redLuck').text(redLuck)
+            $('#redEvas').text(redEvas)
+            $('#redNinPow').text(redNenNinDmg)
+            $('#redUltPow').text(redNinPower)
+            $('#redcost1').text(redNenNinCost)
+            $('#redcost2').text(redNinCost)
+            $('#red_dom_purity').text(redDomPurity)
+            $('#red_dom_lethal').text(redDomLethal)
+            $('#red_dom_duration').text(redDomDuration)
+            $('#red_dom_cost').text(redDomCost)
+            $('#redWeapon').text(redWeapon)
+            $('#redShield').text(redShield)
+            $('#redWeapon').text(redWeapon)
+            $('#redSpirit').text(redSpirit)
+
+            $('#blueHp').text(blueHp);
+            $('#blueAttack').text(blueAttack);
+            $('#blueDefense').text(blueDefense);
+            $('#blueCrit').text(blueCrit);
+            $('#blueStr').text(blueStrength)
+            $('#blueAcc').text(blueAcc)
+            $('#blueEvas').text(blueEvas)
+            $('#blueLuck').text(blueLuck)
+            $('#bluePot').text(bluePotency);
+            $('#blueELM').text(blueELM);
+            $('#blueElmAttack').text(blueElmAttack);
+            $('#blueElmDef').text(blueElmDef);
+            $('#blueElmEffc').text(blueElmEffc);
+            $('#blueGen').text(blueGen)
+            $('#blueGenPow').text(blueGenPow)
+            $('#blueWill').text(blueWill)
+            $('#blueNinPow').text(blueNenNinDmg)
+            $('#blueUltPow').text(blueNinPower)
+            $('#bluecost1').text(blueNenNinCost)
+            $('#bluecost2').text(blueNinCost)
+            $('#blue_dom_purity').text(blueDomPurity)
+            $('#blue_dom_lethal').text(blueDomLethal)
+            $('#blue_dom_duration').text(blueDomDuration)
+            $('#blue_dom_cost').text(blueDomCost)
+            $('#blueShield').text(blueShield)
+            $('#blueWeapon').text(blueWeapon)
+            $('#blueSpirit').text(blueSpirit)
+
+            $('#blueHP').text(currBlueHp);
+            $('#redHP').text(currRedHp);
+        }
+
 
 
 
@@ -2847,6 +3038,112 @@
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 🏹' : '').fadeIn(500);
+                        chargeCurse('red', damage)
+                    } else {
+                        // Display a miss message if the hit chance fails
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('red', 175)
+                    }
+                }
+            }
+            /// SPIRITATTACK
+
+            if (action == 'Spirit Attack') {
+                let isCritical;
+                let criticalMultiplier;
+                let hitChance;
+                let isHit;
+
+                if (attacker === 'red') {
+                    hitChance = calculateHitChance(redAcc, blueEvas);
+                    isHit = Math.random() < hitChance;
+                    isStun = Math.random() < redStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('Blue is Stunned!');
+                        }, 1500);
+
+                    }
+
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Red is Confused and hits themselves!');
+
+                        isCritical = Math.random() < redCrit;
+                        criticalMultiplier = isCritical ? redStrength : 1.0;
+
+                        let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 3)) * criticalMultiplier;
+                        selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        chargeCurse('red', selfDamage)
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < redSpiritCrit;
+                        if (isCritical) {
+                            cursedSpirit(attacker, redSpiritCurse, redSpiritAmount)
+                        }
+                        let damage = Math.max(1, Math.round((baseDamage + (redSpirit - (blueTalis * damageReductionFactor))) * (1 + variance)));
+
+
+                        $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 🦇' : '').fadeIn(500);
+                        chargeCurse('blue', damage)
+                    } else {
+                        $('#damage').hide().text('Missed! ❌').fadeIn(500);
+                        $('#crit').hide().text('').fadeIn(500);
+                        chargeCurse('blue', 175)
+                    }
+                } else if (attacker === 'blue') {
+                    hitChance = calculateHitChance(blueAcc, redEvas);
+                    isHit = Math.random() < hitChance;
+                    isStun = Math.random() < blueStun;
+                    if (isStun) {
+                        setTimeout(function () {
+                            alert('red is Stunned!');
+                        }, 1500);
+
+                    }
+
+                    ////// CONFUSION CHECK //////////////////////////
+                    let isConfused = attackerStatusEffects.includes('Confusion');
+                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+
+                    if (hitsSelf) {
+                        // Attacker is confused and hits themselves
+                        console.log('Blue is Confused and hits themselves!');
+
+                        isCritical = Math.random() < blueCrit;
+                        criticalMultiplier = isCritical ? blueStrength : 1.0;
+
+                        let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 3)) * criticalMultiplier;
+                        selfDamage = Math.max(1, Math.round(selfDamage));
+
+                        $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
+                        chargeCurse('blue', selfDamage)
+                    } else if (isHit) {
+                        // Normal attack sequence if not hitting self
+                        isCritical = Math.random() < blueSpiritCrit;
+                        // criticalMultiplier = isCritical ? blueStrength : 1.0;
+                        if (isCritical) {
+                            cursedSpirit(attacker, blueSpiritCurse, blueSpiritAmount)
+                        }
+
+                        let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redSpirit * damageReductionFactor))) * (1 + variance)));
+
+                        $('#redHP').text(currRedHp - damage); // Reduce defender's HP
+                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        $('#crit').hide().text(isCritical ? 'CRITICAL! 🦇' : '').fadeIn(500);
                         chargeCurse('red', damage)
                     } else {
                         // Display a miss message if the hit chance fails
@@ -3434,6 +3731,13 @@
         <span id="redStr">${player.strength}</span>
     </div>
     <div>
+        <p>🎯</p>
+        <span id="redAcc">${player.accuracy}</span>
+    </div>
+
+
+
+    <div>
         <p>🪄</p>
         <span id="redElmAttack">${player.elm_attack}</span>
     </div>
@@ -3449,7 +3753,15 @@
         <p>⛈</p>
         <span id="redElmEffc">${player.elm_efficiency}</span>
     </div>
-     <div>
+    <div>
+        <p>🕊</p>
+        <span id="redEvas">${player.evasion}</span>
+    </div>
+
+
+
+
+    <div>
         <p>🏹</p>
         <span id="redWeapon">${player.weapon}</span>
     </div>
@@ -3461,42 +3773,48 @@
         <p class='redWeaponCurse' >${player.weaponCurse}</p>
         <p id="redWeaponCrit">${player.curse_crit}</p>
     </div>
+    <div>
+        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <span id="redChakra">${player.chakra}</span>
+    </div>
+    <div>
+        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
+        <span  id='redCurrCurse'>${player.cursed_energy}</span>
+    </div>
+
+
+
+
+    <div>
+        <p>🦇</p>
+        <span id="redSpirit">${player.spirit}</span>
+    </div>
+    <div>
+        <p>☔</p>
+        <span id="redTalis">${player.spirit_def}</span>
+    </div>
     <div class='nen_numbers'>
-        <p id="redDrain">♺ ${player.drain}</p>
-        <p id="redNegative">🪬 ${player.negative_energy}</p>
+        <p class='redSpiritCurse'>${player.spiritCurse}</p>
+        <p id="redSpiritCrit">${player.spirit_crit}</p>
     </div>
     <div>
         <p>🍀</p>
         <span id="redLuck">${player.luck}</span>
     </div>
+    <div class='nen_numbers'>
+        <p id="redNinPow">${player.ninJutsu2Dmg}</p>
+        <p id="redUltPow">${player.ninjutsu_pow}</p>
+    </div>
 
-    <div>
-        <p>🎯</p>
-        <span id="redAcc">${player.accuracy}</span>
-    </div>
-    <div>
-        <p>🕊</p>
-        <span id="redEvas">${player.evasion}</span>
-    </div>
-    <div>
-        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
-        <span id="redChakra">${player.chakra}</span>
-    </div>
+
+
      <div>
         <p>🤞🏼</p>
-        <span id='red_dom_purity'>${player.dom_purity}</span>
-    </div>
-    <div>
-        <p>🩸</p>
-        <span id='red_dom_lethal'>${player.dom_lethal}</span>
+       <span> <span id='red_dom_purity'>${player.dom_purity}</span> |  <span id='red_dom_cost'>${player.dom_cost}</span></span>
     </div>
     <div>
         <p>🌘</p>
-        <span><span id='red_dom_duration'>${player.dom_duration}</span> / <span id='red_dom_cost'>${player.dom_cost}</span></span>
-    </div>
-    <div>
-        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
-        <span  id='redCurrCurse'>${player.cursed_energy}</span>
+        <span><span id='red_dom_duration'>${player.dom_duration}</span> | <span id='red_dom_lethal'>${player.dom_lethal}</span></span>
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
@@ -3509,10 +3827,6 @@
     <div>
           <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
         <span id="redWill">${player.willpower}</span>
-    </div>
-    <div class='nen_numbers'>
-        <p id="redNinPow">${player.ninJutsu2Dmg}</p>
-        <p id="redUltPow">${player.ninjutsu_pow}</p>
     </div>
 
 </div>
@@ -3579,6 +3893,11 @@
                     redStun = player.stun
                     redDrain = player.drain
                     redNegative = player.negative_energy
+                    redSpirit = player.spirit
+                    redTalis = player.spirit_def
+                    redSpiritCrit = player.spirit_crit
+                    redSpiritCurse = player.spiritCurse
+                    redSpiritAmount = player.spirit_amount
                 } else if (val_2 === player.name) {
                     blueHtml = `
             <div class='fight_time_card'>
@@ -3609,6 +3928,13 @@
         <span id="blueStr">${player.strength}</span>
     </div>
     <div>
+        <p>🎯</p>
+        <span id="blueAcc">${player.accuracy}</span>
+    </div>
+
+
+
+    <div>
         <p>🪄</p>
         <span id="blueElmAttack">${player.elm_attack}</span>
     </div>
@@ -3624,7 +3950,14 @@
         <p>⛈</p>
         <span id="blueElmEffc">${player.elm_efficiency}</span>
     </div>
-     <div>
+    <div>
+        <p>🕊</p>
+        <span id="blueEvas">${player.evasion}</span>
+    </div>
+
+
+
+    <div>
         <p>🏹</p>
         <span id="blueWeapon">${player.weapon}</span>
     </div>
@@ -3636,38 +3969,9 @@
         <p class='blueWeaponCurse'>${player.weaponCurse}</p>
         <p id="blueWeaponCrit">${player.curse_crit}</p>
     </div>
-    <div class='nen_numbers'>
-        <p id="blueDrain">♺ ${player.drain}</p>
-        <p id="blueNegative">🪬 ${player.negative_energy}</p>
-    </div>
-     <div>
-        <p>🍀</p>
-        <span id="blueLuck">${player.luck}</span>
-    </div>
-    <div>
-        <p>🎯</p>
-        <span id="blueAcc">${player.accuracy}</span>
-    </div>
-    <div>
-        <p>🕊</p>
-        <span id="blueEvas">${player.evasion}</span>
-    </div>
     <div>
         <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
         <span id="blueChakra">${player.chakra}</span>
-    </div>
-
-    <div>
-        <p>🤞🏼</p>
-        <span id='blue_dom_purity'>${player.dom_purity}</span>
-    </div>
-    <div>
-        <p>🩸</p>
-        <span id='blue_dom_lethal'>${player.dom_lethal}</span>
-    </div>
-    <div>
-        <p>🌒</p>
-        <span><span id='blue_dom_duration'>${player.dom_duration}</span> / <span id='blue_dom_cost'>${player.dom_cost}</span></span>
     </div>
     <div>
         <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
@@ -3675,6 +3979,37 @@
     </div>
 
 
+    <div>
+        <p>🦇</p>
+        <span id="blueSpirit">${player.spirit}</span>
+    </div>
+    <div>
+        <p>☔</p>
+        <span id="blueTalis">${player.spirit_def}</span>
+    </div>
+    <div class='nen_numbers'>
+        <p class='blueSpiritCurse'>${player.spiritCurse}</p>
+        <p id="blueSpiritCrit">${player.spirit_crit}</p>
+    </div>
+    <div>
+        <p>🍀</p>
+        <span id="blueLuck">${player.luck}</span>
+    </div>
+    <div class='nen_numbers'>
+        <p id="blueNinPow">${player.ninJutsu2Dmg}</p>
+        <p id="blueUltPow">${player.ninjutsu_pow}</p>
+    </div>
+
+
+
+    <div>
+        <p>🤞🏼</p>
+        <span> <span id='blue_dom_purity'>${player.dom_purity}</span> |  <span id='blue_dom_cost'>${player.dom_cost}</span></span>
+    </div>
+    <div>
+        <p id='blue_dom_duration'>${player.dom_duration}</p>
+        <span id='blue_dom_lethal'>${player.dom_lethal}</span>
+    </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
         <span id="blueGen">${player.genjutsu}</span>
@@ -3687,10 +4022,7 @@
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
         <span id="blueWill">${player.willpower}</span>
     </div>
-    <div class='nen_numbers'>
-        <p id="blueNinPow">${player.ninJutsu2Dmg}</p>
-        <p id="blueUltPow">${player.ninjutsu_pow}</p>
-    </div>
+
 
 </div>
 
@@ -3758,6 +4090,11 @@
                     blueStun = player.stun
                     blueDrain = player.drain
                     blueNegative = player.negative_energy
+                    blueSpirit = player.spirit
+                    blueTalis = player.spirit_def
+                    blueSpiritCrit = player.spirit_crit
+                    blueSpiritCurse = player.spiritCurse
+                    blueSpiritAmount = player.spirit_amount
                 }
             }
 
@@ -3799,3 +4136,8 @@
     </script>
 
 </html>
+
+<!-- ///<div class='nen_numbers'></div>
+    <p id="blueDrain">♺ ${player.drain}</p>
+    <p id="blueNegative">🪬 ${player.negative_energy}</p>
+</div> -->

@@ -296,7 +296,7 @@ const database = [
         elm_efficiency: 1.25,
         potency: .20,
         //WEAPON
-        weapon: 255,
+        weapon: 258,
         shield: 169,
         curse_crit: .20,
         weaponCurse: 'Defense',
@@ -616,7 +616,7 @@ const database = [
         elm: wind,
         hp: 2863,
         //PHYSICAL
-        attack: 204,
+        attack: 214,
         defense: 170,
         critical: .45,
         strength: 1.3,
@@ -626,7 +626,7 @@ const database = [
         elm_efficiency: 1.26,
         potency: .18,
         //WEAPON
-        weapon: 257,
+        weapon: 261,
         shield: 224,
         curse_crit: .18,
         weaponCurse: 'Recovery',
@@ -650,7 +650,7 @@ const database = [
         cursed_tech: "Soul-Forge - Increase Weapon by 50",
         curse_amount: 50,
         curse_duration: 8,
-        curse_cost: 19,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -823,7 +823,7 @@ const database = [
         elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
-        weapon: 265,
+        weapon: 274,
         shield: 234,
         curse_crit: 0.12,
         weaponCurse: 'Accuracy',
@@ -1018,7 +1018,7 @@ const database = [
         critical: .20,
         strength: 1.3,
         //MAGIC
-        elm_attack: 214,
+        elm_attack: 224,
         elm_defense: 207,
         elm_efficiency: 1.4,
         potency: .25,
@@ -1810,7 +1810,7 @@ const database = [
         critical: .28,
         strength: 1.4,
         //MAGIC
-        elm_attack: 256,
+        elm_attack: 254,
         elm_defense: 193,
         elm_efficiency: 1.5,
         potency: 0.30,
@@ -1873,7 +1873,7 @@ const database = [
         elm: fighter,
         hp: 3085,
         //PHYSICAL
-        attack: 253,
+        attack: 250,
         defense: 238,
         critical: .30,
         strength: 1.5,
@@ -2811,11 +2811,17 @@ const database = [
         elm_efficiency: 1.3,
         potency: .40,
         //WEAPON
-        weapon: 221,
+        weapon: 218,
         shield: 207,
         curse_crit: .15,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 234,
+        spirit_def: 211,
+        spirit_crit: .15,
+        spiritCurse: 'Lethal',
+        spirit_amount: 25,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 7,
@@ -2882,6 +2888,12 @@ const database = [
         curse_crit: .65,
         weaponCurse: 'Willpower',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 224,
+        spirit_def: 203,
+        spirit_crit: .18,
+        spiritCurse: 'Power',
+        spirit_amount: 12,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 7,
@@ -3337,7 +3349,7 @@ const database = [
         critical: .15,
         strength: 1.2,
         //MAGIC
-        elm_attack: 249,
+        elm_attack: 256,
         elm_defense: 203,
         elm_efficiency: 1.5,
         potency: .20,
@@ -3408,7 +3420,7 @@ const database = [
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
-        weapon: 247,
+        weapon: 238,
         shield: 198,
         curse_crit: .13,
         weaponCurse: 'Evasion',
@@ -3469,7 +3481,7 @@ const database = [
         critical: .20,
         strength: 1.85,
         //MAGIC
-        elm_attack: 268,
+        elm_attack: 168,
         elm_defense: 275,
         elm_efficiency: 1.25,
         potency: .20,
@@ -3479,6 +3491,12 @@ const database = [
         curse_crit: .09,
         weaponCurse: 'Defense',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 268,
+        spirit_def: 200,
+        spirit_crit: .22,
+        spiritCurse: 'C-Def',
+        spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -3808,12 +3826,12 @@ const database = [
         //WEAPON
         weapon: 243,
         shield: 213,
-        curse_crit: .20,
+        curse_crit: .23,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 11,
+        evasion: 12,
         luck: 4,
         stun: .16,
         //GENJUTSU
@@ -4269,7 +4287,7 @@ const database = [
         elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
-        weapon: 249,
+        weapon: 251,
         shield: 228,
         curse_crit: .18,
         weaponCurse: 'Power',
@@ -4861,7 +4879,7 @@ const database = [
         critical: .07,
         strength: 1.1,
         //MAGIC
-        elm_attack: 224,
+        elm_attack: 174,
         elm_defense: 226,
         elm_efficiency: 1.35,
         potency: .21,
@@ -4871,6 +4889,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 224,
+        spirit_def: 190,
+        spirit_crit: .23,
+        spiritCurse: 'Health',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
@@ -4933,7 +4957,7 @@ const database = [
         elm_efficiency: 1.33,
         potency: .20,
         //WEAPON
-        weapon: 238,
+        weapon: 240,
         shield: 232,
         curse_crit: .25,
         weaponCurse: 'Attack',
@@ -5066,7 +5090,7 @@ const database = [
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
-        weapon: 218,
+        weapon: 224,
         shield: 184,
         curse_crit: .85,
         weaponCurse: 'Recovery',
@@ -5163,10 +5187,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Bungee-Gum - Enhances Bungee Gum by 11%',
+        ninjutsu2: 'Bungee-Gum - Enhances Bungee Gum by 9%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 225,
-        nin2amount: .11,
+        nin2amount: .09,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Texture-Surprise - Half cost of Bungee Gum",
@@ -5325,7 +5349,7 @@ const database = [
         critical: .10,
         strength: 1.1,
         //MAGIC
-        elm_attack: 229,
+        elm_attack: 189,
         elm_defense: 238,
         elm_efficiency: 1.34,
         potency: .25,
@@ -5335,6 +5359,12 @@ const database = [
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 229,
+        spirit_def: 192,
+        spirit_crit: .19,
+        spiritCurse: 'Spirit',
+        spirit_amount: 8,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -5590,7 +5620,7 @@ const database = [
         critical: .10,
         strength: 1.05,
         //MAGIC
-        elm_attack: 228,
+        elm_attack: 188,
         elm_defense: 212,
         elm_efficiency: 1.5,
         potency: .36,
@@ -5600,6 +5630,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Curse',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 222,
+        spirit_def: 237,
+        spirit_crit: .20,
+        spiritCurse: 'Health',
+        spirit_amount: 150,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 5,
@@ -5669,6 +5705,12 @@ const database = [
         curse_crit: .50,
         weaponCurse: 'Luck',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 222,
+        spirit_def: 230,
+        spirit_crit: .17,
+        spiritCurse: 'Weapon',
+        spirit_amount: 18,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -5735,6 +5777,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 226,
+        spirit_def: 169,
+        spirit_crit: .26,
+        spiritCurse: 'Weapon',
+        spirit_amount: 15,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 2,
@@ -5858,7 +5906,7 @@ const database = [
         critical: .09,
         strength: 1,
         //MAGIC
-        elm_attack: 202,
+        elm_attack: 162,
         elm_defense: 216,
         elm_efficiency: 1.2,
         potency: .46,
@@ -5868,6 +5916,12 @@ const database = [
         curse_crit: 1.0,
         weaponCurse: 'Willpower',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 202,
+        spirit_def: 215,
+        spirit_crit: .22,
+        spiritCurse: 'Recovery',
+        spirit_amount: 2,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -5985,7 +6039,7 @@ const database = [
         elm: lucky,
         hp: 3149,
         //PHYSICAL
-        attack: 211,
+        attack: 198,
         defense: 176,
         critical: .24,
         strength: 1.30,
@@ -6000,6 +6054,12 @@ const database = [
         curse_crit: .55,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 226,
+        spirit_def: 173,
+        spirit_crit: .24,
+        spiritCurse: 'Def',
+        spirit_amount: 21,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -6058,7 +6118,7 @@ const database = [
         critical: .20,
         strength: 1.3,
         //MAGIC
-        elm_attack: 236,
+        elm_attack: 241,
         elm_defense: 218,
         elm_efficiency: 1.36,
         potency: .28,
@@ -6319,12 +6379,12 @@ const database = [
         elm: holy,
         hp: 3444,
         //PHYSICAL
-        attack: 214,
+        attack: 228,
         defense: 184,
         critical: .27,
         strength: 1.70,
         //MAGIC
-        elm_attack: 228,
+        elm_attack: 238,
         elm_defense: 198,
         elm_efficiency: 1.31,
         potency: .32,
@@ -6334,6 +6394,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 252,
+        spirit_def: 280,
+        spirit_crit: .18,
+        spiritCurse: 'Health',
+        spirit_amount: 155,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 6,
@@ -6390,7 +6456,7 @@ const database = [
         critical: .10,
         strength: 1.12,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 216,
         elm_defense: 165,
         elm_efficiency: 1.40,
         potency: .20,
@@ -6400,6 +6466,12 @@ const database = [
         curse_crit: 1.0,
         weaponCurse: 'Curse',
         weapon_amount: 8,
+        //SPIRIT
+        spirit: 275,
+        spirit_def: 231,
+        spirit_crit: .25,
+        spiritCurse: 'Damage',
+        spirit_amount: 85,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 3,
@@ -6464,8 +6536,14 @@ const database = [
         weapon: 250,
         shield: 185,
         curse_crit: .12,
-        weaponCurse: 'Magic Def',
+        weaponCurse: 'M-Def',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 300,
+        spirit_def: 266,
+        spirit_crit: .15,
+        spiritCurse: 'Spirit',
+        spirit_amount: 15,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 5,
@@ -6527,7 +6605,7 @@ const database = [
         elm_efficiency: 1.28,
         potency: .33,
         //WEAPON
-        weapon: 229,
+        weapon: 233,
         shield: 228,
         curse_crit: .25,
         weaponCurse: 'Purity',
@@ -6654,7 +6732,7 @@ const database = [
         critical: .09,
         strength: 1.12,
         //MAGIC
-        elm_attack: 235,
+        elm_attack: 195,
         elm_defense: 250,
         elm_efficiency: 1.25,
         potency: .30,
@@ -6664,6 +6742,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 242,
+        spirit_def: 179,
+        spirit_crit: .10,
+        spiritCurse: 'Lethal',
+        spirit_amount: 30,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 8,
@@ -6686,8 +6770,8 @@ const database = [
         curse_cost: 12,
         //DOMAIN
         dom_purity: 10,
-        dom_lethal: 6,
-        dom_duration: 125,
+        dom_lethal: 125,
+        dom_duration: 6,
         dom_cost: 25,
         //NINJUTSU
         ninjutsu2: 'Spiritual Message - Cast rare Confusion Genjutsu',
@@ -6721,7 +6805,7 @@ const database = [
         critical: .10,
         strength: 1.35,
         //MAGIC
-        elm_attack: 240,
+        elm_attack: 245,
         elm_defense: 231,
         elm_efficiency: 1.20,
         potency: .32,
@@ -6878,17 +6962,17 @@ const database = [
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 45,
+        cursed_recovery: 50,
         negative_energy: 55,
         cursed_tech: 'Cursed-Gunbai - Reflect Damage Back',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 18,
+        curse_cost: 11,
         //DOMAIN
         dom_purity: 14,
         dom_lethal: 200,
-        dom_duration: 60,
-        dom_cost: 0,
+        dom_duration: 6,
+        dom_cost: 40,
         //NINJUTSU
         ninjutsu2: 'Truth-Seeking-Orb - Reduce Chakra by 4',
         ninJutsu2cost: 16,
@@ -6925,6 +7009,12 @@ const database = [
         elm_efficiency: 1.50,
         potency: .43,
         //WEAPON
+        weapon: 150,
+        shield: 145,
+        curse_crit: .15,
+        weaponCurse: 'Purity',
+        weapon_amount: 3,
+        //Curse WEAPON
         weapon: 150,
         shield: 145,
         curse_crit: .15,

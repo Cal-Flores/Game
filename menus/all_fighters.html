@@ -57,16 +57,16 @@
         </header>
         <main id='alls'>
             <div id="all_fight_conttt"></div>
-            <li id="name"></li>
+            <ol id="name"></ol>
         </main>
         <script>
             html = ''
             name = ''
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
-            databaseArr.sort((a, b) => b.dom_lethal - a.dom_lethal);
+            databaseArr.sort((a, b) => b.spirit - a.spirit);
             for (let player of databaseArr) {
-                $('#name').append(`<li>${player.name}</li>`)
+                $('#name').append(`<li>${player.name} ${player.attack}</li>`)
                 count += 1
             }
             console.log(count)
