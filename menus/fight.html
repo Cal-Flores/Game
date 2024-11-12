@@ -217,17 +217,17 @@
             }
 
             //physical
-            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka']
+            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka', 'Star-Rage', 'Shinra-Tensei']
             let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement']
             let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream']
-            let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei']
+            let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation', 'Divine-Flame', 'Disaster-Stones']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
-            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka', 'Shinra-Tensei']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall', 'Strength-of-a-Hundred-Seals']
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
@@ -1379,10 +1379,10 @@
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
-        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack'];
+        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
         const luck = ["Miracle"];
-        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom']
+        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda']
         const shield = []
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = [] //** NEW please add me**
@@ -1437,6 +1437,7 @@
                 }
                 if (weapon.includes(curse)) {
                     redWeapon += amount
+                    $('#redWeapon').text(redWeapon)
                 }
                 if (shield.includes(curse)) {
                     redShield += amount
@@ -1646,6 +1647,7 @@
                 }
                 if (weapon.includes(curse)) {
                     blueWeapon += amount
+                    $('#blueWeapon').text(blueWeapon)
                 }
                 if (shield.includes(curse)) {
                     Shield += amount

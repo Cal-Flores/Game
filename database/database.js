@@ -37,6 +37,12 @@ const database = [
         curse_crit: 0.0,
         weaponCurse: 'Katana',
         weapon_amount: 0,
+        //SPIRIT
+        spirit: 98,
+        spirit_def: 194,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 8,
@@ -103,6 +109,12 @@ const database = [
         curse_crit: .50,
         weaponCurse: 'Shield',
         weapon_amount: 12,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 172,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 3,
@@ -169,6 +181,12 @@ const database = [
         curse_crit: .70,
         weaponCurse: 'Critical',
         weapon_amount: .08,
+        //SPIRIT
+        spirit: 221,
+        spirit_def: 202,
+        spirit_crit: .20,
+        spiritCurse: 'Damage',
+        spirit_amount: 125,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 5,
@@ -235,6 +253,12 @@ const database = [
         curse_crit: .17,
         weaponCurse: 'Purity',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 216,
+        spirit_def: 210,
+        spirit_crit: .25,
+        spiritCurse: 'Weapon',
+        spirit_amount: 9,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 5,
@@ -301,6 +325,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Defense',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 217,
+        spirit_def: 157,
+        spirit_crit: .08,
+        spiritCurse: 'Evasion',
+        spirit_amount: 1,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 8,
@@ -367,6 +397,12 @@ const database = [
         curse_crit: .23,
         weaponCurse: 'Curse',
         weapon_amount: 8,
+        //SPIRIT
+        spirit: 95,
+        spirit_def: 169,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 150,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 6,
@@ -433,6 +469,12 @@ const database = [
         curse_crit: 0.10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 146,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 7,
@@ -499,6 +541,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 23,
+        //SPIRIT
+        spirit: 201,
+        spirit_def: 162,
+        spirit_crit: .15,
+        spiritCurse: 'Weapon',
+        spirit_amount: 8,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 5,
@@ -565,6 +613,12 @@ const database = [
         curse_crit: 0.24,
         weaponCurse: 'Attack',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 108,
+        spirit_def: 182,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 5,
@@ -631,6 +685,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 50,
+        spirit_def: 177,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 60,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 8,
@@ -697,6 +757,12 @@ const database = [
         curse_crit: .28,
         weaponCurse: 'Weapon',
         weapon_amount: 12,
+        //SPIRIT
+        spirit: 113,
+        spirit_def: 213,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 5,
@@ -762,6 +828,12 @@ const database = [
         curse_crit: .22,
         weaponCurse: 'Gen-Power',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 172,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 5,
@@ -828,6 +900,12 @@ const database = [
         curse_crit: 0.12,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 130,
+        spirit_def: 195,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 7,
@@ -894,6 +972,12 @@ const database = [
         curse_crit: .27,
         weaponCurse: 'Magic',
         weapon_amount: 7,
+        //SPIRIT
+        spirit: 185,
+        spirit_def: 186,
+        spirit_crit: .15,
+        spiritCurse: 'Weapon',
+        spirit_amount: 7,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 7,
@@ -960,6 +1044,12 @@ const database = [
         curse_crit: .16,
         weaponCurse: 'Magic',
         weapon_amount: 16,
+        //SPIRIT
+        spirit: 194,
+        spirit_def: 239,
+        spirit_crit: .10,
+        spiritCurse: 'Weapon',
+        spirit_amount: 15,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
@@ -1028,6 +1118,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Magic-Def',
         weapon_amount: 12,
+        //SPIRIT
+        spirit: 188,
+        spirit_def: 199,
+        spirit_crit: .15,
+        spiritCurse: 'Recovery',
+        spirit_amount: 2,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 6,
@@ -1094,6 +1190,12 @@ const database = [
         curse_crit: .30,
         weaponCurse: 'Magic-Def',
         weapon_amount: 12,
+        //SPIRIT
+        spirit: 146,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 5,
@@ -1160,6 +1262,12 @@ const database = [
         curse_crit: .40,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 211,
+        spirit_def: 231,
+        spirit_crit: .17,
+        spiritCurse: 'Magic',
+        spirit_amount: 12,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 7,
@@ -1226,6 +1334,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Weapon',
         weapon_amount: 5,
+        //SPIRIT
+        spirit: 187,
+        spirit_def: 200,
+        spirit_crit: .50,
+        spiritCurse: 'S-Def',
+        spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 2,
@@ -1292,6 +1406,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Magic-Def',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 156,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 8,
@@ -1358,6 +1478,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'GenJutsu',
         weapon_amount: 3,
+        //SPIRIT
+        spirit: 184,
+        spirit_def: 215,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 3,
@@ -1424,6 +1550,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Critical',
         weapon_amount: .10,
+        //SPIRIT
+        spirit: 172,
+        spirit_def: 182,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 4,
@@ -1490,6 +1622,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 139,
+        spirit_def: 185,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -1556,6 +1694,12 @@ const database = [
         curse_crit: .12,
         weaponCurse: 'Magic-Def',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 190,
+        spirit_def: 169,
+        spirit_crit: .15,
+        spiritCurse: 'Magic',
+        spirit_amount: 12,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -1622,6 +1766,12 @@ const database = [
         curse_crit: .14,
         weaponCurse: 'GenPower',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 145,
+        spirit_def: 170,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -1688,6 +1838,12 @@ const database = [
         curse_crit: .45,
         weaponCurse: 'Curse',
         weapon_amount: 8,
+        //SPIRIT
+        spirit: 133,
+        spirit_def: 166,
+        spirit_crit: .12,
+        spiritCurse: 'Weapon',
+        spirit_amount: 16,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 5,
@@ -1754,6 +1910,12 @@ const database = [
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 176,
+        spirit_def: 206,
+        spirit_crit: .18,
+        spiritCurse: 'Power',
+        spirit_amount: 10,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 6,
@@ -1820,6 +1982,12 @@ const database = [
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 9,
+        //SPIRIT
+        spirit: 134,
+        spirit_def: 158,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -1864,8 +2032,153 @@ const database = [
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
     },
+    {
+        name: 'Pain',
+        nen_type: 'Specialist',
+        element: 'Psychic',
+        elm: pyschic,
+        hp: 3247,
+        //PHYSICAL
+        attack: 124,
+        defense: 219,
+        critical: .10,
+        strength: 1.16,
+        //MAGIC
+        elm_attack: 281,
+        elm_defense: 222,
+        elm_efficiency: 1,
+        potency: .18,
+        //WEAPON
+        weapon: 199,
+        shield: 178,
+        curse_crit: .50,
+        weaponCurse: 'Recovery',
+        weapon_amount: 1,
+        //SPIRIT
+        spirit: 155,
+        spirit_def: 164,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
+        //SPEED / LUCK
+        accuracy: 10,
+        evasion: 2,
+        luck: 2,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 80,
+        willpower: 4,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 30,
+        cursed_tech: 'Gakido - No damage from previous Ninjutsu | Do a boost',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 15,
+        //DOMAIN
+        dom_purity: 7,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Shinra-Tensei - Decrease all 3 Attacks',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 180,
+        nin2amount: .08,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Chibaku-Tensei - Erase Magic Defense",
+        nin_cost: 60,
+        ninjutsu_pow: 260,
+        ninamount: 1.00,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Shura Canon - Deal 400 Damage (Single Use)',
+        buff2: 'Rinne Rebirth - Recover 400 HP (Single Use)',
+        buff_acc: 40,
+        buff2_acc: 40,
+        image: 'https://preview.redd.it/confession-i-though-pain-was-going-to-be-revealed-as-v0-y8xbcb5tiooa1.jpg?width=640&crop=smart&auto=webp&s=f5f28b9d9cb5eff7b6368030181c2ef47be7395d'
+    },
     // END //
     ////// sub-Enhancer ///
+
+    {
+        name: 'Yuki',
+        nen_type: 'Conjuror',
+        element: 'Ghost',
+        elm: ghost,
+        hp: 3139,
+        //PHYSICAL
+        attack: 256,
+        defense: 173,
+        critical: .24,
+        strength: 1.24,
+        //MAGIC
+        elm_attack: 148,
+        elm_defense: 187,
+        elm_efficiency: 1.18,
+        potency: .16,
+        //WEAPON
+        weapon: 248,
+        shield: 224,
+        curse_crit: .17,
+        weaponCurse: 'Defense',
+        weapon_amount: 12,
+        //SPIRIT
+        spirit: 121,
+        spirit_def: 164,
+        spirit_crit: .15,
+        spiritCurse: 'Attack',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 6,
+        evasion: 7,
+        luck: 3,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 15,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 35,
+        negative_energy: 35,
+        cursed_tech: 'Garuda - Increase Weapon to 310',
+        curse_amount: 62,
+        curse_duration: 10,
+        curse_cost: 25,
+        //DOMAIN
+        dom_purity: 7,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Star-Rage - Increase Attack by 8%',
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 150,
+        nin2amount: .08,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Reverse-Curse-Technique - Heal Previous Damage",
+        nin_cost: 28,
+        ninjutsu_pow: 0,
+        ninamount: 0,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Spirit Defense by 10%',
+        buff2: 'Decrease Spirit by 10%',
+        buff_acc: 60,
+        buff2_acc: 65,
+        image: 'https://tiermaker.com/images/media/template_images/2024/867926/jujutsu-kaisen-characters-show-867926/zzzzz-1707450329img7500.png'
+    },
     {
         name: 'Gon',
         nen_type: 'Enhancer',
@@ -1888,6 +2201,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 120,
+        spirit_def: 173,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 6,
@@ -1954,6 +2273,12 @@ const database = [
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 105,
+        spirit_def: 155,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -2020,6 +2345,12 @@ const database = [
         curse_crit: .05,
         weaponCurse: 'Weapon',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 113,
+        spirit_def: 181,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 3,
@@ -2086,6 +2417,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Critical',
         weapon_amount: .10,
+        //SPIRIT
+        spirit: 205,
+        spirit_def: 235,
+        spirit_crit: .25,
+        spiritCurse: 'Attack',
+        spirit_amount: 8,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 6,
@@ -2152,6 +2489,12 @@ const database = [
         curse_crit: .08,
         weaponCurse: 'Gen-Power',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 178,
+        spirit_def: 195,
+        spirit_crit: .16,
+        spiritCurse: 'Spirit',
+        spirit_amount: 10,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -2218,6 +2561,12 @@ const database = [
         curse_crit: .06,
         weaponCurse: 'Purity',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 154,
+        spirit_def: 185,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 3,
@@ -2284,6 +2633,12 @@ const database = [
         curse_crit: .08,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 80,
+        spirit_def: 165,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 8,
@@ -2350,6 +2705,12 @@ const database = [
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 50,
+        //SPIRIT
+        spirit: 105,
+        spirit_def: 166,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -2407,7 +2768,7 @@ const database = [
         strength: 1.8,
         //MAGIC
         elm_attack: 131,
-        elm_defense: 201,
+        elm_defense: 181,
         elm_efficiency: 1.25,
         potency: .10,
         //WEAPON
@@ -2416,6 +2777,12 @@ const database = [
         curse_crit: .08,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 135,
+        spirit_def: 215,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -2482,6 +2849,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 132,
+        spirit_def: 170,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 7,
@@ -2549,6 +2922,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 184,
+        spirit_def: 180,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 5,
@@ -2616,6 +2995,12 @@ const database = [
         curse_crit: .05,
         weaponCurse: 'Purity',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 112,
+        spirit_def: 164,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -2682,6 +3067,12 @@ const database = [
         curse_crit: .09,
         weaponCurse: 'Defense',
         weapon_amount: 12,
+        //SPIRIT
+        spirit: 205,
+        spirit_def: 202,
+        spirit_crit: .10,
+        spiritCurse: 'Attack',
+        spirit_amount: 25,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -2748,6 +3139,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Defense',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 137,
+        spirit_def: 170,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 15,
         evasion: 5,
@@ -2817,7 +3214,7 @@ const database = [
         weaponCurse: 'Willpower',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 234,
+        spirit: 223,
         spirit_def: 211,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
@@ -2889,7 +3286,7 @@ const database = [
         weaponCurse: 'Willpower',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 224,
+        spirit: 212,
         spirit_def: 203,
         spirit_crit: .18,
         spiritCurse: 'Power',
@@ -2960,6 +3357,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 201,
+        spirit_def: 180,
+        spirit_crit: .20,
+        spiritCurse: 'M-Def',
+        spirit_amount: 15,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -3026,6 +3429,12 @@ const database = [
         curse_crit: .12,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 177,
+        spirit_def: 204,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -3092,6 +3501,12 @@ const database = [
         curse_crit: .06,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 205,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Defense',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -3158,6 +3573,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 165,
+        spirit_def: 186,
+        spirit_crit: .15,
+        spiritCurse: 'Recovery',
+        spirit_amount: 2,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
@@ -3224,6 +3645,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 120,
+        spirit_def: 161,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 5,
@@ -3290,6 +3717,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Evasion',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 205,
+        spirit_def: 205,
+        spirit_crit: .20,
+        spiritCurse: 'Damage',
+        spirit_amount: 120,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
@@ -3359,6 +3792,12 @@ const database = [
         curse_crit: .06,
         weaponCurse: 'Magic',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 208,
+        spirit_def: 233,
+        spirit_crit: .15,
+        spiritCurse: 'Lethal',
+        spirit_amount: 35,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -3425,6 +3864,12 @@ const database = [
         curse_crit: .13,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 167,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 6,
@@ -3563,6 +4008,12 @@ const database = [
         curse_crit: .06,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 140,
+        spirit_def: 236,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 4,
         evasion: 3,
@@ -3629,6 +4080,12 @@ const database = [
         curse_crit: .09,
         weaponCurse: 'Defense',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 119,
+        spirit_def: 208,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -3695,6 +4152,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 168,
+        spirit_def: 234,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -3761,6 +4224,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Magic-Def',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 202,
+        spirit_def: 214,
+        spirit_crit: .18,
+        spiritCurse: 'Magic',
+        spirit_amount: 10,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 2,
@@ -3829,6 +4298,12 @@ const database = [
         curse_crit: .23,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 132,
+        spirit_def: 229,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 12,
@@ -3895,6 +4370,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Defense',
         weapon_amount: 30,
+        //SPIRIT
+        spirit: 263,
+        spirit_def: 215,
+        spirit_crit: .22,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 11,
@@ -3961,6 +4442,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 170,
+        spirit_def: 174,
+        spirit_crit: .08,
+        spiritCurse: 'Evasion',
+        spirit_amount: 1,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 11,
@@ -4028,6 +4515,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Attack',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 165,
+        spirit_def: 167,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 10,
@@ -4094,6 +4587,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 196,
+        spirit_def: 158,
+        spirit_crit: .31,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 10,
@@ -4160,6 +4659,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Magic-Def',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 136,
+        spirit_def: 170,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 10,
@@ -4226,6 +4731,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Potency',
         weapon_amount: .10,
+        //SPIRIT
+        spirit: 193,
+        spirit_def: 168,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 10,
@@ -4292,6 +4803,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Power',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 154,
+        spirit_def: 194,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 9,
@@ -4358,6 +4875,12 @@ const database = [
         curse_crit: .25,
         weaponCurse: 'Defense',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 122,
+        spirit_def: 162,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 10,
@@ -4424,6 +4947,12 @@ const database = [
         curse_crit: .12,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 181,
+        spirit_def: 213,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 9,
@@ -4490,6 +5019,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Shield',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 135,
+        spirit_def: 178,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 9,
@@ -4556,6 +5091,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 15,
+        //SPIRIT
+        spirit: 166,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 12,
         evasion: 9,
@@ -4624,6 +5165,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Defense',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 124,
+        spirit_def: 175,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -4690,6 +5237,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Defense',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 191,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 4,
@@ -4757,6 +5310,12 @@ const database = [
         curse_crit: .18,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 118,
+        spirit_def: 180,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 8,
@@ -4823,6 +5382,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 168,
+        spirit_def: 167,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 5,
@@ -4890,7 +5455,7 @@ const database = [
         weaponCurse: 'Magic',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 224,
+        spirit: 215,
         spirit_def: 190,
         spirit_crit: .23,
         spiritCurse: 'Health',
@@ -4962,6 +5527,12 @@ const database = [
         curse_crit: .25,
         weaponCurse: 'Attack',
         weapon_amount: 25,
+        //SPIRIT
+        spirit: 141,
+        spirit_def: 172,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -5028,6 +5599,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 116,
+        spirit_def: 169,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 5,
@@ -5095,6 +5672,12 @@ const database = [
         curse_crit: .85,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 152,
+        spirit_def: 206,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -5161,6 +5744,12 @@ const database = [
         curse_crit: .30,
         weaponCurse: 'Defense',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 119,
+        spirit_def: 173,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 7,
@@ -5227,6 +5816,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Shield',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 113,
+        spirit_def: 183,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 3,
@@ -5293,6 +5888,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Attack',
         weapon_amount: 16,
+        //SPIRIT
+        spirit: 188,
+        spirit_def: 221,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 6,
@@ -5360,7 +5961,7 @@ const database = [
         weaponCurse: 'Magic',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 229,
+        spirit: 217,
         spirit_def: 192,
         spirit_crit: .19,
         spiritCurse: 'Spirit',
@@ -5432,6 +6033,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Recovery',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 130,
+        spirit_def: 218,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 3,
@@ -5494,10 +6101,16 @@ const database = [
         potency: .19,
         //WEAPON
         weapon: 236,
-        shield: 210,
+        shield: 189,
         curse_crit: .20,
         weaponCurse: 'Magic-Def',
         weapon_amount: 20,
+        //SPIRIT
+        spirit: 162,
+        spirit_def: 227,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 5,
@@ -5564,6 +6177,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 196,
+        spirit_def: 225,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -5631,7 +6250,7 @@ const database = [
         weaponCurse: 'Curse',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 222,
+        spirit: 211,
         spirit_def: 237,
         spirit_crit: .20,
         spiritCurse: 'Health',
@@ -5686,7 +6305,7 @@ const database = [
     {
         name: 'Pakunoda',
         nen_type: 'Specialist',
-        element: 'Pyschic',
+        element: 'Psychic',
         elm: pyschic,
         hp: 2977,
         //PHYSICAL
@@ -5706,7 +6325,7 @@ const database = [
         weaponCurse: 'Luck',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 222,
+        spirit: 219,
         spirit_def: 230,
         spirit_crit: .17,
         spiritCurse: 'Weapon',
@@ -5778,7 +6397,7 @@ const database = [
         weaponCurse: 'Attack',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 226,
+        spirit: 214,
         spirit_def: 169,
         spirit_crit: .26,
         spiritCurse: 'Weapon',
@@ -5850,6 +6469,12 @@ const database = [
         curse_crit: .65,
         weaponCurse: 'Luck',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 142,
+        spirit_def: 174,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -5988,6 +6613,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Recovery',
         weapon_amount: 3,
+        //SPIRIT
+        spirit: 186,
+        spirit_def: 180,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
@@ -6055,7 +6686,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 226,
+        spirit: 218,
         spirit_def: 173,
         spirit_crit: .24,
         spiritCurse: 'Def',
@@ -6128,6 +6759,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
         weapon_amount: 3,
+        //SPIRIT
+        spirit: 174,
+        spirit_def: 176,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 8,
         evasion: 7,
@@ -6194,6 +6831,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Recovery',
         weapon_amount: 2,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 180,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 4,
@@ -6260,6 +6903,12 @@ const database = [
         curse_crit: .40,
         weaponCurse: 'Weapon',
         weapon_amount: 13,
+        //SPIRIT
+        spirit: 144,
+        spirit_def: 172,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
@@ -6326,6 +6975,12 @@ const database = [
         curse_crit: .24,
         weaponCurse: 'Shield',
         weapon_amount: 16,
+        //SPIRIT
+        spirit: 184,
+        spirit_def: 162,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 7,
@@ -6610,6 +7265,12 @@ const database = [
         curse_crit: .25,
         weaponCurse: 'Purity',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 164,
+        spirit_def: 192,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 4,
@@ -6676,6 +7337,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 205,
+        spirit_def: 195,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 8,
@@ -6743,7 +7410,7 @@ const database = [
         weaponCurse: 'Willpower',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 242,
+        spirit: 230,
         spirit_def: 179,
         spirit_crit: .10,
         spiritCurse: 'Lethal',
@@ -6815,6 +7482,12 @@ const database = [
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 10,
+        //SPIRIT
+        spirit: 172,
+        spirit_def: 186,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 15,
         evasion: 2,
@@ -6881,6 +7554,12 @@ const database = [
         curse_crit: .75,
         weaponCurse: 'Purity',
         weapon_amount: 1,
+        //SPIRIT
+        spirit: 175,
+        spirit_def: 234,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 15,
         evasion: 8,
@@ -6948,6 +7627,12 @@ const database = [
         curse_crit: .20,
         weaponCurse: 'Weapon',
         weapon_amount: 30,
+        //SPIRIT
+        spirit: 182,
+        spirit_def: 193,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -7014,6 +7699,12 @@ const database = [
         curse_crit: .15,
         weaponCurse: 'Purity',
         weapon_amount: 3,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 172,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 100,
         //Curse WEAPON
         weapon: 150,
         shield: 145,

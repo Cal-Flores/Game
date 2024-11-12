@@ -64,9 +64,9 @@
             name = ''
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
-            databaseArr.sort((a, b) => b.spirit - a.spirit);
+            databaseArr.sort((a, b) => b.spirit_def - a.spirit_def);
             for (let player of databaseArr) {
-                $('#name').append(`<li>${player.name} ${player.attack}</li>`)
+                $('#name').append(`<li>${player.name} ${player.spirit_def}</li>`)
                 count += 1
             }
             console.log(count)
@@ -132,6 +132,24 @@
                         <div class="stat-box">
                             <p>${player.curse_crit}%</p>
                             <span>${player.weapon_amount}</span>
+                        </div>
+                    </div>
+                     <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Spirit</p>
+                            <span>${player.spirit}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Spirit Defense</p>
+                            <span>${player.spirit_def}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Boost</p>
+                            <span>${player.spiritCurse}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>${player.spirit_crit}%</p>
+                            <span>${player.spirit_amount}</span>
                         </div>
                     </div>
                     <div class='all_stat'>
