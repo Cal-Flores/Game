@@ -323,7 +323,7 @@ const database = [
         weapon: 258,
         shield: 169,
         curse_crit: .20,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
         spirit: 217,
@@ -2127,7 +2127,7 @@ const database = [
         weapon: 248,
         shield: 224,
         curse_crit: .17,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 12,
         //SPIRIT
         spirit: 121,
@@ -3065,7 +3065,7 @@ const database = [
         weapon: 184,
         shield: 218,
         curse_crit: .09,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 12,
         //SPIRIT
         spirit: 205,
@@ -3137,7 +3137,7 @@ const database = [
         weapon: 145,
         shield: 225,
         curse_crit: .20,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
         spirit: 137,
@@ -3505,7 +3505,7 @@ const database = [
         spirit: 205,
         spirit_def: 192,
         spirit_crit: .15,
-        spiritCurse: 'Defense',
+        spiritCurse: 'Def',
         spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 5,
@@ -3934,7 +3934,7 @@ const database = [
         weapon: 166,
         shield: 174,
         curse_crit: .09,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
         spirit: 268,
@@ -4078,7 +4078,7 @@ const database = [
         weapon: 195,
         shield: 249,
         curse_crit: .09,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
         spirit: 119,
@@ -4368,7 +4368,7 @@ const database = [
         weapon: 150,
         shield: 245,
         curse_crit: .10,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 30,
         //SPIRIT
         spirit: 263,
@@ -4873,7 +4873,7 @@ const database = [
         weapon: 246,
         shield: 187,
         curse_crit: .25,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
         spirit: 122,
@@ -5067,7 +5067,7 @@ const database = [
         buff2: 'Decrease Potency by 50%',
         buff_acc: 60,
         buff2_acc: 60,
-        image: 'https://i.pinimg.com/736x/7d/12/bb/7d12bbfc5c828eadf3e599013626d70f.jpg'
+        image: 'https://i.pinimg.com/736x/80/a6/22/80a6222d37073b182d9797e2f8a9964e.jpg'
     },
     {
         name: 'Ikalgo',
@@ -5163,7 +5163,7 @@ const database = [
         weapon: 129,
         shield: 234,
         curse_crit: .10,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 10,
         //SPIRIT
         spirit: 124,
@@ -5235,7 +5235,7 @@ const database = [
         weapon: 116,
         shield: 124,
         curse_crit: .10,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 10,
         //SPIRIT
         spirit: 125,
@@ -5742,7 +5742,7 @@ const database = [
         weapon: 238,
         shield: 217,
         curse_crit: .30,
-        weaponCurse: 'Defense',
+        weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
         spirit: 119,
@@ -7920,7 +7920,7 @@ const database = [
         //SPIRIT
         spirit: 241,
         spirit_def: 226,
-        spirit_crit: .20,
+        spirit_crit: 1.20,
         spiritCurse: 'Damage',
         spirit_amount: 60,
         //SPEED / LUCK

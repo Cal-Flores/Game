@@ -2921,9 +2921,9 @@
                     blueSpirit += amount
                 }
                 if (curse == 'Damage') {
-                    currRedHp -= amount
-                    alert(`${amount} extra damage!`)
-                    $('#redHP').text(currRedHp)
+                    //currRedHp -= amount
+
+                    //$('#redHP').text(currRedHp)
                 }
             }
 
@@ -2981,9 +2981,9 @@
                     redSpirit += amount
                 }
                 if (curse == 'Damage') {
-                    currBlueHp -= amount
-                    alert(`${amount} extra damage!`)
-                    $('#blueHP').text(currBlueHp)
+                    //currBlueHp -= amount
+                    //alert(`${amount} extra damage!`)
+                    // $('#blueHP').text(currBlueHp)
                 }
             }
             // UPDATE U.I
@@ -3269,11 +3269,17 @@
                         chargeCurse('red', selfDamage)
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
+                        let extraDmg = 0
                         isCritical = Math.random() < redSpiritCrit;
                         if (isCritical) {
                             cursedSpirit(attacker, redSpiritCurse, redSpiritAmount)
+                            if (redSpiritCurse == 'Damage') {
+                                extraDmg = redSpiritAmount
+                                alert(`${extraDmg} extra damage!`)
+                            }
                         }
                         let damage = Math.max(1, Math.round((baseDamage + (redSpirit - (blueTalis * damageReductionFactor))) * (1 + variance)));
+                        damage = damage + extraDmg
 
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
@@ -3318,11 +3324,17 @@
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < blueSpiritCrit;
                         // criticalMultiplier = isCritical ? blueStrength : 1.0;
+                        let extraDmg = 0;
                         if (isCritical) {
                             cursedSpirit(attacker, blueSpiritCurse, blueSpiritAmount)
+                            if (blueSpiritCurse == 'Damage') {
+                                extraDmg = blueSpiritAmount
+                                alert(`${extraDmg} extra damage!`)
+                            }
                         }
 
                         let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redSpirit * damageReductionFactor))) * (1 + variance)));
+                        damage += extraDmg
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
@@ -3914,31 +3926,31 @@
         <span id="redStr">${player.strength}</span>
     </div>
     <div>
-        <p>🎯</p>
-        <span id="redAcc">${player.accuracy}</span>
+        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <span id="redChakra">${player.chakra}</span>
     </div>
 
 
 
     <div>
-        <p>🪄</p>
+        <p>⚜️</p>
         <span id="redElmAttack">${player.elm_attack}</span>
     </div>
     <div>
-        <p>♠️</p>
+        <p>💎</p>
         <span id="redElmDef">${player.elm_defense}</span>
     </div>
    <div>
         <p>🧪</p>
         <span id="redPot">${player.potency}</span>
     </div>
-        <div>
-        <p>⛈</p>
+    <div>
+        <p>⛈️</p>
         <span id="redElmEffc">${player.elm_efficiency}</span>
     </div>
     <div>
-        <p>🕊</p>
-        <span id="redEvas">${player.evasion}</span>
+        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
+        <span  id='redCurrCurse'>${player.cursed_energy}</span>
     </div>
 
 
@@ -3953,16 +3965,16 @@
         <span id="redShield">${player.shield}</span>
     </div>
     <div class='nen_numbers'>
-        <p class='redWeaponCurse' >${player.weaponCurse}</p>
+        <p class='redWeaponCurse' id='wordz' >${player.weaponCurse}</p>
         <p id="redWeaponCrit">${player.curse_crit}</p>
     </div>
     <div>
-        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
-        <span id="redChakra">${player.chakra}</span>
+        <p>🎯</p>
+        <span id="redAcc">${player.accuracy}</span>
     </div>
     <div>
-        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
-        <span  id='redCurrCurse'>${player.cursed_energy}</span>
+        <p>🕊</p>
+        <span id="redEvas">${player.evasion}</span>
     </div>
 
 
@@ -3977,7 +3989,7 @@
         <span id="redTalis">${player.spirit_def}</span>
     </div>
     <div class='nen_numbers'>
-        <p class='redSpiritCurse'>${player.spiritCurse}</p>
+        <p class='redSpiritCurse' id='wordz'>${player.spiritCurse}</p>
         <p id="redSpiritCrit">${player.spirit_crit}</p>
     </div>
     <div>
@@ -4111,18 +4123,19 @@
         <span id="blueStr">${player.strength}</span>
     </div>
     <div>
-        <p>🎯</p>
-        <span id="blueAcc">${player.accuracy}</span>
+        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
+        <span id="blueChakra">${player.chakra}</span>
     </div>
 
 
 
+
     <div>
-        <p>🪄</p>
+        <p>⚜️</p>
         <span id="blueElmAttack">${player.elm_attack}</span>
     </div>
     <div>
-        <p>♠️</p>
+        <p>💎</p>
         <span id="blueElmDef">${player.elm_defense}</span>
     </div>
     <div>
@@ -4130,13 +4143,14 @@
         <span id="bluePot">${player.potency}</span>
     </div>
     <div>
-        <p>⛈</p>
+        <p>⛈️</p>
         <span id="blueElmEffc">${player.elm_efficiency}</span>
     </div>
     <div>
-        <p>🕊</p>
-        <span id="blueEvas">${player.evasion}</span>
+        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
+        <span id='blueCurrCurse'>${player.cursed_energy}</span>
     </div>
+
 
 
 
@@ -4149,16 +4163,16 @@
         <span id="blueShield">${player.shield}</span>
     </div>
     <div class='nen_numbers'>
-        <p class='blueWeaponCurse'>${player.weaponCurse}</p>
+        <p class='blueWeaponCurse' id='wordz'>${player.weaponCurse}</p>
         <p id="blueWeaponCrit">${player.curse_crit}</p>
     </div>
-    <div>
-        <p><img id = 'devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/95c36513-b099-481c-8c69-95184b1b961f/d9vyb32-2451d476-beb8-4925-bd1c-58a83b96cb23.png/v1/fit/w_828,h_1072/796_liquidic_by_tigers_stock_d9vyb32-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTMyNiIsInBhdGgiOiJcL2ZcLzk1YzM2NTEzLWIwOTktNDgxYy04YzY5LTk1MTg0YjFiOTYxZlwvZDl2eWIzMi0yNDUxZDQ3Ni1iZWI4LTQ5MjUtYmQxYy01OGE4M2I5NmNiMjMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qixgqabB2ZXK93dFP-t3CVRNTz4AQhWvXTTUNR52h7E'></p>
-        <span id="blueChakra">${player.chakra}</span>
+   <div>
+        <p>🎯</p>
+        <span id="blueAcc">${player.accuracy}</span>
     </div>
     <div>
-        <p><img id= 'finger' src='https://fbi.cults3d.com/uploaders/14057732/illustration-file/bd0e604a-19b3-468d-838a-7c52773a543d/render7.png'></p>
-        <span id='blueCurrCurse'>${player.cursed_energy}</span>
+        <p>🕊</p>
+        <span id="blueEvas">${player.evasion}</span>
     </div>
 
 
@@ -4171,7 +4185,7 @@
         <span id="blueTalis">${player.spirit_def}</span>
     </div>
     <div class='nen_numbers'>
-        <p class='blueSpiritCurse'>${player.spiritCurse}</p>
+        <p class='blueSpiritCurse' id='wordz'>${player.spiritCurse}</p>
         <p id="blueSpiritCrit">${player.spirit_crit}</p>
     </div>
     <div>
@@ -4190,8 +4204,8 @@
         <span> <span id='blue_dom_purity'>${player.dom_purity}</span> |  <span id='blue_dom_cost'>${player.dom_cost}</span></span>
     </div>
     <div>
-        <p id='blue_dom_duration'>${player.dom_duration}</p>
-        <span id='blue_dom_lethal'>${player.dom_lethal}</span>
+        <p>🌘</p>
+        <span><span id='blue_dom_duration'>${player.dom_duration}</span> | <span id='blue_dom_lethal'>${player.dom_lethal}</span></span>
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>

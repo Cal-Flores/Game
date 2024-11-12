@@ -348,7 +348,7 @@ body {
 .fight_corner_stats {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 6px;
+    gap: 8px;
     text-align: center;
     margin-bottom: 10px;
     /* Further reduced bottom margin */
@@ -485,4 +485,8 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#wordz {
+    color: #392e21;
 }
