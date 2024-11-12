@@ -64,9 +64,9 @@
             name = ''
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
-            databaseArr.sort((a, b) => b.spirit_def - a.spirit_def);
+            //databaseArr.sort((a, b) => b.evasion - a.evasion);
             for (let player of databaseArr) {
-                $('#name').append(`<li>${player.name} ${player.spirit_def}</li>`)
+                $('#name').append(`<li>${player.name} ${player.evasion}</li>`)
                 count += 1
             }
             console.log(count)

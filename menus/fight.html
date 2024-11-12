@@ -231,6 +231,10 @@
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall', 'Strength-of-a-Hundred-Seals']
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
+            // Spirit
+            let spirit = []
+            let spiritPer = ['Hair-Pin']
+            let spiritAmount = ['Resonance']
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
@@ -468,6 +472,39 @@
                         } else {
                             redWeaponAmount -= amount
                         }
+                    }
+                }
+                // Spirit
+                if (spiritPer.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redSpiritCrit += amount
+                        } else {
+                            blueSpiritCrit -= amount
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueSpiritCrit += amount
+                        } else {
+                            redSpiritCrit -= amount
+                        }
+                    }
+                }
+                if (spiritAmount.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redSpiritAmount += amount
+                        } else {
+                            blueSpiritAmount -= amount
+                        }
+                        alert(`Red Spirit Amount ${redSpiritAmount}`)
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueSpiritAmount += amount
+                        } else {
+                            redSpiritAmount -= amount
+                        }
+                        alert(`Blue Spirit Amount ${blueSpiritAmount}`)
                     }
                 }
                 //SPPED
@@ -829,7 +866,7 @@
                     genjutsuAttack(10, 0, attacker)
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
-                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redStun, redWitherPer, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueStun, blueWitherPer, blueHeal');
+                    let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redSpirit, redTalisman, redStun, redWitherPer, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueSpirit, blueTalisman, blueStun, blueWitherPer, blueHeal');
                     if (stat_max == 'redHeal') {
                         let currRedHp = parseInt($('#redHP').text(), 10)
                         let healAmount = parseInt(prompt('Healing Factor?'), 10)
@@ -1241,6 +1278,34 @@
                                 blueWeaponCrit -= stat_number
                             }
                             break;
+                        case 'redSpirit':
+                            if (stat_type == 'Increase') {
+                                redSpirit = Math.floor(redSpirit * (1 + stat_number));
+                            } else {
+                                redSpirit = Math.floor(redSpirit * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueSpirit':
+                            if (stat_type == 'Increase') {
+                                blueSpirit = Math.floor(blueSpirit * (1 + stat_number));
+                            } else {
+                                blueSpirit = Math.floor(blueSpirit * (1 - stat_number));
+                            }
+                            break;
+                        case 'blueTalisman':
+                            if (stat_type == 'Increase') {
+                                blueTalis = Math.floor(blueTalis * (1 + stat_number));
+                            } else {
+                                blueTalis = Math.floor(blueTalis * (1 - stat_number));
+                            }
+                            break;
+                        case 'redTalisman':
+                            if (stat_type == 'Increase') {
+                                redTalis = Math.floor(redTalis * (1 + stat_number));
+                            } else {
+                                redTalis = Math.floor(redTalis * (1 - stat_number));
+                            }
+                            break;
                         default:
                             alert('Invalid stat');
                             break;
@@ -1275,7 +1340,10 @@
                 $('#redWeaponCrit').text(redWeaponCrit)
                 $('#redWeapon').text(redWeapon)
                 $('#redShield').text(redShield)
-                $('#redWeapon').text(redWeapon)
+                $('#redSpirit').text(redSpirit)
+                $('#redTalis').text(redTalis)
+                $('#redSpiritCrit').text(redSpiritCrit)
+
 
                 $('#blueHp').text(blueHp);
                 $('#blueAttack').text(blueAttack);
@@ -1304,6 +1372,9 @@
                 $('#blueWeaponCrit').text(blueWeaponCrit)
                 $('#blueShield').text(blueShield)
                 $('#blueWeapon').text(blueWeapon)
+                $('#blueSpirit').text(blueSpirit)
+                $('#blueTalis').text(blueTalis)
+                $('#blueSpiritCrit').text(blueSpiritCrit)
 
             } else {
                 $('#damage').text('Fail');
@@ -1380,7 +1451,7 @@
         const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido'];
-        const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb']; //** NEW please add me**
+        const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb', 'Straw-Doll-Technique']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda']
         const shield = []
@@ -1398,6 +1469,8 @@
         const gojo = ['Limitless']
         const kenjaku = ['Uzumaki']
         const sukuna = ['Malevolent Shrine']
+        const toge = ['Cursed-Speech']
+        const megumi = ['Ten-Shadows-Technique']
 
 
         let blackTech;
@@ -1506,6 +1579,7 @@
                     redDomDuration += amount
                     $('#red_dom_duration').text(redDomDuration)
                 }
+
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
                     if (weapon == 'Split Soul Katana') {
@@ -1622,6 +1696,44 @@
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#redCurseUi').text(curse)
                     return;
+                }
+                if (toge.includes(curse)) {
+                    curse = prompt('Blast-Away | Dont Move | Return')
+                    if (curse == 'Blast-Away') {
+                        currBlueHp -= amount;
+                        blueTalis -= 25
+                        $('#blueTalis').text(blueTalis)
+                        $('#blueHP').text(currBlueHp);
+                    } else if (curse == 'Dont Move') {
+                        alert('Player Frozen in place for 2 turns')
+                    } else if (curse == 'Return') {
+                        alert('Drain until out of Curse')
+                    }
+
+                }
+                if (megumi.includes(curse)) {
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
+                    if (curse == 'Rabbit Escape') {
+                        duration = 1;
+                        alert('Rabbits have hidden Megumi!')
+                        redEvas += 1000;
+                    } else if (curse == 'Nue') {
+                        duration = 6
+                        redElmAttack += 65;
+                        $('#redElmAttack').text(redElmAttack);
+                        currRedCurse -= 5;
+                        $('#redCurrCurse').text(currRedCurse)
+                    } else if (curse == 'Divine Dogs') {
+                        duration = 6
+                        redAttack += 150;
+                        redStrength += .50
+                        $('#redAttack').text(redAttack);
+                        currRedCurse -= 10;
+                        $('#redCurrCurse').text(currRedCurse)
+                    }
+                    redCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#redCurseUi').text(curse)
+                    return
                 }
                 /////////// END OF IF CHAIN /////////////
                 redCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -1740,6 +1852,20 @@
                     $('.blueWeaponCurse').text(blueWeaponCurse)
                     $('#blueWeaponCrit').text(blueWeaponCrit)
                 }
+                if (toge.includes(curse)) {
+                    curse = prompt('Blast-Away | Dont Move | Return')
+                    if (curse == 'Blast-Away') {
+                        currRedHp -= amount;
+                        redTalis -= 25
+                        $('#redTalis').text(redTalis)
+                        $('#redHP').text(currRedHp);
+                    } else if (curse == 'Dont Move') {
+                        alert('Player Frozen in place for 2 turns')
+                    } else if (curse == 'Return') {
+                        alert('Drain until out of Curse')
+                    }
+
+                }
                 if (black.includes(curse)) {
                     blackTech = prompt('Black-Flash | Divergent-Fist | Boogie-Woogie')
                     if (blackTech == 'Black-Flash') {
@@ -1831,6 +1957,30 @@
                     blueCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#blueCurseUi').text(curse)
                     return;
+                }
+                if (megumi.includes(curse)) {
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
+                    if (curse == 'Rabbit Escape') {
+                        duration = 1;
+                        alert('Rabbits have hidden Megumi!')
+                        blueEvas += 1000;
+                    } else if (curse == 'Nue') {
+                        duration = 6
+                        blueElmAttack += 65;
+                        $('#blueElmAttack').text(blueElmAttack);
+                        currBlueCurse -= 5;
+                        $('#blueCurrCurse').text(currBlueCurse)
+                    } else if (curse == 'Divine Dogs') {
+                        duration = 6
+                        blueAttack += 150;
+                        blueStrength += .50
+                        $('#blueAttack').text(blueAttack);
+                        currBlueCurse -= 10;
+                        $('#blueCurrCurse').text(currBlueCurse)
+                    }
+                    blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#blueCurseUi').text(curse)
+                    return
                 }
                 /////////// END OF IF CHAIN /////////////
                 blueCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -1957,6 +2107,18 @@
                     redWeapon -= 70;
                     $('#redWeapon').text(redWeapon)
                 }
+                if (curse == 'Rabbit Escape') {
+                    redEvas -= 1000;
+                } else if (curse == 'Nue') {
+                    redElmAttack -= 65;
+                    $('#redElmAttack').text(redElmAttack);
+                } else if (curse == 'Divine Dogs') {
+                    redAttack -= 150;
+                    redStrength -= .50
+                    $('#redAttack').text(redAttack);
+                }
+
+
 
 
             } else {
@@ -2068,6 +2230,16 @@
                 if (curse == 'Cleave') {
                     blueWeapon -= 70;
                     $('#blueWeapon').text(blueWeapon)
+                }
+                if (curse == 'Rabbit Escape') {
+                    blueEvas -= 1000;
+                } else if (curse == 'Nue') {
+                    blueElmAttack -= 65;
+                    $('#blueElmAttack').text(blueElmAttack);
+                } else if (curse == 'Divine Dogs') {
+                    blueAttack -= 150;
+                    blueStrength -= .50
+                    $('#blueAttack').text(blueAttack);
                 }
             }
 
@@ -2547,7 +2719,7 @@
                 if (curse == 'Critical') {
                     blueCrit = (blueCrit -= amount).toFixed(2)
                 }
-                if (curse == 'Defense') {
+                if (curse == 'Def') {
                     blueDefense = (blueDefense -= amount)
                 }
                 if (curse == 'Attack') {
@@ -2576,7 +2748,7 @@
                 if (curse == 'Gen-Power') {
                     blueGenPow -= amount
                 }
-                if (curse == 'Magic-Def') {
+                if (curse == 'M-Def') {
                     blueElmDef -= amount
                 }
                 if (curse == 'Evasion') {
@@ -2595,7 +2767,7 @@
                 if (curse == 'Critical') {
                     redCrit = (redCrit -= amount).toFixed(2)
                 }
-                if (curse == 'Defense') {
+                if (curse == 'Def') {
                     redDefense = (redDefense -= amount)
                 }
 
@@ -2622,7 +2794,7 @@
                 if (curse == 'Gen-Power') {
                     redGenPow -= amount
                 }
-                if (curse == 'Magic-Def') {
+                if (curse == 'M-Def') {
                     redElmDef -= amount
                 }
                 if (curse == 'Evasion') {
@@ -2748,6 +2920,11 @@
                 if (curse == 'Spirit') {
                     blueSpirit += amount
                 }
+                if (curse == 'Damage') {
+                    currRedHp -= amount
+                    alert(`${amount} extra damage!`)
+                    $('#redHP').text(currRedHp)
+                }
             }
 
             if (attacker == 'red') {
@@ -2798,11 +2975,15 @@
                     redDomPurity += amount
                 }
                 if (curse == 'Health') {
-                    alert('joe burrrrr')
                     currRedHp += amount
                 }
                 if (curse == 'Spirit') {
                     redSpirit += amount
+                }
+                if (curse == 'Damage') {
+                    currBlueHp -= amount
+                    alert(`${amount} extra damage!`)
+                    $('#blueHP').text(currBlueHp)
                 }
             }
             // UPDATE U.I

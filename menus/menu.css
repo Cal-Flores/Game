@@ -348,7 +348,7 @@ body {
 .fight_corner_stats {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    gap: 6px;
     text-align: center;
     margin-bottom: 10px;
     /* Further reduced bottom margin */
