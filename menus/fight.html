@@ -208,7 +208,6 @@
         }
 
         function buff(buff, attacker, cost, ultCost, jutsu, enhance, ultimate) {
-
             let amount = 0
             if (ultimate) {
                 amount = ultCost
@@ -218,34 +217,35 @@
 
             //physical
             let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka', 'Star-Rage', 'Shinra-Tensei']
-            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement']
-            let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist']
+            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement', 'The-Sun-and-Moon', 'Big-Ball-Rasengan']
+            let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist', 'Silent-Waltz']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei', 'Toad-Oil-Bullet']
             let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation', 'Divine-Flame', 'Disaster-Stones']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
-            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka', 'Shinra-Tensei']
+            let weapon = ['Knife', 'Totsuka-Blade', 'Body-Alteration', 'Spiky-Human-Bolder', 'Ackerman-Curse', 'Jaws', 'Kamaitachi', 'Water-Prison-Shark-Dance', 'Yasaka', 'Shinra-Tensei', 'Blood-Scythe']
             let shield = ['Claws', 'Earth-Grudge-Fear', 'Wood-Locking-Wall', 'Ice-Harden', 'Water-Formation-Wall', 'Strength-of-a-Hundred-Seals']
             let witherPer = []
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             // Spirit
             let spirit = []
+            let spiritDef = ['Blood-Hammer', 'Super-Beast-Tomoe-Lion', 'Rashōmon-Gates', 'Polymorphic-Soul-Isomer']
             let spiritPer = ['Hair-Pin']
             let spiritAmount = ['Resonance']
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon', 'Heat']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -258,12 +258,13 @@
             let ultCosted = []
             let ultDamage = []
             let elem = []
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
-            let special = ['I.R.S']
+            let special = ['I.R.S', 'Uzumaki']
+            let absorb = ['Cursed-Spirit-Manipulation']
             let setNin = ['Hakoware'] //ie SET CHAKRA TO 0
 
 
@@ -475,6 +476,37 @@
                     }
                 }
                 // Spirit
+                if (spirit.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redSpirit = Math.floor(redSpirit * (1 + amount));
+                        } else {
+                            blueSpirit = Math.floor(blueSpirit * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueSpirit = Math.floor(blueSpirit * (1 + amount));
+                        } else {
+                            redSpirit = Math.floor(redSpirit * (1 - amount));
+                        }
+                    }
+                }
+                if (spiritDef.includes(jutsu)) {
+                    if (attacker == 'red') {
+                        if (enhance) {
+                            redTalis = Math.floor(redTalis * (1 + amount));
+                        } else {
+                            blueTalis = Math.floor(blueTalis * (1 - amount));
+                        }
+                    } else if (attacker == 'blue') {
+                        if (enhance) {
+                            blueTalis = Math.floor(blueTalis * (1 + amount));
+                        } else {
+                            redTalis = Math.floor(redTalis * (1 - amount));
+                        }
+                    }
+                }
+
                 if (spiritPer.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
@@ -764,7 +796,6 @@
                     }
                 }
                 if (ninDamage.includes(jutsu)) {
-                    console.log('LARIATOOO is in the Array!!!!', blueNenNinDmg)
                     if (attacker == 'red') {
                         if (enhance) {
                             redNenNinDmg = Math.floor(redNenNinDmg * (1 + amount));
@@ -826,30 +857,49 @@
                         }
                     }
                 }
-                if (jutsu == 'Hakoware') {
+                if (jutsu == 'Hakoware' || jutsu == 'Uzumaki') {
                     let currBlueChakra = parseInt($('#blueChakra').text(), 10);
                     let currRedChakra = parseInt($('#redChakra').text(), 10);
                     let currredHp = parseInt($('#redHP').text(), 10)
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     let hakDamage = 0
+                    let mult = 9;
+                    if (jutsu == 'Uzumaki') {
+                        mult = 12
+                    }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
-                        hakDamage = currRedChakra * 9;
+                        hakDamage = currRedChakra * mult;
                         currBlueHp = currBlueHp -= hakDamage
                         currRedChakra = 0;
-                        alert(`Hakoware loans and deals ${hakDamage} to Blue`)
+                        alert(`${jutsu} loans and deals ${hakDamage} to Blue`)
                     } else {
                         currRedChakra += Math.floor(currBlueChakra / 2)
-                        hakDamage = currBlueChakra * 9;
+                        hakDamage = currBlueChakra * mult;
                         currredHp = currredHp -= hakDamage
                         currBlueChakra = 0;
-                        alert(`Hakoware loans and deals ${hakDamage} to Red`)
+                        alert(`${jutsu} loans and deals ${hakDamage} to Red`)
                     }
 
                     $('#redHP').text(currredHp)
                     $('#blueHP').text(currBlueHp)
                     $('#redChakra').text(currRedChakra)
                     $('#blueChakra').text(currBlueChakra)
+                }
+                if (absorb.includes(jutsu)) {
+                    let currBlueCurse = parseInt($('#blueCurrCurse').text(), 10)
+                    let currRedCurse = parseInt($('#redCurrCurse').text(), 10)
+                    if (attacker == 'red') {
+                        currRedCurse += currBlueCurse;
+                        currBlueCurse = 0;
+                        alert('Blue Energy absorbed!')
+                    } else {
+                        currBlueCurse += currRedCurse;
+                        currRedCurse = 0;
+                        alert('Red Energy absorbed!')
+                    }
+                    $('#blueCurrCurse').text(currBlueCurse)
+                    $('#redCurrCurse').text(currRedCurse)
                 }
                 if (percentDmg.includes(jutsu)) {
                     let currRedHp = parseInt($('#redHP').text(), 10)
@@ -864,6 +914,124 @@
                 }
                 if (jutsu == 'Psychometry' || jutsu == 'Spiritual Message') {
                     genjutsuAttack(10, 0, attacker)
+                }
+                //chrollo
+                if (jutsu == "Bandit's") {
+                    let book = prompt('Ninjutsu | Ultimate')
+                    if (attacker == 'red') {
+                        if (book == 'Ninjutsu') {
+                            redNenNin = blueNenNin;
+                            redNenNinDmg = blueNenNinDmg;
+                            redNenNinCost = blueNenNinCost
+                            redNinEnhance = blueNinEnhance
+                            redNinAmount = blueNinAmount
+                            $('#blueBandit').text('** STOLEN **')
+                        } else if (book == 'Ultimate') {
+                            redNenNin = blueNinjutsu;
+                            redNenNinDmg = blueNinPower;
+                            redNenNinCost = blueNinCost
+                            redNinEnhance = blueUltEnhance;
+                            redNinAmount = blueUltAmount
+                            $('#blueUltBandit').text('** STOLEN **')
+                        }
+                        $('#redBandit').text(redNenNin)
+                        $('#redNinPow').text(redNenNinDmg)
+                        $('#redcost1').text(redNenNinCost)
+                        alert(`Chrollo has stolen ${book}`)
+                    } else {
+                        if (book == 'Ninjutsu') {
+                            blueNenNin = redNenNin;
+                            blueNenNinDmg = redNenNinDmg;
+                            blueNenNinCost = redNenNinCost
+                            blueNinEnhance = redNinEnhance
+                            blueNinAmount = redNinAmount
+                            $('#redBandit').text('** STOLEN **')
+                        } else if (book == 'Ultimate') {
+                            blueNenNin = redNinjutsu;
+                            blueNenNinDmg = redNinPower;
+                            blueNenNinCost = redNinCost
+                            blueNinEnhance = redUltEnhance;
+                            blueNinAmount = redUltAmount
+                            $('#redUltBandit').text('** STOLEN **')
+                        }
+                        $('#blueBandit').text(blueNenNin)
+                        $('#blueNinPow').text(blueNenNinDmg)
+                        $('#bluecost1').text(blueNenNinCost)
+                        alert(`chrollo has stolen ${book}`)
+                    }
+                }
+                if (jutsu == 'Explosive-Transformation') {
+                    if (attacker == 'red') {
+                        blueDefense = Math.floor(blueDefense * .75);
+                        blueEvas -= 5;
+                        $('#blueDefense').text(blueDefense);
+                        $('#blueEvas').text(blueEvas)
+                    } else {
+                        redDefense = Math.floor(redDefense * .75);
+                        redEvas -= 5;
+                        $('#redDefense').text(redDefense);
+                        $('#redEvas').text(redEvas)
+                    }
+                }
+                if (jutsu == 'Crazy-Slots') {
+                    let currredHp = parseInt($('#redHP').text(), 10)
+                    let currBlueHp = parseInt($('#blueHP').text(), 10)
+                    let slot = Math.floor(Math.random() * 6) + 1
+                    if (attacker == 'red') {
+                        if (slot == 1) {
+                            alert('🤡 1 🤡 Force Field: Opponent has ZERO Recovery!')
+                            blueRecovery = 0;
+                        } else if (slot == 2) {
+                            alert('🤡 2 🤡 Devestating Roll! SCYTHE')
+                            redWeapon = 285;
+                            redWeaponCrit = .40
+                        } else if (slot == 3) {
+                            alert('🤡 3 🤡 DESPERATION MACE..')
+                            currRedHp += 2000;
+                        } else if (slot == 4) {
+                            alert('🤡 4 🤡 Bad Roll.. Carbine')
+                            redWeapon = 255;
+                            redAcc = 15;
+                        } else if (slot == 5) {
+                            alert('🤡 5 🤡 Bad Roll.. 777 BOMB')
+                            currBlueHp -= 777
+                        } else if (slot == 6) {
+                            alert('🤡 6 🤡 Strength Grows Tremendously')
+                            redStrength = 2
+                        }
+                    } else {
+                        if (slot == 1) {
+                            alert('🤡 1 🤡 Force Field: Opponent has ZERO Recovery!')
+                            RedRecovery = 0;
+                        } else if (slot == 2) {
+                            alert('🤡 2 🤡 Devestating Roll! SCYTHE')
+                            blueWeapon = 285;
+                            blueWeaponCrit = .40
+                        } else if (slot == 3) {
+                            alert('🤡 3 🤡 DESPERATION MACE..')
+                            currBlueHp += 2000;
+                        } else if (slot == 4) {
+                            alert('🤡 4 🤡 Bad Roll.. Carbine')
+                            blueWeapon = 255;
+                            blueAcc = 15;
+                        } else if (slot == 5) {
+                            alert('🤡 5 🤡 Bad Roll.. 777 BOMB')
+                            currRedHp -= 777
+                        } else if (slot == 6) {
+                            alert('🤡 6 🤡 Strength Grows Tremendously')
+                            blueStrength = 2
+                        }
+                    }
+                    $('#redHP').text(currRedHp)
+                    $('#blueHP').text(currBlueHp)
+                    $('#redWeapon').text(redWeapon)
+                    $('#blueWeapon').text(blueWeapon)
+                    $('#redStr').text(redStrength)
+                    $('#blueStr').text(blueStrength)
+                    $('#redWeaponCrit').text(redWeaponCrit)
+                    $('#blueWeaponCrit').text(blueWeaponCrit)
+                    $('#redAcc').text(redAcc)
+                    $('#blueAcc').text(blueAcc)
                 }
                 if (jutsu == 'MISC' || misc.includes(jutsu)) {
                     let stat_max = prompt('redAttack, redDefense, redCrit,  redStr, redElmAttack, redElmDef, redElmEffc, redPot, redELM, redRecovery, redEvas, redAcc, redLuck, redGen, redGenPow, redWill, redNinjutsuCost, redUltNinCost, redNinjutsuPower,redDomDur, redDomPurity, redDomLethal, redCurseRec, redWeapon, redShield, redSpirit, redTalisman, redStun, redWitherPer, redHeal, blueAttack, blueDefense, blueCrit, blueStr, blueElmAttack, blueElmDef, blueElmEffc, bluePot, blueELM, blueRecovery, blueEvas, blueAcc blueLuck, blueGen, blueGenPow, blueWill, blueNinCost, blueNinjutsuCost, blueNinjutsuPower, blueDomPurity, blueDomDur, blueDomLethal, blueCurseRec, blueWeapon, blueShield, blueSpirit, blueTalisman, blueStun, blueWitherPer, blueHeal');
@@ -1306,6 +1474,22 @@
                                 redTalis = Math.floor(redTalis * (1 - stat_number));
                             }
                             break;
+                        case 'Sage-Red':
+                            redAttack = 290;
+                            redDefense = 270;
+                            redEvas = 8;
+                            redNinPower = 400;
+                            redRecovery = 3;
+                            $('#redUltPow').text(redNinPower)
+
+                        case 'Sage-Blue':
+                            blueAttack = 290;
+                            blueDefense = 270;
+                            blueEvas = 8;
+                            blueNinPower = 400;
+                            blueRecovery = 3;
+                            $('#blueUltPow').text(blueNinPower)
+
                         default:
                             alert('Invalid stat');
                             break;
@@ -1442,15 +1626,15 @@
                 alert('GenJutsu of that level doesnt work on me')
             }
         }
-        const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation', 'Beelzebub'];
+        const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation', 'Beelzebub', 'Super-Beast-Hawk'];
         const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic', 'Three-Headed-Wolf'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier", 'Rage-Blast',];
-        const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum']
-        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido'];
+        const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum', 'Eight-Branch-Snake-Technique']
+        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido', 'Fun-Fun-Cloth'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb', 'Straw-Doll-Technique']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda']
@@ -1471,6 +1655,8 @@
         const sukuna = ['Malevolent Shrine']
         const toge = ['Cursed-Speech']
         const megumi = ['Ten-Shadows-Technique']
+        const geto = ['Spirit-Manipulation']
+        const mahito = ['Transfiguration']
 
 
         let blackTech;
@@ -1657,6 +1843,39 @@
                         redAcc += 20;
                         $('#redAcc').text(redAcc);
                         //alert(`blue Accuracy ${redAcc}`)
+                    }
+                    redCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#redCurseUi').text(curse)
+                    return;
+                }
+                if (geto.includes(curse)) {
+                    let curse = prompt('Cursed-Summoning | Spirit-Manipulation')
+                    if (curse == 'Cursed-Summoning') {
+                        redSpirit += 65;
+                    } else {
+                        redDefense += 60;
+                        redElmDef += 60;
+                        redTalis += 75
+                    }
+                    $('#redSpirit').text(redSpirit)
+                    $('#redElmDef').text(redElmDef);
+                    $('#redDefense').text(redDefense);
+                    $('#redTalis').text(redTalis);
+                    redCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#redCurseUi').text(curse)
+                    return;
+                }
+                if (mahito.includes(curse)) {
+                    let curse = prompt('Idle-Transfiguration | Instant Spirit-Body of Distorted Killing ')
+                    if (curse == 'Idle-Transfiguration') {
+                        buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                    } else {
+                        currRedCurse -= 18;
+                        redAttack += 70;
+                        redCrit += .20;
+                        $('#redAttack').text(redAttack)
+                        $('#redCrit').text(redCrit)
+                        $('#redCurrCurse').text(currRedCurse)
                     }
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
                     $('#redCurseUi').text(curse)
@@ -1923,6 +2142,38 @@
                     $('#blueCurseUi').text(curse)
                     return;
                 }
+                if (mahito.includes(curse)) {
+                    let cursed = prompt('Idle-Transfiguration | Instant Spirit-Body of Distorted Killing ')
+                    if (cursed == 'Idle-Transfiguration') {
+                        buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                    } else {
+                        currBlueCurse -= 18;
+                        blueAttack += 70;
+                        blueCrit += .20;
+                        $('#blueAttack').text(blueAttack)
+                        $('#blueCrit').text(blueCrit)
+                        $('#blueCurrCurse').text(currBlueCurse)
+                    }
+                }
+                if (geto.includes(curse)) {
+                    let curse = prompt('Cursed-Summoning | Spirit-Manipulation')
+                    if (curse == 'Cursed-Summoning') {
+                        blueSpirit += 65;
+                        alert(`${blueSpirit} is the new power`)
+                    } else {
+                        blueDefense += 60;
+                        blueElmDef += 60;
+                        blueTalis += 75
+                        alert(`Defense on the rise ${blueDefense} ${blueElmDef} ${blueTalis}`)
+                    }
+                    $('#blueSpirit').text(blueSpirit)
+                    $('#blueElmDef').text(blueElmDef);
+                    $('#blueDefense').text(blueDefense);
+                    $('#blueTalis').text(blueTalis);
+                    blueCurses.push({ name: curse, turnsLeft: duration, amount })
+                    $('#blueCurseUi').text(curse)
+                    return;
+                }
                 if (kenjaku.includes(curse)) {
                     let curse = prompt('Maximum: Uzumaki |  Antigravity System');
                     if (curse == 'Maximum: Uzumaki') {
@@ -2099,6 +2350,27 @@
                         //alert(`Neutral released!`)
                     }
                 }
+                if (mahito.includes(curse)) {
+                    if (curse != 'Idle-Transfiguration') {
+                        redAttack -= 70;
+                        redCrit -= .20;
+                        $('#redAttack').text(redAttack)
+                        $('#redCrit').text(redCrit)
+                    }
+                }
+                if (curse == 'Cursed-Summoning' || curse == 'Spirit-Manipulation') {
+                    if (curse == 'Cursed-Summoning') {
+                        redSpirit -= 65;
+                        $('#blueSpirit').text(redSpirit)
+                    } else {
+                        redDefense -= 60;
+                        redElmDef -= 60;
+                        redTalis -= 75
+                    }
+                    $('#redElmAttack').text(redElmAttack);
+                    $('#redDefense').text(redDefense);
+                    $('#redTalis').text(redTalis);
+                }
                 if (curse == 'Antigravity System') {
                     blueEvas += 10;
                     $('#blueEvas').text(blueEvas)
@@ -2222,6 +2494,27 @@
                         $('#blueAcc').text(blueAcc);
                         //alert(`Neutral released!`)
                     }
+                }
+                if (mahito.includes(curse)) {
+                    if (curse != 'Idle-Transfiguration') {
+                        blueAttack -= 70;
+                        blueCrit -= .20;
+                        $('#blueAttack').text(blueAttack)
+                        $('#blueCrit').text(blueCrit)
+                    }
+                }
+                if (curse == 'Cursed-Summoning' || curse == 'Spirit-Manipulation') {
+                    if (curse == 'Cursed-Summoning') {
+                        blueSpirit -= 65;
+                        $('#blueSpirit').text(blueSpirit)
+                    } else {
+                        blueDefense -= 60;
+                        blueElmDef -= 60;
+                        blueTalis -= 75
+                    }
+                    $('#blueElmAttack').text(blueElmAttack);
+                    $('#blueDefense').text(blueDefense);
+                    $('#blueTalis').text(blueTalis);
                 }
                 if (curse == 'Antigravity System') {
                     redEvas += 10;
@@ -2758,6 +3051,9 @@
                     if (blueDomPurity <= 0) return
                     blueDomPurity -= amount
                 }
+                if (curse == 'Stun') {
+                    alert('The CURSED Tool Caused A Stun!')
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -2806,6 +3102,9 @@
                 if (curse == 'Purity') {
                     if (redDomPurity <= 0) return
                     redDomPurity -= amount
+                }
+                if (curse == 'Stun') {
+                    alert('The CURSED Tool Caused A Stun!')
                 }
             }
             // UPDATE U.I
@@ -2905,8 +3204,11 @@
                 if (curse == 'Gen-Power') {
                     blueGenPow += amount
                 }
-                if (curse == 'Magic-Def') {
+                if (curse == 'M-Def') {
                     blueElmDef += amount
+                }
+                if (curse == 'S-Def') {
+                    blueTalis += amount
                 }
                 if (curse == 'Evasion') {
                     blueEvas += amount
@@ -2919,11 +3221,6 @@
                 }
                 if (curse == 'Spirit') {
                     blueSpirit += amount
-                }
-                if (curse == 'Damage') {
-                    //currRedHp -= amount
-
-                    //$('#redHP').text(currRedHp)
                 }
             }
 
@@ -2962,8 +3259,11 @@
                 if (curse == 'Gen-Power') {
                     redGenPow += amount
                 }
-                if (curse == 'Magic-Def') {
+                if (curse == 'M-Def') {
                     redElmDef += amount
+                }
+                if (curse == 'S-Def') {
+                    redTalis += amount
                 }
                 if (curse == 'Evasion') {
                     redEvas += amount
@@ -2979,11 +3279,6 @@
                 }
                 if (curse == 'Spirit') {
                     redSpirit += amount
-                }
-                if (curse == 'Damage') {
-                    //currBlueHp -= amount
-                    //alert(`${amount} extra damage!`)
-                    // $('#blueHP').text(currBlueHp)
                 }
             }
             // UPDATE U.I
@@ -3015,6 +3310,7 @@
             $('#redShield').text(redShield)
             $('#redWeapon').text(redWeapon)
             $('#redSpirit').text(redSpirit)
+            $('#redTalis').text(redTalis)
 
             $('#blueHp').text(blueHp);
             $('#blueAttack').text(blueAttack);
@@ -3043,6 +3339,7 @@
             $('#blueShield').text(blueShield)
             $('#blueWeapon').text(blueWeapon)
             $('#blueSpirit').text(blueSpirit)
+            $('#blueTalis').text(blueTalis)
 
             $('#blueHP').text(currBlueHp);
             $('#redHP').text(currRedHp);
@@ -4026,8 +4323,8 @@
 
 </div>
 
-                <p class='words'>${player.ninjutsu2} ✮ <span id='redcost1'>${player.ninJutsu2cost}</span></p>
-                <p class='words'>${player.ninjutsu} ✮ <span id='redcost2'>${player.nin_cost}</span></p>
+                <p class='words'> <span id='redBandit'>${player.ninjutsu2}</span> ✮ <span id='redcost1'>${player.ninJutsu2cost}</span></p>
+                <p class='words'><span id='redUltBandit'>${player.ninjutsu}</span> ✮ <span id='redcost2'>${player.nin_cost}</span></p>
                 <hr>
                   <p class='words'><span id = 'redTechName'>${player.cursed_tech}</span> ✫ <span id='redCurseTech'>${player.curse_cost}</span></p>
                 <hr>
@@ -4225,8 +4522,8 @@
 
 
 
-               <p class='words'>${player.ninjutsu2} ✮ <span id='bluecost1'>${player.ninJutsu2cost}</span></p>
-               <p class='words'>${player.ninjutsu} ✮ <span id='bluecost2'>${player.nin_cost}</span></p>
+               <p class='words'><span id='blueBandit'>${player.ninjutsu2}</span> ✮ <span id='redcost1'>${player.ninJutsu2cost}</span> ✮ <span id='bluecost1'>${player.ninJutsu2cost}</span></p>
+               <p class='words'><span id='blueUltBandit'>${player.ninjutsu}</span> ✮ <span id='bluecost2'>${player.nin_cost}</span></p>
                <hr>
                  <p class='words'><span id='blueTechName'>${player.cursed_tech}</span> ✫ <span id='blueCurseTech'>${player.curse_cost}</span></p>
                   <hr>

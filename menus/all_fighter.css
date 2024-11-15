@@ -16,14 +16,59 @@
     height: 30px;
 }
 
+#character-container {
+    display: inline-block;
+}
+
 #all_fight_conttt {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin: 3%;
+    margin: 2%;
     width: 94%;
+}
+
+#alls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#sortInput {
+    background-color: #424E5D;
+    color: #DEBCA1;
+    border: 2px solid #DEBCA1;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 7px;
+    width: 20%;
+    cursor: pointer;
+    appearance: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Optional hover effect to match your submit button */
+#sortInput:hover {
+    background-color: #DEBCA1;
+    color: white;
+    border: 2px solid #DEBCA1;
+}
+
+#sortInput:focus {
+    outline: none;
+    border: 2px solid #DEBCA1;
+}
+
+/* Optional dropdown arrow styling */
+#sortInput {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23DEBCA1"><path d="M10 12l-5-5h10l-5 5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
 }
 
 .all_fight_card {
@@ -35,7 +80,8 @@
     margin: 1%;
     padding: 2%;
     background-color: #2A2E35;
-    overflow: scroll;
+    overflow: hidden;
+    /* Ensures that the horizontal scroll doesn't overflow the card */
 }
 
 #all_top {
@@ -44,13 +90,22 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3%;
+    position: sticky;
+    top: 0;
+    background-color: #2A2E35;
+    z-index: 100;
+    /* padding: 10px; */
 }
-
 
 #all_middle {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 15px;
+    overflow-x: auto;
+    /* Allow horizontal scrolling */
+    padding: 10px;
+    max-width: 100%;
+    /* Prevent overflow */
 }
 
 .all_stat {
@@ -61,11 +116,11 @@
 
 .stat-box {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 0.05px solid #5b6775;
     border-radius: 6px;
     text-align: center;
     font-size: 12px;
-    width: 70px;
+    width: 57px;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -75,13 +130,15 @@
 .all_stat p {
     margin: 5px 0;
     text-align: center;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-size: 12px;
+    overflow: hidden;
 }
 
 .all_stat span {
     display: block;
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: normal;
     color: #E5C100;
 }

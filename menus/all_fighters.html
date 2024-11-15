@@ -56,6 +56,28 @@
             <img>
         </header>
         <main id='alls'>
+            <select id="sortInput">
+                <option value="magicEffectiveness">HP</option>
+                <option value="attack">Attack</option>
+                <option value="elm_attack">Magic</option>
+                <option value="weapon">Weapon</option>
+                <option value="spirit">Spirit</option>
+                <option value="defense">Defense</option>
+                <option value="elm_defense">Magic Defense</option>
+                <option value="shield">Shield</option>
+                <option value="spirit_def">Talisman</option>
+                <option value="accuracy">Accuracy</option>
+                <option value="evasion">Evasion</option>
+                <option value="chakra_rec">Recovery</option>
+                <option value="luck">Luck</option>
+                <option value="stun">Stun</option>
+                <option value="gen_power">Genjutsu Power</option>
+                <option value="critical">Critical</option>
+                <option value="strength">Strength</option>
+                <option value="defense">Potency</option>
+                <option value="elm_efficiency">Efficiency</option>
+            </select>
+            <div id="character-container"></div>
             <div id="all_fight_conttt"></div>
             <ol id="name"></ol>
         </main>
@@ -64,15 +86,25 @@
             name = ''
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
-            //databaseArr.sort((a, b) => b.evasion - a.evasion);
-            for (let player of databaseArr) {
-                $('#name').append(`<li>${player.name} ${player.evasion}</li>`)
-                count += 1
+            let characters = databaseArr
+            databaseArr.sort((a, b) => b.hp - a.hp);
+
+            // Function to sort characters by a specified stat in descending order
+            function sortByStat(array, stat) {
+                return array.slice().sort((a, b) => (b[stat] || 0) - (a[stat] || 0));
             }
-            console.log(count)
-            for (let player of databaseArr) {
-                html += `
-            <div class='all_fight_card'>
+
+            // Function to update character display based on sorted characters
+            function updateCharacterDisplay(stat) {
+                const sortedCharacters = sortByStat(characters, stat);
+                const characterContainer = document.getElementById("all_fight_conttt");
+                characterContainer.innerHTML = ""; // Clear previous entries
+
+                sortedCharacters.forEach(player => {
+                    const characterElement = document.createElement("div");
+                    characterElement.classList.add("all_fight_card");
+                    characterElement.innerHTML = `
+
                 <div id='all_top'>
                     <img id='player_img' src=${player.image}>
                     <p>${player.name}</p>
@@ -90,7 +122,7 @@
                             <span>${player.defense}</span>
                         </div>
                         <div class="stat-box">
-                            <p>Critical %</p>
+                            <p>Critical</p>
                             <span>${player.critical}</span>
                         </div>
                         <div class="stat-box">
@@ -104,7 +136,7 @@
                             <span>${player.elm_attack}</span>
                         </div>
                         <div class="stat-box">
-                            <p>M. Defense</p>
+                            <p>M. Def</p>
                             <span>${player.elm_defense}</span>
                         </div>
                         <div class="stat-box">
@@ -113,12 +145,12 @@
                         </div>
                         <div class="stat-box">
                             <p>Potency</p>
-                            <span>${player.potency}%</span>
+                            <span>${player.potency}</span>
                         </div>
                     </div>
                     <div class='all_stat'>
                         <div class="stat-box">
-                            <p>Cursed Tool</p>
+                            <p>Weapon</p>
                             <span>${player.weapon}</span>
                         </div>
                         <div class="stat-box">
@@ -130,7 +162,7 @@
                             <span>${player.weaponCurse}</span>
                         </div>
                         <div class="stat-box">
-                            <p>${player.curse_crit}%</p>
+                            <p>${player.curse_crit}</p>
                             <span>${player.weapon_amount}</span>
                         </div>
                     </div>
@@ -140,7 +172,7 @@
                             <span>${player.spirit}</span>
                         </div>
                         <div class="stat-box">
-                            <p>Spirit Defense</p>
+                            <p>Talisman</p>
                             <span>${player.spirit_def}</span>
                         </div>
                         <div class="stat-box">
@@ -148,7 +180,7 @@
                             <span>${player.spiritCurse}</span>
                         </div>
                         <div class="stat-box">
-                            <p>${player.spirit_crit}%</p>
+                            <p>${player.spirit_crit}</p>
                             <span>${player.spirit_amount}</span>
                         </div>
                     </div>
@@ -172,6 +204,24 @@
                     </div>
                     <div class='all_stat'>
                         <div class="stat-box">
+                            <p>Genjutsu</p>
+                            <span>${player.genjutsu}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Power</p>
+                            <span>${player.gen_power}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>WillPower</p>
+                            <span>${player.willpower}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Luck</p>
+                            <span>${player.luck}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
                             <p>Purity</p>
                             <span>${player.dom_purity}</span>
                         </div>
@@ -184,19 +234,186 @@
                             <span>${player.dom_lethal}</span>
                         </div>
                         <div class="stat-box">
-                            <p>Cost</p>
-                            <span>${player.dom_cost}</span>
+                            <p>Stun</p>
+                            <span>${player.stun}</span>
                         </div>
                     </div>
                 </div>
                 <button class="toggleButton">Show Details</button>
                 <div class='all_bottom' style='display: none;'>
                     <h4>NinJutsu</h4>
-                    <p>${player.chakra_attack} - ${player.chakra_pow} Damage ${player.cost} cost</p>
-                    <p>${player.ninjutsu} - ${player.ninjutsu_pow} Damage ${player.nin_cost} cost</p>
-                    <h4>Nen Abilities</h4>
-                    <p>${player.buff} Accuracy ${player.buff_acc}</p>
-                    <p>${player.buff2} Accuracy ${player.buff2_acc}</p>
+                    <p>${player.ninjutsu2} - Damage: ${player.ninJutsu2Dmg} - Cost: ${player.ninJutsu2cost}</p>
+                    <p>${player.ninjutsu} - Damage: ${player.ninjutsu_pow} - Cost: ${player.nin_cost}</p>
+                    <h4>Innate Curse Technique</h4>
+                    <p>${player.cursed_tech} Cost: ${player.curse_cost}</p>
+                </div>
+
+        `;
+                    $('#all_fight_conttt').append(characterElement);
+                });
+                for (let player of sortedCharacters) {
+                    $('#name').append(`<li>${player.name} - ${stat}</li>`)
+                    count += 1
+                }
+            }
+
+            // Event listener for the input field to trigger sorting when input changes
+            document.getElementById("sortInput").addEventListener("input", (event) => {
+                const stat = event.target.value.trim().toLowerCase();
+
+                // Check if the entered stat is valid
+                if (characters[0] && stat in characters[0]) {
+                    updateCharacterDisplay(stat); // Sort and update display if valid
+                }
+            });
+
+
+
+            console.log(count)
+            for (let player of databaseArr) {
+                html += `
+            <div class='all_fight_card'>
+                <div id='all_top'>
+                    <img id='player_img' src=${player.image}>
+                    <p>${player.name}</p>
+                    <p id='all_type'>${player.nen_type}</p>
+                    <img id='elem_img' src=${player.elm}>
+                </div>
+                <div id='all_middle'>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Attack</p>
+                            <span>${player.attack}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Defense</p>
+                            <span>${player.defense}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Critical</p>
+                            <span>${player.critical}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Strength</p>
+                            <span>${player.strength}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Magic</p>
+                            <span>${player.elm_attack}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>M. Def</p>
+                            <span>${player.elm_defense}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Element</p>
+                            <span>${player.elm_efficiency}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Potency</p>
+                            <span>${player.potency}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Weapon</p>
+                            <span>${player.weapon}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Shield</p>
+                            <span>${player.shield}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Curse</p>
+                            <span>${player.weaponCurse}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>${player.curse_crit}</p>
+                            <span>${player.weapon_amount}</span>
+                        </div>
+                    </div>
+                     <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Spirit</p>
+                            <span>${player.spirit}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Talisman</p>
+                            <span>${player.spirit_def}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Boost</p>
+                            <span>${player.spiritCurse}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>${player.spirit_crit}</p>
+                            <span>${player.spirit_amount}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>HP</p>
+                            <span>${player.hp}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Chakra</p>
+                            <span>${player.chakra_rec}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Accuracy</p>
+                            <span>${player.accuracy}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Evasion</p>
+                            <span>${player.evasion}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Genjutsu</p>
+                            <span>${player.genjutsu}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Power</p>
+                            <span>${player.gen_power}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>WillPower</p>
+                            <span>${player.willpower}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Luck</p>
+                            <span>${player.luck}</span>
+                        </div>
+                    </div>
+                    <div class='all_stat'>
+                        <div class="stat-box">
+                            <p>Purity</p>
+                            <span>${player.dom_purity}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Duration</p>
+                            <span>${player.dom_duration}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Leathal</p>
+                            <span>${player.dom_lethal}</span>
+                        </div>
+                        <div class="stat-box">
+                            <p>Stun</p>
+                            <span>${player.stun}</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="toggleButton">Show Details</button>
+                <div class='all_bottom' style='display: none;'>
+                   <h4>NinJutsu</h4>
+                    <p>${player.ninjutsu2} - Damage: ${player.ninJutsu2Dmg} - Cost: ${player.ninJutsu2cost}</p>
+                    <p>${player.ninjutsu} - Damage: ${player.ninjutsu_pow} - Cost: ${player.nin_cost}</p>
+                    <h4>Innate Curse Technique</h4>
+                    <p>${player.cursed_tech} - Cost: ${player.curse_cost}</p>
                 </div>
             </div>
             `;
