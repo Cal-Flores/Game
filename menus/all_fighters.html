@@ -255,6 +255,22 @@
                     $('#name').append(`<li>${player.name} - ${stat}</li>`)
                     count += 1
                 }
+                const buttons = document.querySelectorAll('.toggleButton');
+                const allBottoms = document.querySelectorAll('.all_bottom');
+
+                buttons.forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        const allBottom = allBottoms[index]; // Get the corresponding bottom section
+
+                        if (allBottom.style.display === 'none' || allBottom.style.display === '') {
+                            allBottom.style.display = 'block'; // Show
+                            button.textContent = 'Hide Details'; // Change button text
+                        } else {
+                            allBottom.style.display = 'none'; // Hide
+                            button.textContent = 'Show Details'; // Change button text
+                        }
+                    });
+                });
             }
 
             // Event listener for the input field to trigger sorting when input changes

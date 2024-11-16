@@ -1213,8 +1213,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 30,
         negative_energy: 32,
-        cursed_tech: 'Body-Manipulation - Double Evasion',
-        curse_amount: 6,
+        cursed_tech: 'Body-Manipulation - Triple Evasion',
+        curse_amount: 10,
         curse_duration: 6,
         curse_cost: 14,
         //DOMAIN
@@ -2764,17 +2764,17 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 300,
-        defense: 248,
+        defense: 164,
         critical: .20,
         strength: 1.8,
         //MAGIC
         elm_attack: 131,
-        elm_defense: 181,
+        elm_defense: 191,
         elm_efficiency: 1.25,
         potency: .10,
         //WEAPON
         weapon: 128,
-        shield: 172,
+        shield: 182,
         curse_crit: .08,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
@@ -8628,12 +8628,12 @@ const database = [
         elm: fire,
         hp: 4000,
         //PHYSICAL
-        attack: 250,
+        attack: 215,
         defense: 240,
         critical: .80,
         strength: 2.5,
         //MAGIC
-        elm_attack: 220,
+        elm_attack: 195,
         elm_defense: 125,
         elm_efficiency: 2,
         potency: .75,
