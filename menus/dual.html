@@ -90,7 +90,7 @@
             <div class="team_1_fighters">
                 <h4 class="team_name1"></h4>
             </div>
-            <a target="_blank" href="fight.html">FIGHT</a>
+            <a id="dualnowbtn" target="_blank" href="fight.html">FIGHT</a>
             <div class="team_2_fighters">
                 <h4 class="team_name2"></h4>
             </div>
@@ -130,14 +130,19 @@
                                 </div>
                                 <div class='fight_card_stats'>
                                     <p>⚔️: ${teamObj[team_1][player].attack}</p>
+                                    <p>🪄:${teamObj[team_1][player].elm_attack}</p>
+                                    <p>🏹:${teamObj[team_1][player].weapon}</p>
+                                    <p>🦇:${teamObj[team_1][player].spirit}</p>
+
                                     <p>🛡: ${teamObj[team_1][player].defense}</p>
-                                    <p>🔥:${teamObj[team_1][player].elm_attack}</p>
-                                    <p>㊏: ${teamObj[team_1][player].elm_defense}</p>
-                                    <p>💥: ${teamObj[team_1][player].critical}</p>
-                                    <p>🧪: ${teamObj[team_1][player].elm_efficiency}</p>
-                                    <p>🪦 ${teamObj[team_1][player].strength}</p>
-                                    <p>🌪 ${teamObj[team_1][player].potency}</p>
-                                    <p class='buff_stat'>${teamObj[team_1][player].buff}</p>
+                                    <p>💎: ${teamObj[team_1][player].elm_defense}</p>
+                                    <p>𐂫: ${teamObj[team_1][player].shield}</p>
+                                    <p>:🪬 ${teamObj[team_1][player].spirit_def}</p>
+
+                                    <p>🎯: ${teamObj[team_1][player].accuracy}</p>
+                                    <p>🪽: ${teamObj[team_1][player].evasion}</p>
+                                    <p>🍀: ${teamObj[team_1][player].luck}</p>
+                                    <p>🤞🏼: ${teamObj[team_1][player].dom_purity}</p>
                                 </div>
                             </div>
                             `
@@ -158,15 +163,20 @@
                                     <img class='fight_card_elm' src='${teamObj[team_2][player].elm}'>
                                 </div>
                                 <div class='fight_card_stats'>
+                                    <p>🪄:${teamObj[team_2][player].elm_attack}</p>
                                     <p>⚔️: ${teamObj[team_2][player].attack}</p>
+                                    <p>🏹:${teamObj[team_2][player].weapon}</p>
+                                    <p>🦇:${teamObj[team_2][player].spirit}</p>
+
                                     <p>🛡: ${teamObj[team_2][player].defense}</p>
-                                    <p>🔥:${teamObj[team_2][player].elm_attack}</p>
-                                    <p>㊏: ${teamObj[team_2][player].elm_defense}</p>
-                                    <p>💥: ${teamObj[team_2][player].critical}</p>
-                                    <p>🧪: ${teamObj[team_2][player].elm_efficiency}</p>
-                                    <p>🪦 ${teamObj[team_1][player].strength}</p>
-                                    <p>🌪 ${teamObj[team_1][player].potency}</p>
-                                    <p class='buff_stat'>${teamObj[team_2][player].buff}</p>
+                                    <p>💎: ${teamObj[team_2][player].elm_defense}</p>
+                                    <p>𐂫: ${teamObj[team_2][player].shield}</p>
+                                    <p>:🪬 ${teamObj[team_2][player].spirit_def}</p>
+
+                                    <p>🎯: ${teamObj[team_2][player].accuracy}</p>
+                                    <p>🪽: ${teamObj[team_2][player].evasion}</p>
+                                    <p>🍀: ${teamObj[team_2][player].luck}</p>
+                                    <p>🤞🏼: ${teamObj[team_2][player].dom_purity}</p>
                                 </div>
                             </div>
                             `
