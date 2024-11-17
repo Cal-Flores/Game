@@ -7,6 +7,7 @@
         <title>FIGHT</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../database/players.js"></script>
+        <script src="../database/database.js"></script>
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="../Teams/teams.css">
     </head>
@@ -98,12 +99,7 @@
 
 
         <script>
-            let penn_state_team = penn_state
-            let ok_state_team = ok_state
-            let teamObj = {
-                'Penn State': penn_state_team,
-                'Oklahoma State': ok_state_team
-            }
+            let databaseArr = database
             function fightTime(e) {
                 e.preventDefault()
 
@@ -114,78 +110,86 @@
                 $('#fight_form').css("display", "none")
 
 
-                for (let team in teamObj) {
-                    if (team == team_1) {
-                        html = ''
-                        for (player in teamObj[team]) {
-                            console.log(teamObj[team_1][player])
-                            html += `
+                let teamOne = [];
+                databaseArr.forEach((player) => {
+                    if (player.team === team_1) {
+                        teamOne.push(player);
+                    }
+                });
+                let teamTwo = [];
+                databaseArr.forEach((player) => {
+                    if (player.team === team_2) {
+                        teamTwo.push(player);
+                    }
+                });
+                teamOne.sort((a, b) => a.round - b.round);
+                teamTwo.sort((a, b) => a.round - b.round);
+                console.log(`TEAM 1 ${teamOne}`)
+                console.log(`TEAM 2 ${teamTwo}`)
+
+                html = ''
+                teamOne.forEach(player => {
+                    html += `
                             <div class='fight_card_border'>
                                 <div class='fight_card_head'>
-                                    <img class='fight_card_img' src='${teamObj[team_1][player].image}'>
-                                    <h2 class='f_name'>${teamObj[team_1][player].name}</h2>
-                                    <p class='f_name'>🖤: ${teamObj[team_1][player].hp}</p>
+                                    <img class='fight_card_img' src='${player.image}'>
+                                    <h2 class='f_name'>${player.name}</h2>
+                                    <p class='f_name'>🖤: ${player.hp}</p>
                                     <button class="color_change">😇</button>
-                                    <img class='fight_card_elm' src='${teamObj[team_1][player].elm}'>
+                                    <img class='fight_card_elm' src='${player.elm}'>
                                 </div>
                                 <div class='fight_card_stats'>
-                                    <p>⚔️: ${teamObj[team_1][player].attack}</p>
-                                    <p>🪄:${teamObj[team_1][player].elm_attack}</p>
-                                    <p>🏹:${teamObj[team_1][player].weapon}</p>
-                                    <p>🦇:${teamObj[team_1][player].spirit}</p>
+                                    <p>⚔️: ${player.attack}</p>
+                                    <p>🪄: ${player.elm_attack}</p>
+                                    <p>🏹: ${player.weapon}</p>
+                                    <p>🦇: ${player.spirit}</p>
 
-                                    <p>🛡: ${teamObj[team_1][player].defense}</p>
-                                    <p>💎: ${teamObj[team_1][player].elm_defense}</p>
-                                    <p>𐂫: ${teamObj[team_1][player].shield}</p>
-                                    <p>:🪬 ${teamObj[team_1][player].spirit_def}</p>
+                                    <p>🛡: ${player.defense}</p>
+                                    <p>💎: ${player.elm_defense}</p>
+                                    <p>𐂫: ${player.shield}</p>
+                                    <p>:🪬 ${player.spirit_def}</p>
 
-                                    <p>🎯: ${teamObj[team_1][player].accuracy}</p>
-                                    <p>🪽: ${teamObj[team_1][player].evasion}</p>
-                                    <p>🍀: ${teamObj[team_1][player].luck}</p>
-                                    <p>🤞🏼: ${teamObj[team_1][player].dom_purity}</p>
+                                    <p>🎯: ${player.accuracy}</p>
+                                    <p>🪽: ${player.evasion}</p>
+                                    <p>🍀: ${player.luck}</p>
+                                    <p>🤞🏼: ${player.dom_purity}</p>
                                 </div>
                             </div>
                             `
-                        }
-                        // $(".team_1_fighters").append(html)
-                    }
-                    if (team == team_2) {
-                        html2 = ''
-                        for (player in teamObj[team]) {
-                            console.log(teamObj[team_2][player])
-                            html2 += `
+                })
+                // $(".team_1_fighters").append(html)
+
+                html2 = ''
+                teamTwo.forEach(player => {
+                    html2 += `
                             <div class='fight_card_border'>
                                 <div class='fight_card_head'>
-                                    <img class='fight_card_img' src='${teamObj[team_2][player].image}'>
-                                    <h2 class='f_name'>${teamObj[team_2][player].name}</h2>
-                                    <p class='f_name'>🖤: ${teamObj[team_2][player].hp}</p>
+                                    <img class='fight_card_img' src='${player.image}'>
+                                    <h2 class='f_name'>${player.name}</h2>
+                                    <p class='f_name'>🖤: ${player.hp}</p>
                                   <button class="color_change">😇</button>
-                                    <img class='fight_card_elm' src='${teamObj[team_2][player].elm}'>
+                                    <img class='fight_card_elm' src='${player.elm}'>
                                 </div>
                                 <div class='fight_card_stats'>
-                                    <p>🪄:${teamObj[team_2][player].elm_attack}</p>
-                                    <p>⚔️: ${teamObj[team_2][player].attack}</p>
-                                    <p>🏹:${teamObj[team_2][player].weapon}</p>
-                                    <p>🦇:${teamObj[team_2][player].spirit}</p>
+                                    <p>⚔️: ${player.attack}</p>
+                                    <p>🪄: ${player.elm_attack}</p>
+                                    <p>🏹: ${player.weapon}</p>
+                                    <p>🦇: ${player.spirit}</p>
 
-                                    <p>🛡: ${teamObj[team_2][player].defense}</p>
-                                    <p>💎: ${teamObj[team_2][player].elm_defense}</p>
-                                    <p>𐂫: ${teamObj[team_2][player].shield}</p>
-                                    <p>:🪬 ${teamObj[team_2][player].spirit_def}</p>
+                                    <p>🛡: ${player.defense}</p>
+                                    <p>💎: ${player.elm_defense}</p>
+                                    <p>𐂫: ${player.shield}</p>
+                                    <p>:🪬 ${player.spirit_def}</p>
 
-                                    <p>🎯: ${teamObj[team_2][player].accuracy}</p>
-                                    <p>🪽: ${teamObj[team_2][player].evasion}</p>
-                                    <p>🍀: ${teamObj[team_2][player].luck}</p>
-                                    <p>🤞🏼: ${teamObj[team_2][player].dom_purity}</p>
+                                    <p>🎯: ${player.accuracy}</p>
+                                    <p>🪽: ${player.evasion}</p>
+                                    <p>🍀: ${player.luck}</p>
+                                    <p>🤞🏼: ${player.dom_purity}</p>
                                 </div>
                             </div>
                             `
-                        }
+                })
 
-
-                    }
-
-                }
                 $(".team_1_fighters").append(html)
                 $(".team_2_fighters").append(html2)
                 $(".team_name1").text(team_1)

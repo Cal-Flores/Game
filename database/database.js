@@ -20,6 +20,9 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Ghost',
         elm: ghost,
+        team: 'Penn State',
+        round: 1,
+        pick: 4,
         hp: 3472,
         //PHYSICAL
         attack: 220,
@@ -741,6 +744,9 @@ const database = [
         element: 'Lightning',
         elm: lightning,
         hp: 3053,
+        team: 'Oklahoma State',
+        round: 3,
+        pick: 34,
         //PHYSICAL
         attack: 196,
         defense: 229,
@@ -3124,6 +3130,9 @@ const database = [
         element: 'Fighter',
         elm: fighter,
         hp: 3275,
+        team: 'Oklahoma State',
+        round: 2,
+        pick: 19,
         //PHYSICAL
         attack: 277,
         defense: 215,
@@ -3270,6 +3279,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3162,
+        team: 'Penn State',
+        round: 4,
+        pick: 58,
         //PHYSICAL
         attack: 129,
         defense: 137,
@@ -4426,6 +4438,9 @@ const database = [
         nen_type: 'Emitter',
         element: 'Water',
         elm: water,
+        team: 'Penn State',
+        round: 2,
+        pick: 20,
         hp: 3379,
         //PHYSICAL
         attack: 133,
@@ -5004,6 +5019,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 3213,
+        team: 'Oklahoma State',
+        round: 4,
+        pick: 57,
         //PHYSICAL
         attack: 155,
         defense: 168,
@@ -6162,6 +6180,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3500,
+        team: 'Oklahoma State',
+        round: 1,
+        pick: 7,
         //PHYSICAL
         attack: 232,
         defense: 217,
@@ -7250,6 +7271,9 @@ const database = [
         element: 'Holy',
         elm: holy,
         hp: 3072,
+        team: 'Penn State',
+        round: 3,
+        pick: 36,
         //PHYSICAL
         attack: 134,
         defense: 139,
