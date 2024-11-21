@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Oklahoma State</title>
         <link rel="stylesheet" href="teams.css">
-        <script src="../database/players.js"></script>
+        <script src="../database/database.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
@@ -74,24 +74,33 @@
         </main>
 
         <script>
-            let team = ok_state;
+            let databaseArr = database
+            let team = [];
+            databaseArr.forEach((player) => {
+                if (player.team === 'Oklahoma State') {
+                    team.push(player);
+                }
+            });
+            team.sort((a, b) => a.round - b.round);
+
             html = ''
             team.forEach((player, index) => {
                 html += `
-                    <div class='profile_border'>
+                <div class='profile_border'>
 
-                            <img class='profile_image' src=${player.image}>
-
-                        <div class='profile'>
-                            <div class='profile_header'>
+                    <img class='profile_image' src=${player.image}>
+                    <div class='profile'>
+                        <div class='profile_header'>
+                            <a target = '_blank' href='http://127.0.0.1:5000/player/${player.id}'>
                                 <h2>${player.name}</h2>
+                            </a>
                                 <div class='nen_display'>
                                     <p>${player.nen_type}</p>
-                                    <img class='nen_img' src = https://files.idyllic.app/files/static/2009128>
+                                    <img class='nen_img' src = 'https://files.idyllic.app/files/static/2009128'>
                                 </div>
                                 <div class='nen_display'>
                                     <p>${player.element}</p>
-                                    <img class='elem_img' src ='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w437-315a34c4-85c2-4d07-ae4d-6b42a25233bf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiYTFhNzU2LWQ5NTUtNDNmNi1hMmU5LTViN2Q2MDQwNjg1NFwvZDUwdzQzNy0zMTVhMzRjNC04NWMyLTRkMDctYWU0ZC02YjQyYTI1MjMzYmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kytndezX-kNW72WN893L_sOKoTnQYmvnqvJ79VVV8w8'>
+                                    <img class='elem_img' src =${player.elm}>
                                 </div>
                             </div>
                             <div class='profile_stats'>
@@ -104,10 +113,10 @@
                                 <p>🔥: ${player.elm_attack}</p>
                                 <p>♠︎: ${player.elm_defense}</p>
                                 <p>🧪: ${player.elm_efficiency}% </p>
-                                <p id='buff'>Increase ⚔️ by 35% 🎯: 85%
+                                <p id='buff'>Increase ⚔️ by 35% 🎯: 85%</p>
                             </div>
                         </div>
-                    </div>
+                </div>
                 `
             });
             $('#ok_state_players').append(html)

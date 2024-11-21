@@ -88,13 +88,14 @@
             html = ''
             team.forEach((player, index) => {
                 html += `
-                    <div class='profile_border'>
+                <div class='profile_border'>
 
-                            <img class='profile_image' src=${player.image}>
-
-                        <div class='profile'>
-                            <div class='profile_header'>
+                    <img class='profile_image' src=${player.image}>
+                    <div class='profile'>
+                        <div class='profile_header'>
+                            <a target = '_blank' href='http://127.0.0.1:5000/player/${player.id}'>
                                 <h2>${player.name}</h2>
+                            </a>
                                 <div class='nen_display'>
                                     <p>${player.nen_type}</p>
                                     <img class='nen_img' src = 'https://files.idyllic.app/files/static/2009128'>
@@ -117,7 +118,7 @@
                                 <p id='buff'>Increase ⚔️ by 35% 🎯: 85%</p>
                             </div>
                         </div>
-                    </div>
+                </div>
                 `
             });
             $('#penn_state_players').append(html)

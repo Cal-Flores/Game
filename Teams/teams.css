@@ -74,6 +74,11 @@ header {
     background-color: rgba(4, 30, 66, .2);
 }
 
+.profile_header>a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .profile_stats {
     margin-left: 10%;
     display: flex;

@@ -216,13 +216,13 @@
             }
 
             //physical
-            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka', 'Star-Rage', 'Shinra-Tensei']
-            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement', 'The-Sun-and-Moon', 'Big-Ball-Rasengan']
+            let attack = ['C3', 'En-Strike', 'Hidden-Blades', 'Playful-Cloud', 'Claw', 'Ice-Fist', 'Auto-Pilot-Mode', 'Water-Prison-Shark-Dance', 'Yasaka', 'Star-Rage', 'Shinra-Tensei', '10,000-Puppets']
+            let defense = ['RAM', 'RAGE', 'Rising-Sun', 'Big-Bang-Impact', 'Heavenly-Restriction', 'Rasenshuriken', 'Unblockable-Drumming-Beat', 'Strength-of-a-Hundred-Seals', 'Tailed-Beast-Blast-Spheres', 'Eight-Trigrams-Vacuum-Palm', 'Fang-Over-Fang', 'Cursed-Energy-Reinforcement', 'The-Sun-and-Moon', 'Big-Ball-Rasengan', 'Phase-Bullets']
             let critical = ['Awakening', 'Explosive-Tags', 'Fury', 'Terpsichora', 'Cowardly-Monster-Hunter', 'Eight-Trigrams-Vacuum-Palm', 'Gentle-Fist', 'Silent-Waltz']
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden']
             //Magic
-            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei', 'Toad-Oil-Bullet']
-            let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei']
+            let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei', 'Toad-Oil-Bullet', 'Iron-Sand']
+            let magicDef = ['Flame-Control', "Rage-Blast", , 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei', 'Phase-Bullets']
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation', 'Divine-Flame', 'Disaster-Stones']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
@@ -232,7 +232,7 @@
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             // Spirit
             let spirit = []
-            let spiritDef = ['Blood-Hammer', 'Super-Beast-Tomoe-Lion', 'Rashōmon-Gates', 'Polymorphic-Soul-Isomer']
+            let spiritDef = ['Blood-Hammer', 'Super-Beast-Tomoe-Lion', 'Rashōmon-Gates', 'Polymorphic-Soul-Isomer', 'Phase-Bullets']
             let spiritPer = ['Hair-Pin']
             let spiritAmount = ['Resonance']
             //speed + recovery + luck
@@ -257,7 +257,7 @@
             let ninDamage = ["Lariat", 'Ripper-Cyclotron-15x', 'Raikiri', 'Bungee-Gum', 'Flying-Swallow', 'Shadow-Neck-Breaking', 'Tailed-Beast-Beam', 'Spectral-Curse']
             let ultCosted = []
             let ultDamage = []
-            let elem = []
+            let ging = ['Polymath']
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse']
             let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
@@ -960,6 +960,14 @@
                         alert(`chrollo has stolen ${book}`)
                     }
                 }
+                if (jutsu == 'Polymath') {
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
+                }
+                if (jutsu == 'Phase-Bullets') {
+                    if (attacker == 'red') redStun += .06
+                    if (attacker == 'blue') blueStun += .06
+                }
                 if (jutsu == 'Explosive-Transformation') {
                     if (attacker == 'red') {
                         blueDefense = Math.floor(blueDefense * .75);
@@ -1627,7 +1635,7 @@
             }
         }
         const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation', 'Beelzebub', 'Super-Beast-Hawk'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists'];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists',];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic', 'Three-Headed-Wolf'];
@@ -1674,6 +1682,12 @@
 
 
             if (attacker == 'red') {
+                if (curse == 'Polyglot') {
+                    curse = prompt('Enter Opponents curse')
+                    duration = blueCurseDuration;
+                    amount = blueCurseAmount
+                    currRedCurse -= Math.floor((blueCurseCost * .70));
+                }
                 if (currRedCurse < cost) {
                     alert('Not enough curse energy')
                     return
@@ -1959,6 +1973,12 @@
                 $('#redCurseUi').text(curse)
                 console.log('here are red curses array', redCurses)
             } else {
+                if (curse == 'Polyglot') {
+                    curse = prompt('Enter Opponents curse')
+                    duration = redCurseDuration;
+                    amount = redCurseAmount
+                    currBlueCurse -= Math.floor((redCurseCost * .70));
+                }
                 if (currBlueCurse < cost) {
                     alert('Not enough curse energy')
                     return
