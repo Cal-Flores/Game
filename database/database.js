@@ -180,7 +180,7 @@ const database = [
         potency: .25,
         //WEAPON
         weapon: 256,
-        shield: 139,
+        shield: 128,
         curse_crit: .70,
         weaponCurse: 'Critical',
         weapon_amount: .08,
@@ -252,7 +252,7 @@ const database = [
         potency: .16,
         //WEAPON
         weapon: 272,
-        shield: 164,
+        shield: 160,
         curse_crit: .17,
         weaponCurse: 'Purity',
         weapon_amount: 1,
@@ -324,7 +324,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 258,
-        shield: 169,
+        shield: 148,
         curse_crit: .20,
         weaponCurse: 'Def',
         weapon_amount: 25,
@@ -396,7 +396,7 @@ const database = [
         potency: .15,
         //WEAPON
         weapon: 280,
-        shield: 180,
+        shield: 155,
         curse_crit: .23,
         weaponCurse: 'Curse',
         weapon_amount: 8,
@@ -468,7 +468,7 @@ const database = [
         potency: .13,
         //WEAPON
         weapon: 229,
-        shield: 189,
+        shield: 165,
         curse_crit: 0.10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -540,7 +540,7 @@ const database = [
         potency: .10,
         //WEAPON
         weapon: 237,
-        shield: 133,
+        shield: 123,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 23,
@@ -1193,7 +1193,7 @@ const database = [
         potency: 0.28,
         //WEAPON
         weapon: 217,
-        shield: 163,
+        shield: 138,
         curse_crit: .30,
         weaponCurse: 'M-Def',
         weapon_amount: 12,
@@ -1265,7 +1265,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 145,
-        shield: 163,
+        shield: 138,
         curse_crit: .40,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
@@ -1409,7 +1409,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 214,
-        shield: 186,
+        shield: 162,
         curse_crit: .15,
         weaponCurse: 'M-Def',
         weapon_amount: 20,
@@ -1553,7 +1553,7 @@ const database = [
         potency: .60,
         //WEAPON
         weapon: 114,
-        shield: 139,
+        shield: 129,
         curse_crit: .10,
         weaponCurse: 'Critical',
         weapon_amount: .10,
@@ -1697,7 +1697,7 @@ const database = [
         potency: .25,
         //WEAPON
         weapon: 204,
-        shield: 164,
+        shield: 140,
         curse_crit: .12,
         weaponCurse: 'M-Def',
         weapon_amount: 15,
@@ -1769,7 +1769,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 123,
-        shield: 158,
+        shield: 135,
         curse_crit: .14,
         weaponCurse: 'GenPower',
         weapon_amount: 10,
@@ -1841,7 +1841,7 @@ const database = [
         potency: .35,
         //WEAPON
         weapon: 217,
-        shield: 172,
+        shield: 150,
         curse_crit: .45,
         weaponCurse: 'Curse',
         weapon_amount: 8,
@@ -1985,7 +1985,7 @@ const database = [
         potency: 0.30,
         //WEAPON
         weapon: 227,
-        shield: 168,
+        shield: 147,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 9,
@@ -2057,7 +2057,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 194,
-        shield: 178,
+        shield: 156,
         curse_crit: .50,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -2420,7 +2420,7 @@ const database = [
         potency: .40,
         //WEAPON
         weapon: 170,
-        shield: 155,
+        shield: 132,
         curse_crit: .20,
         weaponCurse: 'Critical',
         weapon_amount: .10,
@@ -2780,7 +2780,7 @@ const database = [
         potency: .10,
         //WEAPON
         weapon: 107,
-        shield: 182,
+        shield: 150,
         curse_crit: .08,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
@@ -2998,7 +2998,7 @@ const database = [
         potency: .40,
         //WEAPON
         weapon: 114,
-        shield: 139,
+        shield: 125,
         curse_crit: .05,
         weaponCurse: 'Purity',
         weapon_amount: 1,
@@ -3294,7 +3294,7 @@ const database = [
         potency: .12,
         //WEAPON
         weapon: 212,
-        shield: 168,
+        shield: 146,
         curse_crit: .65,
         weaponCurse: 'Willpower',
         weapon_amount: 1,
@@ -3438,7 +3438,7 @@ const database = [
         potency: .12,
         //WEAPON
         weapon: 163,
-        shield: 187,
+        shield: 164,
         curse_crit: .12,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -3510,7 +3510,7 @@ const database = [
         potency: .25,
         //WEAPON
         weapon: 112,
-        shield: 168,
+        shield: 145,
         curse_crit: .06,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
@@ -3582,7 +3582,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 128,
-        shield: 165,
+        shield: 140,
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
@@ -3654,7 +3654,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 135,
-        shield: 138,
+        shield: 124,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -3726,7 +3726,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 185,
-        shield: 185,
+        shield: 165,
         curse_crit: .15,
         weaponCurse: 'Evasion',
         weapon_amount: 2,
@@ -3945,7 +3945,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 160,
-        shield: 174,
+        shield: 152,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 25,
@@ -4455,7 +4455,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 220,
-        shield: 152,
+        shield: 132,
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
@@ -4600,7 +4600,7 @@ const database = [
         potency: .08,
         //WEAPON
         weapon: 134,
-        shield: 166,
+        shield: 142,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -4672,7 +4672,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 104,
-        shield: 156,
+        shield: 134,
         curse_crit: .10,
         weaponCurse: 'M-Def',
         weapon_amount: 25,
@@ -4744,7 +4744,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 224,
-        shield: 162,
+        shield: 137,
         curse_crit: .15,
         weaponCurse: 'Potency',
         weapon_amount: .10,
@@ -4888,7 +4888,7 @@ const database = [
         potency: .15,
         //WEAPON
         weapon: 245,
-        shield: 187,
+        shield: 163,
         curse_crit: .25,
         weaponCurse: 'Def',
         weapon_amount: 20,
@@ -4960,7 +4960,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 165,
-        shield: 164,
+        shield: 139,
         curse_crit: .12,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
@@ -5107,7 +5107,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 223,
-        shield: 174,
+        shield: 150,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 15,
@@ -5398,7 +5398,7 @@ const database = [
         potency: .23,
         //WEAPON
         weapon: 131,
-        shield: 167,
+        shield: 143,
         curse_crit: .20,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -5470,7 +5470,7 @@ const database = [
         potency: .21,
         //WEAPON
         weapon: 119,
-        shield: 139,
+        shield: 128,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 20,
@@ -5615,7 +5615,7 @@ const database = [
         potency: .09,
         //WEAPON
         weapon: 120,
-        shield: 184,
+        shield: 158,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 20,
@@ -5688,7 +5688,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 224,
-        shield: 184,
+        shield: 158,
         curse_crit: .85,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -6049,7 +6049,7 @@ const database = [
         potency: .17,
         //WEAPON
         weapon: 208,
-        shield: 182,
+        shield: 159,
         curse_crit: .15,
         weaponCurse: 'Recovery',
         weapon_amount: 2,
@@ -6121,7 +6121,7 @@ const database = [
         potency: .19,
         //WEAPON
         weapon: 226,
-        shield: 189,
+        shield: 164,
         curse_crit: .20,
         weaponCurse: 'M-Def',
         weapon_amount: 20,
@@ -6196,7 +6196,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 98,
-        shield: 147,
+        shield: 136,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
@@ -6268,7 +6268,7 @@ const database = [
         potency: .36,
         //WEAPON
         weapon: 106,
-        shield: 174,
+        shield: 153,
         curse_crit: .10,
         weaponCurse: 'Curse',
         weapon_amount: 10,
@@ -6343,7 +6343,7 @@ const database = [
         potency: .10,
         //WEAPON
         weapon: 225,
-        shield: 164,
+        shield: 139,
         curse_crit: .50,
         weaponCurse: 'Luck',
         weapon_amount: 1,
@@ -6415,7 +6415,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 220,
-        shield: 133,
+        shield: 120,
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 20,
@@ -6559,7 +6559,7 @@ const database = [
         elm_efficiency: 1.2,
         potency: .46,
         //WEAPON
-        weapon: 118,
+        weapon: 133,
         shield: 158,
         curse_crit: 1.0,
         weaponCurse: 'Willpower',
@@ -6632,7 +6632,7 @@ const database = [
         potency: .21,
         //WEAPON
         weapon: 113,
-        shield: 137,
+        shield: 122,
         curse_crit: .10,
         weaponCurse: 'Recovery',
         weapon_amount: 3,
@@ -6704,7 +6704,7 @@ const database = [
         potency: .14,
         //WEAPON
         weapon: 122,
-        shield: 177,
+        shield: 154,
         curse_crit: .55,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -6778,7 +6778,7 @@ const database = [
         potency: .28,
         //WEAPON
         weapon: 192,
-        shield: 186,
+        shield: 161,
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
         weapon_amount: 3,
@@ -6850,7 +6850,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 129,
-        shield: 185,
+        shield: 160,
         curse_crit: .20,
         weaponCurse: 'Recovery',
         weapon_amount: 2,
@@ -7068,7 +7068,7 @@ const database = [
         potency: .32,
         //WEAPON
         weapon: 126,
-        shield: 136,
+        shield: 124,
         curse_crit: .15,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
@@ -7212,7 +7212,7 @@ const database = [
         potency: .25,
         //WEAPON
         weapon: 250,
-        shield: 185,
+        shield: 159,
         curse_crit: .12,
         weaponCurse: 'M-Def',
         weapon_amount: 20,
@@ -7431,7 +7431,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 100,
-        shield: 144,
+        shield: 130,
         curse_crit: .20,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
@@ -7504,7 +7504,7 @@ const database = [
         potency: .32,
         //WEAPON
         weapon: 96,
-        shield: 139,
+        shield: 129,
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 10,
@@ -7576,7 +7576,7 @@ const database = [
         potency: .15,
         //WEAPON
         weapon: 138,
-        shield: 145,
+        shield: 131,
         curse_crit: .75,
         weaponCurse: 'Purity',
         weapon_amount: 1,
@@ -7721,7 +7721,7 @@ const database = [
         potency: .43,
         //WEAPON
         weapon: 150,
-        shield: 143,
+        shield: 129,
         curse_crit: .15,
         weaponCurse: 'Purity',
         weapon_amount: 3,
@@ -7795,7 +7795,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 97,
-        shield: 161,
+        shield: 136,
         curse_crit: .10,
         weaponCurse: 'M-Def',
         weapon_amount: 12,
@@ -8155,7 +8155,7 @@ const database = [
         potency: .23,
         //WEAPON
         weapon: 211,
-        shield: 172,
+        shield: 149,
         curse_crit: .20,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -8227,7 +8227,7 @@ const database = [
         potency: .24,
         //WEAPON
         weapon: 195,
-        shield: 166,
+        shield: 141,
         curse_crit: .16,
         weaponCurse: 'S-Def',
         weapon_amount: 16,
@@ -8448,7 +8448,7 @@ const database = [
         potency: .28,
         //WEAPON
         weapon: 207,
-        shield: 168,
+        shield: 144,
         curse_crit: .55,
         weaponCurse: 'Stun',
         weapon_amount: 0,
@@ -8659,7 +8659,7 @@ const database = [
         strength: 2.5,
         //MAGIC
         elm_attack: 195,
-        elm_defense: 100,
+        elm_defense: 115,
         elm_efficiency: 2,
         potency: .75,
         //WEAPON
@@ -8881,7 +8881,7 @@ const database = [
         potency: .42,
         //WEAPON
         weapon: 232,
-        shield: 161,
+        shield: 136,
         curse_crit: .50,
         weaponCurse: 'Sage',
         weapon_amount: 15,
