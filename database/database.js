@@ -25,7 +25,7 @@ const database = [
         pick: 4,
         hp: 3472,
         //PHYSICAL
-        attack: 220,
+        attack: 216,
         defense: 200,
         critical: .40,
         strength: 1.6,
@@ -97,7 +97,7 @@ const database = [
         elm: fighter,
         hp: 3359,
         //PHYSICAL
-        attack: 232,
+        attack: 225,
         defense: 200,
         critical: .18,
         strength: 1.5,
@@ -241,7 +241,7 @@ const database = [
         elm: wood,
         hp: 3252,
         //PHYSICAL
-        attack: 185,
+        attack: 181,
         defense: 140,
         critical: .35,
         strength: 2,
@@ -313,7 +313,7 @@ const database = [
         elm: lightning,
         hp: 2971,
         //PHYSICAL
-        attack: 238,
+        attack: 236,
         defense: 173,
         critical: .38,
         strength: 1.4,
@@ -385,7 +385,7 @@ const database = [
         elm: fire,
         hp: 3115,
         //PHYSICAL
-        attack: 242,
+        attack: 241,
         defense: 185,
         critical: .20,
         strength: 1.8,
@@ -601,7 +601,7 @@ const database = [
         elm: fighter,
         hp: 3395,
         //PHYSICAL
-        attack: 185,
+        attack: 180,
         defense: 266,
         critical: .20,
         strength: 1.6,
@@ -673,7 +673,7 @@ const database = [
         elm: wind,
         hp: 2863,
         //PHYSICAL
-        attack: 214,
+        attack: 213,
         defense: 170,
         critical: .45,
         strength: 1.3,
@@ -892,7 +892,7 @@ const database = [
         elm: fighter,
         hp: 3333,
         //PHYSICAL
-        attack: 240,
+        attack: 238,
         defense: 233,
         critical: .15,
         strength: 2,
@@ -964,7 +964,7 @@ const database = [
         elm: dark,
         hp: 3077,
         //PHYSICAL
-        attack: 133,
+        attack: 127,
         defense: 200,
         critical: .70,
         strength: 1.7,
@@ -1036,7 +1036,7 @@ const database = [
         elm: dark,
         hp: 3233,
         //PHYSICAL
-        attack: 122,
+        attack: 106,
         defense: 186,
         critical: .10,
         strength: 1.20,
@@ -1182,7 +1182,7 @@ const database = [
         elm: water,
         hp: 2898,
         //PHYSICAL
-        attack: 132,
+        attack: 120,
         defense: 157,
         critical: 0.32,
         strength: 1.3,
@@ -1254,7 +1254,7 @@ const database = [
         elm: fire,
         hp: 3105,
         //PHYSICAL
-        attack: 181,
+        attack: 179,
         defense: 168,
         critical: .40,
         strength: 1.5,
@@ -1398,7 +1398,7 @@ const database = [
         elm: fire,
         hp: 2988,
         //PHYSICAL
-        attack: 132,
+        attack: 119,
         defense: 138,
         critical: .75,
         strength: 1.6,
@@ -1470,7 +1470,7 @@ const database = [
         elm: sage,
         hp: 3410,
         //PHYSICAL
-        attack: 215,
+        attack: 217,
         defense: 235,
         critical: .23,
         strength: 2,
@@ -1542,7 +1542,7 @@ const database = [
         elm: grass,
         hp: 2867,
         //PHYSICAL
-        attack: 125,
+        attack: 113,
         defense: 174,
         critical: .10,
         strength: 1,
@@ -1614,7 +1614,7 @@ const database = [
         elm: lightning,
         hp: 2942,
         //PHYSICAL
-        attack: 212,
+        attack: 210,
         defense: 134,
         critical: .40,
         strength: 1.25,
@@ -1686,7 +1686,7 @@ const database = [
         elm: earth,
         hp: 3318,
         //PHYSICAL
-        attack: 128,
+        attack: 116,
         defense: 256,
         critical: .05,
         strength: 1,
@@ -1758,7 +1758,7 @@ const database = [
         elm: wood,
         hp: 3053,
         //PHYSICAL
-        attack: 144,
+        attack: 142,
         defense: 235,
         critical: .10,
         strength: 1.1,
@@ -1830,7 +1830,7 @@ const database = [
         elm: fairy,
         hp: 2893,
         //PHYSICAL
-        attack: 118,
+        attack: 102,
         defense: 156,
         critical: .10,
         strength: 1.3,
@@ -1902,7 +1902,7 @@ const database = [
         elm: fairy,
         hp: 2814,
         //PHYSICAL
-        attack: 112,
+        attack: 100,
         defense: 150,
         critical: .10,
         strength: 1,
@@ -1974,7 +1974,7 @@ const database = [
         elm: wind,
         hp: 2962,
         //PHYSICAL
-        attack: 134,
+        attack: 131,
         defense: 161,
         critical: .28,
         strength: 1.4,
@@ -2046,7 +2046,7 @@ const database = [
         elm: pyschic,
         hp: 3247,
         //PHYSICAL
-        attack: 124,
+        attack: 111,
         defense: 219,
         critical: .10,
         strength: 1.16,
@@ -2193,10 +2193,10 @@ const database = [
         elm: fighter,
         hp: 3085,
         //PHYSICAL
-        attack: 250,
+        attack: 246,
         defense: 238,
         critical: .30,
-        strength: 1.5,
+        strength: 1.34,
         //MAGIC
         elm_attack: 120,
         elm_defense: 166,
@@ -2224,7 +2224,7 @@ const database = [
         gen_power: 15,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 5,
         drain: 0,
         //CURSE
         cursed_energy: 0,
@@ -2233,7 +2233,7 @@ const database = [
         cursed_tech: 'Muscular-Expansion - Increase Critical to 80%',
         curse_amount: .50,
         curse_duration: 6,
-        curse_cost: 22,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -2481,7 +2481,7 @@ const database = [
         elm: earth,
         hp: 2992,
         //PHYSICAL
-        attack: 231,
+        attack: 233,
         defense: 188,
         critical: .66,
         strength: 1.25,
@@ -2553,7 +2553,7 @@ const database = [
         elm: fairy,
         hp: 2875,
         //PHYSICAL
-        attack: 236,
+        attack: 233,
         defense: 174,
         critical: .68,
         strength: 1.2,
@@ -2625,7 +2625,7 @@ const database = [
         elm: earth,
         hp: 2872,
         //PHYSICAL
-        attack: 244,
+        attack: 239,
         defense: 194,
         critical: .24,
         strength: 1.7,
@@ -2697,7 +2697,7 @@ const database = [
         elm: fairy,
         hp: 3491,
         //PHYSICAL
-        attack: 280,
+        attack: 285,
         defense: 271,
         critical: .16,
         strength: 2,
@@ -2914,7 +2914,7 @@ const database = [
         elm: wind,
         hp: 3383,
         //PHYSICAL
-        attack: 252,
+        attack: 249,
         defense: 232,
         critical: .30,
         strength: 1.45,
@@ -3059,10 +3059,10 @@ const database = [
         elm: earth,
         hp: 3494,
         //PHYSICAL
-        attack: 264,
+        attack: 267,
         defense: 230,
-        critical: .30,
-        strength: 1.75,
+        critical: .20,
+        strength: 1.65,
         //MAGIC
         elm_attack: 113,
         elm_defense: 136,
@@ -3094,12 +3094,12 @@ const database = [
         drain: 6,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 45,
+        cursed_recovery: 30,
         negative_energy: 15,
-        cursed_tech: 'Black-Flash - 18/18',
+        cursed_tech: 'Black-Flash - 20/20',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 18,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -3283,7 +3283,7 @@ const database = [
         round: 4,
         pick: 58,
         //PHYSICAL
-        attack: 129,
+        attack: 118,
         defense: 137,
         critical: .20,
         strength: 1.1,
@@ -3355,7 +3355,7 @@ const database = [
         elm: grass,
         hp: 2928,
         //PHYSICAL
-        attack: 153,
+        attack: 152,
         defense: 198,
         critical: .35,
         strength: 2,
@@ -3499,7 +3499,7 @@ const database = [
         elm: wind,
         hp: 3009,
         //PHYSICAL
-        attack: 184,
+        attack: 179,
         defense: 165,
         critical: .20,
         strength: 1.4,
@@ -3571,7 +3571,7 @@ const database = [
         elm: fairy,
         hp: 2790,
         //PHYSICAL
-        attack: 113,
+        attack: 96,
         defense: 125,
         critical: .08,
         strength: 1.1,
@@ -3643,7 +3643,7 @@ const database = [
         elm: wind,
         hp: 2762,
         //PHYSICAL
-        attack: 110,
+        attack: 87,
         defense: 131,
         critical: .06,
         strength: 1.05,
@@ -3790,7 +3790,7 @@ const database = [
         elm: sand,
         hp: 3254,
         //PHYSICAL
-        attack: 138,
+        attack: 135,
         defense: 237,
         critical: .15,
         strength: 1.2,
@@ -3934,7 +3934,7 @@ const database = [
         elm: earth,
         hp: 3500,
         //PHYSICAL
-        attack: 225,
+        attack: 218,
         defense: 265,
         critical: .20,
         strength: 1.85,
@@ -4006,7 +4006,7 @@ const database = [
         elm: earth,
         hp: 3500,
         //PHYSICAL
-        attack: 238,
+        attack: 235,
         defense: 265,
         critical: .15,
         strength: 2,
@@ -4078,9 +4078,9 @@ const database = [
         elm: grass,
         hp: 3489,
         //PHYSICAL
-        attack: 257,
+        attack: 248,
         defense: 248,
-        critical: .15,
+        critical: .12,
         strength: 2.25,
         //MAGIC
         elm_attack: 135,
@@ -4150,9 +4150,9 @@ const database = [
         elm: water,
         hp: 3464,
         //PHYSICAL
-        attack: 256,
+        attack: 245,
         defense: 219,
-        critical: .18,
+        critical: .15,
         strength: 1.85,
         //MAGIC
         elm_attack: 132,
@@ -4296,7 +4296,7 @@ const database = [
         elm: wind,
         hp: 3255,
         //PHYSICAL
-        attack: 188,
+        attack: 186,
         defense: 146,
         critical: .40,
         strength: 1.4,
@@ -4444,7 +4444,7 @@ const database = [
         pick: 20,
         hp: 3379,
         //PHYSICAL
-        attack: 133,
+        attack: 124,
         defense: 174,
         critical: .30,
         strength: 1.5,
@@ -4517,7 +4517,7 @@ const database = [
         elm: lightning,
         hp: 3087,
         //PHYSICAL
-        attack: 145,
+        attack: 144,
         defense: 199,
         critical: .65,
         strength: 1.25,
@@ -4589,10 +4589,10 @@ const database = [
         elm: dark,
         hp: 2976,
         //PHYSICAL
-        attack: 258,
-        defense: 179,
-        critical: .32,
-        strength: 1.6,
+        attack: 261,
+        defense: 169,
+        critical: .28,
+        strength: 1.37,
         //MAGIC
         elm_attack: 131,
         elm_defense: 172,
@@ -4733,10 +4733,10 @@ const database = [
         elm: wood,
         hp: 3480,
         //PHYSICAL
-        attack: 252,
-        defense: 174,
-        critical: .20,
-        strength: 1.5,
+        attack: 248,
+        defense: 164,
+        critical: .16,
+        strength: 1.45,
         //MAGIC
         elm_attack: 246,
         elm_defense: 153,
@@ -4773,7 +4773,7 @@ const database = [
         cursed_tech: 'Cursed-Kyuubi - Increase Recovery by 4',
         curse_amount: 4,
         curse_duration: 6,
-        curse_cost: 20,
+        curse_cost: 25,
         //DOMAIN
         dom_purity: 9,
         dom_lethal: 0,
@@ -4805,7 +4805,7 @@ const database = [
         elm: lightning,
         hp: 2997,
         //PHYSICAL
-        attack: 133,
+        attack: 123,
         defense: 158,
         critical: .20,
         strength: 1.3,
@@ -4877,7 +4877,7 @@ const database = [
         elm: fighter,
         hp: 2988,
         //PHYSICAL
-        attack: 236,
+        attack: 230,
         defense: 160,
         critical: .70,
         strength: 1.3,
@@ -4949,7 +4949,7 @@ const database = [
         elm: wood,
         hp: 3050,
         //PHYSICAL
-        attack: 175,
+        attack: 178,
         defense: 135,
         critical: .20,
         strength: 1.85,
@@ -5170,7 +5170,7 @@ const database = [
         elm: fairy,
         hp: 3085,
         //PHYSICAL
-        attack: 245,
+        attack: 240,
         defense: 162,
         critical: .20,
         strength: 1.8,
@@ -5242,7 +5242,7 @@ const database = [
         elm: fairy,
         hp: 3375,
         //PHYSICAL
-        attack: 248,
+        attack: 244,
         defense: 226,
         critical: .18,
         strength: 2,
@@ -5315,7 +5315,7 @@ const database = [
         elm: fairy,
         hp: 2847,
         //PHYSICAL
-        attack: 112,
+        attack: 99,
         defense: 134,
         critical: .08,
         strength: 1.1,
@@ -5387,7 +5387,7 @@ const database = [
         elm: fighter,
         hp: 2912,
         //PHYSICAL
-        attack: 120,
+        attack: 95,
         defense: 131,
         critical: .20,
         strength: 1.1,
@@ -5459,7 +5459,7 @@ const database = [
         elm: fairy,
         hp: 2823,
         //PHYSICAL
-        attack: 118,
+        attack: 98,
         defense: 143,
         critical: .07,
         strength: 1.1,
@@ -5532,7 +5532,7 @@ const database = [
         elm: wind,
         hp: 3043,
         //PHYSICAL
-        attack: 180,
+        attack: 177,
         defense: 178,
         critical: .30,
         strength: 1.22,
@@ -5606,8 +5606,8 @@ const database = [
         //PHYSICAL
         attack: 255,
         defense: 238,
-        critical: .15,
-        strength: 1.6,
+        critical: .14,
+        strength: 1.45,
         //MAGIC
         elm_attack: 120,
         elm_defense: 126,
@@ -5677,7 +5677,7 @@ const database = [
         elm: water,
         hp: 3378,
         //PHYSICAL
-        attack: 144,
+        attack: 141,
         defense: 189,
         critical: .16,
         strength: 1.85,
@@ -5749,7 +5749,7 @@ const database = [
         elm: fairy,
         hp: 3389,
         //PHYSICAL
-        attack: 246,
+        attack: 237,
         defense: 223,
         critical: .30,
         strength: 1.37,
@@ -5821,7 +5821,7 @@ const database = [
         elm: wind,
         hp: 3355,
         //PHYSICAL
-        attack: 145,
+        attack: 143,
         defense: 185,
         critical: .15,
         strength: 1.65,
@@ -5893,7 +5893,7 @@ const database = [
         elm: fire,
         hp: 3368,
         //PHYSICAL
-        attack: 142,
+        attack: 140,
         defense: 205,
         critical: .20,
         strength: 1.4,
@@ -5965,7 +5965,7 @@ const database = [
         elm: dark,
         hp: 2980,
         //PHYSICAL
-        attack: 115,
+        attack: 101,
         defense: 157,
         critical: .10,
         strength: 1.1,
@@ -6038,7 +6038,7 @@ const database = [
         elm: wood,
         hp: 3426,
         //PHYSICAL
-        attack: 128,
+        attack: 120,
         defense: 194,
         critical: .45,
         strength: 1.4,
@@ -6257,7 +6257,7 @@ const database = [
         elm: lucky,
         hp: 2814,
         //PHYSICAL
-        attack: 154,
+        attack: 153,
         defense: 170,
         critical: .10,
         strength: 1.05,
@@ -6332,7 +6332,7 @@ const database = [
         elm: pyschic,
         hp: 2977,
         //PHYSICAL
-        attack: 123,
+        attack: 109,
         defense: 187,
         critical: .13,
         strength: 1.05,
@@ -6404,7 +6404,7 @@ const database = [
         elm: lucky,
         hp: 2814,
         //PHYSICAL
-        attack: 112,
+        attack: 96,
         defense: 176,
         critical: .10,
         strength: 1.07,
@@ -6549,7 +6549,7 @@ const database = [
         elm: lucky,
         hp: 2800,
         //PHYSICAL
-        attack: 106,
+        attack: 75,
         defense: 174,
         critical: .09,
         strength: 1,
@@ -6621,7 +6621,7 @@ const database = [
         elm: grass,
         hp: 3000,
         //PHYSICAL
-        attack: 122,
+        attack: 107,
         defense: 230,
         critical: .12,
         strength: 1.07,
@@ -6693,7 +6693,7 @@ const database = [
         elm: lucky,
         hp: 3149,
         //PHYSICAL
-        attack: 198,
+        attack: 200,
         defense: 176,
         critical: .24,
         strength: 1.30,
@@ -6839,7 +6839,7 @@ const database = [
         elm: water,
         hp: 2872,
         //PHYSICAL
-        attack: 221,
+        attack: 224,
         defense: 165,
         critical: .45,
         strength: 1.20,
@@ -6983,7 +6983,7 @@ const database = [
         elm: earth,
         hp: 2842,
         //PHYSICAL
-        attack: 133,
+        attack: 121,
         defense: 128,
         critical: .33,
         strength: 1.18,
@@ -7057,7 +7057,7 @@ const database = [
         elm: holy,
         hp: 3444,
         //PHYSICAL
-        attack: 228,
+        attack: 221,
         defense: 184,
         critical: .27,
         strength: 1.70,
@@ -7129,7 +7129,7 @@ const database = [
         elm: dark,
         hp: 3266,
         //PHYSICAL
-        attack: 125,
+        attack: 112,
         defense: 242,
         critical: .10,
         strength: 1.12,
@@ -7201,7 +7201,7 @@ const database = [
         elm: fire,
         hp: 3389,
         //PHYSICAL
-        attack: 137,
+        attack: 134,
         defense: 143,
         critical: .12,
         strength: 1.25,
@@ -7276,7 +7276,7 @@ const database = [
         round: 3,
         pick: 36,
         //PHYSICAL
-        attack: 134,
+        attack: 128,
         defense: 139,
         critical: .20,
         strength: 1.16,
@@ -7420,7 +7420,7 @@ const database = [
         elm: grass,
         hp: 3011,
         //PHYSICAL
-        attack: 112,
+        attack: 93,
         defense: 136,
         critical: .09,
         strength: 1.12,
@@ -7493,7 +7493,7 @@ const database = [
         elm: earth,
         hp: 3132,
         //PHYSICAL
-        attack: 124,
+        attack: 111,
         defense: 207,
         critical: .10,
         strength: 1.35,
@@ -7565,7 +7565,7 @@ const database = [
         elm: lucky,
         hp: 3000,
         //PHYSICAL
-        attack: 116,
+        attack: 90,
         defense: 145,
         critical: .16,
         strength: 1.10,
@@ -7638,7 +7638,7 @@ const database = [
         elm: dark,
         hp: 3500,
         //PHYSICAL
-        attack: 142,
+        attack: 139,
         defense: 184,
         critical: .10,
         strength: 1.40,
@@ -7710,7 +7710,7 @@ const database = [
         elm: holy,
         hp: 3250,
         //PHYSICAL
-        attack: 152,
+        attack: 151,
         defense: 200,
         critical: .10,
         strength: 1.10,
@@ -7784,7 +7784,7 @@ const database = [
         elm: dark,
         hp: 3054,
         //PHYSICAL
-        attack: 122,
+        attack: 105,
         defense: 158,
         critical: .10,
         strength: 1.13,
@@ -7856,7 +7856,7 @@ const database = [
         elm: lightning,
         hp: 3128,
         //PHYSICAL
-        attack: 126,
+        attack: 114,
         defense: 186,
         critical: .25,
         strength: 1.14,
@@ -7928,7 +7928,7 @@ const database = [
         elm: ghost,
         hp: 2988,
         //PHYSICAL
-        attack: 124,
+        attack: 110,
         defense: 138,
         critical: .37,
         strength: 1.26,
@@ -8000,7 +8000,7 @@ const database = [
         elm: water,
         hp: 3124,
         //PHYSICAL
-        attack: 123,
+        attack: 116,
         defense: 156,
         critical: .20,
         strength: 1.22,
@@ -8072,7 +8072,7 @@ const database = [
         elm: dark,
         hp: 2974,
         //PHYSICAL
-        attack: 119,
+        attack: 103,
         defense: 188,
         critical: .12,
         strength: 1.11,
@@ -8144,7 +8144,7 @@ const database = [
         elm: grass,
         hp: 3179,
         //PHYSICAL
-        attack: 128,
+        attack: 115,
         defense: 224,
         critical: .12,
         strength: 1.43,
@@ -8216,7 +8216,7 @@ const database = [
         elm: ghost,
         hp: 3455,
         //PHYSICAL
-        attack: 134,
+        attack: 127,
         defense: 194,
         critical: .12,
         strength: 1.22,
@@ -8365,7 +8365,7 @@ const database = [
         elm: wind,
         hp: 3144,
         //PHYSICAL
-        attack: 235,
+        attack: 229,
         defense: 157,
         critical: .31,
         strength: 1.25,
@@ -8437,7 +8437,7 @@ const database = [
         elm: pyschic,
         hp: 3268,
         //PHYSICAL
-        attack: 231,
+        attack: 222,
         defense: 165,
         critical: .55,
         strength: 1.22,
@@ -8581,7 +8581,7 @@ const database = [
         elm: holy,
         hp: 3314,
         //PHYSICAL
-        attack: 186,
+        attack: 184,
         defense: 197,
         critical: .20,
         strength: 1.72,
@@ -8725,7 +8725,7 @@ const database = [
         elm: sand,
         hp: 3142,
         //PHYSICAL
-        attack: 140,
+        attack: 138,
         defense: 145,
         critical: .23,
         strength: 1.26,
@@ -8870,7 +8870,7 @@ const database = [
         elm: holy,
         hp: 3468,
         //PHYSICAL
-        attack: 136,
+        attack: 132,
         defense: 144,
         critical: .40,
         strength: 1.15,
@@ -8942,7 +8942,7 @@ const database = [
         elm: holy,
         hp: 3151,
         //PHYSICAL
-        attack: 134,
+        attack: 126,
         defense: 178,
         critical: .20,
         strength: 1.2,
@@ -9015,7 +9015,7 @@ const database = [
         elm: holy,
         hp: 3174,
         //PHYSICAL
-        attack: 180,
+        attack: 175,
         defense: 176,
         critical: .10,
         strength: 1.41,
@@ -9079,5 +9079,77 @@ const database = [
         buff_acc: 50,
         buff2_acc: 60,
         image: 'https://thicc-uwu.mywaifulist.moe/waifus/kokichi-muta/4yrHUd26dvaZ08bHXkZmQkcWM4fyKQ6OcrjMajpF.jpg?class=thumbnail'
+    },
+    {
+        name: 'Kankuro',
+        nen_type: 'Manipulator',
+        element: 'Sand',
+        elm: sand,
+        hp: 2976,
+        //PHYSICAL
+        attack: 112,
+        defense: 164,
+        critical: .10,
+        strength: 1.10,
+        //MAGIC
+        elm_attack: 107,
+        elm_defense: 156,
+        elm_efficiency: 1.32,
+        potency: .30,
+        //WEAPON
+        weapon: 227,
+        shield: 240,
+        curse_crit: .17,
+        weaponCurse: 'Stun',
+        weapon_amount: 0,
+        //SPIRIT
+        spirit: 180,
+        spirit_def: 209,
+        spirit_crit: .10,
+        spiritCurse: 'Weapon',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 8,
+        evasion: 3,
+        luck: 7,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 2,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 40,
+        negative_energy: 30,
+        cursed_tech: 'Veil - Increase Defense by 50%',
+        curse_amount: .50,
+        curse_duration: 8,
+        curse_cost: 22,
+        //DOMAIN
+        dom_purity: 3,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Poison-Mist - Cast Genjutsu',
+        ninJutsu2cost: 10,
+        ninJutsu2Dmg: 175,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Machine-Triple-Shot - Trap Enemy and drain Recovery by 3",
+        nin_cost: 25,
+        ninjutsu_pow: 150,
+        ninamount: 3,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Trap time by 2 turns if caught',
+        buff2: 'Decrease Weapon by 10%',
+        buff_acc: 50,
+        buff2_acc: 65,
+        image: 'https://static.wikia.nocookie.net/naruto/images/c/c6/Kankuro_Reuni%C3%A3o.png/revision/latest/scale-to-width/360?cb=20130728155543&path-prefix=pt-br'
     },
 ]
