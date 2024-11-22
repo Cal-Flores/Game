@@ -88,6 +88,7 @@
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             let characters = databaseArr
             databaseArr.sort((a, b) => b.hp - a.hp);
+            console.log(characters.length)
 
             // Function to sort characters by a specified stat in descending order
             function sortByStat(array, stat) {
@@ -284,8 +285,6 @@
             });
 
 
-
-            console.log(count)
             for (let player of databaseArr) {
                 html += `
             <div class='all_fight_card'>

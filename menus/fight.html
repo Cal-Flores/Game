@@ -236,8 +236,8 @@
             let spiritPer = ['Hair-Pin']
             let spiritAmount = ['Resonance']
             //speed + recovery + luck
-            let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang']
-            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning']
+            let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang', 'Indras-Arrow']
+            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken']
             let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon']
             let luck = []
             // genjutsu
@@ -258,8 +258,8 @@
             let ultCosted = []
             let ultDamage = []
             let ging = ['Polymath']
-            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice']
+            let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse', 'Senjutsu']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Copy-Ninja', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -960,10 +960,6 @@
                         alert(`chrollo has stolen ${book}`)
                     }
                 }
-                if (jutsu == 'Polymath') {
-                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
-                    buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
-                }
                 if (jutsu == 'Phase-Bullets') {
                     if (attacker == 'red') redStun += .06
                     if (attacker == 'blue') blueStun += .06
@@ -1647,6 +1643,7 @@
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda']
         const shield = []
+        const spirit = ['Ashura-Kurama-Mode']
         const chakra_cost = ["Falling-Blossom-Emotion"];
         const genjutsu = [] //** NEW please add me**
         const genPower = ['Black-Bird-Manipulation'] //** NEW please add me**
@@ -1701,6 +1698,9 @@
 
                 if (recovery.includes(curse)) {
                     redRecovery += amount
+                }
+                if (spirit.includes(curse)) {
+                    redSpirit = redSpirit * Math.floor(1 + amount)
                 }
                 if (ninjutsuStr.includes(curse)) {
                     redNenNinDmg += amount
@@ -1978,6 +1978,9 @@
                     duration = redCurseDuration;
                     amount = redCurseAmount
                     currBlueCurse -= Math.floor((redCurseCost * .70));
+                }
+                if (spirit.includes(curse)) {
+                    blueSpirit = blueSpirit * Math.floor(1 + amount)
                 }
                 if (currBlueCurse < cost) {
                     alert('Not enough curse energy')
@@ -3074,6 +3077,12 @@
                 if (curse == 'Stun') {
                     alert('The CURSED Tool Caused A Stun!')
                 }
+                if (curse == 'Sage') {
+                    blueAttack -= amount;
+                    blueElmAttack -= amount;
+                    blueWeapon -= amount;
+                    blueSpirit -= amount
+                }
             }
             if (attacker == 'blue') {
                 //// LONG IF CHAIN ///
@@ -3125,6 +3134,12 @@
                 }
                 if (curse == 'Stun') {
                     alert('The CURSED Tool Caused A Stun!')
+                }
+                if (curse == 'Sage') {
+                    redAttack -= amount;
+                    redElmAttack -= amount;
+                    redWeapon -= amount;
+                    redSpirit -= amount
                 }
             }
             // UPDATE U.I

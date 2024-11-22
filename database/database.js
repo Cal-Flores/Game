@@ -8831,7 +8831,7 @@ const database = [
         chakra_rec: 5,
         drain: 10,
         //CURSE
-        cursed_energy: 100,
+        cursed_energy: 0,
         cursed_recovery: 38,
         negative_energy: 55,
         cursed_tech: 'Polyglot - Use Opponents Curse Technique at 70% cost',
@@ -8859,7 +8859,152 @@ const database = [
         buff: 'Increase Strength by 40%',
         buff2: 'Decrease Stun by 100%',
         buff_acc: 60,
-        buff2_acc: 60,
+        buff2_acc: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/3/3d/GingAv.png/revision/latest?cb=20181125230438'
     },
+
+    {
+        name: 'Six Paths Naruto',
+        nen_type: 'Emitter',
+        element: 'Holy',
+        elm: holy,
+        hp: 3468,
+        //PHYSICAL
+        attack: 136,
+        defense: 144,
+        critical: .40,
+        strength: 1.15,
+        //MAGIC
+        elm_attack: 152,
+        elm_defense: 206,
+        elm_efficiency: 1.24,
+        potency: .42,
+        //WEAPON
+        weapon: 232,
+        shield: 161,
+        curse_crit: .50,
+        weaponCurse: 'Sage',
+        weapon_amount: 15,
+        //SPIRIT
+        spirit: 220,
+        spirit_def: 216,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 40,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 2,
+        stun: .03,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 20,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 9,
+        drain: 0,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 20,
+        negative_energy: 0,
+        cursed_tech: 'Ashura-Kurama-Mode - Increase Spirit by 70%',
+        curse_amount: .70,
+        curse_duration: 8,
+        curse_cost: 26,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ultra-Big-Ball-RasenShuriken - Lower Evasion by 4',
+        ninJutsu2cost: 24,
+        ninJutsu2Dmg: 425,
+        nin2amount: 4,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Senjutsu - Recover 500 HP",
+        nin_cost: 35,
+        ninjutsu_pow: 0,
+        ninamount: 500,
+        ultEnhance: true,
+        //BUFFS
+        buff: 'Increase Accuracy by 2',
+        buff2: 'Decrease Recovery by 2',
+        buff_acc: 55,
+        buff2_acc: 60,
+        image: 'https://pm1.aminoapps.com/6473/2b4588a0c2898a45104406c167c487272c7694a2_hq.jpg'
+    },
+    {
+        name: 'Sasuke',
+        nen_type: 'Emitter',
+        element: 'Holy',
+        elm: holy,
+        hp: 3151,
+        //PHYSICAL
+        attack: 134,
+        defense: 178,
+        critical: .20,
+        strength: 1.2,
+        //MAGIC
+        elm_attack: 224,
+        elm_defense: 165,
+        elm_efficiency: 1.40,
+        potency: .20,
+        //WEAPON
+        weapon: 235,
+        shield: 201,
+        curse_crit: .60,
+        weaponCurse: 'Sage',
+        weapon_amount: 12,
+        //SPIRIT
+        spirit: 123,
+        spirit_def: 142,
+        spirit_crit: .10,
+        spiritCurse: 'Magic',
+        spirit_amount: 20,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 6,
+        luck: 2,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 7,
+        gen_power: 60,
+        willpower: 9,
+        chakra: 0,
+        chakra_rec: 8,
+        drain: 11,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 24,
+        negative_energy: 11,
+        cursed_tech: 'Gakido - No damage from previous ninjutsu | Do a boost',
+        curse_amount: 0,
+        curse_duration: 1,
+        curse_cost: 18,
+        //DOMAIN
+        dom_purity: 7,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Amenotejikara - Flip evade previous damage',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 155,
+        nin2amount: 0,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Indras-Arrow  - Lower Accuracy by 1",
+        nin_cost: 26,
+        ninjutsu_pow: 300,
+        ninamount: 1,
+        ultEnhance: false,
+        //BUFFS
+        buff: 'Increase Gen Power by 20',
+        buff2: 'Decrease Spirit by 15%',
+        buff_acc: 55,
+        buff2_acc: 50,
+        image: 'https://attachments-cdn-s.coub.com/coub_storage/coub/simple/cw_timeline_pic/2226b923534/9c498a7b4d7133fec88c1/ios_large_1616495997_image.jpg'
+    }
 ]
