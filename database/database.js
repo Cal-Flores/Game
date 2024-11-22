@@ -30,7 +30,7 @@ const database = [
         critical: .40,
         strength: 1.6,
         //MAGIC
-        elm_attack: 121,
+        elm_attack: 111,
         elm_defense: 153,
         elm_efficiency: 1,
         potency: .15,
@@ -41,7 +41,7 @@ const database = [
         weaponCurse: 'Katana',
         weapon_amount: 0,
         //SPIRIT
-        spirit: 98,
+        spirit: 50,
         spirit_def: 194,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -102,7 +102,7 @@ const database = [
         critical: .18,
         strength: 1.5,
         //MAGIC
-        elm_attack: 127,
+        elm_attack: 110,
         elm_defense: 186,
         elm_efficiency: 1,
         potency: 1,
@@ -113,7 +113,7 @@ const database = [
         weaponCurse: 'Shield',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 125,
+        spirit: 108,
         spirit_def: 172,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -170,11 +170,11 @@ const database = [
         hp: 2957,
         //PHYSICAL
         attack: 135,
-        defense: 128,
+        defense: 138,
         critical: .12,
         strength: 1.17,
         //MAGIC
-        elm_attack: 115,
+        elm_attack: 135,
         elm_defense: 191,
         elm_efficiency: 1.15,
         potency: .25,
@@ -185,7 +185,7 @@ const database = [
         weaponCurse: 'Critical',
         weapon_amount: .08,
         //SPIRIT
-        spirit: 221,
+        spirit: 223,
         spirit_def: 202,
         spirit_crit: .20,
         spiritCurse: 'Damage',
@@ -242,7 +242,7 @@ const database = [
         hp: 3252,
         //PHYSICAL
         attack: 181,
-        defense: 140,
+        defense: 160,
         critical: .35,
         strength: 2,
         //MAGIC
@@ -257,7 +257,7 @@ const database = [
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 216,
+        spirit: 209,
         spirit_def: 210,
         spirit_crit: .25,
         spiritCurse: 'Weapon',
@@ -314,11 +314,11 @@ const database = [
         hp: 2971,
         //PHYSICAL
         attack: 236,
-        defense: 173,
+        defense: 166,
         critical: .38,
         strength: 1.4,
         //MAGIC
-        elm_attack: 251,
+        elm_attack: 247,
         elm_defense: 126,
         elm_efficiency: 1.25,
         potency: .20,
@@ -329,7 +329,7 @@ const database = [
         weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 217,
+        spirit: 212,
         spirit_def: 157,
         spirit_crit: .08,
         spiritCurse: 'Evasion',
@@ -390,7 +390,7 @@ const database = [
         critical: .20,
         strength: 1.8,
         //MAGIC
-        elm_attack: 152,
+        elm_attack: 50,
         elm_defense: 174,
         elm_efficiency: 1.15,
         potency: .15,
@@ -401,7 +401,7 @@ const database = [
         weaponCurse: 'Curse',
         weapon_amount: 8,
         //SPIRIT
-        spirit: 95,
+        spirit: 90,
         spirit_def: 169,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -458,22 +458,22 @@ const database = [
         hp: 3000,
         //PHYSICAL
         attack: 198,
-        defense: 177,
+        defense: 174,
         critical: 0.22,
         strength: 1.4,
         //MAGIC
-        elm_attack: 126,
+        elm_attack: 115,
         elm_defense: 136,
         elm_efficiency: 1.20,
         potency: .13,
         //WEAPON
-        weapon: 236,
+        weapon: 229,
         shield: 189,
         curse_crit: 0.10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 146,
+        spirit: 125,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -530,7 +530,7 @@ const database = [
         hp: 2872,
         //PHYSICAL
         attack: 188,
-        defense: 161,
+        defense: 158,
         critical: .45,
         strength: 1.4,
         //MAGIC
@@ -539,13 +539,13 @@ const database = [
         elm_efficiency: 1.18,
         potency: .10,
         //WEAPON
-        weapon: 242,
+        weapon: 237,
         shield: 133,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 23,
         //SPIRIT
-        spirit: 201,
+        spirit: 181,
         spirit_def: 162,
         spirit_crit: .15,
         spiritCurse: 'Weapon',
@@ -606,7 +606,7 @@ const database = [
         critical: .20,
         strength: 1.6,
         //MAGIC
-        elm_attack: 133,
+        elm_attack: 128,
         elm_defense: 180,
         elm_efficiency: 1.2,
         potency: 0.12,
@@ -617,7 +617,7 @@ const database = [
         weaponCurse: 'Attack',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 108,
+        spirit: 93,
         spirit_def: 182,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -674,11 +674,11 @@ const database = [
         hp: 2863,
         //PHYSICAL
         attack: 213,
-        defense: 170,
+        defense: 165,
         critical: .45,
         strength: 1.3,
         //MAGIC
-        elm_attack: 146,
+        elm_attack: 96,
         elm_defense: 190,
         elm_efficiency: 1.26,
         potency: .18,
@@ -749,11 +749,11 @@ const database = [
         pick: 34,
         //PHYSICAL
         attack: 196,
-        defense: 229,
+        defense: 219,
         critical: .23,
         strength: 1.75,
         //MAGIC
-        elm_attack: 120,
+        elm_attack: 104,
         elm_defense: 166,
         elm_efficiency: 1.3,
         potency: .30,
@@ -764,7 +764,7 @@ const database = [
         weaponCurse: 'Weapon',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 113,
+        spirit: 95,
         spirit_def: 213,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -893,7 +893,7 @@ const database = [
         hp: 3333,
         //PHYSICAL
         attack: 238,
-        defense: 233,
+        defense: 227,
         critical: .15,
         strength: 2,
         //MAGIC
@@ -908,7 +908,7 @@ const database = [
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 130,
+        spirit: 110,
         spirit_def: 195,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -965,7 +965,7 @@ const database = [
         hp: 3077,
         //PHYSICAL
         attack: 127,
-        defense: 200,
+        defense: 197,
         critical: .70,
         strength: 1.7,
         //MAGIC
@@ -980,7 +980,7 @@ const database = [
         weaponCurse: 'Magic',
         weapon_amount: 7,
         //SPIRIT
-        spirit: 185,
+        spirit: 160,
         spirit_def: 186,
         spirit_crit: .15,
         spiritCurse: 'Weapon',
@@ -1037,22 +1037,22 @@ const database = [
         hp: 3233,
         //PHYSICAL
         attack: 106,
-        defense: 186,
+        defense: 179,
         critical: .10,
         strength: 1.20,
         //MAGIC
-        elm_attack: 121,
+        elm_attack: 107,
         elm_defense: 158,
         elm_efficiency: 1.10,
         potency: .20,
         //WEAPON
         weapon: 275,
-        shield: 251,
+        shield: 200,
         curse_crit: .16,
         weaponCurse: 'Magic',
         weapon_amount: 16,
         //SPIRIT
-        spirit: 194,
+        spirit: 173,
         spirit_def: 239,
         spirit_crit: .10,
         spiritCurse: 'Weapon',
@@ -1115,7 +1115,7 @@ const database = [
         critical: .20,
         strength: 1.3,
         //MAGIC
-        elm_attack: 224,
+        elm_attack: 221,
         elm_defense: 207,
         elm_efficiency: 1.4,
         potency: .25,
@@ -1126,7 +1126,7 @@ const database = [
         weaponCurse: 'M-Def',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 188,
+        spirit: 166,
         spirit_def: 199,
         spirit_crit: .15,
         spiritCurse: 'Recovery',
@@ -1187,18 +1187,18 @@ const database = [
         critical: 0.32,
         strength: 1.3,
         //MAGIC
-        elm_attack: 243,
+        elm_attack: 244,
         elm_defense: 189,
         elm_efficiency: 1.45,
         potency: 0.28,
         //WEAPON
-        weapon: 226,
+        weapon: 217,
         shield: 163,
         curse_crit: .30,
         weaponCurse: 'M-Def',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 146,
+        spirit: 124,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1255,7 +1255,7 @@ const database = [
         hp: 3105,
         //PHYSICAL
         attack: 179,
-        defense: 168,
+        defense: 160,
         critical: .40,
         strength: 1.5,
         //MAGIC
@@ -1264,13 +1264,13 @@ const database = [
         elm_efficiency: 1.36,
         potency: .30,
         //WEAPON
-        weapon: 152,
+        weapon: 145,
         shield: 163,
         curse_crit: .40,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 211,
+        spirit: 202,
         spirit_def: 231,
         spirit_crit: .17,
         spiritCurse: 'Magic',
@@ -1336,13 +1336,13 @@ const database = [
         elm_efficiency: 1.50,
         potency: .20,
         //WEAPON
-        weapon: 166,
+        weapon: 162,
         shield: 225,
         curse_crit: .10,
         weaponCurse: 'Weapon',
         weapon_amount: 5,
         //SPIRIT
-        spirit: 187,
+        spirit: 164,
         spirit_def: 200,
         spirit_crit: .50,
         spiritCurse: 'S-Def',
@@ -1399,7 +1399,7 @@ const database = [
         hp: 2988,
         //PHYSICAL
         attack: 119,
-        defense: 138,
+        defense: 136,
         critical: .75,
         strength: 1.6,
         //MAGIC
@@ -1408,13 +1408,13 @@ const database = [
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 219,
+        weapon: 214,
         shield: 186,
         curse_crit: .15,
         weaponCurse: 'M-Def',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 156,
+        spirit: 130,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1471,22 +1471,22 @@ const database = [
         hp: 3410,
         //PHYSICAL
         attack: 217,
-        defense: 235,
+        defense: 230,
         critical: .23,
         strength: 2,
         //MAGIC
-        elm_attack: 255,
+        elm_attack: 254,
         elm_defense: 166,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
-        weapon: 128,
+        weapon: 127,
         shield: 195,
         curse_crit: .10,
         weaponCurse: 'GenJutsu',
         weapon_amount: 3,
         //SPIRIT
-        spirit: 184,
+        spirit: 158,
         spirit_def: 215,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1543,7 +1543,7 @@ const database = [
         hp: 2867,
         //PHYSICAL
         attack: 113,
-        defense: 174,
+        defense: 169,
         critical: .10,
         strength: 1,
         //MAGIC
@@ -1558,7 +1558,7 @@ const database = [
         weaponCurse: 'Critical',
         weapon_amount: .10,
         //SPIRIT
-        spirit: 172,
+        spirit: 141,
         spirit_def: 182,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1615,22 +1615,22 @@ const database = [
         hp: 2942,
         //PHYSICAL
         attack: 210,
-        defense: 134,
+        defense: 142,
         critical: .40,
         strength: 1.25,
         //MAGIC
-        elm_attack: 251,
+        elm_attack: 246,
         elm_defense: 199,
         elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
-        weapon: 110,
+        weapon: 95,
         shield: 235,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 139,
+        spirit: 118,
         spirit_def: 185,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1691,18 +1691,18 @@ const database = [
         critical: .05,
         strength: 1,
         //MAGIC
-        elm_attack: 254,
+        elm_attack: 251,
         elm_defense: 252,
         elm_efficiency: 1.1,
         potency: .25,
         //WEAPON
-        weapon: 214,
+        weapon: 204,
         shield: 164,
         curse_crit: .12,
         weaponCurse: 'M-Def',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 190,
+        spirit: 169,
         spirit_def: 169,
         spirit_crit: .15,
         spiritCurse: 'Magic',
@@ -1759,11 +1759,11 @@ const database = [
         hp: 3053,
         //PHYSICAL
         attack: 142,
-        defense: 235,
+        defense: 228,
         critical: .10,
         strength: 1.1,
         //MAGIC
-        elm_attack: 252,
+        elm_attack: 248,
         elm_defense: 204,
         elm_efficiency: 1.4,
         potency: .18,
@@ -1774,7 +1774,7 @@ const database = [
         weaponCurse: 'GenPower',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 145,
+        spirit: 123,
         spirit_def: 170,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -1831,22 +1831,22 @@ const database = [
         hp: 2893,
         //PHYSICAL
         attack: 102,
-        defense: 156,
+        defense: 154,
         critical: .10,
         strength: 1.3,
         //MAGIC
-        elm_attack: 249,
+        elm_attack: 243,
         elm_defense: 238,
         elm_efficiency: 1.35,
         potency: .35,
         //WEAPON
-        weapon: 226,
+        weapon: 217,
         shield: 172,
         curse_crit: .45,
         weaponCurse: 'Curse',
         weapon_amount: 8,
         //SPIRIT
-        spirit: 133,
+        spirit: 113,
         spirit_def: 166,
         spirit_crit: .12,
         spiritCurse: 'Weapon',
@@ -1907,18 +1907,18 @@ const database = [
         critical: .10,
         strength: 1,
         //MAGIC
-        elm_attack: 244,
+        elm_attack: 239,
         elm_defense: 182,
         elm_efficiency: 1.5,
         potency: .28,
         //WEAPON
-        weapon: 175,
+        weapon: 174,
         shield: 202,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 176,
+        spirit: 145,
         spirit_def: 206,
         spirit_crit: .18,
         spiritCurse: 'Power',
@@ -1979,18 +1979,18 @@ const database = [
         critical: .28,
         strength: 1.4,
         //MAGIC
-        elm_attack: 254,
+        elm_attack: 249,
         elm_defense: 193,
         elm_efficiency: 1.5,
         potency: 0.30,
         //WEAPON
-        weapon: 236,
+        weapon: 227,
         shield: 168,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 9,
         //SPIRIT
-        spirit: 134,
+        spirit: 114,
         spirit_def: 158,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2047,7 +2047,7 @@ const database = [
         hp: 3247,
         //PHYSICAL
         attack: 111,
-        defense: 219,
+        defense: 210,
         critical: .10,
         strength: 1.16,
         //MAGIC
@@ -2056,13 +2056,13 @@ const database = [
         elm_efficiency: 1,
         potency: .18,
         //WEAPON
-        weapon: 199,
+        weapon: 194,
         shield: 178,
         curse_crit: .50,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 155,
+        spirit: 129,
         spirit_def: 164,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2121,8 +2121,8 @@ const database = [
         elm: ghost,
         hp: 3139,
         //PHYSICAL
-        attack: 256,
-        defense: 173,
+        attack: 246,
+        defense: 166,
         critical: .24,
         strength: 1.24,
         //MAGIC
@@ -2131,13 +2131,13 @@ const database = [
         elm_efficiency: 1.18,
         potency: .16,
         //WEAPON
-        weapon: 248,
+        weapon: 237,
         shield: 224,
         curse_crit: .17,
         weaponCurse: 'Def',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 121,
+        spirit: 102,
         spirit_def: 164,
         spirit_crit: .15,
         spiritCurse: 'Attack',
@@ -2194,7 +2194,7 @@ const database = [
         hp: 3085,
         //PHYSICAL
         attack: 246,
-        defense: 238,
+        defense: 235,
         critical: .30,
         strength: 1.34,
         //MAGIC
@@ -2203,13 +2203,13 @@ const database = [
         elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
-        weapon: 196,
+        weapon: 166,
         shield: 192,
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 120,
+        spirit: 100,
         spirit_def: 173,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2266,22 +2266,22 @@ const database = [
         hp: 3415,
         //PHYSICAL
         attack: 264,
-        defense: 255,
+        defense: 222,
         critical: .28,
         strength: 1.6,
         //MAGIC
-        elm_attack: 112,
+        elm_attack: 86,
         elm_defense: 150,
         elm_efficiency: 1.2,
         potency: 0.10,
         //WEAPON
-        weapon: 185,
+        weapon: 175,
         shield: 215,
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 105,
+        spirit: 92,
         spirit_def: 155,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2338,23 +2338,23 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 280,
-        defense: 275,
-        critical: .18,
+        defense: 260,
+        critical: .15,
         strength: 2,
         //MAGIC
-        elm_attack: 130,
-        elm_defense: 232,
+        elm_attack: 74,
+        elm_defense: 212,
         elm_efficiency: 1,
         potency: .06,
         //WEAPON
-        weapon: 162,
+        weapon: 154,
         shield: 227,
         curse_crit: .05,
         weaponCurse: 'Weapon',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 113,
-        spirit_def: 181,
+        spirit: 94,
+        spirit_def: 151,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2391,7 +2391,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Big-Bang-Impact - Decrease Defense by 70%",
-        nin_cost: 48,
+        nin_cost: 56,
         ninjutsu_pow: 650,
         ninamount: .70,
         ultEnhance: false,
@@ -2414,18 +2414,18 @@ const database = [
         critical: .23,
         strength: 1.65,
         //MAGIC
-        elm_attack: 134,
+        elm_attack: 131,
         elm_defense: 177,
         elm_efficiency: 1.25,
         potency: .40,
         //WEAPON
-        weapon: 171,
+        weapon: 170,
         shield: 155,
         curse_crit: .20,
         weaponCurse: 'Critical',
         weapon_amount: .10,
         //SPIRIT
-        spirit: 205,
+        spirit: 204,
         spirit_def: 235,
         spirit_crit: .25,
         spiritCurse: 'Attack',
@@ -2482,22 +2482,22 @@ const database = [
         hp: 2992,
         //PHYSICAL
         attack: 233,
-        defense: 188,
+        defense: 184,
         critical: .66,
         strength: 1.25,
         //MAGIC
-        elm_attack: 218,
+        elm_attack: 212,
         elm_defense: 196,
         elm_efficiency: 1.38,
         potency: .20,
         //WEAPON
-        weapon: 110,
+        weapon: 92,
         shield: 225,
         curse_crit: .08,
         weaponCurse: 'Gen-Power',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 178,
+        spirit: 149,
         spirit_def: 195,
         spirit_crit: .16,
         spiritCurse: 'Spirit',
@@ -2554,7 +2554,7 @@ const database = [
         hp: 2875,
         //PHYSICAL
         attack: 233,
-        defense: 174,
+        defense: 168,
         critical: .68,
         strength: 1.2,
         //MAGIC
@@ -2563,13 +2563,13 @@ const database = [
         elm_efficiency: 1.2,
         potency: .15,
         //WEAPON
-        weapon: 148,
+        weapon: 141,
         shield: 190,
         curse_crit: .06,
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 154,
+        spirit: 128,
         spirit_def: 185,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2626,16 +2626,16 @@ const database = [
         hp: 2872,
         //PHYSICAL
         attack: 239,
-        defense: 194,
+        defense: 188,
         critical: .24,
         strength: 1.7,
         //MAGIC
-        elm_attack: 106,
+        elm_attack: 50,
         elm_defense: 152,
         elm_efficiency: 1,
         potency: .08,
         //WEAPON
-        weapon: 211,
+        weapon: 202,
         shield: 232,
         curse_crit: .08,
         weaponCurse: 'Recovery',
@@ -2698,22 +2698,22 @@ const database = [
         hp: 3491,
         //PHYSICAL
         attack: 285,
-        defense: 271,
+        defense: 239,
         critical: .16,
         strength: 2,
         //MAGIC
-        elm_attack: 164,
+        elm_attack: 159,
         elm_defense: 185,
         elm_efficiency: 1.28,
         potency: .20,
         //WEAPON
-        weapon: 148,
+        weapon: 140,
         shield: 219,
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 50,
         //SPIRIT
-        spirit: 105,
+        spirit: 91,
         spirit_def: 166,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2770,22 +2770,22 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 300,
-        defense: 164,
+        defense: 162,
         critical: .20,
         strength: 1.8,
         //MAGIC
-        elm_attack: 131,
+        elm_attack: 91,
         elm_defense: 191,
         elm_efficiency: 1.25,
         potency: .10,
         //WEAPON
-        weapon: 128,
+        weapon: 107,
         shield: 182,
         curse_crit: .08,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 135,
+        spirit: 116,
         spirit_def: 215,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2842,22 +2842,22 @@ const database = [
         hp: 2986,
         //PHYSICAL
         attack: 253,
-        defense: 236,
+        defense: 232,
         critical: .28,
         strength: 1.25,
         //MAGIC
-        elm_attack: 124,
+        elm_attack: 113,
         elm_defense: 183,
         elm_efficiency: 1.3,
         potency: .50,
         //WEAPON
-        weapon: 210,
+        weapon: 197,
         shield: 200,
         curse_crit: .10,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 132,
+        spirit: 112,
         spirit_def: 170,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2915,22 +2915,22 @@ const database = [
         hp: 3383,
         //PHYSICAL
         attack: 249,
-        defense: 232,
+        defense: 225,
         critical: .30,
         strength: 1.45,
         //MAGIC
-        elm_attack: 132,
+        elm_attack: 125,
         elm_defense: 145,
         elm_efficiency: 1.38,
         potency: .50,
         //WEAPON
-        weapon: 160,
+        weapon: 150,
         shield: 199,
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 184,
+        spirit: 155,
         spirit_def: 180,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -2988,22 +2988,22 @@ const database = [
         hp: 3466,
         //PHYSICAL
         attack: 273,
-        defense: 240,
+        defense: 221,
         critical: .20,
         strength: 1.65,
         //MAGIC
-        elm_attack: 120,
+        elm_attack: 102,
         elm_defense: 208,
         elm_efficiency: 1.2,
         potency: .40,
         //WEAPON
-        weapon: 131,
+        weapon: 114,
         shield: 139,
         curse_crit: .05,
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 112,
+        spirit: 94,
         spirit_def: 164,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -3060,22 +3060,22 @@ const database = [
         hp: 3494,
         //PHYSICAL
         attack: 267,
-        defense: 230,
+        defense: 224,
         critical: .20,
         strength: 1.65,
         //MAGIC
-        elm_attack: 113,
+        elm_attack: 90,
         elm_defense: 136,
         elm_efficiency: 1,
         potency: .01,
         //WEAPON
-        weapon: 184,
+        weapon: 172,
         shield: 218,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 205,
+        spirit: 195,
         spirit_def: 202,
         spirit_crit: .10,
         spiritCurse: 'Attack',
@@ -3135,22 +3135,22 @@ const database = [
         pick: 19,
         //PHYSICAL
         attack: 277,
-        defense: 215,
+        defense: 208,
         critical: .25,
         strength: 1.5,
         //MAGIC
-        elm_attack: 130,
+        elm_attack: 119,
         elm_defense: 205,
         elm_efficiency: 1,
         potency: 0.15,
         //WEAPON
-        weapon: 145,
+        weapon: 136,
         shield: 225,
         curse_crit: .20,
         weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 137,
+        spirit: 117,
         spirit_def: 170,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -3209,7 +3209,7 @@ const database = [
         hp: 3132,
         //PHYSICAL
         attack: 154,
-        defense: 167,
+        defense: 158,
         critical: .18,
         strength: 1.3,
         //MAGIC
@@ -3218,13 +3218,13 @@ const database = [
         elm_efficiency: 1.3,
         potency: .40,
         //WEAPON
-        weapon: 218,
+        weapon: 213,
         shield: 207,
         curse_crit: .15,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 223,
+        spirit: 227,
         spirit_def: 211,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
@@ -3288,18 +3288,18 @@ const database = [
         critical: .20,
         strength: 1.1,
         //MAGIC
-        elm_attack: 153,
+        elm_attack: 152,
         elm_defense: 234,
         elm_efficiency: 1.4,
         potency: .12,
         //WEAPON
-        weapon: 218,
+        weapon: 212,
         shield: 168,
         curse_crit: .65,
         weaponCurse: 'Willpower',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 212,
+        spirit: 205,
         spirit_def: 203,
         spirit_crit: .18,
         spiritCurse: 'Power',
@@ -3356,22 +3356,22 @@ const database = [
         hp: 2928,
         //PHYSICAL
         attack: 152,
-        defense: 198,
+        defense: 195,
         critical: .35,
         strength: 2,
         //MAGIC
-        elm_attack: 185,
+        elm_attack: 186,
         elm_defense: 166,
         elm_efficiency: 1.3,
         potency: .20,
         //WEAPON
-        weapon: 124,
+        weapon: 105,
         shield: 229,
         curse_crit: .18,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 201,
+        spirit: 179,
         spirit_def: 180,
         spirit_crit: .20,
         spiritCurse: 'M-Def',
@@ -3432,18 +3432,18 @@ const database = [
         critical: .16,
         strength: 1.4,
         //MAGIC
-        elm_attack: 113,
+        elm_attack: 88,
         elm_defense: 132,
         elm_efficiency: 1.1,
         potency: .12,
         //WEAPON
-        weapon: 169,
+        weapon: 163,
         shield: 187,
         curse_crit: .12,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 177,
+        spirit: 144,
         spirit_def: 204,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -3500,22 +3500,22 @@ const database = [
         hp: 3009,
         //PHYSICAL
         attack: 179,
-        defense: 165,
+        defense: 156,
         critical: .20,
         strength: 1.4,
         //MAGIC
-        elm_attack: 224,
+        elm_attack: 219,
         elm_defense: 229,
         elm_efficiency: 1.4,
         potency: .25,
         //WEAPON
-        weapon: 130,
+        weapon: 112,
         shield: 168,
         curse_crit: .06,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 205,
+        spirit: 193,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Def',
@@ -3576,18 +3576,18 @@ const database = [
         critical: .08,
         strength: 1.1,
         //MAGIC
-        elm_attack: 222,
+        elm_attack: 216,
         elm_defense: 208,
         elm_efficiency: 1.35,
         potency: .30,
         //WEAPON
-        weapon: 140,
+        weapon: 128,
         shield: 165,
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 165,
+        spirit: 134,
         spirit_def: 186,
         spirit_crit: .15,
         spiritCurse: 'Recovery',
@@ -3648,7 +3648,7 @@ const database = [
         critical: .06,
         strength: 1.05,
         //MAGIC
-        elm_attack: 245,
+        elm_attack: 233,
         elm_defense: 238,
         elm_efficiency: 1.5,
         potency: .20,
@@ -3731,7 +3731,7 @@ const database = [
         weaponCurse: 'Evasion',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 205,
+        spirit: 190,
         spirit_def: 205,
         spirit_crit: .20,
         spiritCurse: 'Damage',
@@ -3791,7 +3791,7 @@ const database = [
         hp: 3254,
         //PHYSICAL
         attack: 135,
-        defense: 237,
+        defense: 236,
         critical: .15,
         strength: 1.2,
         //MAGIC
@@ -3800,13 +3800,13 @@ const database = [
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 135,
+        weapon: 124,
         shield: 266,
         curse_crit: .06,
         weaponCurse: 'Magic',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 208,
+        spirit: 198,
         spirit_def: 233,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
@@ -3872,13 +3872,13 @@ const database = [
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
-        weapon: 238,
+        weapon: 234,
         shield: 198,
         curse_crit: .13,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 167,
+        spirit: 136,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -3935,7 +3935,7 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 218,
-        defense: 265,
+        defense: 264,
         critical: .20,
         strength: 1.85,
         //MAGIC
@@ -3944,14 +3944,14 @@ const database = [
         elm_efficiency: 1.25,
         potency: .20,
         //WEAPON
-        weapon: 166,
+        weapon: 160,
         shield: 174,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 25,
         //SPIRIT
         spirit: 268,
-        spirit_def: 200,
+        spirit_def: 170,
         spirit_crit: .22,
         spiritCurse: 'C-Def',
         spirit_amount: 20,
@@ -4007,22 +4007,22 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 235,
-        defense: 265,
+        defense: 262,
         critical: .15,
         strength: 2,
         //MAGIC
-        elm_attack: 125,
+        elm_attack: 70,
         elm_defense: 225,
         elm_efficiency: 1,
         potency: .05,
         //WEAPON
-        weapon: 166,
+        weapon: 158,
         shield: 285,
         curse_crit: .06,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 140,
+        spirit: 119,
         spirit_def: 236,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4079,22 +4079,22 @@ const database = [
         hp: 3489,
         //PHYSICAL
         attack: 248,
-        defense: 248,
+        defense: 218,
         critical: .12,
         strength: 2.25,
         //MAGIC
-        elm_attack: 135,
+        elm_attack: 134,
         elm_defense: 206,
         elm_efficiency: 1.07,
         potency: .07,
         //WEAPON
-        weapon: 195,
+        weapon: 188,
         shield: 249,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 119,
+        spirit: 99,
         spirit_def: 208,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4151,22 +4151,22 @@ const database = [
         hp: 3464,
         //PHYSICAL
         attack: 245,
-        defense: 219,
+        defense: 211,
         critical: .15,
         strength: 1.85,
         //MAGIC
-        elm_attack: 132,
+        elm_attack: 124,
         elm_defense: 274,
         elm_efficiency: 1.2,
         potency: .30,
         //WEAPON
-        weapon: 194,
+        weapon: 185,
         shield: 254,
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 168,
+        spirit: 138,
         spirit_def: 234,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4223,7 +4223,7 @@ const database = [
         hp: 3423,
         //PHYSICAL
         attack: 145,
-        defense: 220,
+        defense: 213,
         critical: .08,
         strength: 1.53,
         //MAGIC
@@ -4232,13 +4232,13 @@ const database = [
         elm_efficiency: 1.46,
         potency: .16,
         //WEAPON
-        weapon: 122,
+        weapon: 102,
         shield: 236,
         curse_crit: .10,
         weaponCurse: 'M-Def',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 202,
+        spirit: 185,
         spirit_def: 214,
         spirit_crit: .18,
         spiritCurse: 'Magic',
@@ -4297,7 +4297,7 @@ const database = [
         hp: 3255,
         //PHYSICAL
         attack: 186,
-        defense: 146,
+        defense: 149,
         critical: .40,
         strength: 1.4,
         //MAGIC
@@ -4306,13 +4306,13 @@ const database = [
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
-        weapon: 243,
+        weapon: 241,
         shield: 213,
         curse_crit: .23,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 132,
+        spirit: 111,
         spirit_def: 229,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4378,7 +4378,7 @@ const database = [
         elm_efficiency: 1.5,
         potency: .30,
         //WEAPON
-        weapon: 150,
+        weapon: 140,
         shield: 245,
         curse_crit: .10,
         weaponCurse: 'Def',
@@ -4445,7 +4445,7 @@ const database = [
         hp: 3379,
         //PHYSICAL
         attack: 124,
-        defense: 174,
+        defense: 167,
         critical: .30,
         strength: 1.5,
         //MAGIC
@@ -4454,13 +4454,13 @@ const database = [
         elm_efficiency: 1.65,
         potency: .18,
         //WEAPON
-        weapon: 229,
+        weapon: 220,
         shield: 152,
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 170,
+        spirit: 139,
         spirit_def: 174,
         spirit_crit: .08,
         spiritCurse: 'Evasion',
@@ -4518,11 +4518,11 @@ const database = [
         hp: 3087,
         //PHYSICAL
         attack: 144,
-        defense: 199,
+        defense: 196,
         critical: .65,
         strength: 1.25,
         //MAGIC
-        elm_attack: 165,
+        elm_attack: 163,
         elm_defense: 169,
         elm_efficiency: 1.35,
         potency: .18,
@@ -4533,7 +4533,7 @@ const database = [
         weaponCurse: 'Attack',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 165,
+        spirit: 133,
         spirit_def: 167,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4590,22 +4590,22 @@ const database = [
         hp: 2976,
         //PHYSICAL
         attack: 261,
-        defense: 169,
+        defense: 161,
         critical: .28,
         strength: 1.37,
         //MAGIC
-        elm_attack: 131,
+        elm_attack: 121,
         elm_defense: 172,
         elm_efficiency: 1.2,
         potency: .08,
         //WEAPON
-        weapon: 145,
+        weapon: 134,
         shield: 166,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 196,
+        spirit: 176,
         spirit_def: 158,
         spirit_crit: .31,
         spiritCurse: 'Damage',
@@ -4662,7 +4662,7 @@ const database = [
         hp: 3012,
         //PHYSICAL
         attack: 207,
-        defense: 168,
+        defense: 159,
         critical: .16,
         strength: 1.35,
         //MAGIC
@@ -4671,13 +4671,13 @@ const database = [
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 124,
+        weapon: 104,
         shield: 156,
         curse_crit: .10,
         weaponCurse: 'M-Def',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 136,
+        spirit: 117,
         spirit_def: 170,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4734,22 +4734,22 @@ const database = [
         hp: 3480,
         //PHYSICAL
         attack: 248,
-        defense: 164,
+        defense: 160,
         critical: .16,
         strength: 1.45,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 235,
         elm_defense: 153,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
-        weapon: 235,
+        weapon: 224,
         shield: 162,
         curse_crit: .15,
         weaponCurse: 'Potency',
         weapon_amount: .10,
         //SPIRIT
-        spirit: 193,
+        spirit: 170,
         spirit_def: 168,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4806,7 +4806,7 @@ const database = [
         hp: 2997,
         //PHYSICAL
         attack: 123,
-        defense: 158,
+        defense: 157,
         critical: .20,
         strength: 1.3,
         //MAGIC
@@ -4815,13 +4815,13 @@ const database = [
         elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
-        weapon: 251,
+        weapon: 252,
         shield: 228,
         curse_crit: .18,
         weaponCurse: 'Power',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 154,
+        spirit: 127,
         spirit_def: 194,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4878,22 +4878,22 @@ const database = [
         hp: 2988,
         //PHYSICAL
         attack: 230,
-        defense: 160,
+        defense: 157,
         critical: .70,
         strength: 1.3,
         //MAGIC
-        elm_attack: 155,
+        elm_attack: 154,
         elm_defense: 170,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
-        weapon: 246,
+        weapon: 245,
         shield: 187,
         curse_crit: .25,
         weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 122,
+        spirit: 104,
         spirit_def: 162,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -4954,18 +4954,18 @@ const database = [
         critical: .20,
         strength: 1.85,
         //MAGIC
-        elm_attack: 249,
+        elm_attack: 229,
         elm_defense: 230,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
-        weapon: 170,
+        weapon: 165,
         shield: 164,
         curse_crit: .12,
         weaponCurse: 'Genjutsu',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 181,
+        spirit: 150,
         spirit_def: 213,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5025,22 +5025,22 @@ const database = [
         pick: 57,
         //PHYSICAL
         attack: 155,
-        defense: 168,
+        defense: 157,
         critical: .45,
         strength: 1.2,
         //MAGIC
-        elm_attack: 115,
+        elm_attack: 97,
         elm_defense: 164,
         elm_efficiency: 1.1,
         potency: .07,
         //WEAPON
-        weapon: 243,
+        weapon: 239,
         shield: 237,
         curse_crit: .20,
         weaponCurse: 'Shield',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 135,
+        spirit: 115,
         spirit_def: 178,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5097,22 +5097,22 @@ const database = [
         hp: 2978,
         //PHYSICAL
         attack: 136,
-        defense: 236,
+        defense: 212,
         critical: .10,
         strength: 1.21,
         //MAGIC
-        elm_attack: 130,
+        elm_attack: 118,
         elm_defense: 165,
         elm_efficiency: 1.24,
         potency: .30,
         //WEAPON
-        weapon: 217,
+        weapon: 223,
         shield: 174,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 166,
+        spirit: 135,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5171,22 +5171,22 @@ const database = [
         hp: 3085,
         //PHYSICAL
         attack: 240,
-        defense: 162,
+        defense: 160,
         critical: .20,
         strength: 1.8,
         //MAGIC
-        elm_attack: 144,
+        elm_attack: 143,
         elm_defense: 188,
         elm_efficiency: 1.16,
         potency: .15,
         //WEAPON
-        weapon: 129,
+        weapon: 110,
         shield: 234,
         curse_crit: .10,
         weaponCurse: 'Def',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 124,
+        spirit: 106,
         spirit_def: 175,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5252,13 +5252,13 @@ const database = [
         elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
-        weapon: 116,
+        weapon: 99,
         shield: 124,
         curse_crit: .10,
         weaponCurse: 'Def',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 125,
+        spirit: 107,
         spirit_def: 191,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5320,18 +5320,18 @@ const database = [
         critical: .08,
         strength: 1.1,
         //MAGIC
-        elm_attack: 204,
+        elm_attack: 202,
         elm_defense: 142,
         elm_efficiency: 1.27,
         potency: .20,
         //WEAPON
-        weapon: 231,
+        weapon: 221,
         shield: 224,
         curse_crit: .18,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 118,
+        spirit: 97,
         spirit_def: 180,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5392,18 +5392,18 @@ const database = [
         critical: .20,
         strength: 1.1,
         //MAGIC
-        elm_attack: 230,
+        elm_attack: 215,
         elm_defense: 236,
         elm_efficiency: 1.5,
         potency: .23,
         //WEAPON
-        weapon: 142,
+        weapon: 131,
         shield: 167,
         curse_crit: .20,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 168,
+        spirit: 137,
         spirit_def: 167,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5469,13 +5469,13 @@ const database = [
         elm_efficiency: 1.35,
         potency: .21,
         //WEAPON
-        weapon: 121,
+        weapon: 119,
         shield: 139,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 215,
+        spirit: 208,
         spirit_def: 190,
         spirit_crit: .23,
         spiritCurse: 'Health',
@@ -5533,22 +5533,22 @@ const database = [
         hp: 3043,
         //PHYSICAL
         attack: 177,
-        defense: 178,
+        defense: 175,
         critical: .30,
         strength: 1.22,
         //MAGIC
-        elm_attack: 132,
+        elm_attack: 123,
         elm_defense: 193,
         elm_efficiency: 1.33,
         potency: .20,
         //WEAPON
-        weapon: 240,
+        weapon: 235,
         shield: 232,
         curse_crit: .25,
         weaponCurse: 'Attack',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 141,
+        spirit: 120,
         spirit_def: 172,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5605,22 +5605,22 @@ const database = [
         hp: 3350,
         //PHYSICAL
         attack: 255,
-        defense: 238,
+        defense: 216,
         critical: .14,
         strength: 1.45,
         //MAGIC
-        elm_attack: 120,
+        elm_attack: 100,
         elm_defense: 126,
         elm_efficiency: 1.1,
         potency: .09,
         //WEAPON
-        weapon: 135,
+        weapon: 120,
         shield: 184,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 116,
+        spirit: 96,
         spirit_def: 169,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5678,11 +5678,11 @@ const database = [
         hp: 3378,
         //PHYSICAL
         attack: 141,
-        defense: 189,
+        defense: 185,
         critical: .16,
         strength: 1.85,
         //MAGIC
-        elm_attack: 250,
+        elm_attack: 231,
         elm_defense: 237,
         elm_efficiency: 1.5,
         potency: .18,
@@ -5693,7 +5693,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 152,
+        spirit: 126,
         spirit_def: 206,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5750,22 +5750,22 @@ const database = [
         hp: 3389,
         //PHYSICAL
         attack: 237,
-        defense: 223,
+        defense: 217,
         critical: .30,
         strength: 1.37,
         //MAGIC
-        elm_attack: 124,
+        elm_attack: 113,
         elm_defense: 164,
         elm_efficiency: 1.2,
         potency: .40,
         //WEAPON
-        weapon: 238,
+        weapon: 221,
         shield: 217,
         curse_crit: .30,
         weaponCurse: 'Def',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 119,
+        spirit: 98,
         spirit_def: 173,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5822,22 +5822,22 @@ const database = [
         hp: 3355,
         //PHYSICAL
         attack: 143,
-        defense: 185,
+        defense: 178,
         critical: .15,
         strength: 1.65,
         //MAGIC
-        elm_attack: 208,
+        elm_attack: 205,
         elm_defense: 142,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 256,
+        weapon: 254,
         shield: 234,
         curse_crit: .15,
         weaponCurse: 'Shield',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 113,
+        spirit: 95,
         spirit_def: 183,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5903,13 +5903,13 @@ const database = [
         elm_efficiency: 1.24,
         potency: .28,
         //WEAPON
-        weapon: 215,
+        weapon: 205,
         shield: 209,
         curse_crit: .20,
         weaponCurse: 'Attack',
         weapon_amount: 16,
         //SPIRIT
-        spirit: 188,
+        spirit: 164,
         spirit_def: 221,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -5966,7 +5966,7 @@ const database = [
         hp: 2980,
         //PHYSICAL
         attack: 101,
-        defense: 157,
+        defense: 155,
         critical: .10,
         strength: 1.1,
         //MAGIC
@@ -5975,13 +5975,13 @@ const database = [
         elm_efficiency: 1.34,
         potency: .25,
         //WEAPON
-        weapon: 191,
+        weapon: 179,
         shield: 199,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 15,
         //SPIRIT
-        spirit: 217,
+        spirit: 211,
         spirit_def: 192,
         spirit_crit: .19,
         spiritCurse: 'Spirit',
@@ -6039,7 +6039,7 @@ const database = [
         hp: 3426,
         //PHYSICAL
         attack: 120,
-        defense: 194,
+        defense: 187,
         critical: .45,
         strength: 1.4,
         //MAGIC
@@ -6048,13 +6048,13 @@ const database = [
         elm_efficiency: 1.6,
         potency: .17,
         //WEAPON
-        weapon: 216,
+        weapon: 208,
         shield: 182,
         curse_crit: .15,
         weaponCurse: 'Recovery',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 130,
+        spirit: 109,
         spirit_def: 218,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -6120,13 +6120,13 @@ const database = [
         elm_efficiency: 1.6,
         potency: .19,
         //WEAPON
-        weapon: 236,
+        weapon: 226,
         shield: 189,
         curse_crit: .20,
         weaponCurse: 'M-Def',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 162,
+        spirit: 131,
         spirit_def: 227,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -6185,17 +6185,17 @@ const database = [
         round: 1,
         pick: 7,
         //PHYSICAL
-        attack: 232,
+        attack: 210,
         defense: 217,
         critical: .28,
         strength: 1.33,
         //MAGIC
-        elm_attack: 220,
+        elm_attack: 215,
         elm_defense: 254,
         elm_efficiency: 1.17,
         potency: .18,
         //WEAPON
-        weapon: 116,
+        weapon: 98,
         shield: 147,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
@@ -6258,7 +6258,7 @@ const database = [
         hp: 2814,
         //PHYSICAL
         attack: 153,
-        defense: 170,
+        defense: 163,
         critical: .10,
         strength: 1.05,
         //MAGIC
@@ -6267,13 +6267,13 @@ const database = [
         elm_efficiency: 1.5,
         potency: .36,
         //WEAPON
-        weapon: 125,
+        weapon: 106,
         shield: 174,
         curse_crit: .10,
         weaponCurse: 'Curse',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 211,
+        spirit: 200,
         spirit_def: 237,
         spirit_crit: .20,
         spiritCurse: 'Health',
@@ -6333,11 +6333,11 @@ const database = [
         hp: 2977,
         //PHYSICAL
         attack: 109,
-        defense: 187,
+        defense: 181,
         critical: .13,
         strength: 1.05,
         //MAGIC
-        elm_attack: 135,
+        elm_attack: 133,
         elm_defense: 219,
         elm_efficiency: 1,
         potency: .10,
@@ -6348,7 +6348,7 @@ const database = [
         weaponCurse: 'Luck',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 219,
+        spirit: 217,
         spirit_def: 230,
         spirit_crit: .17,
         spiritCurse: 'Weapon',
@@ -6405,7 +6405,7 @@ const database = [
         hp: 2814,
         //PHYSICAL
         attack: 96,
-        defense: 176,
+        defense: 172,
         critical: .10,
         strength: 1.07,
         //MAGIC
@@ -6414,13 +6414,13 @@ const database = [
         elm_efficiency: 1,
         potency: .20,
         //WEAPON
-        weapon: 221,
+        weapon: 220,
         shield: 133,
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 214,
+        spirit: 207,
         spirit_def: 169,
         spirit_crit: .26,
         spiritCurse: 'Weapon',
@@ -6478,22 +6478,22 @@ const database = [
         hp: 3216,
         //PHYSICAL
         attack: 160,
-        defense: 196,
+        defense: 191,
         critical: .26,
         strength: 1.38,
         //MAGIC
-        elm_attack: 115,
+        elm_attack: 95,
         elm_defense: 131,
         elm_efficiency: 1,
         potency: .14,
         //WEAPON
-        weapon: 211,
+        weapon: 200,
         shield: 233,
         curse_crit: .65,
         weaponCurse: 'Luck',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 142,
+        spirit: 121,
         spirit_def: 174,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -6550,22 +6550,22 @@ const database = [
         hp: 2800,
         //PHYSICAL
         attack: 75,
-        defense: 174,
+        defense: 161,
         critical: .09,
         strength: 1,
         //MAGIC
-        elm_attack: 162,
+        elm_attack: 158,
         elm_defense: 216,
         elm_efficiency: 1.2,
         potency: .46,
         //WEAPON
-        weapon: 135,
+        weapon: 118,
         shield: 158,
         curse_crit: 1.0,
         weaponCurse: 'Willpower',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 202,
+        spirit: 184,
         spirit_def: 215,
         spirit_crit: .22,
         spiritCurse: 'Recovery',
@@ -6622,7 +6622,7 @@ const database = [
         hp: 3000,
         //PHYSICAL
         attack: 107,
-        defense: 230,
+        defense: 223,
         critical: .12,
         strength: 1.07,
         //MAGIC
@@ -6637,7 +6637,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 3,
         //SPIRIT
-        spirit: 186,
+        spirit: 162,
         spirit_def: 180,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -6694,11 +6694,11 @@ const database = [
         hp: 3149,
         //PHYSICAL
         attack: 200,
-        defense: 176,
+        defense: 171,
         critical: .24,
         strength: 1.30,
         //MAGIC
-        elm_attack: 145,
+        elm_attack: 144,
         elm_defense: 201,
         elm_efficiency: 1,
         potency: .14,
@@ -6709,7 +6709,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 218,
+        spirit: 215,
         spirit_def: 173,
         spirit_crit: .24,
         spiritCurse: 'Def',
@@ -6768,16 +6768,16 @@ const database = [
         hp: 3158,
         //PHYSICAL
         attack: 134,
-        defense: 216,
+        defense: 209,
         critical: .20,
         strength: 1.3,
         //MAGIC
-        elm_attack: 241,
+        elm_attack: 228,
         elm_defense: 218,
         elm_efficiency: 1.36,
         potency: .28,
         //WEAPON
-        weapon: 197,
+        weapon: 192,
         shield: 186,
         curse_crit: .20,
         weaponCurse: 'Genjutsu',
@@ -6840,16 +6840,16 @@ const database = [
         hp: 2872,
         //PHYSICAL
         attack: 224,
-        defense: 165,
+        defense: 164,
         critical: .45,
         strength: 1.20,
         //MAGIC
-        elm_attack: 201,
+        elm_attack: 199,
         elm_defense: 220,
         elm_efficiency: 1.19,
         potency: .20,
         //WEAPON
-        weapon: 142,
+        weapon: 129,
         shield: 185,
         curse_crit: .20,
         weaponCurse: 'Recovery',
@@ -6916,18 +6916,18 @@ const database = [
         critical: .31,
         strength: 1.28,
         //MAGIC
-        elm_attack: 147,
+        elm_attack: 145,
         elm_defense: 194,
         elm_efficiency: 1.12,
         potency: .18,
         //WEAPON
-        weapon: 160,
+        weapon: 147,
         shield: 199,
         curse_crit: .40,
         weaponCurse: 'Weapon',
         weapon_amount: 13,
         //SPIRIT
-        spirit: 144,
+        spirit: 122,
         spirit_def: 172,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -6988,18 +6988,18 @@ const database = [
         critical: .33,
         strength: 1.18,
         //MAGIC
-        elm_attack: 112,
+        elm_attack: 85,
         elm_defense: 132,
         elm_efficiency: 1.16,
         potency: .10,
         //WEAPON
-        weapon: 215,
+        weapon: 210,
         shield: 230,
         curse_crit: .24,
         weaponCurse: 'Shield',
         weapon_amount: 16,
         //SPIRIT
-        spirit: 184,
+        spirit: 153,
         spirit_def: 162,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7058,16 +7058,16 @@ const database = [
         hp: 3444,
         //PHYSICAL
         attack: 221,
-        defense: 184,
+        defense: 177,
         critical: .27,
         strength: 1.70,
         //MAGIC
-        elm_attack: 238,
+        elm_attack: 200,
         elm_defense: 198,
         elm_efficiency: 1.31,
         potency: .32,
         //WEAPON
-        weapon: 139,
+        weapon: 126,
         shield: 136,
         curse_crit: .15,
         weaponCurse: 'Accuracy',
@@ -7130,11 +7130,11 @@ const database = [
         hp: 3266,
         //PHYSICAL
         attack: 112,
-        defense: 242,
+        defense: 241,
         critical: .10,
         strength: 1.12,
         //MAGIC
-        elm_attack: 216,
+        elm_attack: 210,
         elm_defense: 165,
         elm_efficiency: 1.40,
         potency: .20,
@@ -7202,11 +7202,11 @@ const database = [
         hp: 3389,
         //PHYSICAL
         attack: 134,
-        defense: 143,
+        defense: 145,
         critical: .12,
         strength: 1.25,
         //MAGIC
-        elm_attack: 148,
+        elm_attack: 146,
         elm_defense: 189,
         elm_efficiency: 1.42,
         potency: .25,
@@ -7292,7 +7292,7 @@ const database = [
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 164,
+        spirit: 132,
         spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7349,22 +7349,22 @@ const database = [
         hp: 3325,
         //PHYSICAL
         attack: 165,
-        defense: 245,
+        defense: 243,
         critical: .40,
         strength: 1.24,
         //MAGIC
-        elm_attack: 165,
+        elm_attack: 161,
         elm_defense: 170,
         elm_efficiency: 1.27,
         potency: .33,
         //WEAPON
-        weapon: 165,
+        weapon: 156,
         shield: 245,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 205,
+        spirit: 188,
         spirit_def: 195,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7425,18 +7425,18 @@ const database = [
         critical: .09,
         strength: 1.12,
         //MAGIC
-        elm_attack: 195,
+        elm_attack: 197,
         elm_defense: 250,
         elm_efficiency: 1.25,
         potency: .30,
         //WEAPON
-        weapon: 118,
+        weapon: 100,
         shield: 144,
         curse_crit: .20,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 230,
+        spirit: 235,
         spirit_def: 179,
         spirit_crit: .10,
         spiritCurse: 'Lethal',
@@ -7498,18 +7498,18 @@ const database = [
         critical: .10,
         strength: 1.35,
         //MAGIC
-        elm_attack: 245,
+        elm_attack: 237,
         elm_defense: 231,
         elm_efficiency: 1.20,
         potency: .32,
         //WEAPON
-        weapon: 113,
+        weapon: 96,
         shield: 139,
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 172,
+        spirit: 140,
         spirit_def: 186,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7566,16 +7566,16 @@ const database = [
         hp: 3000,
         //PHYSICAL
         attack: 90,
-        defense: 145,
+        defense: 148,
         critical: .16,
         strength: 1.10,
         //MAGIC
-        elm_attack: 155,
+        elm_attack: 153,
         elm_defense: 225,
         elm_efficiency: 1.15,
         potency: .15,
         //WEAPON
-        weapon: 148,
+        weapon: 138,
         shield: 145,
         curse_crit: .75,
         weaponCurse: 'Purity',
@@ -7639,22 +7639,22 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 139,
-        defense: 184,
+        defense: 176,
         critical: .10,
         strength: 1.40,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 235,
         elm_defense: 136,
         elm_efficiency: 1.17,
         potency: .16,
         //WEAPON
-        weapon: 223,
+        weapon: 215,
         shield: 245,
         curse_crit: .20,
-        weaponCurse: 'Weapon',
-        weapon_amount: 30,
+        weaponCurse: 'Sage',
+        weapon_amount: 22,
         //SPIRIT
-        spirit: 182,
+        spirit: 151,
         spirit_def: 193,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7711,7 +7711,7 @@ const database = [
         hp: 3250,
         //PHYSICAL
         attack: 151,
-        defense: 200,
+        defense: 197,
         critical: .10,
         strength: 1.10,
         //MAGIC
@@ -7721,12 +7721,12 @@ const database = [
         potency: .43,
         //WEAPON
         weapon: 150,
-        shield: 145,
+        shield: 143,
         curse_crit: .15,
         weaponCurse: 'Purity',
         weapon_amount: 3,
         //SPIRIT
-        spirit: 125,
+        spirit: 135,
         spirit_def: 172,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -7785,16 +7785,16 @@ const database = [
         hp: 3054,
         //PHYSICAL
         attack: 105,
-        defense: 158,
+        defense: 156,
         critical: .10,
         strength: 1.13,
         //MAGIC
-        elm_attack: 182,
+        elm_attack: 183,
         elm_defense: 221,
         elm_efficiency: 1.26,
         potency: .20,
         //WEAPON
-        weapon: 114,
+        weapon: 97,
         shield: 161,
         curse_crit: .10,
         weaponCurse: 'M-Def',
@@ -7857,7 +7857,7 @@ const database = [
         hp: 3128,
         //PHYSICAL
         attack: 114,
-        defense: 186,
+        defense: 180,
         critical: .25,
         strength: 1.14,
         //MAGIC
@@ -7933,12 +7933,12 @@ const database = [
         critical: .37,
         strength: 1.26,
         //MAGIC
-        elm_attack: 133,
+        elm_attack: 127,
         elm_defense: 179,
         elm_efficiency: 1.13,
         potency: .22,
         //WEAPON
-        weapon: 221,
+        weapon: 214,
         shield: 195,
         curse_crit: .25,
         weaponCurse: 'S-Def',
@@ -8001,7 +8001,7 @@ const database = [
         hp: 3124,
         //PHYSICAL
         attack: 116,
-        defense: 156,
+        defense: 158,
         critical: .20,
         strength: 1.22,
         //MAGIC
@@ -8010,7 +8010,7 @@ const database = [
         elm_efficiency: 1.25,
         potency: .18,
         //WEAPON
-        weapon: 236,
+        weapon: 225,
         shield: 255,
         curse_crit: .20,
         weaponCurse: 'S-Def',
@@ -8073,22 +8073,22 @@ const database = [
         hp: 2974,
         //PHYSICAL
         attack: 103,
-        defense: 188,
+        defense: 183,
         critical: .12,
         strength: 1.11,
         //MAGIC
-        elm_attack: 128,
+        elm_attack: 116,
         elm_defense: 147,
         elm_efficiency: 1.20,
         potency: .30,
         //WEAPON
-        weapon: 192,
+        weapon: 182,
         shield: 215,
         curse_crit: .20,
         weaponCurse: 'S-Def',
         weapon_amount: 7,
         //SPIRIT
-        spirit: 223,
+        spirit: 226,
         spirit_def: 169,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
@@ -8145,7 +8145,7 @@ const database = [
         hp: 3179,
         //PHYSICAL
         attack: 115,
-        defense: 224,
+        defense: 215,
         critical: .12,
         strength: 1.43,
         //MAGIC
@@ -8154,7 +8154,7 @@ const database = [
         elm_efficiency: 1.40,
         potency: .23,
         //WEAPON
-        weapon: 218,
+        weapon: 211,
         shield: 172,
         curse_crit: .20,
         weaponCurse: 'Accuracy',
@@ -8217,7 +8217,7 @@ const database = [
         hp: 3455,
         //PHYSICAL
         attack: 127,
-        defense: 194,
+        defense: 186,
         critical: .12,
         strength: 1.22,
         //MAGIC
@@ -8226,7 +8226,7 @@ const database = [
         elm_efficiency: 1.45,
         potency: .24,
         //WEAPON
-        weapon: 208,
+        weapon: 195,
         shield: 166,
         curse_crit: .16,
         weaponCurse: 'S-Def',
@@ -8289,16 +8289,16 @@ const database = [
         hp: 3354,
         //PHYSICAL
         attack: 228,
-        defense: 224,
+        defense: 214,
         critical: .14,
         strength: 1.73,
         //MAGIC
-        elm_attack: 124,
+        elm_attack: 112,
         elm_defense: 170,
         elm_efficiency: 1.1,
         potency: .12,
         //WEAPON
-        weapon: 122,
+        weapon: 100,
         shield: 210,
         curse_crit: .10,
         weaponCurse: 'Spirit',
@@ -8366,11 +8366,11 @@ const database = [
         hp: 3144,
         //PHYSICAL
         attack: 229,
-        defense: 157,
+        defense: 163,
         critical: .31,
         strength: 1.25,
         //MAGIC
-        elm_attack: 135,
+        elm_attack: 132,
         elm_defense: 154,
         elm_efficiency: 1.20,
         potency: .23,
@@ -8438,7 +8438,7 @@ const database = [
         hp: 3268,
         //PHYSICAL
         attack: 222,
-        defense: 165,
+        defense: 163,
         critical: .55,
         strength: 1.22,
         //MAGIC
@@ -8453,7 +8453,7 @@ const database = [
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
-        spirit: 155,
+        spirit: 154,
         spirit_def: 214,
         spirit_crit: .10,
         spiritCurse: 'Def',
@@ -8519,13 +8519,13 @@ const database = [
         elm_efficiency: 1.16,
         potency: .25,
         //WEAPON
-        weapon: 129,
+        weapon: 108,
         shield: 133,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 10,
         //SPIRIT
-        spirit: 175,
+        spirit: 144,
         spirit_def: 168,
         spirit_crit: .15,
         spiritCurse: 'Attack',
@@ -8582,11 +8582,11 @@ const database = [
         hp: 3314,
         //PHYSICAL
         attack: 184,
-        defense: 197,
+        defense: 193,
         critical: .20,
         strength: 1.72,
         //MAGIC
-        elm_attack: 110,
+        elm_attack: 80,
         elm_defense: 144,
         elm_efficiency: 1.20,
         potency: .26,
@@ -8597,7 +8597,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 121,
+        spirit: 102,
         spirit_def: 146,
         spirit_crit: .12,
         spiritCurse: 'Luck',
@@ -8654,7 +8654,7 @@ const database = [
         hp: 4000,
         //PHYSICAL
         attack: 215,
-        defense: 240,
+        defense: 237,
         critical: .80,
         strength: 2.5,
         //MAGIC
@@ -8663,13 +8663,13 @@ const database = [
         elm_efficiency: 2,
         potency: .75,
         //WEAPON
-        weapon: 100,
+        weapon: 80,
         shield: 100,
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 4,
         //SPIRIT
-        spirit: 110,
+        spirit: 90,
         spirit_def: 128,
         spirit_crit: .10,
         spiritCurse: 'Accuracy',
@@ -8726,22 +8726,22 @@ const database = [
         hp: 3142,
         //PHYSICAL
         attack: 138,
-        defense: 145,
+        defense: 146,
         critical: .23,
         strength: 1.26,
         //MAGIC
-        elm_attack: 242,
+        elm_attack: 227,
         elm_defense: 168,
         elm_efficiency: .22,
         potency: 1.31,
         //WEAPON
-        weapon: 211,
+        weapon: 198,
         shield: 227,
         curse_crit: .24,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
-        spirit: 122,
+        spirit: 103,
         spirit_def: 210,
         spirit_crit: .10,
         spiritCurse: 'Magic',
@@ -8798,7 +8798,7 @@ const database = [
         hp: 3265,
         //PHYSICAL
         attack: 215,
-        defense: 195,
+        defense: 190,
         critical: .17,
         strength: 1.25,
         //MAGIC
@@ -8807,13 +8807,13 @@ const database = [
         elm_efficiency: 1,
         potency: .18,
         //WEAPON
-        weapon: 205,
+        weapon: 200,
         shield: 190,
         curse_crit: .10,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
-        spirit: 225,
+        spirit: 230,
         spirit_def: 210,
         spirit_crit: .10,
         spiritCurse: 'Spirit',
@@ -8875,7 +8875,7 @@ const database = [
         critical: .40,
         strength: 1.15,
         //MAGIC
-        elm_attack: 152,
+        elm_attack: 150,
         elm_defense: 206,
         elm_efficiency: 1.24,
         potency: .42,
@@ -8943,22 +8943,22 @@ const database = [
         hp: 3151,
         //PHYSICAL
         attack: 126,
-        defense: 178,
+        defense: 164,
         critical: .20,
         strength: 1.2,
         //MAGIC
-        elm_attack: 224,
+        elm_attack: 217,
         elm_defense: 165,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
-        weapon: 235,
+        weapon: 224,
         shield: 201,
         curse_crit: .60,
         weaponCurse: 'Sage',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 123,
+        spirit: 105,
         spirit_def: 142,
         spirit_crit: .10,
         spiritCurse: 'Magic',
@@ -9016,11 +9016,11 @@ const database = [
         hp: 3174,
         //PHYSICAL
         attack: 175,
-        defense: 176,
+        defense: 170,
         critical: .10,
         strength: 1.41,
         //MAGIC
-        elm_attack: 134,
+        elm_attack: 130,
         elm_defense: 148,
         elm_efficiency: 1.22,
         potency: .10,
@@ -9088,22 +9088,22 @@ const database = [
         hp: 2976,
         //PHYSICAL
         attack: 112,
-        defense: 164,
+        defense: 159,
         critical: .10,
         strength: 1.10,
         //MAGIC
-        elm_attack: 107,
+        elm_attack: 105,
         elm_defense: 156,
         elm_efficiency: 1.32,
         potency: .30,
         //WEAPON
-        weapon: 227,
+        weapon: 219,
         shield: 240,
         curse_crit: .17,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
-        spirit: 180,
+        spirit: 148,
         spirit_def: 209,
         spirit_crit: .10,
         spiritCurse: 'Weapon',
