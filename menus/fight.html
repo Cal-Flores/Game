@@ -232,7 +232,7 @@
             let witherAmount = ['Ratio-Technique', 'Cystal-Claws']
             // Spirit
             let spirit = []
-            let spiritDef = ['Blood-Hammer', 'Super-Beast-Tomoe-Lion', 'Rashōmon-Gates', 'Polymorphic-Soul-Isomer', 'Phase-Bullets']
+            let spiritDef = ['Blood-Hammer', 'Super-Beast-Tomoe-Lion', 'Rashōmon-Gates', 'Polymorphic-Soul-Isomer', 'Phase-Bullets', 'Albatross']
             let spiritPer = ['Hair-Pin']
             let spiritAmount = ['Resonance']
             //speed + recovery + luck
@@ -964,6 +964,15 @@
                     if (attacker == 'red') redStun += .06
                     if (attacker == 'blue') blueStun += .06
                 }
+                if (jutsu == 'Pigeon-Viola') {
+                    if (attacker == 'red') {
+                        redCurseRec = 0;
+                        blueRecovery = 0;
+                    } else {
+                        blueCurseRec = 0;
+                        redRecovery = 0;
+                    }
+                }
                 if (jutsu == 'Explosive-Transformation') {
                     if (attacker == 'red') {
                         blueDefense = Math.floor(blueDefense * .75);
@@ -1641,7 +1650,7 @@
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido', 'Fun-Fun-Cloth'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb', 'Straw-Doll-Technique']; //** NEW please add me**
         const luck = ["Miracle"];
-        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda']
+        const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda', 'Sword-Option']
         const shield = []
         const spirit = ['Ashura-Kurama-Mode']
         const chakra_cost = ["Falling-Blossom-Emotion"];
