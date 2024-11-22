@@ -31,7 +31,7 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 111,
-        elm_defense: 153,
+        elm_defense: 144,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
@@ -103,12 +103,12 @@ const database = [
         strength: 1.5,
         //MAGIC
         elm_attack: 110,
-        elm_defense: 186,
+        elm_defense: 170,
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
         weapon: 278,
-        shield: 236,
+        shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
         weapon_amount: 12,
@@ -175,7 +175,7 @@ const database = [
         strength: 1.17,
         //MAGIC
         elm_attack: 135,
-        elm_defense: 191,
+        elm_defense: 182,
         elm_efficiency: 1.15,
         potency: .25,
         //WEAPON
@@ -247,7 +247,7 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 157,
-        elm_defense: 232,
+        elm_defense: 225,
         elm_efficiency: 1.12,
         potency: .16,
         //WEAPON
@@ -319,7 +319,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 247,
-        elm_defense: 126,
+        elm_defense: 120,
         elm_efficiency: 1.25,
         potency: .20,
         //WEAPON
@@ -391,7 +391,7 @@ const database = [
         strength: 1.8,
         //MAGIC
         elm_attack: 50,
-        elm_defense: 174,
+        elm_defense: 167,
         elm_efficiency: 1.15,
         potency: .15,
         //WEAPON
@@ -463,7 +463,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 115,
-        elm_defense: 136,
+        elm_defense: 133,
         elm_efficiency: 1.20,
         potency: .13,
         //WEAPON
@@ -607,12 +607,12 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 128,
-        elm_defense: 180,
+        elm_defense: 162,
         elm_efficiency: 1.2,
         potency: 0.12,
         //WEAPON
         weapon: 263,
-        shield: 242,
+        shield: 238,
         curse_crit: 0.24,
         weaponCurse: 'Attack',
         weapon_amount: 10,
@@ -679,12 +679,12 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 96,
-        elm_defense: 190,
+        elm_defense: 177,
         elm_efficiency: 1.26,
         potency: .18,
         //WEAPON
         weapon: 261,
-        shield: 224,
+        shield: 206,
         curse_crit: .18,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -754,12 +754,12 @@ const database = [
         strength: 1.75,
         //MAGIC
         elm_attack: 104,
-        elm_defense: 166,
+        elm_defense: 153,
         elm_efficiency: 1.3,
         potency: .30,
         //WEAPON
         weapon: 284,
-        shield: 201,
+        shield: 185,
         curse_crit: .28,
         weaponCurse: 'Weapon',
         weapon_amount: 12,
@@ -898,12 +898,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 155,
-        elm_defense: 168,
+        elm_defense: 155,
         elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
         weapon: 274,
-        shield: 234,
+        shield: 230,
         curse_crit: 0.12,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -970,12 +970,12 @@ const database = [
         strength: 1.7,
         //MAGIC
         elm_attack: 135,
-        elm_defense: 170,
+        elm_defense: 164,
         elm_efficiency: 1.2,
         potency: .10,
         //WEAPON
         weapon: 270,
-        shield: 198,
+        shield: 177,
         curse_crit: .27,
         weaponCurse: 'Magic',
         weapon_amount: 7,
@@ -1042,12 +1042,12 @@ const database = [
         strength: 1.20,
         //MAGIC
         elm_attack: 107,
-        elm_defense: 158,
+        elm_defense: 146,
         elm_efficiency: 1.10,
         potency: .20,
         //WEAPON
         weapon: 275,
-        shield: 200,
+        shield: 181,
         curse_crit: .16,
         weaponCurse: 'Magic',
         weapon_amount: 16,
@@ -1116,12 +1116,12 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 221,
-        elm_defense: 207,
+        elm_defense: 197,
         elm_efficiency: 1.4,
         potency: .25,
         //WEAPON
         weapon: 244,
-        shield: 199,
+        shield: 178,
         curse_crit: .18,
         weaponCurse: 'M-Def',
         weapon_amount: 12,
@@ -1188,7 +1188,7 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 244,
-        elm_defense: 189,
+        elm_defense: 177,
         elm_efficiency: 1.45,
         potency: 0.28,
         //WEAPON
@@ -1332,12 +1332,12 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 280,
-        elm_defense: 185,
+        elm_defense: 168,
         elm_efficiency: 1.50,
         potency: .20,
         //WEAPON
         weapon: 162,
-        shield: 225,
+        shield: 210,
         curse_crit: .10,
         weaponCurse: 'Weapon',
         weapon_amount: 5,
@@ -1404,7 +1404,7 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 283,
-        elm_defense: 234,
+        elm_defense: 229,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
@@ -1476,12 +1476,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 254,
-        elm_defense: 166,
+        elm_defense: 155,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
         weapon: 127,
-        shield: 195,
+        shield: 175,
         curse_crit: .10,
         weaponCurse: 'GenJutsu',
         weapon_amount: 3,
@@ -1548,7 +1548,7 @@ const database = [
         strength: 1,
         //MAGIC
         elm_attack: 268,
-        elm_defense: 239,
+        elm_defense: 237,
         elm_efficiency: 1.2,
         potency: .60,
         //WEAPON
@@ -1620,12 +1620,12 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 246,
-        elm_defense: 199,
+        elm_defense: 190,
         elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
         weapon: 95,
-        shield: 235,
+        shield: 231,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
@@ -1764,7 +1764,7 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 248,
-        elm_defense: 204,
+        elm_defense: 193,
         elm_efficiency: 1.4,
         potency: .18,
         //WEAPON
@@ -1836,7 +1836,7 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 243,
-        elm_defense: 238,
+        elm_defense: 222,
         elm_efficiency: 1.35,
         potency: .35,
         //WEAPON
@@ -1908,12 +1908,12 @@ const database = [
         strength: 1,
         //MAGIC
         elm_attack: 239,
-        elm_defense: 182,
+        elm_defense: 163,
         elm_efficiency: 1.5,
         potency: .28,
         //WEAPON
         weapon: 174,
-        shield: 202,
+        shield: 187,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 20,
@@ -1980,7 +1980,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 249,
-        elm_defense: 193,
+        elm_defense: 185,
         elm_efficiency: 1.5,
         potency: 0.30,
         //WEAPON
@@ -2052,7 +2052,7 @@ const database = [
         strength: 1.16,
         //MAGIC
         elm_attack: 285,
-        elm_defense: 222,
+        elm_defense: 214,
         elm_efficiency: 1,
         potency: .18,
         //WEAPON
@@ -2127,12 +2127,12 @@ const database = [
         strength: 1.24,
         //MAGIC
         elm_attack: 148,
-        elm_defense: 187,
+        elm_defense: 170,
         elm_efficiency: 1.18,
         potency: .16,
         //WEAPON
         weapon: 237,
-        shield: 224,
+        shield: 205,
         curse_crit: .17,
         weaponCurse: 'Def',
         weapon_amount: 12,
@@ -2199,12 +2199,12 @@ const database = [
         strength: 1.34,
         //MAGIC
         elm_attack: 120,
-        elm_defense: 166,
+        elm_defense: 154,
         elm_efficiency: 1.15,
         potency: .10,
         //WEAPON
         weapon: 166,
-        shield: 192,
+        shield: 168,
         curse_crit: .10,
         weaponCurse: 'Evasion',
         weapon_amount: 2,
@@ -2271,12 +2271,12 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 86,
-        elm_defense: 150,
+        elm_defense: 139,
         elm_efficiency: 1.2,
         potency: 0.10,
         //WEAPON
         weapon: 175,
-        shield: 215,
+        shield: 196,
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 10,
@@ -2343,12 +2343,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 74,
-        elm_defense: 212,
+        elm_defense: 202,
         elm_efficiency: 1,
         potency: .06,
         //WEAPON
         weapon: 154,
-        shield: 227,
+        shield: 215,
         curse_crit: .05,
         weaponCurse: 'Weapon',
         weapon_amount: 20,
@@ -2415,7 +2415,7 @@ const database = [
         strength: 1.65,
         //MAGIC
         elm_attack: 131,
-        elm_defense: 177,
+        elm_defense: 169,
         elm_efficiency: 1.25,
         potency: .40,
         //WEAPON
@@ -2487,12 +2487,12 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 212,
-        elm_defense: 196,
+        elm_defense: 187,
         elm_efficiency: 1.38,
         potency: .20,
         //WEAPON
         weapon: 92,
-        shield: 225,
+        shield: 211,
         curse_crit: .08,
         weaponCurse: 'Gen-Power',
         weapon_amount: 15,
@@ -2559,12 +2559,12 @@ const database = [
         strength: 1.2,
         //MAGIC
         elm_attack: 165,
-        elm_defense: 220,
+        elm_defense: 212,
         elm_efficiency: 1.2,
         potency: .15,
         //WEAPON
         weapon: 141,
-        shield: 190,
+        shield: 166,
         curse_crit: .06,
         weaponCurse: 'Purity',
         weapon_amount: 1,
@@ -2631,12 +2631,12 @@ const database = [
         strength: 1.7,
         //MAGIC
         elm_attack: 50,
-        elm_defense: 152,
+        elm_defense: 140,
         elm_efficiency: 1,
         potency: .08,
         //WEAPON
         weapon: 202,
-        shield: 232,
+        shield: 225,
         curse_crit: .08,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -2703,12 +2703,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 159,
-        elm_defense: 185,
+        elm_defense: 166,
         elm_efficiency: 1.28,
         potency: .20,
         //WEAPON
         weapon: 140,
-        shield: 219,
+        shield: 201,
         curse_crit: .05,
         weaponCurse: 'Attack',
         weapon_amount: 50,
@@ -2775,7 +2775,7 @@ const database = [
         strength: 1.8,
         //MAGIC
         elm_attack: 91,
-        elm_defense: 191,
+        elm_defense: 179,
         elm_efficiency: 1.25,
         potency: .10,
         //WEAPON
@@ -2847,12 +2847,12 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 113,
-        elm_defense: 183,
+        elm_defense: 165,
         elm_efficiency: 1.3,
         potency: .50,
         //WEAPON
         weapon: 197,
-        shield: 200,
+        shield: 179,
         curse_crit: .10,
         weaponCurse: 'Genjutsu',
         weapon_amount: 1,
@@ -2920,12 +2920,12 @@ const database = [
         strength: 1.45,
         //MAGIC
         elm_attack: 125,
-        elm_defense: 145,
+        elm_defense: 138,
         elm_efficiency: 1.38,
         potency: .50,
         //WEAPON
         weapon: 150,
-        shield: 199,
+        shield: 178,
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
@@ -2993,7 +2993,7 @@ const database = [
         strength: 1.65,
         //MAGIC
         elm_attack: 102,
-        elm_defense: 208,
+        elm_defense: 200,
         elm_efficiency: 1.2,
         potency: .40,
         //WEAPON
@@ -3065,12 +3065,12 @@ const database = [
         strength: 1.65,
         //MAGIC
         elm_attack: 90,
-        elm_defense: 136,
+        elm_defense: 132,
         elm_efficiency: 1,
         potency: .01,
         //WEAPON
         weapon: 172,
-        shield: 218,
+        shield: 200,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 12,
@@ -3140,12 +3140,12 @@ const database = [
         strength: 1.5,
         //MAGIC
         elm_attack: 119,
-        elm_defense: 205,
+        elm_defense: 190,
         elm_efficiency: 1,
         potency: 0.15,
         //WEAPON
         weapon: 136,
-        shield: 225,
+        shield: 208,
         curse_crit: .20,
         weaponCurse: 'Def',
         weapon_amount: 25,
@@ -3214,7 +3214,7 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 180,
-        elm_defense: 175,
+        elm_defense: 170,
         elm_efficiency: 1.3,
         potency: .40,
         //WEAPON
@@ -3225,7 +3225,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 227,
-        spirit_def: 211,
+        spirit_def: 190,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
         spirit_amount: 25,
@@ -3289,7 +3289,7 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 152,
-        elm_defense: 234,
+        elm_defense: 227,
         elm_efficiency: 1.4,
         potency: .12,
         //WEAPON
@@ -3361,12 +3361,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 186,
-        elm_defense: 166,
+        elm_defense: 152,
         elm_efficiency: 1.3,
         potency: .20,
         //WEAPON
         weapon: 105,
-        shield: 229,
+        shield: 219,
         curse_crit: .18,
         weaponCurse: 'Willpower',
         weapon_amount: 2,
@@ -3433,7 +3433,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 88,
-        elm_defense: 132,
+        elm_defense: 126,
         elm_efficiency: 1.1,
         potency: .12,
         //WEAPON
@@ -3505,7 +3505,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 219,
-        elm_defense: 229,
+        elm_defense: 221,
         elm_efficiency: 1.4,
         potency: .25,
         //WEAPON
@@ -3577,7 +3577,7 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 216,
-        elm_defense: 208,
+        elm_defense: 198,
         elm_efficiency: 1.35,
         potency: .30,
         //WEAPON
@@ -3649,7 +3649,7 @@ const database = [
         strength: 1.05,
         //MAGIC
         elm_attack: 233,
-        elm_defense: 238,
+        elm_defense: 234,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
@@ -3796,12 +3796,12 @@ const database = [
         strength: 1.2,
         //MAGIC
         elm_attack: 256,
-        elm_defense: 203,
+        elm_defense: 192,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 124,
-        shield: 266,
+        shield: 260,
         curse_crit: .06,
         weaponCurse: 'Magic',
         weapon_amount: 25,
@@ -3868,12 +3868,12 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 137,
-        elm_defense: 237,
+        elm_defense: 235,
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
         weapon: 234,
-        shield: 198,
+        shield: 173,
         curse_crit: .13,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
@@ -4084,7 +4084,7 @@ const database = [
         strength: 2.25,
         //MAGIC
         elm_attack: 134,
-        elm_defense: 206,
+        elm_defense: 196,
         elm_efficiency: 1.07,
         potency: .07,
         //WEAPON
@@ -4161,7 +4161,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 185,
-        shield: 254,
+        shield: 220,
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
@@ -4233,7 +4233,7 @@ const database = [
         potency: .16,
         //WEAPON
         weapon: 102,
-        shield: 236,
+        shield: 232,
         curse_crit: .10,
         weaponCurse: 'M-Def',
         weapon_amount: 15,
@@ -4302,12 +4302,12 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 129,
-        elm_defense: 239,
+        elm_defense: 245,
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
         weapon: 241,
-        shield: 213,
+        shield: 193,
         curse_crit: .23,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
@@ -4379,7 +4379,7 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 140,
-        shield: 245,
+        shield: 230,
         curse_crit: .10,
         weaponCurse: 'Def',
         weapon_amount: 30,
@@ -4450,7 +4450,7 @@ const database = [
         strength: 1.5,
         //MAGIC
         elm_attack: 286,
-        elm_defense: 237,
+        elm_defense: 231,
         elm_efficiency: 1.65,
         potency: .18,
         //WEAPON
@@ -4523,12 +4523,12 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 163,
-        elm_defense: 169,
+        elm_defense: 159,
         elm_efficiency: 1.35,
         potency: .18,
         //WEAPON
         weapon: 267,
-        shield: 221,
+        shield: 202,
         curse_crit: .18,
         weaponCurse: 'Attack',
         weapon_amount: 15,
@@ -4595,7 +4595,7 @@ const database = [
         strength: 1.37,
         //MAGIC
         elm_attack: 121,
-        elm_defense: 172,
+        elm_defense: 165,
         elm_efficiency: 1.2,
         potency: .08,
         //WEAPON
@@ -4667,7 +4667,7 @@ const database = [
         strength: 1.35,
         //MAGIC
         elm_attack: 266,
-        elm_defense: 238,
+        elm_defense: 233,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
@@ -4739,7 +4739,7 @@ const database = [
         strength: 1.45,
         //MAGIC
         elm_attack: 235,
-        elm_defense: 153,
+        elm_defense: 143,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
@@ -4811,12 +4811,12 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 192,
-        elm_defense: 188,
+        elm_defense: 172,
         elm_efficiency: 1.4,
         potency: .20,
         //WEAPON
         weapon: 252,
-        shield: 228,
+        shield: 218,
         curse_crit: .18,
         weaponCurse: 'Power',
         weapon_amount: 10,
@@ -4883,7 +4883,7 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 154,
-        elm_defense: 170,
+        elm_defense: 163,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
@@ -4955,7 +4955,7 @@ const database = [
         strength: 1.85,
         //MAGIC
         elm_attack: 229,
-        elm_defense: 230,
+        elm_defense: 224,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
@@ -5030,12 +5030,12 @@ const database = [
         strength: 1.2,
         //MAGIC
         elm_attack: 97,
-        elm_defense: 164,
+        elm_defense: 149,
         elm_efficiency: 1.1,
         potency: .07,
         //WEAPON
         weapon: 239,
-        shield: 237,
+        shield: 234,
         curse_crit: .20,
         weaponCurse: 'Shield',
         weapon_amount: 15,
@@ -5102,7 +5102,7 @@ const database = [
         strength: 1.21,
         //MAGIC
         elm_attack: 118,
-        elm_defense: 165,
+        elm_defense: 151,
         elm_efficiency: 1.24,
         potency: .30,
         //WEAPON
@@ -5176,12 +5176,12 @@ const database = [
         strength: 1.8,
         //MAGIC
         elm_attack: 143,
-        elm_defense: 188,
+        elm_defense: 173,
         elm_efficiency: 1.16,
         potency: .15,
         //WEAPON
         weapon: 110,
-        shield: 234,
+        shield: 228,
         curse_crit: .10,
         weaponCurse: 'Def',
         weapon_amount: 10,
@@ -5248,7 +5248,7 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 194,
-        elm_defense: 205,
+        elm_defense: 194,
         elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
@@ -5321,12 +5321,12 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 202,
-        elm_defense: 142,
+        elm_defense: 134,
         elm_efficiency: 1.27,
         potency: .20,
         //WEAPON
         weapon: 221,
-        shield: 224,
+        shield: 204,
         curse_crit: .18,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -5393,7 +5393,7 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 215,
-        elm_defense: 236,
+        elm_defense: 210,
         elm_efficiency: 1.5,
         potency: .23,
         //WEAPON
@@ -5465,7 +5465,7 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 174,
-        elm_defense: 226,
+        elm_defense: 219,
         elm_efficiency: 1.35,
         potency: .21,
         //WEAPON
@@ -5538,12 +5538,12 @@ const database = [
         strength: 1.22,
         //MAGIC
         elm_attack: 123,
-        elm_defense: 193,
+        elm_defense: 184,
         elm_efficiency: 1.33,
         potency: .20,
         //WEAPON
         weapon: 235,
-        shield: 232,
+        shield: 222,
         curse_crit: .25,
         weaponCurse: 'Attack',
         weapon_amount: 25,
@@ -5610,7 +5610,7 @@ const database = [
         strength: 1.45,
         //MAGIC
         elm_attack: 100,
-        elm_defense: 126,
+        elm_defense: 120,
         elm_efficiency: 1.1,
         potency: .09,
         //WEAPON
@@ -5683,7 +5683,7 @@ const database = [
         strength: 1.85,
         //MAGIC
         elm_attack: 231,
-        elm_defense: 237,
+        elm_defense: 230,
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
@@ -5755,12 +5755,12 @@ const database = [
         strength: 1.37,
         //MAGIC
         elm_attack: 113,
-        elm_defense: 164,
+        elm_defense: 147,
         elm_efficiency: 1.2,
         potency: .40,
         //WEAPON
         weapon: 221,
-        shield: 217,
+        shield: 198,
         curse_crit: .30,
         weaponCurse: 'Def',
         weapon_amount: 20,
@@ -5827,12 +5827,12 @@ const database = [
         strength: 1.65,
         //MAGIC
         elm_attack: 205,
-        elm_defense: 142,
+        elm_defense: 136,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
         weapon: 254,
-        shield: 234,
+        shield: 228,
         curse_crit: .15,
         weaponCurse: 'Shield',
         weapon_amount: 20,
@@ -5899,12 +5899,12 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 261,
-        elm_defense: 234,
+        elm_defense: 226,
         elm_efficiency: 1.24,
         potency: .28,
         //WEAPON
         weapon: 205,
-        shield: 209,
+        shield: 101,
         curse_crit: .20,
         weaponCurse: 'Attack',
         weapon_amount: 16,
@@ -5971,12 +5971,12 @@ const database = [
         strength: 1.1,
         //MAGIC
         elm_attack: 189,
-        elm_defense: 238,
+        elm_defense: 220,
         elm_efficiency: 1.34,
         potency: .25,
         //WEAPON
         weapon: 179,
-        shield: 199,
+        shield: 177,
         curse_crit: .40,
         weaponCurse: 'Magic',
         weapon_amount: 15,
@@ -6044,7 +6044,7 @@ const database = [
         strength: 1.4,
         //MAGIC
         elm_attack: 305,
-        elm_defense: 254,
+        elm_defense: 234,
         elm_efficiency: 1.6,
         potency: .17,
         //WEAPON
@@ -6116,7 +6116,7 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 296,
-        elm_defense: 242,
+        elm_defense: 240,
         elm_efficiency: 1.6,
         potency: .19,
         //WEAPON
@@ -6191,7 +6191,7 @@ const database = [
         strength: 1.33,
         //MAGIC
         elm_attack: 215,
-        elm_defense: 254,
+        elm_defense: 256,
         elm_efficiency: 1.17,
         potency: .18,
         //WEAPON
@@ -6263,7 +6263,7 @@ const database = [
         strength: 1.05,
         //MAGIC
         elm_attack: 188,
-        elm_defense: 212,
+        elm_defense: 201,
         elm_efficiency: 1.5,
         potency: .36,
         //WEAPON
@@ -6338,7 +6338,7 @@ const database = [
         strength: 1.05,
         //MAGIC
         elm_attack: 133,
-        elm_defense: 219,
+        elm_defense: 207,
         elm_efficiency: 1,
         potency: .10,
         //WEAPON
@@ -6410,7 +6410,7 @@ const database = [
         strength: 1.07,
         //MAGIC
         elm_attack: 140,
-        elm_defense: 220,
+        elm_defense: 209,
         elm_efficiency: 1,
         potency: .20,
         //WEAPON
@@ -6483,12 +6483,12 @@ const database = [
         strength: 1.38,
         //MAGIC
         elm_attack: 95,
-        elm_defense: 131,
+        elm_defense: 122,
         elm_efficiency: 1,
         potency: .14,
         //WEAPON
         weapon: 200,
-        shield: 233,
+        shield: 226,
         curse_crit: .65,
         weaponCurse: 'Luck',
         weapon_amount: 1,
@@ -6555,7 +6555,7 @@ const database = [
         strength: 1,
         //MAGIC
         elm_attack: 158,
-        elm_defense: 216,
+        elm_defense: 204,
         elm_efficiency: 1.2,
         potency: .46,
         //WEAPON
@@ -6627,7 +6627,7 @@ const database = [
         strength: 1.07,
         //MAGIC
         elm_attack: 225,
-        elm_defense: 223,
+        elm_defense: 216,
         elm_efficiency: 1.32,
         potency: .21,
         //WEAPON
@@ -6699,7 +6699,7 @@ const database = [
         strength: 1.30,
         //MAGIC
         elm_attack: 144,
-        elm_defense: 201,
+        elm_defense: 191,
         elm_efficiency: 1,
         potency: .14,
         //WEAPON
@@ -6845,7 +6845,7 @@ const database = [
         strength: 1.20,
         //MAGIC
         elm_attack: 199,
-        elm_defense: 220,
+        elm_defense: 208,
         elm_efficiency: 1.19,
         potency: .20,
         //WEAPON
@@ -6917,12 +6917,12 @@ const database = [
         strength: 1.28,
         //MAGIC
         elm_attack: 145,
-        elm_defense: 194,
+        elm_defense: 186,
         elm_efficiency: 1.12,
         potency: .18,
         //WEAPON
         weapon: 147,
-        shield: 199,
+        shield: 175,
         curse_crit: .40,
         weaponCurse: 'Weapon',
         weapon_amount: 13,
@@ -6989,12 +6989,12 @@ const database = [
         strength: 1.18,
         //MAGIC
         elm_attack: 85,
-        elm_defense: 132,
+        elm_defense: 125,
         elm_efficiency: 1.16,
         potency: .10,
         //WEAPON
         weapon: 210,
-        shield: 230,
+        shield: 220,
         curse_crit: .24,
         weaponCurse: 'Shield',
         weapon_amount: 16,
@@ -7063,7 +7063,7 @@ const database = [
         strength: 1.70,
         //MAGIC
         elm_attack: 200,
-        elm_defense: 198,
+        elm_defense: 188,
         elm_efficiency: 1.31,
         potency: .32,
         //WEAPON
@@ -7135,12 +7135,12 @@ const database = [
         strength: 1.12,
         //MAGIC
         elm_attack: 210,
-        elm_defense: 165,
+        elm_defense: 150,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
         weapon: 125,
-        shield: 232,
+        shield: 221,
         curse_crit: 1.0,
         weaponCurse: 'Curse',
         weapon_amount: 8,
@@ -7207,7 +7207,7 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 146,
-        elm_defense: 189,
+        elm_defense: 175,
         elm_efficiency: 1.42,
         potency: .25,
         //WEAPON
@@ -7287,7 +7287,7 @@ const database = [
         potency: .33,
         //WEAPON
         weapon: 233,
-        shield: 228,
+        shield: 217,
         curse_crit: .25,
         weaponCurse: 'Purity',
         weapon_amount: 1,
@@ -7354,7 +7354,7 @@ const database = [
         strength: 1.24,
         //MAGIC
         elm_attack: 161,
-        elm_defense: 170,
+        elm_defense: 162,
         elm_efficiency: 1.27,
         potency: .33,
         //WEAPON
@@ -7571,7 +7571,7 @@ const database = [
         strength: 1.10,
         //MAGIC
         elm_attack: 153,
-        elm_defense: 225,
+        elm_defense: 218,
         elm_efficiency: 1.15,
         potency: .15,
         //WEAPON
@@ -7644,12 +7644,12 @@ const database = [
         strength: 1.40,
         //MAGIC
         elm_attack: 235,
-        elm_defense: 136,
+        elm_defense: 130,
         elm_efficiency: 1.17,
         potency: .16,
         //WEAPON
         weapon: 215,
-        shield: 245,
+        shield: 240,
         curse_crit: .20,
         weaponCurse: 'Sage',
         weapon_amount: 22,
@@ -7790,7 +7790,7 @@ const database = [
         strength: 1.13,
         //MAGIC
         elm_attack: 183,
-        elm_defense: 221,
+        elm_defense: 213,
         elm_efficiency: 1.26,
         potency: .20,
         //WEAPON
@@ -7862,12 +7862,12 @@ const database = [
         strength: 1.14,
         //MAGIC
         elm_attack: 190,
-        elm_defense: 219,
+        elm_defense: 205,
         elm_efficiency: 1.36,
         potency: .40,
         //WEAPON
         weapon: 134,
-        shield: 203,
+        shield: 188,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 15,
@@ -7939,7 +7939,7 @@ const database = [
         potency: .22,
         //WEAPON
         weapon: 214,
-        shield: 195,
+        shield: 170,
         curse_crit: .25,
         weaponCurse: 'S-Def',
         weapon_amount: 8,
@@ -8006,7 +8006,7 @@ const database = [
         strength: 1.22,
         //MAGIC
         elm_attack: 139,
-        elm_defense: 165,
+        elm_defense: 151,
         elm_efficiency: 1.25,
         potency: .18,
         //WEAPON
@@ -8078,12 +8078,12 @@ const database = [
         strength: 1.11,
         //MAGIC
         elm_attack: 116,
-        elm_defense: 147,
+        elm_defense: 138,
         elm_efficiency: 1.20,
         potency: .30,
         //WEAPON
         weapon: 182,
-        shield: 215,
+        shield: 195,
         curse_crit: .20,
         weaponCurse: 'S-Def',
         weapon_amount: 7,
@@ -8222,7 +8222,7 @@ const database = [
         strength: 1.22,
         //MAGIC
         elm_attack: 136,
-        elm_defense: 169,
+        elm_defense: 157,
         elm_efficiency: 1.45,
         potency: .24,
         //WEAPON
@@ -8294,12 +8294,12 @@ const database = [
         strength: 1.73,
         //MAGIC
         elm_attack: 112,
-        elm_defense: 170,
+        elm_defense: 160,
         elm_efficiency: 1.1,
         potency: .12,
         //WEAPON
         weapon: 100,
-        shield: 210,
+        shield: 190,
         curse_crit: .10,
         weaponCurse: 'Spirit',
         weapon_amount: 25,
@@ -8371,12 +8371,12 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 132,
-        elm_defense: 154,
+        elm_defense: 144,
         elm_efficiency: 1.20,
         potency: .23,
         //WEAPON
         weapon: 144,
-        shield: 197,
+        shield: 170,
         curse_crit: .15,
         weaponCurse: 'Shield',
         weapon_amount: 10,
@@ -8587,12 +8587,12 @@ const database = [
         strength: 1.72,
         //MAGIC
         elm_attack: 80,
-        elm_defense: 144,
+        elm_defense: 135,
         elm_efficiency: 1.20,
         potency: .26,
         //WEAPON
         weapon: 241,
-        shield: 201,
+        shield: 184,
         curse_crit: .14,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -8659,7 +8659,7 @@ const database = [
         strength: 2.5,
         //MAGIC
         elm_attack: 195,
-        elm_defense: 125,
+        elm_defense: 100,
         elm_efficiency: 2,
         potency: .75,
         //WEAPON
@@ -8731,12 +8731,12 @@ const database = [
         strength: 1.26,
         //MAGIC
         elm_attack: 227,
-        elm_defense: 168,
+        elm_defense: 154,
         elm_efficiency: .22,
         potency: 1.31,
         //WEAPON
         weapon: 198,
-        shield: 227,
+        shield: 213,
         curse_crit: .24,
         weaponCurse: 'Stun',
         weapon_amount: 0,
@@ -8808,7 +8808,7 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 200,
-        shield: 190,
+        shield: 180,
         curse_crit: .10,
         weaponCurse: 'Stun',
         weapon_amount: 0,
@@ -8876,7 +8876,7 @@ const database = [
         strength: 1.15,
         //MAGIC
         elm_attack: 150,
-        elm_defense: 206,
+        elm_defense: 195,
         elm_efficiency: 1.24,
         potency: .42,
         //WEAPON
@@ -8948,12 +8948,12 @@ const database = [
         strength: 1.2,
         //MAGIC
         elm_attack: 217,
-        elm_defense: 165,
+        elm_defense: 149,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
         weapon: 224,
-        shield: 201,
+        shield: 182,
         curse_crit: .60,
         weaponCurse: 'Sage',
         weapon_amount: 12,
@@ -9026,7 +9026,7 @@ const database = [
         potency: .10,
         //WEAPON
         weapon: 195,
-        shield: 237,
+        shield: 236,
         curse_crit: .20,
         weaponCurse: 'Attack',
         weapon_amount: 9,
@@ -9093,12 +9093,12 @@ const database = [
         strength: 1.10,
         //MAGIC
         elm_attack: 105,
-        elm_defense: 156,
+        elm_defense: 145,
         elm_efficiency: 1.32,
         potency: .30,
         //WEAPON
         weapon: 219,
-        shield: 240,
+        shield: 237,
         curse_crit: .17,
         weaponCurse: 'Stun',
         weapon_amount: 0,

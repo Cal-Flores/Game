@@ -87,9 +87,9 @@
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             let characters = databaseArr
-            databaseArr.sort((a, b) => b.elm_attack - a.elm_attack);
+            databaseArr.sort((a, b) => b.defense - a.defense);
             databaseArr.forEach(player => {
-                name += `<li>${player.name} - ${player.elm_attack}</li>`
+                name += `<li>${player.name} - ${player.defense}</li>`
             })
             $('#name').append(name)
             console.log(characters.length)
