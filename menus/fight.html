@@ -2767,23 +2767,42 @@
         function resetStats(defender, statusEffect) {
             console.log('no reset')
         }
+        // const elementalWeaknesses = {
+        //     Water: { strongAgainst: ['Fire', 'Earth', 'Fighter'], weakAgainst: ['Lightning', 'Grass', 'Fairy'] },
+        //     Fire: { strongAgainst: ['Wind', 'Grass', 'Fairy'], weakAgainst: ['Water', 'Earth', 'Ghost'] },
+        //     Wind: { strongAgainst: ['Water', 'Lightning', 'Ghost'], weakAgainst: ['Fire', 'Fairy'] },
+        //     Lightning: { strongAgainst: ['Water', 'Grass', 'Ghost'], weakAgainst: ['Earth', 'Fighter', 'Wood'] },
+        //     Earth: { strongAgainst: ['Fire', 'Lightning', 'Fairy', 'Wind'], weakAgainst: ['Water', 'Grass', 'Wood'] },
+        //     Grass: { strongAgainst: ['Water', 'Earth', 'Wood'], weakAgainst: ['Fire', 'Lightning', 'Ghost'] },
+        //     Fighter: { strongAgainst: ['Dark', 'Grass', 'Sage'], weakAgainst: ['Lightning', 'Water', 'Ghost'] },
+        //     Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fairy', 'Fire', 'Ghost'] },
+        //     Fairy: { strongAgainst: ['Dark', 'Fighter', 'Ghost'], weakAgainst: ['Fire', 'Wind', 'Earth'] },
+        //     Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
+        //     Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: ['Grass', 'Lightning'] },
+        //     psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
+        //     sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] },
+        //     Lucky: { strongAgainst: ['Sage'], weakAgainst: ['Fighter', 'Fairy', 'Psychic'], },
+        //     Holy: { strongAgainst: [], weakAgainst: [] },
+        //     Sand: { strongAgainst: [], weakAgainst: [] },
+        // };
         const elementalWeaknesses = {
-            Water: { strongAgainst: ['Fire', 'Earth', 'Fighter'], weakAgainst: ['Lightning', 'Grass', 'Fairy'] },
-            Fire: { strongAgainst: ['Wind', 'Grass', 'Fairy'], weakAgainst: ['Water', 'Earth', 'Ghost'] },
-            Wind: { strongAgainst: ['Water', 'Lightning', 'Ghost'], weakAgainst: ['Earth', 'Fire', 'Fairy'] },
-            Lightning: { strongAgainst: ['Water', 'Grass', 'Ghost'], weakAgainst: ['Earth', 'Fighter', 'Wood'] },
-            Earth: { strongAgainst: ['Fire', 'Lightning', 'Fairy'], weakAgainst: ['Water', 'Grass', 'Wood'] },
-            Grass: { strongAgainst: ['Water', 'Earth', 'Wood'], weakAgainst: ['Fire', 'Lightning', 'Ghost'] },
-            Fighter: { strongAgainst: ['Dark', 'Grass', 'Sage'], weakAgainst: ['Lightning', 'Water', 'Ghost'] },
-            Dark: { strongAgainst: ['Grass', 'Water', 'Sage'], weakAgainst: ['Fairy', 'Fire', 'Ghost'] },
-            Fairy: { strongAgainst: ['Dark', 'Fighter', 'Ghost'], weakAgainst: ['Fire', 'Wind', 'Earth'] },
-            Ghost: { strongAgainst: ['Fighter', 'Sage', 'Dark'], weakAgainst: ['Fairy', 'Wind', 'Lightning'] },
-            Wood: { strongAgainst: ['Water', 'Earth', 'Wind'], weakAgainst: [, 'Grass', 'Lightning'] },
-            psychic: { strongAgainst: ['Sage'], weakAgainst: [] },
-            sage: { weakAgainst: ['Fighter', 'Dark', 'Ghost', 'Psychic'] },
-            Lucky: { strongAgainst: ['Sage'], weakAgainst: ['Fighter', 'Fairy', 'Psychic'], },
-            Holy: { strongAgainst: [], weakAgainst: [] },
-            Sand: { strongAgainst: [], weakAgainst: [] },
+            Water: { strongAgainst: ['Fire', 'Earth', 'Sand'], weakAgainst: ['Lightning', 'Wood', 'Grass'] },
+            Fire: { strongAgainst: ['Grass', 'Dark', 'Fairy'], weakAgainst: ['Water', 'Wind', 'Earth'] },
+            Wind: { strongAgainst: ['Lightning', 'Wood', 'Fire'], weakAgainst: ['Earth', 'Holy', 'Lucky'] },
+            Lightning: { strongAgainst: ['Water', 'Earth', 'Dark'], weakAgainst: ['Wind', 'Lucky', 'Ghost'] },
+            Earth: { strongAgainst: ['Fire', 'Wind', 'Holy'], weakAgainst: ['Water', 'Fairy', 'Lightning', 'Wood'] },
+            Grass: { strongAgainst: ['Water', 'Ghost', 'Fighter'], weakAgainst: ['Fire', 'Wood', 'Dark'] },
+            Fighter: { strongAgainst: ['Ghost', 'Dark', 'Sage', 'Wood'], weakAgainst: ['Holy', 'Fairy', 'Grass', 'Sand'] },
+            Dark: { strongAgainst: ['Grass', 'Holy', 'Fairy'], weakAgainst: ['Fire', 'Lightning', 'Fighter'] },
+            Fairy: { strongAgainst: ['Earth', 'Fighter', 'Sand'], weakAgainst: ['Fire', 'Dark', 'Ghost'] },
+            Ghost: { strongAgainst: ['Lightning', 'Fairy', 'Lucky'], weakAgainst: ['Grass', 'Fighter', 'Holy'] },
+            Lucky: { strongAgainst: ['Lightning', 'Wind'], weakAgainst: ['Ghost', 'Wood'], },
+            Sand: { strongAgainst: ['Fire', 'Fighter'], weakAgainst: ['Water', 'Fairy'] },
+            Holy: { strongAgainst: ['Wind', 'Fighter', 'Ghost'], weakAgainst: ['Earth', 'Dark'] },
+            Wood: { strongAgainst: ['Water', 'Grass', 'Earth', 'Lucky'], weakAgainst: ['Wind', 'Fighter'] },
+
+            psychic: { strongAgainst: [], weakAgainst: [] },
+            sage: { weakAgainst: ['Fighter'] },
         };
 
 

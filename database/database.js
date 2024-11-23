@@ -6763,8 +6763,8 @@ const database = [
     {
         name: 'Kakashi',
         nen_type: 'Specialist',
-        element: 'Lightning',
-        elm: lightning,
+        element: 'Sage',
+        elm: sage,
         hp: 3158,
         //PHYSICAL
         attack: 134,
