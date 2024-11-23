@@ -42,7 +42,7 @@ const database = [
         weapon_amount: 0,
         //SPIRIT
         spirit: 50,
-        spirit_def: 194,
+        spirit_def: 190,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -114,7 +114,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 108,
-        spirit_def: 172,
+        spirit_def: 159,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -186,7 +186,7 @@ const database = [
         weapon_amount: .08,
         //SPIRIT
         spirit: 223,
-        spirit_def: 202,
+        spirit_def: 201,
         spirit_crit: .20,
         spiritCurse: 'Damage',
         spirit_amount: 70,
@@ -330,7 +330,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 212,
-        spirit_def: 157,
+        spirit_def: 147,
         spirit_crit: .08,
         spiritCurse: 'Evasion',
         spirit_amount: 1,
@@ -402,7 +402,7 @@ const database = [
         weapon_amount: 8,
         //SPIRIT
         spirit: 90,
-        spirit_def: 169,
+        spirit_def: 154,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 60,
@@ -474,7 +474,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 125,
-        spirit_def: 192,
+        spirit_def: 189,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -546,7 +546,7 @@ const database = [
         weapon_amount: 23,
         //SPIRIT
         spirit: 181,
-        spirit_def: 162,
+        spirit_def: 147,
         spirit_crit: .15,
         spiritCurse: 'Weapon',
         spirit_amount: 8,
@@ -618,7 +618,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 93,
-        spirit_def: 182,
+        spirit_def: 172,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -690,7 +690,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 50,
-        spirit_def: 177,
+        spirit_def: 166,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 60,
@@ -837,7 +837,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 125,
-        spirit_def: 172,
+        spirit_def: 174,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -959,7 +959,7 @@ const database = [
     },
     {
         name: 'Aki',
-        nen_type: 'Specialist',
+        nen_type: 'Conjuror',
         element: 'Dark',
         elm: dark,
         hp: 3077,
@@ -981,7 +981,7 @@ const database = [
         weapon_amount: 7,
         //SPIRIT
         spirit: 160,
-        spirit_def: 186,
+        spirit_def: 177,
         spirit_crit: .15,
         spiritCurse: 'Weapon',
         spirit_amount: 7,
@@ -1053,7 +1053,7 @@ const database = [
         weapon_amount: 16,
         //SPIRIT
         spirit: 173,
-        spirit_def: 239,
+        spirit_def: 245,
         spirit_crit: .10,
         spiritCurse: 'Weapon',
         spirit_amount: 15,
@@ -1127,7 +1127,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 166,
-        spirit_def: 199,
+        spirit_def: 200,
         spirit_crit: .15,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -1199,7 +1199,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 124,
-        spirit_def: 192,
+        spirit_def: 188,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -1271,7 +1271,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 202,
-        spirit_def: 231,
+        spirit_def: 232,
         spirit_crit: .17,
         spiritCurse: 'Magic',
         spirit_amount: 12,
@@ -1343,7 +1343,7 @@ const database = [
         weapon_amount: 5,
         //SPIRIT
         spirit: 164,
-        spirit_def: 200,
+        spirit_def: 198,
         spirit_crit: .50,
         spiritCurse: 'S-Def',
         spirit_amount: 20,
@@ -1415,7 +1415,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 130,
-        spirit_def: 192,
+        spirit_def: 188,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -1487,7 +1487,7 @@ const database = [
         weapon_amount: 3,
         //SPIRIT
         spirit: 158,
-        spirit_def: 215,
+        spirit_def: 218,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -1559,7 +1559,7 @@ const database = [
         weapon_amount: .10,
         //SPIRIT
         spirit: 141,
-        spirit_def: 182,
+        spirit_def: 171,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -1703,7 +1703,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 169,
-        spirit_def: 169,
+        spirit_def: 156,
         spirit_crit: .15,
         spiritCurse: 'Magic',
         spirit_amount: 12,
@@ -1775,7 +1775,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 123,
-        spirit_def: 170,
+        spirit_def: 158,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -1847,7 +1847,7 @@ const database = [
         weapon_amount: 8,
         //SPIRIT
         spirit: 113,
-        spirit_def: 166,
+        spirit_def: 151,
         spirit_crit: .12,
         spiritCurse: 'Weapon',
         spirit_amount: 16,
@@ -1919,7 +1919,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 145,
-        spirit_def: 206,
+        spirit_def: 207,
         spirit_crit: .18,
         spiritCurse: 'Power',
         spirit_amount: 10,
@@ -1991,7 +1991,7 @@ const database = [
         weapon_amount: 9,
         //SPIRIT
         spirit: 114,
-        spirit_def: 158,
+        spirit_def: 148,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2063,7 +2063,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 129,
-        spirit_def: 164,
+        spirit_def: 150,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2138,7 +2138,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 102,
-        spirit_def: 164,
+        spirit_def: 151,
         spirit_crit: .15,
         spiritCurse: 'Attack',
         spirit_amount: 10,
@@ -2210,7 +2210,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 100,
-        spirit_def: 173,
+        spirit_def: 163,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2282,7 +2282,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 92,
-        spirit_def: 155,
+        spirit_def: 145,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2354,7 +2354,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 94,
-        spirit_def: 151,
+        spirit_def: 144,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2426,7 +2426,7 @@ const database = [
         weapon_amount: .10,
         //SPIRIT
         spirit: 204,
-        spirit_def: 235,
+        spirit_def: 248,
         spirit_crit: .25,
         spiritCurse: 'Attack',
         spirit_amount: 8,
@@ -2498,7 +2498,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 149,
-        spirit_def: 195,
+        spirit_def: 194,
         spirit_crit: .16,
         spiritCurse: 'Spirit',
         spirit_amount: 10,
@@ -2570,7 +2570,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 128,
-        spirit_def: 185,
+        spirit_def: 173,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2642,7 +2642,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 80,
-        spirit_def: 165,
+        spirit_def: 149,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2714,7 +2714,7 @@ const database = [
         weapon_amount: 50,
         //SPIRIT
         spirit: 91,
-        spirit_def: 166,
+        spirit_def: 150,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2786,7 +2786,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 116,
-        spirit_def: 215,
+        spirit_def: 218,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2858,7 +2858,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 112,
-        spirit_def: 170,
+        spirit_def: 157,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -2931,7 +2931,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 155,
-        spirit_def: 180,
+        spirit_def: 169,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -3004,7 +3004,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 94,
-        spirit_def: 164,
+        spirit_def: 148,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -3076,7 +3076,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 195,
-        spirit_def: 202,
+        spirit_def: 199,
         spirit_crit: .10,
         spiritCurse: 'Attack',
         spirit_amount: 25,
@@ -3151,7 +3151,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 117,
-        spirit_def: 170,
+        spirit_def: 156,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -3225,7 +3225,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 227,
-        spirit_def: 190,
+        spirit_def: 178,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
         spirit_amount: 25,
@@ -3516,7 +3516,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 193,
-        spirit_def: 192,
+        spirit_def: 186,
         spirit_crit: .15,
         spiritCurse: 'Def',
         spirit_amount: 20,
@@ -3588,7 +3588,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 134,
-        spirit_def: 186,
+        spirit_def: 176,
         spirit_crit: .15,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -3660,7 +3660,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 120,
-        spirit_def: 161,
+        spirit_def: 145,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -3807,7 +3807,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 198,
-        spirit_def: 233,
+        spirit_def: 202,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
         spirit_amount: 35,
@@ -3879,7 +3879,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 136,
-        spirit_def: 192,
+        spirit_def: 185,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -3951,7 +3951,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 268,
-        spirit_def: 170,
+        spirit_def: 155,
         spirit_crit: .22,
         spiritCurse: 'C-Def',
         spirit_amount: 20,
@@ -4023,7 +4023,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 119,
-        spirit_def: 236,
+        spirit_def: 215,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4095,7 +4095,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 99,
-        spirit_def: 208,
+        spirit_def: 205,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4167,7 +4167,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 138,
-        spirit_def: 234,
+        spirit_def: 220,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4313,7 +4313,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 111,
-        spirit_def: 229,
+        spirit_def: 242,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4461,7 +4461,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 139,
-        spirit_def: 174,
+        spirit_def: 164,
         spirit_crit: .08,
         spiritCurse: 'Evasion',
         spirit_amount: 1,
@@ -4534,7 +4534,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 133,
-        spirit_def: 167,
+        spirit_def: 152,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4606,7 +4606,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 176,
-        spirit_def: 158,
+        spirit_def: 149,
         spirit_crit: .31,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4678,7 +4678,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 117,
-        spirit_def: 170,
+        spirit_def: 157,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4750,7 +4750,7 @@ const database = [
         weapon_amount: .10,
         //SPIRIT
         spirit: 170,
-        spirit_def: 168,
+        spirit_def: 153,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4822,7 +4822,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 127,
-        spirit_def: 194,
+        spirit_def: 192,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4894,7 +4894,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 104,
-        spirit_def: 162,
+        spirit_def: 146,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -4966,7 +4966,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 150,
-        spirit_def: 213,
+        spirit_def: 212,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5041,7 +5041,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 115,
-        spirit_def: 178,
+        spirit_def: 167,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5113,7 +5113,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 135,
-        spirit_def: 192,
+        spirit_def: 183,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5187,7 +5187,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 106,
-        spirit_def: 175,
+        spirit_def: 160,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5259,7 +5259,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 107,
-        spirit_def: 191,
+        spirit_def: 180,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5332,7 +5332,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 97,
-        spirit_def: 180,
+        spirit_def: 169,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5404,7 +5404,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 137,
-        spirit_def: 167,
+        spirit_def: 152,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5476,7 +5476,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 208,
-        spirit_def: 190,
+        spirit_def: 179,
         spirit_crit: .23,
         spiritCurse: 'Health',
         spirit_amount: 85,
@@ -5549,7 +5549,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 120,
-        spirit_def: 172,
+        spirit_def: 159,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5621,7 +5621,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 96,
-        spirit_def: 169,
+        spirit_def: 153,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5766,7 +5766,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 98,
-        spirit_def: 173,
+        spirit_def: 161,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5838,7 +5838,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 95,
-        spirit_def: 183,
+        spirit_def: 170,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5910,7 +5910,7 @@ const database = [
         weapon_amount: 16,
         //SPIRIT
         spirit: 164,
-        spirit_def: 221,
+        spirit_def: 225,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -5982,7 +5982,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 211,
-        spirit_def: 192,
+        spirit_def: 181,
         spirit_crit: .19,
         spiritCurse: 'Spirit',
         spirit_amount: 8,
@@ -6055,7 +6055,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 109,
-        spirit_def: 218,
+        spirit_def: 223,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6127,7 +6127,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 131,
-        spirit_def: 227,
+        spirit_def: 234,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6202,7 +6202,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 196,
-        spirit_def: 225,
+        spirit_def: 230,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6274,7 +6274,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 200,
-        spirit_def: 237,
+        spirit_def: 258,
         spirit_crit: .20,
         spiritCurse: 'Health',
         spirit_amount: 125,
@@ -6349,7 +6349,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 217,
-        spirit_def: 230,
+        spirit_def: 237,
         spirit_crit: .17,
         spiritCurse: 'Weapon',
         spirit_amount: 18,
@@ -6421,7 +6421,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 207,
-        spirit_def: 169,
+        spirit_def: 153,
         spirit_crit: .26,
         spiritCurse: 'Weapon',
         spirit_amount: 15,
@@ -6494,7 +6494,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 121,
-        spirit_def: 174,
+        spirit_def: 164,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6566,7 +6566,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 184,
-        spirit_def: 215,
+        spirit_def: 216,
         spirit_crit: .22,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -6638,7 +6638,7 @@ const database = [
         weapon_amount: 3,
         //SPIRIT
         spirit: 162,
-        spirit_def: 180,
+        spirit_def: 168,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6710,7 +6710,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 215,
-        spirit_def: 173,
+        spirit_def: 160,
         spirit_crit: .24,
         spiritCurse: 'Def',
         spirit_amount: 21,
@@ -6784,7 +6784,7 @@ const database = [
         weapon_amount: 3,
         //SPIRIT
         spirit: 174,
-        spirit_def: 176,
+        spirit_def: 165,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6856,7 +6856,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 125,
-        spirit_def: 180,
+        spirit_def: 167,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -6928,7 +6928,7 @@ const database = [
         weapon_amount: 13,
         //SPIRIT
         spirit: 122,
-        spirit_def: 172,
+        spirit_def: 158,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7014,7 +7014,7 @@ const database = [
         gen_power: 0,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 10,
         drain: 5,
         //CURSE
         cursed_energy: 0,
@@ -7146,7 +7146,7 @@ const database = [
         weapon_amount: 8,
         //SPIRIT
         spirit: 275,
-        spirit_def: 231,
+        spirit_def: 224,
         spirit_crit: .25,
         spiritCurse: 'Damage',
         spirit_amount: 85,
@@ -7218,7 +7218,7 @@ const database = [
         weapon_amount: 20,
         //SPIRIT
         spirit: 300,
-        spirit_def: 266,
+        spirit_def: 268,
         spirit_crit: .15,
         spiritCurse: 'Spirit',
         spirit_amount: 15,
@@ -7293,7 +7293,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 132,
-        spirit_def: 192,
+        spirit_def: 247,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7365,7 +7365,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 188,
-        spirit_def: 195,
+        spirit_def: 193,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7510,7 +7510,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 140,
-        spirit_def: 186,
+        spirit_def: 175,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7582,7 +7582,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 175,
-        spirit_def: 234,
+        spirit_def: 262,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7655,7 +7655,7 @@ const database = [
         weapon_amount: 22,
         //SPIRIT
         spirit: 151,
-        spirit_def: 193,
+        spirit_def: 191,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7727,7 +7727,7 @@ const database = [
         weapon_amount: 3,
         //SPIRIT
         spirit: 135,
-        spirit_def: 172,
+        spirit_def: 159,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -7945,7 +7945,7 @@ const database = [
         weapon_amount: 8,
         //SPIRIT
         spirit: 241,
-        spirit_def: 226,
+        spirit_def: 239,
         spirit_crit: .20,
         spiritCurse: 'Damage',
         spirit_amount: 50,
@@ -8017,7 +8017,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 237,
-        spirit_def: 176,
+        spirit_def: 165,
         spirit_crit: .20,
         spiritCurse: 'Weapon',
         spirit_amount: 6,
@@ -8089,7 +8089,7 @@ const database = [
         weapon_amount: 7,
         //SPIRIT
         spirit: 226,
-        spirit_def: 169,
+        spirit_def: 160,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
         spirit_amount: 1,
@@ -8161,7 +8161,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 259,
-        spirit_def: 165,
+        spirit_def: 150,
         spirit_crit: .10,
         spiritCurse: 'Weapon',
         spirit_amount: 10,
@@ -8233,7 +8233,7 @@ const database = [
         weapon_amount: 16,
         //SPIRIT
         spirit: 280,
-        spirit_def: 234,
+        spirit_def: 255,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 55,
@@ -8382,7 +8382,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 177,
-        spirit_def: 221,
+        spirit_def: 251,
         spirit_crit: .17,
         spiritCurse: 'Attack',
         spirit_amount: 10,
@@ -8526,7 +8526,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 144,
-        spirit_def: 168,
+        spirit_def: 154,
         spirit_crit: .15,
         spiritCurse: 'Attack',
         spirit_amount: 10,
@@ -8598,7 +8598,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 102,
-        spirit_def: 146,
+        spirit_def: 144,
         spirit_crit: .12,
         spiritCurse: 'Luck',
         spirit_amount: 1,
@@ -8670,7 +8670,7 @@ const database = [
         weapon_amount: 4,
         //SPIRIT
         spirit: 90,
-        spirit_def: 128,
+        spirit_def: 140,
         spirit_crit: .10,
         spiritCurse: 'Accuracy',
         spirit_amount: 4,
@@ -8742,7 +8742,7 @@ const database = [
         weapon_amount: 0,
         //SPIRIT
         spirit: 103,
-        spirit_def: 210,
+        spirit_def: 209,
         spirit_crit: .10,
         spiritCurse: 'Magic',
         spirit_amount: 5,
@@ -8887,7 +8887,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 220,
-        spirit_def: 216,
+        spirit_def: 222,
         spirit_crit: .10,
         spiritCurse: 'Damage',
         spirit_amount: 40,
@@ -8959,7 +8959,7 @@ const database = [
         weapon_amount: 12,
         //SPIRIT
         spirit: 105,
-        spirit_def: 142,
+        spirit_def: 143,
         spirit_crit: .10,
         spiritCurse: 'Magic',
         spirit_amount: 20,
@@ -9032,7 +9032,7 @@ const database = [
         weapon_amount: 9,
         //SPIRIT
         spirit: 255,
-        spirit_def: 224,
+        spirit_def: 227,
         spirit_crit: .10,
         spiritCurse: 'Damage',
         spirit_amount: 65,
@@ -9104,7 +9104,7 @@ const database = [
         weapon_amount: 0,
         //SPIRIT
         spirit: 148,
-        spirit_def: 209,
+        spirit_def: 208,
         spirit_crit: .10,
         spiritCurse: 'Weapon',
         spirit_amount: 10,
