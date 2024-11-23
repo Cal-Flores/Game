@@ -60,7 +60,7 @@ const database = [
         drain: 0,
         //CURSE
         cursed_energy: 5,
-        cursed_recovery: 100,
+        cursed_recovery: 1,
         negative_energy: 0,
         cursed_tech: 'Inventory-Curse - Change Weapons',
         curse_amount: 0,
@@ -73,14 +73,14 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Heavenly-Restriction - Increase Defense by 15%',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 115,
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 125,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Weeping - Increase Magic Defense by 20%",
-        nin_cost: 15,
-        ninjutsu_pow: 125,
+        nin_cost: 17,
+        ninjutsu_pow: 155,
         ninamount: .20,
         ultEnhance: true,
         //BUFFS
@@ -158,8 +158,8 @@ const database = [
         //BUFFS
         buff: 'Increase Curse Recovery by 10',
         buff2: 'Decrease Critical by 20%',
-        buff_acc: 50,
-        buff2_acc: 50,
+        buff_acc: 60,
+        buff2_acc: 75,
         image: 'https://64.media.tumblr.com/bee5b4150e08d22f7351d037813cd8b9/13fcef64824dd1b2-da/s1280x1920/f260dbaffb68a41c3554c15561f909841cf1b9dc.jpg'
     },
     {
@@ -231,7 +231,7 @@ const database = [
         buff: 'Double Magic Attack',
         buff2: 'Halve Potency',
         buff_acc: 65,
-        buff2_acc: 55,
+        buff2_acc: 70,
         image: 'https://64.media.tumblr.com/11d79e538d170ebc91403fa7825be14a/ac5ce7753d2dffd1-7d/s1280x1920/5e3752a4fc826febaef45197801b139f48d244de.jpg'
     },
     {
@@ -301,9 +301,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Double Domain Purity',
-        buff2: 'Decrease Will Power by 20%',
+        buff2: 'Decrease Spirit Defense by 10%',
         buff_acc: 70,
-        buff2_acc: 60,
+        buff2_acc: 85,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/46/HxH2011_EP50_Nobunaga_Portrait.png/revision/latest?cb=20230122183803'
     },
     {
@@ -372,10 +372,10 @@ const database = [
         ninamount: .80,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Shield by 25%',
-        buff2: 'Decrease Strength by .30',
-        buff_acc: 70,
-        buff2_acc: 70,
+        buff: 'Increase Shield by 20%',
+        buff2: 'Decrease Strength by 30%',
+        buff_acc: 65,
+        buff2_acc: 75,
         image: 'https://preview.redd.it/what-do-you-dislike-about-mikasas-character-v0-s42udm18c6bb1.jpg?auto=webp&s=e7c072a57d924d5aa9bd83dbae93ed7bc93c160f'
     },
     {
@@ -445,9 +445,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Curse Recovery by 15',
-        buff2: 'Decrease Evasion by 4',
+        buff2: 'Decrease Evasion by 3',
         buff_acc: 50,
-        buff2_acc: 40,
+        buff2_acc: 55,
         image: 'https://i.pinimg.com/736x/25/80/3b/25803b13e5a6e1b7420070889dc5ecc6.jpg'
     },
     {
@@ -516,10 +516,10 @@ const database = [
         ninamount: 2,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Defense by 35%',
-        buff2: 'Decrease Critical by 15%',
-        buff_acc: 55,
-        buff2_acc: 65,
+        buff: 'Increase Defense by 15%',
+        buff2: 'Decrease Critical by 25%',
+        buff_acc: 60,
+        buff2_acc: 75,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/a/aa/HxH2011_EP3_Hanzo_Portrait.png/revision/latest?cb=20221007164354'
     },
     {
@@ -662,8 +662,8 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 3',
         buff2: 'Increase Evasion by 3',
-        buff_acc: 50,
-        buff2_acc: 50,
+        buff_acc: 80,
+        buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/b8/d4/38/b8d438d6a6db0c7b2f6080558e3d993f.jpg'
     },
     {
@@ -733,7 +733,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Chakra Recovery by 2',
-        buff2: 'Decrease Attack by 20%',
+        buff2: 'Decrease Attack by 15%',
         buff_acc: 70,
         buff2_acc: 60,
         image: 'https://thicc.mywaifulist.moe/waifus/26112/2ce0a9ba09c15a29b46fbda0ba73c91ce081e3e31b9d5e4186791980fa31fe4c_thumb.png'
@@ -880,7 +880,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Genjutsu by 3',
-        buff2: 'Decrease Attack by 25%',
+        buff2: 'Decrease Attack by 15%',
         buff_acc: 70,
         buff2_acc: 65,
         image: 'https://64.media.tumblr.com/5a4d57c5a295356ef574e7ca4512b484/ace490199105949f-6f/s1280x1920/9dfa87a978d53b3bdf6446a37e0b7efcdeb74be5.jpg'
@@ -953,7 +953,7 @@ const database = [
         //BUFFS
         buff: 'Double Wither percent',
         buff2: 'Decrease Potency by 50%',
-        buff_acc: 60,
+        buff_acc: 65,
         buff2_acc: 65,
         image: 'https://preview.redd.it/i-tried-to-make-kishibe-a-bit-more-lively-v0-ke8dx7n9oxoa1.jpg?width=640&crop=smart&auto=webp&s=30f8a2bebb02a1782f1418be2c76debf6493d0e9'
     },
@@ -1097,7 +1097,7 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 3',
         buff2: 'Decrease Weapon by 10%',
-        buff_acc: 75,
+        buff_acc: 70,
         buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/35/55/44/355544918e7be34a3a10221439133856.jpg'
     },
@@ -1169,7 +1169,7 @@ const database = [
         ninamount: 300,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Potency by 30%',
+        buff: 'Increase Potency by 40%',
         buff2: 'Decrease Will Power by 4',
         buff_acc: 70,
         buff2_acc: 60,
@@ -1244,7 +1244,7 @@ const database = [
         buff: 'Increase Shield by 15%',
         buff2: 'Decrease Attack by 10%',
         buff_acc: 65,
-        buff2_acc: 80,
+        buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/naruto/images/5/5e/Suigetsu_H%C5%8Dzuki_Parte_II_Anime.png/revision/latest?cb=20130308180649&path-prefix=es'
     },
     {
@@ -1313,10 +1313,10 @@ const database = [
         ninamount: 20,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Defense by 30%',
+        buff: 'Increase Defense by 15%',
         buff2: 'Decrease Willpower by 3',
         buff_acc: 55,
-        buff2_acc: 60,
+        buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/denaruto3/images/3/3c/ItachiUchiha.PNG/revision/latest?cb=20120705195723&path-prefix=de'
     },
     {
@@ -1385,7 +1385,7 @@ const database = [
         ninamount: .25,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Weapon by 20%',
+        buff: 'Increase Weapon by 15%',
         buff2: 'Decrease Evasion by 2',
         buff_acc: 65,
         buff2_acc: 65,
@@ -1457,10 +1457,10 @@ const database = [
         ninamount: .20,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Shield by 20%',
-        buff2: 'Decrease Magic by 20%',
+        buff: 'Increase Shield by 10%',
+        buff2: 'Decrease Magic by 10%',
         buff_acc: 70,
-        buff2_acc: 65,
+        buff2_acc: 75,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/8/86/HxH2011_EP50_Feitan_Portrait.png/revision/latest?cb=20230121061055'
     },
     {
@@ -1532,7 +1532,7 @@ const database = [
         buff: 'Increase Accuracy by 3',
         buff2: 'Decrease Genjutsu by 2',
         buff_acc: 50,
-        buff2_acc: 70,
+        buff2_acc: 75,
         image: 'https://i.pinimg.com/236x/9d/40/38/9d4038be829e441d494f3f06a9c22f2c.jpg'
     },
     {
@@ -1602,9 +1602,9 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
-        buff2: 'Decrease Weapon by 25%',
+        buff2: 'Decrease Weapon by 15%',
         buff_acc: 65,
-        buff2_acc: 75,
+        buff2_acc: 65,
         image: 'https://i.pinimg.com/originals/d8/08/eb/d808eb40caf400d332c02751eda72d68.jpg'
     },
     {
@@ -1673,9 +1673,9 @@ const database = [
         ninamount: .10,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Attack by 25%',
+        buff: 'Increase Attack by 15%',
         buff2: 'Cancel Effiecieny by 80%',
-        buff_acc: 70,
+        buff_acc: 55,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/b/bd/HxH2011_EP147_Killua_Portrait.png/revision/latest?cb=20230904181904'
     },
@@ -1889,9 +1889,9 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Stun rate plus .25',
+        buff: 'Stun rate plus .20',
         buff2: 'Decrease Willpower by 4',
-        buff_acc: 60,
+        buff_acc: 55,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/0/0a/Pokkle_HxH_11.PNG/revision/latest?cb=20120323055002'
     },
@@ -2035,7 +2035,7 @@ const database = [
         //BUFFS
         buff: 'Increase Magic Attack by 8%',
         buff2: 'Decrease Attack by 10%',
-        buff_acc: 65,
+        buff_acc: 75,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png/revision/latest/scale-to-width-down/300?cb=20180131102417'
     },
@@ -2247,7 +2247,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Stengthen Jajanken by 200 | Reduce Recovery by 2",
-        nin_cost: 32,
+        nin_cost: 35,
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: true,
@@ -2304,8 +2304,8 @@ const database = [
         negative_energy: 12,
         cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 3',
         curse_amount: 3,
-        curse_duration: 6,
-        curse_cost: 21,
+        curse_duration: 4,
+        curse_cost: 22,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
