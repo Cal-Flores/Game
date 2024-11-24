@@ -2835,6 +2835,7 @@
 
         function calculateHitChance(accuracy, evasion) {
             const multiplier = 1.74;
+            if (evasion <= 0) return true
             return (accuracy * multiplier) / (accuracy + evasion);
         }
         //fastboi
@@ -3635,11 +3636,11 @@
                             cursedSpirit(attacker, redSpiritCurse, redSpiritAmount)
                             if (redSpiritCurse == 'Damage') {
                                 extraDmg = redSpiritAmount
-                                alert(`${extraDmg} extra damage!`)
+                                // alert(`${extraDmg} extra damage!`)
                             }
                         }
                         let damage = Math.max(1, Math.round((baseDamage + (redSpirit - (blueTalis * damageReductionFactor))) * (1 + variance)));
-                        damage = damage + extraDmg
+                        damage = damage * extraDmg
 
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
@@ -3689,12 +3690,12 @@
                             cursedSpirit(attacker, blueSpiritCurse, blueSpiritAmount)
                             if (blueSpiritCurse == 'Damage') {
                                 extraDmg = blueSpiritAmount
-                                alert(`${extraDmg} extra damage!`)
+                                // alert(`${extraDmg} extra damage!`)
                             }
                         }
 
                         let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redSpirit * damageReductionFactor))) * (1 + variance)));
-                        damage += extraDmg
+                        damage *= extraDmg
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
