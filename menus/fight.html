@@ -865,7 +865,7 @@
                     let hakDamage = 0
                     let mult = 9;
                     if (jutsu == 'Uzumaki') {
-                        mult = 12
+                        mult = 11
                     }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
@@ -1666,7 +1666,7 @@
         const black = ['Black-Flash']
         const gojo = ['Limitless']
         const kenjaku = ['Uzumaki']
-        const sukuna = ['Malevolent Shrine']
+        const sukuna = ['Malevolent-Shrine']
         const toge = ['Cursed-Speech']
         const megumi = ['Ten-Shadows-Technique']
         const geto = ['Spirit-Manipulation']
@@ -1954,14 +1954,14 @@
 
                 }
                 if (megumi.includes(curse)) {
-                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (30)')
                     if (curse == 'Rabbit Escape') {
                         duration = 1;
                         alert('Rabbits have hidden Megumi!')
                         redEvas += 1000;
                     } else if (curse == 'Nue') {
                         duration = 6
-                        redElmAttack += 65;
+                        redElmAttack += 60;
                         $('#redElmAttack').text(redElmAttack);
                         currRedCurse -= 5;
                         $('#redCurrCurse').text(currRedCurse)
@@ -1970,7 +1970,7 @@
                         redAttack += 150;
                         redStrength += .50
                         $('#redAttack').text(redAttack);
-                        currRedCurse -= 10;
+                        currRedCurse -= 15;
                         $('#redCurrCurse').text(currRedCurse)
                     }
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -2242,14 +2242,14 @@
                     return;
                 }
                 if (megumi.includes(curse)) {
-                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (30)')
                     if (curse == 'Rabbit Escape') {
                         duration = 1;
                         alert('Rabbits have hidden Megumi!')
                         blueEvas += 1000;
                     } else if (curse == 'Nue') {
                         duration = 6
-                        blueElmAttack += 65;
+                        blueElmAttack += 60;
                         $('#blueElmAttack').text(blueElmAttack);
                         currBlueCurse -= 5;
                         $('#blueCurrCurse').text(currBlueCurse)
@@ -2258,7 +2258,7 @@
                         blueAttack += 150;
                         blueStrength += .50
                         $('#blueAttack').text(blueAttack);
-                        currBlueCurse -= 10;
+                        currBlueCurse -= 15;
                         $('#blueCurrCurse').text(currBlueCurse)
                     }
                     blueCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -2461,7 +2461,7 @@
                 }
                 if (potency.includes(curse)) {
                     bluePotency -= amount;
-                    $('#bluePot').text(bluePot);
+                    $('#bluePot').text(bluePotency);
                 }
                 if (magic_defense.includes(curse)) {
                     blueElmDef -= amount;
@@ -3630,13 +3630,13 @@
                         chargeCurse('red', selfDamage)
                     } else if (isHit) {
                         // Normal attack sequence if not hitting self
-                        let extraDmg = 0
+                        let extraDmg = 1
                         isCritical = Math.random() < redSpiritCrit;
                         if (isCritical) {
                             cursedSpirit(attacker, redSpiritCurse, redSpiritAmount)
                             if (redSpiritCurse == 'Damage') {
                                 extraDmg = redSpiritAmount
-                                // alert(`${extraDmg} extra damage!`)
+                                alert(`${extraDmg} extra damage!`)
                             }
                         }
                         let damage = Math.max(1, Math.round((baseDamage + (redSpirit - (blueTalis * damageReductionFactor))) * (1 + variance)));
@@ -3685,12 +3685,12 @@
                         // Normal attack sequence if not hitting self
                         isCritical = Math.random() < blueSpiritCrit;
                         // criticalMultiplier = isCritical ? blueStrength : 1.0;
-                        let extraDmg = 0;
+                        let extraDmg = 1;
                         if (isCritical) {
                             cursedSpirit(attacker, blueSpiritCurse, blueSpiritAmount)
                             if (blueSpiritCurse == 'Damage') {
                                 extraDmg = blueSpiritAmount
-                                // alert(`${extraDmg} extra damage!`)
+                                alert(`${extraDmg} extra damage!`)
                             }
                         }
 

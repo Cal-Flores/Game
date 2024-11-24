@@ -2182,8 +2182,8 @@ const database = [
         //BUFFS
         buff: 'Increase Spirit Defense by 10%',
         buff2: 'Decrease Spirit by 10%',
-        buff_acc: 60,
-        buff2_acc: 65,
+        buff_acc: 70,
+        buff2_acc: 70,
         image: 'https://tiermaker.com/images/media/template_images/2024/867926/jujutsu-kaisen-characters-show-867926/zzzzz-1707450329img7500.png'
     },
     {
@@ -3228,7 +3228,7 @@ const database = [
         spirit_def: 178,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
-        spirit_amount: 25,
+        spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 7,
@@ -3239,7 +3239,7 @@ const database = [
         gen_power: 90,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 10,
         drain: 6,
         //CURSE
         cursed_energy: 0,
@@ -3323,21 +3323,21 @@ const database = [
         cursed_tech: 'Brain-Manipulation - Decrease any stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 15,
+        curse_cost: 14,
         //DOMAIN
         dom_purity: 5,
         dom_lethal: 60,
         dom_duration: 10,
         dom_cost: 25,
         //NINJUTSU
-        ninjutsu2: 'Body-Alteration - Increase Weapon by 10%',
-        ninJutsu2cost: 14,
+        ninjutsu2: 'Body-Alteration - Increase Weapon by 15%',
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 145,
-        nin2amount: .10,
+        nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Hypnotic-Spell - Increase Lethal by 15",
-        nin_cost: 19,
+        nin_cost: 18,
         ninjutsu_pow: 0,
         ninamount: 15,
         ultEnhance: true,
@@ -3345,7 +3345,7 @@ const database = [
         buff: 'Increase Purity by 3',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 65,
-        buff2_acc: 60,
+        buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/7/72/Illumi_Zoldyck_HCE_Portrait.png/revision/latest/scale-to-width/360?cb=20181227022223'
     },
     {
@@ -3395,7 +3395,7 @@ const database = [
         cursed_tech: 'Brain-Manipulation - Decrease Any Stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 15,
+        curse_cost: 12,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -7236,9 +7236,9 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 80,
+        cursed_recovery: 70,
         negative_energy: 25,
-        cursed_tech: 'Malevolent Shrine - 20 | 30',
+        cursed_tech: 'Malevolent-Shrine - 20 | 30',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 20,
@@ -7891,7 +7891,7 @@ const database = [
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 66,
+        cursed_recovery: 54,
         negative_energy: 34,
         cursed_tech: 'Ten-Shadows-Technique',
         curse_amount: 0,
