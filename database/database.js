@@ -2240,22 +2240,22 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Scissors - Increase Strength by .20',
+        ninjutsu2: 'Scissors - Increase Strength by .35',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 165,
-        nin2amount: .20,
+        nin2amount: .35,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Stengthen Jajanken by 200 | Reduce Recovery by 2",
-        nin_cost: 35,
+        nin_cost: 31,
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Reovery by 1',
+        buff: 'Increase Evasion by 1',
         buff2: 'Decrease Defense by 10%',
-        buff_acc: 65,
-        buff2_acc: 60,
+        buff_acc: 85,
+        buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/3/3e/HxH2011_EP147_Gon_Portrait.png/revision/latest?cb=20230904181801'
     },
     {
@@ -2391,7 +2391,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Big-Bang-Impact - Decrease Defense by 70%",
-        nin_cost: 56,
+        nin_cost: 60,
         ninjutsu_pow: 650,
         ninamount: .70,
         ultEnhance: false,
@@ -3832,10 +3832,10 @@ const database = [
         curse_duration: 6,
         curse_cost: 15,
         //DOMAIN
-        dom_purity: 8,
+        dom_purity: 7,
         dom_lethal: 165,
         dom_duration: 6,
-        dom_cost: 28,
+        dom_cost: 36,
         //NINJUTSU
         ninjutsu2: 'Sand-Coffin - Increase Magic by 8%',
         ninJutsu2cost: 16,
@@ -4150,7 +4150,7 @@ const database = [
         elm: water,
         hp: 3464,
         //PHYSICAL
-        attack: 245,
+        attack: 240,
         defense: 211,
         critical: .15,
         strength: 1.85,
@@ -4181,11 +4181,11 @@ const database = [
         gen_power: 10,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 4,
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 45,
+        cursed_recovery: 25,
         negative_energy: 15,
         cursed_tech: 'Gorilla-Mode - Increase Critical to 60%',
         curse_amount: .42,
@@ -4642,10 +4642,10 @@ const database = [
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Doctor-Blythe - Recover 360 HP",
-        nin_cost: 26,
+        ninjutsu: "Doctor-Blythe - Recover 350 HP",
+        nin_cost: 27,
         ninjutsu_pow: 0,
-        ninamount: 360,
+        ninamount: 350,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Stun by 20%',
@@ -5121,7 +5121,7 @@ const database = [
         accuracy: 12,
         evasion: 9,
         luck: 6,
-        stun: .12,
+        stun: .10,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 60,
@@ -5133,8 +5133,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 25,
         negative_energy: 25,
-        cursed_tech: 'Fleadom - Increase Weapon by 55',
-        curse_amount: 55,
+        cursed_tech: 'Fleadom - Increase Weapon by 45',
+        curse_amount: 45,
         curse_duration: 6,
         curse_cost: 14,
         //DOMAIN
@@ -5143,10 +5143,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Satellitonbo - Increase Stun by 9%',
-        ninJutsu2cost: 15,
+        ninjutsu2: 'Satellitonbo - Increase Stun by 6%',
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 165,
-        nin2amount: .09,
+        nin2amount: .06,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Living-Dead-Dolls - Use Opponents Ninjutsu",
@@ -5424,20 +5424,20 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 20,
         negative_energy: 20,
-        cursed_tech: 'Idle-Death-Gamble - Devil Contract limit 700',
+        cursed_tech: 'Idle-Death-Gamble - Devil Contract limit 500',
         curse_amount: 0,
         curse_duration: 100,
-        curse_cost: 27,
+        curse_cost: 29,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Heal-Bite - Recover 330 HP ',
+        ninjutsu2: 'Heal-Bite - Recover 280 HP ',
         ninJutsu2cost: 16,
         ninJutsu2Dmg: 0,
-        nin2amount: 330,
+        nin2amount: 280,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Adamantine-Sealing-Chains - Reduce Recovery by 3",
@@ -5506,8 +5506,8 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Mystical-Palm - Recover 305 HP',
-        ninJutsu2cost: 17,
+        ninjutsu2: 'Mystical-Palm - Recover 275 HP',
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 0,
         nin2amount: 305,
         ninEnhance: true,
@@ -5658,7 +5658,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "I.R.S - Set Recovery to Zero",
-        nin_cost: 50,
+        nin_cost: 45,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
@@ -5796,10 +5796,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Bungee-Gum - Enhances Bungee Gum by 9%',
+        ninjutsu2: 'Bungee-Gum - Enhances Bungee Gum by 11%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 225,
-        nin2amount: .09,
+        nin2amount: .11,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Texture-Surprise - Half cost of Bungee Gum",
@@ -6774,7 +6774,7 @@ const database = [
         //MAGIC
         elm_attack: 228,
         elm_defense: 218,
-        elm_efficiency: 1.36,
+        elm_efficiency: 1.48,
         potency: .28,
         //WEAPON
         weapon: 192,
@@ -7031,14 +7031,14 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Machine-Gun - Heal 150 and Damage 150',
-        ninJutsu2cost: 17,
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 150,
         nin2amount: 150,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Artillary-Strike - Deal 425 Damage",
-        nin_cost: 27,
-        ninjutsu_pow: 425,
+        nin_cost: 30,
+        ninjutsu_pow: 500,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -7669,7 +7669,7 @@ const database = [
         gen_power: 50,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 8,
         drain: 5,
         //CURSE
         cursed_energy: 0,
@@ -7682,8 +7682,8 @@ const database = [
         //DOMAIN
         dom_purity: 14,
         dom_lethal: 200,
-        dom_duration: 6,
-        dom_cost: 40,
+        dom_duration: 8,
+        dom_cost: 42,
         //NINJUTSU
         ninjutsu2: 'Truth-Seeking-Orb - Reduce Chakra by 4',
         ninJutsu2cost: 16,
@@ -7951,7 +7951,7 @@ const database = [
         spirit_amount: 1.50,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 7,
+        evasion: 6,
         luck: 7,
         stun: .08,
         //GENJUTSU
@@ -7989,7 +7989,7 @@ const database = [
         //BUFFS
         buff: 'Sacrifice HP for Damage 1:1',
         buff2: 'Zero Recovery for both Parties',
-        buff_acc: 80,
+        buff_acc: 100,
         buff2_acc: 50,
         image: 'https://64.media.tumblr.com/7d17fca7613ae57ecde912d35c328101/434fe6cc15daf56c-6b/s1280x1920/8bf8bcb7aaf097c91e4286005cd128c7c4e4a5d8.jpg'
     },
@@ -8642,8 +8642,8 @@ const database = [
         //BUFFS
         buff: 'Blood Draw * 1/2',
         buff2: 'Pentagram full use of chakra',
-        buff_acc: 0,
-        buff2_acc: 0,
+        buff_acc: 80,
+        buff2_acc: 70,
         image: 'https://i.pinimg.com/474x/94/4a/97/944a97524606a98af81120fa453b07e6.jpg'
     },
     {
@@ -9118,7 +9118,7 @@ const database = [
         gen_power: 10,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 5,
         drain: 2,
         //CURSE
         cursed_energy: 0,
@@ -9141,7 +9141,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Machine-Triple-Shot - Trap Enemy and drain Recovery by 3",
-        nin_cost: 25,
+        nin_cost: 30,
         ninjutsu_pow: 150,
         ninamount: 3,
         ultEnhance: false,
