@@ -554,7 +554,7 @@ const database = [
         accuracy: 7,
         evasion: 5,
         luck: 8,
-        stun: .20,
+        stun: .15,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 50,
@@ -576,8 +576,8 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 10%',
-        ninJutsu2cost: 13,
+        ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 7%',
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 170,
         nin2amount: .10,
         ninEnhance: true,
@@ -2794,7 +2794,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 4,
-        stun: .05,
+        stun: .03,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 40,
@@ -3763,7 +3763,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Solo-Forbidden-Area - Increase any stat by 20%',
-        ninJutsu2cost: 24,
+        ninJutsu2cost: 22,
         ninJutsu2Dmg: 110,
         nin2amount: 20,
         ninEnhance: false,
@@ -3775,9 +3775,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Cursed Bomb Deal 600 Damage',
-        buff2: 'Increase Any Stat by 20%',
+        buff2: 'Increase Any Stat by 15%',
         buff_acc: 25,
-        buff2_acc: 100,
+        buff2_acc: 85,
         //image: 'https://www.nautiljon.com/images/perso/00/72/iori_utahime_20027.webp'
         image: 'https://preview.redd.it/what-kind-of-scar-does-utahime-have-v0-efrpgw7dxk5d1.jpg?width=640&crop=smart&auto=webp&s=a15aed4fed51acd355be951ee10eaa7b7c63f7fc'
     },
@@ -5217,10 +5217,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Mystical-Palm - Recover 390 HP',
-        ninJutsu2cost: 24,
+        ninjutsu2: 'Mystical-Palm - Recover 380 HP',
+        ninJutsu2cost: 28,
         ninJutsu2Dmg: 0,
-        nin2amount: 390,
+        nin2amount: 380,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Strength-of-a-Hundred-Seals - Increase all Defences by 15%",
@@ -6232,10 +6232,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Tailed-Beast-Beam - Increase Beam by 15%',
+        ninjutsu2: 'Tailed-Beast-Beam - Increase Beam by 16%',
         ninJutsu2cost: 24,
-        ninJutsu2Dmg: 230,
-        nin2amount: .15,
+        ninJutsu2Dmg: 290,
+        nin2amount: .16,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Tailed-Beast-Blast-Spheres - Decrease Defense by 20%",
@@ -7590,7 +7590,7 @@ const database = [
         accuracy: 15,
         evasion: 8,
         luck: 12,
-        stun: .10,
+        stun: .22,
         //GENJUTSU
         genjutsu: 0,
         gen_power: 60,
@@ -8845,19 +8845,19 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Polymath - Increase Core Stat by up to 20% then sacrifice',
-        ninJutsu2cost: 5,
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Phase-Bullets - Lower all Defences and Increase Stun",
-        nin_cost: 24,
+        nin_cost: 28,
         ninjutsu_pow: 260,
-        ninamount: .13,
+        ninamount: .14,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Strength by 40%',
-        buff2: 'Decrease Stun by 100%',
+        buff2: 'Decrease Stun by .10 (Hatsu)%',
         buff_acc: 60,
         buff2_acc: 100,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/3/3d/GingAv.png/revision/latest?cb=20181125230438'
