@@ -1719,6 +1719,7 @@
                 }
                 if (spirit.includes(curse)) {
                     redSpirit = redSpirit * Math.floor(1 + amount)
+                    $('#redSpirit').text(redSpirit)
                 }
                 if (ninjutsuStr.includes(curse)) {
                     redNenNinDmg += amount
@@ -2002,6 +2003,7 @@
                 }
                 if (spirit.includes(curse)) {
                     blueSpirit = blueSpirit * Math.floor(1 + amount)
+                    $('#blueSpirit').text(blueSpirit)
                 }
                 if (currBlueCurse < cost) {
                     alert('Not enough curse energy')

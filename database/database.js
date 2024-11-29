@@ -7238,7 +7238,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 70,
         negative_energy: 25,
-        cursed_tech: 'Malevolent-Shrine - 20 | 30',
+        cursed_tech: 'Malevolent-Shrine - 20 (Weapon) | 30 (Damage)',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 20,
@@ -8923,10 +8923,10 @@ const database = [
         nin2amount: 4,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Senjutsu - Recover 500 HP",
+        ninjutsu: "Senjutsu - Recover 450 HP",
         nin_cost: 35,
         ninjutsu_pow: 0,
-        ninamount: 500,
+        ninamount: 450,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
