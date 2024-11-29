@@ -727,9 +727,9 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
-        nin_cost: 22,
+        nin_cost: 28,
         ninjutsu_pow: 285,
-        ninamount: .40,
+        ninamount: .45,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Chakra Recovery by 2',
@@ -8563,7 +8563,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Big-Ball-Rasengan - Decrease Defense by 15%",
-        nin_cost: 20,
+        nin_cost: 24,
         ninjutsu_pow: 260,
         ninamount: .15,
         ultEnhance: false,
