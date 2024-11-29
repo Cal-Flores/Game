@@ -237,7 +237,7 @@
             let spiritAmount = ['Resonance']
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang', 'Indras-Arrow']
-            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken']
+            let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken', 'Heat']
             let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot']
             let luck = []
             // genjutsu
@@ -245,7 +245,7 @@
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon', 'Heat']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -678,15 +678,15 @@
                 if (curseRec.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
-                            redCurseRec = redCurseRec + amount;
+                            redCurseRec += amount;
                         } else {
-                            blueCurseRec = blueCurseRec - amount
+                            blueCurseRec -= amount
                         }
                     } else if (attacker == 'blue') {
                         if (enhance) {
-                            blueCurseRec = blueCurseRec + amount
+                            blueCurseRec += amount
                         } else {
-                            redCurseRec = redCurseRec - amount
+                            redCurseRec -= amount
                         }
                     }
                     alert(`Red Curse: ${redCurseRec}, Blue Curse ${blueCurseRec}`)
@@ -869,7 +869,7 @@
                     let hakDamage = 0
                     let mult = 9;
                     if (jutsu == 'Uzumaki') {
-                        mult = 11
+                        mult = 7
                     }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
@@ -916,7 +916,7 @@
                     $('#redHP').text(Math.floor(currRedHp))
                     $('#blueHP').text(Math.floor(currBlueHp))
                 }
-                if (jutsu == 'Psychometry' || jutsu == 'Spiritual Message') {
+                if (jutsu == 'Psychometry' || jutsu == 'Spiritual-Message' || jutsu == 'Iron-Sand') {
                     genjutsuAttack(10, 0, attacker)
                 }
                 //chrollo
@@ -1638,6 +1638,11 @@
             if (isHit) {
                 alert('"Youre Already Under My GenJutsu.."')
                 let statusEffect = prompt("Choose a status effect to apply: Darkness (6), Silence (6), Zombie (8), Ultima (15), Flare(15), Tsukuyomi (20), Kotoamatsukami (30)");
+                if (attacker == 'red') {
+                    color = 'blue'
+                } else {
+                    color = 'red'
+                }
                 applyStatusEffect(color, statusEffect); // Apply effect to the defender
             } else {
                 alert('GenJutsu of that level doesnt work on me')
@@ -1957,6 +1962,9 @@
                     }
 
                 }
+                if (curse == 'Steam-Emission') {
+                    redRecovery = 0;
+                }
                 if (megumi.includes(curse)) {
                     curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (30)')
                     if (curse == 'Rabbit Escape') {
@@ -2081,6 +2089,9 @@
                 if (domDuration1.includes(curse)) {
                     blueDomDuration += amount
                     $('#blue_dom_duration').text(blueDomDuration)
+                }
+                if (curse == 'Steam-Emission') {
+                    blueRecovery = 0;
                 }
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
@@ -2298,6 +2309,7 @@
                 }
                 if (weapon.includes(curse)) {
                     redWeapon -= amount
+                    $('#redWeapon').text(redWeapon)
                 }
                 if (evasion.includes(curse)) {
                     redEvas -= amount
@@ -2350,6 +2362,9 @@
                 if (domDuration1.includes(curse)) {
                     redDomDuration -= amount;
                     $('#red_dom_duration').text(redDomDuration);
+                }
+                if (curse == 'Steam-Emission') {
+                    redRecovery = 8;
                 }
                 if (black.includes(curse)) {
                     if (blackTech == 'Black-Flash') {
@@ -2439,6 +2454,7 @@
                 }
                 if (weapon.includes(curse)) {
                     blueWeapon -= amount;
+                    $('#blueWeapon').text(blueWeapon)
                 }
                 if (stunn.includes(curse)) {
                     blueStun -= amount
@@ -2497,6 +2513,9 @@
                 if (domDuration1.includes(curse)) {
                     blueDomDuration -= amount;
                     $('#blue_dom_duration').text(blueDomDuration);
+                }
+                if (curse == 'Steam-Emission') {
+                    blueRecovery = 8;
                 }
                 if (black.includes(curse)) {
                     if (blackTech == 'Black-Flash') {
@@ -3898,6 +3917,16 @@
                     let light = ['Silence', 'Darkness', 'Confusion', 'Paralysis', 'Zombie']
                     let statusEffect = prompt("Choose a status effect to apply: Darkness (6), Silence (6), Zombie (6), Ultima (15), Flare(15), Tsukuyomi (15), Izanagi (15), Kotoamatsukami (18)");
                     // Determine the current chakra variable and decrement it
+                    if (statusEffect == 'Confusion') {
+                        if (attacker == 'red') {
+                            applyStatusEffect('blue', statusEffect);
+                            alert('Blue is Confused!!')
+                        } else {
+                            applyStatusEffect('red', statusEffect);
+                            alert('Red is Confused!!')
+                        }
+                        return
+                    }
                     if (attacker === 'red') {
                         // Check if Red has enough chakra for the attack
                         let requiredChakra = 0;
