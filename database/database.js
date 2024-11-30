@@ -3953,7 +3953,7 @@ const database = [
         spirit: 268,
         spirit_def: 155,
         spirit_crit: .22,
-        spiritCurse: 'C-Def',
+        spiritCurse: 'S-Def',
         spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 5,
@@ -3982,7 +3982,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Rage-Blast - Decrease S.Def by 20%',
-        ninJutsu2cost: 25,
+        ninJutsu2cost: 26,
         ninJutsu2Dmg: 260,
         nin2amount: .20,
         ninEnhance: false,
@@ -4369,23 +4369,23 @@ const database = [
         hp: 3500,
         //PHYSICAL
         attack: 275,
-        defense: 235,
+        defense: 225,
         critical: .20,
         strength: 1.6,
         //MAGIC
         elm_attack: 270,
-        elm_defense: 220,
+        elm_defense: 210,
         elm_efficiency: 1.5,
         potency: .30,
         //WEAPON
         weapon: 140,
-        shield: 230,
+        shield: 210,
         curse_crit: .10,
         weaponCurse: 'Def',
         weapon_amount: 30,
         //SPIRIT
-        spirit: 263,
-        spirit_def: 215,
+        spirit: 223,
+        spirit_def: 205,
         spirit_crit: .22,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -8328,7 +8328,7 @@ const database = [
         cursed_tech: 'Transfiguration',
         curse_amount: 0,
         curse_duration: 6,
-        curse_cost: 10,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 8,
         dom_lethal: 90,
