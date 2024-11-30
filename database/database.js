@@ -7031,7 +7031,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Machine-Gun - Heal 150 and Damage 150',
-        ninJutsu2cost: 20,
+        ninJutsu2cost: 25,
         ninJutsu2Dmg: 150,
         nin2amount: 150,
         ninEnhance: true,

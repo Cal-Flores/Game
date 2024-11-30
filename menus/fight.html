@@ -3719,7 +3719,7 @@
                             }
                         }
 
-                        let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redSpirit * damageReductionFactor))) * (1 + variance)));
+                        let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redTalis * damageReductionFactor))) * (1 + variance)));
                         damage = Math.floor(damage * extraDmg)
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
