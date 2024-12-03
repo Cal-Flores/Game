@@ -4150,7 +4150,7 @@ const database = [
         elm: water,
         hp: 3464,
         //PHYSICAL
-        attack: 240,
+        attack: 230,
         defense: 211,
         critical: .15,
         strength: 1.85,
@@ -6288,7 +6288,7 @@ const database = [
         gen_power: 50,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 5,
         drain: 7,
         //CURSE
         cursed_energy: 0,
@@ -6310,8 +6310,8 @@ const database = [
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Damage is reversed to Health",
-        nin_cost: 25,
+        ninjutsu: "Reverse-Curse-Technique - Damage is reversed to Health 1.5",
+        nin_cost: 35,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
