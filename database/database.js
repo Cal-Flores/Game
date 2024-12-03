@@ -4078,13 +4078,13 @@ const database = [
         elm: grass,
         hp: 3489,
         //PHYSICAL
-        attack: 248,
+        attack: 226,
         defense: 218,
-        critical: .12,
+        critical: .10,
         strength: 2.25,
         //MAGIC
         elm_attack: 134,
-        elm_defense: 196,
+        elm_defense: 191,
         elm_efficiency: 1.07,
         potency: .07,
         //WEAPON
@@ -4120,7 +4120,7 @@ const database = [
         curse_duration: 6,
         curse_cost: 14,
         //DOMAIN
-        dom_purity: 7,
+        dom_purity: 4,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
@@ -4483,7 +4483,7 @@ const database = [
         negative_energy: 11,
         cursed_tech: 'Flying-Rajin - Increase Stun to 50%',
         curse_amount: .46,
-        curse_duration: 8,
+        curse_duration: 6,
         curse_cost: 24,
         //DOMAIN
         dom_purity: 4,
@@ -4642,10 +4642,10 @@ const database = [
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Doctor-Blythe - Recover 350 HP",
-        nin_cost: 27,
+        ninjutsu: "Doctor-Blythe - Recover 320 HP",
+        nin_cost: 29,
         ninjutsu_pow: 0,
-        ninamount: 350,
+        ninamount: 320,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Stun by 20%',
@@ -4731,7 +4731,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Wood',
         elm: wood,
-        hp: 3480,
+        hp: 3465,
         //PHYSICAL
         attack: 248,
         defense: 160,
@@ -4756,7 +4756,7 @@ const database = [
         spirit_amount: 1.25,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 10,
+        evasion: 9,
         luck: 5,
         stun: .04,
         //GENJUTSU
@@ -4764,7 +4764,7 @@ const database = [
         gen_power: 0,
         willpower: 0,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 4,
         drain: 0,
         //CURSE
         cursed_energy: 0,
@@ -4794,7 +4794,7 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 5',
         buff2: 'Decrease Critical by 80%',
-        buff_acc: 50,
+        buff_acc: 45,
         buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/b7/a1/0b/b7a10b1beda89afa5d5d61cca9e9f35d.jpg'
     },
@@ -4991,7 +4991,7 @@ const database = [
         curse_duration: 3,
         curse_cost: 15,
         //DOMAIN
-        dom_purity: 0,
+        dom_purity: 4,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
@@ -5002,10 +5002,10 @@ const database = [
         nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Regeneration - Recover 375 HP",
-        nin_cost: 28,
+        ninjutsu: "Regeneration - Recover 345 HP",
+        nin_cost: 30,
         ninjutsu_pow: 0,
-        ninamount: 375,
+        ninamount: 345,
         ultEnhance: true,
         //BUFFS
         buff: 'Double Critical',
@@ -5870,7 +5870,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Flying-Swallow - Increase Swallow damage by 40%',
         ninJutsu2cost: 30,
-        ninJutsu2Dmg: 230,
+        ninJutsu2Dmg: 300,
         nin2amount: .40,
         ninEnhance: true,
         //ULTIMATE
@@ -6062,8 +6062,8 @@ const database = [
         //SPEED / LUCK
         accuracy: 6,
         evasion: 3,
-        luck: 7,
-        stun: .05,
+        luck: 4,
+        stun: .04,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 20,
@@ -6099,7 +6099,7 @@ const database = [
         //BUFFS
         buff: 'Negate Magic Efficiency',
         buff2: 'Decrease Evasion by 3',
-        buff_acc: 70,
+        buff_acc: 50,
         buff2_acc: 60,
         image: 'https://64.media.tumblr.com/d49f2f2e0ff3e5b387225b4c2156f1a7/ec7fcc889a68343d-94/s540x810/e0c67f043cd465e14e4cf4acd24f59c688c1e284.jpg'
     },
@@ -7299,7 +7299,7 @@ const database = [
         spirit_amount: 1.25,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 4,
+        evasion: 6,
         luck: 8,
         stun: .07,
         //GENJUTSU
@@ -7315,8 +7315,8 @@ const database = [
         negative_energy: 30,
         cursed_tech: 'Emperor-Time - Increase Chain Jail Duration to 3',
         curse_amount: 0,
-        curse_duration: 15,
-        curse_cost: 30,
+        curse_duration: 10,
+        curse_cost: 28,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 110,
@@ -7330,7 +7330,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Holy-Chain - Recover 385 HP",
-        nin_cost: 22,
+        nin_cost: 27,
         ninjutsu_pow: 0,
         ninamount: 385,
         ultEnhance: true,
@@ -7588,9 +7588,9 @@ const database = [
         spirit_amount: 1.29,
         //SPEED / LUCK
         accuracy: 15,
-        evasion: 8,
+        evasion: 4,
         luck: 12,
-        stun: .22,
+        stun: .28,
         //GENJUTSU
         genjutsu: 0,
         gen_power: 60,
@@ -7605,12 +7605,12 @@ const database = [
         cursed_tech: 'Invincibility - Phase through Ninjutsu Attacks',
         curse_amount: 0,
         curse_duration: 8,
-        curse_cost: 10,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 13,
         dom_lethal: 200,
         dom_duration: 4,
-        dom_cost: 25,
+        dom_cost: 30,
         //NINJUTSU
         ninjutsu2: 'Control - Use the opponnents next turn',
         ninJutsu2cost: 10,
@@ -7619,7 +7619,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Force-Manipulation - Deal 300 Damage",
-        nin_cost: 18,
+        nin_cost: 24,
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: false,
@@ -7678,12 +7678,12 @@ const database = [
         cursed_tech: 'Cursed-Gunbai - Reflect Damage Back',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 11,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 14,
         dom_lethal: 200,
         dom_duration: 8,
-        dom_cost: 42,
+        dom_cost: 50,
         //NINJUTSU
         ninjutsu2: 'Truth-Seeking-Orb - Reduce Chakra by 4',
         ninJutsu2cost: 16,

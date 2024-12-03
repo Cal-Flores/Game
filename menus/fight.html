@@ -3313,6 +3313,10 @@
                 if (curse == 'Spirit') {
                     blueSpirit += amount
                 }
+                if (curse == 'Lethal') {
+                    redDomLethal += amount;
+                    alert(`Lethal Increases by ${amount}`)
+                }
             }
 
             if (attacker == 'red') {
@@ -3370,6 +3374,10 @@
                 }
                 if (curse == 'Spirit') {
                     redSpirit += amount
+                }
+                if (curse == 'Lethal') {
+                    blueDomLethal += amount;
+                    alert(`Lethal Increases by ${amount}`)
                 }
             }
             // UPDATE U.I
