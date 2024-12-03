@@ -560,7 +560,7 @@ const database = [
         gen_power: 50,
         willpower: 2,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 5,
         drain: 6,
         //CURSE
         cursed_energy: 0,
@@ -577,7 +577,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 7%',
-        ninJutsu2cost: 12,
+        ninJutsu2cost: 13,
         ninJutsu2Dmg: 170,
         nin2amount: .10,
         ninEnhance: true,
@@ -3318,17 +3318,17 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 55,
+        cursed_recovery: 40,
         negative_energy: 30,
         cursed_tech: 'Brain-Manipulation - Decrease any stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 14,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 5,
-        dom_lethal: 60,
+        dom_lethal: 40,
         dom_duration: 10,
-        dom_cost: 25,
+        dom_cost: 27,
         //NINJUTSU
         ninjutsu2: 'Body-Alteration - Increase Weapon by 15%',
         ninJutsu2cost: 16,
@@ -3337,12 +3337,12 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Hypnotic-Spell - Increase Lethal by 15",
-        nin_cost: 18,
+        nin_cost: 22,
         ninjutsu_pow: 0,
         ninamount: 15,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Purity by 3',
+        buff: 'Increase Purity by 2',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 65,
         buff2_acc: 70,
@@ -4519,7 +4519,7 @@ const database = [
         //PHYSICAL
         attack: 144,
         defense: 196,
-        critical: .65,
+        critical: .15,
         strength: 1.25,
         //MAGIC
         elm_attack: 163,

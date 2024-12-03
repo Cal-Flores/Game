@@ -1918,10 +1918,11 @@
                     let curse = prompt('Maximum: Uzumaki |  Antigravity System');
                     if (curse == 'Maximum: Uzumaki') {
                         duration = 1
+                        newCurse = 0;
                         let uzuCurse = parseInt($('#redCurrCurse').text(), 10)
                         let uzuHp = parseInt($('#blueHP').text(), 10);
-                        let health = Math.floor(uzuHp - (uzuCurse * 8))
-                        alert(`Maximum Damage: ${uzuCurse * 8}`)
+                        let health = Math.floor(uzuHp - (uzuCurse * 7))
+                        alert(`Maximum Damage:${uzuCurse * 7}`)
                         $('#blueHP').text(health)
                     } else if (curse == 'Antigravity System') {
                         duration = 3
@@ -2232,6 +2233,7 @@
                         let health = Math.floor(uzuHp - (uzuCurse * 8))
                         alert(`Maximum Damage: ${uzuCurse * 8}`)
                         $('#redHP').text(health)
+                        $('#blueCurrCurse').text(0)
                     } else if (curse == 'Antigravity System') {
                         duration = 3
                         currBlueCurse -= 25;
