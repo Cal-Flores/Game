@@ -7893,7 +7893,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 54,
         negative_energy: 34,
-        cursed_tech: 'Ten-Shadows-Technique',
+        cursed_tech: 'Ten-Shadows-Technique 15 | 20 | 30',
         curse_amount: 0,
         curse_duration: 1,
         curse_cost: 15,
