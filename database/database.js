@@ -290,17 +290,17 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'En-Strike - Decrease Attack by 5%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 150,
+        ninJutsu2Dmg: 190,
         nin2amount: .05,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Iaidō-Master - Decrease Magic by 5%",
         nin_cost: 15,
-        ninjutsu_pow: 150,
+        ninjutsu_pow: 190,
         ninamount: .05,
         ultEnhance: false,
         //BUFFS
-        buff: 'Double Domain Purity',
+        buff: 'Increase Domain Purity by 4',
         buff2: 'Decrease Spirit Defense by 10%',
         buff_acc: 70,
         buff2_acc: 85,
@@ -344,7 +344,7 @@ const database = [
         gen_power: 15,
         willpower: 2,
         chakra: 0,
-        chakra_rec: 2,
+        chakra_rec: 3,
         drain: 4,
         //CURSE
         cursed_energy: 0,
@@ -1524,9 +1524,9 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heart-Mask - Recover 400 HP",
-        nin_cost: 28,
+        nin_cost: 33,
         ninjutsu_pow: 0,
-        ninamount: 400,
+        ninamount: 415,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 3',
@@ -1745,8 +1745,8 @@ const database = [
         ninamount: .25,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Weapon by 30%',
-        buff2: 'Decrease Shield by 30%',
+        buff: 'Increase Weapon by 25%',
+        buff2: 'Decrease Shield by 20%',
         buff_acc: 75,
         buff2_acc: 75,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/62/HxH2011_EP58_Franklin_Portrait.png/revision/latest?cb=20230122063251'
@@ -1889,7 +1889,7 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        buff: 'Stun rate plus .20',
+        buff: 'Stun rate plus .18',
         buff2: 'Decrease Willpower by 4',
         buff_acc: 55,
         buff2_acc: 60,
@@ -2174,7 +2174,7 @@ const database = [
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Heal Previous Damage",
+        ninjutsu: "Reverse-Curse-Technique - Heal Previous Damage 1.5",
         nin_cost: 28,
         ninjutsu_pow: 0,
         ninamount: 0,
@@ -6019,8 +6019,8 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Shadow-Neck-Breaking - Increase Shadow by 1 turn | Double Shadow damage",
-        nin_cost: 36,
-        ninjutsu_pow: 180,
+        nin_cost: 28,
+        ninjutsu_pow: 220,
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
@@ -6233,7 +6233,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Tailed-Beast-Beam - Increase Beam by 16%',
-        ninJutsu2cost: 24,
+        ninJutsu2cost: 30,
         ninJutsu2Dmg: 290,
         nin2amount: .16,
         ninEnhance: true,
@@ -6747,9 +6747,9 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Spectral-Curse - Increase Ghost Power by 20%",
-        nin_cost: 20,
+        nin_cost: 25,
         ninjutsu_pow: 0,
-        ninamount: .20,
+        ninamount: .50,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Attack by 70%',
@@ -8183,7 +8183,7 @@ const database = [
         negative_energy: 45,
         cursed_tech: 'Eight-Branch-Snake-Technique - Increase Magic to 350',
         curse_amount: 158,
-        curse_duration: 10,
+        curse_duration: 12,
         curse_cost: 30,
         //DOMAIN
         dom_purity: 4,
@@ -8192,8 +8192,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'White-Snake - Damage a Stat by 10%',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 145,
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 175,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
@@ -8203,7 +8203,7 @@ const database = [
         ninamount: .20,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Evasion by 2',
+        buff: 'Increase Evasion by 3',
         buff2: 'Decrease Evasion by 3',
         buff_acc: 70,
         buff2_acc: 60,
@@ -8628,10 +8628,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Jahshins-Curse - 150 Health | 150 Damage',
+        ninjutsu2: 'Jahshins-Curse - 100 Health | 100 Damage',
         ninJutsu2cost: 20,
-        ninJutsu2Dmg: 150,
-        nin2amount: 150,
+        ninJutsu2Dmg: 100,
+        nin2amount: 100,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Sacrifice - Decrease any stat by 30%",
