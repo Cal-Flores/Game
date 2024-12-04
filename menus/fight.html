@@ -238,7 +238,7 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang', 'Indras-Arrow']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken', 'Heat']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot', 'I.R.S']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -263,7 +263,7 @@
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
-            let special = ['I.R.S', 'Uzumaki']
+            let special = [, 'Uzumaki']
             let absorb = ['Cursed-Spirit-Manipulation']
             let setNin = ['Hakoware'] //ie SET CHAKRA TO 0
 
@@ -867,7 +867,7 @@
                     let currredHp = parseInt($('#redHP').text(), 10)
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     let hakDamage = 0
-                    let mult = 7;
+                    let mult = 9;
                     if (jutsu == 'Uzumaki') {
                         mult = 7
                     }

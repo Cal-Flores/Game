@@ -2888,10 +2888,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Ice-Fist - Increase Attack by 12%',
-        ninJutsu2cost: 15,
+        ninjutsu2: 'Ice-Fist - Increase Attack by 9%',
+        ninJutsu2cost: 14,
         ninJutsu2Dmg: 170,
-        nin2amount: .12,
+        nin2amount: .09,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Ice-Harden - Increase Shield 15%",
@@ -4481,10 +4481,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 34,
         negative_energy: 11,
-        cursed_tech: 'Flying-Rajin - Increase Stun to 50%',
-        curse_amount: .46,
+        cursed_tech: 'Flying-Rajin - Increase Stun to 55%',
+        curse_amount: .51,
         curse_duration: 6,
-        curse_cost: 24,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5658,9 +5658,9 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "I.R.S - Set Recovery to Zero",
-        nin_cost: 45,
+        nin_cost: 50,
         ninjutsu_pow: 0,
-        ninamount: 0,
+        ninamount: 20,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Critical by 80%',
@@ -6807,7 +6807,7 @@ const database = [
         cursed_tech: 'Kamui - Warp away any Damage',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 20,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -7319,7 +7319,7 @@ const database = [
         curse_cost: 28,
         //DOMAIN
         dom_purity: 7,
-        dom_lethal: 110,
+        dom_lethal: 145,
         dom_duration: 5,
         dom_cost: 12,
         //NINJUTSU
@@ -8620,18 +8620,18 @@ const database = [
         negative_energy: 35,
         cursed_tech: 'Miracle - Raise Luck to 15',
         curse_amount: 8,
-        curse_duration: 10,
-        curse_cost: 25,
+        curse_duration: 6,
+        curse_cost: 27,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Jahshins-Curse - 100 Health | 100 Damage',
-        ninJutsu2cost: 20,
+        ninjutsu2: 'Jahshins-Curse - 150 Health | 100 Damage',
+        ninJutsu2cost: 25,
         ninJutsu2Dmg: 100,
-        nin2amount: 100,
+        nin2amount: 150,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Sacrifice - Decrease any stat by 30%",
