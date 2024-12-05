@@ -259,7 +259,7 @@
             let ultDamage = []
             let ging = ['Polymath']
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse', 'Senjutsu']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Kamui', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui']
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -869,7 +869,7 @@
                     let hakDamage = 0
                     let mult = 9;
                     if (jutsu == 'Uzumaki') {
-                        mult = 7
+                        mult = 8
                     }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
@@ -996,8 +996,8 @@
                     let slot = Math.floor(Math.random() * 6) + 1
                     if (attacker == 'red') {
                         if (slot == 1) {
-                            alert('🤡 1 🤡 Force Field: Opponent has ZERO Recovery!')
-                            blueRecovery = 0;
+                            blueRecovery -= 20;
+                            alert(`🤡 1 🤡 Force Field: Opponent has ZERO Recovery! ${blueRecovery}`)
                         } else if (slot == 2) {
                             alert('🤡 2 🤡 Devestating Roll! SCYTHE')
                             redWeapon = 285;
@@ -1018,8 +1018,8 @@
                         }
                     } else {
                         if (slot == 1) {
-                            alert('🤡 1 🤡 Force Field: Opponent has ZERO Recovery!')
-                            RedRecovery = 0;
+                            redRecovery -= 20;
+                            alert(`🤡 1 🤡 Force Field: Opponent has ZERO Recovery! ${redRecovery}`)
                         } else if (slot == 2) {
                             alert('🤡 2 🤡 Devestating Roll! SCYTHE')
                             blueWeapon = 285;
@@ -1656,7 +1656,7 @@
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
         const magic_defense = ["Simple-Barrier",];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum', 'Eight-Branch-Snake-Technique']
-        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido', 'Fun-Fun-Cloth', 'Kamui'];
+        const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido', 'Fun-Fun-Cloth', 'Kamuii'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb', 'Straw-Doll-Technique']; //** NEW please add me**
         const luck = ["Miracle"];
         const weapon = ['Overtime', 'Devil-Transformation', 'Soul-Forge', 'Cursed-Construction', 'Fleadom', 'Garuda', 'Sword-Option']
@@ -1903,7 +1903,7 @@
                     if (curse == 'Idle-Transfiguration') {
                         buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     } else {
-                        currRedCurse -= 18;
+                        currRedCurse -= 12;
                         redAttack += 70;
                         redCrit += .20;
                         $('#redAttack').text(redAttack)
@@ -1968,7 +1968,7 @@
                     redRecovery = 0;
                 }
                 if (megumi.includes(curse)) {
-                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (30)')
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
                     if (curse == 'Rabbit Escape') {
                         duration = 1;
                         alert('Rabbits have hidden Megumi!')
@@ -1984,7 +1984,7 @@
                         redAttack += 150;
                         redStrength += .50
                         $('#redAttack').text(redAttack);
-                        currRedCurse -= 15;
+                        currRedCurse -= 10;
                         $('#redCurrCurse').text(currRedCurse)
                     }
                     redCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -2197,7 +2197,7 @@
                     if (cursed == 'Idle-Transfiguration') {
                         buff(100, 'und', 0, 0, 'MISC', 'no', 'no')
                     } else {
-                        currBlueCurse -= 18;
+                        currBlueCurse -= 12;
                         blueAttack += 70;
                         blueCrit += .20;
                         $('#blueAttack').text(blueAttack)
@@ -2261,7 +2261,7 @@
                     return;
                 }
                 if (megumi.includes(curse)) {
-                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (30)')
+                    curse = prompt('Rabbit Escape (15) | Nue (20) | Divine Dogs (25)')
                     if (curse == 'Rabbit Escape') {
                         duration = 1;
                         alert('Rabbits have hidden Megumi!')
@@ -2277,7 +2277,7 @@
                         blueAttack += 150;
                         blueStrength += .50
                         $('#blueAttack').text(blueAttack);
-                        currBlueCurse -= 15;
+                        currBlueCurse -= 10;
                         $('#blueCurrCurse').text(currBlueCurse)
                     }
                     blueCurses.push({ name: curse, turnsLeft: duration, amount })
@@ -3314,7 +3314,7 @@
                     blueSpirit += amount
                 }
                 if (curse == 'Lethal') {
-                    redDomLethal += amount;
+                    blueDomLethal += amount;
                     alert(`Lethal Increases by ${amount}`)
                 }
             }
@@ -3376,7 +3376,7 @@
                     redSpirit += amount
                 }
                 if (curse == 'Lethal') {
-                    blueDomLethal += amount;
+                    redDomLethal += amount;
                     alert(`Lethal Increases by ${amount}`)
                 }
             }

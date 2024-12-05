@@ -539,7 +539,7 @@ const database = [
         elm_efficiency: 1.18,
         potency: .10,
         //WEAPON
-        weapon: 237,
+        weapon: 234,
         shield: 123,
         curse_crit: .20,
         weaponCurse: 'Magic',
@@ -1018,7 +1018,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Curse-Devil Contract I - Halve Any stat",
-        nin_cost: 70,
+        nin_cost: 77,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
@@ -1523,8 +1523,8 @@ const database = [
         nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Heart-Mask - Recover 400 HP",
-        nin_cost: 33,
+        ninjutsu: "Heart-Mask - Recover 415 HP",
+        nin_cost: 32,
         ninjutsu_pow: 0,
         ninamount: 415,
         ultEnhance: true,
@@ -2798,7 +2798,7 @@ const database = [
         //GENJUTSU
         genjutsu: 2,
         gen_power: 40,
-        willpower: 5,
+        willpower: 3,
         chakra: 0,
         chakra_rec: 7,
         drain: 2,
@@ -2811,7 +2811,7 @@ const database = [
         curse_duration: 6,
         curse_cost: 18,
         //DOMAIN
-        dom_purity: 7,
+        dom_purity: 3,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
@@ -2832,7 +2832,8 @@ const database = [
         buff2: 'Decrease Curse Recovery by 15',
         buff_acc: 80,
         buff2_acc: 50,
-        image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/117715424_339264554120736_6396455950920254671_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-s3eV__-XrgQ7kNvgHGm9UX&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=ASWUucZtc60dg1RiUkPUVWP&oh=00_AYA_okgp2TdAMkImBh674qHd8ZR6Lh_wkPygOGxjquEF9A&oe=6749CE72'
+        image: 'https://i.pinimg.com/736x/be/83/a3/be83a3dbe41797e6932cba2c2b84d7db.jpg'
+        //image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/117715424_339264554120736_6396455950920254671_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-s3eV__-XrgQ7kNvgHGm9UX&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=ASWUucZtc60dg1RiUkPUVWP&oh=00_AYA_okgp2TdAMkImBh674qHd8ZR6Lh_wkPygOGxjquEF9A&oe=6749CE72'
     },
     {
         name: 'Female Titan',
@@ -2963,13 +2964,13 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Rasengan - Decrease Curse Recovery by 8',
         ninJutsu2cost: 12,
-        ninJutsu2Dmg: 170,
+        ninJutsu2Dmg: 210,
         nin2amount: 8,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rasenshuriken - Decrease Defense by 30%",
         nin_cost: 28,
-        ninjutsu_pow: 335,
+        ninjutsu_pow: 345,
         ninamount: .30,
         ultEnhance: false,
         //BUFFS
@@ -4167,7 +4168,7 @@ const database = [
         weapon_amount: 15,
         //SPIRIT
         spirit: 138,
-        spirit_def: 220,
+        spirit_def: 204,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -4373,10 +4374,10 @@ const database = [
         critical: .20,
         strength: 1.6,
         //MAGIC
-        elm_attack: 270,
+        elm_attack: 260,
         elm_defense: 210,
         elm_efficiency: 1.5,
-        potency: .30,
+        potency: .20,
         //WEAPON
         weapon: 140,
         shield: 210,
@@ -4384,8 +4385,8 @@ const database = [
         weaponCurse: 'Def',
         weapon_amount: 30,
         //SPIRIT
-        spirit: 223,
-        spirit_def: 205,
+        spirit: 203,
+        spirit_def: 175,
         spirit_crit: .22,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -4405,8 +4406,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 10,
         negative_energy: 3,
-        cursed_tech: 'Flash - Increase stun to 60%',
-        curse_amount: .55,
+        cursed_tech: 'Flash - Increase stun to 45%',
+        curse_amount: .40,
         curse_duration: 6,
         curse_cost: 15,
         //DOMAIN
@@ -4648,7 +4649,7 @@ const database = [
         ninamount: 320,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Stun by 20%',
+        buff: 'Increase Stun by 18%',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 50,
         buff2_acc: 50,
@@ -4734,17 +4735,17 @@ const database = [
         hp: 3465,
         //PHYSICAL
         attack: 248,
-        defense: 160,
+        defense: 150,
         critical: .16,
         strength: 1.45,
         //MAGIC
         elm_attack: 235,
-        elm_defense: 143,
+        elm_defense: 133,
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
         weapon: 224,
-        shield: 137,
+        shield: 127,
         curse_crit: .15,
         weaponCurse: 'Potency',
         weapon_amount: .10,
@@ -4755,7 +4756,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 4,
         evasion: 9,
         luck: 5,
         stun: .04,
@@ -4794,7 +4795,7 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 5',
         buff2: 'Decrease Critical by 80%',
-        buff_acc: 45,
+        buff_acc: 50,
         buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/b7/a1/0b/b7a10b1beda89afa5d5d61cca9e9f35d.jpg'
     },
@@ -4877,9 +4878,9 @@ const database = [
         elm: fighter,
         hp: 2988,
         //PHYSICAL
-        attack: 230,
+        attack: 226,
         defense: 157,
-        critical: .70,
+        critical: .40,
         strength: 1.3,
         //MAGIC
         elm_attack: 154,
@@ -4925,20 +4926,20 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Jaws - Increase Weapon by 5%',
-        ninJutsu2cost: 15,
+        ninJutsu2cost: 18,
         ninJutsu2Dmg: 185,
         nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Cystal-Claws - Increase Wither Amount",
-        nin_cost: 15,
+        nin_cost: 18,
         ninjutsu_pow: 200,
         ninamount: 10,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Stun by 20%',
+        buff: 'Increase Stun by 14%',
         buff2: 'Decrease Weapon by 15%',
-        buff_acc: 65,
+        buff_acc: 58,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/shingekinokyojin/images/d/da/Jaw_Titan_%28Anime%29_character_image_%28Porco_Galliard%29.png/revision/latest?cb=20201220224328'
     },
@@ -4984,12 +4985,12 @@ const database = [
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 45,
+        cursed_recovery: 40,
         negative_energy: 21,
         cursed_tech: 'Kamui - Intangibility for 1 Turn',
         curse_amount: 0,
         curse_duration: 3,
-        curse_cost: 15,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5002,7 +5003,7 @@ const database = [
         nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Regeneration - Recover 345 HP",
+        ninjutsu: "Regeneration - Recover 325 HP",
         nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: 345,
@@ -5340,13 +5341,13 @@ const database = [
         accuracy: 6,
         evasion: 8,
         luck: 5,
-        stun: .8,
+        stun: .08,
         //GENJUTSU
         genjutsu: 6,
         gen_power: 30,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 6,
         drain: 4,
         //CURSE
         cursed_energy: 0,
@@ -5355,7 +5356,7 @@ const database = [
         cursed_tech: 'Reverse-Flow-Recovery - Inreases Recovery by 4',
         curse_amount: 4,
         curse_duration: 4,
-        curse_cost: 15,
+        curse_cost: 23,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -5363,7 +5364,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Nen-Stitches - Recover 310 HP',
-        ninJutsu2cost: 22,
+        ninJutsu2cost: 26,
         ninJutsu2Dmg: 0,
         nin2amount: 310,
         ninEnhance: true,
@@ -5689,7 +5690,7 @@ const database = [
         //WEAPON
         weapon: 224,
         shield: 158,
-        curse_crit: .85,
+        curse_crit: .70,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
@@ -5714,8 +5715,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 32,
         negative_energy: 10,
-        cursed_tech: 'Shark-Transformation - Increase Evasion to 10',
-        curse_amount: 7,
+        cursed_tech: 'Shark-Transformation - Increase Evasion to 9',
+        curse_amount: 6,
         curse_duration: 100,
         curse_cost: 36,
         //DOMAIN
@@ -5731,7 +5732,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Water-Prison-Shark-Dance - Decrease all 3 Attacks by 10%",
-        nin_cost: 30,
+        nin_cost: 34,
         ninjutsu_pow: 245,
         ninamount: .10,
         ultEnhance: false,
@@ -6173,7 +6174,8 @@ const database = [
         buff2: 'Decrease Recovery by 2',
         buff_acc: 75,
         buff2_acc: 65,
-        image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/32871384_357633448063300_2080573104114892800_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8t0qIren8i4Q7kNvgF4L6uz&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AnZWoeCZNuhcJZqKhqwiDiy&oh=00_AYB9MBnMfXebhbL4EdJAxx0Z1q6GFrBB-NDynGK1gRscYg&oe=6749278D'
+        image: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/86934292_2416205598693028_7955430930103926784_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=WOdzUpeEa3AQ7kNvgFo1ifo&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ArDg_3XCPmnLj6GKALQZdvH&oh=00_AYB0_A7Z8_V7de0ZqbiySxKaM9vXsaoU1EtlqL48ZxbSNQ&oe=67778428'
+        //image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/32871384_357633448063300_2080573104114892800_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8t0qIren8i4Q7kNvgF4L6uz&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AnZWoeCZNuhcJZqKhqwiDiy&oh=00_AYB9MBnMfXebhbL4EdJAxx0Z1q6GFrBB-NDynGK1gRscYg&oe=6749278D'
     },
     {
         name: 'Kurama',
@@ -6804,7 +6806,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 35,
-        cursed_tech: 'Kamui - Warp away any Damage',
+        cursed_tech: 'Kamuii - Warp away any Damage',
         curse_amount: 0,
         curse_duration: 1,
         curse_cost: 26,
@@ -7088,7 +7090,7 @@ const database = [
         gen_power: 50,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 5,
         drain: 5,
         //CURSE
         cursed_energy: 0,
@@ -7130,11 +7132,11 @@ const database = [
         hp: 3266,
         //PHYSICAL
         attack: 112,
-        defense: 241,
+        defense: 226,
         critical: .10,
         strength: 1.12,
         //MAGIC
-        elm_attack: 210,
+        elm_attack: 193,
         elm_defense: 150,
         elm_efficiency: 1.40,
         potency: .20,
@@ -7182,8 +7184,8 @@ const database = [
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health",
-        nin_cost: 24,
+        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health (1.5)",
+        nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
@@ -7474,9 +7476,9 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Coocoon - Increase Curse Recovery",
-        nin_cost: 15,
-        ninjutsu_pow: 200,
-        ninamount: 12,
+        nin_cost: 17,
+        ninjutsu_pow: 185,
+        ninamount: 10,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Luck by 2',
@@ -7652,7 +7654,7 @@ const database = [
         shield: 240,
         curse_crit: .20,
         weaponCurse: 'Sage',
-        weapon_amount: 22,
+        weapon_amount: 15,
         //SPIRIT
         spirit: 151,
         spirit_def: 191,
@@ -7680,7 +7682,7 @@ const database = [
         curse_duration: 1,
         curse_cost: 15,
         //DOMAIN
-        dom_purity: 14,
+        dom_purity: 11,
         dom_lethal: 200,
         dom_duration: 8,
         dom_cost: 50,
@@ -8253,10 +8255,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 65,
         negative_energy: 45,
-        cursed_tech: 'Spirit-Manipulation',
+        cursed_tech: 'Spirit-Manipulation - Spirit | All Def',
         curse_amount: 0,
         curse_duration: 6,
-        curse_cost: 25,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 10,
         dom_lethal: 0,
@@ -8325,7 +8327,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 58,
         negative_energy: 58,
-        cursed_tech: 'Transfiguration',
+        cursed_tech: 'Transfiguration - 15 | 27 (Attack)',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 15,
@@ -8549,7 +8551,7 @@ const database = [
         cursed_tech: 'Wild-Lions-Mane - Trapped for 1 Turn',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 18,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -8563,7 +8565,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Big-Ball-Rasengan - Decrease Defense by 15%",
-        nin_cost: 24,
+        nin_cost: 30,
         ninjutsu_pow: 260,
         ninamount: .15,
         ultEnhance: false,
@@ -8845,7 +8847,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Polymath - Increase Core Stat by up to 20% then sacrifice',
-        ninJutsu2cost: 15,
+        ninJutsu2cost: 18,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: true,
@@ -8884,7 +8886,7 @@ const database = [
         shield: 136,
         curse_crit: .35,
         weaponCurse: 'Sage',
-        weapon_amount: 14,
+        weapon_amount: 10,
         //SPIRIT
         spirit: 220,
         spirit_def: 222,
@@ -8923,10 +8925,10 @@ const database = [
         nin2amount: 4,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Senjutsu - Recover 450 HP",
-        nin_cost: 35,
+        ninjutsu: "Senjutsu - Recover 420 HP",
+        nin_cost: 36,
         ninjutsu_pow: 0,
-        ninamount: 450,
+        ninamount: 420,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
@@ -8956,7 +8958,7 @@ const database = [
         shield: 182,
         curse_crit: .50,
         weaponCurse: 'Sage',
-        weapon_amount: 9,
+        weapon_amount: 6,
         //SPIRIT
         spirit: 105,
         spirit_def: 143,
@@ -8985,9 +8987,9 @@ const database = [
         curse_cost: 18,
         //DOMAIN
         dom_purity: 7,
-        dom_lethal: 0,
-        dom_duration: 0,
-        dom_cost: 0,
+        dom_lethal: 4,
+        dom_duration: 160,
+        dom_cost: 36,
         //NINJUTSU
         ninjutsu2: 'Amenotejikara - Flip evade previous damage',
         ninJutsu2cost: 12,
