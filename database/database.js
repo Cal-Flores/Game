@@ -1009,7 +1009,7 @@ const database = [
         dom_purity: 7,
         dom_lethal: 77,
         dom_duration: 7,
-        dom_cost: 21,
+        dom_cost: 47,
         //NINJUTSU
         ninjutsu2: 'Future-Devil Contract - Increase Evasion by 1',
         ninJutsu2cost: 24,
@@ -4007,7 +4007,7 @@ const database = [
         elm: earth,
         hp: 3500,
         //PHYSICAL
-        attack: 235,
+        attack: 230,
         defense: 262,
         critical: .15,
         strength: 2,
@@ -4024,7 +4024,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 119,
-        spirit_def: 215,
+        spirit_def: 195,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -4047,7 +4047,7 @@ const database = [
         cursed_tech: 'Muscular-Expansion - Critical x 4',
         curse_amount: .45,
         curse_duration: 6,
-        curse_cost: 16,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -4068,7 +4068,7 @@ const database = [
         //BUFFS
         buff: 'Increase Accuracy by 2',
         buff2: 'Set Efficiency to 1.20',
-        buff_acc: 70,
+        buff_acc: 60,
         buff2_acc: 40,
         image: 'https://i.redd.it/k2fme3l6e8m61.jpg'
     },
@@ -4901,7 +4901,7 @@ const database = [
         spirit_amount: 1.25,
         //SPEED / LUCK
         accuracy: 7,
-        evasion: 10,
+        evasion: 9,
         luck: 3,
         stun: .06,
         //GENJUTSU
@@ -5341,7 +5341,7 @@ const database = [
         accuracy: 6,
         evasion: 8,
         luck: 5,
-        stun: .08,
+        stun: .05,
         //GENJUTSU
         genjutsu: 6,
         gen_power: 30,
@@ -5364,7 +5364,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Nen-Stitches - Recover 310 HP',
-        ninJutsu2cost: 26,
+        ninJutsu2cost: 28,
         ninJutsu2Dmg: 0,
         nin2amount: 310,
         ninEnhance: true,
@@ -5375,9 +5375,9 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Stun by 14%',
+        buff: 'Increase Stun by 12%',
         buff2: 'Decrease Magic Defense by 25%',
-        buff_acc: 50,
+        buff_acc: 65,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/4/4c/Machi_Komacine_HA_Portrait.png/revision/latest?cb=20131116122706'
     },
@@ -7234,7 +7234,7 @@ const database = [
         gen_power: 40,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 5,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -7256,10 +7256,10 @@ const database = [
         nin2amount: .30,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Shrine - Decrease any stat by 18%",
-        nin_cost: 22,
+        ninjutsu: "Shrine - Decrease any stat by 15%",
+        nin_cost: 25,
         ninjutsu_pow: 0,
-        ninamount: .18,
+        ninamount: .15,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Magic Defense by 10%',
@@ -8987,8 +8987,8 @@ const database = [
         curse_cost: 18,
         //DOMAIN
         dom_purity: 7,
-        dom_lethal: 4,
-        dom_duration: 160,
+        dom_lethal: 160,
+        dom_duration: 4,
         dom_cost: 36,
         //NINJUTSU
         ninjutsu2: 'Amenotejikara - Flip evade previous damage',

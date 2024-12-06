@@ -2861,7 +2861,7 @@
         }
 
         function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.74;
+            const multiplier = 1.78;
             if (evasion <= 0) return true
             return (accuracy * multiplier) / (accuracy + evasion);
         }
