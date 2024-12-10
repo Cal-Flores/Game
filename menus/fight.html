@@ -1851,7 +1851,7 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        redEvas += 20;
+                        redEvas += 12;
                         $('#redEvas').text(redEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
@@ -2162,7 +2162,7 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        blueEvas += 20;
+                        blueEvas += 12;
                         $('#blueEvas').text(blueEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
@@ -2388,7 +2388,7 @@
                 // Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        redEvas -= 20;
+                        redEvas -= 12;
                         $('#redEvas').text(redEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -2537,7 +2537,7 @@
                 }
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        blueEvas -= 20;
+                        blueEvas -= 12;
                         $('#blueEvas').text(blueEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -2861,7 +2861,7 @@
         }
 
         function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.78;
+            const multiplier = 1.82;
             if (evasion <= 0) return true
             return (accuracy * multiplier) / (accuracy + evasion);
         }

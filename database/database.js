@@ -989,7 +989,7 @@ const database = [
         accuracy: 7,
         evasion: 7,
         luck: 7,
-        stun: .11,
+        stun: .04,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 15,
@@ -4369,12 +4369,12 @@ const database = [
         elm: water,
         hp: 3500,
         //PHYSICAL
-        attack: 275,
+        attack: 270,
         defense: 225,
         critical: .20,
         strength: 1.6,
         //MAGIC
-        elm_attack: 260,
+        elm_attack: 255,
         elm_defense: 210,
         elm_efficiency: 1.5,
         potency: .20,
@@ -4385,7 +4385,7 @@ const database = [
         weaponCurse: 'Def',
         weapon_amount: 30,
         //SPIRIT
-        spirit: 203,
+        spirit: 183,
         spirit_def: 175,
         spirit_crit: .22,
         spiritCurse: 'Damage',
@@ -4409,7 +4409,7 @@ const database = [
         cursed_tech: 'Flash - Increase stun to 45%',
         curse_amount: .40,
         curse_duration: 6,
-        curse_cost: 15,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -4571,10 +4571,10 @@ const database = [
         nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Ackerman-Curse - Increase Weapon by 10%",
-        nin_cost: 20,
+        ninjutsu: "Ackerman-Curse - Increase Weapon by 7%",
+        nin_cost: 22,
         ninjutsu_pow: 195,
-        ninamount: .10,
+        ninamount: .07,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Stun by 12%',
@@ -4693,7 +4693,7 @@ const database = [
         gen_power: 0,
         willpower: 7,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 5,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -4710,7 +4710,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Thunderbolt - Increase Magic by 5%',
-        ninJutsu2cost: 12,
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 185,
         nin2amount: .05,
         ninEnhance: true,
@@ -6078,7 +6078,7 @@ const database = [
         negative_energy: 19,
         cursed_tech: 'True-Thousand-Hands - Increase Attack by 165',
         curse_amount: 165,
-        curse_duration: 8,
+        curse_duration: 12,
         curse_cost: 35,
         //DOMAIN
         dom_purity: 7,
@@ -7090,30 +7090,30 @@ const database = [
         gen_power: 50,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 3,
         drain: 5,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 70,
         negative_energy: 50,
-        cursed_tech: 'Limitless - 10 | 22 ',
+        cursed_tech: 'Limitless - 15 | 27 ',
         curse_amount: 10,
         curse_duration: 6,
-        curse_cost: 10,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 15,
         dom_lethal: 100,
         dom_duration: 10,
-        dom_cost: 50,
+        dom_cost: 70,
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
-        ninJutsu2cost: 10,
+        ninJutsu2cost: 12,
         ninJutsu2Dmg: 0,
         nin2amount: 10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Hollow-Technique: Purple",
-        nin_cost: 35,
+        nin_cost: 32,
         ninjutsu_pow: 400,
         ninamount: 0,
         ultEnhance: false,
@@ -7162,7 +7162,7 @@ const database = [
         gen_power: 40,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 4,
         drain: 10,
         //CURSE
         cursed_energy: 0,
@@ -7176,10 +7176,10 @@ const database = [
         dom_purity: 10,
         dom_lethal: 122,
         dom_duration: 7,
-        dom_cost: 50,
+        dom_cost: 65,
         //NINJUTSU
         ninjutsu2: 'Extracted-Technique - Decrease Any stat by 15%',
-        ninJutsu2cost: 15,
+        ninJutsu2cost: 22,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: false,
@@ -7757,7 +7757,7 @@ const database = [
         dom_purity: 15,
         dom_lethal: 120,
         dom_duration: 5,
-        dom_cost: 16,
+        dom_cost: 20,
         //NINJUTSU
         ninjutsu2: 'Rabbit-Hair-Needle - Increases Stun by 8%',
         ninJutsu2cost: 15,
@@ -8435,8 +8435,8 @@ const database = [
     {
         name: 'Chrollo',
         nen_type: 'Specialist',
-        element: 'Psychic',
-        elm: pyschic,
+        element: 'Sage',
+        elm: sage,
         hp: 3268,
         //PHYSICAL
         attack: 222,
