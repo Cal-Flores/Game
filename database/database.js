@@ -4367,7 +4367,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Water',
         elm: water,
-        hp: 3500,
+        hp: 3328,
         //PHYSICAL
         attack: 270,
         defense: 225,
@@ -4649,9 +4649,9 @@ const database = [
         ninamount: 320,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Stun by 18%',
+        buff: 'Increase Stun by 16%',
         buff2: 'Decrease Critical by 50%',
-        buff_acc: 50,
+        buff_acc: 55,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/20/109_-_Neferpitou_portrait.png/revision/latest?cb=20131218034405'
     },
@@ -7057,7 +7057,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Holy',
         elm: holy,
-        hp: 3444,
+        hp: 3244,
         //PHYSICAL
         attack: 221,
         defense: 177,
@@ -7103,7 +7103,7 @@ const database = [
         //DOMAIN
         dom_purity: 15,
         dom_lethal: 100,
-        dom_duration: 10,
+        dom_duration: 8,
         dom_cost: 85,
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
@@ -8992,8 +8992,8 @@ const database = [
         dom_cost: 36,
         //NINJUTSU
         ninjutsu2: 'Amenotejikara - Flip evade previous damage',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 155,
+        ninJutsu2cost: 24,
+        ninJutsu2Dmg: 145,
         nin2amount: 0,
         ninEnhance: true,
         //ULTIMATE
