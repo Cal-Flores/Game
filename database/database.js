@@ -2100,7 +2100,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Chibaku-Tensei - Erase Magic Defense",
-        nin_cost: 60,
+        nin_cost: 66,
         ninjutsu_pow: 260,
         ninamount: 1.00,
         ultEnhance: false,
@@ -4391,7 +4391,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 8,
+        accuracy: 7,
         evasion: 11,
         luck: 3,
         stun: .05,
@@ -7104,7 +7104,7 @@ const database = [
         dom_purity: 15,
         dom_lethal: 100,
         dom_duration: 10,
-        dom_cost: 70,
+        dom_cost: 85,
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
         ninJutsu2cost: 12,
@@ -7766,7 +7766,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "All-Killing-Ash-Bones - Halve Any Stat (Single use)",
-        nin_cost: 70,
+        nin_cost: 85,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
