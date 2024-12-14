@@ -23,7 +23,7 @@ const database = [
         team: 'Oklahoma State',
         round: 1,
         pick: 4,
-        hp: 3472,
+        hp: 3372,
         //PHYSICAL
         attack: 216,
         defense: 200,
