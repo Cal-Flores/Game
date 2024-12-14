@@ -405,7 +405,7 @@ const database = [
         spirit_def: 154,
         spirit_crit: .15,
         spiritCurse: 'Damage',
-        spirit_amount: 1.60,
+        spirit_amount: 1.70,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 6,
