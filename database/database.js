@@ -2905,13 +2905,14 @@ const database = [
         buff2: 'Decrease Critical by 30%',
         buff_acc: 80,
         buff2_acc: 80,
-        image: 'https://avatarfiles.alphacoders.com/627/62714.jpg'
+        image: 'https://wallpapers-clan.com/wp-content/uploads/2022/09/dragon-ball-goku-pfp-13.jpg'
+        // image: 'https://avatarfiles.alphacoders.com/627/62714.jpg'
     },
     {
         name: 'Vegeta',
         nen_type: 'Emitter',
-        element: 'Holy',
-        elm: holy,
+        element: 'Lightning',
+        elm: lightning,
         hp: 3192,
         //PHYSICAL
         attack: 295,
