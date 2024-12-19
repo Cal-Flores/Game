@@ -238,14 +238,14 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang', 'Indras-Arrow']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken', 'Heat']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot', 'I.R.S']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot', 'I.R.S', 'Spirit-Bomb']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon', 'Kamehameha']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -259,7 +259,7 @@
             let ultDamage = []
             let ging = ['Polymath']
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse', 'Senjutsu']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui']
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui',]
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -861,7 +861,16 @@
                         }
                     }
                 }
-                if (jutsu == 'Hakoware' || jutsu == 'Uzumaki') {
+                if (jutsu == 'Spirit-Bomb') {
+                    if (attacker == 'red') {
+                        redRecovery = 0;
+                        alert(`Goku's Recovery has fallen to ${redRecovery}!`)
+                    } else if (attacker == 'blue') {
+                        blueRecovery = 0;
+                        alert(`Goku's Recovery has fallen to ${blueRecovery}!`)
+                    }
+                }
+                if (jutsu == 'Hakoware' || jutsu == 'Uzumaki' || jutsu == 'Spirit-Bomb') {
                     let currBlueChakra = parseInt($('#blueChakra').text(), 10);
                     let currRedChakra = parseInt($('#redChakra').text(), 10);
                     let currredHp = parseInt($('#redHP').text(), 10)
@@ -870,6 +879,9 @@
                     let mult = 9;
                     if (jutsu == 'Uzumaki') {
                         mult = 8
+                    }
+                    if (jutsu == 'Spirit-Bomb') {
+                        mult = 15
                     }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
@@ -1649,7 +1661,7 @@
             }
         }
         const evasion = ["Projection-Sorcery", 'Body-Manipulation', 'Shark-Transformation', 'Beelzebub', 'Super-Beast-Hawk'];
-        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists',];
+        const attacking = ['Mutation', '8th-Gate', 'Rumbling', 'Ninety-Ninth-Hand', 'Cursed-Blade', 'True-Thousand-Hands', 'Nine-Tails-Chakra-Mode', 'Gentle-Step-Twin-Lion-Fists', 'Kaio-Ken'];
         const defense = ["Reverse", 'Veil', 'Simple-Domain',];
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic', 'Three-Headed-Wolf'];
