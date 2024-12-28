@@ -733,9 +733,9 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Chakra Recovery by 2',
-        buff2: 'Decrease Attack by 15%',
+        buff2: 'Decrease Attack by 8%',
         buff_acc: 70,
-        buff2_acc: 60,
+        buff2_acc: 65,
         image: 'https://thicc.mywaifulist.moe/waifus/26112/2ce0a9ba09c15a29b46fbda0ba73c91ce081e3e31b9d5e4186791980fa31fe4c_thumb.png'
     },
     {
