@@ -577,9 +577,9 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Batto-Sword-Drawing Increase Stun by 7%',
-        ninJutsu2cost: 13,
+        ninJutsu2cost: 14,
         ninJutsu2Dmg: 170,
-        nin2amount: .10,
+        nin2amount: .07,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "New-Shadow-Style",
