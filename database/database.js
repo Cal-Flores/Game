@@ -953,8 +953,8 @@ const database = [
         //BUFFS
         buff: 'Double Wither percent',
         buff2: 'Decrease Potency by 50%',
-        buff_acc: 65,
-        buff2_acc: 65,
+        buff_acc: 60,
+        buff2_acc: 60,
         image: 'https://preview.redd.it/i-tried-to-make-kishibe-a-bit-more-lively-v0-ke8dx7n9oxoa1.jpg?width=640&crop=smart&auto=webp&s=30f8a2bebb02a1782f1418be2c76debf6493d0e9'
     },
     {
