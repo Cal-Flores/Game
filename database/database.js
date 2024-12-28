@@ -880,9 +880,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Genjutsu by 3',
-        buff2: 'Decrease Attack by 15%',
+        buff2: 'Decrease Attack by 7%',
         buff_acc: 70,
-        buff2_acc: 65,
+        buff2_acc: 68,
         image: 'https://64.media.tumblr.com/5a4d57c5a295356ef574e7ca4512b484/ace490199105949f-6f/s1280x1920/9dfa87a978d53b3bdf6446a37e0b7efcdeb74be5.jpg'
     },
     {
