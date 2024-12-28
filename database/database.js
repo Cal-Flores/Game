@@ -95,7 +95,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
-        hp: 3359,
+        hp: 3159,
         //PHYSICAL
         attack: 215,
         defense: 200,
@@ -103,7 +103,7 @@ const database = [
         strength: 1.5,
         //MAGIC
         elm_attack: 110,
-        elm_defense: 153,
+        elm_defense: 143,
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
@@ -111,7 +111,7 @@ const database = [
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 12,
+        weapon_amount: 8,
         //SPIRIT
         spirit: 108,
         spirit_def: 169,
@@ -119,7 +119,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 7,
+        accuracy: 6,
         evasion: 3,
         luck: 4,
         stun: .04,
@@ -516,9 +516,9 @@ const database = [
         ninamount: 2,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Defense by 15%',
+        buff: 'Increase Defense by 8%',
         buff2: 'Decrease Critical by 25%',
-        buff_acc: 60,
+        buff_acc: 67,
         buff2_acc: 75,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/a/aa/HxH2011_EP3_Hanzo_Portrait.png/revision/latest?cb=20221007164354'
     },
@@ -8596,7 +8596,7 @@ const database = [
         //WEAPON
         weapon: 207,
         shield: 144,
-        curse_crit: .45,
+        curse_crit: .40,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
@@ -8969,7 +8969,7 @@ const database = [
         accuracy: 8,
         evasion: 5,
         luck: 7,
-        stun: .05,
+        stun: .03,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 50,
@@ -9000,7 +9000,7 @@ const database = [
         ninjutsu: "Phase-Bullets - Lower all Defences and Increase Stun",
         nin_cost: 28,
         ninjutsu_pow: 260,
-        ninamount: .14,
+        ninamount: .08,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Strength by 40%',
