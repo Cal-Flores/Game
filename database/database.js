@@ -809,7 +809,7 @@ const database = [
         //BUFFS
         buff: 'Triple Domain Purity',
         buff2: 'Increase Accuracy by 2',
-        buff_acc: 50,
+        buff_acc: 60,
         buff2_acc: 65,
         image: 'https://i.pinimg.com/736x/c4/87/23/c48723566f7392d5218218a17171294b.jpg'
     },
