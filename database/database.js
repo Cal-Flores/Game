@@ -663,7 +663,7 @@ const database = [
         buff: 'Increase Accuracy by 3',
         buff2: 'Increase Evasion by 3',
         buff_acc: 80,
-        buff2_acc: 60,
+        buff2_acc: 50,
         image: 'https://i.pinimg.com/736x/b8/d4/38/b8d438d6a6db0c7b2f6080558e3d993f.jpg'
     },
     {
