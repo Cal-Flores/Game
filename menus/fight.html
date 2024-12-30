@@ -279,6 +279,61 @@
                 if (jutsu == 'Copy-Ninja') {
                     jutsu = prompt('Enter Opponents jutsu')
                 }
+                if (jutsu == 'Requip') {
+                    let arm = prompt("Heaven's Wheel (Weapon/Rec) | Red Black Twin Blades (Weapon/All Def) | Adamantine Armor (Def/Weapon) |  Robe of Yūen (M.Def/Weapon) ")
+                    if (attacker == 'red') {
+                        if (arm == "Heaven's Wheel") {
+                            redWeapon = 269;
+                            redAcc = 15;
+                            redEvas = 2;
+                            redRecovery = 2
+                            alert(`Increase: Weapon: ${redWeapon}, Accuracy: ${redAcc} | Decrease: Evasion: ${redEvas}, Recovery: ${redRecovery}`)
+                        }
+                        if (arm == 'Red Black Twin Blades') {
+                            redWeapon = 289;
+                            redDefense -= 30;
+                            redElmDef -= 30;
+                            redShield -= 50;
+                            alert(`Weapon ultimate ${redWeapon} All Def - 30!`)
+                        }
+                        if (arm == 'Adamantine Armor') {
+                            redWeapon = 240;
+                            redDefense = 225;
+                            alert('Weapon falls Defense rises!')
+                        }
+                        if (arm == 'Robe of Yūen') {
+                            redWeapon == 240
+                            redElmDef == 225
+                            alert('Weapon falls Magic Defense rises!')
+                        }
+                    }
+                    if (attacker == 'blue') {
+                        if (arm == "Heaven's Wheel") {
+                            blueWeapon = 269;
+                            blueAcc = 15;
+                            blueEvas = 2;
+                            blueRecovery = 2
+                            alert(`Increase: Weapon: ${blueWeapon}, Accuracy: ${blueAcc} | Decrease: Evasion: ${blueEvas}, Recovery: ${blueRecovery}`)
+                        }
+                        if (arm == 'Red Black Twin Blades') {
+                            blueWeapon = 289;
+                            blueDefense -= 30;
+                            blueElmDef -= 30;
+                            blueShield -= 50;
+                            alert(`Weapon ultimate ${blueWeapon} All Def - 30!`)
+                        }
+                        if (arm == 'Adamantine Armor') {
+                            blueWeapon = 240;
+                            blueDefense = 225;
+                            alert('Weapon falls Defense rises!')
+                        }
+                        if (arm == 'Robe of Yūen') {
+                            blueWeapon == 240
+                            blueElmDef == 225
+                            alert('Weapon falls Magic Defense rises!')
+                        }
+                    }
+                }
                 if (attack.includes(jutsu)) {
                     if (attacker == 'red') {
                         if (enhance) {
