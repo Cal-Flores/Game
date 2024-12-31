@@ -726,10 +726,10 @@ const database = [
         nin2amount: .12,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Heavenly-Restriction - Increase Defense by 40%",
+        ninjutsu: "Heavenly-Restriction - Increase Defense by 20%",
         nin_cost: 28,
         ninjutsu_pow: 285,
-        ninamount: .45,
+        ninamount: .20,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Chakra Recovery by 2',
@@ -818,7 +818,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Lightning',
         elm: lightning,
-        hp: 2822,
+        hp: 2500,
         //PHYSICAL
         attack: 184,
         defense: 188,
@@ -2339,7 +2339,7 @@ const database = [
         //PHYSICAL
         attack: 246,
         defense: 235,
-        critical: .30,
+        critical: .35,
         strength: 1.34,
         //MAGIC
         elm_attack: 120,
@@ -2377,7 +2377,7 @@ const database = [
         cursed_tech: 'Muscular-Expansion - Increase Critical to 80%',
         curse_amount: .50,
         curse_duration: 6,
-        curse_cost: 24,
+        curse_cost: 21,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -2407,7 +2407,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
-        hp: 3415,
+        hp: 3315,
         //PHYSICAL
         attack: 264,
         defense: 222,
@@ -2816,10 +2816,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Leaf-Hurricane - Increase stun by 6%',
-        ninJutsu2cost: 12,
+        ninjutsu2: 'Leaf-Hurricane - Increase stun by 5%',
+        ninJutsu2cost: 13,
         ninJutsu2Dmg: 175,
-        nin2amount: .06,
+        nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Gate-Release - Increase Evasion by 1",
@@ -2839,7 +2839,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fairy',
         elm: fairy,
-        hp: 3491,
+        hp: 3391,
         //PHYSICAL
         attack: 285,
         defense: 239,
@@ -2911,7 +2911,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Ghost',
         elm: ghost,
-        hp: 3500,
+        hp: 3138,
         //PHYSICAL
         attack: 300,
         defense: 162,
@@ -3275,7 +3275,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
-        hp: 3466,
+        hp: 3266,
         //PHYSICAL
         attack: 273,
         defense: 221,
@@ -3409,7 +3409,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
-        buff2: 'Decrease Magic by 15%',
+        buff2: 'Decrease Magic by 10%',
         buff_acc: 50,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/ef/Aoi_Todo.jpg/revision/latest?cb=20210904074234&path-prefix=pl'
@@ -3426,11 +3426,11 @@ const database = [
         //PHYSICAL
         attack: 277,
         defense: 208,
-        critical: .25,
+        critical: .30,
         strength: 1.5,
         //MAGIC
         elm_attack: 119,
-        elm_defense: 190,
+        elm_defense: 180,
         elm_efficiency: 1,
         potency: 0.15,
         //WEAPON
@@ -3441,7 +3441,7 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 117,
-        spirit_def: 156,
+        spirit_def: 146,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -3455,7 +3455,7 @@ const database = [
         gen_power: 10,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 6,
         drain: 2,
         //CURSE
         cursed_energy: 0,
@@ -3483,9 +3483,9 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Recovery by 4',
+        buff: 'Increase Recovery by 3',
         buff2: 'Zero-Hand - Deal 1500 Damage',
-        buff_acc: 60,
+        buff_acc: 65,
         buff2_acc: 15,
         image: 'https://pbs.twimg.com/profile_images/618001800973520896/mTClxCoR_400x400.png'
     },
@@ -4042,20 +4042,20 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 38,
         negative_energy: 35,
-        cursed_tech: 'Limitless-Reversal - Cursed Effects are shared',
-        curse_amount: 0,
-        curse_duration: 1,
-        curse_cost: 30,
+        cursed_tech: 'Miracle 0- Increase Luck by 6',
+        curse_amount: 6,
+        curse_duration: 6,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Solo-Forbidden-Area - Increase any stat by 20%',
+        ninjutsu2: 'Solo-Forbidden-Area - Increase any stat by 18% (once)',
         ninJutsu2cost: 22,
         ninJutsu2Dmg: 110,
-        nin2amount: 20,
+        nin2amount: 18,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Solo-Leveling - Deal 20% HP Drain",
@@ -4065,9 +4065,9 @@ const database = [
         ultEnhance: false,
         //BUFFS
         buff: 'Cursed Bomb Deal 600 Damage',
-        buff2: 'Increase Any Stat by 15%',
+        buff2: 'Increase Accuracy by 2',
         buff_acc: 25,
-        buff2_acc: 85,
+        buff2_acc: 65,
         //image: 'https://www.nautiljon.com/images/perso/00/72/iori_utahime_20027.webp'
         image: 'https://preview.redd.it/what-kind-of-scar-does-utahime-have-v0-efrpgw7dxk5d1.jpg?width=640&crop=smart&auto=webp&s=a15aed4fed51acd355be951ee10eaa7b7c63f7fc'
     },
@@ -4366,7 +4366,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Grass',
         elm: grass,
-        hp: 3489,
+        hp: 3389,
         //PHYSICAL
         attack: 226,
         defense: 218,
@@ -4438,7 +4438,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Water',
         elm: water,
-        hp: 3464,
+        hp: 3264,
         //PHYSICAL
         attack: 230,
         defense: 211,
@@ -5021,7 +5021,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Wood',
         elm: wood,
-        hp: 3465,
+        hp: 3265,
         //PHYSICAL
         attack: 248,
         defense: 150,
@@ -5132,7 +5132,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 15,
-        cursed_tech: 'Kamui - Intangibility for 3 turns',
+        cursed_tech: 'Kamui - Intangibility for 2 turns',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 30,
@@ -5675,7 +5675,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Fighter',
         elm: fighter,
-        hp: 2912,
+        hp: 2500,
         //PHYSICAL
         attack: 95,
         defense: 131,
@@ -5965,7 +5965,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Water',
         elm: water,
-        hp: 3378,
+        hp: 3178,
         //PHYSICAL
         attack: 141,
         defense: 185,
@@ -6308,7 +6308,7 @@ const database = [
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Shadow-Neck-Breaking - Increase Shadow by 1 turn | Double Shadow damage",
+        ninjutsu: "Shadow-Neck-Breaking - Double Shadow damage",
         nin_cost: 28,
         ninjutsu_pow: 220,
         ninamount: 1,
@@ -6326,7 +6326,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Wood',
         elm: wood,
-        hp: 3426,
+        hp: 3326,
         //PHYSICAL
         attack: 120,
         defense: 187,
@@ -6398,7 +6398,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Fire',
         elm: fire,
-        hp: 3448,
+        hp: 3248,
         //PHYSICAL
         attack: 137,
         defense: 165,
@@ -6469,7 +6469,7 @@ const database = [
     {
         name: 'Android 18',
         nen_type: 'Specialist',
-        element: 'Luck',
+        element: 'Lucky',
         elm: lucky,
         hp: 3011,
         //PHYSICAL
@@ -6504,7 +6504,7 @@ const database = [
         gen_power: 1,
         willpower: 1,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 8,
         drain: 1,
         //CURSE
         cursed_energy: 0,
@@ -6550,7 +6550,7 @@ const database = [
         critical: .17,
         strength: 1.62,
         //MAGIC
-        elm_attack: 244,
+        elm_attack: 242,
         elm_defense: 223,
         elm_efficiency: 1.45,
         potency: .28,
@@ -6615,7 +6615,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Dark',
         elm: dark,
-        hp: 3500,
+        hp: 3207,
         team: 'Oklahoma State',
         round: 1,
         pick: 7,
@@ -6690,7 +6690,7 @@ const database = [
         nen_type: 'Conjuror',
         element: 'Lucky',
         elm: lucky,
-        hp: 2814,
+        hp: 2500,
         //PHYSICAL
         attack: 153,
         defense: 163,
@@ -6814,7 +6814,7 @@ const database = [
         dom_duration: 4,
         dom_cost: 30,
         //NINJUTSU
-        ninjutsu2: 'Psychometry - Cast one Genjutsu | Decrease one Stat by 15%',
+        ninjutsu2: 'Psychometry - Cast one Genjutsu | Decrease one Stat by 10%',
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 140,
         nin2amount: 0,
@@ -6849,22 +6849,22 @@ const database = [
         elm_efficiency: 1,
         potency: .20,
         //WEAPON
-        weapon: 220,
+        weapon: 218,
         shield: 120,
         curse_crit: .10,
         weaponCurse: 'Attack',
         weapon_amount: 20,
         //SPIRIT
-        spirit: 207,
+        spirit: 203,
         spirit_def: 153,
         spirit_crit: .26,
         spiritCurse: 'Weapon',
-        spirit_amount: 15,
+        spirit_amount: 9,
         //SPEED / LUCK
         accuracy: 9,
         evasion: 2,
         luck: 9,
-        stun: .10,
+        stun: .08,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 30,
@@ -6876,10 +6876,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 45,
-        cursed_tech: 'Cursed-Construction - Increase Weapon by 75',
+        cursed_tech: 'Cursed-Construction - Increase Weapon by 25',
         curse_amount: 75,
         curse_duration: 6,
-        curse_cost: 18,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -6893,7 +6893,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Constructed-Bullet - Deals 1000 Damage (Single use)",
-        nin_cost: 70,
+        nin_cost: 80,
         ninjutsu_pow: 1000,
         ninamount: 0,
         ultEnhance: false,
@@ -6982,7 +6982,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Lucky',
         elm: lucky,
-        hp: 2800,
+        hp: 2500,
         //PHYSICAL
         attack: 75,
         defense: 161,
@@ -7054,7 +7054,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Grass',
         elm: grass,
-        hp: 3000,
+        hp: 2500,
         //PHYSICAL
         attack: 107,
         defense: 223,
@@ -7256,7 +7256,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Copy-Ninja - Use any Ninjutsu immediatley after",
-        nin_cost: 20,
+        nin_cost: 25,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
@@ -7634,7 +7634,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Fire',
         elm: fire,
-        hp: 3389,
+        hp: 3289,
         //PHYSICAL
         attack: 134,
         defense: 145,
@@ -7690,7 +7690,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Shrine - Decrease any stat by 5%",
-        nin_cost: 25,
+        nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: .15,
         ultEnhance: false,
@@ -7750,8 +7750,8 @@ const database = [
         negative_energy: 30,
         cursed_tech: 'Emperor-Time - Increase Chain Jail Duration to 3',
         curse_amount: 0,
-        curse_duration: 10,
-        curse_cost: 28,
+        curse_duration: 6,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 145,
@@ -7781,7 +7781,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Water',
         elm: water,
-        hp: 3325,
+        hp: 2500,
         //PHYSICAL
         attack: 165,
         defense: 243,
@@ -8071,7 +8071,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Dark',
         elm: dark,
-        hp: 3393,
+        hp: 3193,
         //PHYSICAL
         attack: 139,
         defense: 176,
@@ -8185,7 +8185,7 @@ const database = [
         cursed_tech: 'Eighty-Gods-Vacuum-Attack - Previous Ninjutsu Attack Heal',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 28,
+        curse_cost: 23,
         //DOMAIN
         dom_purity: 15,
         dom_lethal: 120,
@@ -8649,7 +8649,7 @@ const database = [
         nen_type: 'Conjuror',
         element: 'Ghost',
         elm: ghost,
-        hp: 3455,
+        hp: 3155,
         //PHYSICAL
         attack: 127,
         defense: 186,
@@ -8760,7 +8760,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 58,
         negative_energy: 58,
-        cursed_tech: 'Transfiguration - 15 | 27 (Attack)',
+        cursed_tech: 'Transfiguration - 15 (6%) | 27 (Attack +70)',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 15,
@@ -8811,7 +8811,7 @@ const database = [
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 264,
+        spirit: 272,
         spirit_def: 135,
         spirit_crit: .12,
         spiritCurse: 'Attack',
@@ -8922,7 +8922,7 @@ const database = [
         //ULTIMATE
         ninjutsu: "Special-Beam-Cannon - Lower Spirit Defense by 15%",
         nin_cost: 27,
-        ninjutsu_pow: 225,
+        ninjutsu_pow: 275,
         ninamount: .15,
         ultEnhance: false,
         //BUFFS
@@ -9085,7 +9085,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fire',
         elm: fire,
-        hp: 3500,
+        hp: 3403,
         //PHYSICAL
         attack: 148,
         defense: 226,
@@ -9229,11 +9229,11 @@ const database = [
         nen_type: 'Emission',
         element: 'Fire',
         elm: fire,
-        hp: 3500,
+        hp: 3400,
         //PHYSICAL
         attack: 215,
         defense: 237,
-        critical: .80,
+        critical: .75,
         strength: 2.5,
         //MAGIC
         elm_attack: 195,
@@ -9256,7 +9256,7 @@ const database = [
         accuracy: 3,
         evasion: 1,
         luck: 3,
-        stun: .04,
+        stun: .02,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -9446,7 +9446,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Holy',
         elm: holy,
-        hp: 3468,
+        hp: 3068,
         //PHYSICAL
         attack: 132,
         defense: 144,

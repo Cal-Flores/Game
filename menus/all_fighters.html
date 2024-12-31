@@ -89,7 +89,7 @@
             let characters = databaseArr
             databaseArr.sort((a, b) => b.hp - a.hp);
             databaseArr.forEach(player => {
-                name += `<li>${player.name} - (${player.hp})</li>`
+                name += `<li>${player.name} </li>`
             })
             $('#name').append(name)
             console.log(characters.length)

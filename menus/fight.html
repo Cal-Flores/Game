@@ -277,7 +277,30 @@
                 let currRedHp = parseInt($('#redHP').text(), 10)
                 let currBlueHp = parseInt($('#blueHP').text(), 10)
                 if (jutsu == 'Copy-Ninja') {
-                    jutsu = prompt('Enter Opponents jutsu')
+                    let copyTech = prompt('Ninjutsu | Ultimate')
+                    let copyDmg;
+                    if (attacker == 'red') {
+                        if (copyTech == 'Ninjutsu') {
+                            copyDmg = blueNenNinDmg
+
+                        } else {
+                            copyDmg = blueNinPower
+                        }
+                        alert(`Stolen Ability! ${copyDmg} damage dealt!`)
+                        currBlueHp -= copyDmg
+                        $('#blueHP').text(currBlueHp)
+                    }
+                    if (attacker == 'blue') {
+                        if (copyTech == 'Ninjutsu') {
+                            copyDmg = redNenNinDmg
+
+                        } else {
+                            copyDmg = redNinPower
+                        }
+                        alert(`Stolen Ability! ${copyDmg} damage dealt!`)
+                        currRedHp -= copyDmg
+                        $('#redHP').text(currRedHp)
+                    }
                 }
                 if (jutsu == 'Requip') {
                     let arm = prompt("Heaven's Wheel (Weapon/Rec) | Red Black Twin Blades (Weapon/All Def) | Adamantine Armor (Def/Weapon) |  Robe of Yūen (M.Def/Weapon) ")
@@ -1785,7 +1808,8 @@
                     redRecovery += amount
                 }
                 if (spirit.includes(curse)) {
-                    redSpirit = redSpirit * Math.floor(1 + amount)
+                    redSpirit = Math.floor(redSpirit * (1 + amount))
+                    alert(`${redSpirit}`)
                     $('#redSpirit').text(redSpirit)
                 }
                 if (ninjutsuStr.includes(curse)) {
@@ -2070,7 +2094,8 @@
                     currBlueCurse -= Math.floor((redCurseCost * .70));
                 }
                 if (spirit.includes(curse)) {
-                    blueSpirit = blueSpirit * Math.floor(1 + amount)
+                    blueSpirit = Math.floor(blueSpirit * (1 + amount))
+                    alert(`${blueSpirit}`)
                     $('#blueSpirit').text(blueSpirit)
                 }
                 if (currBlueCurse < cost) {
