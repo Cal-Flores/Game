@@ -238,7 +238,7 @@
             //speed + recovery + luck
             let accuracy = ['SCREAM', 'Whirlwind', 'Fang-Passing-Fang', 'Indras-Arrow']
             let evasion = ['Collapse', 'Sword-Draw-Dash', 'Chain-Entanglement', 'Future-Devil', 'Orange-Arrow', 'SCREAM', 'Gate-Release', 'Speed-of-Lightning', 'Ash-Pile-Burning', 'Ultra-Big-Ball-RasenShuriken', 'Heat']
-            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Insect-Sphere', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot', 'I.R.S', 'Spirit-Bomb', 'Final-Flash', 'Dual-Destructo-Disc', 'Destructo-Disc']
+            let recovery = ['Reaper', 'Blinky', 'Inhale', 'Great-Forest-Technique', 'Parasitic-Destruction', 'Lightning-Clone', 'Adamantine-Sealing-Chains', 'Wood-Dragon', 'Spore-Technique', 'Chain-Jail', 'Truth-Seeking-Orb', 'Super-Beast-Dragon', 'Machine-Triple-Shot', 'I.R.S', 'Spirit-Bomb', 'Final-Flash', 'Dual-Destructo-Disc', 'Destructo-Disc']
             let luck = []
             // genjutsu
             let genjutsu = ['Dark-Bushido']
@@ -259,7 +259,7 @@
             let ultDamage = []
             let ging = ['Polymath']
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse', 'Senjutsu']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Black-Voice-Control', 'Reaper-Death-Seal', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui',]
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Reaper-Death-Seal', 'Psychometry', 'Colt-Python', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui',]
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -1006,7 +1006,7 @@
                     $('#redHP').text(Math.floor(currRedHp))
                     $('#blueHP').text(Math.floor(currBlueHp))
                 }
-                if (jutsu == 'Psychometry' || jutsu == 'Spiritual-Message' || jutsu == 'Iron-Sand') {
+                if (jutsu == 'Psychometry' || jutsu == 'Spiritual-Message' || jutsu == 'Iron-Sand' || jutsu == 'Black-Voice-Control' || jutsu == 'Insect-Sphere') {
                     genjutsuAttack(10, 0, attacker)
                 }
                 //chrollo
@@ -2042,7 +2042,7 @@
                     return;
                 }
                 if (toge.includes(curse)) {
-                    curse = prompt('Blast-Away | Dont Move | Return')
+                    curse = prompt('Blast-Away (240) | Dont Move (2 Turns) | Return')
                     if (curse == 'Blast-Away') {
                         currBlueHp -= amount;
                         blueTalis -= 25
@@ -2214,7 +2214,7 @@
                     $('#blueWeaponCrit').text(blueWeaponCrit)
                 }
                 if (toge.includes(curse)) {
-                    curse = prompt('Blast-Away | Dont Move | Return')
+                    curse = prompt('Blast-Away (240) | Dont Move (2 Turns) | Return')
                     if (curse == 'Blast-Away') {
                         currRedHp -= amount;
                         redTalis -= 25

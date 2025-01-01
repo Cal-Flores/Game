@@ -174,7 +174,7 @@ const database = [
         critical: .12,
         strength: 1.17,
         //MAGIC
-        elm_attack: 135,
+        elm_attack: 125,
         elm_defense: 182,
         elm_efficiency: 1.15,
         potency: .25,
@@ -223,14 +223,14 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: 'Crimson-Binding - Trap opponent for 2 turns',
-        nin_cost: 31,
-        ninjutsu_pow: 70,
+        nin_cost: 33,
+        ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
         buff: 'Double Magic Attack',
         buff2: 'Halve Potency',
-        buff_acc: 65,
+        buff_acc: 60,
         buff2_acc: 70,
         image: 'https://64.media.tumblr.com/11d79e538d170ebc91403fa7825be14a/ac5ce7753d2dffd1-7d/s1280x1920/5e3752a4fc826febaef45197801b139f48d244de.jpg'
     },
@@ -497,7 +497,7 @@ const database = [
         cursed_tech: 'Reverse-Flow-Recovery - Increase Chakra Recovery',
         curse_amount: 4,
         curse_duration: 6,
-        curse_cost: 16,
+        curse_cost: 22,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -1061,7 +1061,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 3,
-        stun: .05,
+        stun: .07,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 40,
@@ -2230,7 +2230,7 @@ const database = [
         cursed_tech: 'Gakido - No damage from previous Ninjutsu | Do a boost',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 15,
+        curse_cost: 25,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -2238,13 +2238,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Shinra-Tensei - Decrease all 3 Attacks',
-        ninJutsu2cost: 20,
+        ninJutsu2cost: 30,
         ninJutsu2Dmg: 180,
         nin2amount: .08,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Chibaku-Tensei - Erase Magic Defense",
-        nin_cost: 66,
+        nin_cost: 76,
         ninjutsu_pow: 260,
         ninamount: 1.00,
         ultEnhance: false,
@@ -3023,8 +3023,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 15,
         negative_energy: 15,
-        cursed_tech: 'Kaio-Ken - Increase attack by 50',
-        curse_amount: 50,
+        cursed_tech: 'Kaio-Ken - Increase attack by 70',
+        curse_amount: 70,
         curse_duration: 6,
         curse_cost: 30,
         //DOMAIN
@@ -3034,7 +3034,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Kamehameha - Lower Curse Recovery',
-        ninJutsu2cost: 16,
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 265,
         nin2amount: 15,
         ninEnhance: false,
@@ -3685,29 +3685,29 @@ const database = [
         cursed_tech: 'Brain-Manipulation - Decrease Any Stat by 10%',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 12,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Black-Voice-Control - Decrease Any Stat by 25%',
+        ninjutsu2: 'Black-Voice-Control - Cast Confusion',
         ninJutsu2cost: 20,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 125,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Auto-Pilot-Mode - Increase Attack",
+        ninjutsu: "Auto-Pilot-Mode - Increase Attack by 1.5",
         nin_cost: 40,
-        ninjutsu_pow: 450,
-        ninamount: .35,
+        ninjutsu_pow: 265,
+        ninamount: .50,
         ultEnhance: true,
         //BUFFS
-        buff: 'Inrease Attack by 20%',
+        buff: 'Decrease Recovery 2',
         buff2: 'Decrease Curse Recovery by 20',
-        buff_acc: 70,
-        buff2_acc: 50,
+        buff_acc: 65,
+        buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/c/c3/HxH2011_EP53_Shalnark_Portrait.png/revision/latest?cb=20221008053250'
     },
     {
@@ -3715,7 +3715,7 @@ const database = [
         nen_type: 'Manipulator',
         element: 'Grass',
         elm: grass,
-        hp: 2852,
+        hp: 2872,
         //PHYSICAL
         attack: 205,
         defense: 204,
@@ -3734,7 +3734,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 144,
-        spirit_def: 204,
+        spirit_def: 224,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -3745,16 +3745,16 @@ const database = [
         stun: .05,
         //GENJUTSU
         genjutsu: 9,
-        gen_power: 62,
+        gen_power: 66,
         willpower: 8,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 8,
         drain: 9,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 50,
-        cursed_tech: 'Whispering-Dominion - Can Boost after casting Tsukoyomi',
+        cursed_tech: 'Whispering-Dominion - Status Effects do not take a turn',
         curse_amount: 0,
         curse_duration: 20,
         curse_cost: 16,
@@ -3764,7 +3764,7 @@ const database = [
         dom_duration: 4,
         dom_cost: 22,
         //NINJUTSU
-        ninjutsu2: 'Insect-Sphere - Increase Recovery by 2',
+        ninjutsu2: 'Insect-Sphere - Cast Confusion',
         ninJutsu2cost: 15,
         ninJutsu2Dmg: 220,
         nin2amount: 2,
@@ -3794,7 +3794,7 @@ const database = [
         critical: .20,
         strength: 1.4,
         //MAGIC
-        elm_attack: 219,
+        elm_attack: 226,
         elm_defense: 221,
         elm_efficiency: 1.4,
         potency: .25,
@@ -3848,10 +3848,10 @@ const database = [
         ninamount: 25,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Magic by 25%',
+        buff: 'Increase Magic by 20%',
         buff2: 'Decrease Recovery by 3',
-        buff_acc: 60,
-        buff2_acc: 40,
+        buff_acc: 55,
+        buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     },
     {
@@ -6621,7 +6621,7 @@ const database = [
         pick: 7,
         //PHYSICAL
         attack: 210,
-        defense: 217,
+        defense: 205,
         critical: .28,
         strength: 1.33,
         //MAGIC
@@ -6864,20 +6864,20 @@ const database = [
         accuracy: 9,
         evasion: 2,
         luck: 9,
-        stun: .08,
+        stun: .07,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 30,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 5,
         drain: 4,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 45,
         negative_energy: 45,
         cursed_tech: 'Cursed-Construction - Increase Weapon by 25',
-        curse_amount: 75,
+        curse_amount: 25,
         curse_duration: 6,
         curse_cost: 15,
         //DOMAIN
@@ -6893,7 +6893,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Constructed-Bullet - Deals 1000 Damage (Single use)",
-        nin_cost: 80,
+        nin_cost: 100,
         ninjutsu_pow: 1000,
         ninamount: 0,
         ultEnhance: false,
@@ -8257,7 +8257,7 @@ const database = [
         cursed_recovery: 68,
         negative_energy: 36,
         cursed_tech: 'Cursed-Speech',
-        curse_amount: 210,
+        curse_amount: 240,
         curse_duration: 1,
         curse_cost: 20,
         //DOMAIN
