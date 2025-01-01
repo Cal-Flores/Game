@@ -4663,9 +4663,9 @@ const database = [
         critical: .20,
         strength: 1.6,
         //MAGIC
-        elm_attack: 255,
+        elm_attack: 235,
         elm_defense: 185,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
         weapon: 130,
@@ -9278,7 +9278,7 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Heat - Decrease Evasion',
+        ninjutsu2: 'Heat - Decrease Evasion by 1',
         ninJutsu2cost: 8,
         ninJutsu2Dmg: 0,
         nin2amount: 1,
