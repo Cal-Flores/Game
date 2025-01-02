@@ -259,6 +259,7 @@ header {
 
 #vt_team_stat {
     background-color: #cf4420;
+    font-family: "Roboto", serif;
 }
 
 /* iowa style */
@@ -450,6 +451,15 @@ header {
 }
 
 #minn_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#nc_players {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
