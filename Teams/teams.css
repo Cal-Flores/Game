@@ -208,6 +208,7 @@ header {
 
 #stanford_text {
     color: #8C1515;
+    font-family: "DM Sans", serif;
 }
 
 #stanford_team_stat {
@@ -310,6 +311,41 @@ header {
 #nc_text {
     color: #8D9092;
     font-family: "Bebas Neue", serif;
+}
+
+#cornell_text {
+    font-family: "Kanit", serif;
+    color: white;
+}
+
+#iowa_text {
+    font-family: "Poppins", serif;
+    color: #FFCD00;
+}
+
+#iowa_state_text {
+    font-family: "Public Sans", serif;
+    color: #FFCD00;
+}
+
+#michigan_text {
+    font-family: "Roboto Slab", serif;
+    color: white;
+}
+
+#nebraska_text {
+    font-family: "IBM Plex Sans", serif;
+    color: white;
+}
+
+#ok_text {
+    font-family: "Roboto", serif;
+    color: #000000;
+}
+
+#vt_text {
+    font-family: "Roboto", serif;
+    color: #cf4420;
 }
 
 /* COPY THIS !!!!!!!! */
