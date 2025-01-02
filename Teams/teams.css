@@ -286,6 +286,31 @@ header {
     background-color: #cfab7a;
 }
 
+#miss_stats {
+    background-color: #F1B82D;
+}
+
+#miss_header {
+    background-color: #000000;
+    border-top: 1px solid #F1B82D;
+}
+
+#miss_text {
+    color: #DBD5CD;
+}
+
+#nc_header {
+    background-color: #7BAFD4;
+}
+
+#nc_stats {
+    background-color: #13294B;
+}
+
+#nc_text {
+    color: #8D9092;
+    font-family: "Bebas Neue", serif;
+}
 
 /* COPY THIS !!!!!!!! */
 #penn_state_players {
