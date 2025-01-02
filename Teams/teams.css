@@ -219,6 +219,14 @@ header {
     background-color: rgb(17 17 17)
 }
 
+#lehigh_header {
+    background-color: #653600;
+}
+
+#lehigh_text {
+    color: whitesmoke;
+}
+
 #ohio_state_team_stat {
     background-color: #ce0f3d
 }
@@ -258,8 +266,24 @@ header {
     background-color: #000000;
 }
 
+#minn_header {
+    background-color: #7a0019;
+}
+
+#minn_stats {
+    background-color: #ffb71e;
+}
+
+#minn_state_text {
+    color: #f9f7f6;
+}
+
 #iowa_team_stat {
     background-color: #FFCD00;
+}
+
+#lehigh_stats {
+    background-color: #cfab7a;
 }
 
 
@@ -347,6 +371,24 @@ header {
 }
 
 #iowa_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#lehigh_players {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: normal;
+    margin-bottom: 4%;
+}
+
+#minn_players {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
