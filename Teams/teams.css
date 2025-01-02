@@ -198,6 +198,7 @@ header {
 #cornell_state_header {
     background-color: #b31b1b;
     border-bottom: 1px solid black;
+    font-family: "Kanit", serif;
 }
 
 /* stanford style */
@@ -222,10 +223,12 @@ header {
 
 #lehigh_header {
     background-color: #653600;
+    font-family: "Oswald", serif;
 }
 
 #lehigh_text {
     color: whitesmoke;
+    font-family: "Oswald", serif;
 }
 
 #ohio_state_team_stat {
@@ -264,20 +267,23 @@ header {
 
 /* iowa style */
 #iowa_header {
-
+    font-family: "Poppins", serif;
     background-color: #000000;
 }
 
 #minn_header {
     background-color: #7a0019;
+    font-family: "Saira", serif;
 }
 
 #minn_stats {
     background-color: #ffb71e;
+    font-family: "Saira", serif;
 }
 
 #minn_state_text {
     color: #f9f7f6;
+    font-family: "Saira", serif;
 }
 
 #iowa_team_stat {
@@ -286,15 +292,18 @@ header {
 
 #lehigh_stats {
     background-color: #cfab7a;
+    font-family: "Oswald", serif;
 }
 
 #miss_stats {
     background-color: #F1B82D;
+    font-family: "Archivo Narrow", serif;
 }
 
 #miss_header {
     background-color: #000000;
     border-top: 1px solid #F1B82D;
+    font-family: "Archivo Narrow", serif;
 }
 
 #miss_text {

@@ -1744,7 +1744,7 @@
         const critical = ['Blade', 'Thunderclap-Veil', "Muscular-Expansion", 'Gorilla-Mode'];
         const strength = ['Polymorphic', 'Three-Headed-Wolf'];
         const potency = ["Disaster-Flames", "Hairpin", "Resonance", 'Disaster-Bolts'];
-        const magic_defense = ["Simple-Barrier",];
+        const magic_defense = ["Simple-Barrier", 'Rage-Blast'];
         const magic_attack = ['Albatross', 'Electro-Strike-Manipulation', 'Seven-Spectrum', 'Eight-Branch-Snake-Technique']
         const abusive = ["Idle-Transfiguration", "Brain-Manipulation", 'Cursed-Gunbai', 'Limitless-Reversal', 'Eighty-Gods-Vacuum-Attack', 'Gakido', 'Fun-Fun-Cloth', 'Kamuii'];
         const damage = ["Dismantle", 'Granite-Blast', 'Convergence', 'Cursed-Bee-Bomb', 'Straw-Doll-Technique']; //** NEW please add me**
@@ -1893,24 +1893,24 @@
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
                     if (weapon == 'Split Soul Katana') {
-                        redWeaponCrit = .70
+                        redWeaponCrit = .55
                         redWeaponCurse = 'Shield'
-                        redWeaponAmount = 10
+                        redWeaponAmount = 8
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
                         redWeaponCrit = .50
                         redWeaponCurse = 'Curse'
-                        redWeaponAmount = 10
+                        redWeaponAmount = 12
                     }
                     if (weapon == 'Chain of a Thousand Miles') {
                         redWeaponCrit = .50
                         redWeaponCurse = 'Magic'
-                        redWeaponAmount = 10
+                        redWeaponAmount = 6
                     }
                     if (weapon == 'Playful Cloud') {
                         redWeaponCrit = .50
                         redWeaponCurse = 'Attack'
-                        redWeaponAmount = 10
+                        redWeaponAmount = 6
                     }
                     $('.redWeaponCurse').text(redWeaponCurse)
                     $('#redWeaponCrit').text(redWeaponCrit)
@@ -2191,24 +2191,24 @@
                 if (toji.includes(curse)) {
                     let weapon = prompt('Split Soul Katana, Inverted Spear of Heaven,  Chain of a Thousand Miles, Playful Cloud')
                     if (weapon == 'Split Soul Katana') {
-                        blueWeaponCrit = .70
+                        blueWeaponCrit = .55
                         blueWeaponCurse = 'Shield'
-                        blueWeaponAmount = 10
+                        blueWeaponAmount = 8
                     }
                     if (weapon == 'Inverted Spear of Heaven') {
                         blueWeaponCrit = .50
                         blueWeaponCurse = 'Curse'
-                        blueWeaponAmount = 10
+                        blueWeaponAmount = 12
                     }
                     if (weapon == 'Chain of a Thousand Miles') {
                         blueWeaponCrit = .50
                         blueWeaponCurse = 'Magic'
-                        blueWeaponAmount = 10
+                        blueWeaponAmount = 6
                     }
                     if (weapon == 'Playful Cloud') {
                         blueWeaponCrit = .50
                         blueWeaponCurse = 'Attack'
-                        blueWeaponAmount = 10
+                        blueWeaponAmount = 6
                     }
                     $('.blueWeaponCurse').text(blueWeaponCurse)
                     $('#blueWeaponCrit').text(blueWeaponCrit)

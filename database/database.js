@@ -32,7 +32,7 @@ const database = [
         strength: 1.6,
         //MAGIC
         elm_attack: 111,
-        elm_defense: 144,
+        elm_defense: 124,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
@@ -48,10 +48,10 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 7,
-        evasion: 8,
+        accuracy: 6,
+        evasion: 7,
         luck: 3,
-        stun: .06,
+        stun: .05,
         //GENJUTSU
         genjutsu: 1,
         gen_power: 0,
@@ -73,13 +73,13 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Heavenly-Restriction - Increase Defense by 15%',
-        ninJutsu2cost: 14,
+        ninjutsu2: 'Heavenly-Restriction - Increase Defense by 10%',
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 125,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Heavenly-Weeping - Increase Magic Defense by 20%",
+        ninjutsu: "Heavenly-Weeping - Increase Magic Defense by 15%",
         nin_cost: 17,
         ninjutsu_pow: 155,
         ninamount: .20,
@@ -113,7 +113,7 @@ const database = [
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 8,
+        weapon_amount: 5,
         //SPIRIT
         spirit: 108,
         spirit_def: 169,
@@ -1180,7 +1180,7 @@ const database = [
         nen_type: 'Conjuror',
         element: 'Fairy',
         elm: fairy,
-        hp: 2968,
+        hp: 3168,
         //PHYSICAL
         attack: 118,
         defense: 145,
@@ -1188,18 +1188,18 @@ const database = [
         strength: 1.12,
         //MAGIC
         elm_attack: 78,
-        elm_defense: 140,
+        elm_defense: 160,
         elm_efficiency: .10,
         potency: 1.22,
         //WEAPON
         weapon: 253,
         shield: 202,
         curse_crit: .20,
-        weaponCurse: 'Domain',
-        weapon_amount: 1,
+        weaponCurse: 'Shield',
+        weapon_amount: 6,
         //SPIRIT
         spirit: 111,
-        spirit_def: 144,
+        spirit_def: 184,
         spirit_crit: .10,
         spiritCurse: 'Health',
         spirit_amount: 55,
@@ -1230,7 +1230,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Requip',
-        ninJutsu2cost: 1,
+        ninJutsu2cost: 0,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: false,
@@ -1748,7 +1748,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Accuracy by 2',
-        buff2: 'Decrease Weapon by 15%',
+        buff2: 'Decrease Weapon by 10%',
         buff_acc: 65,
         buff2_acc: 65,
         image: 'https://i.pinimg.com/originals/d8/08/eb/d808eb40caf400d332c02751eda72d68.jpg'
@@ -2446,7 +2446,7 @@ const database = [
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 20,
+        cursed_recovery: 25,
         negative_energy: 12,
         cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 3',
         curse_amount: 3,
@@ -2465,7 +2465,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Ripper-Cyclotron-15x Increase Cyclotron by 55%",
-        nin_cost: 34,
+        nin_cost: 30,
         ninjutsu_pow: 230,
         ninamount: .55,
         ultEnhance: true,
@@ -2520,7 +2520,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 15,
         negative_energy: 10,
-        cursed_tech: "Rage-Blast Increase Magic Defense by 100",
+        cursed_tech: "Rage-Blast - Increase Magic Defense by 100",
         curse_amount: 100,
         curse_duration: 6,
         curse_cost: 18,
@@ -2544,7 +2544,7 @@ const database = [
         //BUFFS
         buff: 'Double Critical',
         buff2: 'Increase Accuracy by 2',
-        buff_acc: 60,
+        buff_acc: 65,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
     },
@@ -3115,7 +3115,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Final-Flash - Recovery is halved",
-        nin_cost: 30,
+        nin_cost: 50,
         ninjutsu_pow: 500,
         ninamount: -3,
         ultEnhance: true,
@@ -5239,7 +5239,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Wood',
         elm: wood,
-        hp: 3050,
+        hp: 2850,
         //PHYSICAL
         attack: 178,
         defense: 135,
@@ -5281,7 +5281,7 @@ const database = [
         cursed_tech: 'Kamui - Intangibility for 1 Turn',
         curse_amount: 0,
         curse_duration: 3,
-        curse_cost: 18,
+        curse_cost: 21,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5297,7 +5297,7 @@ const database = [
         ninjutsu: "Regeneration - Recover 325 HP",
         nin_cost: 30,
         ninjutsu_pow: 0,
-        ninamount: 345,
+        ninamount: 325,
         ultEnhance: true,
         //BUFFS
         buff: 'Double Critical',
@@ -5497,7 +5497,7 @@ const database = [
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 17,
+        cursed_recovery: 21,
         negative_energy: 12,
         cursed_tech: 'Polymorphic - Double Strength',
         curse_amount: 1.8,
@@ -5769,14 +5769,14 @@ const database = [
         //SPIRIT
         spirit: 208,
         spirit_def: 179,
-        spirit_crit: .23,
+        spirit_crit: .28,
         spiritCurse: 'Health',
         spirit_amount: 85,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 5,
-        luck: 6,
-        stun: .10,
+        luck: 8,
+        stun: .15,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 48,
@@ -5788,9 +5788,9 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 28,
         negative_energy: 16,
-        cursed_tech: 'Simple-Barrier - Increase Magic Defense by 100',
-        curse_amount: 100,
-        curse_duration: 8,
+        cursed_tech: 'Miracle - Increase Luck by 5',
+        curse_amount: 5,
+        curse_duration: 4,
         curse_cost: 18,
         //DOMAIN
         dom_purity: 2,
@@ -5801,18 +5801,18 @@ const database = [
         ninjutsu2: 'Mystical-Palm - Recover 275 HP',
         ninJutsu2cost: 20,
         ninJutsu2Dmg: 0,
-        nin2amount: 305,
+        nin2amount: 275,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Mind-Transfer - May use Opponents turn against them",
-        nin_cost: 20,
+        ninjutsu: "Mind-Transfer - Frozen for one turn",
+        nin_cost: 25,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Reserved for Mind Transfer',
+        buff: 'Decrease Accuracy by 2',
         buff2: 'Decrease WillPower by 5',
-        buff_acc: 100,
+        buff_acc: 60,
         buff2_acc: 60,
         //image: 'https://preview.redd.it/now-tell-me-what-makes-ino-a-good-character-v0-i9kw0g493lgb1.jpg?width=1080&crop=smart&auto=webp&s=f4fb19c7a5579f10ba47f1305076e7c1c7473479',
         image: 'https://static.wikia.nocookie.net/a6d76857-0cec-40c6-9f7b-7803120213b8/scale-to-width/370'
@@ -6331,13 +6331,13 @@ const database = [
         hp: 3326,
         //PHYSICAL
         attack: 120,
-        defense: 187,
+        defense: 157,
         critical: .45,
         strength: 1.4,
         //MAGIC
         elm_attack: 305,
         elm_defense: 234,
-        elm_efficiency: 1.6,
+        elm_efficiency: 1.42,
         potency: .17,
         //WEAPON
         weapon: 208,
@@ -6347,7 +6347,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 109,
-        spirit_def: 223,
+        spirit_def: 233,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -6355,7 +6355,7 @@ const database = [
         accuracy: 6,
         evasion: 3,
         luck: 4,
-        stun: .04,
+        stun: .03,
         //GENJUTSU
         genjutsu: 3,
         gen_power: 20,
@@ -6378,13 +6378,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Wood-Dragon - Reduce Chakra by 3',
-        ninJutsu2cost: 24,
-        ninJutsu2Dmg: 225,
+        ninJutsu2cost: 28,
+        ninJutsu2Dmg: 235,
         nin2amount: 3,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Creation-Rebirth - Restore 500 HP",
-        nin_cost: 38,
+        nin_cost: 42,
         ninjutsu_pow: 0,
         ninamount: 500,
         ultEnhance: true,
@@ -6464,7 +6464,7 @@ const database = [
         buff: 'Negate all Efficiency',
         buff2: 'Decrease Recovery by 2',
         buff_acc: 75,
-        buff2_acc: 65,
+        buff2_acc: 60,
         image: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/86934292_2416205598693028_7955430930103926784_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=WOdzUpeEa3AQ7kNvgFo1ifo&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ArDg_3XCPmnLj6GKALQZdvH&oh=00_AYB0_A7Z8_V7de0ZqbiySxKaM9vXsaoU1EtlqL48ZxbSNQ&oe=67778428'
         //image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/32871384_357633448063300_2080573104114892800_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8t0qIren8i4Q7kNvgF4L6uz&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AnZWoeCZNuhcJZqKhqwiDiy&oh=00_AYB9MBnMfXebhbL4EdJAxx0Z1q6GFrBB-NDynGK1gRscYg&oe=6749278D'
     },
@@ -6547,12 +6547,12 @@ const database = [
         elm: fire,
         hp: 3213,
         //PHYSICAL
-        attack: 226,
+        attack: 236,
         defense: 169,
         critical: .17,
         strength: 1.62,
         //MAGIC
-        elm_attack: 242,
+        elm_attack: 246,
         elm_defense: 223,
         elm_efficiency: 1.45,
         potency: .28,
@@ -6594,7 +6594,7 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: "Fire-Dragon's-Roar - Increase Magic by 4%",
+        ninjutsu2: "Fire-Dragon's-Roar - Increase Magic by 4%",
         ninJutsu2cost: 18,
         ninJutsu2Dmg: 185,
         nin2amount: .04,
@@ -7130,7 +7130,7 @@ const database = [
         elm: lucky,
         hp: 3149,
         //PHYSICAL
-        attack: 200,
+        attack: 165,
         defense: 171,
         critical: .24,
         strength: 1.30,
@@ -7169,8 +7169,8 @@ const database = [
         negative_energy: 45,
         cursed_tech: 'Miracle - Increase Luck by 5',
         curse_amount: 5,
-        curse_duration: 100,
-        curse_cost: 25,
+        curse_duration: 4,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 1,
         dom_lethal: 0,
@@ -7178,13 +7178,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Ghost-Punch - Stunned for 1 turn | Increase Stun by 8%',
-        ninJutsu2cost: 24,
+        ninJutsu2cost: 26,
         ninJutsu2Dmg: 100,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Spectral-Curse - Increase Ghost Power by 20%",
-        nin_cost: 25,
+        nin_cost: 26,
         ninjutsu_pow: 0,
         ninamount: .50,
         ultEnhance: true,
@@ -8274,10 +8274,10 @@ const database = [
         nin2amount: 10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: '"Twist" - Lower Attack by 20%',
+        ninjutsu: '"Twist" - Lower Attack by 10%',
         nin_cost: 20,
         ninjutsu_pow: 225,
-        ninamount: .20,
+        ninamount: .10,
         ultEnhance: false,
         //BUFFS
         buff: 'Increase Defense by 10%',
@@ -8525,7 +8525,7 @@ const database = [
         weaponCurse: 'S-Def',
         weapon_amount: 7,
         //SPIRIT
-        spirit: 226,
+        spirit: 236,
         spirit_def: 160,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
@@ -8534,7 +8534,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 7,
-        stun: .08,
+        stun: .10,
         //GENJUTSU
         genjutsu: 5,
         gen_power: 38,
@@ -8628,21 +8628,21 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'White-Snake - Damage a Stat by 10%',
-        ninJutsu2cost: 15,
-        ninJutsu2Dmg: 175,
+        ninjutsu2: 'White-Snake - Damage a Stat by 7%',
+        ninJutsu2cost: 17,
+        ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rashōmon-Gates - Increase Talisman by 20%",
-        nin_cost: 17,
-        ninjutsu_pow: 180,
+        nin_cost: 21,
+        ninjutsu_pow: 200,
         ninamount: .20,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Evasion by 3',
         buff2: 'Decrease Evasion by 3',
-        buff_acc: 70,
+        buff_acc: 60,
         buff2_acc: 60,
         image: 'https://preview.redd.it/prime-hiruzen-loses-to-orochimaru-v0-bofksvybr5gc1.jpeg?auto=webp&s=3fb6efa6db2fdc08da3a5bb702a9a50bd68e5f4c'
     },
@@ -8797,9 +8797,9 @@ const database = [
         elm: holy,
         hp: 2978,
         //PHYSICAL
-        attack: 239,
+        attack: 229,
         defense: 129,
-        critical: .20,
+        critical: .30,
         strength: 1.34,
         //MAGIC
         elm_attack: 103,
@@ -9231,7 +9231,7 @@ const database = [
         nen_type: 'Emission',
         element: 'Fire',
         elm: fire,
-        hp: 3400,
+        hp: 3500,
         //PHYSICAL
         attack: 215,
         defense: 237,
@@ -9273,7 +9273,7 @@ const database = [
         cursed_tech: 'Steam-Emission - Cant be touched or charge Chakra',
         curse_amount: 0,
         curse_duration: 4,
-        curse_cost: 16,
+        curse_cost: 18,
         //DOMAIN
         dom_purity: 10,
         dom_lethal: 0,
@@ -9281,13 +9281,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Heat - Decrease Evasion by 1',
-        ninJutsu2cost: 8,
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 0,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Explosive-Transformation - Decrease Evasion and Defense",
-        nin_cost: 85,
+        nin_cost: 75,
         ninjutsu_pow: 1000,
         ninamount: .75,
         ultEnhance: false,
