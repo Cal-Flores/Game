@@ -955,6 +955,7 @@
                     let currBlueHp = parseInt($('#blueHP').text(), 10)
                     let hakDamage = 0
                     let mult = 9;
+                    let mistake = false
                     if (jutsu == 'Uzumaki') {
                         mult = 8
                     }
@@ -964,12 +965,22 @@
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
                         hakDamage = currRedChakra * mult;
+                        if (currRedChakra >= 60) {
+                            alert('You lost controll of the energy. You blew up!')
+                            currRedChakra = 0;
+                            return
+                        }
                         currBlueHp = currBlueHp -= hakDamage
                         currRedChakra = 0;
                         alert(`${jutsu} loans and deals ${hakDamage} to Blue`)
                     } else {
                         currRedChakra += Math.floor(currBlueChakra / 2)
                         hakDamage = currBlueChakra * mult;
+                        if (currBlueChakra >= 60) {
+                            alert('You lost controll of the energy. You blew up!')
+                            currBlueChakra = 0;
+                            return
+                        }
                         currredHp = currredHp -= hakDamage
                         currBlueChakra = 0;
                         alert(`${jutsu} loans and deals ${hakDamage} to Red`)

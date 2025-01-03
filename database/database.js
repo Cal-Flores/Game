@@ -388,7 +388,7 @@ const database = [
         hp: 3115,
         //PHYSICAL
         attack: 241,
-        defense: 185,
+        defense: 2055,
         critical: .20,
         strength: 1.8,
         //MAGIC
@@ -398,7 +398,7 @@ const database = [
         potency: .15,
         //WEAPON
         weapon: 280,
-        shield: 155,
+        shield: 175,
         curse_crit: .23,
         weaponCurse: 'Curse',
         weapon_amount: 8,
@@ -1268,9 +1268,9 @@ const database = [
         //WEAPON
         weapon: 244,
         shield: 178,
-        curse_crit: .18,
+        curse_crit: .25,
         weaponCurse: 'M-Def',
-        weapon_amount: 12,
+        weapon_amount: 9,
         //SPIRIT
         spirit: 166,
         spirit_def: 200,
@@ -1281,13 +1281,13 @@ const database = [
         accuracy: 7,
         evasion: 6,
         luck: 8,
-        stun: .05,
+        stun: .10,
         //GENJUTSU
         genjutsu: 9,
         gen_power: 60,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 15,
         //CURSE
         cursed_energy: 0,
@@ -2109,7 +2109,7 @@ const database = [
         //BUFFS
         buff: 'Increase Weapon by 30%',
         buff2: 'Decrease Magic by 10%',
-        buff_acc: 70,
+        buff_acc: 65,
         buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/b/bb/HxH2011_EP97_Kalluto_Close_Up.png/revision/latest?cb=20221123201432'
     },
@@ -7209,7 +7209,7 @@ const database = [
         critical: .20,
         strength: 1.3,
         //MAGIC
-        elm_attack: 228,
+        elm_attack: 234,
         elm_defense: 218,
         elm_efficiency: 1.48,
         potency: .28,
