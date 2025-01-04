@@ -388,7 +388,7 @@ const database = [
         hp: 3115,
         //PHYSICAL
         attack: 241,
-        defense: 2055,
+        defense: 205,
         critical: .20,
         strength: 1.8,
         //MAGIC
@@ -1183,18 +1183,18 @@ const database = [
         hp: 3168,
         //PHYSICAL
         attack: 118,
-        defense: 145,
+        defense: 165,
         critical: .28,
         strength: 1.12,
         //MAGIC
         elm_attack: 78,
-        elm_defense: 160,
+        elm_defense: 150,
         elm_efficiency: .10,
         potency: 1.22,
         //WEAPON
         weapon: 253,
-        shield: 202,
-        curse_crit: .20,
+        shield: 222,
+        curse_crit: .25,
         weaponCurse: 'Shield',
         weapon_amount: 6,
         //SPIRIT
@@ -1222,7 +1222,7 @@ const database = [
         cursed_tech: 'Soul-Forge - Increase Weapon by 40',
         curse_amount: 40,
         curse_duration: 6,
-        curse_cost: 24,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -1236,7 +1236,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Holy-Hammer",
-        nin_cost: 26,
+        nin_cost: 22,
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: false,
@@ -3888,7 +3888,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 8,
-        stun: .35,
+        stun: .25,
         //GENJUTSU
         genjutsu: 7,
         gen_power: 60,
@@ -3943,7 +3943,7 @@ const database = [
         elm_attack: 233,
         elm_defense: 234,
         elm_efficiency: 1.5,
-        potency: .20,
+        potency: .32,
         //WEAPON
         weapon: 135,
         shield: 124,
@@ -3960,7 +3960,7 @@ const database = [
         accuracy: 9,
         evasion: 5,
         luck: 6,
-        stun: .05,
+        stun: .11,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 66,
@@ -5805,7 +5805,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Mind-Transfer - Frozen for one turn",
-        nin_cost: 25,
+        nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
@@ -6888,15 +6888,15 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Colt-Python .357 Magnum - Decrease one Stat by 20%',
+        ninjutsu2: 'Colt-Python .357 Magnum - Decrease Shield by 12%',
         ninJutsu2cost: 25,
-        ninJutsu2Dmg: 245,
-        nin2amount: 0,
+        ninJutsu2Dmg: 210,
+        nin2amount: .12,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Constructed-Bullet - Deals 1000 Damage (Single use)",
-        nin_cost: 100,
-        ninjutsu_pow: 1000,
+        ninjutsu: "Constructed-Bullet - Deals 555 Damage (Single use)",
+        nin_cost: 55,
+        ninjutsu_pow: 555,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
@@ -7965,7 +7965,7 @@ const database = [
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 50,
+        cursed_recovery: 55,
         negative_energy: 30,
         cursed_tech: 'Disaster-Stones - Increase Potency to 80',
         curse_amount: .48,
@@ -7974,7 +7974,7 @@ const database = [
         //DOMAIN
         dom_purity: 12,
         dom_lethal: 60,
-        dom_duration: 6,
+        dom_duration: 8,
         dom_cost: 22,
         //NINJUTSU
         ninjutsu2: 'Royal-Scream - Increase Magic by 7%',
@@ -8797,9 +8797,9 @@ const database = [
         elm: holy,
         hp: 2978,
         //PHYSICAL
-        attack: 229,
+        attack: 236,
         defense: 129,
-        critical: .30,
+        critical: .32,
         strength: 1.34,
         //MAGIC
         elm_attack: 103,
@@ -8815,12 +8815,12 @@ const database = [
         //SPIRIT
         spirit: 272,
         spirit_def: 135,
-        spirit_crit: .12,
+        spirit_crit: .15,
         spiritCurse: 'Attack',
         spirit_amount: 8,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 8,
+        evasion: 9,
         luck: 2,
         stun: .05,
         //GENJUTSU
@@ -8832,12 +8832,12 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 16,
+        cursed_recovery: 18,
         negative_energy: 30,
         cursed_tech: 'Polymorphic - Increase Strength to 2.5',
         curse_amount: 1.1,
-        curse_duration: 8,
-        curse_cost: 30,
+        curse_duration: 10,
+        curse_cost: 25,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -8846,12 +8846,12 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Masenko - Lower Magic by 5%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 175,
+        ninJutsu2Dmg: 200,
         nin2amount: .05,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Kamehameha-Wave - Lower Defense by 12%",
-        nin_cost: 28,
+        nin_cost: 25,
         ninjutsu_pow: 255,
         ninamount: .12,
         ultEnhance: false,
