@@ -1036,7 +1036,7 @@ const database = [
         nen_type: 'Manipulator',
         element: 'Dark',
         elm: dark,
-        hp: 3233,
+        hp: 3317,
         //PHYSICAL
         attack: 106,
         defense: 179,
@@ -1427,7 +1427,7 @@ const database = [
         luck: 2,
         stun: .05,
         //GENJUTSU
-        genjutsu: 7,
+        genjutsu: 9,
         gen_power: 50,
         willpower: 5,
         chakra: 0,
@@ -2537,8 +2537,8 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Big-Bang-Impact - Decrease Defense by 70%",
-        nin_cost: 60,
-        ninjutsu_pow: 650,
+        nin_cost: 50,
+        ninjutsu_pow: 600,
         ninamount: .70,
         ultEnhance: false,
         //BUFFS
@@ -4515,7 +4515,7 @@ const database = [
         hp: 3223,
         //PHYSICAL
         attack: 145,
-        defense: 183,
+        defense: 153,
         critical: .08,
         strength: 1.53,
         //MAGIC
@@ -5898,7 +5898,7 @@ const database = [
         //PHYSICAL
         attack: 255,
         defense: 216,
-        critical: .14,
+        critical: .18,
         strength: 1.45,
         //MAGIC
         elm_attack: 100,
@@ -5907,13 +5907,13 @@ const database = [
         potency: .09,
         //WEAPON
         weapon: 120,
-        shield: 158,
+        shield: 188,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 20,
         //SPIRIT
         spirit: 96,
-        spirit_def: 153,
+        spirit_def: 163,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -6522,15 +6522,15 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Destructo-Disc  - Lower Recovery by 1',
-        ninJutsu2cost: 22,
+        ninjutsu2: 'Destructo-Disc  - Lower Recovery by 2',
+        ninJutsu2cost: 24,
         ninJutsu2Dmg: 175,
-        nin2amount: 1,
+        nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Dual-Destructo-Disc - Lower Recovery by 3",
+        ninjutsu: "Dual-Destructo-Disc - Lower Recovery by 4",
         nin_cost: 51,
-        ninjutsu_pow: 333,
+        ninjutsu_pow: 360,
         ninamount: 3,
         ultEnhance: false,
         //BUFFS
@@ -7278,7 +7278,7 @@ const database = [
         //PHYSICAL
         attack: 224,
         defense: 164,
-        critical: .45,
+        critical: .55,
         strength: 1.20,
         //MAGIC
         elm_attack: 199,
@@ -7293,7 +7293,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 125,
-        spirit_def: 167,
+        spirit_def: 177,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -7473,7 +7473,7 @@ const database = [
         nin2amount: 150,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Artillary-Strike - Deal 425 Damage",
+        ninjutsu: "Artillary-Strike - Deal 500 Damage",
         nin_cost: 30,
         ninjutsu_pow: 500,
         ninamount: 0,
@@ -8089,7 +8089,7 @@ const database = [
         shield: 240,
         curse_crit: .20,
         weaponCurse: 'Sage',
-        weapon_amount: 15,
+        weapon_amount: 12,
         //SPIRIT
         spirit: 151,
         spirit_def: 191,
@@ -8161,7 +8161,7 @@ const database = [
         shield: 129,
         curse_crit: .33,
         weaponCurse: 'Sage',
-        weapon_amount: 10,
+        weapon_amount: 7,
         //SPIRIT
         spirit: 135,
         spirit_def: 159,
@@ -9017,7 +9017,7 @@ const database = [
         elm: sage,
         hp: 3268,
         //PHYSICAL
-        attack: 222,
+        attack: 232,
         defense: 163,
         critical: .55,
         strength: 1.22,
@@ -9027,7 +9027,7 @@ const database = [
         elm_efficiency: 1.30,
         potency: .28,
         //WEAPON
-        weapon: 207,
+        weapon: 217,
         shield: 144,
         curse_crit: .40,
         weaponCurse: 'Stun',
@@ -9106,7 +9106,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 144,
-        spirit_def: 154,
+        spirit_def: 164,
         spirit_crit: .15,
         spiritCurse: 'Attack',
         spirit_amount: 10,
@@ -9464,7 +9464,7 @@ const database = [
         shield: 136,
         curse_crit: .35,
         weaponCurse: 'Sage',
-        weapon_amount: 10,
+        weapon_amount: 8,
         //SPIRIT
         spirit: 220,
         spirit_def: 222,
@@ -9536,7 +9536,7 @@ const database = [
         shield: 182,
         curse_crit: .50,
         weaponCurse: 'Sage',
-        weapon_amount: 6,
+        weapon_amount: 5,
         //SPIRIT
         spirit: 105,
         spirit_def: 143,
