@@ -1953,7 +1953,7 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        redEvas += 12;
+                        redEvas += 10;
                         $('#redEvas').text(redEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
@@ -2265,7 +2265,7 @@
                     if (limitTech == 'Infinity') {
                         curse = 'Infinity'
                         duration = 6
-                        blueEvas += 12;
+                        blueEvas += 10;
                         $('#blueEvas').text(blueEvas)
                         //alert(`uses Infinity! Evasion: ${redEvas}, Duration: ${duration}`)
                     } else if (limitTech == 'Reversal: Red') {
@@ -2491,7 +2491,7 @@
                 // Infinity | Neutral: Blue | Reversal: Red | Maximum Lapse: Blue
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        redEvas -= 12;
+                        redEvas -= 10;
                         $('#redEvas').text(redEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -2638,9 +2638,10 @@
                     $('#blueCrit').text(blueCrit)
                     $('#blueStr').text(blueStrength)
                 }
+                //gojo
                 if (curse == 'Infinity' || curse == 'Reversal: Red' || curse == 'Maximum Lapse: Blue' || curse == 'Neutral: Blue') {
                     if (curse == 'Infinity') {
-                        blueEvas -= 12;
+                        blueEvas -= 10;
                         $('#blueEvas').text(blueEvas)
                         //alert('Infinity Lifted')
                     } else if (curse == 'Reversal: Red') {
@@ -2964,7 +2965,7 @@
         }
 
         function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.82;
+            const multiplier = 1.88;
             if (evasion <= 0) return true
             return (accuracy * multiplier) / (accuracy + evasion);
         }

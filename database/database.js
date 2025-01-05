@@ -385,7 +385,7 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fire',
         elm: fire,
-        hp: 3115,
+        hp: 3315,
         //PHYSICAL
         attack: 241,
         defense: 205,
@@ -2190,7 +2190,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Psychic',
         elm: pyschic,
-        hp: 3247,
+        hp: 3047,
         //PHYSICAL
         attack: 111,
         defense: 210,
@@ -2240,8 +2240,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Shinra-Tensei - Decrease all 3 Attacks',
-        ninJutsu2cost: 30,
-        ninJutsu2Dmg: 180,
+        ninJutsu2cost: 40,
+        ninJutsu2Dmg: 200,
         nin2amount: .08,
         ninEnhance: false,
         //ULTIMATE
@@ -2986,15 +2986,15 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Holy',
         elm: holy,
-        hp: 3332,
+        hp: 3326,
         //PHYSICAL
         attack: 310,
         defense: 207,
         critical: .18,
-        strength: 1.60,
+        strength: 1.80,
         //MAGIC
         elm_attack: 79,
-        elm_defense: 129,
+        elm_defense: 132,
         elm_efficiency: .11,
         potency: 1.0,
         //WEAPON
@@ -3019,7 +3019,7 @@ const database = [
         gen_power: 10,
         willpower: 2,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -3027,7 +3027,7 @@ const database = [
         negative_energy: 15,
         cursed_tech: 'Kaio-Ken - Increase attack by 70',
         curse_amount: 70,
-        curse_duration: 6,
+        curse_duration: 8,
         curse_cost: 30,
         //DOMAIN
         dom_purity: 9,
@@ -3035,10 +3035,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Kamehameha - Lower Curse Recovery',
-        ninJutsu2cost: 20,
+        ninjutsu2: 'Kamehameha - Lower Curse Recovery by 25',
+        ninJutsu2cost: 25,
         ninJutsu2Dmg: 265,
-        nin2amount: 15,
+        nin2amount: 25,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Spirit-Bomb - 15x damage recovery goes to 0",
@@ -3850,9 +3850,9 @@ const database = [
         ninamount: 25,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Magic by 20%',
+        buff: 'Increase Magic by 15%',
         buff2: 'Decrease Recovery by 3',
-        buff_acc: 55,
+        buff_acc: 60,
         buff2_acc: 50,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/f/fc/HxH2011_EP96_Bonolenov_Portrait.png/revision/latest?cb=20230123153232'
     },
@@ -4082,23 +4082,23 @@ const database = [
         elm: sand,
         hp: 3254,
         //PHYSICAL
-        attack: 135,
+        attack: 105,
         defense: 236,
         critical: .15,
         strength: 1.2,
         //MAGIC
-        elm_attack: 256,
+        elm_attack: 258,
         elm_defense: 192,
         elm_efficiency: 1.5,
         potency: .20,
         //WEAPON
-        weapon: 124,
+        weapon: 114,
         shield: 260,
         curse_crit: .06,
         weaponCurse: 'Magic',
         weapon_amount: 25,
         //SPIRIT
-        spirit: 198,
+        spirit: 178,
         spirit_def: 202,
         spirit_crit: .15,
         spiritCurse: 'Lethal',
@@ -4443,7 +4443,7 @@ const database = [
         hp: 3264,
         //PHYSICAL
         attack: 230,
-        defense: 211,
+        defense: 201,
         critical: .15,
         strength: 1.85,
         //MAGIC
@@ -4453,13 +4453,13 @@ const database = [
         potency: .30,
         //WEAPON
         weapon: 185,
-        shield: 220,
+        shield: 200,
         curse_crit: .15,
         weaponCurse: 'Curse',
         weapon_amount: 15,
         //SPIRIT
         spirit: 138,
-        spirit_def: 204,
+        spirit_def: 184,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -4734,7 +4734,7 @@ const database = [
         team: 'Oklahoma State',
         round: 2,
         pick: 20,
-        hp: 3379,
+        hp: 3279,
         //PHYSICAL
         attack: 124,
         defense: 167,
@@ -4773,8 +4773,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 34,
         negative_energy: 11,
-        cursed_tech: 'Flying-Rajin - Increase Stun to 55%',
-        curse_amount: .51,
+        cursed_tech: 'Flying-Rajin - Increase Stun to 50%',
+        curse_amount: .46,
         curse_duration: 6,
         curse_cost: 26,
         //DOMAIN
@@ -4784,13 +4784,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Water-Formation-Wall - Increases Shield by 10%',
-        ninJutsu2cost: 14,
+        ninJutsu2cost: 18,
         ninJutsu2Dmg: 170,
         nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heavenly-Weeping - Decrease Magic Def by 10%",
-        nin_cost: 18,
+        nin_cost: 24,
         ninjutsu_pow: 215,
         ninamount: .10,
         ultEnhance: false,
@@ -5776,7 +5776,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 8,
-        stun: .15,
+        stun: .05,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 48,
@@ -5810,7 +5810,7 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Decrease Accuracy by 2',
+        buff: 'Increase Stun by 5%',
         buff2: 'Decrease WillPower by 5',
         buff_acc: 60,
         buff2_acc: 60,
@@ -6095,8 +6095,8 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Texture-Surprise - Half cost of Bungee Gum",
-        nin_cost: 32,
-        ninjutsu_pow: 215,
+        nin_cost: 27,
+        ninjutsu_pow: 185,
         ninamount: .5,
         ultEnhance: true,
         //BUFFS
@@ -7492,26 +7492,26 @@ const database = [
         nen_type: 'Specialist',
         element: 'Holy',
         elm: holy,
-        hp: 3244,
+        hp: 3144,
         //PHYSICAL
         attack: 221,
-        defense: 177,
+        defense: 157,
         critical: .27,
         strength: 1.70,
         //MAGIC
         elm_attack: 200,
-        elm_defense: 188,
+        elm_defense: 178,
         elm_efficiency: 1.31,
         potency: .32,
         //WEAPON
         weapon: 126,
-        shield: 124,
+        shield: 121,
         curse_crit: .15,
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
         //SPIRIT
         spirit: 252,
-        spirit_def: 280,
+        spirit_def: 250,
         spirit_crit: .18,
         spiritCurse: 'Health',
         spirit_amount: 85,
@@ -7542,7 +7542,7 @@ const database = [
         dom_cost: 100,
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
-        ninJutsu2cost: 12,
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 0,
         nin2amount: 10,
         ninEnhance: true,
@@ -9287,8 +9287,8 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Explosive-Transformation - Decrease Evasion and Defense",
-        nin_cost: 75,
-        ninjutsu_pow: 1000,
+        nin_cost: 85,
+        ninjutsu_pow: 850,
         ninamount: .75,
         ultEnhance: false,
         //BUFFS
