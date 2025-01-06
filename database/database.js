@@ -2990,7 +2990,7 @@ const database = [
         //PHYSICAL
         attack: 310,
         defense: 207,
-        critical: .18,
+        critical: .14,
         strength: 1.80,
         //MAGIC
         elm_attack: 79,
@@ -3005,7 +3005,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 180,
-        spirit_def: 162,
+        spirit_def: 157,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -3028,17 +3028,17 @@ const database = [
         cursed_tech: 'Kaio-Ken - Increase attack by 70',
         curse_amount: 70,
         curse_duration: 8,
-        curse_cost: 30,
+        curse_cost: 40,
         //DOMAIN
         dom_purity: 9,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Kamehameha - Lower Curse Recovery by 25',
+        ninjutsu2: 'Kamehameha - Lower Curse Recovery by 35',
         ninJutsu2cost: 25,
         ninJutsu2Dmg: 265,
-        nin2amount: 25,
+        nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Spirit-Bomb - 15x damage recovery goes to 0",
@@ -3612,7 +3612,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 40,
         negative_energy: 30,
-        cursed_tech: 'Brain-Manipulation - Decrease any stat by 10%',
+        cursed_tech: 'Brain-Manipulation - Decrease any stat by 5% 4x',
         curse_amount: 0,
         curse_duration: 1,
         curse_cost: 15,
@@ -6160,10 +6160,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Flying-Swallow - Increase Swallow damage by 40%',
+        ninjutsu2: 'Flying-Swallow - Increase Swallow damage by 30%',
         ninJutsu2cost: 30,
         ninJutsu2Dmg: 300,
-        nin2amount: .40,
+        nin2amount: .30,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Ash-Pile-Burning - Decrease Evasion by 2",
@@ -6465,7 +6465,8 @@ const database = [
         buff2: 'Decrease Recovery by 2',
         buff_acc: 75,
         buff2_acc: 60,
-        image: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/86934292_2416205598693028_7955430930103926784_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=WOdzUpeEa3AQ7kNvgFo1ifo&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ArDg_3XCPmnLj6GKALQZdvH&oh=00_AYB0_A7Z8_V7de0ZqbiySxKaM9vXsaoU1EtlqL48ZxbSNQ&oe=67778428'
+        image: 'https://pbs.twimg.com/media/EW4OLH9XQAAK1ru.jpg'
+        //image: 'https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/86934292_2416205598693028_7955430930103926784_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=WOdzUpeEa3AQ7kNvgFo1ifo&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ArDg_3XCPmnLj6GKALQZdvH&oh=00_AYB0_A7Z8_V7de0ZqbiySxKaM9vXsaoU1EtlqL48ZxbSNQ&oe=67778428'
         //image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/32871384_357633448063300_2080573104114892800_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8t0qIren8i4Q7kNvgF4L6uz&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AnZWoeCZNuhcJZqKhqwiDiy&oh=00_AYB9MBnMfXebhbL4EdJAxx0Z1q6GFrBB-NDynGK1gRscYg&oe=6749278D'
     },
     {
@@ -6912,7 +6913,7 @@ const database = [
         nen_type: 'Emission',
         element: 'Luck',
         elm: lucky,
-        hp: 3216,
+        hp: 3116,
         //PHYSICAL
         attack: 160,
         defense: 191,
@@ -6938,8 +6939,8 @@ const database = [
         //SPEED / LUCK
         accuracy: 5,
         evasion: 4,
-        luck: 12,
-        stun: .11,
+        luck: 10,
+        stun: .07,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 10,
@@ -6954,7 +6955,7 @@ const database = [
         cursed_tech: 'Idle-Death-Gamble can bet 400',
         curse_amount: 0,
         curse_duration: 8,
-        curse_cost: 20,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 1,
         dom_lethal: 0,
@@ -6962,15 +6963,15 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Remote-Punch - Stunned for 1 turn | Increase Stun by 7%',
-        ninJutsu2cost: 21,
+        ninJutsu2cost: 24,
         ninJutsu2Dmg: 70,
         nin2amount: .07,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Medical-Hunter - Recover 365 HP",
+        ninjutsu: "Medical-Hunter - Recover 355 HP",
         nin_cost: 28,
         ninjutsu_pow: 0,
-        ninamount: 365,
+        ninamount: 355,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Attack by 50%',
@@ -7548,7 +7549,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Hollow-Technique: Purple",
-        nin_cost: 32,
+        nin_cost: 30,
         ninjutsu_pow: 400,
         ninamount: 0,
         ultEnhance: false,
@@ -7567,7 +7568,7 @@ const database = [
         hp: 3066,
         //PHYSICAL
         attack: 112,
-        defense: 186,
+        defense: 166,
         critical: .10,
         strength: 1.12,
         //MAGIC
@@ -7588,7 +7589,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.66,
         //SPEED / LUCK
-        accuracy: 6,
+        accuracy: 8,
         evasion: 3,
         luck: 5,
         stun: .06,
@@ -7603,7 +7604,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 70,
         negative_energy: 70,
-        cursed_tech: 'Uzumaki 0 | 25',
+        cursed_tech: 'Uzumaki | 30',
         curse_amount: 0,
         curse_duration: 3,
         curse_cost: 0,
