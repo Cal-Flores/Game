@@ -1014,18 +1014,18 @@ const database = [
         dom_cost: 47,
         //NINJUTSU
         ninjutsu2: 'Future-Devil Contract - Increase Evasion by 1',
-        ninJutsu2cost: 24,
+        ninJutsu2cost: 27,
         ninJutsu2Dmg: 177,
         nin2amount: 1,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Curse-Devil Contract I - Halve Any stat",
+        ninjutsu: "Curse-Devil Contract II - Halve Any stat",
         nin_cost: 77,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Curse Devil Contract II',
+        buff: 'Curse Devil Contract I',
         buff2: 'Curse Devil Contract III - Erase 1 stat',
         buff_acc: 77,
         buff2_acc: 77,
@@ -1551,7 +1551,7 @@ const database = [
         //MAGIC
         elm_attack: 283,
         elm_defense: 229,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.35,
         potency: .20,
         //WEAPON
         weapon: 214,
@@ -2989,7 +2989,7 @@ const database = [
         hp: 3326,
         //PHYSICAL
         attack: 310,
-        defense: 207,
+        defense: 217,
         critical: .14,
         strength: 1.80,
         //MAGIC
@@ -2999,13 +2999,13 @@ const database = [
         potency: 1.0,
         //WEAPON
         weapon: 82,
-        shield: 218,
+        shield: 208,
         curse_crit: .20,
         weaponCurse: 'Luck',
         weapon_amount: 2,
         //SPIRIT
         spirit: 180,
-        spirit_def: 157,
+        spirit_def: 154,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -3013,7 +3013,7 @@ const database = [
         accuracy: 5,
         evasion: 7,
         luck: 2,
-        stun: .03,
+        stun: .02,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -3036,8 +3036,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Kamehameha - Lower Curse Recovery by 35',
-        ninJutsu2cost: 25,
-        ninJutsu2Dmg: 265,
+        ninJutsu2cost: 27,
+        ninJutsu2Dmg: 275,
         nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
@@ -3049,8 +3049,8 @@ const database = [
         //BUFFS
         buff: 'Increase Critical by 20%',
         buff2: 'Decrease Critical by 30%',
-        buff_acc: 80,
-        buff2_acc: 80,
+        buff_acc: 70,
+        buff2_acc: 70,
         image: 'https://wallpapers-clan.com/wp-content/uploads/2022/09/dragon-ball-goku-pfp-13.jpg'
         // image: 'https://avatarfiles.alphacoders.com/627/62714.jpg'
     },
@@ -3362,19 +3362,19 @@ const database = [
         potency: .01,
         //WEAPON
         weapon: 172,
-        shield: 200,
+        shield: 190,
         curse_crit: .09,
         weaponCurse: 'Def',
         weapon_amount: 12,
         //SPIRIT
         spirit: 195,
-        spirit_def: 189,
+        spirit_def: 166,
         spirit_crit: .10,
         spiritCurse: 'Attack',
         spirit_amount: 25,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 7,
+        evasion: 5,
         luck: 2,
         stun: .03,
         //GENJUTSU
@@ -6359,7 +6359,7 @@ const database = [
         //GENJUTSU
         genjutsu: 3,
         gen_power: 20,
-        willpower: 8,
+        willpower: 4,
         chakra: 0,
         chakra_rec: 10,
         drain: 5,
@@ -6431,7 +6431,7 @@ const database = [
         //GENJUTSU
         genjutsu: 8,
         gen_power: 50,
-        willpower: 8,
+        willpower: 4,
         chakra: 0,
         chakra_rec: 8,
         drain: 2,
@@ -7602,7 +7602,7 @@ const database = [
         drain: 10,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 70,
+        cursed_recovery: 55,
         negative_energy: 70,
         cursed_tech: 'Uzumaki | 30',
         curse_amount: 0,
@@ -8259,7 +8259,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 68,
         negative_energy: 36,
-        cursed_tech: 'Cursed-Speech',
+        cursed_tech: 'Cursed-Speech 20 | 30',
         curse_amount: 240,
         curse_duration: 1,
         curse_cost: 20,
@@ -9409,7 +9409,7 @@ const database = [
         gen_power: 50,
         willpower: 8,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 6,
         drain: 10,
         //CURSE
         cursed_energy: 0,
@@ -9426,7 +9426,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Polymath - Increase Core Stat by up to 20% then sacrifice',
-        ninJutsu2cost: 18,
+        ninJutsu2cost: 16,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: true,
@@ -9705,10 +9705,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 40,
         negative_energy: 30,
-        cursed_tech: 'Veil - Increase Defense by 50%',
-        curse_amount: .50,
+        cursed_tech: 'Veil - Increase Defense by 50',
+        curse_amount: 50,
         curse_duration: 8,
-        curse_cost: 22,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,

@@ -2056,6 +2056,7 @@
                     curse = prompt('Blast-Away (240) | Dont Move (2 Turns) | Return')
                     if (curse == 'Blast-Away') {
                         currBlueHp -= amount;
+                        currRedCurse -= 10;
                         blueTalis -= 25
                         $('#blueTalis').text(blueTalis)
                         $('#blueHP').text(currBlueHp);
@@ -2233,6 +2234,7 @@
                         $('#redHP').text(currRedHp);
                     } else if (curse == 'Dont Move') {
                         alert('Player Frozen in place for 2 turns')
+                        currBlueCurse -= 10;
                     } else if (curse == 'Return') {
                         alert('Drain until out of Curse')
                     }
