@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../Teams/teams.css">
         <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="index.css">
+        <script src="../database/database.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
 
@@ -72,36 +73,51 @@
         </header>
         <main class="">
             <div class="draft_cont">
-                <div>
-                    <div>Gojo</div>
-                    <div>Round 1</div>
-                    <div>pick 1</div>
-                    <div>Penn State</div>
-                    <img src="https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg">
-                </div>
+
             </div>
         </main>
 
 
         <script>
 
-            function draft() {
-                let player = $('#name').val()
-                let team = $('#team').val()
+            let teamLogos = {
+                Cornell: "https://sportslogohistory.com/wp-content/uploads/2019/06/cornell_big_red_2002-pres.png",
+                Iowa: "https://storage.googleapis.com/hawkeyesports-com/2021/02/cf540990-logo-e1722875756178.png",
+                Iowa_State: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/isuni.sidearmsports.com/images/responsive_2021/logo_nav.svg",
+                Lehigh: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lehighsports.com/responsive_2020/images/svgs/logo_main2-new.svg",
+                Michigan: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/mgoblue.com/images/sng_2023/main_nav_logo.svg",
+                Minnesota: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gophersports.com/images/nextgen_2022/main_logo.svg",
+                Missori: "https://loodibee.com/wp-content/uploads/Missouri_Tigers_logo.png",
+                Nebraska: "data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e...", // truncated for brevity
+                NC_State: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/unc.sidearmsports.com/images/sng_2023/main_nav_logo.svg",
+                Ohio: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/ohiostatebuckeyes.com/images/nextgen_2023/logo_main.svg",
+                Oklahoma_State: "https://sportslogohistory.com/wp-content/uploads/2018/07/oklahoma_state_cowboys_2015-pres.png",
+                Penn_State: "https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg",
+                Stanford: "https://gostanford.com/imgproxy/l6GXJbFV4z1yPuiCbXCePofeGNcKTlM78I9yNaTuiU4/rs:fit:1980:0:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0YW5mb3JkLXByb2QvMjAyNC8wMy8yMC9hVXJvSkRQeEVBQzFBRE53M3M2YjBRQWNlcmd2WW9EOXRabHVsZHRrLnBuZw.png",
+                Virginia_Tech: "https://sportslogohistory.com/wp-content/uploads/2018/01/virginia_tech_hokies_1983-pres.png",
+            };
 
-                let html = `
-                 <div>
-                    <div>${player}</div>
-                    <div>Round 1</div>
-                    <div>pick 1</div>
-                    <div>${team}</div>
-                    <img src="https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg">
-                </div>
-                `
-                $('.draft_cont').append(html)
-            }
+            let html = '';
+            let databaseArr = database;
+            databaseArr.sort((a, b) => a.pick - b.pick);
 
-            $('#Dsubmit').click(draft)
+            databaseArr.forEach((player, i) => {
+                let teamKey = player.team.replace(" ", "_");
+                let teamLogo = teamLogos[teamKey] || ""; // Fallback to an empty string if no match
+
+                html += `
+            <div class="draft_card">
+                <img class="player_img" src='${player.image}' alt="${player.name}">
+                <div>${player.name}</div>
+                <div>Round ${player.round}</div>
+                <div>Pick ${player.pick}</div>
+                <div>${player.team}</div>
+                <img class="player_img" src="${teamLogo}" alt="${player.team} logo">
+            </div>
+    `;
+            });
+
+            $('.draft_cont').append(html);
 
         </script>
 

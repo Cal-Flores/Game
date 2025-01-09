@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="teams.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="../database/players.js"></script>
+        <script src="../database/database.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="">
 
@@ -91,17 +92,25 @@
         </main>
 
         <script>
-            let team = cornell;
+            let databaseArr = database
+            let team = [];
+            databaseArr.forEach((player) => {
+                if (player.team === 'Cornell') {
+                    team.push(player);
+                }
+            });
+            team.sort((a, b) => a.round - b.round);
             html = ''
             team.forEach((player, index) => {
                 html += `
-                    <div class='profile_border'>
+                <div class='profile_border'>
 
-                            <img class='profile_image' src=${player.image}>
-
-                        <div class='profile'>
-                            <div class='profile_header'>
+                    <img class='profile_image' src=${player.image}>
+                    <div class='profile'>
+                        <div class='profile_header'>
+                            <a target = '_blank' href='http://127.0.0.1:5000/player/${player.id}'>
                                 <h2>${player.name}</h2>
+                            </a>
                                 <div class='nen_display'>
                                     <p>${player.nen_type}</p>
                                     <img class='nen_img' src = 'https://files.idyllic.app/files/static/2009128'>
@@ -112,19 +121,21 @@
                                 </div>
                             </div>
                             <div class='profile_stats'>
-                                <p>🖤: ${player.hp}</p>
-                                <p>👊 ${player.strength}</p>
-                                <p>⚛️ ${player.potency}</p>
                                 <p>⚔️: ${player.attack}</p>
                                 <p>🛡: ${player.defense}</p>
-                                <p>💥: ${player.critical}%</p>
-                                <p>🔥: ${player.elm_attack}</p>
+                                <p>🪄: ${player.elm_attack}</p>
                                 <p>♠︎: ${player.elm_defense}</p>
-                                <p>🧪: ${player.elm_efficiency}% </p>
-                                <p id='buff'>Increase ⚔️ by 35% 🎯: 85%</p>
+                                <p>🏹: ${player.weapon} </p>
+                                <p>𐂫: ${player.shield} </p>
+                                <p>🦇: ${player.spirit}</p>
+                                <p>🌀: ${player.spirit_def} </p>
+                                <p>🖤: ${player.hp}</p>
+                                <p>🍀: ${player.luck}</p>
+                                <p>🤞🏼: ${player.dom_purity}</p>
+                                <p>🎯: ${player.accuracy} 🪽 ${player.evasion}</p>
                             </div>
                         </div>
-                    </div>
+                </div>
                 `
             });
             $('#cornell_players').append(html)

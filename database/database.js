@@ -23,7 +23,7 @@ const database = [
         elm: ghost,
         team: 'Oklahoma State',
         round: 1,
-        pick: 4,
+        pick: 1,
         hp: 3372,
         //PHYSICAL
         attack: 216,
@@ -94,6 +94,9 @@ const database = [
     {
         name: 'Nanami',
         id: 47,
+        team: 'NC State',
+        round: 1,
+        pick: 2,
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
@@ -166,6 +169,9 @@ const database = [
     },
     {
         name: 'Noritoshi',
+        team: 'Penn State',
+        round: 1,
+        pick: 3,
         nen_type: 'Emitter',
         element: 'Fire',
         elm: ghost,
@@ -238,6 +244,9 @@ const database = [
     },
     {
         name: 'Nobunaga',
+        team: 'Missori',
+        round: 1,
+        pick: 4,
         nen_type: 'Transmuter',
         element: 'Dark',
         elm: wood,
@@ -310,6 +319,9 @@ const database = [
     },
     {
         name: 'Mikasa',
+        team: 'Virginia Tech',
+        round: 1,
+        pick: 5,
         nen_type: 'Enhancer',
         element: 'Lightning',
         elm: lightning,
@@ -382,6 +394,9 @@ const database = [
     },
     {
         name: 'Might Guy',
+        team: 'Cornell',
+        round: 1,
+        pick: 6,
         nen_type: 'Enhancer',
         element: 'Fire',
         elm: fire,
@@ -2242,11 +2257,11 @@ const database = [
         ninjutsu2: 'Shinra-Tensei - Decrease all 3 Attacks',
         ninJutsu2cost: 40,
         ninJutsu2Dmg: 200,
-        nin2amount: .08,
+        nin2amount: .10,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Chibaku-Tensei - Erase Magic Defense",
-        nin_cost: 76,
+        nin_cost: 70,
         ninjutsu_pow: 260,
         ninamount: 1.00,
         ultEnhance: false,
@@ -2305,7 +2320,7 @@ const database = [
         cursed_recovery: 35,
         negative_energy: 35,
         cursed_tech: 'Garuda - Increase Weapon to 310',
-        curse_amount: 62,
+        curse_amount: 73,
         curse_duration: 10,
         curse_cost: 25,
         //DOMAIN
@@ -3041,7 +3056,7 @@ const database = [
         nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Spirit-Bomb - 15x damage recovery goes to 0",
+        ninjutsu: "Spirit-Bomb - 11x damage recovery goes to 0",
         nin_cost: 0,
         ninjutsu_pow: 0,
         ninamount: -10,
@@ -3086,7 +3101,7 @@ const database = [
         accuracy: 6,
         evasion: 7,
         luck: 2,
-        stun: .04,
+        stun: .12,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 10,
@@ -3101,7 +3116,7 @@ const database = [
         cursed_tech: 'Projection-Sorcery - Increase Evasion by 7',
         curse_amount: 7,
         curse_duration: 6,
-        curse_cost: 26,
+        curse_cost: 23,
         //DOMAIN
         dom_purity: 5,
         dom_lethal: 0,
@@ -4598,7 +4613,7 @@ const database = [
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
-        weapon: 241,
+        weapon: 238,
         shield: 193,
         curse_crit: .23,
         weaponCurse: 'Evasion',
@@ -4613,7 +4628,7 @@ const database = [
         accuracy: 6,
         evasion: 12,
         luck: 4,
-        stun: .18,
+        stun: .12,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -6161,10 +6176,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Flying-Swallow - Increase Swallow damage by 30%',
+        ninjutsu2: 'Flying-Swallow - Increase Swallow damage by 22%',
         ninJutsu2cost: 30,
         ninJutsu2Dmg: 300,
-        nin2amount: .30,
+        nin2amount: .22,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Ash-Pile-Burning - Decrease Evasion by 2",
