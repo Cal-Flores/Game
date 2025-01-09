@@ -93,7 +93,7 @@ const database = [
     },
     {
         name: 'Nanami',
-        id: 66,
+        id: 47,
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
@@ -953,7 +953,7 @@ const database = [
         ninamount: .08,
         ultEnhance: true,
         //BUFFS
-        buff: 'Double Wither percent',
+        buff: 'Increase Recovery by 2',
         buff2: 'Decrease Potency by 50%',
         buff_acc: 60,
         buff2_acc: 60,
@@ -1375,7 +1375,7 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Water-Formation-Wall - Increase Defense by 15%',
+        ninjutsu2: 'Water-Formation-Wall - Increase Shield by 15%',
         ninJutsu2cost: 12,
         ninJutsu2Dmg: 135,
         nin2amount: .15,
@@ -1387,7 +1387,7 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        buff: 'Increase Shield by 15%',
+        buff: 'Increase Defense by 10%',
         buff2: 'Decrease Attack by 10%',
         buff_acc: 65,
         buff2_acc: 70,
@@ -1455,7 +1455,7 @@ const database = [
         //ULTIMATE
         ninjutsu: "Yasaka-Magatama - Reduce Curse Recovery by 20",
         nin_cost: 30,
-        ninjutsu_pow: 300,
+        ninjutsu_pow: 340,
         ninamount: 20,
         ultEnhance: false,
         //BUFFS
@@ -2379,17 +2379,17 @@ const database = [
         cursed_tech: 'Muscular-Expansion - Increase Critical to 80%',
         curse_amount: .50,
         curse_duration: 6,
-        curse_cost: 21,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Scissors - Increase Strength by .35',
-        ninJutsu2cost: 12,
+        ninjutsu2: 'Scissors - Increase Strength by .30',
+        ninJutsu2cost: 15,
         ninJutsu2Dmg: 165,
-        nin2amount: .35,
+        nin2amount: .30,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Jajanken - Stengthen Jajanken by 200 | Reduce Recovery by 2",
@@ -2451,7 +2451,7 @@ const database = [
         cursed_tech: 'Reverse-Flow-Recovery Increase Recovery by 3',
         curse_amount: 3,
         curse_duration: 4,
-        curse_cost: 22,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -2465,7 +2465,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Ripper-Cyclotron-15x Increase Cyclotron by 55%",
-        nin_cost: 30,
+        nin_cost: 26,
         ninjutsu_pow: 230,
         ninamount: .55,
         ultEnhance: true,
@@ -3767,7 +3767,7 @@ const database = [
         dom_cost: 22,
         //NINJUTSU
         ninjutsu2: 'Insect-Sphere - Cast Confusion',
-        ninJutsu2cost: 20,
+        ninJutsu2cost: 30,
         ninJutsu2Dmg: 150,
         nin2amount: 0,
         ninEnhance: true,
@@ -4613,7 +4613,7 @@ const database = [
         accuracy: 6,
         evasion: 12,
         luck: 4,
-        stun: .16,
+        stun: .18,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -4641,17 +4641,18 @@ const database = [
         nin2amount: 12,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Reaper-Death-Seal - Reverse Any Damage",
-        nin_cost: 15,
+        ninjutsu: "Reaper-Death-Seal - Reverse Any Damage (Nin)",
+        nin_cost: 20,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
         buff: 'Double Purity',
         buff2: 'Decrease Recovery by 5',
-        buff_acc: 50,
-        buff2_acc: 45,
-        image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
+        buff_acc: 60,
+        buff2_acc: 50,
+        image: 'https://static.wikia.nocookie.net/narutofanon/images/9/93/Minato_Namikaze_%28AMTBlood%29.png/revision/latest?cb=20230212203807'
+        //image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
     },
     {
         name: 'Meruem',
@@ -6028,7 +6029,7 @@ const database = [
         ninamount: .08,
         ultEnhance: false,
         //BUFFS
-        buff: 'Double Domain Duration',
+        buff: 'Increase Domain Duration by 2',
         buff2: 'Decrease Evasion by 2',
         buff_acc: 60,
         buff2_acc: 70,
@@ -6524,13 +6525,13 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Destructo-Disc  - Lower Recovery by 2',
-        ninJutsu2cost: 24,
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 175,
         nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Dual-Destructo-Disc - Lower Recovery by 4",
-        nin_cost: 51,
+        nin_cost: 38,
         ninjutsu_pow: 360,
         ninamount: 3,
         ultEnhance: false,
@@ -7511,7 +7512,7 @@ const database = [
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 252,
+        spirit: 263,
         spirit_def: 250,
         spirit_crit: .18,
         spiritCurse: 'Health',
@@ -7620,7 +7621,7 @@ const database = [
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health (1.5)",
+        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health (1.5 physical)",
         nin_cost: 35,
         ninjutsu_pow: 0,
         ninamount: 0,
