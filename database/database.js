@@ -2261,8 +2261,8 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Chibaku-Tensei - Erase Magic Defense",
-        nin_cost: 70,
-        ninjutsu_pow: 260,
+        nin_cost: 66,
+        ninjutsu_pow: 230,
         ninamount: 1.00,
         ultEnhance: false,
         //BUFFS
@@ -3056,7 +3056,7 @@ const database = [
         nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Spirit-Bomb - 11x damage recovery goes to 0",
+        ninjutsu: "Spirit-Bomb - 12x damage recovery goes to 0",
         nin_cost: 0,
         ninjutsu_pow: 0,
         ninamount: -10,
@@ -6111,14 +6111,14 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Texture-Surprise - Half cost of Bungee Gum",
-        nin_cost: 27,
+        nin_cost: 29,
         ninjutsu_pow: 185,
         ninamount: .5,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Attack by 10%',
+        buff: 'Increase Attack by 7%',
         buff2: 'Decrease Shield by 15%',
-        buff_acc: 60,
+        buff_acc: 70,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/2/29/Hisoka_Morow_YC_Portrait.png/revision/latest?cb=20190123172039'
     },
@@ -7402,7 +7402,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 47,
         negative_energy: 35,
-        cursed_tech: 'Three-Headed-Wolf - Increase Strength to 4',
+        cursed_tech: 'Three-Headed-Wolf - Increase Strength to 3',
         curse_amount: 2.72,
         curse_duration: 8,
         curse_cost: 28,
@@ -7620,7 +7620,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 55,
         negative_energy: 70,
-        cursed_tech: 'Uzumaki | 30',
+        cursed_tech: 'Uzumaki | 25',
         curse_amount: 0,
         curse_duration: 3,
         curse_cost: 0,
@@ -8645,10 +8645,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'White-Snake - Damage a Stat by 7%',
-        ninJutsu2cost: 17,
-        ninJutsu2Dmg: 0,
-        nin2amount: 0,
+        ninjutsu2: 'White-Snake - Decrease Magic by 9%',
+        ninJutsu2cost: 19,
+        ninJutsu2Dmg: 190,
+        nin2amount: .09,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rashōmon-Gates - Increase Talisman by 20%",
@@ -9448,7 +9448,7 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Phase-Bullets - Lower all Defences and Increase Stun",
-        nin_cost: 28,
+        nin_cost: 24,
         ninjutsu_pow: 260,
         ninamount: .08,
         ultEnhance: false,
@@ -9656,7 +9656,7 @@ const database = [
         //DOMAIN
         dom_purity: 5,
         dom_lethal: 300,
-        dom_duration: 4,
+        dom_duration: 3,
         dom_cost: 55,
         //NINJUTSU
         ninjutsu2: 'Albatross - Decrease Talisman by 12%',
@@ -9738,7 +9738,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Machine-Triple-Shot - Trap Enemy and drain Recovery by 3",
-        nin_cost: 30,
+        nin_cost: 34,
         ninjutsu_pow: 150,
         ninamount: 3,
         ultEnhance: false,

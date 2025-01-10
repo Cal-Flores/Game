@@ -222,7 +222,7 @@
             let Strength1 = ["Roar", 'Knuckle-Bracers', 'ButterFly-Mode', 'Scissors', 'Harden', "Fire-Dragon's-Iron-Fist"]
             //Magic
             let magic = ['Sand-Coffin', 'Purple-Arrow', 'Iaidō-Master', 'Chidori', 'Thunderbolt', 'Water-Prison-Shark-Dance', 'Yasaka', 'Wind-Bullets', 'Royal-Scream', 'Shinra-Tensei', 'Toad-Oil-Bullet', 'Iron-Sand', 'Masenko', "Fire-Dragon's-Roar"]
-            let magicDef = ['Flame-Control', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei', 'Phase-Bullets', 'Finish-Buster']
+            let magicDef = ['Flame-Control', 'Heavenly-Weeping', 'Amaterasu', 'Amaterasu-Arrow', 'Nen-Bullets', 'Flex', 'Tailed-Beast-Bomb', 'Strength-of-a-Hundred-Seals', 'Chibaku-Tensei', 'Phase-Bullets', 'Finish-Buster', 'White-Snake',]
             let potency = ['Explosive', 'Flowing-Red-Scale', 'Double-Machine-Gun', 'Thunder-Spears', 'Great-Fire-Annhilation', 'Divine-Flame', 'Disaster-Stones']
             let efficieny = ['Thunder-Spear', 'Pain-Packer', 'Wind-Scythe', 'Water-Shark-Bomb']
             // Cursed tool
@@ -259,7 +259,7 @@
             let ultDamage = []
             let ging = ['Polymath']
             let heal = ['Blood-Consumption', 'Heart-Mask', 'Magical-Esthetician', 'Doctor-Blythe', 'Regeneration', 'Heal-Bite', 'Mystical-Palm', 'Nen-Stitches', 'Creation-Rebirth', 'Medical-Hunter', 'Machine-Gun', 'Holy-Chain', 'Yin-Healing-Wound-Destruction', 'Jahshins-Curse', 'Senjutsu']
-            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Reaper-Death-Seal', 'Psychometry', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'White-Snake', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui',]
+            let misc = ['Aura-Synthesis', 'Aura', 'Curse-Devil', 'Reaper-Death-Seal', 'Psychometry', 'Mayfly', 'Solo-Forbidden-Area', 'Reverse-Curse-Technique', 'Extracted-Technique', 'Reverse-Curse-Technique', 'Shrine', 'Strange-Transmission-Distant-Shadow', 'All-Killing-Ash-Bones', 'Sacrifice', 'Polymath', 'Amenotejikara', 'Kamui',]
             let stun = ['Batto-Sword-Drawing', 'Eletric-Yo-Yo', '8-Trigram-64-Palms', 'Leaf-Hurricane', 'Knife-Fighter', 'Remote-Punch', 'Ghost-Punch', 'Satellitonbo', 'Gentle-Fist', 'Rabbit-Hair-Needle']
             let trade = ['Jajanken']
             let percentDmg = ['Blood-Suck', 'Solo-Leveling']
@@ -942,10 +942,10 @@
                 if (jutsu == 'Spirit-Bomb') {
                     if (attacker == 'red') {
                         redRecovery = 0;
-                        alert(`Goku's Recovery has fallen to ${redRecovery}!`)
+                        alert('(Goku Cant move for 1 turn!)')
                     } else if (attacker == 'blue') {
                         blueRecovery = 0;
-                        alert(`Goku's Recovery has fallen to ${blueRecovery}!`)
+                        alert('(Goku Cant move for 1 turn!)')
                     }
                 }
                 if (jutsu == 'Hakoware' || jutsu == 'Uzumaki' || jutsu == 'Spirit-Bomb') {
@@ -960,7 +960,7 @@
                         mult = 9
                     }
                     if (jutsu == 'Spirit-Bomb') {
-                        mult = 11
+                        mult = 12
                     }
                     if (attacker == 'red') {
                         currBlueChakra += Math.floor(currRedChakra / 1.5)
@@ -2028,7 +2028,7 @@
                         $('#blueHP').text(health)
                     } else if (curse == 'Antigravity System') {
                         duration = 3
-                        currRedCurse -= 30;
+                        currRedCurse -= 25;
                         alert('Player is crushed by gravity for 2 turns!')
                         blueEvas -= 10
                         $('#blueEvas').text(blueEvas)
@@ -2341,7 +2341,7 @@
                         $('#blueCurrCurse').text(0)
                     } else if (curse == 'Antigravity System') {
                         duration = 3
-                        currBlueCurse -= 30;
+                        currBlueCurse -= 25;
                         alert('Player is crushed by gravity for 2 turns!')
                         redEvas -= 10
                         $('#redEvas').text(redEvas)
