@@ -9745,7 +9745,7 @@ const database = [
         //BUFFS
         buff: 'Increase Trap time by 2 turns if caught',
         buff2: 'Decrease Weapon by 10%',
-        buff_acc: 50,
+        buff_acc: 60,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/naruto/images/c/c6/Kankuro_Reuni%C3%A3o.png/revision/latest/scale-to-width/360?cb=20130728155543&path-prefix=pt-br'
     },
