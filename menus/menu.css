@@ -752,23 +752,51 @@ body {
 
 
 /* draft stylessss */
-.player_img {
-    width: 55px;
-    border-radius: 50%;
+
+
+/* Main Container */
+.d_logo {
+    margin-top: 2%;
+    width: 150px;
+    margin-left: 45%;
 }
 
 .draft_cont {
-    margin-top: 5%;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    padding: 3%;
+    margin: auto;
 }
 
 .draft_card {
-    border: 1px solid black;
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
     align-items: center;
+    gap: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #dfdfdf;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
     margin: auto;
-    padding: .5%;
+}
+
+.player_img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.draft_card div {
+    font-size: 18px;
+    text-align: left;
+}
+
+.draft_card img:last-child {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }

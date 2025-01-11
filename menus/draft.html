@@ -72,6 +72,8 @@
             <img>
         </header>
         <main class="">
+            <img class="d_logo"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/NFL_Draft_logo.svg/1200px-NFL_Draft_logo.svg.png">
             <div class="draft_cont">
 
             </div>
@@ -102,10 +104,13 @@
             databaseArr.sort((a, b) => a.pick - b.pick);
 
             databaseArr.forEach((player, i) => {
-                let teamKey = player.team.replace(" ", "_");
-                let teamLogo = teamLogos[teamKey] || ""; // Fallback to an empty string if no match
+                if (player.team) {
 
-                html += `
+
+                    let teamKey = player.team.replace(" ", "_");
+                    let teamLogo = teamLogos[teamKey] || ""; // Fallback to an empty string if no match
+
+                    html += `
             <div class="draft_card">
                 <img class="player_img" src='${player.image}' alt="${player.name}">
                 <div>${player.name}</div>
@@ -115,8 +120,8 @@
                 <img class="player_img" src="${teamLogo}" alt="${player.team} logo">
             </div>
     `;
+                }
             });
-
             $('.draft_cont').append(html);
 
         </script>

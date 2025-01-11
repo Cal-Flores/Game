@@ -7531,7 +7531,7 @@ const database = [
         spirit_def: 250,
         spirit_crit: .18,
         spiritCurse: 'Health',
-        spirit_amount: 85,
+        spirit_amount: 115,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 5,
@@ -9655,7 +9655,7 @@ const database = [
         curse_cost: 20,
         //DOMAIN
         dom_purity: 5,
-        dom_lethal: 300,
+        dom_lethal: 350,
         dom_duration: 3,
         dom_cost: 55,
         //NINJUTSU
