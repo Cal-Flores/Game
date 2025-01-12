@@ -244,7 +244,7 @@ const database = [
     },
     {
         name: 'Nobunaga',
-        team: 'Missori',
+        team: 'Missouri',
         round: 1,
         pick: 4,
         nen_type: 'Transmuter',

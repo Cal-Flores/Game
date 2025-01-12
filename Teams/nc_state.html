@@ -92,7 +92,7 @@
             let databaseArr = database
             let team = [];
             databaseArr.forEach((player) => {
-                if (player.team === 'NC State') {
+                if (player.team == 'NC State') {
                     team.push(player);
                 }
             });
@@ -136,7 +136,7 @@
                 </div>
                 `
             });
-            $('#ok_state_players').append(html)
+            $('#nc_players').append(html)
         </script>
 
     </body>
