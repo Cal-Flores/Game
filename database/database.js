@@ -1147,7 +1147,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 10,
         //SPEED / LUCK
-        accuracy: 7,
+        accuracy: 8,
         evasion: 4,
         luck: 4,
         stun: .03,
@@ -1156,16 +1156,16 @@ const database = [
         gen_power: 20,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 4,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 29,
         negative_energy: 20,
-        cursed_tech: 'Electro-Strike-Manipulation - Increase Magic by 50',
-        curse_amount: 50,
+        cursed_tech: 'Electro-Strike-Manipulation - Increase Magic by 70',
+        curse_amount: 70,
         curse_duration: 6,
-        curse_cost: 28,
+        curse_cost: 32,
         //DOMAIN
         dom_purity: 0,
         dom_lethal: 0,
@@ -1179,7 +1179,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Finish-Buster - Decrease Magic Def by 50%",
-        nin_cost: 55,
+        nin_cost: 45,
         ninjutsu_pow: 500,
         ninamount: .50,
         ultEnhance: false,
@@ -3043,7 +3043,7 @@ const database = [
         cursed_tech: 'Kaio-Ken - Increase attack by 70',
         curse_amount: 70,
         curse_duration: 8,
-        curse_cost: 40,
+        curse_cost: 36,
         //DOMAIN
         dom_purity: 9,
         dom_lethal: 0,
@@ -3056,7 +3056,7 @@ const database = [
         nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Spirit-Bomb - 12x damage recovery goes to 0",
+        ninjutsu: "Spirit-Bomb - Recovery goes to 0 exhaust 2 truns",
         nin_cost: 0,
         ninjutsu_pow: 0,
         ninamount: -10,
@@ -3078,7 +3078,7 @@ const database = [
         //PHYSICAL
         attack: 295,
         defense: 158,
-        critical: .23,
+        critical: .25,
         strength: 1.42,
         //MAGIC
         elm_attack: 84,
@@ -3116,7 +3116,7 @@ const database = [
         cursed_tech: 'Projection-Sorcery - Increase Evasion by 7',
         curse_amount: 7,
         curse_duration: 6,
-        curse_cost: 23,
+        curse_cost: 22,
         //DOMAIN
         dom_purity: 5,
         dom_lethal: 0,
@@ -4604,31 +4604,31 @@ const database = [
         hp: 3255,
         //PHYSICAL
         attack: 186,
-        defense: 149,
+        defense: 146,
         critical: .40,
         strength: 1.4,
         //MAGIC
         elm_attack: 129,
-        elm_defense: 245,
+        elm_defense: 225,
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
-        weapon: 238,
+        weapon: 233,
         shield: 193,
         curse_crit: .23,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
         spirit: 111,
-        spirit_def: 242,
+        spirit_def: 212,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 12,
+        evasion: 10,
         luck: 4,
-        stun: .12,
+        stun: .10,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -4666,7 +4666,7 @@ const database = [
         buff2: 'Decrease Recovery by 5',
         buff_acc: 60,
         buff2_acc: 50,
-        image: 'https://static.wikia.nocookie.net/narutofanon/images/9/93/Minato_Namikaze_%28AMTBlood%29.png/revision/latest?cb=20230212203807'
+        image: 'https://pbs.twimg.com/profile_images/542400676563668992/XAxPkw9p_400x400.jpeg'
         //image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
     },
     {
@@ -4713,10 +4713,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 10,
         negative_energy: 3,
-        cursed_tech: 'Flash - Increase stun to 50%',
-        curse_amount: .50,
+        cursed_tech: 'Flash - Increase stun to 40%',
+        curse_amount: .35,
         curse_duration: 6,
-        curse_cost: 22,
+        curse_cost: 25,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -4775,7 +4775,7 @@ const database = [
         spirit_amount: 1,
         //SPEED / LUCK
         accuracy: 6,
-        evasion: 11,
+        evasion: 10,
         luck: 3,
         stun: .04,
         //GENJUTSU
@@ -4789,10 +4789,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 34,
         negative_energy: 11,
-        cursed_tech: 'Flying-Rajin - Increase Stun to 50%',
-        curse_amount: .46,
+        cursed_tech: 'Flying-Rajin - Increase Stun to 35%',
+        curse_amount: .31,
         curse_duration: 6,
-        curse_cost: 26,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5556,7 +5556,7 @@ const database = [
         strength: 2,
         //MAGIC
         elm_attack: 194,
-        elm_defense: 194,
+        elm_defense: 184,
         elm_efficiency: 1.2,
         potency: .20,
         //WEAPON
@@ -5581,16 +5581,16 @@ const database = [
         gen_power: 10,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 7,
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 38,
+        cursed_recovery: 30,
         negative_energy: 20,
         cursed_tech: 'Muscular-Expansion - Increase Critical to 50%',
         curse_amount: .32,
         curse_duration: 6,
-        curse_cost: 25,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -5603,10 +5603,10 @@ const database = [
         nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Creation-Rebirth - Restore 550 HP",
-        nin_cost: 35,
+        ninjutsu: "Creation-Rebirth - Restore 500 HP",
+        nin_cost: 38,
         ninjutsu_pow: 0,
-        ninamount: 550,
+        ninamount: 500,
         ultEnhance: true,
         //BUFFS
         buff: 'Increase Luck by 2',
@@ -6151,7 +6151,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 7,
+        accuracy: 6,
         evasion: 3,
         luck: 2,
         stun: .04,
@@ -6169,7 +6169,7 @@ const database = [
         cursed_tech: 'Soul-Forge - Increase Weapon by 50',
         curse_amount: 50,
         curse_duration: 6,
-        curse_cost: 15,
+        curse_cost: 20,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -6348,7 +6348,7 @@ const database = [
         //PHYSICAL
         attack: 120,
         defense: 157,
-        critical: .45,
+        critical: .65,
         strength: 1.4,
         //MAGIC
         elm_attack: 305,
@@ -7708,7 +7708,7 @@ const database = [
         nin2amount: .30,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Shrine - Decrease any stat by 5%",
+        ninjutsu: "Shrine - Decrease any stat by 15%",
         nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: .15,
@@ -8832,14 +8832,14 @@ const database = [
         //SPIRIT
         spirit: 272,
         spirit_def: 135,
-        spirit_crit: .15,
+        spirit_crit: .25,
         spiritCurse: 'Attack',
-        spirit_amount: 8,
+        spirit_amount: 6,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 9,
         luck: 2,
-        stun: .05,
+        stun: .10,
         //GENJUTSU
         genjutsu: 1,
         gen_power: 8,
@@ -9088,7 +9088,7 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Bandit's Secret - Steal Ability",
-        nin_cost: 50,
+        nin_cost: 35,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,

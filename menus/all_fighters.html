@@ -102,7 +102,7 @@
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             let characters = databaseArr
-            databaseArr.sort((a, b) => b.hp - a.hp);
+            databaseArr.sort((a, b) => b.name - a.name);
             databaseArr.forEach(player => {
                 name += `<li>${player.name} </li>`
             })

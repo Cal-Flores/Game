@@ -83,7 +83,7 @@ header {
 }
 
 .profile_stats {
-    margin-left: 10%;
+    margin-left: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,11 +91,15 @@ header {
     width: 100%;
     align-items: flex-start;
     line-height: 10px;
-    /* background-color: whitesmoke; */
 }
 
 .profile_stats>p {
     width: 21%;
+    border: 1px solid #6c6c6c;
+    text-align: center;
+    background-color: #e5e2e2;
+    border-radius: 5px;
+    padding: 1%;
 }
 
 #buff {
