@@ -91,9 +91,12 @@
         </main>
 
         <script>
+            let databaseArr = database
+            let team = [];
             databaseArr.forEach((player) => {
                 if (player.team === 'Iowa') {
                     team.push(player);
+                    console.log(player)
                 }
             });
             team.sort((a, b) => a.round - b.round);

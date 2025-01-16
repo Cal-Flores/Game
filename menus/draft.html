@@ -89,7 +89,7 @@
                 Lehigh: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lehighsports.com/responsive_2020/images/svgs/logo_main2-new.svg",
                 Michigan: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/mgoblue.com/images/sng_2023/main_nav_logo.svg",
                 Minnesota: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gophersports.com/images/nextgen_2022/main_logo.svg",
-                Missori: "https://loodibee.com/wp-content/uploads/Missouri_Tigers_logo.png",
+                Missouri: "https://loodibee.com/wp-content/uploads/Missouri_Tigers_logo.png",
                 Nebraska: "data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e...", // truncated for brevity
                 NC_State: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/unc.sidearmsports.com/images/sng_2023/main_nav_logo.svg",
                 Ohio: "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/ohiostatebuckeyes.com/images/nextgen_2023/logo_main.svg",
@@ -101,7 +101,7 @@
 
             let html = '';
             let databaseArr = database;
-            databaseArr.sort((a, b) => a.pick - b.pick);
+            databaseArr.sort((a, b) => a.pick + b.pick);
 
             databaseArr.forEach((player, i) => {
                 if (player.team) {

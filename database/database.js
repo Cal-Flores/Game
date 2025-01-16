@@ -17,13 +17,12 @@ let sage = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d
 const database = [
     {
         name: 'Toji',
-        id: 65,
         nen_type: 'Enhancer',
         element: 'Ghost',
         elm: ghost,
         team: 'Oklahoma State',
         round: 1,
-        pick: 1,
+        pick: 12,
         hp: 3372,
         //PHYSICAL
         attack: 216,
@@ -93,13 +92,12 @@ const database = [
     },
     {
         name: 'Nanami',
-        id: 47,
-        team: 'NC State',
-        round: 1,
-        pick: 2,
         nen_type: 'Enhancer',
         element: 'Fighter',
         elm: fighter,
+        team: 'Stanford',
+        round: 1,
+        pick: 10,
         hp: 3159,
         //PHYSICAL
         attack: 215,
@@ -112,7 +110,7 @@ const database = [
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
-        weapon: 278,
+        weapon: 276,
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
@@ -169,9 +167,6 @@ const database = [
     },
     {
         name: 'Noritoshi',
-        team: 'Penn State',
-        round: 1,
-        pick: 3,
         nen_type: 'Emitter',
         element: 'Fire',
         elm: ghost,
@@ -244,9 +239,6 @@ const database = [
     },
     {
         name: 'Nobunaga',
-        team: 'Missouri',
-        round: 1,
-        pick: 4,
         nen_type: 'Transmuter',
         element: 'Dark',
         elm: wood,
@@ -319,9 +311,6 @@ const database = [
     },
     {
         name: 'Mikasa',
-        team: 'Virginia Tech',
-        round: 1,
-        pick: 5,
         nen_type: 'Enhancer',
         element: 'Lightning',
         elm: lightning,
@@ -394,9 +383,6 @@ const database = [
     },
     {
         name: 'Might Guy',
-        team: 'Cornell',
-        round: 1,
-        pick: 6,
         nen_type: 'Enhancer',
         element: 'Fire',
         elm: fire,
@@ -761,9 +747,6 @@ const database = [
         element: 'Lightning',
         elm: lightning,
         hp: 3053,
-        team: 'Oklahoma State',
-        round: 3,
-        pick: 34,
         //PHYSICAL
         attack: 196,
         defense: 219,
@@ -1063,7 +1046,7 @@ const database = [
         elm_efficiency: 1.10,
         potency: .20,
         //WEAPON
-        weapon: 275,
+        weapon: 278,
         shield: 181,
         curse_crit: .16,
         weaponCurse: 'Magic',
@@ -2569,6 +2552,9 @@ const database = [
         element: 'Ghost',
         elm: ghost,
         hp: 3296,
+        team: 'Ohio State',
+        round: 1,
+        pick: 6,
         //PHYSICAL
         attack: 250,
         defense: 246,
@@ -2928,6 +2914,9 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Ghost',
         elm: ghost,
+        team: 'Virginia Tech',
+        round: 1,
+        pick: 7,
         hp: 3138,
         //PHYSICAL
         attack: 300,
@@ -3001,6 +2990,9 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Holy',
         elm: holy,
+        team: 'Cornell',
+        round: 1,
+        pick: 4,
         hp: 3326,
         //PHYSICAL
         attack: 310,
@@ -3365,6 +3357,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 3408,
+        team: 'NC State',
+        round: 1,
+        pick: 13,
         //PHYSICAL
         attack: 267,
         defense: 224,
@@ -3437,9 +3432,6 @@ const database = [
         element: 'Fighter',
         elm: fighter,
         hp: 3275,
-        team: 'Oklahoma State',
-        round: 2,
-        pick: 19,
         //PHYSICAL
         attack: 277,
         defense: 208,
@@ -3586,9 +3578,6 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3162,
-        team: 'Oklahoma State',
-        round: 4,
-        pick: 58,
         //PHYSICAL
         attack: 118,
         defense: 137,
@@ -4095,6 +4084,9 @@ const database = [
         nen_type: 'Manipulator',
         element: 'Sand',
         elm: sand,
+        team: 'Iowa State',
+        round: 2,
+        pick: 15,
         hp: 3254,
         //PHYSICAL
         attack: 105,
@@ -4601,6 +4593,9 @@ const database = [
         nen_type: 'Conjuror',
         element: 'Wind',
         elm: wind,
+        team: 'Lehigh',
+        round: 1,
+        pick: 3,
         hp: 3255,
         //PHYSICAL
         attack: 186,
@@ -4675,6 +4670,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 3228,
+        team: 'Iowa State',
+        round: 1,
+        pick: 14,
         //PHYSICAL
         attack: 270,
         defense: 225,
@@ -4743,14 +4741,13 @@ const database = [
     },
     {
         name: 'Tobirama',
-        id: 60,
         nen_type: 'Emitter',
         element: 'Water',
         elm: water,
-        team: 'Oklahoma State',
-        round: 2,
-        pick: 20,
         hp: 3279,
+        team: 'Iowa',
+        round: 1,
+        pick: 8,
         //PHYSICAL
         attack: 124,
         defense: 167,
@@ -5328,9 +5325,6 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 3213,
-        team: 'Oklahoma State',
-        round: 4,
-        pick: 57,
         //PHYSICAL
         attack: 155,
         defense: 157,
@@ -6344,6 +6338,9 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Wood',
         elm: wood,
+        team: 'Missouri',
+        round: 1,
+        pick: 2,
         hp: 3326,
         //PHYSICAL
         attack: 120,
@@ -6416,6 +6413,9 @@ const database = [
         nen_type: 'Emitter',
         element: 'Fire',
         elm: fire,
+        team: 'Nebraska',
+        round: 1,
+        pick: 5,
         hp: 3248,
         //PHYSICAL
         attack: 137,
@@ -6635,9 +6635,6 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3207,
-        team: 'Oklahoma State',
-        round: 1,
-        pick: 7,
         //PHYSICAL
         attack: 210,
         defense: 205,
@@ -7509,6 +7506,9 @@ const database = [
         nen_type: 'Specialist',
         element: 'Holy',
         elm: holy,
+        team: 'Penn State',
+        round: 1,
+        pick: 1,
         hp: 3144,
         //PHYSICAL
         attack: 221,
@@ -7654,6 +7654,9 @@ const database = [
         element: 'Fire',
         elm: fire,
         hp: 3189,
+        team: 'Michigan',
+        round: 1,
+        pick: 9,
         //PHYSICAL
         attack: 134,
         defense: 145,
@@ -7726,9 +7729,6 @@ const database = [
         element: 'Holy',
         elm: holy,
         hp: 3072,
-        team: 'Oklahoma State',
-        round: 3,
-        pick: 36,
         //PHYSICAL
         attack: 128,
         defense: 139,
@@ -8018,6 +8018,9 @@ const database = [
         element: 'Lucky',
         elm: lucky,
         hp: 3000,
+        team: 'Minnesota',
+        round: 1,
+        pick: 11,
         //PHYSICAL
         attack: 90,
         defense: 148,
@@ -8062,7 +8065,7 @@ const database = [
         curse_cost: 15,
         //DOMAIN
         dom_purity: 13,
-        dom_lethal: 150,
+        dom_lethal: 170,
         dom_duration: 4,
         dom_cost: 30,
         //NINJUTSU
@@ -8796,8 +8799,8 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Body-Repel",
-        nin_cost: 28,
-        ninjutsu_pow: 420,
+        nin_cost: 25,
+        ninjutsu_pow: 360,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS

@@ -1,0 +1,36 @@
+Draft Order
+
+
+1. Penn State Nittany Lions - Niah
+
+2. Missouri Tigers - Mr. Boy
+
+3. Lehigh - Tobi
+
+4. Cornell Big Bears - Harley
+
+5. Nebraska Corn Huskers - Mamma
+
+6. Ohio State Buckeyes - Bubba Jet
+
+7. Virginia Tech Hokies - Bruno
+
+8. Iowa Hawkeyes - Amy
+
+9. Michigan Wolverines - Flacco
+
+10. Stanford - Caleb
+
+11. Minnesota Golden Gophers - Holly
+
+12. Oklahoma State Cowboys - Peaches
+
+13. NC State Tar Heels - Dito
+
+14. Iowa State Cyclones - Max
+
+
+
+team: '',
+round: 1,
+pick:
