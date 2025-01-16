@@ -245,7 +245,7 @@
             let power = ["Dance-of-the-Serpent's-Bite", 'Battle-Cantabile-Jupiter', 'Cursed-Broom']
             let willpower = ['Art-of-the-Doppelganger', 'Rhythm-Echo']
             // curse tech
-            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon', 'Kamehameha']
+            let curseRec = ['Teleporting-Rasengan', 'Yasaka-Magatama', 'Rasengan', 'Vibra-Slap', 'Sting', 'Third-Hand', 'Six-Eyes', 'Coocoon']
             let curseCost = []
             let curseDur = []
             let domPurity = ['Rotation']
@@ -2920,14 +2920,14 @@
         // };
         const elementalWeaknesses = {
             Water: { strongAgainst: ['Fire', 'Earth', 'Sand'], weakAgainst: ['Lightning', 'Wood', 'Grass'] },
-            Fire: { strongAgainst: ['Grass', 'Dark', 'Fairy'], weakAgainst: ['Water', 'Wind', 'Earth'] },
-            Wind: { strongAgainst: ['Lightning', 'Wood', 'Fire'], weakAgainst: ['Earth', 'Holy', 'Lucky'] },
+            Fire: { strongAgainst: ['Grass', 'Dark', 'Wind'], weakAgainst: ['Water', 'Sand', 'Earth'] },
+            Wind: { strongAgainst: ['Lightning', 'Wood', 'Fairy'], weakAgainst: ['Earth', 'Holy', 'Lucky'] },
             Lightning: { strongAgainst: ['Water', 'Earth', 'Dark'], weakAgainst: ['Wind', 'Lucky', 'Ghost'] },
             Earth: { strongAgainst: ['Fire', 'Wind', 'Holy'], weakAgainst: ['Water', 'Fairy', 'Lightning', 'Wood'] },
             Grass: { strongAgainst: ['Water', 'Ghost', 'Fighter'], weakAgainst: ['Fire', 'Wood', 'Dark'] },
             Fighter: { strongAgainst: ['Ghost', 'Dark', 'Sage', 'Wood'], weakAgainst: ['Holy', 'Fairy', 'Grass', 'Sand'] },
             Dark: { strongAgainst: ['Grass', 'Holy', 'Fairy'], weakAgainst: ['Fire', 'Lightning', 'Fighter'] },
-            Fairy: { strongAgainst: ['Earth', 'Fighter', 'Sand'], weakAgainst: ['Fire', 'Dark', 'Ghost'] },
+            Fairy: { strongAgainst: ['Earth', 'Fighter', 'Sand'], weakAgainst: ['Wind', 'Dark', 'Ghost'] },
             Ghost: { strongAgainst: ['Lightning', 'Fairy', 'Lucky'], weakAgainst: ['Grass', 'Fighter', 'Holy'] },
             Lucky: { strongAgainst: ['Lightning', 'Wind'], weakAgainst: ['Ghost', 'Wood'], },
             Sand: { strongAgainst: ['Fire', 'Fighter'], weakAgainst: ['Water', 'Fairy'] },
