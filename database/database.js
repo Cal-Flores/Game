@@ -23,6 +23,7 @@ const database = [
         team: 'Oklahoma State',
         round: 1,
         pick: 12,
+        id: 46,
         hp: 3372,
         //PHYSICAL
         attack: 216,
@@ -98,6 +99,7 @@ const database = [
         team: 'Stanford',
         round: 1,
         pick: 10,
+        id: 47,
         hp: 3159,
         //PHYSICAL
         attack: 215,
@@ -110,7 +112,7 @@ const database = [
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
-        weapon: 276,
+        weapon: 278,
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
@@ -1046,7 +1048,7 @@ const database = [
         elm_efficiency: 1.10,
         potency: .20,
         //WEAPON
-        weapon: 278,
+        weapon: 280,
         shield: 181,
         curse_crit: .16,
         weaponCurse: 'Magic',
@@ -2552,6 +2554,7 @@ const database = [
         element: 'Ghost',
         elm: ghost,
         hp: 3296,
+        id: 50,
         team: 'Ohio State',
         round: 1,
         pick: 6,
@@ -2918,6 +2921,7 @@ const database = [
         round: 1,
         pick: 7,
         hp: 3138,
+        id: 51,
         //PHYSICAL
         attack: 300,
         defense: 162,
@@ -2993,6 +2997,7 @@ const database = [
         team: 'Cornell',
         round: 1,
         pick: 4,
+        id: 49,
         hp: 3326,
         //PHYSICAL
         attack: 310,
@@ -3357,6 +3362,7 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 3408,
+        id: 55,
         team: 'NC State',
         round: 1,
         pick: 13,
@@ -4088,6 +4094,7 @@ const database = [
         round: 2,
         pick: 15,
         hp: 3254,
+        id: 9,
         //PHYSICAL
         attack: 105,
         defense: 236,
@@ -4596,6 +4603,7 @@ const database = [
         team: 'Lehigh',
         round: 1,
         pick: 3,
+        id: 25,
         hp: 3255,
         //PHYSICAL
         attack: 186,
@@ -4670,6 +4678,7 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 3228,
+        id: 54,
         team: 'Iowa State',
         round: 1,
         pick: 14,
@@ -4745,6 +4754,7 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 3279,
+        id: 43,
         team: 'Iowa',
         round: 1,
         pick: 8,
@@ -5169,7 +5179,7 @@ const database = [
         ninamount: 2,
         ultEnhance: true,
         //BUFFS
-        buff: 'Increase Stun by .12%',
+        buff: 'Increase Stun by .14%',
         buff2: 'Decrease Potency by 50%',
         buff_acc: 70,
         buff2_acc: 70,
@@ -6341,6 +6351,7 @@ const database = [
         team: 'Missouri',
         round: 1,
         pick: 2,
+        id: 10,
         hp: 3326,
         //PHYSICAL
         attack: 120,
@@ -6416,6 +6427,7 @@ const database = [
         team: 'Nebraska',
         round: 1,
         pick: 5,
+        id: 23,
         hp: 3248,
         //PHYSICAL
         attack: 137,
@@ -7509,6 +7521,7 @@ const database = [
         team: 'Penn State',
         round: 1,
         pick: 1,
+        id: 48,
         hp: 3144,
         //PHYSICAL
         attack: 221,
@@ -7654,6 +7667,7 @@ const database = [
         element: 'Fire',
         elm: fire,
         hp: 3189,
+        id: 52,
         team: 'Michigan',
         round: 1,
         pick: 9,
@@ -8018,6 +8032,7 @@ const database = [
         element: 'Lucky',
         elm: lucky,
         hp: 3000,
+        id: 53,
         team: 'Minnesota',
         round: 1,
         pick: 11,
