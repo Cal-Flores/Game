@@ -801,3 +801,29 @@ body {
     height: 55px;
     object-fit: contain;
 }
+
+.pointbd {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #2f2f2f;
+    color: whitesmoke;
+    padding: 1%;
+    width: 300px;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 4%;
+}
+
+.pointbdd {
+    padding: 2%;
+    width: 100%;
+    border: 1px solid rgb(197, 197, 197);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

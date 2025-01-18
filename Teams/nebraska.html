@@ -98,6 +98,7 @@
                     team.push(player);
                 }
             });
+            team.sort((a, b) => a.round - b.round);
             html = ''
             team.forEach((player, index) => {
                 html += `

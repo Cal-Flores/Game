@@ -7,7 +7,7 @@
         <title>Draft</title>
         <link rel="stylesheet" href="../Teams/teams.css">
         <link rel="stylesheet" href="menu.css">
-        <link rel="stylesheet" href="index.css">
+        <!-- <link rel="stylesheet" href="index.css"> -->
         <script src="../database/database.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
@@ -101,9 +101,15 @@
 
             let html = '';
             let databaseArr = database;
-            databaseArr.sort((a, b) => a.pick + b.pick);
+            let draftArray = [];
+            databaseArr.forEach((guy, i) => {
+                if (guy.pick) {
+                    draftArray.push(guy)
+                }
+            })
+            draftArray.sort((a, b) => a.pick - b.pick);
 
-            databaseArr.forEach((player, i) => {
+            draftArray.forEach((player, i) => {
                 if (player.team) {
 
 
@@ -113,7 +119,7 @@
                     html += `
             <div class="draft_card">
                 <img class="player_img" src='${player.image}' alt="${player.name}">
-                <h3>${player.name}</h3>
+                <h3><a href='http://127.0.0.1:5000/player/${player.id}'>${player.name}</a></h3>
                 <div>Round ${player.round}</div>
                 <div>Pick ${player.pick}</div>
                 <div>${player.team}</div>
