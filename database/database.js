@@ -29,7 +29,7 @@ const database = [
         attack: 216,
         defense: 200,
         critical: .40,
-        strength: 1.6,
+        strength: 1.45,
         //MAGIC
         elm_attack: 111,
         elm_defense: 124,
@@ -43,7 +43,7 @@ const database = [
         weapon_amount: 0,
         //SPIRIT
         spirit: 50,
-        spirit_def: 190,
+        spirit_def: 176,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -116,7 +116,7 @@ const database = [
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 5,
+        weapon_amount: 6,
         //SPIRIT
         spirit: 108,
         spirit_def: 169,
@@ -199,7 +199,7 @@ const database = [
         accuracy: 9,
         evasion: 5,
         luck: 7,
-        stun: .06,
+        stun: .07,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 25,
@@ -4874,7 +4874,7 @@ const database = [
         //MAGIC
         elm_attack: 286,
         elm_defense: 231,
-        elm_efficiency: 1.65,
+        elm_efficiency: 1.45,
         potency: .18,
         //WEAPON
         weapon: 220,
@@ -8232,8 +8232,8 @@ const database = [
         luck: 12,
         stun: .28,
         //GENJUTSU
-        genjutsu: 0,
-        gen_power: 60,
+        genjutsu: 6,
+        gen_power: 45,
         willpower: 6,
         chakra: 0,
         chakra_rec: 4,

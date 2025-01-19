@@ -102,7 +102,7 @@
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             let characters = databaseArr
-            databaseArr.sort((a, b) => b.name - a.name);
+            databaseArr.sort((a, b) => b.hp - a.hp);
             databaseArr.forEach(player => {
                 name += `<li>${player.name} </li>`
             })
@@ -127,7 +127,7 @@
 
                 <div id='all_top'>
                     <img id='player_img' src=${player.image}>
-                    <p>${player.name}</p>
+                    <a target='_blank' href='http://127.0.0.1:5000/player/${player.id}'>${player.name}</a>
                     <p id='all_type'>${player.nen_type}</p>
                     <img id='elem_img' src=${player.elm}>
                 </div>
@@ -309,7 +309,7 @@
             <div class='all_fight_card'>
                 <div id='all_top'>
                     <img id='player_img' src=${player.image}>
-                    <p>${player.name}</p>
+                    <a target='_blank' href='http://127.0.0.1:5000/player/${player.id}'>${player.name}</a>
                     <p id='all_type'>${player.nen_type}</p>
                     <img id='elem_img' src=${player.elm}>
                 </div>

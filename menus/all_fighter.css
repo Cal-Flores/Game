@@ -188,3 +188,12 @@
         display: none;
     }
 }
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(135, 135, 135);
+}
