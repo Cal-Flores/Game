@@ -173,6 +173,9 @@ const database = [
         element: 'Fire',
         elm: ghost,
         hp: 2957,
+        team: 'Penn State',
+        round: 8,
+        pick: 112,
         //PHYSICAL
         attack: 135,
         defense: 138,
@@ -473,6 +476,9 @@ const database = [
         element: 'Fighter',
         elm: fighter,
         hp: 3000,
+        team: 'Nebraska',
+        round: 8,
+        pick: 108,
         //PHYSICAL
         attack: 198,
         defense: 174,
@@ -545,6 +551,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 2872,
+        team: 'NC State',
+        round: 8,
+        pick: 100,
         //PHYSICAL
         attack: 188,
         defense: 158,
@@ -1069,6 +1078,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3317,
+        team: 'Nebraska',
+        round: 6,
+        pick: 80,
         //PHYSICAL
         attack: 106,
         defense: 179,
@@ -1217,6 +1229,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 3168,
+        team: 'Stanford',
+        round: 6,
+        pick: 74,
         //PHYSICAL
         attack: 118,
         defense: 165,
@@ -1291,6 +1306,9 @@ const database = [
         element: 'Lightning',
         elm: lightning,
         hp: 2941,
+        team: 'Lehigh',
+        round: 9,
+        pick: 115,
         //PHYSICAL
         attack: 173,
         defense: 142,
@@ -1363,6 +1381,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 2898,
+        team: 'NC State',
+        round: 7,
+        pick: 97,
         //PHYSICAL
         attack: 120,
         defense: 157,
@@ -1663,6 +1684,9 @@ const database = [
         element: 'Sage',
         elm: sage,
         hp: 3410,
+        team: 'Ohio State',
+        round: 6,
+        pick: 79,
         //PHYSICAL
         attack: 217,
         defense: 230,
@@ -1735,6 +1759,9 @@ const database = [
         element: 'Grass',
         elm: grass,
         hp: 2867,
+        team: 'Minnesota',
+        round: 6,
+        pick: 75,
         //PHYSICAL
         attack: 113,
         defense: 169,
@@ -1807,6 +1834,9 @@ const database = [
         element: 'Lightning',
         elm: lightning,
         hp: 2942,
+        team: 'Cornell',
+        round: 7,
+        pick: 88,
         //PHYSICAL
         attack: 210,
         defense: 142,
@@ -1879,6 +1909,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 3318,
+        team: 'Cornell',
+        round: 6,
+        pick: 81,
         //PHYSICAL
         attack: 116,
         defense: 256,
@@ -1951,6 +1984,9 @@ const database = [
         element: 'Wood',
         elm: wood,
         hp: 3053,
+        team: 'Missouri',
+        round: 9,
+        pick: 114,
         //PHYSICAL
         attack: 142,
         defense: 228,
@@ -2023,6 +2059,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 2893,
+        team: 'Virginia Tech',
+        round: 8,
+        pick: 106,
         //PHYSICAL
         attack: 102,
         defense: 154,
@@ -2095,6 +2134,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 2814,
+        team: 'Nebraska',
+        round: 9,
+        pick: 117,
         //PHYSICAL
         attack: 100,
         defense: 150,
@@ -2167,6 +2209,9 @@ const database = [
         element: 'Wind',
         elm: wind,
         hp: 2962,
+        team: 'Minnesota',
+        round: 7,
+        pick: 95,
         //PHYSICAL
         attack: 131,
         defense: 161,
@@ -2470,6 +2515,9 @@ const database = [
         element: 'Fighter',
         elm: fighter,
         hp: 3315,
+        team: 'Lehigh',
+        round: 6,
+        pick: 82,
         //PHYSICAL
         attack: 264,
         defense: 222,
@@ -2694,6 +2742,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 2992,
+        team: 'Oklahoma State',
+        round: 8,
+        pick: 101,
         //PHYSICAL
         attack: 233,
         defense: 184,
@@ -2766,6 +2817,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 2875,
+        team: 'Iowa',
+        round: 8,
+        pick: 105,
         //PHYSICAL
         attack: 233,
         defense: 168,
@@ -2838,6 +2892,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 2872,
+        team: 'Lehigh',
+        round: 7,
+        pick: 87,
         //PHYSICAL
         attack: 239,
         defense: 188,
@@ -3752,6 +3809,9 @@ const database = [
         element: 'Grass',
         elm: grass,
         hp: 2928,
+        team: 'Michigan',
+        round: 9,
+        pick: 121,
         //PHYSICAL
         attack: 152,
         defense: 195,
@@ -3824,6 +3884,9 @@ const database = [
         element: 'Grass',
         elm: grass,
         hp: 2872,
+        team: 'Ohio State',
+        round: 9,
+        pick: 118,
         //PHYSICAL
         attack: 205,
         defense: 204,
@@ -3896,6 +3959,9 @@ const database = [
         element: 'Wind',
         elm: wind,
         hp: 3009,
+        team: 'Iowa State',
+        round: 8,
+        pick: 99,
         //PHYSICAL
         attack: 179,
         defense: 156,
@@ -4040,6 +4106,9 @@ const database = [
         element: 'Wind',
         elm: wind,
         hp: 2762,
+        team: 'Iowa State',
+        round: 9,
+        pick: 126,
         //PHYSICAL
         attack: 87,
         defense: 131,
@@ -4112,6 +4181,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 2958,
+        team: 'NC State',
+        round: 9,
+        pick: 125,
         //PHYSICAL
         attack: 175,
         defense: 175,
@@ -4415,6 +4487,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 3500,
+        team: 'Virginia Tech',
+        round: 6,
+        pick: 78,
         //PHYSICAL
         attack: 230,
         defense: 262,
@@ -4487,6 +4562,9 @@ const database = [
         element: 'Grass',
         elm: grass,
         hp: 3389,
+        team: 'Cornell',
+        round: 8,
+        pick: 109,
         //PHYSICAL
         attack: 226,
         defense: 218,
@@ -4559,6 +4637,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 3264,
+        team: 'Penn State',
+        round: 7,
+        pick: 85,
         //PHYSICAL
         attack: 230,
         defense: 201,
@@ -5471,6 +5552,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 3213,
+        team: 'Missouri',
+        round: 7,
+        pick: 86,
         //PHYSICAL
         attack: 155,
         defense: 157,
@@ -5543,6 +5627,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 2978,
+        team: 'Iowa',
+        round: 7,
+        pick: 92,
         //PHYSICAL
         attack: 136,
         defense: 212,
@@ -5617,6 +5704,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 3085,
+        team: 'Missouri',
+        round: 6,
+        pick: 83,
         //PHYSICAL
         attack: 240,
         defense: 160,
@@ -5766,6 +5856,9 @@ const database = [
         element: 'Fairy',
         elm: fairy,
         hp: 2847,
+        team: 'Lehigh',
+        round: 8,
+        pick: 110,
         //PHYSICAL
         attack: 99,
         defense: 134,
@@ -5983,6 +6076,9 @@ const database = [
         element: 'Wind',
         elm: wind,
         hp: 3043,
+        team: 'Minnesota',
+        round: 8,
+        pick: 102,
         //PHYSICAL
         attack: 177,
         defense: 175,
@@ -6055,6 +6151,9 @@ const database = [
         element: 'Fighter',
         elm: fighter,
         hp: 3350,
+        team: 'Iowa',
+        round: 6,
+        pick: 77,
         //PHYSICAL
         attack: 255,
         defense: 216,
@@ -6432,6 +6531,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 2980,
+        team: 'Missouri',
+        round: 8,
+        pick: 111,
         //PHYSICAL
         attack: 101,
         defense: 155,
@@ -6659,6 +6761,9 @@ const database = [
         element: 'Lucky',
         elm: lucky,
         hp: 3011,
+        team: 'Michigan',
+        round: 8,
+        pick: 104,
         //PHYSICAL
         attack: 175,
         defense: 198,
@@ -6731,6 +6836,9 @@ const database = [
         element: 'Fire',
         elm: fire,
         hp: 3213,
+        team: 'Iowa State',
+        round: 7,
+        pick: 98,
         //PHYSICAL
         attack: 236,
         defense: 169,
@@ -6803,6 +6911,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3207,
+        team: 'Michigan',
+        round: 6,
+        pick: 76,
         //PHYSICAL
         attack: 210,
         defense: 205,
@@ -6950,6 +7061,9 @@ const database = [
         element: 'Psychic',
         elm: pyschic,
         hp: 2977,
+        team: 'Stanford',
+        round: 7,
+        pick: 94,
         //PHYSICAL
         attack: 109,
         defense: 181,
@@ -7022,6 +7136,9 @@ const database = [
         element: 'Luck',
         elm: lucky,
         hp: 2814,
+        team: 'Stanford',
+        round: 9,
+        pick: 122,
         //PHYSICAL
         attack: 96,
         defense: 172,
@@ -7095,6 +7212,9 @@ const database = [
         element: 'Luck',
         elm: lucky,
         hp: 3116,
+        team: 'Ohio State',
+        round: 8,
+        pick: 107,
         //PHYSICAL
         attack: 160,
         defense: 191,
@@ -7311,6 +7431,9 @@ const database = [
         element: 'Luck',
         elm: lucky,
         hp: 3149,
+        team: 'Penn State',
+        round: 9,
+        pick: 113,
         //PHYSICAL
         attack: 165,
         defense: 171,
@@ -7385,6 +7508,9 @@ const database = [
         element: 'Sage',
         elm: sage,
         hp: 3158,
+        team: 'Penn State',
+        round: 6,
+        pick: 84,
         //PHYSICAL
         attack: 134,
         defense: 209,
@@ -7457,6 +7583,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 2872,
+        team: 'Minnesota',
+        round: 9,
+        pick: 123,
         //PHYSICAL
         attack: 224,
         defense: 164,
@@ -7529,6 +7658,9 @@ const database = [
         element: 'Wind',
         elm: wind,
         hp: 3061,
+        team: 'Michigan',
+        round: 7,
+        pick: 93,
         //PHYSICAL
         attack: 224,
         defense: 203,
@@ -7601,6 +7733,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 2842,
+        team: 'Nebraska',
+        round: 7,
+        pick: 89,
         //PHYSICAL
         attack: 121,
         defense: 128,
@@ -8128,6 +8263,9 @@ const database = [
         element: 'Earth',
         elm: earth,
         hp: 3132,
+        team: 'Stanford',
+        round: 8,
+        pick: 103,
         //PHYSICAL
         attack: 111,
         defense: 207,
@@ -8277,6 +8415,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 3193,
+        team: 'NC State',
+        round: 6,
+        pick: 72,
         //PHYSICAL
         attack: 139,
         defense: 176,
@@ -8349,6 +8490,9 @@ const database = [
         element: 'Psychic',
         elm: pyschic,
         hp: 3250,
+        team: 'Oklahoma State',
+        round: 6,
+        pick: 73,
         //PHYSICAL
         attack: 151,
         defense: 197,
@@ -8651,6 +8795,9 @@ const database = [
         element: 'Water',
         elm: water,
         hp: 3124,
+        team: 'Virginia Tech',
+        round: 7,
+        pick: 91,
         //PHYSICAL
         attack: 116,
         defense: 158,
@@ -8723,6 +8870,9 @@ const database = [
         element: 'Dark',
         elm: dark,
         hp: 2974,
+        team: 'Iowa',
+        round: 9,
+        pick: 120,
         //PHYSICAL
         attack: 103,
         defense: 183,
@@ -9408,6 +9558,9 @@ const database = [
         element: 'Holy',
         elm: holy,
         hp: 3314,
+        team: 'Oklahoma State',
+        round: 9,
+        pick: 124,
         //PHYSICAL
         attack: 184,
         defense: 193,
@@ -9480,6 +9633,9 @@ const database = [
         element: 'Fire',
         elm: fire,
         hp: 3500,
+        team: 'Cornell',
+        round: 9,
+        pick: 116,
         //PHYSICAL
         attack: 215,
         defense: 237,
@@ -9552,6 +9708,9 @@ const database = [
         element: 'Sand',
         elm: sand,
         hp: 3142,
+        team: 'Virginia Tech',
+        round: 9,
+        pick: 119,
         //PHYSICAL
         attack: 138,
         defense: 146,
@@ -9777,6 +9936,9 @@ const database = [
         element: 'Holy',
         elm: holy,
         hp: 3151,
+        team: 'Ohio State',
+        round: 7,
+        pick: 90,
         //PHYSICAL
         attack: 126,
         defense: 164,
@@ -9926,6 +10088,9 @@ const database = [
         element: 'Sand',
         elm: sand,
         hp: 2976,
+        team: 'Oklahoma State',
+        round: 7,
+        pick: 96,
         //PHYSICAL
         attack: 112,
         defense: 159,
