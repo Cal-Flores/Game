@@ -2,360 +2,652 @@
 
 let schedule = [
     {
-        away: 'NC State',
+        away: 'Oklahoma State',
         home: 'Michigan',
         ascore: 0,
         hscore: 0,
         week: 1,
-        id: 1,
     },
     {
-        away: 'Lehigh',
-        home: 'Penn State',
-        ascore: 0,
-        hscore: 0,
-        week: 1,
-        id: 2,
-    },
-    {
-        away: 'Iowa',
-        home: 'Missouri',
-        ascore: 0,
-        hscore: 0,
-        week: 1,
-        id: 3,
-    },
-    {
-        away: 'Nebraska',
-        home: 'Ohio State',
-        ascore: 0,
-        hscore: 0,
-        week: 1,
-        id: 4,
-    },
-    {
-        away: 'Iowa State',
-        home: 'Virginia Tech',
-        ascore: 0,
-        hscore: 0,
-        week: 1,
-        id: 5,
-    },
-    {
-        away: 'Minnesota',
-        home: 'Stanford',
-        ascore: 0,
-        hscore: 0,
-        week: 1,
-        id: 6
-    },
-    {
-        away: 'Oklahoma State',
+        away: 'NC State',
         home: 'Cornell',
         ascore: 0,
         hscore: 0,
         week: 1,
-        id: 7,
     },
-    ///////////////////// WEEK 2 /////////////////////////
+    {
+        away: 'Penn State',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 1,
+    },
+    {
+        away: 'Lehigh',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 1,
+    },
+    {
+        away: 'Missouri',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 1,
+    },
+    {
+        away: 'Iowa',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 1,
+    },
+    {
+        away: 'Ohio State',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 1,
+    },
+    ///////////////////////////////////////////////// week 2 ///////////////////////////////////
     {
         away: 'NC State',
         home: 'Oklahoma State',
         ascore: 0,
         hscore: 0,
-        week: 2
+        week: 2,
     },
     {
-        away: 'Lehigh',
-        home: 'Michigan',
-        ascore: 0,
-        hscore: 0,
-        week: 2
-    },
-    {
-        away: 'Iowa',
+        away: 'Michigan',
         home: 'Penn State',
         ascore: 0,
         hscore: 0,
-        week: 2
-    },
-    {
-        away: 'Nebraska',
-        home: 'Missouri',
-        ascore: 0,
-        hscore: 0,
-        week: 2
-    },
-    {
-        away: 'Iowa State',
-        home: 'Ohio State',
-        ascore: 0,
-        hscore: 0,
-        week: 2
-    },
-    {
-        away: 'Minnesota',
-        home: 'Virginia Tech',
-        ascore: 0,
-        hscore: 0,
-        week: 2
+        week: 2,
     },
     {
         away: 'Cornell',
-        home: 'Stanford',
-        ascore: 0,
-        hscore: 0,
-        week: 2
-    },
-    ///////////////// WEEK 3//////////////////
-    {
-        away: 'Stanford',
-        home: 'NC State',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Oklahoma State',
         home: 'Lehigh',
         ascore: 0,
         hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Michigan',
-        home: 'Iowa',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Penn State',
-        home: 'Nebraska',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Missouri',
-        home: 'Iowa State',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Ohio State',
-        home: 'Minnesota',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    {
-        away: 'Virginia Tech',
-        home: 'Cornell',
-        ascore: 0,
-        hscore: 0,
-        week: 3
-    },
-    ///////////////// WEEK 4 /////////////////
-    {
-        away: 'NC State',
-        home: 'Virginia Tech',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Lehigh',
-        home: 'Stanford',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Iowa',
-        home: 'Oklahoma State',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Nebraska',
-        home: 'Michigan',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Iowa State',
-        home: 'Penn State',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Minnesota',
-        home: 'Missouri',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    {
-        away: 'Cornell',
-        home: 'Ohio State',
-        ascore: 0,
-        hscore: 0,
-        week: 4
-    },
-    //////////////// WEEK 5 //////////////
-    {
-        away: 'Ohio State',
-        home: 'NC State',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    {
-        away: 'Virginia Tech',
-        home: 'lehigh',
-        ascore: 0,
-        hscore: 0,
-        week: 5
+        week: 2,
     },
     {
         away: 'Stanford',
-        home: 'Iowa',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    {
-        away: 'Oklahoma State',
-        home: 'Nebraska',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    {
-        away: 'Michigan',
-        home: 'Iowa State',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    {
-        away: 'Penn State',
-        home: 'Minnesota',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    {
-        away: 'Missouri',
-        home: 'Cornell',
-        ascore: 0,
-        hscore: 0,
-        week: 5
-    },
-    //////////////// WEEK 6 ///////////////
-    {
-        away: 'NC State',
         home: 'Missouri',
         ascore: 0,
         hscore: 0,
-        week: 6
-    },
-    {
-        away: 'Lehigh',
-        home: 'Ohio State',
-        ascore: 0,
-        hscore: 0,
-        week: 6
-    },
-    {
-        away: 'Iowa',
-        home: 'Virginia Tech',
-        ascore: 0,
-        hscore: 0,
-        week: 6
-    },
-    {
-        away: 'Nebraska',
-        home: 'Stanford',
-        ascore: 0,
-        hscore: 0,
-        week: 6
-    },
-    {
-        away: 'Iowa State',
-        home: 'Oklahoma State',
-        ascore: 0,
-        hscore: 0,
-        week: 6
+        week: 2,
     },
     {
         away: 'Minnesota',
-        home: 'Michigan',
+        home: 'Iowa',
         ascore: 0,
         hscore: 0,
-        week: 6
+        week: 2,
     },
     {
-        away: 'Cornell',
+        away: 'Iowa State',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 2,
+    },
+    {
+        away: 'Virginia',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 2,
+    },
+    ///////////////////////////////////////////////// WEEK 3 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
         home: 'Penn State',
         ascore: 0,
         hscore: 0,
-        week: 6
+        week: 3,
     },
-    ///////////////// WEEK 7///////////////
     {
-        away: 'Penn State',
+        away: 'Lehigh',
         home: 'NC State',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 3,
     },
     {
         away: 'Missouri',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 3,
+    },
+    {
+        away: 'Iowa',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 3,
+    },
+    {
+        away: 'Ohio State',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 3,
+    },
+    {
+        away: 'Nebraska',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 3,
+    },
+    {
+        away: 'Virginia Tech',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 3,
+    },
+    ///////////////////////////////////////////////// WEEK 4 ///////////////////////////////////
+    {
+        away: 'Lehigh',
+        home: 'Oklahoma State',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'Penn State',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'NC State',
+        home: 'Iowa',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'Michigan',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'Cornell',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'Stanford',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    {
+        away: 'Minnesota',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 4,
+    },
+    ///////////////////////////////////////////////// WEEK 5 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 5,
+    },
+    {
+        away: 'Iowa',
         home: 'Lehigh',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 5,
     },
     {
         away: 'Ohio State',
-        home: 'Iowa',
+        home: 'Penn State',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 5,
+    },
+    {
+        away: 'Nebraska',
+        home: 'NC State',
+        ascore: 0,
+        hscore: 0,
+        week: 5,
     },
     {
         away: 'Virginia Tech',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 5,
+    },
+    {
+        away: 'Iowa State',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 5,
+    },
+    {
+        away: 'Minnesota',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 5,
+    },
+    ///////////////////////////////////////////////// WEEK 6 ///////////////////////////////////
+    {
+        away: 'Iowa',
+        home: 'Oklahoma State',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    {
+        away: 'Missouri',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    {
+        away: 'Lehigh',
         home: 'Nebraska',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 6,
+    },
+    {
+        away: 'Penn State',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    {
+        away: 'NC State',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    {
+        away: 'Michigan',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    {
+        away: 'Cornell',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 6,
+    },
+    ///////////////////////////////////////////////// WEEK 7 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Nebraska',
+        home: 'Iowa',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Virginia Tech',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Iowa State',
+        home: 'Lehigh',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Minnesota',
+        home: 'Penn State',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Stanford',
+        home: 'NC State',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    {
+        away: 'Cornell',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 7,
+    },
+    ///////////////////////////////////////////////// WEEK 8 ///////////////////////////////////
+    {
+        away: 'Nebraska',
+        home: 'Oklahoma State',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'Ohio State',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'Iowa',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'Missouri',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'Lehigh',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'Penn State',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    {
+        away: 'NC State',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 8,
+    },
+    ///////////////////////////////////////////////// WEEK 9 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'Iowa State',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'Minnesota',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'Stanford',
+        home: 'Iowa',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'Cornell',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'Michigan',
+        home: 'Lehigh',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    {
+        away: 'NC State',
+        home: 'Penn State',
+        ascore: 0,
+        hscore: 0,
+        week: 9,
+    },
+    ///////////////////////////////////////////////// WEEK 10 ///////////////////////////////////
+    {
+        away: 'Iowa State',
+        home: 'Oklahoma State',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Virginia Tech',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Nebraska',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Ohio State',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Iowa',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Missouri',
+        home: 'NC State',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    {
+        away: 'Lehigh',
+        home: 'Penn State',
+        ascore: 0,
+        hscore: 0,
+        week: 10,
+    },
+    ///////////////////////////////////////////////// WEEK 11 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 11,
     },
     {
         away: 'Stanford',
         home: 'Iowa State',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 11,
     },
     {
-        away: 'Oklahoma State',
-        home: 'Minnesota',
+        away: 'Cornell',
+        home: 'Virginia Tech',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 11,
     },
     {
         away: 'Michigan',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 11,
+    },
+    {
+        away: 'NC State',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 11,
+    },
+    {
+        away: 'Penn State',
+        home: 'Iowa',
+        ascore: 0,
+        hscore: 0,
+        week: 11,
+    },
+    {
+        away: 'Lehigh',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 11,
+    },
+    ///////////////////////////////////////////////// WEEK 12 ///////////////////////////////////
+    {
+        away: 'Stanford',
+        home: 'Oklahoma State',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    {
+        away: 'Minnesota',
         home: 'Cornell',
         ascore: 0,
         hscore: 0,
-        week: 7
+        week: 12,
     },
-
+    {
+        away: 'Iowa State',
+        home: 'Michigan',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    {
+        away: 'Virginia Tech',
+        home: 'NC State',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    {
+        away: 'Nebraska',
+        home: 'Penn State',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    {
+        away: 'Ohio State',
+        home: 'Lehigh',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    {
+        away: 'Iowa',
+        home: 'Missouri',
+        ascore: 0,
+        hscore: 0,
+        week: 12,
+    },
+    ///////////////////////////////////////////////// WEEK 13 ///////////////////////////////////
+    {
+        away: 'Oklahoma State',
+        home: 'Cornell',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'Michigan',
+        home: 'Stanford',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'NC State',
+        home: 'Minnesota',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'Penn State',
+        home: 'Iowa State',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'Lehigh',
+        home: 'Virginia Tech',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'Missouri',
+        home: 'Nebraska',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
+    {
+        away: 'Iowa',
+        home: 'Ohio State',
+        ascore: 0,
+        hscore: 0,
+        week: 13,
+    },
 ]
