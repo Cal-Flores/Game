@@ -1239,12 +1239,12 @@ const database = [
         pick: 74,
         //PHYSICAL
         attack: 118,
-        defense: 165,
+        defense: 155,
         critical: .28,
         strength: 1.12,
         //MAGIC
         elm_attack: 78,
-        elm_defense: 150,
+        elm_defense: 170,
         elm_efficiency: .10,
         potency: 1.22,
         //WEAPON
@@ -1255,7 +1255,7 @@ const database = [
         weapon_amount: 6,
         //SPIRIT
         spirit: 111,
-        spirit_def: 184,
+        spirit_def: 186,
         spirit_crit: .10,
         spiritCurse: 'Health',
         spirit_amount: 55,

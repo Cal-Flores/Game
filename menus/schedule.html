@@ -7,6 +7,7 @@
         <title>Schedule</title>
         <script src="../database/schedule.js"></script>
         <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="../Teams/teams.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <style>
             .schedule-container {
@@ -40,7 +41,7 @@
                 border: 1px solid #003366;
                 border-radius: 5px;
                 background: #e6e6e6;
-                color: #6f869c;
+                color: #9c7513;
                 font-weight: bold;
             }
 
@@ -58,10 +59,72 @@
                 font-size: 18px;
                 color: #666;
             }
+
+            .scorenum {
+                color: whitesmoke;
+            }
         </style>
     </head>
 
     <body>
+        <header class="team_nav">
+            <a href="index.html">
+                <img
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/defab05d-48e2-49f8-9e6c-74b3434b61a2/d7k4she-a72c9f88-41f0-4aeb-960b-e69f501a7fd9.png">
+            </a>
+            <a href="../Teams/cornell.html">
+                <img src="https://sportslogohistory.com/wp-content/uploads/2019/06/cornell_big_red_2002-pres.png">
+            </a>
+            <a href="../Teams/iowa.html">
+                <img src="https://storage.googleapis.com/hawkeyesports-com/2021/02/cf540990-logo-e1722875756178.png">
+            </a>
+            <a href="../Teams/iowa_state.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/isuni.sidearmsports.com/images/responsive_2021/logo_nav.svg">
+            </a>
+            <a href="../Teams/lehigh.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/lehighsports.com/responsive_2020/images/svgs/logo_main2-new.svg">
+            </a>
+            <a href="../Teams/michigan.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/mgoblue.com/images/sng_2023/main_nav_logo.svg">
+            </a>
+            <a href="../Teams/minnesota.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gophersports.com/images/nextgen_2022/main_logo.svg">
+            </a>
+            <a href="../Teams/missouri.html">
+                <img src="https://loodibee.com/wp-content/uploads/Missouri_Tigers_logo.png">
+            </a>
+            <a href="../Teams/nebraska.html">
+                <img
+                    src="data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27utf-8%27?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2026.4.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version=%271.1%27%20id=%27Nebraska_N%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20x=%270px%27%20y=%270px%27%20viewBox=%270%200%20163%20152%27%20style=%27enable-background:new%200%200%20163%20152;%27%20xml:space=%27preserve%27%3e%3cstyle%20type=%27text/css%27%3e%20.st0{fill:%23FFFFFF;}%20%3c/style%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M159.1,144c-2.3,0-4.1,1.8-4.1,4s1.8,4,4,4s4-1.8,4-4S161.2,144,159.1,144z%20M159,151.2c-1.8,0-3.2-1.4-3.2-3.2%20s1.4-3.2,3.2-3.2c1.7,0,3.2,1.5,3.2,3.2C162.2,149.8,160.8,151.2,159,151.2z%27/%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M157.4,145.6h1.4c0.6,0,0.8,0,1.1,0.2c0.4,0.2,0.6,0.6,0.6,1.1c0,0.4-0.1,0.7-0.3,1c-0.1,0.2-0.3,0.2-0.6,0.4%20h-0.1l1.1,2.1h-0.8l-1-2h-0.6v2h-0.8L157.4,145.6L157.4,145.6z%20M158.6,147.7c0,0,0.3,0,0.4,0c0.4-0.1,0.6-0.3,0.6-0.8%20c0-0.3-0.1-0.5-0.4-0.6c-0.1,0-0.1,0-0.6,0h-0.4v1.4L158.6,147.7L158.6,147.7z%27/%3e%3c/g%3e%3c/g%3e%3cg%3e%3cpath%20class=%27st0%27%20d=%27M147,0H93h-5v5v35v5h5h5v24.8L55.2,2.3L53.7,0H51H5H0v5v35v5h5h5v62H5H0v5v35v5h5h54h5v-5v-35v-5h-5h-5V82.2%20l42.8,67.5l1.5,2.3h2.7h46h5v-5v-35v-5h-5h-5V45h5h5v-5V5V0H147z%20M150,5v35v3h-3h-7v66h7h3v3v35v3h-3h-46h-1.6l-0.9-1.4L52,75.3%20V109h7h3v3v35v3h-3H5H2v-3v-35v-3h3h7V43H5H2v-3V5V2h3h46h1.7l0.9,1.4L100,76.7V43h-7h-3v-3V5V2h3h54h3V5z%27/%3e%3c/g%3e%3cpath%20class=%27st0%27%20d=%27M103,87L103,87L51,5H5v35c0,0,7.8,0,10,0c0,3.3,0,68.7,0,72l0,0c-2.2,0-10,0-10,0v35h54v-35c0,0-7.8,0-10,0l0,0%20c0-2.6,0-47,0-47l52,82h46v-35c0,0-7.8,0-10,0l0,0c0-3.3,0-68.7,0-72c2.2,0,10,0,10,0V5H93v35c0,0,7.8,0,10,0%20C103,42.6,103,87,103,87z%27/%3e%3c/svg%3e">
+            </a>
+            <a href="../Teams/nc_state.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/unc.sidearmsports.com/images/sng_2023/main_nav_logo.svg">
+            </a>
+            <a href="../Teams/ohio.html">
+                <img
+                    src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/ohiostatebuckeyes.com/images/nextgen_2023/logo_main.svg">
+            </a>
+            <a href="../Teams/ok_state.html">
+                <img
+                    src="https://sportslogohistory.com/wp-content/uploads/2018/07/oklahoma_state_cowboys_2015-pres.png">
+            </a>
+            <a href="../Teams/penn_state.html">
+                <img src="https://gopsusports.com/_nuxt/logo-BDHEpLK6.svg">
+            </a>
+            <a href="../Teams/stanford.html">
+                <img
+                    src="https://gostanford.com/imgproxy/l6GXJbFV4z1yPuiCbXCePofeGNcKTlM78I9yNaTuiU4/rs:fit:1980:0:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3N0YW5mb3JkLXByb2QvMjAyNC8wMy8yMC9hVXJvSkRQeEVBQzFBRE53M3M2YjBRQWNlcmd2WW9EOXRabHVsZHRrLnBuZw.png">
+            </a>
+            <a href="../Teams/vt.html">
+                <img src="https://sportslogohistory.com/wp-content/uploads/2018/01/virginia_tech_hokies_1983-pres.png">
+            </a>
+            <img>
+        </header>
         <div class="schedule-container">
             <div class="schedule-header">
                 <h1>NCAA Wrestling Schedule</h1>
@@ -105,9 +168,6 @@
             <div class="matchholder13">
                 <h2>WEEK 13</h2>
             </div>
-            <div class="matchholder14">
-                <h2>WEEK 14</h2>
-            </div>
         </div>
         <script>
             let scheduleArr = schedule
@@ -129,16 +189,16 @@
                 if (sch.week == 1) {
                     html += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
-                        <div class="team">${sch.hscore} ${sch.home}</div>
+                        <div class="team"> ${sch.home}  <span class='scorenum'> ${sch.hscore}</span></div>
                     </div>
                         `
                 }
                 else if (sch.week == 2) {
                     html2 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -147,7 +207,7 @@
                 else if (sch.week == 3) {
                     html3 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away}<span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -156,7 +216,7 @@
                 else if (sch.week == 4) {
                     html4 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -165,7 +225,7 @@
                 else if (sch.week == 5) {
                     html5 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -174,7 +234,7 @@
                 else if (sch.week == 6) {
                     html6 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -183,7 +243,7 @@
                 else if (sch.week == 7) {
                     html7 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away}<span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -192,7 +252,7 @@
                 else if (sch.week == 8) {
                     html8 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -201,7 +261,7 @@
                 else if (sch.week == 9) {
                     html9 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -210,16 +270,16 @@
                 else if (sch.week == 10) {
                     html10 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
-                        <div class="team">${sch.hscore} ${sch.home}</div>
+                        <div class="team">${sch.hscore} <span class='scorenum'> ${sch.ascore}</span></div>
                     </div>
                         `
                 }
                 else if (sch.week == 11) {
                     html11 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -228,7 +288,7 @@
                 else if (sch.week == 12) {
                     html12 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
@@ -237,7 +297,7 @@
                 else if (sch.week == 13) {
                     html13 += `
                     <div class="match">
-                        <div class="team">${sch.away} ${sch.ascore}</div>
+                        <div class="team">${sch.away} <span class='scorenum'> ${sch.ascore}</span></div>
                         <div class="vs">vs</div>
                         <div class="team">${sch.hscore} ${sch.home}</div>
                     </div>
