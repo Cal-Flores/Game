@@ -1263,7 +1263,7 @@ const database = [
         accuracy: 6,
         evasion: 5,
         luck: 4,
-        stun: .05,
+        stun: .06,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
