@@ -126,7 +126,7 @@
         let blueSpiritCrit
         let blueSpiritCurse
         let blueSpiritAmount
-        let blueIntellegence
+        let blueIntelligence
         let blueVitality
         let blueStatus = []
         let blueCurses = []
@@ -186,7 +186,7 @@
         let redSpiritCrit
         let redSpiritCurse
         let redSpiritAmount
-        let redIntellegence
+        let redIntelligence
         let redVitality
         let redStatus = []
         let redCurses = []
@@ -2981,6 +2981,13 @@
             let newEvasion = evasion / 2.5
             return (accuracy * multiplier) / (accuracy + evasion);
         }
+        function calculateBlockChance(intelligence) {
+            return intelligence / 100; // 29 Intelligence → 0.29 (29% chance)
+        }
+
+        function reduceDamage(damage, vitality) {
+            return Math.round(damage * (1 - vitality));
+        }
 
         /// ko -> ken -> ryu ->
         function getRandomItem(list) {
@@ -3673,10 +3680,15 @@
                         }
                         console.log(`${redWeapon} attcking ${blueShield} with a varience of ${variance}`)
                         let damage = Math.max(1, Math.round((baseDamage + (redWeapon - (blueShield * damageReductionFactor))) * (1 + variance)));
-
+                        let isBlocked = Math.random() < calculateBlockChance(blueIntelligence);
+                        if (isBlocked) {
+                            damage = reduceDamage(damage, blueVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(100);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(100);
+                        }
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
-                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 🏹' : '').fadeIn(500);
                         chargeCurse('blue', damage)
                     } else {
@@ -3723,9 +3735,15 @@
                         }
 
                         let damage = Math.max(1, Math.round((baseDamage + (blueWeapon - (redShield * damageReductionFactor))) * (1 + variance)));
+                        let isBlocked = Math.random() < calculateBlockChance(redIntelligence);
+                        if (isBlocked) {
+                            damage = reduceDamage(damage, blueVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(100);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(100);
+                        }
 
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
-                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 🏹' : '').fadeIn(500);
                         chargeCurse('red', damage)
                     } else {
@@ -3774,6 +3792,8 @@
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
                         chargeCurse('red', selfDamage)
                     } else if (isHit) {
+                        let blockChance = calculateBlockChance(blueIntelligence);
+                        let isBlocked = Math.random() < blockChance;
                         // Normal attack sequence if not hitting self
                         let extraDmg = 1
                         isCritical = Math.random() < redSpiritCrit;
@@ -3786,10 +3806,14 @@
                         }
                         let damage = Math.max(1, Math.round((baseDamage + (redSpirit - (blueTalis * damageReductionFactor))) * (1 + variance)));
                         damage = Math.floor(damage * extraDmg)
-
+                        if (isBlocked) {
+                            damage = reduceDamage(damage, blueVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(100);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(500);
+                        }
 
                         $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
-                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 🦇' : '').fadeIn(500);
                         chargeCurse('blue', damage)
                     } else {
@@ -3831,6 +3855,8 @@
                         isCritical = Math.random() < blueSpiritCrit;
                         // criticalMultiplier = isCritical ? blueStrength : 1.0;
                         let extraDmg = 1;
+                        let blockChance = calculateBlockChance(redIntelligence);
+                        let isBlocked = Math.random() < blockChance;
                         if (isCritical) {
                             cursedSpirit(attacker, blueSpiritCurse, blueSpiritAmount)
                             if (blueSpiritCurse == 'Damage') {
@@ -3841,7 +3867,14 @@
 
                         let damage = Math.max(1, Math.round((baseDamage + (blueSpirit - (redTalis * damageReductionFactor))) * (1 + variance)));
                         damage = Math.floor(damage * extraDmg)
-
+                        if (isBlocked) {
+                            console.log('Attack Blocked!');
+                            alert('Blocked 🛡️')
+                            damage = reduceDamage(damage, redVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(500);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(500);
+                        }
                         $('#redHP').text(currRedHp - damage); // Reduce defender's HP
                         $('#damage').hide().text(damage).fadeIn(500); // Display damage
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 🦇' : '').fadeIn(500);
@@ -3854,130 +3887,129 @@
                     }
                 }
             }
-
             if (action === 'Magic Attack') {
                 let isHit;
                 let hitChance;
 
-                const redCrit = redPotency;  // Assuming redPot represents crit chance as a decimal
-                const blueCrit = bluePotency; // Assuming bluePot represents crit chance as a decimal
+                const redCrit = redPotency;
+                const blueCrit = bluePotency;
+
                 if (attacker === 'red') {
                     hitChance = calculateHitChance(redAcc, blueEvas);
                     isHit = Math.random() < hitChance;
                     isStun = Math.random() < redStun;
+
                     if (isStun) {
                         setTimeout(function () {
                             alert('Blue is Stunned!');
                         }, 1500);
-
                     }
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
-                        let isCritical = Math.random() < redCrit; // Check for critical hit
-                        let critMessage = ''; // Initialize crit message
+                        let isCritical = Math.random() < redCrit;
+                        let critMessage = '';
 
-                        // Unique behavior for Sage and Psychic for red attacker
                         if (redELM === 'Sage') {
-                            magicEffectiveness *= 1.25; // Increase damage by 50% against all elements
-                            critMessage += '🌗 SAGE 🌒'; // Add Sage message
-
-                            // Reduce critical hit chance
-                            if (Math.random() < (redCrit - 0.2)) { // Reduce critical hit chance by 15%
-                                isCritical = false;
-                            }
+                            magicEffectiveness *= 1.25;
+                            critMessage += '🌗 SAGE 🌒';
+                            if (Math.random() < (redCrit - 0.2)) isCritical = false;
                         } else if (redELM === 'Psychic') {
-                            magicEffectiveness = 1; // Normal damage, no enhancements
-                            critMessage += '🔮 Psychic 🔮 '; // Add Psychic message
+                            magicEffectiveness = 1;
+                            critMessage += '🔮 Psychic 🔮 ';
                         } else {
                             if (checkWeakness(redELM, blueELM)) {
-                                magicEffectiveness = redElmEffc; // Adjust for weakness
-                                critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
+                                magicEffectiveness = redElmEffc;
+                                critMessage += '⚡️ WEAKNESS ⚡️ ';
                             } else if (checkResistance(redELM, blueELM)) {
-                                magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                                critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                                magicEffectiveness *= 0.75;
+                                critMessage += '🛡️ RESISTANT 🛡️ ';
                             }
                         }
 
                         let magicDamage = Math.max(1, Math.round((baseDamage + (redElmAttack - (blueElmDef * damageReductionFactor))) * (1 + variance) * magicEffectiveness));
-                        // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.35; // Multiply by 1.5 for critical hit
-                            critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
+                            magicDamage *= 1.35;
+                            critMessage += '🌟 CRITICAL HIT! 🌟 ';
+                        }
+
+                        // **Block Check**
+                        let isBlocked = Math.random() < calculateBlockChance(blueIntelligence);
+                        if (isBlocked) {
+                            magicDamage = reduceDamage(magicDamage, blueVitality);
+                            critMessage += '🛡️ BLOCKED! ';
                         }
 
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
-                        // Update damage message and append critical message
                         $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#blueHP').text(currBlueHp - magicDamage);
-                        chargeCurse('blue', magicDamage)
+                        chargeCurse('blue', magicDamage);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
-                        chargeCurse('blue', 175)
+                        chargeCurse('blue', 175);
                     }
 
-                } else { // For blue attacker
+                } else { // Blue Attacker
                     hitChance = calculateHitChance(blueAcc, redEvas);
                     isHit = Math.random() < hitChance;
                     isStun = Math.random() < blueStun;
+
                     if (isStun) {
                         setTimeout(function () {
                             alert('Red is Stunned!');
                         }, 1500);
-
                     }
 
                     if (isHit) {
                         let magicEffectiveness = 1.0;
-                        let isCritical = Math.random() < blueCrit; // Check for critical hit
-                        let critMessage = ''; // Initialize crit message
+                        let isCritical = Math.random() < blueCrit;
+                        let critMessage = '';
 
-                        // Unique behavior for Sage and Psychic for blue attacker
                         if (blueELM === 'Sage') {
-                            magicEffectiveness *= 1.25; // Increase damage by 50% against all elements
-                            critMessage += '🌘 SAGE 🌓 '; // Add Sage message
-
-                            // Reduce critical hit chance
-                            if (Math.random() < (blueCrit - 0.2)) { // Reduce critical hit chance by 15%
-                                isCritical = false;
-                            }
+                            magicEffectiveness *= 1.25;
+                            critMessage += '🌘 SAGE 🌓';
+                            if (Math.random() < (blueCrit - 0.2)) isCritical = false;
                         } else if (blueELM === 'Psychic') {
-                            magicEffectiveness = 1; // Normal damage, no enhancements
-                            critMessage += '🔮Psychic🔮 '; // Add Psychic message
+                            magicEffectiveness = 1;
+                            critMessage += '🔮Psychic🔮 ';
                         } else {
-                            // Regular elemental interactions for other elements
                             if (checkWeakness(blueELM, redELM)) {
-                                magicEffectiveness = blueElmEffc; // Adjust for weakness
-                                critMessage += '⚡️ WEAKNESS ⚡️ '; // Add weakness message
+                                magicEffectiveness = blueElmEffc;
+                                critMessage += '⚡️ WEAKNESS ⚡️ ';
                             } else if (checkResistance(blueELM, redELM)) {
-                                magicEffectiveness *= 0.75; // Reduce damage by 25% for resistance
-                                critMessage += '🛡️ RESISTANT 🛡️ '; // Add resistance message
+                                magicEffectiveness *= 0.75;
+                                critMessage += '🛡️ RESISTANT 🛡️ ';
                             }
                         }
 
                         let magicDamage = Math.max(1, Math.round((baseDamage + (blueElmAttack - (redElmDef * damageReductionFactor))) * (1 + variance) * magicEffectiveness));
-                        // Apply critical hit multiplier
                         if (isCritical) {
-                            magicDamage *= 1.35; // Multiply by 1.5 for critical hit
-                            critMessage += '🌟 CRITICAL HIT! 🌟 '; // Add critical hit message
+                            magicDamage *= 1.35;
+                            critMessage += '🌟 CRITICAL HIT! 🌟 ';
+                        }
+
+                        // **Block Check**
+                        let isBlocked = Math.random() < calculateBlockChance(redIntelligence);
+                        if (isBlocked) {
+                            magicDamage = reduceDamage(magicDamage, redVitality);
+                            critMessage += '🛡️ BLOCKED! ';
                         }
 
                         magicDamage = Math.max(1, Math.round(magicDamage));
 
-                        // Update damage message and append critical message
                         $('#damage').hide().text(`${magicDamage} ${critMessage}`).fadeIn(500);
                         $('#redHP').text(currRedHp - magicDamage);
-                        chargeCurse('red', magicDamage)
+                        chargeCurse('red', magicDamage);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
-                        chargeCurse('red', 175)
+                        chargeCurse('red', 175);
                     }
                 }
-
             }
+
             if (action == 'Domain Expansion') {
                 if (attacker == 'red') {
                     let purity = redDomPurity;
@@ -4290,44 +4322,44 @@
                         setTimeout(function () {
                             alert('Blue is Stunned!');
                         }, 1500);
-
                     }
 
-                    ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
-                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+                    let hitsSelf = isConfused && Math.random() < 0.5;
 
                     if (hitsSelf) {
-                        // Attacker is confused and hits themselves
-                        console.log('Red is Confused and hits themselves!');
-
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStrength : 1.0;
-
                         let selfDamage = ((redAttack * (1 + variance)) - (redDefense / 4)) * criticalMultiplier;
-                        let variance = Math.random() * 0.2 - 0.1;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
-                        $('#redHP').text(currRedHp - selfDamage); // Reduce attacker's HP
-                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#redHP').text(currRedHp - selfDamage);
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500);
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
-                        chargeCurse('red', selfDamage)
+                        chargeCurse('red', selfDamage);
                     } else if (isHit) {
+                        let blockChance = calculateBlockChance(blueIntelligence);
+                        let isBlocked = Math.random() < blockChance;
                         isCritical = Math.random() < redCrit;
                         criticalMultiplier = isCritical ? redStrength : 1.0;
-                        //THE OG FORMULA //let damage = ((redAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier
-                        // FINAL FANTASY X //let damage = ((Math.pow(redAttack, 2) / (redAttack + blueDefense)) + 50) * variance * criticalMultiplier;
 
-                        let damage = Math.max(1, Math.round((baseDamage + (redAttack - (blueDefense * damageReductionFactor))) * (1 + variance) * criticalMultiplier));
+                        let damage = Math.max(1, Math.round((baseDamage + (redAttack - (blueDefense * damageReductionFactor))) * (1 + variance)));
 
-                        $('#blueHP').text(currBlueHp - damage); // Reduce defender's HP
-                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        if (isBlocked) {
+                            console.log('Attack Blocked!');
+                            damage = reduceDamage(damage, blueVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(500);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(500);
+                        }
+
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
-                        chargeCurse('blue', damage)
+                        $('#blueHP').text(currBlueHp - damage);
+                        chargeCurse('blue', damage);
                     } else {
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
-                        chargeCurse('blue', 175)
+                        chargeCurse('blue', 175);
                     }
                 } else if (attacker === 'blue') {
                     hitChance = calculateHitChance(blueAcc, redEvas);
@@ -4337,47 +4369,47 @@
                         setTimeout(function () {
                             alert('Red is Stunned!');
                         }, 1500);
-
                     }
 
-                    ////// CONFUSION CHECK //////////////////////////
                     let isConfused = attackerStatusEffects.includes('Confusion');
-                    let hitsSelf = isConfused && Math.random() < 0.5; // 50% chance to hit self
+                    let hitsSelf = isConfused && Math.random() < 0.5;
 
                     if (hitsSelf) {
-                        // Attacker is confused and hits themselves
-                        console.log('Blue is Confused and hits themselves!');
-
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
-
                         let selfDamage = ((blueAttack * (1 + variance)) - (blueDefense / 4)) * criticalMultiplier;
                         selfDamage = Math.max(1, Math.round(selfDamage));
 
-                        $('#blueHP').text(currBlueHp - selfDamage); // Reduce attacker's HP
-                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500); // Display self-damage
+                        $('#blueHP').text(currBlueHp - selfDamage);
+                        $('#damage').hide().text(`Hit Self! ${selfDamage} 💥`).fadeIn(500);
                         $('#crit').hide().text(isCritical ? 'CRITICAL on SELF! 💥' : '').fadeIn(500);
-                        chargeCurse('blue', selfDamage)
+                        chargeCurse('blue', selfDamage);
                     } else if (isHit) {
-                        // Normal attack sequence if not hitting self
+                        let blockChance = calculateBlockChance(redIntelligence);
+                        let isBlocked = Math.random() < blockChance;
                         isCritical = Math.random() < blueCrit;
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
 
-                        let damage = Math.max(1, Math.round((baseDamage + (blueAttack - (redDefense * damageReductionFactor))) * (1 + variance) * criticalMultiplier));
+                        let damage = Math.max(1, Math.round((baseDamage + (blueAttack - (redDefense * damageReductionFactor))) * (1 + variance)));
 
-                        $('#redHP').text(currRedHp - damage); // Reduce defender's HP
-                        $('#damage').hide().text(damage).fadeIn(500); // Display damage
+                        if (isBlocked) {
+                            console.log('Attack Blocked!');
+                            damage = reduceDamage(damage, redVitality);
+                            $('#damage').hide().text(`Blocked! ${damage} 🛡️`).fadeIn(500);
+                        } else {
+                            $('#damage').hide().text(damage).fadeIn(500);
+                        }
+
                         $('#crit').hide().text(isCritical ? 'CRITICAL! 💥' : '').fadeIn(500);
-                        chargeCurse('red', damage)
+                        $('#redHP').text(currRedHp - damage);
+                        chargeCurse('red', damage);
                     } else {
-                        // Display a miss message if the hit chance fails
                         $('#damage').hide().text('Missed! ❌').fadeIn(500);
                         $('#crit').hide().text('').fadeIn(500);
-                        chargeCurse('red', 175)
+                        chargeCurse('red', 175);
                     }
                 }
             }
-
 
             if (attacker == 'red' && action != 'Drain' && action != 'Boost') {
                 currRedChakra += getRecovery(redRecovery);
@@ -4537,7 +4569,7 @@
     </div>
     <div>
           <p>🧠</p>
-          <span>${player.intellegence}</span>
+          <span>${player.intelligence}</span>
     </div>
 
 </div>
@@ -4609,7 +4641,7 @@
                     redSpiritCrit = player.spirit_crit
                     redSpiritCurse = player.spiritCurse
                     redSpiritAmount = player.spirit_amount
-                    redIntellegence = player.intellegence
+                    redIntelligence = player.intelligence
                     redVitality = player.vitality
                 } else if (val_2 === player.name) {
                     blueHtml = `
@@ -4735,7 +4767,7 @@
     </div>
     <div>
         <p>🧠</p>
-        <span>${player.intellegence}</span>
+        <span>${player.intelligence}</span>
     </div>
 
 
@@ -4810,7 +4842,7 @@
                     blueSpiritCrit = player.spirit_crit
                     blueSpiritCurse = player.spiritCurse
                     blueSpiritAmount = player.spirit_amount
-                    blueIntellegence = player.intellegence
+                    blueIntelligence = player.intelligence
                     blueVitality = player.vitality
                 }
             }
