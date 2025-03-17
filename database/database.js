@@ -6554,7 +6554,7 @@ const database = [
         //BUFFS
         buff: 'Increase Purity by 3',
         buff2: 'Decrease Evasion by 4',
-        buff_acc: 60,
+        buff_acc: 67,
         buff2_acc: 60,
         image: 'https://static.wikia.nocookie.net/denaruto3/images/b/bb/ObitoUchiha.png/revision/latest?cb=20140816152828&path-prefix=de'
     },
