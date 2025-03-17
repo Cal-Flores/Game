@@ -126,6 +126,8 @@
         let blueSpiritCrit
         let blueSpiritCurse
         let blueSpiritAmount
+        let blueIntellegence
+        let blueVitality
         let blueStatus = []
         let blueCurses = []
 
@@ -184,6 +186,8 @@
         let redSpiritCrit
         let redSpiritCurse
         let redSpiritAmount
+        let redIntellegence
+        let redVitality
         let redStatus = []
         let redCurses = []
         function chargeCurse(player, damage) {
@@ -4525,15 +4529,15 @@
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
-        <span id="redGen">${player.genjutsu}</span>
+        <span><span id="redGen">${player.genjutsu}</span> |  <span id="redWill">${player.willpower}</span></span>
     </div>
      <div>
         <p><img id='devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c359dd66-9e20-4344-8d5d-0e2ef292d317/d4t4t8l-9a2dbc38-cdee-48a1-90c8-e844f7a23a8f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzNTlkZDY2LTllMjAtNDM0NC04ZDVkLTBlMmVmMjkyZDMxN1wvZDR0NHQ4bC05YTJkYmMzOC1jZGVlLTQ4YTEtOTBjOC1lODQ0ZjdhMjNhOGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0DqohEo1tRU2GNzploqd60S_ACwBeEcWF7fmT-HpwKc'></p>
         <span id="redGenPow">${player.gen_power}</span>
     </div>
     <div>
-          <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
-        <span id="redWill">${player.willpower}</span>
+          <p>🧠</p>
+          <span>${player.intellegence}</span>
     </div>
 
 </div>
@@ -4605,6 +4609,8 @@
                     redSpiritCrit = player.spirit_crit
                     redSpiritCurse = player.spiritCurse
                     redSpiritAmount = player.spirit_amount
+                    redIntellegence = player.intellegence
+                    redVitality = player.vitality
                 } else if (val_2 === player.name) {
                     blueHtml = `
             <div class='fight_time_card'>
@@ -4721,15 +4727,15 @@
     </div>
     <div>
         <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3319dd28-31c1-4c70-9762-7302cd5f3a39/d5oj8ng-3aec6bd0-7cbc-4427-9aa3-0959534477f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzMTlkZDI4LTMxYzEtNGM3MC05NzYyLTczMDJjZDVmM2EzOVwvZDVvajhuZy0zYWVjNmJkMC03Y2JjLTQ0MjctOWFhMy0wOTU5NTM0NDc3ZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._xkR2jk4ujU4UUBoX4rpsltZual6BjSQHwM5W8cqpyU'></p>
-        <span id="blueGen">${player.genjutsu}</span>
+        <span><span id="blueGen">${player.genjutsu}</span> | <span id="blueWill">${player.willpower}</span></span>
     </div>
     <div>
         <p><img id='devi' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c359dd66-9e20-4344-8d5d-0e2ef292d317/d4t4t8l-9a2dbc38-cdee-48a1-90c8-e844f7a23a8f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzNTlkZDY2LTllMjAtNDM0NC04ZDVkLTBlMmVmMjkyZDMxN1wvZDR0NHQ4bC05YTJkYmMzOC1jZGVlLTQ4YTEtOTBjOC1lODQ0ZjdhMjNhOGYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0DqohEo1tRU2GNzploqd60S_ACwBeEcWF7fmT-HpwKc'></p>
         <span id="blueGenPow">${player.gen_power}</span>
     </div>
     <div>
-        <p><img id='shar' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cbf38665-92e9-4ecb-8712-324e6b7af2f9/dfymy05-ee66f427-b0c8-476f-ab04-f42e3e93aa42.png/v1/fill/w_894,h_894/hymn_of_light_ritual_circle_by_rogermorhan_dfymy05-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjQwMCIsInBhdGgiOiJcL2ZcL2NiZjM4NjY1LTkyZTktNGVjYi04NzEyLTMyNGU2YjdhZjJmOVwvZGZ5bXkwNS1lZTY2ZjQyNy1iMGM4LTQ3NmYtYWIwNC1mNDJlM2U5M2FhNDIucG5nIiwid2lkdGgiOiI8PTI0MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Bh4EFTpGjHUASHdab8wPDpGy59wA5suWbNIC--cZtgg'></p>
-        <span id="blueWill">${player.willpower}</span>
+        <p>🧠</p>
+        <span>${player.intellegence}</span>
     </div>
 
 
@@ -4804,6 +4810,8 @@
                     blueSpiritCrit = player.spirit_crit
                     blueSpiritCurse = player.spiritCurse
                     blueSpiritAmount = player.spirit_amount
+                    blueIntellegence = player.intellegence
+                    blueVitality = player.vitality
                 }
             }
 

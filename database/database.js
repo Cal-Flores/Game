@@ -4881,6 +4881,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intellegence: 29,
+        vitality: .30,
         buff: 'Double Purity',
         buff2: 'Decrease Recovery by 5',
         buff_acc: 60,
@@ -7919,6 +7921,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intellegence: 29,
+        vitality: .30,
         buff: 'Increase Shield by 10%',
         buff2: 'Decrease Genjutsu by 5',
         buff_acc: 70,
