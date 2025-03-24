@@ -4108,7 +4108,7 @@ const database = [
         spirit: 193,
         spirit_def: 186,
         spirit_crit: .15,
-        spiritCurse: 'Def',
+        spiritCurse: 'Defense',
         spirit_amount: 20,
         //SPEED / LUCK
         accuracy: 5,
@@ -7691,7 +7691,7 @@ const database = [
         spirit: 215,
         spirit_def: 160,
         spirit_crit: .24,
-        spiritCurse: 'Def',
+        spiritCurse: 'Defense',
         spirit_amount: 21,
         //SPEED / LUCK
         accuracy: 5,
@@ -8814,8 +8814,8 @@ const database = [
         dom_cost: 24,
         //NINJUTSU
         ninjutsu2: 'Rabbit-Hair-Needle - Increases Stun by 6%',
-        ninJutsu2cost: 15,
-        ninJutsu2Dmg: 170,
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 145,
         nin2amount: .06,
         ninEnhance: true,
         //ULTIMATE
@@ -9728,7 +9728,7 @@ const database = [
         spirit: 154,
         spirit_def: 214,
         spirit_crit: .10,
-        spiritCurse: 'Def',
+        spiritCurse: 'Defense',
         spirit_amount: 10,
         //SPEED / LUCK
         accuracy: 9,
@@ -10481,3 +10481,4 @@ const database = [
         image: 'https://static.wikia.nocookie.net/naruto/images/c/c6/Kankuro_Reuni%C3%A3o.png/revision/latest/scale-to-width/360?cb=20130728155543&path-prefix=pt-br'
     },
 ]
+module.exports = database;

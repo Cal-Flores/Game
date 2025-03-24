@@ -2971,7 +2971,7 @@
         }
 
         function calculateHitChance(accuracy, evasion) {
-            const multiplier = 1.88;
+            const multiplier = 2;
             if (evasion <= 0) return true
             return (accuracy * multiplier) / (accuracy + evasion);
         }
@@ -3430,6 +3430,9 @@
                 if (curse == 'Spirit') {
                     blueSpirit += amount
                 }
+                if (curse == 'Power') {
+                    blueGenPow += amount
+                }
                 if (curse == 'Lethal') {
                     blueDomLethal += amount;
                     alert(`Lethal Increases by ${amount}`)
@@ -3447,7 +3450,9 @@
                 if (curse == 'Defense') {
                     redDefense = (redDefense += amount)
                 }
-
+                if (curse == 'Power') {
+                    redGenPow += amount
+                }
                 if (curse == 'Attack') {
                     redAttack = (redAttack += amount)
                 }
