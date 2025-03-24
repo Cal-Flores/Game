@@ -397,8 +397,8 @@ const database = [
         ninamount: .80,
         ultEnhance: true,
         //BUFFS
-        intelligence: 14,
-        vitality: .75,
+        intelligence: 12,
+        vitality: .85,
         buff: 'Increase Shield by 15%',
         buff2: 'Decrease Strength by 30%',
         buff_acc: 65,
@@ -475,8 +475,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        intelligence: 13,
-        vitality: .70,
+        intelligence: 12,
+        vitality: .75,
         buff: 'Increase Curse Recovery by 15',
         buff2: 'Decrease Evasion by 3',
         buff_acc: 50,
@@ -709,8 +709,8 @@ const database = [
         ninamount: 365,
         ultEnhance: true,
         //BUFFS
-        intelligence: 11,
-        vitality: .65,
+        intelligence: 10,
+        vitality: .60,
         buff: 'Increase Accuracy by 3',
         buff2: 'Increase Evasion by 3',
         buff_acc: 80,
@@ -939,6 +939,8 @@ const database = [
         ninamount: .08,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Genjutsu by 3',
         buff2: 'Decrease Attack by 7%',
         buff_acc: 70,
@@ -1564,7 +1566,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 28,
-        vitality: .50,
+        vitality: .55,
         buff: 'Increase Defense by 15%',
         buff2: 'Decrease Willpower by 3',
         buff_acc: 55,
@@ -1641,7 +1643,7 @@ const database = [
         ninamount: .25,
         ultEnhance: false,
         //BUFFS
-        intelligence: 25,
+        intelligence: 23,
         vitality: .65,
         buff: 'Increase Weapon by 15%',
         buff2: 'Decrease Evasion by 2',
@@ -1875,7 +1877,7 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        intelligence: 27,
+        intelligence: 24,
         vitality: .45,
         buff: 'Increase Accuracy by 2',
         buff2: 'Decrease Weapon by 10%',
@@ -2580,8 +2582,8 @@ const database = [
         ninamount: 0,
         ultEnhance: true,
         //BUFFS
-        intelligence: 14,
-        vitality: .70,
+        intelligence: 11,
+        vitality: .75,
         buff: 'Increase Evasion by 1',
         buff2: 'Decrease Defense by 10%',
         buff_acc: 85,
@@ -2736,6 +2738,8 @@ const database = [
         ninamount: .70,
         ultEnhance: false,
         //BUFFS
+        intelligence: 7,
+        vitality: .75,
         buff: 'Double Critical',
         buff2: 'Increase Accuracy by 2',
         buff_acc: 65,
@@ -2812,7 +2816,7 @@ const database = [
         ninamount: .08,
         ultEnhance: true,
         //BUFFS
-        intelligence: 10,
+        intelligence: 11,
         vitality: .75,
         buff: 'Increase Curse Recvoery by 10',
         buff2: 'Decrease Curse Recovery by 15',
@@ -3360,8 +3364,8 @@ const database = [
         ninamount: -3,
         ultEnhance: true,
         //BUFFS
-        intelligence: 15,
-        vitality: .75,
+        intelligence: 8,
+        vitality: .85,
         buff: 'Increase Shield by 7%',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 70,
@@ -3518,7 +3522,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 12,
-        vitality: .80,
+        vitality: .75,
         buff: 'Increase Genjutsu by 5',
         buff2: 'Decrease Genjutsu by 3',
         buff_acc: 40,
@@ -3674,7 +3678,7 @@ const database = [
         ninamount: 10,
         ultEnhance: true,
         //BUFFS
-        intelligence: 10,
+        intelligence: 12,
         vitality: .70,
         buff: 'Increase Accuracy by 2',
         buff2: 'Decrease Magic by 10%',
@@ -3833,7 +3837,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         intelligence: 23,
-        vitality: .75,
+        vitality: .70,
         buff: 'Increase Defense by 10%',
         buff2: 'Decrease Weapon by 10%',
         buff_acc: 75,
@@ -3911,7 +3915,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         intelligence: 26,
-        vitality: .50,
+        vitality: .45,
         buff: 'Increase Purity by 2',
         buff2: 'Decrease Critical by 50%',
         buff_acc: 65,
@@ -3988,8 +3992,8 @@ const database = [
         ninamount: .50,
         ultEnhance: true,
         //BUFFS
-        intelligence: 40,
-        vitality: .60,
+        intelligence: 33,
+        vitality: .50,
         buff: 'Decrease Recovery 2',
         buff2: 'Decrease Curse Recovery by 20',
         buff_acc: 65,
@@ -4534,7 +4538,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 12,
-        vitality: .75,
+        vitality: .70,
         buff: 'Increase Accuracy by 2',
         buff2: 'Decrease Luck by 2',
         buff_acc: 45,
@@ -5004,7 +5008,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 29,
-        vitality: .60,
+        vitality: .55,
         buff: 'Double Purity',
         buff2: 'Decrease Recovery by 5',
         buff_acc: 60,
@@ -5083,7 +5087,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 30,
-        vitality: .55,
+        vitality: .45,
         buff: 'Increase Recovery by 5',
         buff2: 'Decrease Genjutsu Power by 15',
         buff_acc: 50,
@@ -5239,7 +5243,7 @@ const database = [
         ninamount: .07,
         ultEnhance: true,
         //BUFFS
-        intelligence: 25,
+        intelligence: 21,
         vitality: .65,
         buff: 'Increase Stun by 15%',
         buff2: 'Decrease Magic by 15%',
@@ -5551,8 +5555,8 @@ const database = [
         ninamount: 2,
         ultEnhance: true,
         //BUFFS
-        intelligence: 23,
-        vitality: .70,
+        intelligence: 22,
+        vitality: .60,
         buff: 'Increase Stun by .14%',
         buff2: 'Decrease Potency by 50%',
         buff_acc: 70,
@@ -6174,6 +6178,8 @@ const database = [
         ninamount: 3,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Defense by 15%',
         buff2: 'Decrease Magic by 15%',
         buff_acc: 70,
@@ -6325,7 +6331,7 @@ const database = [
         ninamount: .20,
         ultEnhance: false,
         //BUFFS
-        intelligence: 10,
+        intelligence: 12,
         vitality: .45,
         buff: 'Increase Attack by 20%',
         buff2: 'Decrease Potency by 80%',
@@ -6794,8 +6800,8 @@ const database = [
         ninamount: 1,
         ultEnhance: true,
         //BUFFS
-        intelligence: 45,
-        vitality: .60,
+        intelligence: 36,
+        vitality: .45,
         buff: 'Increase Curse Recovery by 10',
         buff2: 'Decrease Evasion by 6',
         buff_acc: 75,
@@ -7187,6 +7193,8 @@ const database = [
         ninamount: .20,
         ultEnhance: false,
         //BUFFS
+        intelligence: 18,
+        vitality: .50,
         buff: 'Set Efficiency to 1.20',
         buff2: 'Decrease Evasion by 2',
         buff_acc: 70,
@@ -7259,6 +7267,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Defense by 15%',
         buff2: 'Decrease Weapon by 15%',
         buff_acc: 60,
@@ -7569,6 +7579,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Double Purity',
         buff2: 'Reserved for Enchanted-Melody',
         buff_acc: 60,
@@ -7641,6 +7653,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Evasion by 4',
         buff2: 'Recover 500 HP (Single use)',
         buff_acc: 45,
@@ -7798,7 +7812,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 28,
-        vitality: .50,
+        vitality: .55,
         buff: 'Increase Potency by 50%',
         buff2: 'Reserved for Copy Technique',
         buff_acc: 70,
@@ -8032,7 +8046,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 25,
-        vitality: .60,
+        vitality: .50,
         buff: 'Increase Accuracy by 2',
         buff2: 'Decrease Potency by 50%',
         buff_acc: 60,
@@ -8111,8 +8125,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
-        intelligence: 29,
-        vitality: .60,
+        intelligence: 25,
+        vitality: .70,
         buff: 'Increase Shield by 10%',
         buff2: 'Decrease Genjutsu by 5',
         buff_acc: 70,
@@ -8189,6 +8203,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Recovery by 2',
         buff2: 'Decrease Critical by 25%',
         buff_acc: 50,
@@ -8344,7 +8360,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         intelligence: 27,
-        vitality: .60,
+        vitality: .45,
         buff: 'Increase Wither Percent by 10%',
         buff2: 'Decrease Strength by 25%',
         buff_acc: 60,
@@ -8417,6 +8433,8 @@ const database = [
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        intelligence: 0,
+        vitality: .0,
         buff: 'Increase Recovery by 4',
         buff2: 'Decrease Genjutsu Power by 40',
         buff_acc: 40,
@@ -8572,8 +8590,8 @@ const database = [
         ninamount: 25,
         ultEnhance: true,
         //BUFFS
-        intelligence: 45,
-        vitality: .50,
+        intelligence: 35,
+        vitality: .45,
         buff: 'Increase Luck by 3',
         buff2: 'Decrease Purity by 2',
         buff_acc: 50,
@@ -9278,7 +9296,7 @@ const database = [
         ultEnhance: true,
         //BUFFS
         intelligence: 26,
-        vitality: .55,
+        vitality: .50,
         buff: 'Increase Evasion by 3',
         buff2: 'Decrease Evasion by 3',
         buff_acc: 60,
@@ -9673,7 +9691,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 26,
-        vitality: .60,
+        vitality: .50,
         buff: 'Increase Defense by 15%',
         buff2: 'Decrease Magic by 10%',
         buff_acc: 50,
@@ -9751,7 +9769,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 29,
-        vitality: .50,
+        vitality: .45,
         buff: 'Double Face ~ Steal Ability without having to see it',
         buff2: 'Skill Hunter ~ Halve a Stat',
         buff_acc: 65,
@@ -9984,8 +10002,8 @@ const database = [
         ninamount: .75,
         ultEnhance: false,
         //BUFFS
-        intelligence: 40,
-        vitality: .50,
+        intelligence: 34,
+        vitality: .45,
         buff: 'Increase Accuracy by 2',
         buff2: 'Halve Magic Defense',
         buff_acc: 25,
@@ -10141,7 +10159,7 @@ const database = [
         ultEnhance: false,
         //BUFFS
         intelligence: 30,
-        vitality: .55,
+        vitality: .50,
         buff: 'Increase Strength by 40%',
         buff2: 'Decrease Stun by .10 (Hatsu)%',
         buff_acc: 60,
@@ -10297,7 +10315,7 @@ const database = [
         ninamount: 1,
         ultEnhance: false,
         //BUFFS
-        intelligence: 25,
+        intelligence: 23,
         vitality: .70,
         buff: 'Increase Gen Power by 20',
         buff2: 'Decrease Spirit by 15%',
