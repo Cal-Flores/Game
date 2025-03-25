@@ -9721,7 +9721,7 @@ const database = [
         //WEAPON
         weapon: 217,
         shield: 164,
-        curse_crit: .44,
+        curse_crit: .38,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
@@ -9758,7 +9758,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: "The-Sun-and-Moon - Decrease Defense by 20%",
         ninJutsu2cost: 30,
-        ninJutsu2Dmg: 350,
+        ninJutsu2Dmg: 300,
         nin2amount: .20,
         ninEnhance: false,
         //ULTIMATE

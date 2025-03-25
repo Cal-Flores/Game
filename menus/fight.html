@@ -2973,6 +2973,7 @@
         function calculateHitChance(accuracy, evasion) {
             const multiplier = 2;
             if (evasion <= 0) return true
+            console.log(`Hit Chance: ${(accuracy * multiplier) / (accuracy + evasion)}`)
             return (accuracy * multiplier) / (accuracy + evasion);
         }
         //fastboi
@@ -4349,6 +4350,7 @@
                         criticalMultiplier = isCritical ? redStrength : 1.0;
 
                         let damage = Math.max(1, Math.round((baseDamage + (redAttack - (blueDefense * damageReductionFactor))) * (1 + variance)));
+                        damage = Math.round(damage *= criticalMultiplier)
 
                         if (isBlocked) {
                             console.log('Attack Blocked!');
@@ -4396,6 +4398,7 @@
                         criticalMultiplier = isCritical ? blueStrength : 1.0;
 
                         let damage = Math.max(1, Math.round((baseDamage + (blueAttack - (redDefense * damageReductionFactor))) * (1 + variance)));
+                        damage = Math.round(damage *= criticalMultiplier)
 
                         if (isBlocked) {
                             console.log('Attack Blocked!');
