@@ -94,9 +94,12 @@
                 <option value="potency">Potency</option>
                 <option value="elm_efficiency">Efficiency</option>
             </select>
+            <button onclick="showAverageDefense()">Average Defense</button>
+            <div id="averageDefenseContainer"></div>
             <div id="character-container"></div>
             <div id="all_fight_conttt"></div>
             <ol id="name"></ol>
+
         </main>
         <script>
             html = ''
@@ -104,9 +107,9 @@
             count = 0
             let databaseArr = database; // Ensure 'database' is defined in your JS file
             let characters = databaseArr
-            characters.sort((a, b) => b.intelligence - a.intelligence);
+            characters.sort((a, b) => b.spirit_def - a.spirit_def);
             characters.forEach(player => {
-                name += `<li>${player.name} ${player.intelligence} - ${player.vitality}</li>`
+                name += `<li>${player.name} ${player.spirit_def}</li>`
             })
             $('#name').append(name)
             console.log(characters.length)
@@ -493,6 +496,43 @@
                     }
                 });
             });
+
+
+            function showAverageDefense() {
+                // Clear the container
+                players = characters;
+                const container = document.getElementById("averageDefenseContainer");
+                container.innerHTML = "";
+
+                // Map players to include the total and average
+                const withDefenseTotals = players.map((player, i) => {
+                    const totalDefense =
+                        (player.defense || 0) +
+                        (player.elm_defense || 0) +
+                        (player.shield || 0) +
+                        (player.spirit_def || 0) +
+                        (player.ward || 0);
+
+                    const averageDefense = totalDefense / 5;
+                    return {
+                        name: player.name,
+                        totalDefense,
+                        averageDefense
+                    };
+                });
+
+                // Sort by total defense descending
+                withDefenseTotals.sort((a, b) => b.totalDefense - a.totalDefense);
+
+                // Display each player's name and defense info with index
+                withDefenseTotals.forEach((p, index) => {
+                    const pTag = document.createElement("p");
+                    pTag.textContent = `${index + 1}. ${p.name}: Total = ${p.totalDefense}, Avg = ${p.averageDefense.toFixed(2)}`;
+                    container.appendChild(pTag);
+                });
+            }
+
+
         </script>
     </body>
 

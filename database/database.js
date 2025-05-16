@@ -14,6 +14,9 @@ let holy = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-2
 let lucky = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dhcbrna-7f9be329-2790-4042-a14c-d26d9a730ac8.png/v1/crop/w_125,h_125,x_0,y_0,scl_0.25/pokemon_type_temporel___temporal_by_wergan_dhcbrna-125s.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTAwIiwicGF0aCI6IlwvZlwvNDcyZjRhNDQtMGI2OC00NmE5LWJmZDEtZmZjYTVmNWQ0MTFmXC9kaGNicm5hLTdmOWJlMzI5LTI3OTAtNDA0Mi1hMTRjLWQyNmQ5YTczMGFjOC5wbmciLCJ3aWR0aCI6Ijw9NTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.N_ol9-e4eGQ_1_aH8JdRvIk5wGSEESzTPAoeQWz5b3Y'
 let sand = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/472f4a44-0b68-46a9-bfd1-ffca5f5d411f/dhcbrmr-a20b0e35-ef48-4712-9a8c-1fd459906b8a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ3MmY0YTQ0LTBiNjgtNDZhOS1iZmQxLWZmY2E1ZjVkNDExZlwvZGhjYnJtci1hMjBiMGUzNS1lZjQ4LTQ3MTItOWE4Yy0xZmQ0NTk5MDZiOGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Pru4epDPkCEhauCM6F18cWuvbPnzo5MGCQkrKiXtLs4'
 let sage = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w4gu-bcf44127-7bc3-468d-b148-1af8cf4e7ac0.png/v1/fit/w_720,h_720/colorless_energy_by_humac1_d50w4gu-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYWJhMWE3NTYtZDk1NS00M2Y2LWEyZTktNWI3ZDYwNDA2ODU0XC9kNTB3NGd1LWJjZjQ0MTI3LTdiYzMtNDY4ZC1iMTQ4LTFhZjhjZjRlN2FjMC5wbmciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.I2hRnHXhqZrAh05uX4UyxVC8C-iVQrj00LWU7nvS9C8'
+let ice = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-a6a6-4871-bed6-e8e0b9ce2af0/d60ovyf-ae4a4bec-bfb3-424c-97e9-b08704f0fede.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MjZmYmRkLWE2YTYtNDg3MS1iZWQ2LWU4ZTBiOWNlMmFmMFwvZDYwb3Z5Zi1hZTRhNGJlYy1iZmIzLTQyNGMtOTdlOS1iMDg3MDRmMGZlZGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MbRxiFqr_EWfbH9966iUtr1Pjso2QrLZ37OqiiGm5s8'
+let metal = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aba1a756-d955-43f6-a2e9-5b7d60406854/d50w3tj-08f8872a-82e0-4261-b39f-6d66030b354f.png/v1/fit/w_720,h_720/metal_energy_by_humac1_d50w3tj-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYWJhMWE3NTYtZDk1NS00M2Y2LWEyZTktNWI3ZDYwNDA2ODU0XC9kNTB3M3RqLTA4Zjg4NzJhLTgyZTAtNDI2MS1iMzlmLTZkNjYwMzBiMzU0Zi5wbmciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Dpncm4PEyyma0CBCZcpVZ0Lm0YeMMKHnrxCu5RK9Nh0'
+let blood = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0726fbdd-a6a6-4871-bed6-e8e0b9ce2af0/d5rokyr-eb0cb843-81a1-4521-94d8-5ca763157258.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MjZmYmRkLWE2YTYtNDg3MS1iZWQ2LWU4ZTBiOWNlMmFmMFwvZDVyb2t5ci1lYjBjYjg0My04MWExLTQ1MjEtOTRkOC01Y2E3NjMxNTcyNTgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Q3Av3OwXVQMDTQ08CnmjfDPOk9VgLyM-RBS_KIT7UkI'
 const database = [
     {
         name: 'Toji',
@@ -84,6 +87,18 @@ const database = [
         ninjutsu_pow: 155,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 157,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .70,
@@ -110,7 +125,7 @@ const database = [
         strength: 1.5,
         //MAGIC
         elm_attack: 110,
-        elm_defense: 143,
+        elm_defense: 158,
         elm_efficiency: 1,
         potency: 1,
         //WEAPON
@@ -118,10 +133,10 @@ const database = [
         shield: 235,
         curse_crit: .50,
         weaponCurse: 'Shield',
-        weapon_amount: 6,
+        weapon_amount: 10,
         //SPIRIT
         spirit: 108,
-        spirit_def: 169,
+        spirit_def: 174,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -152,8 +167,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Collapse - Decrease Evasion by 1',
-        ninJutsu2cost: 14,
-        ninJutsu2Dmg: 150,
+        ninJutsu2cost: 15,
+        ninJutsu2Dmg: 190,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
@@ -162,6 +177,18 @@ const database = [
         ninjutsu_pow: 210,
         ninamount: 10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 154,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .65,
@@ -174,8 +201,8 @@ const database = [
     {
         name: 'Noritoshi',
         nen_type: 'Emitter',
-        element: 'Fire',
-        elm: ghost,
+        element: 'Blood',
+        elm: blood,
         hp: 2957,
         id: 119,
         team: 'Penn State',
@@ -240,6 +267,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 226,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 16,
         vitality: .45,
@@ -318,6 +357,18 @@ const database = [
         ninjutsu_pow: 190,
         ninamount: .05,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 164,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .45,
@@ -393,10 +444,34 @@ const database = [
         //ULTIMATE
         ninjutsu: "Awakening - Increase Critical by 80%",
         nin_cost: 26,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 285,
         ninamount: .80,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 214,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 241,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         intelligence: 12,
         vitality: .85,
         buff: 'Increase Shield by 15%',
@@ -417,12 +492,12 @@ const database = [
         id: 24,
         //PHYSICAL
         attack: 241,
-        defense: 205,
+        defense: 195,
         critical: .20,
         strength: 1.8,
         //MAGIC
         elm_attack: 50,
-        elm_defense: 167,
+        elm_defense: 157,
         elm_efficiency: 1.15,
         potency: .15,
         //WEAPON
@@ -454,7 +529,7 @@ const database = [
         cursed_recovery: 35,
         negative_energy: 15,
         cursed_tech: '8th-Gate of death - Attack to 330',
-        curse_amount: 89,
+        curse_amount: 70,
         curse_duration: 100,
         curse_cost: 30,
         //DOMAIN
@@ -474,6 +549,18 @@ const database = [
         ninjutsu_pow: 450,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 207,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .75,
@@ -552,6 +639,18 @@ const database = [
         ninjutsu_pow: 135,
         ninamount: 2,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 216,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .55,
@@ -566,7 +665,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Water',
         elm: water,
-        hp: 2872,
+        hp: 2932,
         id: 111,
         team: 'NC State',
         round: 8,
@@ -582,14 +681,14 @@ const database = [
         elm_efficiency: 1.18,
         potency: .10,
         //WEAPON
-        weapon: 234,
+        weapon: 237,
         shield: 123,
         curse_crit: .20,
         weaponCurse: 'Magic',
         weapon_amount: 23,
         //SPIRIT
         spirit: 181,
-        spirit_def: 147,
+        spirit_def: 157,
         spirit_crit: .15,
         spiritCurse: 'Weapon',
         spirit_amount: 8,
@@ -630,6 +729,18 @@ const database = [
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 203,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .45,
@@ -672,7 +783,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 5,
         luck: 5,
         stun: .02,
@@ -708,10 +819,22 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 365,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 132,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 10,
         vitality: .60,
-        buff: 'Increase Accuracy by 3',
+        buff: 'Increase Accuracy by 1',
         buff2: 'Increase Evasion by 3',
         buff_acc: 80,
         buff2_acc: 50,
@@ -722,7 +845,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Wind',
         elm: wind,
-        hp: 2863,
+        hp: 2963,
         id: 72,
         team: 'Minnesota',
         round: 3,
@@ -763,12 +886,12 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 10,
+        cursed_recovery: 12,
         negative_energy: 10,
         cursed_tech: "Soul-Forge - Increase Weapon by 50",
         curse_amount: 50,
         curse_duration: 8,
-        curse_cost: 15,
+        curse_cost: 13,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -786,6 +909,18 @@ const database = [
         ninjutsu_pow: 245,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 177,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .65,
@@ -828,7 +963,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 5,
         luck: 9,
         stun: .04,
@@ -864,6 +999,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 320,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 148,
+        ward: 175,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 5,
         vitality: .70,
@@ -938,6 +1085,18 @@ const database = [
         ninjutsu_pow: 175,
         ninamount: .08,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -970,7 +1129,7 @@ const database = [
         //WEAPON
         weapon: 274,
         shield: 230,
-        curse_crit: 0.12,
+        curse_crit: 0.18,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
@@ -989,7 +1148,7 @@ const database = [
         gen_power: 20,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 3,
+        chakra_rec: 4,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -1007,15 +1166,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Knife Devil Contract - Increase Weapon by 8%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 185,
+        ninJutsu2Dmg: 195,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Claw Devil contract - Increase Attack by 8%",
         nin_cost: 15,
-        ninjutsu_pow: 185,
+        ninjutsu_pow: 195,
         ninamount: .08,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 134,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 13,
         vitality: .75,
@@ -1083,22 +1254,34 @@ const database = [
         dom_duration: 7,
         dom_cost: 47,
         //NINJUTSU
-        ninjutsu2: 'Future-Devil Contract - Increase Evasion by 1',
-        ninJutsu2cost: 27,
+        ninjutsu2: 'Future-Devil Contract - Increase Evasion by 5',
+        ninJutsu2cost: 67,
         ninJutsu2Dmg: 177,
-        nin2amount: 1,
+        nin2amount: 5,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Curse-Devil Contract II - Halve Any stat",
+        ninjutsu: "Curse-Devil Contract III - Decrease def stat by 77%",
         nin_cost: 77,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 177,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 175,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         intelligence: 23,
         vitality: .55,
         buff: 'Curse Devil Contract I',
-        buff2: 'Curse Devil Contract III - Erase 1 stat',
+        buff2: 'Curse Devil Contract II - Reduce Stat by 7/10',
         buff_acc: 77,
         buff2_acc: 77,
         image: 'https://i.pinimg.com/736x/a8/26/45/a826458e9ec3b3e63687e831a0841546.jpg'
@@ -1139,7 +1322,7 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 3,
-        stun: .07,
+        stun: .04,
         //GENJUTSU
         genjutsu: 8,
         gen_power: 40,
@@ -1149,12 +1332,12 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 43,
+        cursed_recovery: 46,
         negative_energy: 25,
         cursed_tech: 'Black-Bird-Manipulation - Increase Genjutsu Power by 50',
         curse_amount: 50,
-        curse_duration: 8,
-        curse_cost: 15,
+        curse_duration: 5,
+        curse_cost: 19,
         //DOMAIN
         dom_purity: 6,
         dom_lethal: 0,
@@ -1172,6 +1355,18 @@ const database = [
         ninjutsu_pow: 255,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 149,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .45,
@@ -1198,18 +1393,18 @@ const database = [
         strength: 1.25,
         //MAGIC
         elm_attack: 227,
-        elm_defense: 134,
+        elm_defense: 144,
         elm_efficiency: 1.17,
         potency: .40,
         //WEAPON
         weapon: 288,
-        shield: 154,
+        shield: 194,
         curse_crit: .15,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
         spirit: 111,
-        spirit_def: 167,
+        spirit_def: 170,
         spirit_crit: .10,
         spiritCurse: 'Damage',
         spirit_amount: 10,
@@ -1250,6 +1445,18 @@ const database = [
         ninjutsu_pow: 440,
         ninamount: .50,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 188,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 24,
         vitality: .45,
@@ -1284,7 +1491,7 @@ const database = [
         shield: 222,
         curse_crit: .25,
         weaponCurse: 'Shield',
-        weapon_amount: 6,
+        weapon_amount: 8,
         //SPIRIT
         spirit: 111,
         spirit_def: 186,
@@ -1301,14 +1508,14 @@ const database = [
         gen_power: 10,
         willpower: 6,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 15,
+        cursed_recovery: 30,
         negative_energy: 15,
         cursed_tech: 'Soul-Forge - Increase Weapon by 40',
-        curse_amount: 40,
+        curse_amount: 35,
         curse_duration: 6,
         curse_cost: 20,
         //DOMAIN
@@ -1328,6 +1535,18 @@ const database = [
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 178,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 24,
         vitality: .55,
@@ -1390,7 +1609,7 @@ const database = [
         cursed_tech: 'Reverse - Increase Defense by 75',
         curse_amount: 75,
         curse_duration: 6,
-        curse_cost: 12,
+        curse_cost: 22,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -1404,10 +1623,22 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Heal-Bite - Recover 300 HP",
-        nin_cost: 20,
+        nin_cost: 25,
         ninjutsu_pow: 0,
         ninamount: 300,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 173,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .65,
@@ -1422,7 +1653,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Water',
         elm: water,
-        hp: 2898,
+        hp: 2948,
         id: 41,
         team: 'NC State',
         round: 7,
@@ -1436,16 +1667,16 @@ const database = [
         elm_attack: 244,
         elm_defense: 177,
         elm_efficiency: 1.45,
-        potency: 0.28,
+        potency: 0.36,
         //WEAPON
-        weapon: 217,
-        shield: 138,
+        weapon: 237,
+        shield: 198,
         curse_crit: .30,
         weaponCurse: 'M-Def',
         weapon_amount: 12,
         //SPIRIT
         spirit: 124,
-        spirit_def: 188,
+        spirit_def: 168,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -1466,9 +1697,9 @@ const database = [
         cursed_recovery: 30,
         negative_energy: 32,
         cursed_tech: 'Body-Manipulation - Triple Evasion',
-        curse_amount: 10,
+        curse_amount: 6,
         curse_duration: 6,
-        curse_cost: 14,
+        curse_cost: 16,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
@@ -1477,7 +1708,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Water-Formation-Wall - Increase Shield by 15%',
         ninJutsu2cost: 12,
-        ninJutsu2Dmg: 135,
+        ninJutsu2Dmg: 185,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
@@ -1486,6 +1717,18 @@ const database = [
         ninjutsu_pow: 275,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 192,
+        ward: 203,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 9,
         vitality: .45,
@@ -1541,10 +1784,10 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 21,
+        cursed_recovery: 28,
         negative_energy: 20,
-        cursed_tech: 'Black-Bird-Manipulation - Increase Gen-Power by 50',
-        curse_amount: 50,
+        cursed_tech: 'Black-Bird-Manipulation - Increase Gen-Power by 30',
+        curse_amount: 30,
         curse_duration: 10,
         curse_cost: 25,
         //DOMAIN
@@ -1560,10 +1803,22 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Yasaka-Magatama - Reduce Curse Recovery by 20",
-        nin_cost: 30,
-        ninjutsu_pow: 340,
+        nin_cost: 28,
+        ninjutsu_pow: 280,
         ninamount: 20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 139,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 28,
         vitality: .55,
@@ -1639,9 +1894,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Amaterasu-Arrow - Decrease Magic defense by 25%",
         nin_cost: 28,
-        ninjutsu_pow: 385,
+        ninjutsu_pow: 285,
         ninamount: .25,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 134,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .65,
@@ -1720,6 +1987,18 @@ const database = [
         ninjutsu_pow: 245,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 175,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .65,
@@ -1748,7 +2027,7 @@ const database = [
         elm_attack: 254,
         elm_defense: 155,
         elm_efficiency: 1,
-        potency: .15,
+        potency: .20,
         //WEAPON
         weapon: 127,
         shield: 175,
@@ -1762,10 +2041,10 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 3,
         luck: 2,
-        stun: .03,
+        stun: .06,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 30,
@@ -1789,7 +2068,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Earth-Grudge-Fear Increase Shield by 10%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 190,
         nin2amount: .10,
         ninEnhance: true,
         //ULTIMATE
@@ -1798,6 +2077,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 415,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 166,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .65,
@@ -1812,7 +2103,7 @@ const database = [
         nen_type: 'Manipulator',
         element: 'Grass',
         elm: grass,
-        hp: 2867,
+        hp: 2917,
         id: 21,
         team: 'Minnesota',
         round: 6,
@@ -1835,12 +2126,12 @@ const database = [
         weapon_amount: .10,
         //SPIRIT
         spirit: 141,
-        spirit_def: 171,
+        spirit_def: 188,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 4,
         luck: 4,
         stun: .06,
@@ -1873,9 +2164,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Dance of the Shikigami - Increase Domain Duration by 1",
         nin_cost: 16,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 150,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 180,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 24,
         vitality: .45,
@@ -1903,8 +2206,8 @@ const database = [
         //MAGIC
         elm_attack: 246,
         elm_defense: 190,
-        elm_efficiency: 1.4,
-        potency: .20,
+        elm_efficiency: 1.48,
+        potency: .25,
         //WEAPON
         weapon: 95,
         shield: 231,
@@ -1918,8 +2221,8 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 5,
-        evasion: 7,
+        accuracy: 6,
+        evasion: 8,
         luck: 6,
         stun: .12,
         //GENJUTSU
@@ -1949,11 +2252,23 @@ const database = [
         nin2amount: 1,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Eletric-Yo-Yo - Increase Stun",
+        ninjutsu: "Eletric-Yo-Yo - Increase Stun by 10%",
         nin_cost: 12,
         ninjutsu_pow: 175,
         ninamount: .10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 150,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 25,
         vitality: .60,
@@ -2009,7 +2324,7 @@ const database = [
         drain: 10,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 22,
+        cursed_recovery: 32,
         negative_energy: 20,
         cursed_tech: 'Granite-Blast Deal 300 Damage',
         curse_amount: 250,
@@ -2032,6 +2347,18 @@ const database = [
         ninjutsu_pow: 205,
         ninamount: .25,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 136,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 13,
         vitality: .50,
@@ -2077,7 +2404,7 @@ const database = [
         accuracy: 5,
         evasion: 3,
         luck: 3,
-        stun: .04,
+        stun: .08,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -2101,15 +2428,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Wood-Locking-Wall - Increase Shield by 15%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 120,
+        ninJutsu2Dmg: 200,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Great-Forest-Technique Reduce Chakra by 1",
+        ninjutsu: "Great-Forest-Technique Reduce Chakra by 2",
         nin_cost: 21,
-        ninjutsu_pow: 225,
-        ninamount: 1,
+        ninjutsu_pow: 235,
+        ninamount: 2,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 178,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .50,
@@ -2124,7 +2463,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Fairy',
         elm: fairy,
-        hp: 2893,
+        hp: 2943,
         id: 115,
         team: 'Virginia Tech',
         round: 8,
@@ -2147,7 +2486,7 @@ const database = [
         weapon_amount: 8,
         //SPIRIT
         spirit: 113,
-        spirit_def: 151,
+        spirit_def: 181,
         spirit_crit: .12,
         spiritCurse: 'Weapon',
         spirit_amount: 16,
@@ -2179,15 +2518,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Purple-Arrow - Increase Magic by 5%',
         ninJutsu2cost: 13,
-        ninJutsu2Dmg: 135,
+        ninJutsu2Dmg: 170,
         nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Orange-Arrow - Increase Evasion by 1",
         nin_cost: 22,
-        ninjutsu_pow: 165,
+        ninjutsu_pow: 185,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 184,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .45,
@@ -2202,7 +2553,7 @@ const database = [
         nen_type: 'Emitter',
         element: 'Fairy',
         elm: fairy,
-        hp: 2814,
+        hp: 2906,
         id: 121,
         team: 'Nebraska',
         round: 9,
@@ -2266,6 +2617,18 @@ const database = [
         ninjutsu_pow: 270,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 180,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .60,
@@ -2344,6 +2707,18 @@ const database = [
         ninjutsu_pow: 185,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 228,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 21,
         vitality: .50,
@@ -2386,7 +2761,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 10,
+        accuracy: 9,
         evasion: 2,
         luck: 2,
         stun: .04,
@@ -2404,7 +2779,7 @@ const database = [
         cursed_tech: 'Gakido - No damage from previous Ninjutsu | Do a boost',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 25,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -2422,6 +2797,18 @@ const database = [
         ninjutsu_pow: 230,
         ninamount: 1.00,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 163,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .50,
@@ -2447,8 +2834,8 @@ const database = [
         //PHYSICAL
         attack: 246,
         defense: 166,
-        critical: .24,
-        strength: 1.24,
+        critical: .26,
+        strength: 1.29,
         //MAGIC
         elm_attack: 148,
         elm_defense: 170,
@@ -2470,7 +2857,7 @@ const database = [
         accuracy: 6,
         evasion: 7,
         luck: 3,
-        stun: .05,
+        stun: .07,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 15,
@@ -2494,15 +2881,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Star-Rage - Increase Attack by 8%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 150,
+        ninJutsu2Dmg: 195,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Heal Previous Damage 1.5",
-        nin_cost: 28,
+        ninjutsu: "Reverse-Curse-Technique - Heal Previous Damage 1.5x",
+        nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 202,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .65,
@@ -2581,6 +2980,18 @@ const database = [
         ninjutsu_pow: 300,
         ninamount: 0,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 170,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 11,
         vitality: .75,
@@ -2659,6 +3070,18 @@ const database = [
         ninjutsu_pow: 230,
         ninamount: .55,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 186,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .65,
@@ -2701,7 +3124,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 3,
         luck: 3,
         stun: .04,
@@ -2726,9 +3149,9 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'SCREAM - Decrease Evasion by 2',
-        ninJutsu2cost: 24,
-        ninJutsu2Dmg: 140,
+        ninjutsu2: 'SCREAM - Decrease Evasion & Accuracy by 2',
+        ninJutsu2cost: 26,
+        ninJutsu2Dmg: 100,
         nin2amount: 2,
         ninEnhance: false,
         //ULTIMATE
@@ -2737,11 +3160,23 @@ const database = [
         ninjutsu_pow: 600,
         ninamount: .70,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 140,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 7,
         vitality: .75,
         buff: 'Double Critical',
-        buff2: 'Increase Accuracy by 2',
+        buff2: 'Increase Accuracy by 1',
         buff_acc: 65,
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/6/60/HxH2011_EP41_Uvogin_Portrait.png/revision/latest?cb=20230122192913'
@@ -2763,12 +3198,12 @@ const database = [
         strength: 1.65,
         //MAGIC
         elm_attack: 131,
-        elm_defense: 149,
+        elm_defense: 142,
         elm_efficiency: 1.25,
         potency: .40,
         //WEAPON
         weapon: 170,
-        shield: 132,
+        shield: 172,
         curse_crit: .20,
         weaponCurse: 'Critical',
         weapon_amount: .10,
@@ -2781,7 +3216,7 @@ const database = [
         //SPEED / LUCK
         accuracy: 6,
         evasion: 7,
-        luck: 7,
+        luck: 8,
         stun: .07,
         //GENJUTSU
         genjutsu: 2,
@@ -2804,17 +3239,29 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Heavenly-Restriction - Increase Defense by 3%',
+        ninjutsu2: 'Heavenly-Restriction - Increase Defense by 5%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 150,
-        nin2amount: .03,
+        ninJutsu2Dmg: 170,
+        nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Claws - Increase Shield by 8%",
         nin_cost: 15,
-        ninjutsu_pow: 155,
+        ninjutsu_pow: 175,
         ninamount: .08,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 134,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 11,
         vitality: .75,
@@ -2838,7 +3285,7 @@ const database = [
         attack: 233,
         defense: 184,
         critical: .66,
-        strength: 1.25,
+        strength: 1.31,
         //MAGIC
         elm_attack: 212,
         elm_defense: 187,
@@ -2848,7 +3295,7 @@ const database = [
         weapon: 92,
         shield: 211,
         curse_crit: .08,
-        weaponCurse: 'Gen-Power',
+        weaponCurse: 'Power',
         weapon_amount: 15,
         //SPIRIT
         spirit: 149,
@@ -2873,7 +3320,7 @@ const database = [
         cursed_recovery: 27,
         negative_energy: 14,
         cursed_tech: 'Granite-Blast - Deal 300 Damage',
-        curse_amount: 260,
+        curse_amount: 300,
         curse_duration: 1,
         curse_cost: 17,
         //DOMAIN
@@ -2884,15 +3331,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'C3 - Increase Attack by 5%',
         ninJutsu2cost: 15,
-        ninJutsu2Dmg: 145,
+        ninJutsu2Dmg: 175,
         nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "C4 Karura - Increase Lethal by 10",
         nin_cost: 20,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 150,
         ninamount: 10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 153,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 7,
         vitality: .65,
@@ -2907,19 +3366,19 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Fairy',
         elm: fairy,
-        hp: 2875,
+        hp: 2925,
         id: 26,
         team: 'Iowa',
         round: 8,
         pick: 105,
         //PHYSICAL
-        attack: 233,
+        attack: 238,
         defense: 168,
         critical: .68,
         strength: 1.2,
         //MAGIC
         elm_attack: 165,
-        elm_defense: 212,
+        elm_defense: 224,
         elm_efficiency: 1.2,
         potency: .15,
         //WEAPON
@@ -2961,8 +3420,8 @@ const database = [
         dom_cost: 23,
         //NINJUTSU
         ninjutsu2: '8-Trigram-64-Palms - Increase Stun by 8%',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 100,
+        ninJutsu2cost: 14,
+        ninJutsu2Dmg: 170,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
@@ -2971,6 +3430,18 @@ const database = [
         ninjutsu_pow: 180,
         ninamount: 2,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 162,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 19,
         vitality: .65,
@@ -2985,14 +3456,14 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Earth',
         elm: earth,
-        hp: 2872,
+        hp: 2972,
         id: 31,
         team: 'Lehigh',
         round: 7,
         pick: 87,
         //PHYSICAL
         attack: 239,
-        defense: 188,
+        defense: 206,
         critical: .24,
         strength: 1.7,
         //MAGIC
@@ -3001,7 +3472,7 @@ const database = [
         elm_efficiency: 1,
         potency: .08,
         //WEAPON
-        weapon: 202,
+        weapon: 227,
         shield: 225,
         curse_crit: .08,
         weaponCurse: 'Recovery',
@@ -3028,10 +3499,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 22,
-        cursed_tech: '8th-Gate - Increase Attack by 80',
-        curse_amount: 80,
+        cursed_tech: '8th-Gate - Increase Attack by 60',
+        curse_amount: 60,
         curse_duration: 100,
-        curse_cost: 40,
+        curse_cost: 34,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -3046,9 +3517,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Gate-Release - Increase Evasion by 1",
         nin_cost: 26,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 170,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 172,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 8,
         vitality: .50,
@@ -3118,7 +3601,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Flex - Increase Magic Defense by 8%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 155,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
@@ -3127,6 +3610,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 400,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 150,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 19,
         vitality: .60,
@@ -3149,8 +3644,8 @@ const database = [
         //PHYSICAL
         attack: 300,
         defense: 162,
-        critical: .20,
-        strength: 1.8,
+        critical: .28,
+        strength: 1.76,
         //MAGIC
         elm_attack: 91,
         elm_defense: 179,
@@ -3182,7 +3677,7 @@ const database = [
         drain: 2,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 20,
+        cursed_recovery: 30,
         negative_energy: 18,
         cursed_tech: 'Projection-Sorcery - Double Evasion',
         curse_amount: 8,
@@ -3202,16 +3697,28 @@ const database = [
         //ULTIMATE
         ninjutsu: "Jajanken - Increase Jajanken by 200 | Reduce Recovery by 2",
         nin_cost: 35,
-        ninjutsu_pow: 360,
+        ninjutsu_pow: 500,
         ninamount: 0,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 186,
+        ward: 197,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 5,
         vitality: .70,
         buff: 'Increase Accuracy by 1',
         buff2: 'Decrease Curse Recovery by 15',
         buff_acc: 80,
-        buff2_acc: 50,
+        buff2_acc: 65,
         image: 'https://i.pinimg.com/736x/be/83/a3/be83a3dbe41797e6932cba2c2b84d7db.jpg'
         //image: 'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/117715424_339264554120736_6396455950920254671_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-s3eV__-XrgQ7kNvgHGm9UX&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=ASWUucZtc60dg1RiUkPUVWP&oh=00_AYA_okgp2TdAMkImBh674qHd8ZR6Lh_wkPygOGxjquEF9A&oe=6749CE72'
     },
@@ -3227,23 +3734,23 @@ const database = [
         hp: 3326,
         //PHYSICAL
         attack: 315,
-        defense: 217,
-        critical: .14,
-        strength: 1.65,
+        defense: 223,
+        critical: .20,
+        strength: 1.6,
         //MAGIC
         elm_attack: 79,
-        elm_defense: 122,
+        elm_defense: 121,
         elm_efficiency: .11,
         potency: 1.0,
         //WEAPON
         weapon: 82,
-        shield: 208,
+        shield: 201,
         curse_crit: .20,
         weaponCurse: 'Luck',
         weapon_amount: 2,
         //SPIRIT
         spirit: 180,
-        spirit_def: 144,
+        spirit_def: 141,
         spirit_crit: .10,
         spiritCurse: 'Recovery',
         spirit_amount: 2,
@@ -3261,12 +3768,12 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 15,
+        cursed_recovery: 19,
         negative_energy: 15,
-        cursed_tech: 'Kaio-Ken - Increase attack by 70',
+        cursed_tech: 'Kaio-Ken - Increase attack by 50',
         curse_amount: 70,
         curse_duration: 8,
-        curse_cost: 36,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 9,
         dom_lethal: 0,
@@ -3275,21 +3782,33 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Kamehameha',
         ninJutsu2cost: 30,
-        ninJutsu2Dmg: 275,
+        ninJutsu2Dmg: 350,
         nin2amount: 35,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Spirit-Bomb - Recovery goes to 0 exhaust 2 turns",
+        ninjutsu: "Spirit-Bomb - Recovery goes to 0 exhaust 1 turns",
         nin_cost: 0,
         ninjutsu_pow: 0,
         ninamount: -10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 188,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: 1.0,
-        buff: 'Increase Critical by 25%',
+        buff: 'Increase Critical by 20%',
         buff2: 'Decrease Critical by 30%',
-        buff_acc: 70,
+        buff_acc: 75,
         buff2_acc: 65,
         image: 'https://wallpapers-clan.com/wp-content/uploads/2022/09/dragon-ball-goku-pfp-13.jpg'
         // image: 'https://avatarfiles.alphacoders.com/627/62714.jpg'
@@ -3308,7 +3827,7 @@ const database = [
         attack: 291,
         defense: 158,
         critical: .25,
-        strength: 1.29,
+        strength: 1.35,
         //MAGIC
         elm_attack: 84,
         elm_defense: 177,
@@ -3330,7 +3849,7 @@ const database = [
         accuracy: 5,
         evasion: 7,
         luck: 2,
-        stun: .08,
+        stun: .09,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 10,
@@ -3352,10 +3871,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Big-Bang - Lower Defense by 4%',
+        ninjutsu2: 'Big-Bang - Lower Defense by 6%',
         ninJutsu2cost: 14,
         ninJutsu2Dmg: 200,
-        nin2amount: .04,
+        nin2amount: .06,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Final-Flash - Recovery is halved",
@@ -3363,6 +3882,18 @@ const database = [
         ninjutsu_pow: 500,
         ninamount: -3,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 159,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 8,
         vitality: .85,
@@ -3375,8 +3906,8 @@ const database = [
     {
         name: 'Female Titan',
         nen_type: 'Transmuter',
-        element: 'Water',
-        elm: water,
+        element: 'Ice',
+        elm: ice,
         team: 'Minnesota',
         round: 4,
         pick: 46,
@@ -3418,12 +3949,12 @@ const database = [
         drain: 6,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 15,
+        cursed_recovery: 25,
         negative_energy: 15,
-        cursed_tech: 'Idle-Death-Gamble - Can Devil Contract 1000',
-        curse_amount: 0,
-        curse_duration: 100,
-        curse_cost: 22,
+        cursed_tech: 'Hardened-Fist - Increase Strength by .50',
+        curse_amount: .5,
+        curse_duration: 8,
+        curse_cost: 19,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
@@ -3441,6 +3972,18 @@ const database = [
         ninjutsu_pow: 150,
         ninamount: .15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 160,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .70,
@@ -3465,7 +4008,7 @@ const database = [
         attack: 249,
         defense: 225,
         critical: .30,
-        strength: 1.45,
+        strength: 1.55,
         //MAGIC
         elm_attack: 125,
         elm_defense: 138,
@@ -3520,6 +4063,18 @@ const database = [
         ninjutsu_pow: 345,
         ninamount: .30,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 196,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .75,
@@ -3572,7 +4127,7 @@ const database = [
         gen_power: 10,
         willpower: 3,
         chakra: 0,
-        chakra_rec: 6,
+        chakra_rec: 4,
         drain: 4,
         //CURSE
         cursed_energy: 0,
@@ -3589,23 +4144,35 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Fury - Increase Crit',
-        ninJutsu2cost: 20,
-        ninJutsu2Dmg: 0,
+        ninJutsu2cost: 22,
+        ninJutsu2Dmg: 150,
         nin2amount: .40,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Roar - Increase Strength by 1",
-        nin_cost: 24,
-        ninjutsu_pow: 0,
+        nin_cost: 25,
+        ninjutsu_pow: 180,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 196,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .65,
-        buff: 'Increase Accuracy by 3',
-        buff2: 'Decrease Attack by 20%',
-        buff_acc: 60,
-        buff2_acc: 50,
+        buff: 'Increase Accuracy by 1',
+        buff2: 'Decrease Attack by 10%',
+        buff_acc: 75,
+        buff2_acc: 70,
         image: 'https://static.wikia.nocookie.net/shingekinokyojin/images/a/ae/Attack_Titan_%28Anime%29_character_image_%28Eren_Jaeger%29.png/revision/latest/scale-to-width-down/1000?cb=20170513212951'
     },
     {
@@ -3642,7 +4209,7 @@ const database = [
         spirit_amount: 25,
         //SPEED / LUCK
         accuracy: 5,
-        evasion: 5,
+        evasion: 7,
         luck: 2,
         stun: .03,
         //GENJUTSU
@@ -3661,7 +4228,7 @@ const database = [
         curse_duration: 1,
         curse_cost: 18,
         //DOMAIN
-        dom_purity: 6,
+        dom_purity: 7,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
@@ -3672,11 +4239,23 @@ const database = [
         nin2amount: .04,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Vibra-Slap - Increase Curse by 10",
-        nin_cost: 21,
+        ninjutsu: "Vibra-Slap - Increase Curse by 15",
+        nin_cost: 17,
         ninjutsu_pow: 150,
-        ninamount: 10,
+        ninamount: 15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 183,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .70,
@@ -3700,7 +4279,7 @@ const database = [
         attack: 277,
         defense: 208,
         critical: .30,
-        strength: 1.5,
+        strength: 1.38,
         //MAGIC
         elm_attack: 119,
         elm_defense: 180,
@@ -3755,6 +4334,18 @@ const database = [
         ninjutsu_pow: 275,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 154,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 22,
         vitality: .60,
@@ -3787,7 +4378,7 @@ const database = [
         elm_efficiency: 1.3,
         potency: .40,
         //WEAPON
-        weapon: 213,
+        weapon: 220,
         shield: 207,
         curse_crit: .15,
         weaponCurse: 'Willpower',
@@ -3832,9 +4423,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Tsukoyomi - Increase Duration by 1",
         nin_cost: 26,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 250,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 179,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .70,
@@ -3865,7 +4468,7 @@ const database = [
         elm_efficiency: 1.4,
         potency: .12,
         //WEAPON
-        weapon: 212,
+        weapon: 228,
         shield: 146,
         curse_crit: .65,
         weaponCurse: 'Willpower',
@@ -3878,12 +4481,12 @@ const database = [
         spirit_amount: 12,
         //SPEED / LUCK
         accuracy: 9,
-        evasion: 7,
+        evasion: 8,
         luck: 3,
         stun: .05,
         //GENJUTSU
         genjutsu: 10,
-        gen_power: 80,
+        gen_power: 85,
         willpower: 6,
         chakra: 0,
         chakra_rec: 9,
@@ -3910,9 +4513,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Hypnotic-Spell - Increase Lethal by 15",
         nin_cost: 22,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 185,
         ninamount: 15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 179,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .45,
@@ -3933,7 +4548,7 @@ const database = [
         round: 9,
         pick: 121,
         //PHYSICAL
-        attack: 152,
+        attack: 172,
         defense: 195,
         critical: .35,
         strength: 2,
@@ -3987,10 +4602,22 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Auto-Pilot-Mode - Increase Attack by 1.5",
-        nin_cost: 40,
+        nin_cost: 30,
         ninjutsu_pow: 265,
         ninamount: .50,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 152,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 33,
         vitality: .50,
@@ -4005,15 +4632,15 @@ const database = [
         nen_type: 'Manipulator',
         element: 'Grass',
         elm: grass,
-        hp: 2872,
+        hp: 2952,
         id: 38,
         team: 'Ohio State',
         round: 9,
         pick: 118,
         //PHYSICAL
-        attack: 205,
+        attack: 215,
         defense: 204,
-        critical: .16,
+        critical: .23,
         strength: 1.4,
         //MAGIC
         elm_attack: 88,
@@ -4022,7 +4649,7 @@ const database = [
         potency: .12,
         //WEAPON
         weapon: 163,
-        shield: 164,
+        shield: 184,
         curse_crit: .12,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
@@ -4069,6 +4696,18 @@ const database = [
         ninjutsu_pow: 215,
         ninamount: 2,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 156,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 19,
         vitality: .60,
@@ -4105,7 +4744,7 @@ const database = [
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 193,
+        spirit: 213,
         spirit_def: 186,
         spirit_crit: .15,
         spiritCurse: 'Defense',
@@ -4147,6 +4786,18 @@ const database = [
         ninjutsu_pow: 165,
         ninamount: 25,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 180,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 21,
         vitality: .45,
@@ -4188,22 +4839,22 @@ const database = [
         accuracy: 5,
         evasion: 5,
         luck: 8,
-        stun: .18,
+        stun: .08,
         //GENJUTSU
         genjutsu: 7,
         gen_power: 60,
         willpower: 5,
         chakra: 0,
-        chakra_rec: 7,
+        chakra_rec: 5,
         drain: 7,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 32,
         negative_energy: 28,
-        cursed_tech: 'Cursed-Bee-Bomb - Deal 200 Damage Take Another Turn',
-        curse_amount: 200,
+        cursed_tech: 'Cursed-Bee-Bomb - Deal 300 Damage',
+        curse_amount: 300,
         curse_duration: 1,
-        curse_cost: 16,
+        curse_cost: 19,
         //DOMAIN
         dom_purity: 3,
         dom_lethal: 0,
@@ -4212,20 +4863,32 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Sting - Increase Curse Recovery by 10',
         ninJutsu2cost: 10,
-        ninJutsu2Dmg: 100,
+        ninJutsu2Dmg: 150,
         nin2amount: 10,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Bee-Manipulation - Paralyzed for 2 turns",
-        nin_cost: 36,
-        ninjutsu_pow: 0,
+        ninjutsu: "Bee-Manipulation - Paralyzed for 1 turn",
+        nin_cost: 30,
+        ninjutsu_pow: 160,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 10,
         vitality: .45,
         buff: 'Increase Shield by 25%',
-        buff2: 'Bee-Bomb - 1000 Damage',
+        buff2: 'Bee-Bomb - 1000 Damage (Single)',
         buff_acc: 70,
         buff2_acc: 15,
         image: 'https://static.wikia.nocookie.net/hunterxhunter/images/1/13/Ponzu_CA_Portrait.png/revision/latest?cb=20130506101012'
@@ -4248,17 +4911,17 @@ const database = [
         //MAGIC
         elm_attack: 233,
         elm_defense: 234,
-        elm_efficiency: 1.5,
+        elm_efficiency: 1.35,
         potency: .32,
         //WEAPON
-        weapon: 135,
+        weapon: 155,
         shield: 124,
         curse_crit: .10,
         weaponCurse: 'Accuracy',
         weapon_amount: 1,
         //SPIRIT
         spirit: 120,
-        spirit_def: 145,
+        spirit_def: 175,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -4289,16 +4952,28 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Wind-Scythe - Increase Efficiency by 20%',
-        ninJutsu2cost: 14,
-        ninJutsu2Dmg: 195,
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 175,
         nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Cursed-Broom - Increase Genjutsu Power by .20",
         nin_cost: 18,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 165,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 212,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .45,
@@ -4367,23 +5042,35 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Solo-Forbidden-Area - Increase any stat by 18% (once)',
-        ninJutsu2cost: 22,
-        ninJutsu2Dmg: 110,
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 170,
         nin2amount: 18,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Solo-Leveling - Deal 20% HP Drain",
-        nin_cost: 30,
+        nin_cost: 28,
         ninjutsu_pow: 0,
         ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 170,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .45,
         buff: 'Cursed Bomb Deal 600 Damage',
         buff2: 'Increase Accuracy by 2',
-        buff_acc: 25,
-        buff2_acc: 65,
+        buff_acc: 40,
+        buff2_acc: 75,
         //image: 'https://www.nautiljon.com/images/perso/00/72/iori_utahime_20027.webp'
         image: 'https://preview.redd.it/what-kind-of-scar-does-utahime-have-v0-efrpgw7dxk5d1.jpg?width=640&crop=smart&auto=webp&s=a15aed4fed51acd355be951ee10eaa7b7c63f7fc'
     },
@@ -4425,13 +5112,13 @@ const database = [
         accuracy: 5,
         evasion: 2,
         luck: 3,
-        stun: .04,
+        stun: .05,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 25,
         willpower: 4,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 6,
         drain: 4,
         //CURSE
         cursed_energy: 0,
@@ -4442,7 +5129,7 @@ const database = [
         curse_duration: 6,
         curse_cost: 15,
         //DOMAIN
-        dom_purity: 7,
+        dom_purity: 8,
         dom_lethal: 165,
         dom_duration: 6,
         dom_cost: 36,
@@ -4455,9 +5142,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Sand-Mauseliem - Increase Domain Duration by 1",
         nin_cost: 17,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 200,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 128,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 17,
         vitality: .65,
@@ -4489,13 +5188,13 @@ const database = [
         potency: .18,
         //WEAPON
         weapon: 234,
-        shield: 173,
-        curse_crit: .13,
+        shield: 183,
+        curse_crit: .20,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
         spirit: 136,
-        spirit_def: 185,
+        spirit_def: 209,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.31,
@@ -4516,7 +5215,7 @@ const database = [
         cursed_recovery: 33,
         negative_energy: 24,
         cursed_tech: 'Cursed-Gyuuki',
-        curse_amount: 8,
+        curse_amount: 10,
         curse_duration: 6,
         curse_cost: 14,
         //DOMAIN
@@ -4536,6 +5235,18 @@ const database = [
         ninjutsu_pow: 500,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 127,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .70,
@@ -4573,10 +5284,10 @@ const database = [
         weapon_amount: 25,
         //SPIRIT
         spirit: 268,
-        spirit_def: 155,
-        spirit_crit: .22,
-        spiritCurse: 'S-Def',
-        spirit_amount: 20,
+        spirit_def: 175,
+        spirit_crit: .20,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.6,
         //SPEED / LUCK
         accuracy: 5,
         evasion: 3,
@@ -4614,6 +5325,18 @@ const database = [
         ninjutsu_pow: 525,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 131,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: .70,
@@ -4637,7 +5360,7 @@ const database = [
         attack: 230,
         defense: 262,
         critical: .15,
-        strength: 2,
+        strength: 2.0,
         //MAGIC
         elm_attack: 70,
         elm_defense: 215,
@@ -4656,7 +5379,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 3,
         luck: 5,
         stun: .04,
@@ -4692,6 +5415,18 @@ const database = [
         ninjutsu_pow: 235,
         ninamount: .10,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 126,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .60,
@@ -4712,7 +5447,7 @@ const database = [
         round: 8,
         pick: 109,
         //PHYSICAL
-        attack: 226,
+        attack: 230,
         defense: 218,
         critical: .10,
         strength: 2.25,
@@ -4734,7 +5469,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 3,
         luck: 6,
         stun: .05,
@@ -4770,6 +5505,18 @@ const database = [
         ninjutsu_pow: 320,
         ninamount: .70,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 132,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: .45,
@@ -4790,8 +5537,8 @@ const database = [
         round: 7,
         pick: 85,
         //PHYSICAL
-        attack: 230,
-        defense: 201,
+        attack: 236,
+        defense: 211,
         critical: .15,
         strength: 1.85,
         //MAGIC
@@ -4827,10 +5574,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 25,
         negative_energy: 15,
-        cursed_tech: 'Gorilla-Mode - Increase Critical to 60%',
-        curse_amount: .42,
+        cursed_tech: 'Gorilla-Mode - Increase Critical to 50%',
+        curse_amount: .32,
         curse_duration: 8,
-        curse_cost: 24,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -4839,7 +5586,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Knuckle-Bracers - Increase Strength by .08%',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 155,
+        ninJutsu2Dmg: 185,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
@@ -4848,6 +5595,18 @@ const database = [
         ninjutsu_pow: 205,
         ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 130,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .55,
@@ -4890,7 +5649,7 @@ const database = [
         spiritCurse: 'Magic',
         spirit_amount: 10,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 6,
         evasion: 2,
         luck: 2,
         stun: .09,
@@ -4899,7 +5658,7 @@ const database = [
         gen_power: 30,
         willpower: 1,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 6,
         drain: 5,
         //CURSE
         cursed_energy: 0,
@@ -4923,9 +5682,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Tailed-Beast-Bomb - Decrease Magic Defense by 20%",
         nin_cost: 28,
-        ninjutsu_pow: 260,
+        ninjutsu_pow: 325,
         ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 140,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: .45,
@@ -4958,9 +5729,9 @@ const database = [
         elm_efficiency: 1.3,
         potency: .18,
         //WEAPON
-        weapon: 233,
+        weapon: 257,
         shield: 173,
-        curse_crit: .23,
+        curse_crit: .25,
         weaponCurse: 'Evasion',
         weapon_amount: 1,
         //SPIRIT
@@ -4973,7 +5744,7 @@ const database = [
         accuracy: 6,
         evasion: 11,
         luck: 4,
-        stun: .05,
+        stun: .10,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 10,
@@ -4995,10 +5766,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Rasengan - Decrease Curse by 12',
+        ninjutsu2: 'Rasengan - Decrease Curse by 15',
         ninJutsu2cost: 10,
         ninJutsu2Dmg: 250,
-        nin2amount: 10,
+        nin2amount: 15,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Reaper-Death-Seal - Reverse Any Ninjutsu",
@@ -5006,13 +5777,25 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 153,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 29,
         vitality: .55,
         buff: 'Double Purity',
-        buff2: 'Decrease Recovery by 5',
+        buff2: 'Decrease Recovery by 3',
         buff_acc: 60,
-        buff2_acc: 50,
+        buff2_acc: 60,
         image: 'https://pbs.twimg.com/profile_images/542400676563668992/XAxPkw9p_400x400.jpeg'
         //image: 'https://imgix.ranker.com/user_node_img/50088/1001756899/original/a-father-job-photo-u2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355'
     },
@@ -5029,10 +5812,10 @@ const database = [
         //PHYSICAL
         attack: 270,
         defense: 225,
-        critical: .20,
-        strength: 1.6,
+        critical: .25,
+        strength: 1.65,
         //MAGIC
-        elm_attack: 245,
+        elm_attack: 255,
         elm_defense: 195,
         elm_efficiency: 1.2,
         potency: .20,
@@ -5049,7 +5832,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 7,
         evasion: 10,
         luck: 2,
         stun: .05,
@@ -5085,6 +5868,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 138,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 30,
         vitality: .45,
@@ -5145,7 +5940,7 @@ const database = [
         cursed_tech: 'Flying-Rajin - Increase Stun to 35%',
         curse_amount: .31,
         curse_duration: 6,
-        curse_cost: 25,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5163,6 +5958,18 @@ const database = [
         ninjutsu_pow: 215,
         ninamount: .10,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 190,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 24,
         vitality: .70,
@@ -5242,6 +6049,18 @@ const database = [
         ninjutsu_pow: 195,
         ninamount: .07,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 180,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 21,
         vitality: .65,
@@ -5264,8 +6083,8 @@ const database = [
         //PHYSICAL
         attack: 261,
         defense: 161,
-        critical: .28,
-        strength: 1.37,
+        critical: .33,
+        strength: 1.64,
         //MAGIC
         elm_attack: 121,
         elm_defense: 165,
@@ -5279,7 +6098,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 176,
-        spirit_def: 149,
+        spirit_def: 199,
         spirit_crit: .31,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -5311,7 +6130,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Terpsichora - Increase critical by 15%',
         ninJutsu2cost: 17,
-        ninJutsu2Dmg: 145,
+        ninJutsu2Dmg: 195,
         nin2amount: .15,
         ninEnhance: true,
         //ULTIMATE
@@ -5320,6 +6139,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 320,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 214,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 13,
         vitality: .70,
@@ -5398,13 +6229,25 @@ const database = [
         ninjutsu_pow: 230,
         ninamount: 2,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 206,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .70,
         buff: 'Increase Stun by .10%',
-        buff2: 'Decrease Attack by 15%',
+        buff2: 'Decrease Attack by 8%',
         buff_acc: 70,
-        buff2_acc: 50,
+        buff2_acc: 60,
         image: 'https://i.redd.it/u9yd7rzmlag81.jpg'
     },
     {
@@ -5418,19 +6261,19 @@ const database = [
         hp: 3265,
         id: 6,
         //PHYSICAL
-        attack: 248,
+        attack: 258,
         defense: 150,
-        critical: .16,
-        strength: 1.45,
+        critical: .21,
+        strength: 1.57,
         //MAGIC
-        elm_attack: 235,
+        elm_attack: 245,
         elm_defense: 133,
         elm_efficiency: 1.40,
-        potency: .20,
+        potency: .28,
         //WEAPON
-        weapon: 224,
+        weapon: 244,
         shield: 127,
-        curse_crit: .15,
+        curse_crit: .25,
         weaponCurse: 'Potency',
         weapon_amount: .10,
         //SPIRIT
@@ -5440,7 +6283,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 4,
+        accuracy: 5,
         evasion: 9,
         luck: 5,
         stun: .04,
@@ -5476,6 +6319,18 @@ const database = [
         ninjutsu_pow: 320,
         ninamount: .30,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 242,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 13,
         vitality: .70,
@@ -5543,10 +6398,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Raikiri - Increase Raikiri by 15%',
-        ninJutsu2cost: 15,
+        ninjutsu2: 'Raikiri - Increase Raikiri by 13%',
+        ninJutsu2cost: 18,
         ninJutsu2Dmg: 205,
-        nin2amount: .15,
+        nin2amount: .13,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Lightning-Clone - Increase Recovery by 2",
@@ -5554,6 +6409,18 @@ const database = [
         ninjutsu_pow: 225,
         ninamount: 2,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 155,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 22,
         vitality: .60,
@@ -5580,7 +6447,7 @@ const database = [
         strength: 1.3,
         //MAGIC
         elm_attack: 154,
-        elm_defense: 163,
+        elm_defense: 193,
         elm_efficiency: 1,
         potency: .15,
         //WEAPON
@@ -5632,6 +6499,18 @@ const database = [
         ninjutsu_pow: 200,
         ninamount: 10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 218,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 16,
         vitality: .55,
@@ -5646,18 +6525,18 @@ const database = [
         nen_type: 'Emitter',
         element: 'Wood',
         elm: wood,
-        hp: 2850,
+        hp: 2950,
         team: 'Lehigh',
         round: 3,
         id: 30,
         pick: 31,
         //PHYSICAL
-        attack: 178,
+        attack: 218,
         defense: 135,
         critical: .20,
         strength: 1.85,
         //MAGIC
-        elm_attack: 229,
+        elm_attack: 242,
         elm_defense: 224,
         elm_efficiency: 1.40,
         potency: .20,
@@ -5683,16 +6562,16 @@ const database = [
         gen_power: 55,
         willpower: 8,
         chakra: 0,
-        chakra_rec: 5,
+        chakra_rec: 6,
         drain: 2,
         //CURSE
         cursed_energy: 0,
         cursed_recovery: 40,
         negative_energy: 21,
-        cursed_tech: 'Kamui - Intangibility for 1 Turn',
+        cursed_tech: 'Kamui - Intangibility (ALL) for 1 Turn',
         curse_amount: 0,
         curse_duration: 3,
-        curse_cost: 21,
+        curse_cost: 24,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -5710,12 +6589,24 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 325,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 187,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 5,
         vitality: .65,
-        buff: 'Double Critical',
+        buff: 'Increase Critical by 25%',
         buff2: 'Decrease Strength by 80%',
-        buff_acc: 40,
+        buff_acc: 65,
         buff2_acc: 50,
         image: 'https://preview.redd.it/xoz3wxi3k2a81.png?width=630&format=png&auto=webp&s=6aaad9b3c2d2e3a7c536332d8dc32bdc91f94c3b'
     },
@@ -5785,9 +6676,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Cowardly-Monster-Hunter - Increase Critical by .15",
         nin_cost: 18,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 195,
         ninamount: .15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 182,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 8,
         vitality: .65,
@@ -5818,7 +6721,7 @@ const database = [
         elm_efficiency: 1.24,
         potency: .30,
         //WEAPON
-        weapon: 223,
+        weapon: 231,
         shield: 150,
         curse_crit: .20,
         weaponCurse: 'Magic',
@@ -5861,11 +6764,23 @@ const database = [
         nin2amount: .06,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Living-Dead-Dolls - Use Opponents Ninjutsu",
-        nin_cost: 30,
+        ninjutsu: "Living-Dead-Dolls - Use Opponents Jutsu Max 30",
+        nin_cost: 8,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 189,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .55,
@@ -5905,7 +6820,7 @@ const database = [
         weapon_amount: 10,
         //SPIRIT
         spirit: 106,
-        spirit_def: 160,
+        spirit_def: 193,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -5935,21 +6850,33 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Mystical-Palm - Recover 380 HP',
-        ninJutsu2cost: 28,
+        ninjutsu2: 'Mystical-Palm - Recover 420 HP',
+        ninJutsu2cost: 30,
         ninJutsu2Dmg: 0,
-        nin2amount: 380,
+        nin2amount: 420,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Strength-of-a-Hundred-Seals - Increase all Defences by 15%",
-        nin_cost: 30,
-        ninjutsu_pow: 0,
+        nin_cost: 34,
+        ninjutsu_pow: 240,
         ninamount: .15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 192,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .45,
-        buff: 'Increase Critial by 35%',
+        buff: 'Increase Critical by 35%',
         buff2: 'Decrease Curse Recovery by 15',
         buff_acc: 60,
         buff2_acc: 50,
@@ -5966,7 +6893,7 @@ const database = [
         hp: 3375,
         id: 44,
         //PHYSICAL
-        attack: 244,
+        attack: 248,
         defense: 226,
         critical: .18,
         strength: 2,
@@ -6015,7 +6942,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Strength-of-a-Hundred-Seals - Enhance all 3 defenses',
         ninJutsu2cost: 26,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 200,
         nin2amount: .20,
         ninEnhance: true,
         //ULTIMATE
@@ -6024,6 +6951,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 500,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 176,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .45,
@@ -6039,7 +6978,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Fairy',
         elm: fairy,
-        hp: 2847,
+        hp: 2907,
         id: 118,
         team: 'Lehigh',
         round: 8,
@@ -6082,10 +7021,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 40,
         negative_energy: 20,
-        cursed_tech: 'Reverse-Flow-Recovery - Inreases Recovery by 4',
+        cursed_tech: 'Reverse-Flow-Recovery - Increases Recovery by 4',
         curse_amount: 4,
         curse_duration: 4,
-        curse_cost: 23,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -6098,11 +7037,23 @@ const database = [
         nin2amount: 310,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Nen-Threads - Capture Opponent for 2 turns",
-        nin_cost: 38,
+        ninjutsu: "Nen-Threads - Capture Opponent for 1 turn",
+        nin_cost: 33,
         ninjutsu_pow: 25,
-        ninamount: 0,
+        ninamount: 175,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 227,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 22,
         vitality: .55,
@@ -6177,6 +7128,18 @@ const database = [
         ninjutsu_pow: 300,
         ninamount: 3,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -6191,7 +7154,7 @@ const database = [
         nen_type: 'Specialist',
         element: 'Fairy',
         elm: fairy,
-        hp: 2823,
+        hp: 2903,
         //PHYSICAL
         attack: 98,
         defense: 143,
@@ -6251,6 +7214,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .45,
@@ -6282,11 +7257,11 @@ const database = [
         elm_efficiency: 1.33,
         potency: .20,
         //WEAPON
-        weapon: 235,
+        weapon: 241,
         shield: 222,
         curse_crit: .25,
-        weaponCurse: 'Attack',
-        weapon_amount: 25,
+        weaponCurse: 'Recovery',
+        weapon_amount: 1,
         //SPIRIT
         spirit: 120,
         spirit_def: 159,
@@ -6330,6 +7305,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 154,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 12,
         vitality: .45,
@@ -6356,7 +7343,7 @@ const database = [
         strength: 1.45,
         //MAGIC
         elm_attack: 100,
-        elm_defense: 120,
+        elm_defense: 135,
         elm_efficiency: 1.1,
         potency: .09,
         //WEAPON
@@ -6387,8 +7374,8 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 41,
         negative_energy: 9,
-        cursed_tech: "God’s-Accomplice - Increase stun to 45%",
-        curse_amount: .45,
+        cursed_tech: "God’s-Accomplice - Increase stun to 38%",
+        curse_amount: .33,
         curse_duration: 6,
         curse_cost: 26,
         //DOMAIN
@@ -6405,9 +7392,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "I.R.S - Set Recovery to Zero",
         nin_cost: 50,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 170,
         ninamount: 20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 186,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 16,
         vitality: .65,
@@ -6434,12 +7433,12 @@ const database = [
         critical: .16,
         strength: 1.85,
         //MAGIC
-        elm_attack: 231,
+        elm_attack: 236,
         elm_defense: 230,
         elm_efficiency: 1.5,
         potency: .18,
         //WEAPON
-        weapon: 224,
+        weapon: 234,
         shield: 158,
         curse_crit: .60,
         weaponCurse: 'Recovery',
@@ -6487,6 +7486,18 @@ const database = [
         ninjutsu_pow: 245,
         ninamount: .08,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 142,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .65,
@@ -6538,7 +7549,7 @@ const database = [
         gen_power: 10,
         willpower: 2,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 7,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -6547,7 +7558,7 @@ const database = [
         cursed_tech: 'Muscular-Expansion - Double Critical',
         curse_amount: .30,
         curse_duration: 6,
-        curse_cost: 22,
+        curse_cost: 26,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -6565,10 +7576,22 @@ const database = [
         ninjutsu_pow: 185,
         ninamount: .5,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 169,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 22,
         vitality: .70,
-        buff: 'Increase Attack by 10%',
+        buff: 'Increase def by 10%',
         buff2: 'Decrease Shield by 15%',
         buff_acc: 70,
         buff2_acc: 60,
@@ -6643,6 +7666,18 @@ const database = [
         ninjutsu_pow: 160,
         ninamount: 2,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 178,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .65,
@@ -6685,7 +7720,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 6,
+        accuracy: 8,
         evasion: 6,
         luck: 3,
         stun: .05,
@@ -6711,7 +7746,7 @@ const database = [
         dom_cost: 25,
         //NINJUTSU
         ninjutsu2: 'Kamui - Undo any damage by phasing',
-        ninJutsu2cost: 15,
+        ninJutsu2cost: 20,
         ninJutsu2Dmg: 0,
         nin2amount: 0,
         ninEnhance: true,
@@ -6721,6 +7756,18 @@ const database = [
         ninjutsu_pow: 165,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 145,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .65,
@@ -6746,7 +7793,7 @@ const database = [
         critical: .10,
         strength: 1.1,
         //MAGIC
-        elm_attack: 189,
+        elm_attack: 201,
         elm_defense: 220,
         elm_efficiency: 1.34,
         potency: .25,
@@ -6759,7 +7806,7 @@ const database = [
         //SPIRIT
         spirit: 211,
         spirit_def: 181,
-        spirit_crit: .19,
+        spirit_crit: .25,
         spiritCurse: 'Spirit',
         spirit_amount: 8,
         //SPEED / LUCK
@@ -6788,10 +7835,10 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Shadow-Posession-Jutsu - Possesed for 1 turn',
+        ninjutsu2: 'Shadow-Posession-Jutsu - Possesed for 1 turn lower evas by 1',
         ninJutsu2cost: 26,
         ninJutsu2Dmg: 100,
-        nin2amount: 0,
+        nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Shadow-Neck-Breaking - Double Shadow damage",
@@ -6799,13 +7846,25 @@ const database = [
         ninjutsu_pow: 220,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 159,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 36,
         vitality: .45,
         buff: 'Increase Curse Recovery by 10',
         buff2: 'Decrease Evasion by 6',
         buff_acc: 75,
-        buff2_acc: 50,
+        buff2_acc: 60,
         //filtweer image: 'https://i.pinimg.com/736x/c0/56/49/c05649056a4c8637361020c5d347bc55.jpg',
         image: 'https://64.media.tumblr.com/3ea29518e865edd19b5f72638eac8ba1/3e31ae6b99d2a53e-de/s250x400/3e39033d0f6ff55eb14c8d89023354d324ca1ed5.jpg'
     },
@@ -6842,7 +7901,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
         //SPEED / LUCK
-        accuracy: 6,
+        accuracy: 5,
         evasion: 3,
         luck: 4,
         stun: .03,
@@ -6878,13 +7937,25 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 400,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 140,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 16,
         vitality: .65,
         buff: 'Negate Magic Efficiency',
-        buff2: 'Decrease Evasion by 3',
+        buff2: 'Decrease Evasion by 2',
         buff_acc: 50,
-        buff2_acc: 60,
+        buff2_acc: 65,
         image: 'https://64.media.tumblr.com/d49f2f2e0ff3e5b387225b4c2156f1a7/ec7fcc889a68343d-94/s540x810/e0c67f043cd465e14e4cf4acd24f59c688c1e284.jpg'
     },
     {
@@ -6938,7 +8009,7 @@ const database = [
         cursed_tech: 'Cursed-Gunbai - Reflect Ninjtsu back (Both take damage)',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 17,
+        curse_cost: 28,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -6952,10 +8023,22 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Yasaka Magatama - Decrease all Attacks",
-        nin_cost: 33,
+        nin_cost: 36,
         ninjutsu_pow: 250,
-        ninamount: .09,
+        ninamount: .06,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 137,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 13,
         vitality: .75,
@@ -6978,12 +8061,12 @@ const database = [
         round: 8,
         pick: 104,
         //PHYSICAL
-        attack: 175,
+        attack: 195,
         defense: 198,
         critical: .42,
         strength: 1.40,
         //MAGIC
-        elm_attack: 245,
+        elm_attack: 252,
         elm_defense: 156,
         elm_efficiency: 1.38,
         potency: .18,
@@ -7036,6 +8119,18 @@ const database = [
         ninjutsu_pow: 360,
         ninamount: 3,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 222,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .55,
@@ -7056,12 +8151,12 @@ const database = [
         round: 7,
         pick: 98,
         //PHYSICAL
-        attack: 236,
-        defense: 169,
+        attack: 241,
+        defense: 199,
         critical: .17,
         strength: 1.62,
         //MAGIC
-        elm_attack: 246,
+        elm_attack: 243,
         elm_defense: 223,
         elm_efficiency: 1.45,
         potency: .28,
@@ -7078,7 +8173,7 @@ const database = [
         spiritCurse: 'Magic',
         spirit_amount: 10,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 6,
         evasion: 6,
         luck: 5,
         stun: .05,
@@ -7091,7 +8186,7 @@ const database = [
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 18,
+        cursed_recovery: 28,
         negative_energy: 10,
         cursed_tech: 'Dragon-Fist - Increase Attack by 30',
         curse_amount: 30,
@@ -7103,17 +8198,29 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: "Fire-Dragon's-Roar - Increase Magic by 4%",
+        ninjutsu2: "Fire-Dragon's-Roar - Increase Magic by 5%",
         ninJutsu2cost: 18,
-        ninJutsu2Dmg: 185,
-        nin2amount: .04,
+        ninJutsu2Dmg: 245,
+        nin2amount: .05,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Fire-Dragon's-Iron-Fist - Increase Str by 10%",
         nin_cost: 20,
-        ninjutsu_pow: 200,
+        ninjutsu_pow: 225,
         ninamount: .10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 209,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: .70,
@@ -7134,12 +8241,12 @@ const database = [
         round: 6,
         pick: 76,
         //PHYSICAL
-        attack: 210,
+        attack: 220,
         defense: 205,
         critical: .28,
         strength: 1.33,
         //MAGIC
-        elm_attack: 215,
+        elm_attack: 225,
         elm_defense: 256,
         elm_efficiency: 1.17,
         potency: .18,
@@ -7193,6 +8300,18 @@ const database = [
         ninamount: .20,
         ultEnhance: false,
         //BUFFS
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 133,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         intelligence: 18,
         vitality: .50,
         buff: 'Set Efficiency to 1.20',
@@ -7266,6 +8385,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -7290,7 +8421,7 @@ const database = [
         pick: 94,
         //PHYSICAL
         attack: 109,
-        defense: 181,
+        defense: 151,
         critical: .13,
         strength: 1.05,
         //MAGIC
@@ -7320,16 +8451,16 @@ const database = [
         gen_power: 60,
         willpower: 9,
         chakra: 0,
-        chakra_rec: 9,
+        chakra_rec: 8,
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 50,
+        cursed_recovery: 40,
         negative_energy: 30,
         cursed_tech: 'Idle-Death-Gamble - Can gamble 450',
         curse_amount: 0,
         curse_duration: 6,
-        curse_cost: 14,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 180,
@@ -7337,17 +8468,29 @@ const database = [
         dom_cost: 30,
         //NINJUTSU
         ninjutsu2: 'Psychometry - Cast one Genjutsu | Decrease one Stat by 10%',
-        ninJutsu2cost: 25,
+        ninJutsu2cost: 35,
         ninJutsu2Dmg: 85,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Memory-Bomb - Stuns Opponent for one turn",
-        nin_cost: 28,
+        nin_cost: 31,
         ninjutsu_pow: 170,
         ninamount: 0,
         ultEnhance: false,
         //BUFFS
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 158,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         intelligence: 26,
         vitality: .45,
         buff: 'Increase Stun by 15%',
@@ -7361,7 +8504,7 @@ const database = [
         nen_type: 'Transmuter',
         element: 'Luck',
         elm: lucky,
-        hp: 2814,
+        hp: 2914,
         id: 123,
         team: 'Stanford',
         round: 9,
@@ -7425,6 +8568,18 @@ const database = [
         ninjutsu_pow: 555,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 219,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 9,
         vitality: .45,
@@ -7504,6 +8659,30 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 355,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 185,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 201,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .45,
@@ -7578,6 +8757,18 @@ const database = [
         ninjutsu_pow: 215,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -7652,6 +8843,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 165,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -7689,7 +8892,7 @@ const database = [
         weapon_amount: 1,
         //SPIRIT
         spirit: 215,
-        spirit_def: 160,
+        spirit_def: 185,
         spirit_crit: .24,
         spiritCurse: 'Defense',
         spirit_amount: 21,
@@ -7720,16 +8923,28 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Ghost-Punch -  Increase Stun by 8%',
-        ninJutsu2cost: 30,
-        ninJutsu2Dmg: 100,
+        ninJutsu2cost: 22,
+        ninJutsu2Dmg: 150,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Spectral-Curse - Increase Ghost Power by 20%",
-        nin_cost: 26,
-        ninjutsu_pow: 0,
+        ninjutsu: "Spectral-Curse - Increase Ghost Power by 50% (Once)",
+        nin_cost: 20,
+        ninjutsu_pow: 190,
         ninamount: .50,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 190,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 19,
         vitality: .55,
@@ -7760,7 +8975,7 @@ const database = [
         elm_attack: 234,
         elm_defense: 218,
         elm_efficiency: 1.48,
-        potency: .28,
+        potency: .15,
         //WEAPON
         weapon: 192,
         shield: 161,
@@ -7777,7 +8992,7 @@ const database = [
         accuracy: 8,
         evasion: 7,
         luck: 5,
-        stun: .08,
+        stun: .06,
         //GENJUTSU
         genjutsu: 5,
         gen_power: 40,
@@ -7789,10 +9004,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 35,
         negative_energy: 35,
-        cursed_tech: 'Kamuii - Warp away any Damage (All)',
+        cursed_tech: 'Kamuii - Warp away any Damage (All) no chakra',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 26,
+        curse_cost: 32,
         //DOMAIN
         dom_purity: 2,
         dom_lethal: 0,
@@ -7806,10 +9021,22 @@ const database = [
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Copy-Ninja - Use any Ninjutsu immediatley after",
-        nin_cost: 25,
+        nin_cost: 0,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 150,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 28,
         vitality: .55,
@@ -7824,16 +9051,16 @@ const database = [
         nen_type: 'Enhancer',
         element: 'Water',
         elm: water,
-        hp: 2872,
+        hp: 2922,
         id: 11,
         team: 'Minnesota',
         round: 9,
         pick: 123,
         //PHYSICAL
-        attack: 224,
+        attack: 239,
         defense: 164,
         critical: .55,
-        strength: 1.20,
+        strength: 1.29,
         //MAGIC
         elm_attack: 199,
         elm_defense: 208,
@@ -7847,7 +9074,7 @@ const database = [
         weapon_amount: 2,
         //SPIRIT
         spirit: 125,
-        spirit_def: 177,
+        spirit_def: 197,
         spirit_crit: .15,
         spiritCurse: 'Damage',
         spirit_amount: 1.25,
@@ -7888,6 +9115,18 @@ const database = [
         ninjutsu_pow: 190,
         ninamount: .15,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 164,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .45,
@@ -7957,15 +9196,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Fang-Over-Fang - Decrease Defense by 10%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 180,
+        ninJutsu2Dmg: 215,
         nin2amount: .10,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Fang-Passing-Fang - Increase Accuracy by 2",
         nin_cost: 18,
-        ninjutsu_pow: 215,
+        ninjutsu_pow: 235,
         ninamount: 2,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 172,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 6,
         vitality: .45,
@@ -7980,7 +9231,7 @@ const database = [
         nen_type: 'Conjuror',
         element: 'Earth',
         elm: earth,
-        hp: 2842,
+        hp: 2902,
         id: 105,
         team: 'Nebraska',
         round: 7,
@@ -7992,7 +9243,7 @@ const database = [
         strength: 1.18,
         //MAGIC
         elm_attack: 85,
-        elm_defense: 125,
+        elm_defense: 135,
         elm_efficiency: 1.16,
         potency: .10,
         //WEAPON
@@ -8021,7 +9272,7 @@ const database = [
         drain: 5,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 35,
+        cursed_recovery: 45,
         negative_energy: 35,
         cursed_tech: 'Granite-Blast - Deal 265 damage',
         curse_amount: 265,
@@ -8033,17 +9284,29 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Machine-Gun - Heal 150 and Damage 150',
+        ninjutsu2: 'Machine-Gun - Heal 175 and Damage 175',
         ninJutsu2cost: 25,
-        ninJutsu2Dmg: 150,
-        nin2amount: 150,
+        ninJutsu2Dmg: 175,
+        nin2amount: 175,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "Artillary-Strike - Deal 500 Damage",
+        ninjutsu: "Artillary-Strike - Decrease Shield 20%",
         nin_cost: 30,
         ninjutsu_pow: 500,
-        ninamount: 0,
+        ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 236,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 25,
         vitality: .50,
@@ -8082,16 +9345,16 @@ const database = [
         weaponCurse: 'Accuracy',
         weapon_amount: 2,
         //SPIRIT
-        spirit: 263,
+        spirit: 268,
         spirit_def: 250,
-        spirit_crit: .18,
+        spirit_crit: .25,
         spiritCurse: 'Health',
-        spirit_amount: 115,
+        spirit_amount: 155,
         //SPEED / LUCK
         accuracy: 7,
         evasion: 5,
         luck: 4,
-        stun: .03,
+        stun: .05,
         //GENJUTSU
         genjutsu: 2,
         gen_power: 50,
@@ -8103,10 +9366,10 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 65,
         negative_energy: 50,
-        cursed_tech: 'Limitless - 18 | 27 ',
+        cursed_tech: 'Limitless - 15 | 25 ',
         curse_amount: 10,
         curse_duration: 6,
-        curse_cost: 18,
+        curse_cost: 15,
         //DOMAIN
         dom_purity: 15,
         dom_lethal: 100,
@@ -8115,7 +9378,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Six-Eyes - Increase Curse Recovery',
         ninJutsu2cost: 10,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 145,
         nin2amount: 10,
         ninEnhance: true,
         //ULTIMATE
@@ -8124,6 +9387,18 @@ const database = [
         ninjutsu_pow: 450,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 181,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 25,
         vitality: .70,
@@ -8155,7 +9430,7 @@ const database = [
         potency: .20,
         //WEAPON
         weapon: 125,
-        shield: 221,
+        shield: 211,
         curse_crit: 1.0,
         weaponCurse: 'Curse',
         weapon_amount: 8,
@@ -8166,7 +9441,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.66,
         //SPEED / LUCK
-        accuracy: 8,
+        accuracy: 5,
         evasion: 3,
         luck: 5,
         stun: .06,
@@ -8193,21 +9468,33 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Extracted-Technique - Decrease Any stat by 5%',
         ninJutsu2cost: 21,
-        ninJutsu2Dmg: 0,
+        ninJutsu2Dmg: 100,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Reverse-Curse-Technique - Damage is flipped to Health (1.5 physical)",
-        nin_cost: 35,
+        ninjutsu: "Reverse-Curse-Technique - Damage is undone",
+        nin_cost: 40,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 149,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
-        intelligence: 0,
-        vitality: .0,
-        buff: 'Increase Recovery by 2',
+        intelligence: 15,
+        vitality: .50,
+        buff: 'Increase Acc by 2',
         buff2: 'Decrease Critical by 25%',
-        buff_acc: 50,
+        buff_acc: 65,
         buff2_acc: 60,
         image: 'https://i0.wp.com/beebom.com/wp-content/uploads/2023/09/Kenjaku-in-anime.jpg?ssl=1&resize=426%2C426'
     },
@@ -8244,7 +9531,7 @@ const database = [
         spiritCurse: 'Spirit',
         spirit_amount: 15,
         //SPEED / LUCK
-        accuracy: 7,
+        accuracy: 6,
         evasion: 5,
         luck: 5,
         stun: .05,
@@ -8257,9 +9544,9 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 70,
+        cursed_recovery: 72,
         negative_energy: 25,
-        cursed_tech: 'Malevolent-Shrine - 20 (Weapon) | 30 (Damage)',
+        cursed_tech: 'Malevolent-Shrine - 20 (Weapon) | 40 (Damage)',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 20,
@@ -8280,6 +9567,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: .15,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 151,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 14,
         vitality: .70,
@@ -8316,7 +9615,7 @@ const database = [
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 132,
+        spirit: 182,
         spirit_def: 247,
         spirit_crit: .15,
         spiritCurse: 'Damage',
@@ -8337,27 +9636,39 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 44,
         negative_energy: 30,
-        cursed_tech: 'Emperor-Time - Increase Chain Jail Duration to 3',
+        cursed_tech: 'Emperor-Time - Increase Chain Jail Duration to 2',
         curse_amount: 0,
         curse_duration: 6,
-        curse_cost: 20,
+        curse_cost: 28,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 105,
         dom_duration: 5,
         dom_cost: 15,
         //NINJUTSU
-        ninjutsu2: 'Chain-Jail - Trapped for a turn | Decrease Recovery by 2',
-        ninJutsu2cost: 20,
-        ninJutsu2Dmg: 125,
-        nin2amount: 2,
+        ninjutsu2: 'Chain-Jail - Trapped for a turn | Decrease Recovery by 3',
+        ninJutsu2cost: 30,
+        ninJutsu2Dmg: 175,
+        nin2amount: 3,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Holy-Chain - Recover 385 HP",
-        nin_cost: 27,
+        nin_cost: 30,
         ninjutsu_pow: 0,
         ninamount: 385,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 144,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 27,
         vitality: .45,
@@ -8432,6 +9743,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 0,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 0,
         vitality: .0,
@@ -8510,6 +9833,18 @@ const database = [
         ninjutsu_pow: 185,
         ninamount: 10,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 197,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .50,
@@ -8586,9 +9921,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "The-Paths - Increase Domain Lethal by 25",
         nin_cost: 24,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 160,
         ninamount: 25,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 155,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 35,
         vitality: .45,
@@ -8625,26 +9972,26 @@ const database = [
         weaponCurse: 'Purity',
         weapon_amount: 1,
         //SPIRIT
-        spirit: 175,
+        spirit: 225,
         spirit_def: 262,
-        spirit_crit: .15,
-        spiritCurse: 'Damage',
-        spirit_amount: 1.29,
+        spirit_crit: .33,
+        spiritCurse: 'Luck',
+        spirit_amount: 1,
         //SPEED / LUCK
         accuracy: 15,
         evasion: 4,
-        luck: 12,
-        stun: .28,
+        luck: 15,
+        stun: .21,
         //GENJUTSU
         genjutsu: 6,
         gen_power: 45,
         willpower: 6,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 1,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 75,
+        cursed_recovery: 63,
         negative_energy: 5,
         cursed_tech: 'Invincibility - Phase through Ninjutsu Attacks',
         curse_amount: 0,
@@ -8662,11 +10009,23 @@ const database = [
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Force-Manipulation - Deal 300 Damage",
-        nin_cost: 24,
-        ninjutsu_pow: 300,
+        ninjutsu: "Force-Manipulation - Deal 365 Damage",
+        nin_cost: 26,
+        ninjutsu_pow: 365,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 177,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 25,
         vitality: .45,
@@ -8698,7 +10057,7 @@ const database = [
         elm_efficiency: 1.17,
         potency: .16,
         //WEAPON
-        weapon: 215,
+        weapon: 222,
         shield: 240,
         curse_crit: .20,
         weaponCurse: 'Sage',
@@ -8725,14 +10084,14 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 55,
         negative_energy: 55,
-        cursed_tech: 'Cursed-Gunbai - Reflect Ninjutsu Back',
+        cursed_tech: 'Cursed-Gunbai - Reflect Ninjutsu Back take no damage',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 15,
+        curse_cost: 30,
         //DOMAIN
         dom_purity: 11,
-        dom_lethal: 125,
-        dom_duration: 10,
+        dom_lethal: 110,
+        dom_duration: 8,
         dom_cost: 50,
         //NINJUTSU
         ninjutsu2: 'Truth-Seeking-Orb - Reduce Chakra by 4',
@@ -8742,10 +10101,22 @@ const database = [
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Tailed-Beast-Bomb - Reduce Magic Defense by 20%",
-        nin_cost: 25,
-        ninjutsu_pow: 270,
+        nin_cost: 26,
+        ninjutsu_pow: 340,
         ninamount: .20,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 157,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 5,
         vitality: .45,
@@ -8819,16 +10190,28 @@ const database = [
         nin2amount: .06,
         ninEnhance: true,
         //ULTIMATE
-        ninjutsu: "All-Killing-Ash-Bones - Halve Any Stat (Single use)",
+        ninjutsu: "All-Killing-Ash-Bones - Decrease any def stat by 75%",
         nin_cost: 85,
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 153,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 11,
         vitality: .45,
         buff: 'Increase Attack by 25%',
-        buff2: 'Increase Magic by 20%',
+        buff2: 'Increase Magic by 25%',
         buff_acc: 60,
         buff2_acc: 60,
         image: 'https://i.pinimg.com/736x/41/d9/09/41d90991a1bef6cbe6eddf06e9ac221f.jpg'
@@ -8847,7 +10230,7 @@ const database = [
         pick: 64,
         //PHYSICAL
         attack: 105,
-        defense: 156,
+        defense: 181,
         critical: .10,
         strength: 1.13,
         //MAGIC
@@ -8862,16 +10245,16 @@ const database = [
         weaponCurse: 'M-Def',
         weapon_amount: 12,
         //SPIRIT
-        spirit: 244,
+        spirit: 249,
         spirit_def: 209,
-        spirit_crit: .17,
+        spirit_crit: .26,
         spiritCurse: 'Recovery',
         spirit_amount: 1,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 7,
         evasion: 4,
         luck: 5,
-        stun: .05,
+        stun: .08,
         //GENJUTSU
         genjutsu: 7,
         gen_power: 20,
@@ -8894,8 +10277,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Throat-Medicine - Increase Curse Recovery by 10',
-        ninJutsu2cost: 12,
-        ninJutsu2Dmg: 0,
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 170,
         nin2amount: 10,
         ninEnhance: true,
         //ULTIMATE
@@ -8904,6 +10287,18 @@ const database = [
         ninjutsu_pow: 225,
         ninamount: .10,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 155,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .65,
@@ -8927,7 +10322,7 @@ const database = [
         attack: 114,
         defense: 180,
         critical: .25,
-        strength: 1.14,
+        strength: 1.24,
         //MAGIC
         elm_attack: 190,
         elm_defense: 205,
@@ -8935,16 +10330,16 @@ const database = [
         potency: .40,
         //WEAPON
         weapon: 134,
-        shield: 188,
+        shield: 164,
         curse_crit: .10,
         weaponCurse: 'Magic',
         weapon_amount: 15,
         //SPIRIT
         spirit: 248,
         spirit_def: 187,
-        spirit_crit: .15,
+        spirit_crit: .24,
         spiritCurse: 'Damage',
-        spirit_amount: 1.35,
+        spirit_amount: 1.38,
         //SPEED / LUCK
         accuracy: 6,
         evasion: 5,
@@ -8982,13 +10377,25 @@ const database = [
         ninjutsu_pow: 175,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 158,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 18,
         vitality: .65,
         buff: 'Increase Defense by 10%',
-        buff2: 'Decrease Evasion by 3',
+        buff2: 'Decrease Evasion by 1',
         buff_acc: 70,
-        buff2_acc: 65,
+        buff2_acc: 70,
         image: 'https://i1.sndcdn.com/artworks-40ySttoH33qgCwb6-V156EA-t500x500.jpg'
     },
     {
@@ -9018,13 +10425,13 @@ const database = [
         weaponCurse: 'S-Def',
         weapon_amount: 8,
         //SPIRIT
-        spirit: 241,
+        spirit: 243,
         spirit_def: 239,
-        spirit_crit: .20,
+        spirit_crit: .24,
         spiritCurse: 'Damage',
-        spirit_amount: 1.50,
+        spirit_amount: 1.55,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 6,
         evasion: 6,
         luck: 7,
         stun: .08,
@@ -9051,15 +10458,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Hair-Pin - Increase Spirit Crit Percent',
         ninJutsu2cost: 12,
-        ninJutsu2Dmg: 175,
+        ninJutsu2Dmg: 205,
         nin2amount: .08,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Resonance - Increase Spirit Crit Damage",
         nin_cost: 16,
-        ninjutsu_pow: 185,
+        ninjutsu_pow: 215,
         ninamount: .15,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 168,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 15,
         vitality: .60,
@@ -9138,6 +10557,18 @@ const database = [
         ninjutsu_pow: 230,
         ninamount: .05,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 193,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 7,
         vitality: .65,
@@ -9174,9 +10605,9 @@ const database = [
         weaponCurse: 'S-Def',
         weapon_amount: 7,
         //SPIRIT
-        spirit: 236,
+        spirit: 239,
         spirit_def: 160,
-        spirit_crit: .10,
+        spirit_crit: .24,
         spiritCurse: 'Recovery',
         spirit_amount: 1,
         //SPEED / LUCK
@@ -9216,6 +10647,18 @@ const database = [
         ninjutsu_pow: 235,
         ninamount: 3,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 211,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 17,
         vitality: .45,
@@ -9242,11 +10685,11 @@ const database = [
         strength: 1.43,
         //MAGIC
         elm_attack: 142,
-        elm_defense: 166,
+        elm_defense: 196,
         elm_efficiency: 1.40,
         potency: .23,
         //WEAPON
-        weapon: 211,
+        weapon: 221,
         shield: 149,
         curse_crit: .20,
         weaponCurse: 'Accuracy',
@@ -9254,7 +10697,7 @@ const database = [
         //SPIRIT
         spirit: 259,
         spirit_def: 150,
-        spirit_crit: .10,
+        spirit_crit: .50,
         spiritCurse: 'Weapon',
         spirit_amount: 10,
         //SPEED / LUCK
@@ -9278,15 +10721,15 @@ const database = [
         curse_duration: 12,
         curse_cost: 30,
         //DOMAIN
-        dom_purity: 4,
+        dom_purity: 7,
         dom_lethal: 0,
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'White-Snake - Decrease Magic by 6%',
+        ninjutsu2: 'White-Snake - Decrease Magic by 10%',
         ninJutsu2cost: 19,
         ninJutsu2Dmg: 190,
-        nin2amount: .06,
+        nin2amount: .10,
         ninEnhance: false,
         //ULTIMATE
         ninjutsu: "Rashōmon-Gates - Increase Talisman by 20%",
@@ -9294,6 +10737,18 @@ const database = [
         ninjutsu_pow: 200,
         ninamount: .20,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 200,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .50,
@@ -9320,7 +10775,7 @@ const database = [
         strength: 1.22,
         //MAGIC
         elm_attack: 136,
-        elm_defense: 157,
+        elm_defense: 169,
         elm_efficiency: 1.45,
         potency: .24,
         //WEAPON
@@ -9336,10 +10791,10 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.47,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 7,
         evasion: 4,
         luck: 4,
-        stun: .04,
+        stun: .03,
         //GENJUTSU
         genjutsu: 4,
         gen_power: 40,
@@ -9363,7 +10818,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Cursed-Spirit-Manipulation - Absord Cursed energy',
         ninJutsu2cost: 18,
-        ninJutsu2Dmg: 160,
+        ninJutsu2Dmg: 180,
         nin2amount: 0,
         ninEnhance: false,
         //ULTIMATE
@@ -9372,6 +10827,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 152,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 20,
         vitality: .60,
@@ -9429,7 +10896,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 58,
         negative_energy: 58,
-        cursed_tech: 'Transfiguration - 15 (6%) | 27 (Attack +70)',
+        cursed_tech: 'Transfiguration - 15 (6%) | 27 (Attack + 85)',
         curse_amount: 0,
         curse_duration: 6,
         curse_cost: 15,
@@ -9450,6 +10917,18 @@ const database = [
         ninjutsu_pow: 360,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 168,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 8,
         vitality: .70,
@@ -9470,10 +10949,10 @@ const database = [
         pick: 41,
         id: 74,
         //PHYSICAL
-        attack: 236,
+        attack: 244,
         defense: 164,
         critical: .32,
-        strength: 1.34,
+        strength: 1.44,
         //MAGIC
         elm_attack: 103,
         elm_defense: 159,
@@ -9505,7 +10984,7 @@ const database = [
         drain: 3,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 18,
+        cursed_recovery: 21,
         negative_energy: 30,
         cursed_tech: 'Polymorphic - Increase Strength to 2.5',
         curse_amount: 1.1,
@@ -9519,15 +10998,27 @@ const database = [
         //NINJUTSU
         ninjutsu2: 'Masenko - Lower Magic by 5%',
         ninJutsu2cost: 14,
-        ninJutsu2Dmg: 200,
+        ninJutsu2Dmg: 230,
         nin2amount: .05,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Kamehameha-Wave - Lower Defense by 12%",
+        ninjutsu: "Kamehameha-Wave - Lower Defense by 15%",
         nin_cost: 25,
-        ninjutsu_pow: 255,
-        ninamount: .12,
+        ninjutsu_pow: 285,
+        ninamount: .15,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 215,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .55,
@@ -9549,7 +11040,7 @@ const database = [
         id: 86,
         //PHYSICAL
         attack: 181,
-        defense: 127,
+        defense: 147,
         critical: .14,
         strength: 2.0,
         //MAGIC
@@ -9579,7 +11070,7 @@ const database = [
         gen_power: 35,
         willpower: 8,
         chakra: 0,
-        chakra_rec: 4,
+        chakra_rec: 5,
         drain: 3,
         //CURSE
         cursed_energy: 0,
@@ -9601,15 +11092,27 @@ const database = [
         nin2amount: .05,
         ninEnhance: false,
         //ULTIMATE
-        ninjutsu: "Special-Beam-Cannon - Lower Spirit Defense by 15%",
+        ninjutsu: "Special-Beam-Cannon - Lower Spirit Defense by 25%",
         nin_cost: 27,
-        ninjutsu_pow: 275,
-        ninamount: .15,
+        ninjutsu_pow: 325,
+        ninamount: .25,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 200,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 27,
         vitality: .65,
-        buff: 'Increase Critical by 15%',
+        buff: 'Increase Critical by 25%',
         buff2: 'Decrease Curse Recovery by 10',
         buff_acc: 65,
         buff2_acc: 70,
@@ -9669,7 +11172,7 @@ const database = [
         cursed_recovery: 27,
         negative_energy: 30,
         cursed_tech: 'Projection-Sorcery',
-        curse_amount: 11,
+        curse_amount: 5,
         curse_duration: 6,
         curse_cost: 16,
         //DOMAIN
@@ -9689,6 +11192,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 167,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 26,
         vitality: .50,
@@ -9758,7 +11273,7 @@ const database = [
         //NINJUTSU
         ninjutsu2: "The-Sun-and-Moon - Decrease Defense by 20%",
         ninJutsu2cost: 30,
-        ninJutsu2Dmg: 300,
+        ninJutsu2Dmg: 260,
         nin2amount: .20,
         ninEnhance: false,
         //ULTIMATE
@@ -9767,6 +11282,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 149,
+        ward: 166,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 29,
         vitality: .45,
@@ -9818,16 +11345,16 @@ const database = [
         gen_power: 10,
         willpower: 10,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 7,
         drain: 4,
         //CURSE
         cursed_energy: 0,
-        cursed_recovery: 30,
+        cursed_recovery: 35,
         negative_energy: 30,
         cursed_tech: 'Wild-Lions-Mane - Trapped for 1 Turn',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 24,
+        curse_cost: 31,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 0,
@@ -9835,7 +11362,7 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Toad-Oil-Bullet - Increase Magic by 8%',
-        ninJutsu2cost: 17,
+        ninJutsu2cost: 18,
         ninJutsu2Dmg: 200,
         nin2amount: .08,
         ninEnhance: true,
@@ -9845,13 +11372,25 @@ const database = [
         ninjutsu_pow: 260,
         ninamount: .15,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 151,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .70,
         buff: 'Summon Toad x 2',
-        buff2: 'Sage-Red | Sage-Blue',
-        buff_acc: 70,
-        buff2_acc: 100,
+        buff2: 'Decrease Weapon by 12%',
+        buff_acc: 75,
+        buff2_acc: 70,
         image: 'https://i.pinimg.com/736x/30/2a/97/302a97272049d5082f54138eefc466bc.jpg'
     },
     {
@@ -9876,13 +11415,13 @@ const database = [
         potency: .26,
         //WEAPON
         weapon: 241,
-        shield: 184,
+        shield: 174,
         curse_crit: .14,
         weaponCurse: 'Recovery',
         weapon_amount: 1,
         //SPIRIT
         spirit: 102,
-        spirit_def: 144,
+        spirit_def: 174,
         spirit_crit: .12,
         spiritCurse: 'Luck',
         spirit_amount: 1,
@@ -9920,9 +11459,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "Sacrifice - Decrease any stat by 30%",
         nin_cost: 25,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 110,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 210,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 7,
         vitality: .55,
@@ -9945,13 +11496,13 @@ const database = [
         //PHYSICAL
         attack: 215,
         defense: 237,
-        critical: .55,
+        critical: .45,
         strength: 2.5,
         //MAGIC
         elm_attack: 195,
         elm_defense: 115,
         elm_efficiency: 2,
-        potency: .55,
+        potency: .50,
         //WEAPON
         weapon: 80,
         shield: 100,
@@ -9974,7 +11525,7 @@ const database = [
         gen_power: 10,
         willpower: 10,
         chakra: 0,
-        chakra_rec: 8,
+        chakra_rec: 7,
         drain: 0,
         //CURSE
         cursed_energy: 0,
@@ -9991,8 +11542,8 @@ const database = [
         dom_cost: 0,
         //NINJUTSU
         ninjutsu2: 'Heat - Decrease Evasion by 1',
-        ninJutsu2cost: 28,
-        ninJutsu2Dmg: 0,
+        ninJutsu2cost: 40,
+        ninJutsu2Dmg: 200,
         nin2amount: 1,
         ninEnhance: false,
         //ULTIMATE
@@ -10001,6 +11552,18 @@ const database = [
         ninjutsu_pow: 350,
         ninamount: .75,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 239,
+        ward: 211,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 34,
         vitality: .45,
@@ -10028,7 +11591,7 @@ const database = [
         //MAGIC
         elm_attack: 227,
         elm_defense: 154,
-        elm_efficiency: .22,
+        elm_efficiency: 1.32,
         potency: .31,
         //WEAPON
         weapon: 198,
@@ -10076,9 +11639,21 @@ const database = [
         //ULTIMATE
         ninjutsu: "10,000-Puppets - Increase Attack by 100%",
         nin_cost: 50,
-        ninjutsu_pow: 0,
+        ninjutsu_pow: 225,
         ninamount: 1,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 170,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 17,
         vitality: .60,
@@ -10099,18 +11674,18 @@ const database = [
         id: 63,
         hp: 3265,
         //PHYSICAL
-        attack: 215,
-        defense: 190,
+        attack: 195,
+        defense: 165,
         critical: .17,
         strength: 1.25,
         //MAGIC
         elm_attack: 225,
-        elm_defense: 210,
+        elm_defense: 180,
         elm_efficiency: 1,
         potency: .18,
         //WEAPON
-        weapon: 200,
-        shield: 180,
+        weapon: 180,
+        shield: 160,
         curse_crit: .10,
         weaponCurse: 'Stun',
         weapon_amount: 0,
@@ -10121,7 +11696,7 @@ const database = [
         spiritCurse: 'Spirit',
         spirit_amount: 5,
         //SPEED / LUCK
-        accuracy: 8,
+        accuracy: 7,
         evasion: 5,
         luck: 7,
         stun: .03,
@@ -10136,7 +11711,7 @@ const database = [
         cursed_energy: 0,
         cursed_recovery: 38,
         negative_energy: 55,
-        cursed_tech: 'Polyglot - Use Opponents Curse Technique at 70% cost',
+        cursed_tech: 'Polyglot - Use Opponents Curse Technique 1.5x cost',
         curse_amount: 0,
         curse_duration: 0,
         curse_cost: 0,
@@ -10146,17 +11721,29 @@ const database = [
         dom_duration: 0,
         dom_cost: 0,
         //NINJUTSU
-        ninjutsu2: 'Polymath - Increase Core Stat by up to 20% then sacrifice',
-        ninJutsu2cost: 16,
-        ninJutsu2Dmg: 0,
+        ninjutsu2: 'Polymath - Increase Core Stat by up to 20%',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 160,
         nin2amount: 0,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Phase-Bullets - Lower all Defences and Increase Stun",
         nin_cost: 24,
-        ninjutsu_pow: 260,
-        ninamount: .08,
+        ninjutsu_pow: 240,
+        ninamount: .06,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 171,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 30,
         vitality: .50,
@@ -10179,7 +11766,7 @@ const database = [
         pick: 71,
         //PHYSICAL
         attack: 132,
-        defense: 144,
+        defense: 154,
         critical: .40,
         strength: 1.15,
         //MAGIC
@@ -10189,7 +11776,7 @@ const database = [
         potency: .42,
         //WEAPON
         weapon: 232,
-        shield: 136,
+        shield: 146,
         curse_crit: .35,
         weaponCurse: 'Sage',
         weapon_amount: 8,
@@ -10200,7 +11787,7 @@ const database = [
         spiritCurse: 'Damage',
         spirit_amount: 1.40,
         //SPEED / LUCK
-        accuracy: 5,
+        accuracy: 8,
         evasion: 7,
         luck: 2,
         stun: .03,
@@ -10218,7 +11805,7 @@ const database = [
         cursed_tech: 'Ashura-Kurama-Mode - Increase Spirit by 70%',
         curse_amount: .70,
         curse_duration: 8,
-        curse_cost: 26,
+        curse_cost: 32,
         //DOMAIN
         dom_purity: 4,
         dom_lethal: 0,
@@ -10236,6 +11823,18 @@ const database = [
         ninjutsu_pow: 0,
         ninamount: 420,
         ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 173,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 16,
         vitality: .60,
@@ -10266,7 +11865,7 @@ const database = [
         elm_efficiency: 1.40,
         potency: .20,
         //WEAPON
-        weapon: 224,
+        weapon: 228,
         shield: 182,
         curse_crit: .50,
         weaponCurse: 'Sage',
@@ -10296,7 +11895,7 @@ const database = [
         cursed_tech: 'Gakido - No damage from previous ninjutsu | Do a boost',
         curse_amount: 0,
         curse_duration: 1,
-        curse_cost: 28,
+        curse_cost: 40,
         //DOMAIN
         dom_purity: 7,
         dom_lethal: 160,
@@ -10304,16 +11903,28 @@ const database = [
         dom_cost: 30,
         //NINJUTSU
         ninjutsu2: 'Amenotejikara - Flip evade previous damage (attack)',
-        ninJutsu2cost: 22,
+        ninJutsu2cost: 28,
         ninJutsu2Dmg: 175,
         nin2amount: 0,
         ninEnhance: true,
         //ULTIMATE
         ninjutsu: "Indras-Arrow  - Lower Accuracy by 1",
         nin_cost: 30,
-        ninjutsu_pow: 370,
+        ninjutsu_pow: 385,
         ninamount: 1,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 233,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 23,
         vitality: .70,
@@ -10353,7 +11964,7 @@ const database = [
         //SPIRIT
         spirit: 255,
         spirit_def: 207,
-        spirit_crit: .10,
+        spirit_crit: .18,
         spiritCurse: 'Damage',
         spirit_amount: 1.55,
         //SPEED / LUCK
@@ -10373,18 +11984,18 @@ const database = [
         cursed_recovery: 55,
         negative_energy: 25,
         cursed_tech: 'Sword-Option - Increase Weapon by 55%',
-        curse_amount: .55,
+        curse_amount: 55,
         curse_duration: 8,
         curse_cost: 20,
         //DOMAIN
-        dom_purity: 3,
+        dom_purity: 4,
         dom_lethal: 300,
-        dom_duration: 3,
-        dom_cost: 55,
+        dom_duration: 4,
+        dom_cost: 35,
         //NINJUTSU
         ninjutsu2: 'Albatross - Decrease Talisman by 10%',
         ninJutsu2cost: 16,
-        ninJutsu2Dmg: 150,
+        ninJutsu2Dmg: 180,
         nin2amount: .10,
         ninEnhance: false,
         //ULTIMATE
@@ -10393,13 +12004,25 @@ const database = [
         ninjutsu_pow: 500,
         ninamount: 0,
         ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 154,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         //BUFFS
         intelligence: 19,
         vitality: .65,
         buff: 'Increase Domain by 3',
-        buff2: 'Decrease Domain by 3',
-        buff_acc: 50,
-        buff2_acc: 60,
+        buff2: 'Decrease Domain by 5',
+        buff_acc: 65,
+        buff2_acc: 65,
         image: 'https://thicc-uwu.mywaifulist.moe/waifus/kokichi-muta/4yrHUd26dvaZ08bHXkZmQkcWM4fyKQ6OcrjMajpF.jpg?class=thumbnail'
     },
     {
@@ -10425,7 +12048,7 @@ const database = [
         //WEAPON
         weapon: 219,
         shield: 237,
-        curse_crit: .17,
+        curse_crit: .33,
         weaponCurse: 'Stun',
         weapon_amount: 0,
         //SPIRIT
@@ -10472,6 +12095,18 @@ const database = [
         ninamount: 3,
         ultEnhance: false,
         //BUFFS
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 201,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
         intelligence: 15,
         vitality: .50,
         buff: 'Increase Trap time by 2 turns if caught',
@@ -10480,5 +12115,1652 @@ const database = [
         buff2_acc: 65,
         image: 'https://static.wikia.nocookie.net/naruto/images/c/c6/Kankuro_Reuni%C3%A3o.png/revision/latest/scale-to-width/360?cb=20130728155543&path-prefix=pt-br'
     },
+
+    {
+        name: 'Frieza',
+        nen_type: 'Emitter',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 3013,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 243,
+        defense: 175,
+        critical: .40,
+        strength: 1.37,
+        //MAGIC
+        elm_attack: 241,
+        elm_defense: 168,
+        elm_efficiency: 1.26,
+        potency: .30,
+        //WEAPON
+        weapon: 101,
+        shield: 120,
+        curse_crit: .10,
+        weaponCurse: 'Accuracy',
+        weapon_amount: 1,
+        //SPIRIT
+        spirit: 134,
+        spirit_def: 230,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.2,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 10,
+        luck: 3,
+        stun: .09,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 1,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 34,
+        negative_energy: 20,
+        cursed_tech: 'Super-Perfect - Increase Critical to 70%',
+        curse_amount: .30,
+        curse_duration: 8,
+        curse_cost: 23,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Death-Beam - Increase Stun by 5%',
+        ninJutsu2cost: 16,
+        ninJutsu2Dmg: 170,
+        nin2amount: .05,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Death-Saucer - Halve Magic Def",
+        nin_cost: 35,
+        ninjutsu_pow: 280,
+        ninamount: .50,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 110, // strong raw power
+        ward: 228,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 207,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
+        //BUFFS
+        intelligence: 11,
+        vitality: .70,
+        buff: 'Increase Magic by 10%',
+        buff2: 'Decrease Critical by 25%',
+        buff_acc: 65,
+        buff2_acc: 65,
+        image: 'https://i.pinimg.com/474x/ec/b9/66/ecb96617355bfa3830f4e423955d6d5e.jpg'
+    },
+    {
+        name: 'Kaiju No.8',
+        nen_type: 'Enhancer',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3500,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 266,
+        defense: 240,
+        critical: .18,
+        strength: 2.65,
+        //MAGIC
+        elm_attack: 81,
+        elm_defense: 184,
+        elm_efficiency: 1.1,
+        potency: .09,
+        //WEAPON
+        weapon: 109,
+        shield: 234,
+        curse_crit: .1,
+        weaponCurse: 'Sage',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 191,
+        spirit_def: 160,
+        spirit_crit: .15,
+        spiritCurse: 'Damgae',
+        spirit_amount: 2.0,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 4,
+        luck: 6,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 1,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 20,
+        negative_energy: 0,
+        cursed_tech: 'Rage-Blast - Increase Magic Def by 50',
+        curse_amount: 50,
+        curse_duration: 6,
+        curse_cost: 26,
+        //DOMAIN
+        dom_purity: 8,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Number-Two: Force Blast - Decrease Magic/Weapon by 8%',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 150,
+        nin2amount: .08,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Number-Four: Rising Blast - Increase Crit by 20%",
+        nin_cost: 15,
+        ninjutsu_pow: 150,
+        ninamount: .20,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 60, // strong raw power
+        ward: 156,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 5,
+        vitality: .80,
+        buff: 'Increase Evasion by 1',
+        buff2: 'Decrease Stun by 5%',
+        buff_acc: 65,
+        buff2_acc: 80,
+        image: 'https://ds-images.bolavip.com/news/image/800/800/?src=https://images.bolavip.com/webp/spo/full/SPO_20231218_SPO_56500_Kaiju-No-8-Revisa-el-nuevo-trailer-del-anime-ok.webp'
+    },
+    {
+        name: 'Frieren',
+        nen_type: 'Emitter',
+        element: 'Psychic',
+        elm: pyschic,
+        hp: 2999,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 44,
+        defense: 125,
+        critical: .01,
+        strength: 1.2,
+        //MAGIC
+        elm_attack: 325,
+        elm_defense: 186,
+        elm_efficiency: 1,
+        potency: .24,
+        //WEAPON
+        weapon: 155,
+        shield: 141,
+        curse_crit: .35,
+        weaponCurse: 'Sage',
+        weapon_amount: 30,
+        //SPIRIT
+        spirit: 190,
+        spirit_def: 149,
+        spirit_crit: .10,
+        spiritCurse: 'Health',
+        spirit_amount: 180,
+        //SPEED / LUCK
+        accuracy: 6,
+        evasion: 2,
+        luck: 4,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 20,
+        willpower: 7,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 10,
+        //CURSE
+        cursed_energy: 60,
+        cursed_recovery: 1,
+        negative_energy: 20,
+        cursed_tech: 'Mana-Ward - Increase One Defense by 100 (2-8 Turns)',
+        curse_amount: 100,
+        curse_duration: 1,
+        curse_cost: 15,
+        //DOMAIN
+        dom_purity: 6,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Dispell - Undo the Previous Buff casted',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 135,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Zoltraak - Decrease Magic Def by 10%",
+        nin_cost: 27,
+        ninjutsu_pow: 225,
+        ninamount: .10,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 215, // strong raw power
+        ward: 155,
+        blueprint: {
+            elm_defense: { min: 220 },
+            elm_attack: { min: 220 },
+            potency: { min: .28 },
+            elm_efficiency: { min: 1.35 },
+            rare: { gen_power: { min: 60 } },
+            rare: { dom_purity: { min: 7 } },
+        },
+        active_slots: 0,
+        transmutation: 20,
+        precision: .93,
+        control: .04,
+        reconstruction: 150,
+        deconstruction: 1.45,
+        combustion: .16,
+        //BUFFS
+        intelligence: 30,
+        vitality: .65,
+        buff: 'Increase Domain Purity by 3',
+        buff2: 'Sacrifice Magic (10%) for Curse Rec(15)',
+        buff_acc: 60,
+        buff2_acc: 100,
+        //image: 'https://i.pinimg.com/736x/a1/d7/7b/a1d77b4cbbcc01af8e3082811aea205e.jpg'
+        image: 'https://cdn.pfps.gg/pfps/4391-frieren-13.png'
+        //image: 'https://avatarfiles.alphacoders.com/375/375159.jpeg'
+    },
+    {
+        name: 'Gray',
+        nen_type: 'Emitter',
+        element: 'Ice',
+        elm: ice,
+        hp: 3056,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 134,
+        defense: 156,
+        critical: .12,
+        strength: 1.16,
+        //MAGIC
+        elm_attack: 252,
+        elm_defense: 213,
+        elm_efficiency: 1.6,
+        potency: .26,
+        //WEAPON
+        weapon: 244,
+        shield: 180,
+        curse_crit: .20,
+        weaponCurse: 'Magic',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 165,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.2,
+        //SPEED / LUCK
+        accuracy: 6,
+        evasion: 5,
+        luck: 7,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 20,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 7,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 30,
+        negative_energy: 20,
+        cursed_tech: 'Disaster-Snow - Increase Potency to .80',
+        curse_amount: .54,
+        curse_duration: 6,
+        curse_cost: 20,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ice-Make:Lance - Decrease Magic Defense by 6%',
+        ninJutsu2cost: 13,
+        ninJutsu2Dmg: 215,
+        nin2amount: .06,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Ice-Make:Prison - Trapped for 1 turn",
+        nin_cost: 28,
+        ninjutsu_pow: 175,
+        ninamount: 0,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 190, // strong raw power
+        ward: 190,
+        blueprint: {
+            potency: { min: .25 },
+            elm_efficiency: { min: 1.28 },
+            critical: { min: .24 },
+            spirit: { min: 225 },
+            elm_attack: { max: 185 }
+        },
+        active_slots: 0,
+        transmutation: 12,
+        precision: .94,
+        control: .03,
+        reconstruction: 0,
+        deconstruction: 1.24,
+        combustion: .25,
+        //BUFFS
+        intelligence: 12,
+        vitality: .50,
+        buff: 'Increase Weapon by 6%',
+        buff2: 'Decrease Genjutsu by 2',
+        buff_acc: 80,
+        buff2_acc: 65,
+        image: 'https://static.wikia.nocookie.net/naruto-onepiece-fairytail/images/4/44/Gray_Fullbuster.png/revision/latest?cb=20161215201111'
+    },
+    {
+        name: 'Kikoru',
+        nen_type: 'Conjuror',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3234,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 215,
+        defense: 220,
+        critical: .10,
+        strength: 1.7,
+        //MAGIC
+        elm_attack: 112,
+        elm_defense: 160,
+        elm_efficiency: 1.4,
+        potency: .10,
+        //WEAPON
+        weapon: 260,
+        shield: 206,
+        curse_crit: .20,
+        weaponCurse: 'Shield',
+        weapon_amount: 26,
+        //SPIRIT
+        spirit: 102,
+        spirit_def: 166,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: .1,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 5,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 1,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 20,
+        negative_energy: 20,
+        cursed_tech: 'Veil - Increase Defense by 55',
+        curse_amount: 55,
+        curse_duration: 8,
+        curse_cost: 18,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Falling-Thunder - Deal Damage',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 250,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Half-Moon - Increase Wither Amount by 10",
+        nin_cost: 20,
+        ninjutsu_pow: 200,
+        ninamount: 10,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 89, // strong raw power
+        ward: 155,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 8,
+        vitality: .70,
+        buff: 'Increase Accuracy by 1',
+        buff2: 'Decrease Weapon by 8%',
+        buff_acc: 70,
+        buff2_acc: 65,
+        image: 'https://cdn.chatfai.com/public_characters/H76afyvzWZe2IhWymFF4vGsWkJy2/6bce9ecf-3580-4a8a-bfe4-695fe6cb2a91ffb615e49568a2354eeb8f2f6204d958.jpg'
+    },
+    {
+        name: 'Stark',
+        nen_type: 'Enhancer',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3285,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 175,
+        defense: 176,
+        critical: .15,
+        strength: 1.56,
+        //MAGIC
+        elm_attack: 55,
+        elm_defense: 139,
+        elm_efficiency: 1.20,
+        potency: .10,
+        //WEAPON
+        weapon: 245,
+        shield: 216,
+        curse_crit: .25,
+        weaponCurse: 'Damage',
+        weapon_amount: 2,
+        //SPIRIT
+        spirit: 123,
+        spirit_def: 177,
+        spirit_crit: .10,
+        spiritCurse: 'Weapon',
+        spirit_amount: 1,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 7,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 5,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 7,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 29,
+        negative_energy: 30,
+        cursed_tech: 'Body-Manipulation - Increase Evasion by 4',
+        curse_amount: 4,
+        curse_duration: 6,
+        curse_cost: 23,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Lightning-Strike - Increase Weapon Strength +30',
+        ninJutsu2cost: 22,
+        ninJutsu2Dmg: 235,
+        nin2amount: .30,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Lightning-Gambit - Decrease Evasion 4",
+        nin_cost: 28,
+        ninjutsu_pow: 265,
+        ninamount: 4,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 40, // strong raw power
+        ward: 182,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 6,
+        vitality: .75,
+        buff: 'Increase Defense by 7%',
+        buff2: 'Decrease Potency by 25%',
+        buff_acc: 70,
+        buff2_acc: 65,
+        image: 'https://i.redd.it/how-strong-is-stark-v0-d7dapknni6jc1.jpg?width=495&format=pjpg&auto=webp&s=4f1f09562c49383651428c8944ad277ca6052394'
+    },
+    {
+        name: 'Cell',
+        nen_type: 'Enhancer',
+        element: 'Grass',
+        elm: grass,
+        hp: 3437,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 277,
+        defense: 228,
+        critical: .20,
+        strength: 1.75,
+        //MAGIC
+        elm_attack: 77,
+        elm_defense: 150,
+        elm_efficiency: 1.15,
+        potency: .20,
+        //WEAPON
+        weapon: 155,
+        shield: 230,
+        curse_crit: .45,
+        weaponCurse: 'Recovery',
+        weapon_amount: 1,
+        //SPIRIT
+        spirit: 216,
+        spirit_def: 169,
+        spirit_crit: .25,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.5,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 6,
+        luck: 2,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 20,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 31,
+        negative_energy: 0,
+        cursed_tech: 'Super-Perfect - Increase Critical to 66%',
+        curse_amount: .46,
+        curse_duration: 10,
+        curse_cost: 35,
+        //DOMAIN
+        dom_purity: 3,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Special-Beam-Cannon - Decrease Talisman by 10%',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 240,
+        nin2amount: .10,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Kamehameha-Wave - Decrease Defenese by 15%",
+        nin_cost: 35,
+        ninjutsu_pow: 300,
+        ninamount: .15,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 112, // strong raw power
+        ward: 166,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 0,
+        combustion: .0,
+        //ALCHEMY SYSTEM
+        alchemy: 0,
+        ward: 162,
+        blueprint: {
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: .0,
+        reconstruction: 0,
+        deconstruction: 1.0,
+        combustion: .10,
+        //BUFFS
+        intelligence: 10,
+        vitality: .45,
+        buff: 'Increase Evasion by 1',
+        buff2: 'Decrease Talisman by 12%',
+        buff_acc: 75,
+        buff2_acc: 65,
+        image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/203667b2-227a-471a-b070-46aa4dcf06b8/djffs7r-77dbbf72-0a03-49ac-8aea-05f1dbe7f460.jpg/v1/fill/w_551,h_551,q_75,strp/dragon_ball___cell_by_queenm666_djffs7r-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTUxIiwicGF0aCI6IlwvZlwvMjAzNjY3YjItMjI3YS00NzFhLWIwNzAtNDZhYTRkY2YwNmI4XC9kamZmczdyLTc3ZGJiZjcyLTBhMDMtNDlhYy04YWVhLTA1ZjFkYmU3ZjQ2MC5qcGciLCJ3aWR0aCI6Ijw9NTUxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.i485yqWePh98vD2bGzI1YFNmL_zBJax8_O_iDzl_Jkw'
+    },
+    {
+        name: 'Gotoh',
+        nen_type: 'Emitter',
+        element: 'Lucky',
+        elm: lucky,
+        hp: 3147,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 144,
+        defense: 227,
+        critical: .15,
+        strength: 1.25,
+        //MAGIC
+        elm_attack: 132,
+        elm_defense: 175,
+        elm_efficiency: 1.33,
+        potency: .20,
+        //WEAPON
+        weapon: 249,
+        shield: 158,
+        curse_crit: .45,
+        weaponCurse: 'Magic',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 125,
+        spirit_def: 180,
+        spirit_crit: .10,
+        spiritCurse: 'Weapon',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 3,
+        luck: 8,
+        stun: .08,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 6,
+        chakra: 0,
+        chakra_rec: 7,
+        drain: 8,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 40,
+        negative_energy: 40,
+        cursed_tech: 'Cursed-Construction - Increase Weapon by 20',
+        curse_amount: 20,
+        curse_duration: 8,
+        curse_cost: 25,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Coin-Rifle - Decrease Shield by 7%',
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 200,
+        nin2amount: .07,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Coin-Gataling - Stun for one turn",
+        nin_cost: 26,
+        ninjutsu_pow: 185,
+        ninamount: 0,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 55, // strong raw power
+        ward: 166,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 13,
+        vitality: .45,
+        buff: 'Increase Recovery by 2',
+        buff2: 'Decrease Potency by 20%',
+        buff_acc: 60,
+        buff2_acc: 75,
+        image: 'https://bracketfights.com/images/templates/2019/30492/anime-dababy-battle-royal-joe-biden-1-2-30492/21jpg.png'
+        //image: 'https://animesher.com/orig/0/69/693/6934/animesher.com_hunter-x-hunter-gotoh-butler-693469.jpg'
+    },
+    {
+        name: 'Reno',
+        nen_type: 'Emitter',
+        element: 'Ice',
+        elm: ice,
+        hp: 3049,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 120,
+        defense: 146,
+        critical: .20,
+        strength: 1.22,
+        //MAGIC
+        elm_attack: 229,
+        elm_defense: 211,
+        elm_efficiency: 1.40,
+        potency: .29,
+        //WEAPON
+        weapon: 99,
+        shield: 162,
+        curse_crit: .10,
+        weaponCurse: 'Magic',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 231,
+        spirit_def: 218,
+        spirit_crit: .20,
+        spiritCurse: 'Magic',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 5,
+        luck: 6,
+        stun: .07,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 1,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 0,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 44,
+        negative_energy: 40,
+        cursed_tech: 'Cryokinesis - Spend to Add to Magic Attack',
+        curse_amount: 0,
+        curse_duration: 0,
+        curse_cost: 4,
+        //DOMAIN
+        dom_purity: 1,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Cryokinesis - Increase Curse Recovery by 12',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 150,
+        nin2amount: 12,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Cryo-Zero - Eliminate Curse Recovery | Half Magic Def",
+        nin_cost: 45,
+        ninjutsu_pow: 250,
+        ninamount: .5,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 84, // strong raw power
+        ward: 182,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 12,
+        vitality: .60,
+        buff: 'Increase Effieciency by 15%',
+        buff2: 'Increase Stun by .07',
+        buff_acc: 55,
+        buff2_acc: 70,
+        //image: 'https://i.pinimg.com/736x/99/9f/b1/999fb1b1c698d1bbd0cad36464e484c9.jpg'
+        image: 'https://i.pinimg.com/736x/80/26/2b/80262b3ba11765a5daaaf597bd0f4318.jpg'
+    },
+    {
+        name: 'Edward',
+        nen_type: 'Conjuror',
+        element: 'Metal',
+        elm: metal,
+        hp: 3073,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 122,
+        defense: 164,
+        critical: .10,
+        strength: 1.2,
+        //MAGIC
+        elm_attack: 140,
+        elm_defense: 161,
+        elm_efficiency: 1.6,
+        potency: .50,
+        //WEAPON
+        weapon: 232,
+        shield: 240,
+        curse_crit: .50,
+        weaponCurse: 'Shield',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 115,
+        spirit_def: 158,
+        spirit_crit: .10,
+        spiritCurse: 'Weapon',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 4,
+        luck: 5,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 3,
+        gen_power: 10,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 45,
+        negative_energy: 30,
+        cursed_tech: 'Cursed-Construction - Increase Weapon by 70',
+        curse_amount: 70,
+        curse_duration: 8,
+        curse_cost: 28,
+        //DOMAIN
+        dom_purity: 8,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Destruction - Breaks Shield Down by 15%',
+        ninJutsu2cost: 18,
+        ninJutsu2Dmg: 180,
+        nin2amount: .15,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Strong-Arm Alchemy - Increase All Def by 10%",
+        nin_cost: 22,
+        ninjutsu_pow: 195,
+        ninamount: .10,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 233, // strong raw power
+        ward: 193,
+        blueprint: {
+            attack: { max: 230 },
+            elm_defense: { min: 190 },
+            potency: { min: .28 },
+            spirit: { max: 170 },
+            spirit_def: { min: 220 },
+            weapon: { min: 215 },
+            luck: { min: 6 },
+            gen_power: { min: 50 },
+            ward: { min: 210 },
+            critical: { max: .30 },
+            shield: { max: 175 },
+            intelligence: { max: 16 },
+            rare: { shield: { max: 155 } },
+        },
+        active_slots: 0,
+        transmutation: 8,
+        precision: 1.15,
+        control: .05,
+        reconstruction: 200,
+        deconstruction: 1.26,
+        combustion: .15,
+        //BUFFS
+        intelligence: 17,
+        vitality: .55,
+        buff: 'Increase Weapon by 6%',
+        buff2: 'Decrease Alchemy by 5%',
+        buff_acc: 70,
+        buff2_acc: 75,
+        image: 'https://i.pinimg.com/736x/60/5f/31/605f310f435cdf4acbcc01b97fc565e2.jpg'
+    },
+
+    {
+        name: 'Alphonse',
+        nen_type: 'Specialist',
+        element: 'Metal',
+        elm: metal,
+        hp: 3255,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 226,
+        defense: 250,
+        critical: .14,
+        strength: 1.94,
+        //MAGIC
+        elm_attack: 101,
+        elm_defense: 180,
+        elm_efficiency: 1.4,
+        potency: .20,
+        //WEAPON
+        weapon: 90,
+        shield: 260,
+        curse_crit: .10,
+        weaponCurse: 'Magic',
+        weapon_amount: 5,
+        //SPIRIT
+        spirit: 139,
+        spirit_def: 150,
+        spirit_crit: .10,
+        spiritCurse: 'Alchemy',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 3,
+        luck: 2,
+        stun: .05,
+        //GENJUTSU
+        genjutsu: 2,
+        gen_power: 10,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 0,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 60,
+        negative_energy: 0,
+        cursed_tech: 'Gorilla-Mode - Increase Critical to 35%',
+        curse_amount: .25,
+        curse_duration: 8,
+        curse_cost: 28,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ward - Lower Def by 8%',
+        ninJutsu2cost: 20,
+        ninJutsu2Dmg: 200,
+        nin2amount: .08,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Flash-Bang - Stun for one turn",
+        nin_cost: 32,
+        ninjutsu_pow: 200,
+        ninamount: 0,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 221, // strong raw power
+        ward: 220,
+        blueprint: {
+            defense: { min: 205 },
+            strength: { min: 1.5 },
+            evasion: { min: 6 },
+            shield: { max: 200 },
+            shield: { max: 225 },
+            spirit: { max: 215 },
+            rare: { magic: { max: 175 } },
+        },
+        active_slots: 0,
+        transmutation: 12,
+        precision: 1.0,
+        control: .03,
+        reconstruction: 90,
+        deconstruction: 1.45,
+        combustion: .24,
+        //BUFFS
+        intelligence: 15,
+        vitality: .60,
+        buff: 'Increase Domain by 2',
+        buff2: 'Decrease Domain by 2',
+        buff_acc: 70,
+        buff2_acc: 65,
+        // image: 'https://i.pinimg.com/736x/c9/0a/4a/c90a4ac91d5f669bbe017f5c691022a5.jpg'
+        image: 'https://www.nautiljon.com/images/perso/00/70/alphonse_elric_107.webp'
+    },
+    {
+        name: 'Scar',
+        nen_type: 'Transmuter',
+        element: 'Lightning',
+        elm: lightning,
+        hp: 3420,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 234,
+        defense: 226,
+        critical: .20,
+        strength: 2,
+        //MAGIC
+        elm_attack: 111,
+        elm_defense: 169,
+        elm_efficiency: 1.4,
+        potency: .25,
+        //WEAPON
+        weapon: 111,
+        shield: 152,
+        curse_crit: .12,
+        weaponCurse: 'Attack',
+        weapon_amount: .10,
+        //SPIRIT
+        spirit: 90,
+        spirit_def: 211,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 2.0,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 5,
+        luck: 6,
+        stun: .07,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 7,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 38,
+        negative_energy: 30,
+        cursed_tech: 'Dismantle - Deal 265 Damage',
+        curse_amount: 265,
+        curse_duration: 1,
+        curse_cost: 28,
+        //DOMAIN
+        dom_purity: 3,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Dragons-Pulse - Increase Deconstruction by 20%',
+        ninJutsu2cost: 24,
+        ninJutsu2Dmg: 250,
+        nin2amount: .20,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Dragons-Heart - Decrease Ward by 10%",
+        nin_cost: 22,
+        ninjutsu_pow: 200,
+        ninamount: .10,
+        ultEnhance: false,
+        //ALCHEMY SYSTEM
+        alchemy: 252, // strong raw power
+        ward: 171,
+        blueprint: {
+            attack: { min: 220 },
+            weapon: { min: 220 },
+            spirit: { min: 220 },
+            elm_defense: { max: 170 },
+            rare: { strength: { min: 1.5 } }
+        },
+        active_slots: 0,
+        transmutation: 7,
+        precision: 1.05,
+        control: .05,
+        reconstruction: 75,
+        deconstruction: 2,
+        combustion: .22,
+        //BUFFS
+        intelligence: 8,
+        vitality: .95,
+        buff: 'Increase Strength by 20%',
+        buff2: 'Decrease Potency by 10%',
+        buff_acc: 60,
+        buff2_acc: 70,
+        image: 'https://preview.redd.it/tried-making-scar-from-full-metal-alchemist-v0-he4vrt1pgbyd1.jpg?width=640&crop=smart&auto=webp&s=dc693562a49c4bf9a1c621ef976ecad9d8c44a63'
+    },
+    {
+        name: 'Alex Louis',
+        nen_type: 'Enhancer',
+        element: 'Fighter',
+        elm: fighter,
+        hp: 3445,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 246,
+        defense: 236,
+        critical: .15,
+        strength: 2.2,
+        //MAGIC
+        elm_attack: 80,
+        elm_defense: 145,
+        elm_efficiency: 1.2,
+        potency: .2,
+        //WEAPON
+        weapon: 100,
+        shield: 199,
+        curse_crit: .15,
+        weaponCurse: 'Def',
+        weapon_amount: 20,
+        //SPIRIT
+        spirit: 45,
+        spirit_def: 146,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 4,
+        luck: 5,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 6,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 28,
+        negative_energy: 30,
+        cursed_tech: 'Muscular-Expansion - Double Critical',
+        curse_amount: .15,
+        curse_duration: 8,
+        curse_cost: 30,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Gautlet - Increase Gautlets by 14%',
+        ninJutsu2cost: 24,
+        ninJutsu2Dmg: 245,
+        nin2amount: .14,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Gautlet-Strike - Increase Decomposition by 20%",
+        nin_cost: 26,
+        ninjutsu_pow: 255,
+        ninamount: .20,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 224, // strong raw power
+        ward: 166,
+        blueprint: {
+            strength: { min: 1.4 },
+            critical: { min: .35 },
+            elm_attack: { max: 200 },
+            spirit: { max: 200 },
+            evasion: { max: 6 },
+            chakra_rec: { min: 6 },
+        },
+        active_slots: 0,
+        transmutation: 10,
+        precision: 1.04,
+        control: .04,
+        reconstruction: 80,
+        deconstruction: 1.74,
+        combustion: .20,
+        //BUFFS
+        intelligence: 10,
+        vitality: .65,
+        buff: 'Increase Accuracy by 1',
+        buff2: 'Decrease Potency by 10%',
+        buff_acc: 65,
+        buff2_acc: 80,
+        image: 'https://64.media.tumblr.com/63d274649f0507697f8e94e52339b72a/65dfa652a99aede4-74/s1280x1920/9bef58cb5e139a48a760782d3d33968180b43b6c.png'
+    },
+    {
+        name: 'Lust',
+        nen_type: 'Manipulator',
+        element: 'Blood',
+        elm: blood,
+        hp: 3142,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 112,
+        defense: 178,
+        critical: .12,
+        strength: 1.12,
+        //MAGIC
+        elm_attack: 132,
+        elm_defense: 139,
+        elm_efficiency: 2,
+        potency: .20,
+        //WEAPON
+        weapon: 233,
+        shield: 209,
+        curse_crit: .20,
+        weaponCurse: 'Shield',
+        weapon_amount: 20,
+        //SPIRIT
+        spirit: 120,
+        spirit_def: 221,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.5,
+        //SPEED / LUCK
+        accuracy: 7,
+        evasion: 4,
+        luck: 7,
+        stun: .07,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 40,
+        negative_energy: 40,
+        cursed_tech: 'Devil-Transformation - Increase Weapon by 70',
+        curse_amount: 70,
+        curse_duration: 8,
+        curse_cost: 28,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Ultimate-Spear - Decrease Shield by 6%',
+        ninJutsu2cost: 17,
+        ninJutsu2Dmg: 175,
+        nin2amount: .06,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Regenerate - Heal 300 Hp",
+        nin_cost: 30,
+        ninjutsu_pow: 0,
+        ninamount: 300,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 227, // strong raw power
+        ward: 169,
+        blueprint: {
+            weapon: { min: 188 },
+            cursed_recovery: { min: 30 },
+            spirit: { min: 185 },
+            domain: { min: 5 },
+            attack: { max: 185 },
+            strength: { max: 1.4 },
+            elm_attack: { max: 165 },
+            potency: { max: .30 },
+            spirit_crit: { min: 24 },
+            luck: { max: 6 },
+            stun: { min: .05 },
+            rare: { shield: { min: 185 } },
+            rare: { elm_attack: { min: 200 } },
+            rare: { defense: { min: 189 } },
+        },
+        active_slots: 0,
+        transmutation: 6,
+        precision: .95,
+        control: .05,
+        reconstruction: 230,
+        deconstruction: 1.78,
+        combustion: .16,
+        //BUFFS
+        intelligence: 11,
+        vitality: .50,
+        buff: 'Increase Luck by 2',
+        buff2: 'Decrease Recovery by 3',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://64.media.tumblr.com/aea391951a9b466982f63e7f3578a578/f1692248395c1361-fb/s540x810/10975f55322fba474c84d02c2716d6c21b9a742d.jpg'
+        //image: 'https://64.media.tumblr.com/24aae638b06a7d9fc3004a50658441c8/tumblr_p0ad0vnYvO1vy2tgqo2_400.jpg'
+    },
+    {
+        name: 'Greed',
+        nen_type: 'Transmuter',
+        element: 'Metal',
+        elm: metal,
+        hp: 3284,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 235,
+        defense: 207,
+        critical: .26,
+        strength: 1.44,
+        //MAGIC
+        elm_attack: 89,
+        elm_defense: 148,
+        elm_efficiency: 1.4,
+        potency: .20,
+        //WEAPON
+        weapon: 109,
+        shield: 252,
+        curse_crit: .10,
+        weaponCurse: 'Weapon',
+        weapon_amount: 10,
+        //SPIRIT
+        spirit: 166,
+        spirit_def: 166,
+        spirit_crit: .10,
+        spiritCurse: 'Health',
+        spirit_amount: 100,
+        //SPEED / LUCK
+        accuracy: 5,
+        evasion: 7,
+        luck: 8,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 2,
+        chakra: 0,
+        chakra_rec: 4,
+        drain: 4,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 47,
+        negative_energy: 50,
+        cursed_tech: 'Ultimate-Shield - Increase 3 Def\s by 60',
+        curse_amount: 60,
+        curse_duration: 4,
+        curse_cost: 27,
+        //DOMAIN
+        dom_purity: 2,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Cursed-Energy-Reinforcemen - Increase Def by 10%',
+        ninJutsu2cost: 22,
+        ninJutsu2Dmg: 200,
+        nin2amount: .10,
+        ninEnhance: true,
+        //ULTIMATE
+        ninjutsu: "Regenerate - Heal 300",
+        nin_cost: 33,
+        ninjutsu_pow: 0,
+        ninamount: 300,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 219, // strong raw power
+        ward: 184,
+        blueprint: {
+            defense: { min: 160 },
+            elm_defense: { min: 160 },
+            shield: { min: 160 },
+            spirit_def: { min: 160 },
+            attack: { max: 200 },
+            elm_attack: { max: 200 },
+            spirit: { max: 200 },
+            alchemy: { min: 200 },
+            spirit_crit: { min: .15 },
+            rare: { recovery: { max: 5 } }
+        },
+        active_slots: 0,
+        transmutation: 7,
+        precision: 1.0,
+        control: .04,
+        reconstruction: 185,
+        deconstruction: 1.44,
+        combustion: .24,
+        //BUFFS
+        intelligence: 9,
+        vitality: .55,
+        buff: 'Increase Recovery by 2',
+        buff2: 'Decrease Crirical by 20%',
+        buff_acc: 60,
+        buff2_acc: 60,
+        image: 'https://pbs.twimg.com/profile_images/1596339315671449600/z7Pfqj0__400x400.jpg'
+    },
+    {
+        name: 'Erwin',
+        nen_type: 'Specialist',
+        element: 'Lucky',
+        elm: lucky,
+        hp: 3424,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 174,
+        defense: 192,
+        critical: .12,
+        strength: 1.52,
+        //MAGIC
+        elm_attack: 75,
+        elm_defense: 139,
+        elm_efficiency: 1.12,
+        potency: .20,
+        //WEAPON
+        weapon: 231,
+        shield: 207,
+        curse_crit: .24,
+        weaponCurse: 'Luck',
+        weapon_amount: 2,
+        //SPIRIT
+        spirit: 99,
+        spirit_def: 142,
+        spirit_crit: .15,
+        spiritCurse: 'Damage',
+        spirit_amount: 1.30,
+        //SPEED / LUCK
+        accuracy: 9,
+        evasion: 4,
+        luck: 8,
+        stun: .04,
+        //GENJUTSU
+        genjutsu: 4,
+        gen_power: 10,
+        willpower: 9,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 36,
+        negative_energy: 39,
+        cursed_tech: 'Soul-Forge - Increase Weapon by 40',
+        curse_amount: 40,
+        curse_duration: 8,
+        curse_cost: 26,
+        //DOMAIN
+        dom_purity: 4,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Counter-Strike - Free Turn',
+        ninJutsu2cost: 12,
+        ninJutsu2Dmg: 0,
+        nin2amount: 0,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Gamble-Bomb - Deals (-400 to 600) Damage",
+        nin_cost: 25,
+        ninjutsu_pow: 0,
+        ninamount: 0,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 155, // strong raw power
+        ward: 162,
+        blueprint: {
+            defense: { min: 160 },
+        },
+        active_slots: 0,
+        transmutation: 0,
+        precision: 0,
+        control: 0,
+        reconstruction: 0,
+        deconstruction: 1,
+        combustion: .0,
+        //BUFFS
+        intelligence: 60,
+        vitality: .65,
+        buff: 'Increase Domain by 2',
+        buff2: 'Increase Willpower by 2',
+        buff_acc: 70,
+        buff2_acc: 70,
+        image: 'https://livedoor.sp.blogimg.jp/anigei-mangabox/imgs/e/a/ea7b790b.png'
+    },
+    {
+        name: 'May',
+        nen_type: 'Conjuror',
+        element: 'Fairy',
+        elm: fairy,
+        hp: 2989,
+        id: 0,
+        team: '',
+        round: 0,
+        pick: 0,
+        //PHYSICAL
+        attack: 231,
+        defense: 134,
+        critical: .45,
+        strength: 1.20,
+        //MAGIC
+        elm_attack: 119,
+        elm_defense: 181,
+        elm_efficiency: 1.20,
+        potency: .12,
+        //WEAPON
+        weapon: 236,
+        shield: 168,
+        curse_crit: .22,
+        weaponCurse: 'Shield',
+        weapon_amount: 14,
+        //SPIRIT
+        spirit: 88,
+        spirit_def: 178,
+        spirit_crit: .10,
+        spiritCurse: 'Damage',
+        spirit_amount: 10,
+        //SPEED / LUCK
+        accuracy: 10,
+        evasion: 8,
+        luck: 7,
+        stun: .06,
+        //GENJUTSU
+        genjutsu: 1,
+        gen_power: 10,
+        willpower: 3,
+        chakra: 0,
+        chakra_rec: 5,
+        drain: 5,
+        //CURSE
+        cursed_energy: 0,
+        cursed_recovery: 36,
+        negative_energy: 40,
+        cursed_tech: 'Cursed-Kunai - Increase Weapon Crit to 1.0',
+        curse_amount: .78,
+        curse_duration: 10,
+        curse_cost: 34,
+        //DOMAIN
+        dom_purity: 3,
+        dom_lethal: 0,
+        dom_duration: 0,
+        dom_cost: 0,
+        //NINJUTSU
+        ninjutsu2: 'Xingese-Arts - Increase Attack by 7%',
+        ninJutsu2cost: 13,
+        ninJutsu2Dmg: 175,
+        nin2amount: .07,
+        ninEnhance: false,
+        //ULTIMATE
+        ninjutsu: "Alkahestry - Heal 300",
+        nin_cost: 29,
+        ninjutsu_pow: 0,
+        ninamount: 300,
+        ultEnhance: true,
+        //ALCHEMY SYSTEM
+        alchemy: 215, // strong raw power
+        ward: 166,
+        blueprint: {
+            strength: { max: 1.42 },
+            elm_attack: { min: 230 },
+            elm_efficiency: { min: 1.3 },
+            curse_crit: { max: .25 },
+            spirit_def: { max: 170 },
+            stun: { min: .06 },
+            ward: { min: 195 },
+            accuracy: { min: 7 },
+            rare: { cursed_recovery: { min: 40 } },
+        },
+        active_slots: 0,
+        transmutation: 7,
+        precision: 1.0,
+        control: .03,
+        reconstruction: 145,
+        deconstruction: 1.22,
+        combustion: .31,
+        //BUFFS
+        intelligence: 9,
+        vitality: .45,
+        buff: 'Increase Stun by 5%',
+        buff2: 'Decrease Stun by 3%',
+        buff_acc: 67,
+        buff2_acc: 73,
+        image: 'https://64.media.tumblr.com/57d75c83e38c8e99a097738f1e30371d/de51395b5c695750-41/s500x750/a7cd6f8a11443b2404f6fe4a28898b08b6045f5e.jpg'
+    }
+
+
 ]
 module.exports = database;
